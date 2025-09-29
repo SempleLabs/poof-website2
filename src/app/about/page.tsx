@@ -84,24 +84,24 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: "2022",
-      title: "Founded",
-      description: "Poof was born from frustration with complex bookkeeping software that wasn't built for small businesses."
+      year: "2013-2015",
+      title: "Auditing Foundation",
+      description: "Two years in auditing, seeing firsthand how small businesses struggled with financial management and bookkeeping complexities."
     },
     {
-      year: "2023",
-      title: "First Customers",
-      description: "Our beta launched with 50 small businesses. Their feedback shaped everything we built next."
+      year: "2015-2025",
+      title: "Controller Experience",
+      description: "A decade as a solo controller for small businesses, wrestling with QuickBooks daily and understanding every pain point business owners face."
     },
     {
-      year: "2024",
-      title: "AI Breakthrough",
-      description: "Achieved exceptional transaction categorization accuracy, revolutionizing automated bookkeeping."
+      year: "June 2025",
+      title: "Poof is Born",
+      description: "Fed up with clunky software, started building the AI-powered bookkeeping solution I wished existed for every business I'd worked with."
     },
     {
       year: "Today",
-      title: "growing number of Businesses",
-      description: "Helping thousands of small businesses save time and reduce stress with magical bookkeeping."
+      title: "Building the Future",
+      description: "Combining 12+ years of hands-on bookkeeping experience with cutting-edge AI to make bookkeeping truly magical."
     }
   ]
 
@@ -113,11 +113,11 @@ export default function AboutPage() {
       <section className="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            Making Bookkeeping <span className="hero-text">Magical</span>
+            Built by a Controller, <span className="hero-text">For Controllers</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            We believe small business owners should focus on what they love, not wrestling with spreadsheets.
-            That's why we built Poof - to make bookkeeping disappear like magic.
+            After 12+ years of hands-on bookkeeping experience, I knew there had to be a better way.
+            Poof is the AI-powered solution I wish I'd had for every business I've ever worked with.
           </p>
         </div>
       </section>
@@ -209,23 +209,45 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Numbers Section */}
+      {/* Founder Story Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Poof by the Numbers</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why I Built Poof</h2>
             <p className="text-xl text-gray-600">
-              The impact we're making for small businesses
+              A personal mission born from 12+ years of bookkeeping frustration
             </p>
           </div>
 
-          <div className="glass-card p-8 text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Building the Future of Bookkeeping</h3>
-            <p className="text-gray-600 leading-relaxed">
-              We're on a mission to make bookkeeping magical for small businesses everywhere.
-              Our AI-powered platform is designed to save you time, reduce errors, and give you
-              the financial insights you need to grow your business.
-            </p>
+          <div className="glass-card p-10">
+            <div className="prose prose-lg mx-auto text-gray-600">
+              <p className="text-xl leading-relaxed mb-6">
+                After spending two years in auditing and then a decade as a solo controller for small businesses,
+                I've seen it all. The late nights wrestling with QuickBooks. The frustration of business owners
+                who just want to focus on what they love, not categorizing transactions.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                Every day, I watched brilliant entrepreneurs get bogged down by bookkeeping tasks that should
+                take minutes, not hours. I saw the stress it caused, the errors it created, and the opportunities
+                it stole from growing businesses.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                That's when I decided enough was enough. In June 2025, I started building the AI-powered
+                bookkeeping solution I wished existed for every business I'd ever worked with.
+              </p>
+
+              <div className="bg-poof-primary-50 p-6 rounded-lg border-l-4 border-poof-primary-500 text-center">
+                <p className="text-lg font-medium text-poof-primary-800 mb-2">
+                  "Poof isn't just another software company."
+                </p>
+                <p className="text-poof-primary-700">
+                  It's my personal mission to give small business owners their time back,
+                  so they can focus on what truly matters - growing their dreams.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
