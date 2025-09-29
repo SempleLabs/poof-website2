@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: #fafbfc;
+  }
+}
+
+@layer components {
+  .magical-button {
+    @apply bg-magical-gradient text-white font-semibold px-6 py-3 rounded-magical shadow-magical hover:shadow-magical-lg transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .glass-card {
+    @apply bg-white/95 backdrop-blur-sm border border-poof-primary-100 rounded-magical shadow-lg;
+  }
+
+  .hero-text {
+    @apply bg-gradient-to-r from-poof-primary-600 to-poof-secondary-600 bg-clip-text text-transparent;
+  }
+
+  .poof-brand {
+    font-family: 'Righteous', sans-serif !important;
+    font-weight: 400 !important;
+    color: #7070f8 !important;
+    font-size: 2.25rem !important;
+  }
+}
