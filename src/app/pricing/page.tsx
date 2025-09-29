@@ -278,7 +278,7 @@ export default function PricingPage() {
             Ready to Start Saving Time and Money?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join 2,000+ businesses already using Poof. Start your free trial today.
+            Join small businesses already using Poof. Start your free trial today.
           </p>
           <Link
             href="/trial"

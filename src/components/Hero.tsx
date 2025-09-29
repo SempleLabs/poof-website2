@@ -77,27 +77,9 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Social Proof */}
+          {/* Honest messaging */}
           <div className="mt-16 text-white/60 text-sm">
-            <p className="mb-4">Trusted by 2,000+ small businesses</p>
-            <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">2,000+</div>
-                <div className="text-xs">Active Users</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">$50M+</div>
-                <div className="text-xs">Processed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">15hrs</div>
-                <div className="text-xs">Saved/Month</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">99.8%</div>
-                <div className="text-xs">Accuracy</div>
-              </div>
-            </div>
+            <p className="mb-4">Built for small businesses who hate manual bookkeeping</p>
           </div>
         </div>
       </div>

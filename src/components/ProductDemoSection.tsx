@@ -96,7 +96,7 @@ export default function ProductDemoSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">99.8% Accurate</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Exceptionally Accurate</h3>
             <p className="text-gray-600">Reliable results you can trust</p>
           </div>
         </div>

@@ -18,9 +18,9 @@ export default function FeaturesPage() {
         </svg>
       ),
       title: "AI-Powered Categorization",
-      description: "Our advanced AI learns your business patterns and categorizes transactions with 99.8% accuracy. No more manual sorting through hundreds of transactions.",
+      description: "Our advanced AI learns your business patterns and categorizes transactions with exceptional accuracy. No more manual sorting through hundreds of transactions.",
       benefits: [
-        "99.8% accuracy rate",
+        "Exceptional accuracy rate",
         "Learns your business patterns",
         "Handles complex transactions",
         "Reduces manual work by 90%"
@@ -262,7 +262,7 @@ export default function FeaturesPage() {
             Ready to Experience These Features?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join 2,000+ small businesses using Poof to automate their bookkeeping.
+            Join small businesses everywhere using Poof to automate their bookkeeping.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

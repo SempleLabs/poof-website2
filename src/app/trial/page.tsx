@@ -31,11 +31,25 @@ export default function TrialPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('https://formspree.io/f/xvgwkarj', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        alert('There was an error starting your trial. Please try again.')
+      }
+    } catch (error) {
+      alert('There was an error starting your trial. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -114,7 +128,7 @@ export default function TrialPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-24 pb-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
             Start Your <span className="hero-text">Free Trial</span>
@@ -122,7 +136,7 @@ export default function TrialPage() {
           <p className="text-xl text-gray-600 mb-8">
             Get 30 days of magical bookkeeping automation. No credit card required.
           </p>
-          <div className="flex justify-center items-center space-x-6 text-sm text-gray-600 mb-12">
+          <div className="flex justify-center items-center space-x-6 text-sm text-gray-600">
             <div className="flex items-center">
               <svg className="w-5 h-5 text-poof-success-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -146,7 +160,7 @@ export default function TrialPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <form onSubmit={handleSubmit} className="glass-card p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -312,13 +326,13 @@ export default function TrialPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Trusted by 2,000+ Small Businesses
+            Trusted by growing number of Small Businesses
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-2">🔒</div>
               <div className="font-medium text-gray-900">Bank-Level Security</div>
-              <div className="text-sm text-gray-600">SOC 2 certified with 256-bit encryption</div>
+              <div className="text-sm text-gray-600">Enterprise-grade security with 256-bit encryption</div>
             </div>
             <div className="flex flex-col items-center">
               <div className="text-3xl mb-2">⚡</div>

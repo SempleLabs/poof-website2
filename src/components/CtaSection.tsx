@@ -11,7 +11,7 @@ export default function CtaSection() {
           Ready to Make Bookkeeping Magical?
         </h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Join 2,000+ small businesses who've already transformed their financial management with Poof.
+          Join the growing number of small businesses transforming their financial management with Poof.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

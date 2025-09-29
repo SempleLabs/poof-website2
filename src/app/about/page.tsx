@@ -96,11 +96,11 @@ export default function AboutPage() {
     {
       year: "2024",
       title: "AI Breakthrough",
-      description: "Achieved 99.8% transaction categorization accuracy, revolutionizing automated bookkeeping."
+      description: "Achieved exceptional transaction categorization accuracy, revolutionizing automated bookkeeping."
     },
     {
       year: "Today",
-      title: "2,000+ Businesses",
+      title: "growing number of Businesses",
       description: "Helping thousands of small businesses save time and reduce stress with magical bookkeeping."
     }
   ]
@@ -219,23 +219,13 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="glass-card p-8">
-              <div className="text-4xl font-bold hero-text mb-2">2,000+</div>
-              <div className="text-gray-600">Active Businesses</div>
-            </div>
-            <div className="glass-card p-8">
-              <div className="text-4xl font-bold hero-text mb-2">$50M+</div>
-              <div className="text-gray-600">Transactions Processed</div>
-            </div>
-            <div className="glass-card p-8">
-              <div className="text-4xl font-bold hero-text mb-2">30,000+</div>
-              <div className="text-gray-600">Hours Saved Monthly</div>
-            </div>
-            <div className="glass-card p-8">
-              <div className="text-4xl font-bold hero-text mb-2">99.8%</div>
-              <div className="text-gray-600">AI Accuracy Rate</div>
-            </div>
+          <div className="glass-card p-8 text-center max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Building the Future of Bookkeeping</h3>
+            <p className="text-gray-600 leading-relaxed">
+              We're on a mission to make bookkeeping magical for small businesses everywhere.
+              Our AI-powered platform is designed to save you time, reduce errors, and give you
+              the financial insights you need to grow your business.
+            </p>
           </div>
         </div>
       </section>

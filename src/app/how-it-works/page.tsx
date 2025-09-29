@@ -34,7 +34,7 @@ export default function HowItWorksPage() {
       description: "Our AI analyzes your transaction patterns and business type to categorize everything automatically.",
       details: [
         "Machine learning adapts to your business",
-        "99.8% categorization accuracy",
+        "exceptional categorization accuracy",
         "Learns from your corrections",
         "Handles complex business transactions"
       ],
@@ -280,12 +280,12 @@ export default function HowItWorksPage() {
               <div className="text-gray-600">Average setup time</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">99.8%</div>
+              <div className="text-2xl font-bold text-gray-900">exceptional</div>
               <div className="text-gray-600">AI accuracy rate</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">2,000+</div>
-              <div className="text-gray-600">Happy customers</div>
+              <div className="text-2xl font-bold text-gray-900">Happy</div>
+              <div className="text-gray-600">Customer reviews</div>
             </div>
           </div>
         </div>
@@ -342,7 +342,7 @@ export default function HowItWorksPage() {
             Experience the Magic Today
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join 2,000+ small businesses who've transformed their bookkeeping with Poof.
+            Join small businesses small businesses who've transformed their bookkeeping with Poof.
           </p>
           <Link
             href="/trial"

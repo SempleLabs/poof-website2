@@ -20,7 +20,7 @@ export default function TestimonialSection() {
         </svg>
       ),
       quote: "The AI categorization is scary accurate. It understands my business better than I do sometimes. Best decision I've made for my shop.",
-      results: "99.8% accuracy"
+      results: "Incredibly accurate"
     },
     {
       name: "Lisa Rodriguez",
@@ -84,7 +84,7 @@ export default function TestimonialSection() {
             ))}
           </div>
           <p className="text-gray-600">
-            <span className="font-semibold">4.9/5 stars</span> from 2,000+ happy customers
+            <span className="font-semibold">Loved by</span> small business owners everywhere
           </p>
         </div>
       </div>

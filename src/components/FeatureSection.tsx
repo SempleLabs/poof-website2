@@ -7,9 +7,9 @@ export default function FeatureSection() {
         </svg>
       ),
       title: "AI-Powered Categorization",
-      description: "Our advanced AI learns your business patterns and categorizes transactions with 99.8% accuracy. No more manual sorting through hundreds of transactions.",
+      description: "Our advanced AI learns your business patterns and categorizes transactions with exceptional accuracy. No more manual sorting through hundreds of transactions.",
       features: [
-        "99.8% accuracy rate",
+        "Exceptional accuracy rate",
         "Learns your business patterns",
         "Handles complex transactions",
         "Reduces manual work by 90%"

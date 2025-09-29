@@ -107,7 +107,7 @@ export default function ComparisonSection() {
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2 mt-0.5">✅</span>
-                <span className="text-gray-700 font-medium">99.8% AI accuracy</span>
+                <span className="text-gray-700 font-medium">Highly accurate AI</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2 mt-0.5">✅</span>
