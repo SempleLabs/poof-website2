@@ -18,7 +18,7 @@ export default function FeatureSection() {
     {
       icon: (
         <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"/>
+          <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H3V17H6V10H16M8,10V17H14V10H8Z"/>
         </svg>
       ),
       title: "Bank Sync & Auto-Reconciliation",
