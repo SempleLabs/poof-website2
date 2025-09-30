@@ -68,7 +68,7 @@ export default function TrialPage() {
                 Welcome to <span className="hero-text font-righteous">Poof!</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Your 30-day free trial is ready to start. Check your email for login instructions and next steps.
+                Thanks for signing up! Create your account at app.poofai.com to start your 30-day free trial.
               </p>
             </div>
 
@@ -80,8 +80,8 @@ export default function TrialPage() {
                     1
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900">Check your email</div>
-                    <div className="text-sm text-gray-600">We've sent login instructions to {formData.email}</div>
+                    <div className="font-medium text-gray-900">Create your account</div>
+                    <div className="text-sm text-gray-600">Go to app.poofai.com and register with {formData.email}</div>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -106,6 +106,12 @@ export default function TrialPage() {
             </div>
 
             <div className="mt-8 text-center">
+              <a
+                href="https://app.poofai.com/login"
+                className="magical-button text-lg px-8 py-4 mb-4 inline-block"
+              >
+                Go to Login →
+              </a>
               <p className="text-gray-600 mb-4">
                 Need help getting started?
               </p>
