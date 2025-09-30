@@ -178,7 +178,7 @@ export default function PricingPage() {
             Why Small Businesses Choose Poof
           </h2>
           <p className="text-xl text-gray-600 mb-12">
-            Built by a controller who understands your daily bookkeeping challenges.
+            Designed specifically for small businesses who want professional bookkeeping without the complexity.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -200,21 +200,21 @@ export default function PricingPage() {
                   <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Save Time Every Week</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">5-Minute Setup</h3>
               <p className="text-gray-600">
-                What used to take hours now takes minutes. Spend your time growing your business, not categorizing transactions.
+                Most accounting software takes weeks to configure. Connect your accounts and start getting organized books in minutes, not months. No chart of accounts to build or complex setup required.
               </p>
             </div>
 
             <div className="glass-card p-8">
               <div className="w-16 h-16 bg-gradient-to-br from-poof-primary-500 to-poof-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg">
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,19L10.5,17.5C9.67,16.67 8.33,16.67 7.5,17.5C6.67,18.33 6.67,19.67 7.5,20.5C8.33,21.33 9.67,21.33 10.5,20.5L12,19M16.5,15L15,13.5C14.17,12.67 12.83,12.67 12,13.5C11.17,14.33 11.17,15.67 12,16.5C12.83,17.33 14.17,17.33 15,16.5L16.5,15Z"/>
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Always Tax-Ready</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Bank-Level Security</h3>
               <p className="text-gray-600">
-                Your books stay organized year-round with proper categorization and documentation. Tax season becomes stress-free.
+                Your financial data is protected with AES-256 encryption and read-only bank connections. We never store your login credentials or have access to move money from your accounts.
               </p>
             </div>
           </div>
