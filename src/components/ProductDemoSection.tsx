@@ -82,8 +82,8 @@ export default function ProductDemoSection() {
 
           <div className="text-center">
             <div className="w-16 h-16 bg-poof-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-poof-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <svg className="w-8 h-8 text-poof-secondary-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered</h3>
@@ -114,7 +114,7 @@ export default function ProductDemoSection() {
               Request Live Demo
             </a>
             <a
-              href="/trial"
+              href="https://app.poofai.com/register"
               className="px-6 py-3 border border-poof-primary-300 text-poof-primary-600 font-semibold rounded-magical hover:bg-poof-primary-50 transition-colors"
             >
               Start Free Trial

@@ -50,10 +50,10 @@ export default function Header() {
               Request Demo
             </Link>
             <Link
-              href="/trial"
+              href="https://app.poofai.com/login"
               className="magical-button"
             >
-              Start Free Trial
+              Sign In
             </Link>
           </div>
 
@@ -97,8 +97,8 @@ export default function Header() {
                 <Link href="/demo" className="block mb-3 text-poof-primary-600 font-medium">
                   Request Demo
                 </Link>
-                <Link href="/trial" className="magical-button block text-center">
-                  Start Free Trial
+                <Link href="https://app.poofai.com/login" className="magical-button block text-center">
+                  Sign In
                 </Link>
               </div>
             </div>

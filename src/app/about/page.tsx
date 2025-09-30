@@ -70,8 +70,8 @@ export default function AboutPage() {
     },
     {
       year: "2017-2025",
-      title: "Controller Experience",
-      description: "Eight years as a solo controller for small businesses, wrestling with QuickBooks daily and understanding every pain point business owners face."
+      title: "Accounting Experience",
+      description: "Eight years as a solo Controller for small businesses, wrestling with QuickBooks daily and understanding every pain point business owners face."
     },
     {
       year: "June 2025",
@@ -117,29 +117,50 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-poof-primary-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-poof-secondary-500 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Born from frustration with outdated tools and a vision for what bookkeeping could be.
             </p>
           </div>
 
-          <div className="space-y-12">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-start md:items-center gap-8">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-magical-gradient rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight">
-                    {milestone.year}
+          <div className="relative">
+            {/* Simpler approach: just show the milestones without the complex timeline */}
+            <div className="space-y-16">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="flex gap-8 items-center">
+                  {/* Larger timeline circle */}
+                  <div className="flex-shrink-0">
+                    <div className="w-28 h-28 bg-magical-gradient rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight shadow-lg border-6 border-white">
+                      {milestone.year}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <div className="glass-card p-8 hover:shadow-magical transition-all duration-300 transform hover:-translate-y-1">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        {milestone.title}
+                        {index === milestones.length - 1 && (
+                          <svg className="w-6 h-6 ml-3 text-poof-primary-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
+                          </svg>
+                        )}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-lg">{milestone.description}</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{milestone.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -244,7 +265,7 @@ export default function AboutPage() {
             Join thousands of small businesses who've made bookkeeping effortless with Poof.
           </p>
           <Link
-            href="/trial"
+            href="https://app.poofai.com/register"
             className="bg-white text-poof-primary-600 font-bold px-8 py-4 rounded-magical shadow-magical hover:shadow-magical-lg transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
           >
             Start Free Trial →

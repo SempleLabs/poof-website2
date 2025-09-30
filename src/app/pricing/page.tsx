@@ -146,7 +146,7 @@ export default function PricingPage() {
             </div>
 
             <Link
-              href="/trial"
+              href="https://app.poofai.com/register"
               className="magical-button text-lg w-full block text-center py-4 mb-4"
             >
               Start Free Trial →
@@ -258,7 +258,7 @@ export default function PricingPage() {
             Join small businesses who've made bookkeeping effortless with Poof. Start your free trial today.
           </p>
           <Link
-            href="/trial"
+            href="https://app.poofai.com/register"
             className="bg-white text-poof-primary-600 font-bold px-8 py-4 rounded-magical shadow-magical hover:shadow-magical-lg transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
           >
             Start Free Trial →

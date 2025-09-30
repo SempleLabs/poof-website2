@@ -56,7 +56,7 @@ export default function ComparisonSection() {
                 <Business className="text-blue-600" sx={{ fontSize: 32 }} />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">QuickBooks Online</h3>
-              <p className="text-sm text-gray-500">Complex & Outdated</p>
+              <p className="text-sm text-gray-500">Feature-Rich but Complex</p>
             </div>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
@@ -69,7 +69,7 @@ export default function ComparisonSection() {
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-500 mr-2 mt-0.5">⚠️</span>
-                <span className="text-gray-600">Still requires manual work</span>
+                <span className="text-gray-600">Designed for larger businesses</span>
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-500 mr-2 mt-0.5">⚠️</span>
@@ -77,7 +77,7 @@ export default function ComparisonSection() {
               </li>
               <li className="flex items-start">
                 <span className="text-yellow-500 mr-2 mt-0.5">⚠️</span>
-                <span className="text-gray-600">Hidden fees & add-ons</span>
+                <span className="text-gray-600">Many features small businesses don't need</span>
               </li>
             </ul>
           </div>
@@ -107,7 +107,7 @@ export default function ComparisonSection() {
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2 mt-0.5">✅</span>
-                <span className="text-gray-700 font-medium">Highly accurate AI</span>
+                <span className="text-gray-700 font-medium">AI-native design</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2 mt-0.5">✅</span>
@@ -119,7 +119,7 @@ export default function ComparisonSection() {
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2 mt-0.5">✅</span>
-                <span className="text-gray-700 font-medium">Transparent pricing</span>
+                <span className="text-gray-700 font-medium">Built for small businesses</span>
               </li>
             </ul>
             <div className="mt-6 pt-6 border-t border-poof-primary-100">

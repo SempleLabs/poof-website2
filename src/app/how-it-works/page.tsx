@@ -127,7 +127,7 @@ export default function HowItWorksPage() {
             just connect your accounts and let our AI handle the rest.
           </p>
           <Link
-            href="/trial"
+            href="https://app.poofai.com/register"
             className="magical-button text-lg"
           >
             Start Your Free Trial →
@@ -260,7 +260,7 @@ export default function HowItWorksPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
-              href="/trial"
+              href="https://app.poofai.com/register"
               className="magical-button text-lg flex items-center justify-center"
             >
               Start Free Trial →
@@ -353,7 +353,7 @@ export default function HowItWorksPage() {
             Join small businesses small businesses who've transformed their bookkeeping with Poof.
           </p>
           <Link
-            href="/trial"
+            href="https://app.poofai.com/register"
             className="bg-white text-poof-primary-600 font-bold px-8 py-4 rounded-magical shadow-magical hover:shadow-magical-lg transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
           >
             Start Free Trial →
