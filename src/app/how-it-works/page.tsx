@@ -13,101 +13,101 @@ export default function HowItWorksPage() {
   const steps = [
     {
       step: 1,
-      title: "Connect Your Accounts",
-      description: "Securely link your bank accounts, credit cards, and payment processors in under 5 minutes.",
+      title: "Upload & Connect",
+      description: "Import your bank statements, Excel files, or connect accounts directly. Multiple ways to get your financial data into Poof.",
       details: [
-        "Bank-level 256-bit encryption",
-        "Support for 10,000+ financial institutions",
-        "One-time setup with automatic syncing",
-        "Connect multiple accounts and cards"
+        "Import bank statements & Excel files",
+        "Connect accounts directly via Plaid",
+        "Support for CSV and QBO files",
+        "One-time setup with automatic syncing"
       ],
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z"/>
+          <path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"/>
         </svg>
       ),
       timeframe: "2-5 minutes"
     },
     {
       step: 2,
-      title: "AI Learns Your Business",
-      description: "Our AI analyzes your transaction patterns and business type to categorize everything automatically.",
+      title: "AI Does the Work",
+      description: "Watch Poof automatically categorize transactions and suggest account mappings. Our AI learns your business patterns.",
       details: [
-        "Machine learning adapts to your business",
-        "exceptional categorization accuracy",
-        "Learns from your corrections",
+        "Automatic transaction categorization",
+        "Smart account mapping suggestions",
+        "AI learns from your corrections",
         "Handles complex business transactions"
       ],
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 6c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/>
+          <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
         </svg>
       ),
-      timeframe: "Continuous learning"
+      timeframe: "Automated"
     },
     {
       step: 3,
-      title: "Get Real-Time Insights",
-      description: "Access your financial reports instantly. Your books are always up-to-date and tax-ready.",
+      title: "Run Your Business",
+      description: "Get insights, send invoices, and make informed financial decisions. Your books are always ready when you need them.",
       details: [
-        "Real-time P&L statements",
-        "Live cash flow tracking",
-        "Tax-ready categorization",
-        "Mobile and desktop access"
+        "Real-time financial insights",
+        "Professional invoice creation",
+        "Tax-ready books year-round",
+        "Make informed business decisions"
       ],
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+          <path d="M12,2A3,3 0 0,1 15,5V7H19A1,1 0 0,1 20,8V19A3,3 0 0,1 17,22H7A3,3 0 0,1 4,19V8A1,1 0 0,1 5,7H9V5A3,3 0 0,1 12,2M12,4A1,1 0 0,0 11,5V7H13V5A1,1 0 0,0 12,4M6,9V19A1,1 0 0,0 7,20H17A1,1 0 0,0 18,19V9H6Z"/>
         </svg>
       ),
-      timeframe: "Instant updates"
+      timeframe: "Ongoing"
     }
   ]
 
   const features = [
     {
-      title: "Smart Receipt Processing",
-      description: "Take a photo of any receipt and watch our AI extract all the details automatically.",
+      title: "Financial Import & AI Mapping",
+      description: "Upload financial data and watch AI organize everything automatically with smart account mapping.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M9,2A1,1 0 0,0 8,3V4H4A1,1 0 0,0 3,5V19A1,1 0 0,0 4,20H20A1,1 0 0,0 21,19V5A1,1 0 0,0 20,4H16V3A1,1 0 0,0 15,2H9M6,6H18V18H6V6M8,8V16H16V8H8M10,10H14V14H10V10Z"/>
+          <path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"/>
         </svg>
       ),
       process: [
-        "Snap a photo with your phone",
-        "AI reads and extracts data",
-        "Automatically categorizes expense",
-        "Stores digitally in the cloud"
+        "Upload your files - Excel, CSV, PDF, or bank statements",
+        "AI analyzes & maps accounts - Smart suggestions for chart of accounts",
+        "Review & approve mappings - Quick validation of AI recommendations",
+        "Transactions auto-categorized - Your books are organized instantly"
       ]
     },
     {
-      title: "Bank Reconciliation",
-      description: "Your accounts reconcile automatically as transactions sync from your bank.",
+      title: "Professional Invoicing",
+      description: "Create and send professional invoices in minutes with automated payment tracking.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
+          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,12L16,16H13.5V19H10.5V16H8L12,12Z"/>
         </svg>
       ),
       process: [
-        "Transactions sync from bank",
-        "AI matches and categorizes",
-        "Automatic reconciliation",
-        "Flag any discrepancies"
+        "Select customer & services - From your organized customer database",
+        "Customize invoice template - Professional branded invoices",
+        "Send instantly - Email directly from Poof",
+        "Track payment status - Know exactly who owes what"
       ]
     },
     {
-      title: "Financial Reporting",
-      description: "Generate professional financial reports with a single click, anytime you need them.",
+      title: "Real-Time Financial Reporting",
+      description: "Generate professional financial reports instantly with real-time data and professional formatting.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
         </svg>
       ),
       process: [
-        "Choose your date range",
-        "Select report type needed",
-        "Generate in seconds",
-        "Export or share easily"
+        "Choose your date range - Any period you need",
+        "Select report type - P&L, Balance Sheet, Cash Flow, Trial Balance",
+        "Generate in seconds - Real-time data, professional formatting",
+        "Export or share easily - PDF, Excel, or direct sharing"
       ]
     }
   ]
@@ -251,17 +251,17 @@ export default function HowItWorksPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Start Your Automated Bookkeeping Journey
+            Ready to Streamline Your Bookkeeping?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Join thousands of small businesses that have already transformed their bookkeeping.
-            Setup takes less than 5 minutes and you'll see results immediately.
+            Built by a controller who understands your daily bookkeeping challenges.
+            Try Poof risk-free with our 30-day trial.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="/trial"
-              className="magical-button text-lg"
+              className="magical-button text-lg flex items-center justify-center"
             >
               Start Free Trial →
             </Link>
@@ -276,16 +276,16 @@ export default function HowItWorksPage() {
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-2xl font-bold text-gray-900">5 min</div>
-              <div className="text-gray-600">Average setup time</div>
+              <div className="text-2xl font-bold text-gray-900">30 days</div>
+              <div className="text-gray-600">Free trial period</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">exceptional</div>
-              <div className="text-gray-600">AI accuracy rate</div>
+              <div className="text-2xl font-bold text-gray-900">No setup fees</div>
+              <div className="text-gray-600">Cancel anytime</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">Happy</div>
-              <div className="text-gray-600">Customer reviews</div>
+              <div className="text-2xl font-bold text-gray-900">10+ years</div>
+              <div className="text-gray-600">Controller experience</div>
             </div>
           </div>
         </div>
@@ -315,11 +315,19 @@ export default function HowItWorksPage() {
               },
               {
                 question: "Can I import my existing bookkeeping data?",
-                answer: "Yes! We support imports from QuickBooks, Xero, CSV files, and most other accounting software. Our team can help with larger migrations if needed."
+                answer: "Yes. We support imports from QuickBooks, Xero, CSV files, and most other accounting software. Our team can help with larger migrations if needed."
               },
               {
-                question: "Is my financial data secure?",
-                answer: "Absolutely. We use bank-level 256-bit encryption and read-only access to your accounts. Your data is never shared and is protected by the same standards used by major banks."
+                question: "How does the AI categorization work?",
+                answer: "Our AI analyzes transaction patterns, merchant information, and your business type to automatically categorize transactions. It learns from your corrections and gets more accurate over time."
+              },
+              {
+                question: "What types of receipts can I process?",
+                answer: "Snap photos of any receipt - paper, digital, or email receipts. Our AI extracts all details automatically including vendor, amount, date, and expense category."
+              },
+              {
+                question: "How accurate is the bank reconciliation?",
+                answer: "Our AI matches and categorizes transactions with 95%+ accuracy. Any discrepancies are flagged for quick review, and the system learns from your corrections."
               }
             ].map((faq, index) => (
               <div key={index} className="glass-card p-6">

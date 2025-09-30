@@ -14,7 +14,7 @@ export default function FeaturesPage() {
     {
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 6c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/>
+          <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
         </svg>
       ),
       title: "AI-Powered Categorization",
@@ -33,10 +33,10 @@ export default function FeaturesPage() {
         </svg>
       ),
       title: "Bank Sync & Auto-Reconciliation",
-      description: "Connect all your bank accounts and credit cards. Transactions sync automatically and reconcile in real-time, giving you an always up-to-date view.",
+      description: "Connect your bank accounts and credit cards securely. Transactions sync automatically with AI-suggested categorization to streamline your reconciliation process.",
       benefits: [
         "Real-time transaction sync",
-        "Automatic reconciliation",
+        "AI-assisted reconciliation",
         "Support for 10,000+ banks",
         "Secure bank-level encryption"
       ]
@@ -48,33 +48,33 @@ export default function FeaturesPage() {
         </svg>
       ),
       title: "Real-Time Financial Reports",
-      description: "Get instant access to P&L statements, balance sheets, and cash flow reports. Always know exactly where your business stands financially.",
+      description: "Get instant access to P&L statements, balance sheets, and cash flow reports with a live dashboard. Always know exactly where your business stands financially.",
       benefits: [
+        "Live dashboard view",
         "Instant P&L statements",
         "Real-time balance sheets",
-        "Cash flow analysis",
-        "Custom date ranges"
+        "Cash flow analysis"
       ]
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          <path d="M12,2A3,3 0 0,1 15,5V7H19A1,1 0 0,1 20,8V19A3,3 0 0,1 17,22H7A3,3 0 0,1 4,19V8A1,1 0 0,1 5,7H9V5A3,3 0 0,1 12,2M12,4A1,1 0 0,0 11,5V7H13V5A1,1 0 0,0 12,4M6,9V19A1,1 0 0,0 7,20H17A1,1 0 0,0 18,19V9H6Z"/>
         </svg>
       ),
-      title: "Smart Receipt Processing",
-      description: "Simply take a photo of any receipt and our AI extracts all the details automatically. No more manual data entry or lost receipts.",
+      title: "Small Business Focus",
+      description: "Built specifically for small businesses with intuitive workflows. No accounting degree required - designed for busy entrepreneurs who need clarity, not complexity.",
       benefits: [
-        "OCR technology",
-        "Automatic data extraction",
-        "Cloud storage & backup",
-        "Mobile app integration"
+        "Easy setup in minutes",
+        "Intuitive for non-accountants",
+        "Small business workflows",
+        "Affordable pricing"
       ]
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
         </svg>
       ),
       title: "Tax-Ready Books",
@@ -89,7 +89,7 @@ export default function FeaturesPage() {
     {
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17 18c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h10zM7 3h10c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z"/>
+          <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z"/>
         </svg>
       ),
       title: "Mobile-First Design",
@@ -104,22 +104,22 @@ export default function FeaturesPage() {
     {
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,12L16,16H13.5V19H10.5V16H8L12,12Z"/>
         </svg>
       ),
-      title: "Third-Party Integrations",
-      description: "Connect with your existing tools including PayPal, Stripe, Square, and more. Everything flows into one unified system.",
+      title: "Simple Invoice Tracking",
+      description: "Keep track of invoices sent and payments received in one organized view. Never lose track of what customers owe you.",
       benefits: [
-        "50+ integrations",
-        "E-commerce platforms",
-        "Payment processors",
-        "Accounting software"
+        "Invoice status tracking",
+        "Payment reminders",
+        "Customer payment history",
+        "Overdue alerts"
       ]
     },
     {
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7.5h-5A1.5 1.5 0 0 0 12.04 8.37L9.5 16H12v6h8zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5z"/>
+          <path d="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"/>
         </svg>
       ),
       title: "Multi-User Access",

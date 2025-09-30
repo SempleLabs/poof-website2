@@ -12,29 +12,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const team = [
     {
-      name: "Sarah Chen",
-      role: "CEO & Co-Founder",
-      bio: "Former CPA with 10+ years helping small businesses. Frustrated by outdated tools, she founded Poof to bring magic to bookkeeping.",
-      avatar: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-      )
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "CTO & Co-Founder",
-      bio: "AI researcher from MIT. Built machine learning systems at Google before focusing on solving real problems for small businesses.",
-      avatar: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-      )
-    },
-    {
-      name: "Emily Thompson",
-      role: "Head of Product",
-      bio: "Former small business owner who understands the daily challenges. Designs our user experience to be simple and intuitive.",
+      name: "Austin Semple",
+      role: "CEO & Founder",
+      bio: "Former auditor with 8+ years experience of Controller experience for small businesses. Built Poof after years of wrestling with Quickbooks, manual spreadsheets, and seeing the daily struggles of business owners.",
       avatar: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -48,8 +28,8 @@ export default function AboutPage() {
       title: "Make it Magical",
       description: "Complex tasks should feel effortless. We turn bookkeeping from a chore into something that just happens.",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
         </svg>
       )
     },
@@ -84,14 +64,14 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: "2013-2015",
+      year: "2015-2017",
       title: "Auditing Foundation",
       description: "Two years in auditing, seeing firsthand how small businesses struggled with financial management and bookkeeping complexities."
     },
     {
-      year: "2015-2025",
+      year: "2017-2025",
       title: "Controller Experience",
-      description: "A decade as a solo controller for small businesses, wrestling with QuickBooks daily and understanding every pain point business owners face."
+      description: "Eight years as a solo controller for small businesses, wrestling with QuickBooks daily and understanding every pain point business owners face."
     },
     {
       year: "June 2025",
@@ -101,7 +81,7 @@ export default function AboutPage() {
     {
       year: "Today",
       title: "Building the Future",
-      description: "Combining 12+ years of hands-on bookkeeping experience with cutting-edge AI to make bookkeeping truly magical."
+      description: "Combining 10+ years of hands-on bookkeeping experience with cutting-edge AI to make bookkeeping truly magical."
     }
   ]
 
@@ -110,14 +90,14 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-24 pb-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            Built by a Controller, <span className="hero-text">For Controllers</span>
+            Bookkeeping That Actually <span className="hero-text">Makes Sense</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            After 12+ years of hands-on bookkeeping experience, I knew there had to be a better way.
-            Poof is the AI-powered solution I wish I'd had for every business I've ever worked with.
+            Small business owners shouldn't need an accounting degree to understand their finances.
+            Poof brings clarity to bookkeeping with AI that works the way you think.
           </p>
         </div>
       </section>
@@ -150,7 +130,7 @@ export default function AboutPage() {
             {milestones.map((milestone, index) => (
               <div key={index} className="flex flex-col md:flex-row items-start md:items-center gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-magical-gradient rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-20 h-20 bg-magical-gradient rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight">
                     {milestone.year}
                   </div>
                 </div>
@@ -176,8 +156,10 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{value.icon}</div>
+              <div key={index} className="glass-card p-8 text-center hover:shadow-magical transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-poof-primary-500 to-poof-primary-600 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg">
+                  {value.icon}
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </div>
@@ -190,16 +172,16 @@ export default function AboutPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Meet Our Team</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Meet the Founder</h2>
             <p className="text-xl text-gray-600">
-              Small business owners and technologists working together
+              Built from real-world experience with small business bookkeeping challenges
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-md mx-auto">
             {team.map((member, index) => (
               <div key={index} className="glass-card p-8 text-center">
-                <div className="w-16 h-16 bg-poof-primary-100 rounded-full flex items-center justify-center mb-4 text-poof-primary-600">{member.avatar}</div>
+                <div className="w-16 h-16 bg-poof-primary-100 rounded-full flex items-center justify-center mb-4 mx-auto text-poof-primary-600">{member.avatar}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                 <div className="text-poof-primary-600 font-medium mb-4">{member.role}</div>
                 <p className="text-gray-600 leading-relaxed">{member.bio}</p>
@@ -215,14 +197,14 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Why I Built Poof</h2>
             <p className="text-xl text-gray-600">
-              A personal mission born from 12+ years of bookkeeping frustration
+              A personal mission born from 10+ years of bookkeeping frustration
             </p>
           </div>
 
           <div className="glass-card p-10">
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed mb-6">
-                After spending two years in auditing and then a decade as a solo controller for small businesses,
+                After spending two years in auditing and then eight years as a solo controller for small businesses,
                 I've seen it all. The late nights wrestling with QuickBooks. The frustration of business owners
                 who just want to focus on what they love, not categorizing transactions.
               </p>
@@ -247,38 +229,6 @@ export default function AboutPage() {
                   so they can focus on what truly matters - growing their dreams.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Careers Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Mission</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Help us make bookkeeping magical for millions of small businesses.
-          </p>
-
-          <div className="glass-card p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">We're Hiring!</h3>
-            <p className="text-gray-600 mb-6">
-              Looking for passionate people who want to solve real problems for small businesses.
-              We offer competitive pay, equity, and the chance to make a real impact.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/careers"
-                className="magical-button"
-              >
-                View Open Positions
-              </Link>
-              <Link
-                href="mailto:careers@poof.ai"
-                className="border-2 border-poof-primary-600 text-poof-primary-600 font-semibold px-6 py-3 rounded-magical hover:bg-poof-primary-50 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
             </div>
           </div>
         </div>
