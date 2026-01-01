@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { CreditCardOff, Bolt, AutoAwesome } from '@mui/icons-material'
+import { Bolt, AutoAwesome } from '@mui/icons-material'
 
 export default function CtaSection() {
   return (
@@ -31,16 +31,18 @@ export default function CtaSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-white/80">
           <div className="flex flex-col items-center">
-            <CreditCardOff className="text-white/80 mb-2" sx={{ fontSize: 32 }} />
-            <div className="text-sm">No Credit Card Required</div>
+            <AutoAwesome className="text-white/80 mb-2" sx={{ fontSize: 32 }} />
+            <div className="text-sm">30-Day Free Trial</div>
           </div>
           <div className="flex flex-col items-center">
             <Bolt className="text-white/80 mb-2" sx={{ fontSize: 32 }} />
             <div className="text-sm">5-Minute Setup</div>
           </div>
           <div className="flex flex-col items-center">
-            <AutoAwesome className="text-white/80 mb-2" sx={{ fontSize: 32 }} />
-            <div className="text-sm">30-Day Free Trial</div>
+            <svg className="w-8 h-8 text-white/80 mb-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            <div className="text-sm">Cancel Anytime</div>
           </div>
         </div>
       </div>

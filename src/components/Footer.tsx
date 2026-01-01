@@ -49,10 +49,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/guides" className="text-gray-400 hover:text-white transition-colors">Guides</Link></li>
-              <li><Link href="/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link href="/help" className="text-gray-400 hover:text-white transition-colors">Help Center</Link></li>
+              <li><Link href="/resources" className="text-gray-400 hover:text-white transition-colors">Blog & Guides</Link></li>
             </ul>
           </div>
 
@@ -61,22 +58,15 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="/press" className="text-gray-400 hover:text-white transition-colors">Press</Link></li>
+              <li><a href="mailto:support@poof.ai" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-6 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/security" className="hover:text-white transition-colors">Security</Link>
-            </div>
-            <div className="mt-4 md:mt-0 text-sm text-gray-400">
-              © 2024 Poof. All rights reserved.
+            <div className="text-sm text-gray-400">
+              © 2025 Poof. All rights reserved.
             </div>
           </div>
         </div>

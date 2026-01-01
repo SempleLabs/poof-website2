@@ -26,7 +26,7 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'What happens during the free trial?',
-      answer: 'You get full access to all features for 30 days. No credit card required. Connect your bank accounts, process receipts, and see how Poof transforms your bookkeeping.'
+      answer: 'You get full access to all features for 30 days. Connect your bank accounts, process receipts, and see how Poof transforms your bookkeeping. You can cancel anytime during the trial period.'
     },
     {
       question: 'Is my financial data secure?',
@@ -70,7 +70,7 @@ export default function PricingPage() {
           </p>
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-poof-success-50 text-poof-success-700 text-sm font-medium">
             <span className="mr-2">✅</span>
-            30-day free trial • No credit card required
+            30-day free trial • Cancel anytime
           </div>
 
           {/* Pricing Toggle */}
@@ -96,7 +96,7 @@ export default function PricingPage() {
               >
                 Annual
                 <span className="absolute -top-2 -right-2 bg-poof-success-500 text-white text-xs px-2 py-1 rounded-full">
-                  Save $69
+                  Save $58
                 </span>
               </button>
             </div>
@@ -118,14 +118,14 @@ export default function PricingPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Poof Professional</h2>
               <p className="text-gray-600 mb-6">Everything you need for automated bookkeeping</p>
               <div className="text-6xl font-bold text-gray-900 mb-2">
-                ${isAnnual ? '279' : '29'}
+                ${isAnnual ? '290' : '29'}
                 <span className="text-xl font-normal text-gray-600">
                   {isAnnual ? '/year' : '/month'}
                 </span>
               </div>
               <p className="text-sm text-gray-500">
                 {isAnnual
-                  ? 'Billed annually • Save $69 per year'
+                  ? 'Billed annually • Save $58 per year'
                   : 'Billed monthly • Cancel anytime'
                 }
               </p>
@@ -153,7 +153,7 @@ export default function PricingPage() {
             </Link>
 
             <p className="text-sm text-gray-500">
-              No credit card required • Full access for 30 days
+              Full access for 30 days • Cancel anytime
             </p>
           </div>
 
@@ -264,7 +264,7 @@ export default function PricingPage() {
             Start Free Trial →
           </Link>
           <p className="text-white/80 text-sm mt-4">
-            No credit card required • Cancel anytime • 30-day free trial
+            30-day free trial • Cancel anytime
           </p>
         </div>
       </section>

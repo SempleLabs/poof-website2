@@ -359,7 +359,7 @@ export default function HowItWorksPage() {
             Start Free Trial →
           </Link>
           <p className="text-white/80 text-sm mt-4">
-            No credit card required • 30-day free trial • Cancel anytime
+            30-day free trial • Cancel anytime
           </p>
         </div>
       </section>

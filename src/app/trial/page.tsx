@@ -140,14 +140,14 @@ export default function TrialPage() {
             Start Your <span className="hero-text">Free Trial</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Get 30 days of magical bookkeeping automation. No credit card required.
+            Get 30 days of magical bookkeeping automation. Cancel anytime during your trial.
           </p>
           <div className="flex justify-center items-center space-x-6 text-sm text-gray-600">
             <div className="flex items-center">
               <svg className="w-5 h-5 text-poof-success-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              No credit card required
+              30-day free trial
             </div>
             <div className="flex items-center">
               <svg className="w-5 h-5 text-poof-success-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
