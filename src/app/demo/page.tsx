@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export default function DemoPage() {
   const [formData, setFormData] = useState({
@@ -110,12 +111,12 @@ export default function DemoPage() {
               <p className="text-gray-600 mb-4">
                 Questions before your demo?
               </p>
-              <a
-                href="mailto:demos@poof.ai"
+              <Link
+                href="/contact"
                 className="text-poof-primary-600 hover:text-poof-primary-700 font-medium"
               >
-                Contact our demo team →
-              </a>
+                Contact us →
+              </Link>
             </div>
           </div>
         </section>

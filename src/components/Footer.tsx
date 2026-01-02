@@ -53,7 +53,7 @@ export default function Footer() {
               <img
                 src="/poof-logo.png"
                 alt="Poof Logo"
-                className="w-10 h-10 rounded-lg"
+                className="w-12 h-12 rounded-lg"
               />
               <span className="text-xl font-righteous">Poof</span>
             </div>

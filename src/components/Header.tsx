@@ -16,7 +16,7 @@ export default function Header() {
               <img
                 src="/poof-logo.png"
                 alt="Poof Logo"
-                className="w-10 h-10 rounded-lg"
+                className="w-14 h-14 rounded-lg"
               />
               <span className="poof-brand">Poof</span>
             </Link>

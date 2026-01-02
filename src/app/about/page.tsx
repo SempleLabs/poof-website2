@@ -15,7 +15,7 @@ export default function AboutPage() {
     {
       name: "Austin Semple",
       role: "CEO & Founder",
-      bio: "Former auditor with 8+ years experience of Controller experience for small businesses. Built Poof after years of wrestling with Quickbooks, manual spreadsheets, and seeing the daily struggles of business owners.",
+      bio: "With a decade of experience in auditing and financial controllership for small businesses, Austin brings deep expertise in addressing the real-world challenges of bookkeeping. Founded Poof to transform the way small businesses manage their finances through intelligent automation.",
       avatar: "/team/austin-semple.jpg"
     }
   ]
@@ -61,24 +61,19 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: "2015-2017",
-      title: "Auditing Foundation",
-      description: "Two years in auditing, seeing firsthand how small businesses struggled with financial management and bookkeeping complexities."
-    },
-    {
-      year: "2017-2025",
-      title: "Accounting Experience",
-      description: "Eight years as a solo Controller for small businesses, wrestling with QuickBooks daily and understanding every pain point business owners face."
+      year: "2015-2025",
+      title: "The Journey",
+      description: "A decade of experience in auditing and financial controllership for small businesses revealed a critical gap: traditional bookkeeping tools weren't built for the way modern businesses operate."
     },
     {
       year: "June 2025",
       title: "Poof is Born",
-      description: "Fed up with clunky software, started building the AI-powered bookkeeping solution I wished existed for every business I'd worked with."
+      description: "Fed up with clunky software and manual processes, I started building the AI-powered bookkeeping solution I wished existed for every business I'd worked with."
     },
     {
-      year: "Today",
-      title: "Building the Future",
-      description: "Combining 10+ years of hands-on bookkeeping experience with cutting-edge AI to make bookkeeping truly magical."
+      year: "2026",
+      title: "Reimagining Bookkeeping",
+      description: "Today, we're combining deep industry expertise with cutting-edge AI to make bookkeeping truly magical. No more wrestling with spreadsheets or complex software—just intelligent automation that understands your business."
     }
   ]
 
@@ -130,33 +125,44 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            {/* Simpler approach: just show the milestones without the complex timeline */}
-            <div className="space-y-16">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex gap-8 items-center">
-                  {/* Larger timeline circle */}
-                  <div className="flex-shrink-0">
-                    <div className="w-28 h-28 bg-magical-gradient rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight shadow-lg border-6 border-white">
-                      {milestone.year}
-                    </div>
-                  </div>
+            {/* Vertical timeline with connecting line */}
+            <div className="relative">
+              {/* Connecting line */}
+              <div className="absolute left-14 top-14 bottom-14 w-0.5 bg-gradient-to-b from-poof-primary-300 via-poof-primary-400 to-poof-primary-500"></div>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    <div className="glass-card p-8 hover:shadow-magical transition-all duration-300 transform hover:-translate-y-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                        {milestone.title}
-                        {index === milestones.length - 1 && (
-                          <svg className="w-6 h-6 ml-3 text-poof-primary-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
-                          </svg>
-                        )}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed text-lg">{milestone.description}</p>
+              <div className="space-y-12">
+                {milestones.map((milestone, index) => (
+                  <div key={index} className="relative flex gap-8 items-start">
+                    {/* Timeline circle with pulse animation for last item */}
+                    <div className="flex-shrink-0 relative">
+                      <div className={`w-28 h-28 bg-magical-gradient rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight shadow-xl border-4 border-white relative z-10 ${
+                        index === milestones.length - 1 ? 'animate-pulse' : ''
+                      }`}>
+                        <span className="px-2">{milestone.year}</span>
+                      </div>
+                      {/* Glow effect for current year */}
+                      {index === milestones.length - 1 && (
+                        <div className="absolute inset-0 bg-poof-primary-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                      )}
+                    </div>
+
+                    {/* Content card */}
+                    <div className="flex-1 pt-2">
+                      <div className="glass-card p-8 hover:shadow-magical transition-all duration-300 transform hover:-translate-y-1 border-l-4 border-poof-primary-400">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                          {milestone.title}
+                          {index === milestones.length - 1 && (
+                            <svg className="w-6 h-6 ml-3 text-poof-primary-500" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
+                            </svg>
+                          )}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed text-lg">{milestone.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -230,20 +236,21 @@ export default function AboutPage() {
           <div className="glass-card p-10">
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed mb-6">
-                After spending two years in auditing and then eight years as a solo controller for small businesses,
-                I've seen it all. The late nights wrestling with QuickBooks. The frustration of business owners
-                who just want to focus on what they love, not categorizing transactions.
+                Throughout my career in auditing and financial controllership for small businesses,
+                I witnessed a recurring pattern: brilliant entrepreneurs spending countless hours on bookkeeping
+                tasks instead of building their businesses. Late nights wrestling with QuickBooks became the norm,
+                not the exception.
               </p>
 
               <p className="text-lg leading-relaxed mb-6">
-                Every day, I watched brilliant entrepreneurs get bogged down by bookkeeping tasks that should
-                take minutes, not hours. I saw the stress it caused, the errors it created, and the opportunities
-                it stole from growing businesses.
+                Every day, I watched business owners get bogged down by work that should take minutes, not hours.
+                The stress it caused, the errors it created, and the growth opportunities it stole became
+                impossible to ignore.
               </p>
 
               <p className="text-lg leading-relaxed mb-6">
-                That's when I decided enough was enough. In June 2025, I started building the AI-powered
-                bookkeeping solution I wished existed for every business I'd ever worked with.
+                In June 2025, I decided to build the solution I'd always wished existed: an AI-powered
+                bookkeeping platform that truly understands small businesses and works the way you think.
               </p>
 
               <div className="bg-poof-primary-50 p-6 rounded-lg border-l-4 border-poof-primary-500 text-center">
