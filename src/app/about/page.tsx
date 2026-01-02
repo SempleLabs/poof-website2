@@ -211,7 +211,7 @@ export default function AboutPage() {
                     alt={member.name}
                     width={96}
                     height={96}
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>

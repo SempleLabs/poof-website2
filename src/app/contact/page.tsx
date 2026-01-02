@@ -29,11 +29,11 @@ export default function ContactPage() {
     setIsSubmitting(true)
 
     try {
-      // TODO: User needs to create a new Formspree form and replace this endpoint
       const response = await fetch('https://formspree.io/f/maqnoywd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData),
       })
