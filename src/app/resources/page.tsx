@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -235,29 +236,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-hero-gradient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Stay Updated with Bookkeeping Tips
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Get weekly insights, tips, and resources delivered to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-magical border-0 focus:ring-2 focus:ring-white/50"
-            />
-            <button className="bg-white text-poof-primary-600 font-semibold px-6 py-3 rounded-magical hover:bg-gray-50 transition-colors">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-white/80 text-sm mt-4">
-            No spam. Unsubscribe anytime.
-          </p>
-        </div>
-      </section>
+      <NewsletterSignup />
 
       <Footer />
     </main>

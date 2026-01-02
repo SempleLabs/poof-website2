@@ -1,6 +1,48 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 
 export default function Footer() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!email || !email.includes('@')) {
+      setStatus('error')
+      setMessage('Please enter a valid email address')
+      return
+    }
+
+    setStatus('loading')
+    setMessage('')
+
+    try {
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus('success')
+        setMessage('Thanks for subscribing!')
+        setEmail('')
+      } else {
+        setStatus('error')
+        setMessage(data.error || 'Something went wrong. Please try again.')
+      }
+    } catch (error) {
+      setStatus('error')
+      setMessage('Network error. Please try again.')
+    }
+  }
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -9,7 +51,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/poof-logo-with-purple-background.png"
+                src="/poof-logo.png"
                 alt="Poof Logo"
                 className="w-10 h-10 rounded-lg"
               />
@@ -58,12 +100,46 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
-              <li><a href="mailto:support@poof.ai" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 mt-12 pt-8 pb-8">
+          <div className="max-w-md mx-auto text-center">
+            <h3 className="text-lg font-semibold text-white mb-2">Stay Updated</h3>
+            <p className="text-gray-400 text-sm mb-4">Get bookkeeping tips and product updates delivered to your inbox.</p>
+
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                disabled={status === 'loading' || status === 'success'}
+                className="flex-1 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-poof-primary-600 focus:border-transparent disabled:opacity-50"
+              />
+              <button
+                type="submit"
+                disabled={status === 'loading' || status === 'success'}
+                className="px-6 py-2 bg-poof-primary-600 hover:bg-poof-primary-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
+              </button>
+            </form>
+
+            {message && (
+              <p className={`text-sm mt-2 ${status === 'error' ? 'text-red-400' : 'text-green-400'}`}>
+                {message}
+              </p>
+            )}
+
+            <p className="text-gray-500 text-xs mt-3">No spam. Unsubscribe anytime.</p>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400">
               © 2025 Poof. All rights reserved.

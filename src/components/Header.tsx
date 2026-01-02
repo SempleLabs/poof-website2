@@ -14,7 +14,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <img
-                src="/poof-logo-with-purple-background.png"
+                src="/poof-logo.png"
                 alt="Poof Logo"
                 className="w-10 h-10 rounded-lg"
               />

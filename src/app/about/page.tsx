@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About Poof - Magical Bookkeeping for Small Business',
@@ -15,11 +16,7 @@ export default function AboutPage() {
       name: "Austin Semple",
       role: "CEO & Founder",
       bio: "Former auditor with 8+ years experience of Controller experience for small businesses. Built Poof after years of wrestling with Quickbooks, manual spreadsheets, and seeing the daily struggles of business owners.",
-      avatar: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-      )
+      avatar: "/team/austin-semple.jpg"
     }
   ]
 
@@ -202,7 +199,15 @@ export default function AboutPage() {
           <div className="max-w-md mx-auto">
             {team.map((member, index) => (
               <div key={index} className="glass-card p-8 text-center">
-                <div className="w-16 h-16 bg-poof-primary-100 rounded-full flex items-center justify-center mb-4 mx-auto text-poof-primary-600">{member.avatar}</div>
+                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 mx-auto border-4 border-poof-primary-100">
+                  <Image
+                    src={member.avatar}
+                    alt={member.name}
+                    width={96}
+                    height={96}
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                 <div className="text-poof-primary-600 font-medium mb-4">{member.role}</div>
                 <p className="text-gray-600 leading-relaxed">{member.bio}</p>

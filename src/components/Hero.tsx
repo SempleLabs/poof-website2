@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-8">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-8 mt-24 md:mt-0">
             <AutoAwesome className="mr-2" sx={{ fontSize: 18 }} />
             AI-Powered Bookkeeping
           </div>
@@ -73,7 +73,7 @@ export default function Hero() {
               href="/demo"
               className="border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-magical backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg"
             >
-              Watch Demo
+              Request Demo
             </Link>
           </div>
 
