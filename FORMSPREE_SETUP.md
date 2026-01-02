@@ -8,82 +8,107 @@ You're using Formspree for form handling on your website. Here's how to set up t
 - **File:** `src/app/demo/page.tsx`
 - **Formspree ID:** `xkgqjrba`
 - **Status:** Active
-- **Issue:** Currently sending to `semplelabs@gmail.com`
-- **Fix Needed:** Update email to `support@poof.ai`
+- **Sends to:** `semplelabs@gmail.com`
 
 ### 2. Trial Signup Form ✅
 - **File:** `src/app/trial/page.tsx`
 - **Formspree ID:** `xvgwkarj`
 - **Status:** Active
-- **Should send to:** `support@poof.ai`
+- **Sends to:** `semplelabs@gmail.com`
 
-### 3. Contact Form ⚠️ NEEDS SETUP
+### 3. Contact Form ✅
 - **File:** `src/app/contact/page.tsx`
-- **Formspree ID:** Currently `YOUR_FORM_ID` (placeholder)
-- **Status:** Needs creation
-- **Should send to:** `support@poof.ai`
+- **Formspree ID:** `maqnoywd`
+- **Status:** Active
+- **Sends to:** `semplelabs@gmail.com`
 
 ---
 
-## Step-by-Step Setup
+## How to Access Formspree Settings
 
-### Update Demo Form Email
+When you click on a form in Formspree, you'll see these tabs at the top:
+- **Submissions** - View all form submissions
+- **Settings** - Configure notification emails and other settings
+- **Workflow** - Set up auto-replies and automation
+- **Rules** - Set up conditional logic
+- **Integration** - Connect to other services
+
+### Where to Find Email Settings (Notification Email)
 
 1. Log into https://formspree.io
-2. Find form `xkgqjrba` (Demo Request)
-3. Go to **Settings** → **Email**
-4. Change notification email from `semplelabs@gmail.com` to **`support@poof.ai`**
-5. Save changes
-6. Test the form at your website's `/demo` page
+2. Click on the form name (e.g., "Demo Request", "Trial Signup", "Website Contact Form")
+3. Click the **Settings** tab at the top
+4. On the Settings page, you'll see:
+   - **Notification Email** - Where form submissions are sent (currently `semplelabs@gmail.com`)
+   - **Email Subject** - Customize the subject line of notification emails
+   - **Reply-To** - Set which field contains the reply-to email
+   - **CC/BCC** - Add additional recipients
+5. Make any changes you need
+6. Click **Save** at the bottom
 
-### Verify Trial Form Email
+### Auto-Reply Settings (Premium Feature)
 
-1. In Formspree dashboard, find form `xvgwkarj` (Trial Signup)
-2. Go to **Settings** → **Email**
-3. Verify notification email is set to **`support@poof.ai`**
-4. If not, update it
-5. Test the form at your website's `/trial` page
+**Note:** Auto-replies are a **paid feature** on Formspree and are not available on the free tier.
 
-### Create New Contact Form
+On the free plan:
+- **Responses** section is locked (requires upgrade)
+- **Actions** only allows sending notifications to your email (semplelabs@gmail.com)
+- Forms redirect to success pages on your website (this works on free tier)
 
-1. In Formspree dashboard, click **+ New Form**
-2. Name it: **"Website Contact Form"**
-3. Configure settings:
-   - **Email Address:** `support@poof.ai`
-   - **Subject:** "New Contact Form Submission"
-   - **Auto-reply:** Optional (recommended)
-   - **Spam Protection:** Enable reCAPTCHA (recommended)
+If you want auto-reply functionality, you have two options:
 
-4. Copy the form ID (will look like `abc123xyz`)
+**Option 1: Upgrade Formspree** ($10/month)
+- Unlocks auto-reply/autoresponder feature
+- Get 1,000 submissions/month (vs 50 on free tier)
+- Custom response emails to users
 
-5. Update the contact page code:
-   - Open `/src/app/contact/page.tsx`
-   - Find line 37: `const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {`
-   - Replace `YOUR_FORM_ID` with your new form ID
-   - Example: `'https://formspree.io/f/abc123xyz'`
+**Option 2: Use Resend for Auto-Replies** (Recommended - Free)
+Since you're already using Resend in your app, you can implement auto-replies yourself:
+1. Create an API route that handles form submissions
+2. When a form is submitted, use Resend to send a confirmation email
+3. This gives you full control over email content and design
+4. See `RESEND_WELCOME_EMAILS.md` for implementation details
 
-6. Save and test the contact form on your website
+## Verifying Your Current Setup
+
+All three forms are currently configured and sending to `semplelabs@gmail.com`. If you want to verify or change settings:
+
+### Demo Request Form (`xkgqjrba`)
+1. Log into Formspree → Click "Demo Request" form
+2. Click **Settings** tab → Verify notification email is `semplelabs@gmail.com`
+3. Click **Workflow** tab → Verify redirect is set to success page
+
+### Trial Signup Form (`xvgwkarj`)
+1. Log into Formspree → Click "Trial Signup" form
+2. Click **Settings** tab → Verify notification email is `semplelabs@gmail.com`
+3. Click **Workflow** tab → Verify redirect is set to success page
+
+### Contact Form (`maqnoywd`)
+1. Log into Formspree → Click "Website Contact Form"
+2. Click **Settings** tab → Verify notification email is `semplelabs@gmail.com`
+3. Click **Workflow** tab → Verify redirect is set to success page (handled in code)
 
 ---
 
-## Recommended Email Settings
+## Auto-Reply Email Templates (For Future Use)
 
-For each form, configure these settings in Formspree:
+**Note:** These templates are for reference if you decide to upgrade Formspree or implement auto-replies using Resend.
 
-### Email Notifications
-- **To:** `support@poof.ai`
-- **Subject Line:** Customize per form:
-  - Demo: "New Demo Request from [Name]"
-  - Trial: "New Trial Signup from [Name]"
-  - Contact: "New Contact Form Message from [Name]"
+On Formspree's free tier, auto-replies are not available. Your current setup:
+- ✅ User submits form
+- ✅ You receive notification at semplelabs@gmail.com
+- ✅ User sees success page on your website
+- ❌ User does NOT receive auto-reply email (requires paid plan or custom implementation)
 
-### Auto-Reply (Optional but Recommended)
-Enable auto-reply to immediately acknowledge form submissions:
+If you want to add auto-replies later, here are the templates:
 
-**Demo Form Auto-Reply:**
+### Demo Form Auto-Reply Template
+
+**Reply-To Field:** email
+**Subject Line:** Your Demo Request Has Been Received
+
+**Message:**
 ```
-Subject: Your Demo Request Has Been Received
-
 Hi {name},
 
 Thank you for requesting a demo of Poof! We've received your request and will be in touch within 24 hours to schedule a time that works for you.
@@ -92,13 +117,34 @@ In the meantime, feel free to explore our resources at https://poofai.com/resour
 
 Best regards,
 The Poof Team
-support@poof.ai
 ```
 
-**Contact Form Auto-Reply:**
-```
-Subject: We've Received Your Message
+### Trial Form Auto-Reply Template
 
+**Reply-To Field:** email
+**Subject Line:** Welcome to Your Poof Trial!
+
+**Message:**
+```
+Hi {name},
+
+Thank you for signing up for a Poof trial! We're excited to help you automate your bookkeeping.
+
+Your trial information has been received, and you should receive access details shortly.
+
+If you have any questions, feel free to reply to this email or visit our resources at https://poofai.com/resources
+
+Best regards,
+The Poof Team
+```
+
+### Contact Form Auto-Reply Template
+
+**Reply-To Field:** email
+**Subject Line:** We've Received Your Message
+
+**Message:**
+```
 Hi {name},
 
 Thank you for reaching out to Poof! We've received your message and will respond within 24 hours.
@@ -107,8 +153,9 @@ If you have an urgent question, you can also reply directly to this email.
 
 Best regards,
 The Poof Team
-support@poof.ai
 ```
+
+**Note:** The `{name}` placeholder will automatically be replaced with the value from the "name" field in your form.
 
 ### Spam Protection
 - Enable **reCAPTCHA** for all forms to prevent spam
@@ -123,7 +170,7 @@ When someone submits a form:
 1. **User fills out form** on your website
 2. **Form data sent** to Formspree endpoint
 3. **Formspree processes** the submission
-4. **Email notification sent** to `support@poof.ai`
+4. **Email notification sent** to `semplelabs@gmail.com`
 5. **User sees success page** on your website
 6. **Optional: Auto-reply sent** to user's email address
 
@@ -150,7 +197,7 @@ For each form (Demo, Trial, Contact):
 - [ ] Fill out form with test data
 - [ ] Submit form
 - [ ] Success page appears correctly
-- [ ] Email notification received at `support@poof.ai`
+- [ ] Email notification received at `semplelabs@gmail.com`
 - [ ] Auto-reply received (if configured)
 - [ ] Form data appears in Formspree dashboard
 - [ ] Test on mobile device
@@ -223,21 +270,20 @@ If you outgrow Formspree or want more control:
 
 | Form Type | Form ID | Email To | File Location |
 |-----------|---------|----------|---------------|
-| Demo Request | `xkgqjrba` | support@poof.ai | src/app/demo/page.tsx |
-| Trial Signup | `xvgwkarj` | support@poof.ai | src/app/trial/page.tsx |
-| Contact | `[YOUR_NEW_ID]` | support@poof.ai | src/app/contact/page.tsx |
+| Demo Request | `xkgqjrba` | semplelabs@gmail.com | src/app/demo/page.tsx |
+| Trial Signup | `xvgwkarj` | semplelabs@gmail.com | src/app/trial/page.tsx |
+| Contact | `maqnoywd` | semplelabs@gmail.com | src/app/contact/page.tsx |
 
 ---
 
 ## Next Steps
 
-1. ✅ Log into Formspree.io
-2. ✅ Update demo form email to support@poof.ai
-3. ✅ Verify trial form email
-4. ✅ Create new contact form
-5. ✅ Update contact page code with new form ID
-6. ✅ Configure auto-replies (optional)
-7. ✅ Test all three forms
-8. ✅ Monitor Formspree dashboard for submissions
+1. ✅ All forms created and active
+2. ✅ Contact page code updated with form ID `maqnoywd`
+3. ✅ All forms sending to semplelabs@gmail.com
+4. ✅ Success page redirects configured
+5. Optional: Test all three forms with sample data
+6. Optional: Upgrade Formspree ($10/month) or implement Resend auto-replies for user confirmation emails
+7. Monitor Formspree dashboard for submissions
 
 **Need Help?** Formspree documentation: https://help.formspree.io/

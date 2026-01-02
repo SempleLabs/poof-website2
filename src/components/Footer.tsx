@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-2 mb-4">
               <img
                 src="/poof-logo.png"
                 alt="Poof Logo"
