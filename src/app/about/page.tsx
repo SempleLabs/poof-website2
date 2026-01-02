@@ -205,12 +205,12 @@ export default function AboutPage() {
           <div className="max-w-md mx-auto">
             {team.map((member, index) => (
               <div key={index} className="glass-card p-8 text-center">
-                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 mx-auto border-4 border-poof-primary-100">
+                <div className="w-40 h-40 rounded-full overflow-hidden mb-6 mx-auto border-4 border-poof-primary-100">
                   <Image
                     src={member.avatar}
                     alt={member.name}
-                    width={96}
-                    height={96}
+                    width={160}
+                    height={160}
                     className="object-cover object-top"
                   />
                 </div>

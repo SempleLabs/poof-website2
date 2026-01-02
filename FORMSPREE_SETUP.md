@@ -1,6 +1,6 @@
 # Formspree Forms Setup Guide
 
-You're using Formspree for form handling on your website. Here's how to set up the contact form and verify your demo/trial forms.
+You're using Formspree for form handling on your website.
 
 ## Current Forms
 
@@ -10,17 +10,13 @@ You're using Formspree for form handling on your website. Here's how to set up t
 - **Status:** Active
 - **Sends to:** `semplelabs@gmail.com`
 
-### 2. Trial Signup Form ✅
-- **File:** `src/app/trial/page.tsx`
-- **Formspree ID:** `xvgwkarj`
-- **Status:** Active
-- **Sends to:** `semplelabs@gmail.com`
-
-### 3. Contact Form ✅
+### 2. Contact Form ✅
 - **File:** `src/app/contact/page.tsx`
 - **Formspree ID:** `maqnoywd`
 - **Status:** Active
 - **Sends to:** `semplelabs@gmail.com`
+
+**Note:** Trial signups are handled directly through the app at `https://app.poofai.com/register` with an in-app survey, not through a Formspree form.
 
 ---
 
@@ -45,6 +41,31 @@ When you click on a form in Formspree, you'll see these tabs at the top:
    - **CC/BCC** - Add additional recipients
 5. Make any changes you need
 6. Click **Save** at the bottom
+
+### CRITICAL: Fix 403 Forbidden Error - Disable reCAPTCHA (Required!)
+
+**If you get 403 Forbidden errors**, this is because Formspree blocks AJAX submissions by default unless you configure reCAPTCHA.
+
+**Quick Fix (Recommended for now):**
+
+1. In Formspree, click on your form (e.g., Demo Request)
+2. Go to **Settings** tab
+3. Scroll down to the **"reCAPTCHA"** section
+4. **Disable reCAPTCHA** (toggle it OFF)
+5. Click **Save**
+6. **Repeat for both forms** (Demo and Contact)
+
+This will allow AJAX form submissions to work immediately.
+
+**Alternative (More secure for production):**
+
+If you want spam protection, you can add your own reCAPTCHA:
+1. Get a reCAPTCHA key from Google: https://www.google.com/recaptcha/admin
+2. In Formspree Settings → reCAPTCHA section
+3. Add your reCAPTCHA site key and secret key
+4. Update your form code to include the reCAPTCHA widget
+
+For now, disabling reCAPTCHA is the fastest way to get your forms working. Formspree still has honeypot spam protection even with reCAPTCHA disabled.
 
 ### Auto-Reply Settings (Premium Feature)
 
@@ -71,15 +92,10 @@ Since you're already using Resend in your app, you can implement auto-replies yo
 
 ## Verifying Your Current Setup
 
-All three forms are currently configured and sending to `semplelabs@gmail.com`. If you want to verify or change settings:
+Both forms are currently configured and sending to `semplelabs@gmail.com`. If you want to verify or change settings:
 
 ### Demo Request Form (`xkgqjrba`)
 1. Log into Formspree → Click "Demo Request" form
-2. Click **Settings** tab → Verify notification email is `semplelabs@gmail.com`
-3. Click **Workflow** tab → Verify redirect is set to success page
-
-### Trial Signup Form (`xvgwkarj`)
-1. Log into Formspree → Click "Trial Signup" form
 2. Click **Settings** tab → Verify notification email is `semplelabs@gmail.com`
 3. Click **Workflow** tab → Verify redirect is set to success page
 
@@ -114,25 +130,6 @@ Hi {name},
 Thank you for requesting a demo of Poof! We've received your request and will be in touch within 24 hours to schedule a time that works for you.
 
 In the meantime, feel free to explore our resources at https://poofai.com/resources
-
-Best regards,
-The Poof Team
-```
-
-### Trial Form Auto-Reply Template
-
-**Reply-To Field:** email
-**Subject Line:** Welcome to Your Poof Trial!
-
-**Message:**
-```
-Hi {name},
-
-Thank you for signing up for a Poof trial! We're excited to help you automate your bookkeeping.
-
-Your trial information has been received, and you should receive access details shortly.
-
-If you have any questions, feel free to reply to this email or visit our resources at https://poofai.com/resources
 
 Best regards,
 The Poof Team
@@ -192,7 +189,7 @@ If you exceed limits:
 
 ### Test Checklist
 
-For each form (Demo, Trial, Contact):
+For each form (Demo and Contact):
 
 - [ ] Fill out form with test data
 - [ ] Submit form
@@ -271,19 +268,20 @@ If you outgrow Formspree or want more control:
 | Form Type | Form ID | Email To | File Location |
 |-----------|---------|----------|---------------|
 | Demo Request | `xkgqjrba` | semplelabs@gmail.com | src/app/demo/page.tsx |
-| Trial Signup | `xvgwkarj` | semplelabs@gmail.com | src/app/trial/page.tsx |
 | Contact | `maqnoywd` | semplelabs@gmail.com | src/app/contact/page.tsx |
 
 ---
 
 ## Next Steps
 
-1. ✅ All forms created and active
+1. ✅ Both forms created and active (Demo and Contact)
 2. ✅ Contact page code updated with form ID `maqnoywd`
 3. ✅ All forms sending to semplelabs@gmail.com
 4. ✅ Success page redirects configured
-5. Optional: Test all three forms with sample data
-6. Optional: Upgrade Formspree ($10/month) or implement Resend auto-replies for user confirmation emails
-7. Monitor Formspree dashboard for submissions
+5. ✅ Trial signups handled through app.poofai.com/register
+6. Optional: Disable reCAPTCHA in Formspree Settings for both forms to prevent 403 errors
+7. Optional: Test both forms with sample data
+8. Optional: Upgrade Formspree ($10/month) or implement Resend auto-replies for user confirmation emails
+9. Monitor Formspree dashboard for submissions
 
 **Need Help?** Formspree documentation: https://help.formspree.io/

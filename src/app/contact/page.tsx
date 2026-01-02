@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -106,19 +105,10 @@ export default function ContactPage() {
             <div className="mt-8 text-center">
               <Link
                 href="/"
-                className="magical-button text-lg px-8 py-4 mb-4 inline-block"
+                className="magical-button text-lg px-8 py-4 inline-block"
               >
                 Back to Home →
               </Link>
-              <p className="text-gray-600 mb-4">
-                Urgent question?
-              </p>
-              <a
-                href="mailto:support@poof.ai"
-                className="text-poof-primary-600 hover:text-poof-primary-700 font-medium"
-              >
-                Email us directly at support@poof.ai →
-              </a>
             </div>
           </div>
         </section>
@@ -232,19 +222,7 @@ export default function ContactPage() {
       {/* Contact Info */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="glass-card p-6">
-              <div className="w-12 h-12 bg-poof-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-poof-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-              <a href="mailto:support@poof.ai" className="text-poof-primary-600 hover:text-poof-primary-700">
-                support@poof.ai
-              </a>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
             <div className="glass-card p-6">
               <div className="w-12 h-12 bg-poof-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-poof-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
