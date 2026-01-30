@@ -1,110 +1,128 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const navLinks = [
+    { href: '/features', label: 'Features' },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/how-it-works', label: 'How it Works' },
+    { href: '/resources', label: 'Resources' },
+    { href: '/about', label: 'About' },
+  ]
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-poof-primary-100 z-50">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200'
+          : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-1">
-              <img
-                src="/poof-logo.png"
-                alt="Poof Logo"
-                className="w-14 h-14 rounded-lg"
-              />
-              <span className="poof-brand">Poof</span>
-            </Link>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image src="/poof-logo.png" alt="Poof logo" width={52} height={52} className="-mr-1" />
+            <span className="poof-brand">Poof</span>
+          </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/features" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-              Features
-            </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-              Pricing
-            </Link>
-            <Link href="/how-it-works" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-              How it Works
-            </Link>
-            <Link href="/resources" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-              Resources
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-              About
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`nav-link-underline font-medium transition-colors ${
+                  scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-white hover:text-gold-400'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/demo"
-              className="text-poof-primary-600 hover:text-poof-primary-700 font-medium transition-colors"
+              className={`font-semibold transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-white hover:text-gold-400'
+              }`}
             >
               Request Demo
             </Link>
             <Link
               href="https://app.poofai.com/login"
-              className="magical-button"
+              className="bg-gold-500 text-midnight-900 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-gold-400 shadow-gold transition-all duration-200 shimmer-hover"
             >
               Sign In
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-poof-primary-600 transition-colors"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`md:hidden transition-colors ${
+              scrolled ? 'text-slate-700' : 'text-white'
+            }`}
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
-              <Link href="/features" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-                Features
+      {/* Mobile Menu - full screen overlay */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 bg-midnight-900/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center">
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="absolute top-5 right-5 text-white"
+          >
+            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div className="flex flex-col items-center space-y-6">
+            {navLinks.map((link, i) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-white text-2xl font-semibold hover:text-gold-400 transition-colors"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                {link.label}
               </Link>
-              <Link href="/pricing" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-                Pricing
+            ))}
+            <div className="pt-6 border-t border-midnight-600 flex flex-col items-center space-y-4 w-full">
+              <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="text-gold-400 text-xl font-semibold">
+                Request Demo
               </Link>
-              <Link href="/how-it-works" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-                How it Works
+              <Link
+                href="https://app.poofai.com/login"
+                onClick={() => setIsMenuOpen(false)}
+                className="bg-gold-500 text-midnight-900 px-8 py-3 rounded-lg font-semibold text-lg"
+              >
+                Sign In
               </Link>
-              <Link href="/resources" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-                Resources
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-poof-primary-600 transition-colors">
-                About
-              </Link>
-              <div className="pt-4 border-t border-gray-200">
-                <Link href="/demo" className="block mb-3 text-poof-primary-600 font-medium">
-                  Request Demo
-                </Link>
-                <Link href="https://app.poofai.com/login" className="magical-button block text-center">
-                  Sign In
-                </Link>
-              </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   )
 }

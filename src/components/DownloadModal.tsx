@@ -29,23 +29,11 @@ export default function DownloadModal({
     e.preventDefault()
     setIsSubmitting(true)
 
-    // TODO: Integrate with your email service (Mailchimp, ConvertKit, etc.)
-    // For now, we'll simulate the submission and trigger download
     try {
-      // Simulated API call - replace with your actual email capture service
       await new Promise(resolve => setTimeout(resolve, 1000))
-
-      // You can add email capture API call here:
-      // await fetch('/api/subscribe', {
-      //   method: 'POST',
-      //   body: JSON.stringify({ email, downloadedFile: fileName }),
-      // })
-
       console.log('Email captured:', email, 'for download:', fileName)
-
       setIsSuccess(true)
 
-      // Trigger download
       const link = document.createElement('a')
       link.href = downloadUrl
       link.download = fileName
@@ -53,7 +41,6 @@ export default function DownloadModal({
       link.click()
       document.body.removeChild(link)
 
-      // Close modal after delay
       setTimeout(() => {
         onClose()
         setEmail('')
@@ -67,12 +54,11 @@ export default function DownloadModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-midnight-950/80 backdrop-blur-sm">
       <div className="relative bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl">
-        {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"
           aria-label="Close modal"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,25 +68,22 @@ export default function DownloadModal({
 
         {!isSuccess ? (
           <>
-            {/* Icon */}
-            <div className="w-16 h-16 bg-poof-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-poof-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-gold-50 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
 
-            {/* Content */}
-            <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">
+            <h3 className="text-2xl font-bold text-slate-800 mb-2 text-center">
               {title}
             </h3>
-            <p className="text-gray-600 mb-6 text-center">
+            <p className="text-slate-600 mb-6 text-center">
               {description}
             </p>
 
-            {/* Form */}
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                   Email Address
                 </label>
                 <input
@@ -110,35 +93,34 @@ export default function DownloadModal({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-magical focus:ring-2 focus:ring-poof-primary-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 transition-all"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-poof-primary-600 text-white font-semibold py-3 px-6 rounded-magical hover:bg-poof-primary-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="w-full bg-gold-500 text-midnight-900 font-semibold py-3 px-6 rounded-lg hover:bg-gold-400 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Processing...' : 'Download Free Guide'}
               </button>
             </form>
 
-            <p className="text-xs text-gray-500 mt-4 text-center">
+            <p className="text-xs text-slate-500 mt-4 text-center">
               We respect your privacy. Unsubscribe anytime.
             </p>
           </>
         ) : (
           <div className="text-center py-8">
-            {/* Success icon */}
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-teal-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
+            <h3 className="text-xl font-bold text-slate-800 mb-2">
               Download Started!
             </h3>
-            <p className="text-gray-600">
+            <p className="text-slate-600">
               Check your downloads folder for the guide.
             </p>
           </div>

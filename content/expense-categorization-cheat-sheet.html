@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Categorization Cheat Sheet | Poof</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1f2937; line-height: 1.7; background: #fff; }
+    .page { max-width: 800px; margin: 0 auto; padding: 60px 48px; }
+    .cover { text-align: center; padding: 80px 40px; background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%); color: white; border-radius: 12px; margin-bottom: 48px; }
+    .cover h1 { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
+    .cover p { font-size: 18px; opacity: 0.9; }
+    .cover .brand { font-size: 14px; margin-top: 24px; opacity: 0.7; letter-spacing: 1px; text-transform: uppercase; }
+    h2 { font-size: 22px; font-weight: 700; color: #eab308; margin: 36px 0 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; }
+    h3 { font-size: 17px; font-weight: 600; color: #1f2937; margin: 20px 0 10px; }
+    p { margin-bottom: 12px; font-size: 14px; }
+    .callout { background: #fefce8; border-left: 4px solid #eab308; padding: 14px 18px; margin: 16px 0; border-radius: 0 8px 8px 0; font-size: 13px; }
+    .callout strong { color: #eab308; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 13px; }
+    th { background: #eab308; color: #0a0a0f; padding: 9px 12px; text-align: left; font-weight: 600; }
+    td { padding: 9px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+    tr:nth-child(even) { background: #f9fafb; }
+    .category-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin: 12px 0; }
+    .category-card h3 { margin-top: 0; color: #eab308; }
+    .tag { display: inline-block; background: #e0e7ff; color: #4338ca; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 4px; }
+    .tag-deductible { background: #dcfce7; color: #166534; }
+    .tag-partial { background: #fef9c3; color: #854d0e; }
+    ul { margin: 8px 0 14px 20px; font-size: 13px; }
+    li { margin-bottom: 4px; }
+    .footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e7eb; color: #9ca3af; font-size: 13px; }
+    .footer a { color: #eab308; text-decoration: none; }
+    @media print { .page { padding: 36px 28px; } .cover { page-break-after: always; } h2 { page-break-after: avoid; } .category-card { page-break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="cover">
+      <h1>Expense Categorization Cheat Sheet</h1>
+      <p>A quick-reference guide for properly categorizing every business expense</p>
+    </div>
+
+    <h2>Why Categorization Matters</h2>
+    <p>Correctly categorizing expenses ensures accurate financial reports, maximizes tax deductions, and keeps you audit-ready. This cheat sheet covers the most common expense categories with examples and IRS deductibility notes.</p>
+
+    <h2>Quick Reference Table</h2>
+    <table>
+      <tr><th>Category</th><th>Common Examples</th><th>IRS Schedule C Line</th><th>Deductible?</th></tr>
+      <tr><td>Advertising & Marketing</td><td>Google Ads, business cards, social media ads, website hosting</td><td>Line 8</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Car & Vehicle</td><td>Gas, mileage, tolls, parking (business use)</td><td>Line 9</td><td><span class="tag tag-partial">Partial</span></td></tr>
+      <tr><td>Contract Labor</td><td>Freelancers, independent contractors (paid $600+)</td><td>Line 11</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Insurance</td><td>Business liability, professional liability, workers' comp</td><td>Line 15</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Interest</td><td>Business loan interest, business credit card interest</td><td>Line 16</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Legal & Professional</td><td>Attorney, CPA, bookkeeper, consultants</td><td>Line 17</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Office Expenses</td><td>Printer ink, paper, pens, desk supplies</td><td>Line 18</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Rent / Lease</td><td>Office rent, equipment leases, coworking space</td><td>Line 20</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Repairs & Maintenance</td><td>Equipment repair, office maintenance</td><td>Line 21</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Supplies</td><td>Raw materials, packaging, cleaning supplies</td><td>Line 22</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Taxes & Licenses</td><td>Business licenses, permits, state taxes</td><td>Line 23</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Travel</td><td>Flights, hotels, rental cars (business purpose)</td><td>Line 24a</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Meals</td><td>Client meals, business travel meals</td><td>Line 24b</td><td><span class="tag tag-partial">50%</span></td></tr>
+      <tr><td>Utilities</td><td>Electric, water, internet, phone (business use)</td><td>Line 25</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Wages & Payroll</td><td>Employee salaries, payroll taxes, benefits</td><td>Line 26</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Software & SaaS</td><td>Accounting software, project management, design tools</td><td>Line 27a</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Education & Training</td><td>Courses, conferences, books (related to business)</td><td>Line 27a</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Bank & Merchant Fees</td><td>Payment processing, monthly bank fees, wire fees</td><td>Line 27a</td><td><span class="tag tag-deductible">Full</span></td></tr>
+      <tr><td>Home Office</td><td>Portion of rent/mortgage, utilities, internet</td><td>Line 30</td><td><span class="tag tag-partial">Partial</span></td></tr>
+      <tr><td>Depreciation</td><td>Equipment, vehicles, furniture (over useful life)</td><td>Line 13</td><td><span class="tag tag-deductible">Full</span></td></tr>
+    </table>
+
+    <h2>Detailed Category Breakdowns</h2>
+
+    <div class="category-card">
+      <h3>Advertising & Marketing</h3>
+      <p>Any cost incurred to promote your business to customers.</p>
+      <ul>
+        <li>Online ads (Google, Facebook, Instagram, LinkedIn)</li>
+        <li>Print materials (business cards, flyers, brochures)</li>
+        <li>Website design, hosting, and domain registration</li>
+        <li>SEO and content marketing services</li>
+        <li>Sponsorships and promotional events</li>
+        <li>Email marketing platforms (Mailchimp, etc.)</li>
+      </ul>
+    </div>
+
+    <div class="category-card">
+      <h3>Car & Vehicle Expenses</h3>
+      <p>You can use <strong>standard mileage</strong> (67¢/mile for 2024) or <strong>actual expenses</strong>—not both.</p>
+      <ul>
+        <li><strong>Standard mileage:</strong> Track miles driven for business purposes</li>
+        <li><strong>Actual expenses:</strong> Gas, oil, repairs, tires, insurance, registration, depreciation</li>
+        <li>Parking fees and tolls are deductible under either method</li>
+        <li>Commuting from home to a regular office is <strong>not</strong> deductible</li>
+      </ul>
+      <div class="callout"><strong>Record-keeping:</strong> Log the date, destination, business purpose, and miles for every trip. Apps and mileage trackers make this easy.</div>
+    </div>
+
+    <div class="category-card">
+      <h3>Meals & Entertainment</h3>
+      <ul>
+        <li>Business meals with clients or prospects — <strong>50% deductible</strong></li>
+        <li>Meals during business travel — <strong>50% deductible</strong></li>
+        <li>Office snacks and coffee for employees — <strong>50% deductible</strong></li>
+        <li>Entertainment (sporting events, concerts) — <strong>Not deductible</strong> (since 2018 tax reform)</li>
+      </ul>
+      <div class="callout"><strong>Documentation:</strong> Record who attended, the business purpose, and the amount. Write it on the receipt or in your expense notes.</div>
+    </div>
+
+    <div class="category-card">
+      <h3>Home Office</h3>
+      <p>If you use part of your home exclusively and regularly for business:</p>
+      <ul>
+        <li><strong>Simplified method:</strong> $5 per sq ft, max 300 sq ft = $1,500 max deduction</li>
+        <li><strong>Regular method:</strong> Calculate the percentage of your home used for business, apply to mortgage/rent, utilities, insurance, repairs</li>
+        <li>Space must be your <strong>principal place of business</strong> or used to meet clients</li>
+        <li>A dedicated room or clearly defined workspace is ideal</li>
+      </ul>
+    </div>
+
+    <div class="category-card">
+      <h3>Software & Subscriptions</h3>
+      <ul>
+        <li>Accounting/bookkeeping software (Poof, etc.)</li>
+        <li>Project management (Asana, Monday, Trello)</li>
+        <li>Design tools (Canva, Adobe Creative Cloud)</li>
+        <li>Communication tools (Slack, Zoom, Google Workspace)</li>
+        <li>Industry-specific software and cloud services</li>
+        <li>Website/app hosting (AWS, Vercel, etc.)</li>
+      </ul>
+    </div>
+
+    <h2>Common Categorization Mistakes</h2>
+    <table>
+      <tr><th>Mistake</th><th>Correct Approach</th></tr>
+      <tr><td>Putting everything under "Miscellaneous"</td><td>Use specific categories—it maximizes deductions and makes reports useful</td></tr>
+      <tr><td>Categorizing owner draws as expenses</td><td>Owner draws are equity transactions, not expenses</td></tr>
+      <tr><td>Mixing personal and business purchases</td><td>Only categorize the business portion; split transactions if needed</td></tr>
+      <tr><td>Categorizing equipment as supplies</td><td>Items over $2,500 should be capitalized and depreciated (or expensed under Section 179)</td></tr>
+      <tr><td>Missing contractor payments</td><td>Track all contractor payments—you must issue 1099s for anyone paid $600+</td></tr>
+      <tr><td>Forgetting to split mixed-use expenses</td><td>Phone, internet, car—calculate and deduct only the business percentage</td></tr>
+    </table>
+
+    <h2>IRS Red Flags to Avoid</h2>
+    <ul>
+      <li>Disproportionately large meals & entertainment relative to revenue</li>
+      <li>100% business use of a vehicle (rare and scrutinized)</li>
+      <li>Large round numbers without receipts</li>
+      <li>Home office deduction without exclusive-use documentation</li>
+      <li>Excessive travel expenses for your business type</li>
+    </ul>
+
+    <h2>Quick Decision Flowchart</h2>
+    <div class="category-card">
+      <p><strong>Is this expense ordinary and necessary for my business?</strong></p>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li>→ <strong>Yes:</strong> Categorize under the most specific category available</li>
+        <li>→ <strong>Partially:</strong> Split the expense — deduct only the business portion</li>
+        <li>→ <strong>No:</strong> Personal expense — do not record as a business expense</li>
+      </ul>
+      <p style="margin-top: 12px;"><strong>Is it over $2,500?</strong></p>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li>→ <strong>Yes:</strong> Consider capitalizing as an asset (equipment, furniture, etc.)</li>
+        <li>→ <strong>No:</strong> Record as a current-period expense</li>
+      </ul>
+    </div>
+
+    <div class="callout"><strong>Poof Tip:</strong> Poof uses AI to automatically categorize your transactions as they're imported from your bank. You can set up custom rules so recurring expenses are always categorized correctly—saving you hours every month.</div>
+
+    <div class="footer">
+      <p><strong>Poof</strong> — AI-powered bookkeeping for small businesses</p>
+      <p><a href="https://poof.app">poof.app</a></p>
+      <p style="margin-top: 8px;">© 2026 Poof. This guide is provided for informational purposes and does not constitute tax or legal advice. Consult a tax professional for your specific situation.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -22,9 +22,7 @@ export default function NewsletterSignup() {
     try {
       const response = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       })
 
@@ -45,12 +43,12 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <section className="py-16 bg-hero-gradient">
+    <section className="py-16 bg-midnight-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">
+        <h2 className="font-display text-3xl font-bold text-white mb-4">
           Stay Updated with Bookkeeping Tips
         </h2>
-        <p className="text-xl text-white/90 mb-8">
+        <p className="text-xl text-slate-400 mb-8">
           Get weekly insights, tips, and resources delivered to your inbox.
         </p>
 
@@ -62,26 +60,26 @@ export default function NewsletterSignup() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               disabled={status === 'loading' || status === 'success'}
-              className="flex-1 px-4 py-3 rounded-magical border-0 focus:ring-2 focus:ring-white/50 disabled:bg-gray-100 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-3 rounded-lg bg-midnight-800 border border-midnight-600 text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 disabled:cursor-not-allowed"
               required
             />
             <button
               type="submit"
               disabled={status === 'loading' || status === 'success'}
-              className="bg-white text-poof-primary-600 font-semibold px-6 py-3 rounded-magical hover:bg-gray-50 transition-colors disabled:bg-gray-200 disabled:cursor-not-allowed"
+              className="bg-gold-500 text-midnight-900 font-semibold px-6 py-3 rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
             </button>
           </div>
 
           {message && (
-            <p className={`text-sm mt-4 ${status === 'error' ? 'text-red-100' : 'text-white'}`}>
+            <p className={`text-sm mt-4 ${status === 'error' ? 'text-rose-400' : 'text-teal-400'}`}>
               {message}
             </p>
           )}
 
           {status !== 'success' && (
-            <p className="text-white/80 text-sm mt-4">
+            <p className="text-slate-500 text-sm mt-4">
               No spam. Unsubscribe anytime.
             </p>
           )}

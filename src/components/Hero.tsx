@@ -1,92 +1,113 @@
 'use client'
 
+import { useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { AutoAwesome } from '@mui/icons-material'
+import VaporField from './ParticleField'
 
 export default function Hero() {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center bg-hero-gradient overflow-hidden">
-      {/* Magical particles background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-ping"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-white rounded-full animate-ping"></div>
-        <div className="absolute bottom-1/4 right-1/2 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-      </div>
+  const containerRef = useRef<HTMLDivElement>(null)
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!containerRef.current) return
+    const rect = containerRef.current.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    containerRef.current.style.setProperty('--mx', `${x * 20}px`)
+    containerRef.current.style.setProperty('--my', `${y * 15}px`)
+  }, [])
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
+      <VaporField particleCount={25} />
+
+      <div
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-8 mt-24 md:mt-0">
-            <AutoAwesome className="mr-2" sx={{ fontSize: 18 }} />
+          <div
+            className="inline-flex items-center px-4 py-1.5 rounded-full bg-midnight-700/80 border border-gold-500/30 text-gold-400 text-sm font-medium tracking-wide uppercase mb-8 mt-24 md:mt-0 transition-transform duration-300 ease-out"
+            style={{ transform: 'translate(var(--mx, 0), var(--my, 0))' }}
+          >
             AI-Powered Bookkeeping
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Magical Bookkeeping
+          <h1
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.05] tracking-tight transition-transform duration-300 ease-out"
+            style={{
+              fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
+              letterSpacing: '-0.03em',
+              transform: 'translate(calc(var(--mx, 0) * 0.5), calc(var(--my, 0) * 0.5))',
+            }}
+          >
+            <span className="text-gradient-gold">Magical</span> Bookkeeping
             <br />
-            for <span className="relative">
-              Small Business
-              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-white/30 rounded-full"></div>
-            </span>
+            for Small Business
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p
+            className="text-xl sm:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed transition-transform duration-300 ease-out"
+            style={{ transform: 'translate(calc(var(--mx, 0) * 0.3), calc(var(--my, 0) * 0.3))' }}
+          >
             Stop wrestling with QuickBooks. Poof automates your bookkeeping with artificial intelligence,
             giving you back hours every week to focus on growing your business.
           </p>
 
-          {/* Key Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12 text-white/80">
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              5-minute setup
+          <p className="font-display text-2xl sm:text-3xl text-gold-400 font-bold italic mb-8 tracking-tight">
+            Poof. It&apos;s done.
+          </p>
+
+          {/* Benefit badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {['5-minute setup', '90% fewer manual entries', '30-day free trial'].map((text) => (
+              <div key={text} className="flex items-center bg-midnight-700/60 border border-midnight-600 rounded-full px-4 py-2 text-sm text-slate-300">
+                <span className="w-2 h-2 rounded-full bg-teal-400 mr-2" />
+                {text}
+              </div>
+            ))}
+          </div>
+
+          {/* Launch Special */}
+          <div className="flex flex-col items-center gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 rounded-lg px-5 py-2.5">
+              <span className="text-gold-400 font-semibold">Launch Special:</span>
+              <span className="text-white">50% off your first 3 months + free 1-on-1 onboarding</span>
             </div>
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              90% fewer manual entries
-            </div>
-            <div className="flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              30-day free trial
-            </div>
+            <p className="text-sm text-red-400 font-medium animate-pulse">Only 77 onboarding spots remaining — claim yours today</p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
             <Link
               href="https://app.poofai.com/register"
-              className="bg-white text-poof-primary-600 font-bold px-8 py-4 rounded-magical shadow-magical hover:shadow-magical-lg transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="glow-border shimmer-hover bg-gold-500 text-midnight-900 font-semibold px-8 py-3.5 rounded-lg text-lg hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Start Free Trial →
             </Link>
             <Link
               href="/demo"
-              className="border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-magical backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg"
+              className="border-2 border-slate-600 text-white font-semibold px-8 py-3.5 rounded-lg text-lg hover:border-gold-500/50 hover:text-gold-400 transition-all duration-200"
             >
               Request Demo
             </Link>
           </div>
 
-          {/* Honest messaging */}
-          <div className="mt-16 text-white/60 text-sm">
-            <p className="mb-4">Built for small businesses who hate manual bookkeeping</p>
+          <div className="mt-16 text-slate-500 text-sm">
+            <p>Built for small businesses who hate manual bookkeeping</p>
           </div>
         </div>
       </div>
 
+      {/* Bottom fade to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent" />
+
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg className="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>

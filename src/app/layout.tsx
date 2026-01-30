@@ -1,30 +1,46 @@
 import type { Metadata } from 'next'
-import { Inter, Righteous } from 'next/font/google'
+import { Inter, JetBrains_Mono, Righteous } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
+import { getOrganizationSchema } from '@/lib/jsonLd'
 
 const inter = Inter({ subsets: ['latin'] })
+const jetbrains = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains',
+})
 const righteous = Righteous({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-righteous'
+  variable: '--font-righteous',
+  display: 'swap',
+})
+const cabinet = localFont({
+  src: [
+    { path: '../fonts/CabinetGrotesk-Bold.woff2', weight: '700', style: 'normal' },
+    { path: '../fonts/CabinetGrotesk-Extrabold.woff2', weight: '800', style: 'normal' },
+    { path: '../fonts/CabinetGrotesk-Black.woff2', weight: '900', style: 'normal' },
+  ],
+  variable: '--font-cabinet',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Poof - Magical Bookkeeping for Small Business',
-  description: 'Automate your bookkeeping with AI. Poof makes financial management magical for small businesses. Start your free trial today.',
-  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI financial management',
+  title: 'Poof — AI Bookkeeping Software for Small Business | Invoicing, Expenses & Reports',
+  description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
+  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI financial management, invoicing software, expense tracking, bank reconciliation',
   authors: [{ name: 'Poof' }],
   openGraph: {
-    title: 'Poof - Magical Bookkeeping for Small Business',
-    description: 'Automate your bookkeeping with AI. Poof makes financial management magical for small businesses.',
+    title: 'Poof — AI Bookkeeping Software for Small Business',
+    description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
     url: 'https://poof.ai',
     siteName: 'Poof',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Poof - Magical Bookkeeping for Small Business',
-    description: 'Automate your bookkeeping with AI. Poof makes financial management magical for small businesses.',
+    title: 'Poof — AI Bookkeeping Software for Small Business',
+    description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
   },
 }
 
@@ -36,11 +52,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
+        />
       </head>
-      <body className={`${inter.className} ${righteous.variable}`}>{children}</body>
+      <body className={`${inter.className} ${cabinet.variable} ${jetbrains.variable} ${righteous.variable}`}>{children}</body>
     </html>
   )
 }

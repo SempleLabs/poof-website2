@@ -75,10 +75,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       // Check if block starts with heading
       if (lines[0].startsWith('## ')) {
-        elements.push(<h2 key={key++} className="text-2xl font-bold text-gray-900 mt-8 mb-4">{lines[0].replace('## ', '')}</h2>)
+        elements.push(<h2 key={key++} className="text-2xl font-bold font-display text-slate-900 mt-8 mb-4">{lines[0].replace('## ', '')}</h2>)
         lines.shift() // Remove heading from lines
       } else if (lines[0].startsWith('### ')) {
-        elements.push(<h3 key={key++} className="text-xl font-bold text-gray-900 mt-6 mb-3">{lines[0].replace('### ', '')}</h3>)
+        elements.push(<h3 key={key++} className="text-xl font-bold text-slate-900 mt-6 mb-3">{lines[0].replace('### ', '')}</h3>)
         lines.shift() // Remove heading from lines
       }
 
@@ -86,7 +86,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       const listItems = lines.filter(line => line.startsWith('- '))
       if (listItems.length > 0) {
         elements.push(
-          <ul key={key++} className="list-disc list-inside space-y-2 my-4 text-gray-700">
+          <ul key={key++} className="list-disc list-inside space-y-2 my-4 text-slate-700">
             {listItems.map((item, i) => {
               const text = item.replace('- ', '')
               // Handle bold text in list items
@@ -111,7 +111,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           // Check for bold text **text**
           const parts = text.split(/(\*\*.*?\*\*)/)
           elements.push(
-            <p key={key++} className="text-gray-700 leading-relaxed mb-4">
+            <p key={key++} className="text-slate-700 leading-relaxed mb-4">
               {parts.map((part, i) => {
                 if (part.startsWith('**') && part.endsWith('**')) {
                   return <strong key={i}>{part.slice(2, -2)}</strong>
@@ -136,22 +136,22 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <Link
             href="/resources"
-            className="text-poof-primary-600 hover:text-poof-primary-700 font-medium mb-6 inline-block"
+            className="text-gold-500 hover:text-gold-400 font-medium mb-6 inline-block"
           >
             ← Back to Resources
           </Link>
 
           <div className="mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-poof-primary-50 text-poof-primary-700">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gold-50 text-gold-600">
               {post.category}
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold font-display text-slate-900 mb-6">
             {post.title}
           </h1>
 
-          <div className="flex items-center text-gray-600 text-sm space-x-4">
+          <div className="flex items-center text-slate-600 text-sm space-x-4">
             <span>{post.author}</span>
             <span>•</span>
             <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
@@ -169,16 +169,16 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="glass-card p-8 text-center bg-gradient-to-r from-poof-primary-50 to-poof-secondary-50">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-midnight-900 border border-slate-700 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold font-display text-white mb-4">
               Ready to Automate Your Bookkeeping?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-slate-300 mb-6">
               See how Poof can save you hours every week with AI-powered bookkeeping.
             </p>
             <Link
               href="/demo"
-              className="inline-block bg-poof-primary-600 text-white font-semibold px-8 py-3 rounded-magical hover:bg-poof-primary-700 transition-colors"
+              className="inline-block bg-gold-500 text-midnight-900 font-semibold px-8 py-3 rounded-lg hover:bg-gold-400 shadow-gold transition-colors"
             >
               Try Poof Free
             </Link>

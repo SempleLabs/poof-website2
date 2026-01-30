@@ -2,10 +2,13 @@ import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import AnimateOnScroll from '@/components/AnimateOnScroll'
+import PageHero from '@/components/PageHero'
+import ImagePlaceholder from '@/components/ImagePlaceholder'
 
 export const metadata: Metadata = {
   title: 'How It Works - AI Bookkeeping Process | Poof',
-  description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize, get reports. See the magic in action.',
+  description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize, get reports.',
   keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization process',
 }
 
@@ -116,86 +119,93 @@ export default function HowItWorksPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            How <span className="hero-text">Poof</span> Works
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Transform your bookkeeping in 3 simple steps. No accounting degree required -
-            just connect your accounts and let our AI handle the rest.
-          </p>
-          <Link
-            href="https://app.poofai.com/register"
-            className="magical-button text-lg"
-          >
-            Start Your Free Trial →
-          </Link>
-        </div>
-      </section>
+      <PageHero
+        title={<>How <span className="text-gradient-gold">Poof Works</span></>}
+        subtitle="Transform your bookkeeping in 3 simple steps. No accounting degree required - just connect your accounts and let our AI handle the rest."
+      >
+        <Link
+          href="https://app.poofai.com/register"
+          className="bg-gold-500 text-midnight-900 font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg mt-8 inline-block px-8 py-4"
+        >
+          Start Your Free Trial →
+        </Link>
+      </PageHero>
 
       {/* Steps Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Get Started in 3 Simple Steps
-            </h2>
-            <p className="text-xl text-gray-600">
-              From setup to insights in under 10 minutes
-            </p>
-          </div>
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
+                Get Started in 3 Simple Steps
+              </h2>
+              <p className="text-xl text-slate-600">
+                From setup to insights in under 10 minutes
+              </p>
+            </div>
+          </AnimateOnScroll>
 
           <div className="relative">
             {/* Connection Line */}
-            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-2/3 h-0.5 bg-gradient-to-r from-poof-primary-200 via-poof-primary-400 to-poof-primary-200"></div>
+            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-2/3 border-l-2 border-dashed border-gold-200 h-0 border-t-2"></div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {steps.map((step, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-poof-primary-500 to-poof-secondary-500"></div>
+                <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 150}>
+                  <div className="relative h-full flex flex-col">
+                    <div className="bg-white border border-slate-200 rounded-2xl p-8 group relative overflow-hidden flex-1 flex flex-col">
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-500 to-teal-500"></div>
 
-                    <div className="text-center">
-                      {/* Step Number */}
-                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-poof-primary-500 to-poof-primary-600 text-white rounded-full text-2xl font-bold mb-6 relative z-10 group-hover:scale-105 transition-transform duration-300">
-                        {step.step}
+                      <div className="text-center">
+                        {/* Step Number */}
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 text-midnight-900 rounded-full font-mono font-bold text-2xl mb-6 relative z-10">
+                          {step.step}
+                        </div>
+
+                        {/* Icon */}
+                        <div className="w-16 h-16 bg-gold-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-gold-500">
+                          {step.icon}
+                        </div>
+
+                        {/* Content */}
+                        <h3 className="text-2xl font-bold font-display text-slate-900 mb-4">
+                          {step.title}
+                        </h3>
+                        <p className="text-slate-600 mb-6 leading-relaxed text-lg">
+                          {step.description}
+                        </p>
+
+                        {/* Timeframe */}
+                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-50 text-teal-700 text-sm font-medium mb-6">
+                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+                          </svg>
+                          {step.timeframe}
+                        </div>
                       </div>
 
-                      {/* Icon */}
-                      <div className="w-16 h-16 bg-poof-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-poof-primary-600">
-                        {step.icon}
-                      </div>
-
-                      {/* Content */}
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                        {step.description}
-                      </p>
-
-                      {/* Timeframe */}
-                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-poof-success-50 text-poof-success-700 text-sm font-medium mb-6">
-                        <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
-                        </svg>
-                        {step.timeframe}
-                      </div>
+                      {/* Details */}
+                      <ul className="space-y-3 mt-auto">
+                        {step.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-teal-500 rounded-full flex-shrink-0"></div>
+                            <span className="text-slate-700 font-medium">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-
-                    {/* Details */}
-                    <ul className="space-y-3">
-                      {step.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-poof-success-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-gray-700 font-medium">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="mt-6">
+                      <ImagePlaceholder
+                        alt={`Step ${step.step}: ${
+                          step.step === 1 ? 'Connect your bank' :
+                          step.step === 2 ? 'AI categorizes transactions' :
+                          'Review your reports'
+                        }`}
+                        aspectRatio="16/9"
+                      />
+                    </div>
                   </div>
-                </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
@@ -203,45 +213,49 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Features Deep Dive */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              See the Magic in Action
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore how our key features work behind the scenes
-            </p>
-          </div>
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
+                See Poof in Action
+              </h2>
+              <p className="text-xl text-slate-600">
+                Explore how our key features work behind the scenes
+              </p>
+            </div>
+          </AnimateOnScroll>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-poof-primary-500 to-poof-secondary-500"></div>
+              <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 150}>
+                <div className="bg-white border border-slate-200 rounded-2xl p-8 group relative overflow-hidden h-full flex flex-col">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-500 to-teal-500"></div>
 
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-poof-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-poof-primary-600 group-hover:scale-105 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  {feature.process.map((step, stepIndex) => (
-                    <div key={stepIndex} className="flex items-start">
-                      <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-poof-primary-500 to-poof-primary-600 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
-                        {stepIndex + 1}
-                      </div>
-                      <span className="text-sm text-gray-700 font-medium">{step}</span>
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gold-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-gold-500">
+                      {feature.icon}
                     </div>
-                  ))}
+                    <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-slate-600">
+                      {feature.description}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 mt-auto">
+                    {feature.process.map((step, stepIndex) => (
+                      <div key={stepIndex} className="flex items-start">
+                        <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-gold-500 to-gold-600 text-midnight-900 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                          {stepIndex + 1}
+                        </div>
+                        <span className="text-sm text-slate-700 font-medium">{step}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -250,58 +264,62 @@ export default function HowItWorksPage() {
       {/* CTA Section */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Streamline Your Bookkeeping?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Built by a controller who understands your daily bookkeeping challenges.
-            Try Poof risk-free with our 30-day trial.
-          </p>
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
+              Ready to Streamline Your Bookkeeping?
+            </h2>
+            <p className="text-xl text-slate-600 mb-8">
+              Built by a controller who understands your daily bookkeeping challenges.
+              Try Poof risk-free with our 30-day trial.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="https://app.poofai.com/register"
-              className="magical-button text-lg flex items-center justify-center"
-            >
-              Start Free Trial →
-            </Link>
-            <Link
-              href="/demo"
-              className="border-2 border-poof-primary-600 text-poof-primary-600 font-semibold px-8 py-4 rounded-magical hover:bg-poof-primary-50 transition-all duration-300 text-lg"
-            >
-              Schedule Demo
-            </Link>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="https://app.poofai.com/register"
+                className="bg-gold-500 text-midnight-900 font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg flex items-center justify-center px-8 py-4"
+              >
+                Start Free Trial →
+              </Link>
+              <Link
+                href="/demo"
+                className="border-2 border-gold-500 text-gold-500 font-semibold px-8 py-4 rounded-lg hover:bg-gold-50 transition-all duration-300 text-lg"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </AnimateOnScroll>
 
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-2xl font-bold text-gray-900">30 days</div>
-              <div className="text-gray-600">Free trial period</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-gray-900">No setup fees</div>
-              <div className="text-gray-600">Cancel anytime</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-gray-900">10+ years</div>
-              <div className="text-gray-600">Controller experience</div>
-            </div>
+            {[
+              { value: "30 days", label: "Free trial period" },
+              { value: "No setup fees", label: "Cancel anytime" },
+              { value: "10+ years", label: "Controller experience" },
+            ].map((item, index) => (
+              <AnimateOnScroll key={index} animation="fade-up" delay={index * 100}>
+                <div>
+                  <div className="text-2xl font-bold text-gold-500">{item.value}</div>
+                  <div className="text-slate-600">{item.label}</div>
+                </div>
+              </AnimateOnScroll>
+            ))}
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Common Questions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Everything you need to know about getting started
-            </p>
-          </div>
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
+                Common Questions
+              </h2>
+              <p className="text-xl text-slate-600">
+                Everything you need to know about getting started
+              </p>
+            </div>
+          </AnimateOnScroll>
 
           <div className="space-y-8">
             {[
@@ -330,37 +348,46 @@ export default function HowItWorksPage() {
                 answer: "Our AI matches and categorizes transactions with 95%+ accuracy. Any discrepancies are flagged for quick review, and the system learns from your corrections."
               }
             ].map((faq, index) => (
-              <div key={index} className="glass-card p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
+              <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
+                <div className="bg-white border border-slate-200 rounded-2xl p-6">
+                  <h3 className="text-lg font-semibold font-display text-slate-900 mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-hero-gradient">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Experience the Magic Today
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Join small businesses small businesses who've transformed their bookkeeping with Poof.
-          </p>
-          <Link
-            href="https://app.poofai.com/register"
-            className="bg-white text-poof-primary-600 font-bold px-8 py-4 rounded-magical shadow-magical hover:shadow-magical-lg transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
-          >
-            Start Free Trial →
-          </Link>
-          <p className="text-white/80 text-sm mt-4">
-            30-day free trial • Cancel anytime
-          </p>
+      <section className="py-24 bg-midnight-900 relative overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <span key={i} className="absolute text-gold-500/20 animate-sparkle-drift" style={{ top: `${15 + Math.random() * 70}%`, left: `${5 + Math.random() * 90}%`, fontSize: `${10 + Math.random() * 14}px`, animationDelay: `${i * 0.7}s` }}>&#10022;</span>
+        ))}
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="text-4xl font-bold font-display text-white mb-6">
+              Get Started Today
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Join small businesses who've transformed their bookkeeping with Poof.
+            </p>
+            <Link
+              href="https://app.poofai.com/register"
+              className="bg-gold-500 text-midnight-900 font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
+            >
+              Start Free Trial →
+            </Link>
+            <p className="text-white/80 text-sm mt-4">
+              30-day free trial &bull; Cancel anytime
+            </p>
+          </AnimateOnScroll>
         </div>
       </section>
 
