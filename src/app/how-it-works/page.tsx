@@ -125,7 +125,7 @@ export default function HowItWorksPage() {
       >
         <Link
           href="https://app.poofai.com/register"
-          className="bg-gold-500 text-midnight-900 font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg mt-8 inline-block px-8 py-4"
+          className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg mt-8 inline-block px-8 py-4"
         >
           Start Your Free Trial →
         </Link>
@@ -158,7 +158,7 @@ export default function HowItWorksPage() {
 
                       <div className="text-center">
                         {/* Step Number */}
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 text-midnight-900 rounded-full font-mono font-bold text-2xl mb-6 relative z-10">
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 text-white rounded-full font-mono font-bold text-2xl mb-6 relative z-10">
                           {step.step}
                         </div>
 
@@ -247,7 +247,7 @@ export default function HowItWorksPage() {
                   <div className="space-y-4 mt-auto">
                     {feature.process.map((step, stepIndex) => (
                       <div key={stepIndex} className="flex items-start">
-                        <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-gold-500 to-gold-600 text-midnight-900 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-gold-500 to-gold-600 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                           {stepIndex + 1}
                         </div>
                         <span className="text-sm text-slate-700 font-medium">{step}</span>
@@ -276,7 +276,7 @@ export default function HowItWorksPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-500 text-midnight-900 font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg flex items-center justify-center px-8 py-4"
+                className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg flex items-center justify-center px-8 py-4"
               >
                 Start Free Trial →
               </Link>
@@ -364,7 +364,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-midnight-900 relative overflow-hidden">
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
         {[...Array(6)].map((_, i) => (
           <span key={i} className="absolute text-gold-500/20 animate-sparkle-drift" style={{ top: `${15 + Math.random() * 70}%`, left: `${5 + Math.random() * 90}%`, fontSize: `${10 + Math.random() * 14}px`, animationDelay: `${i * 0.7}s` }}>&#10022;</span>
         ))}
@@ -380,7 +380,7 @@ export default function HowItWorksPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-500 text-midnight-900 font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
+              className="bg-gold-500 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
             >
               Start Free Trial →
             </Link>

@@ -54,7 +54,7 @@ export default function DownloadModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-midnight-950/80 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
       <div className="relative bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl">
         <button
           onClick={onClose}
@@ -100,7 +100,7 @@ export default function DownloadModal({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gold-500 text-midnight-900 font-semibold py-3 px-6 rounded-lg hover:bg-gold-400 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
+                className="w-full bg-gold-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gold-400 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Processing...' : 'Download Free Guide'}
               </button>

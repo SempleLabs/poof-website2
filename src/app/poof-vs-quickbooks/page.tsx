@@ -54,7 +54,7 @@ const QBCheck = () => (
 )
 
 const Cross = () => (
-  <svg className="w-5 h-5 text-midnight-500" fill="currentColor" viewBox="0 0 20 20">
+  <svg className="w-5 h-5 text-slate-300" fill="currentColor" viewBox="0 0 20 20">
     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
   </svg>
 )
@@ -70,11 +70,11 @@ export default function PoofVsQuickbooksPage() {
       />
 
       {/* Pricing Comparison */}
-      <section className="py-16 bg-midnight-900">
+      <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <AnimateOnScroll animation="fade-up" delay={0}>
-              <div className="bg-midnight-800 border border-gold-500/30 rounded-2xl p-8 h-full">
+              <div className="bg-slate-900 border border-gold-500/30 rounded-2xl p-8 h-full">
                 <h3 className="text-2xl font-bold font-display text-white mb-2">Poof</h3>
                 <div className="mb-1">
                   <span className="text-2xl font-bold text-slate-500 line-through mr-2">$29</span>
@@ -92,11 +92,11 @@ export default function PoofVsQuickbooksPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" delay={150}>
-              <div className="bg-midnight-800 border border-midnight-600 rounded-2xl p-8 h-full">
-                <h3 className="text-2xl font-bold font-display text-white mb-2">QuickBooks Simple Start</h3>
-                <div className="text-4xl font-bold text-slate-300 mb-1">$38<span className="text-lg text-slate-400">/mo+</span></div>
-                <p className="text-slate-400 mb-6">Base plan. Advanced features cost more.</p>
-                <ul className="space-y-3 text-slate-300">
+              <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full shadow-sm">
+                <h3 className="text-2xl font-bold font-display text-slate-900 mb-2">QuickBooks Simple Start</h3>
+                <div className="text-4xl font-bold text-slate-700 mb-1">$38<span className="text-lg text-slate-500">/mo+</span></div>
+                <p className="text-slate-600 mb-6">Base plan. Advanced features cost more.</p>
+                <ul className="space-y-3 text-slate-700">
                   <li className="flex items-center gap-2"><QBCheck /> Core bookkeeping features</li>
                   <li className="flex items-center gap-2"><Cross /> No built-in AI assistant</li>
                   <li className="flex items-center gap-2"><Cross /> No team roles or audit logs</li>
@@ -108,33 +108,33 @@ export default function PoofVsQuickbooksPage() {
 
           {/* Detailed Comparison Table */}
           <AnimateOnScroll animation="fade-up">
-            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">Feature-by-Feature Comparison</h2>
+            <h2 className="text-3xl font-bold font-display text-slate-900 mb-8 text-center">Feature-by-Feature Comparison</h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="overflow-x-auto">
-              <table className="w-full bg-midnight-700 rounded-2xl border border-midnight-600 overflow-hidden">
+              <table className="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden">
                 <thead>
-                  <tr className="border-b border-midnight-600">
-                    <th className="text-left px-6 py-5 text-sm font-semibold text-slate-400 w-1/2">Feature</th>
+                  <tr className="border-b border-slate-200">
+                    <th className="text-left px-6 py-5 text-sm font-semibold text-slate-600 w-1/2">Feature</th>
                     <th className="px-4 py-5 text-center bg-gold-500/10">
-                      <div className="text-sm font-bold text-gold-400">Poof</div>
+                      <div className="text-sm font-bold text-gold-600">Poof</div>
                     </th>
                     <th className="px-4 py-5 text-center">
-                      <div className="text-sm font-bold text-slate-300">QuickBooks</div>
+                      <div className="text-sm font-bold text-slate-700">QuickBooks</div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((section, sectionIndex) => (
                     <React.Fragment key={sectionIndex}>
-                      <tr className="bg-midnight-800">
-                        <td colSpan={3} className="px-6 py-3 text-sm font-bold text-slate-200">
+                      <tr className="bg-slate-50">
+                        <td colSpan={3} className="px-6 py-3 text-sm font-bold text-slate-900">
                           {section.category}
                         </td>
                       </tr>
                       {section.features.map((feature, featureIndex) => (
-                        <tr key={`${sectionIndex}-${featureIndex}`} className="border-b border-midnight-600">
-                          <td className="px-6 py-4 text-sm text-slate-400">{feature.name}</td>
+                        <tr key={`${sectionIndex}-${featureIndex}`} className="border-b border-slate-200">
+                          <td className="px-6 py-4 text-sm text-slate-700">{feature.name}</td>
                           <td className="px-4 py-4 text-center bg-gold-500/5">
                             <div className="flex justify-center">{feature.poof ? <PoofCheck /> : <Cross />}</div>
                           </td>
@@ -157,7 +157,7 @@ export default function PoofVsQuickbooksPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-midnight-800 relative overflow-hidden">
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl animate-float" />
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl animate-float-slow" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -171,7 +171,7 @@ export default function PoofVsQuickbooksPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-500 text-midnight-900 font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 Start Free Trial →
               </Link>

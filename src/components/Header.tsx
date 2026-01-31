@@ -33,7 +33,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
-            <Image src="/poof-logo.png" alt="Poof logo" width={52} height={52} className="-mr-1" />
+            <Image src="/poof-logo.png" alt="Poof logo" width={72} height={72} className="-mr-2" />
             <span className="poof-brand">Poof</span>
           </Link>
 
@@ -43,7 +43,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`nav-link-underline font-medium transition-colors ${
-                  scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-white hover:text-gold-400'
+                  scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
                 }`}
               >
                 {link.label}
@@ -55,14 +55,14 @@ export default function Header() {
             <Link
               href="/demo"
               className={`font-semibold transition-colors ${
-                scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-white hover:text-gold-400'
+                scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
               }`}
             >
               Request Demo
             </Link>
             <Link
               href="https://app.poofai.com/login"
-              className="bg-gold-500 text-midnight-900 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-gold-400 shadow-gold transition-all duration-200 shimmer-hover"
+              className="bg-gold-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-gold-400 shadow-gold transition-all duration-200 shimmer-hover"
             >
               Sign In
             </Link>
@@ -71,7 +71,7 @@ export default function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden transition-colors ${
-              scrolled ? 'text-slate-700' : 'text-white'
+              scrolled ? 'text-slate-700' : 'text-slate-700'
             }`}
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +87,7 @@ export default function Header() {
 
       {/* Mobile Menu - full screen overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-midnight-900/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center">
+        <div className="md:hidden fixed inset-0 bg-slate-900/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-5 right-5 text-white"
@@ -108,14 +108,14 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-6 border-t border-midnight-600 flex flex-col items-center space-y-4 w-full">
+            <div className="pt-6 border-t border-slate-600 flex flex-col items-center space-y-4 w-full">
               <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="text-gold-400 text-xl font-semibold">
                 Request Demo
               </Link>
               <Link
                 href="https://app.poofai.com/login"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-gold-500 text-midnight-900 px-8 py-3 rounded-lg font-semibold text-lg"
+                className="bg-gold-500 text-white px-8 py-3 rounded-lg font-semibold text-lg"
               >
                 Sign In
               </Link>

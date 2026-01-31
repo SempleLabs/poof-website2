@@ -22,7 +22,7 @@ interface Particle {
 
 export default function VaporField({
   particleCount = 40,
-  colors = ['#eab308', '#facc15', '#2dd4bf', '#fde047'],
+  colors = ['#8b5cf6', '#6366f1', '#14b8a6', '#2dd4bf'],
   maxSize = 5,
   className = '',
 }: VaporFieldProps) {

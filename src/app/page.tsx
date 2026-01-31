@@ -11,7 +11,7 @@ import { getSoftwareApplicationSchema } from '@/lib/jsonLd'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-midnight-900">
+    <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getSoftwareApplicationSchema()) }}

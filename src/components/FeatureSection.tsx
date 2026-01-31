@@ -39,18 +39,18 @@ const groupIcons: Record<string, JSX.Element> = {
 
 export default function FeatureSection() {
   return (
-    <section className="py-24 bg-midnight-900 relative overflow-hidden">
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background glowing orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gold-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-400/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
             Everything You Need to
             <span className="text-gradient-gold"> Automate Your Books</span>
           </h2>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             24 built-in features across 6 categories — from AI-powered categorization to financial reporting.
             No add-ons, no hidden fees.
           </p>
@@ -61,10 +61,10 @@ export default function FeatureSection() {
             <div key={groupIndex}>
               <AnimateOnScroll animation="fade-up" delay={100}>
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-gold-400 bg-midnight-800 border border-midnight-600 flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-gold-400 bg-white border border-slate-200 shadow-sm flex-shrink-0">
                     {groupIcons[group.icon]}
                   </div>
-                  <h3 className="text-gold-400 text-sm font-semibold tracking-widest uppercase">
+                  <h3 className="text-gold-400 text-base font-semibold tracking-widest uppercase">
                     {group.name}
                   </h3>
                 </div>
@@ -78,14 +78,14 @@ export default function FeatureSection() {
                     delay={150 + featureIndex * 80}
                   >
                     <GlowCard
-                      className="rounded-xl bg-midnight-800 border border-midnight-600 h-full card-hover-lift"
-                      glowColor="rgba(234, 179, 8, 0.08)"
+                      className="rounded-xl bg-white border border-slate-200 shadow-sm h-full card-hover-lift"
+                      glowColor="rgba(139, 92, 246, 0.08)"
                     >
                       <div className="p-6 h-full border-t-2 border-transparent">
-                        <h4 className="text-lg font-semibold text-white mb-2">
+                        <h4 className="text-lg font-semibold text-slate-900 mb-2">
                           {feature.title}
                         </h4>
-                        <p className="text-slate-400 leading-relaxed">
+                        <p className="text-slate-600 leading-relaxed">
                           {feature.description}
                         </p>
                       </div>

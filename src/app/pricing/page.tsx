@@ -67,23 +67,19 @@ export default function PricingPage() {
       <PageHero
         title={<><span className="text-gradient-gold">Simple, </span>Honest Pricing</>}
         subtitle="One plan with everything you need. Start with a 30-day free trial."
-      >
-        <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 text-white text-sm font-medium mt-6">
-          30-day free trial • Cancel anytime
-        </div>
-      </PageHero>
+      />
 
       {/* Pricing Toggle */}
       <section className="pt-12 pb-4 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center">
-            <div className="relative bg-midnight-700 p-1 rounded-lg flex">
+            <div className="relative bg-slate-200 p-1 rounded-lg flex">
               <button
                 onClick={() => setIsAnnual(false)}
                 className={`px-6 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                   !isAnnual
-                    ? 'bg-gold-500 text-midnight-900 shadow-sm'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-gold-500 text-white shadow-sm'
+                    : 'text-slate-500 hover:text-slate-700'
                 }`}
               >
                 Monthly
@@ -92,8 +88,8 @@ export default function PricingPage() {
                 onClick={() => setIsAnnual(true)}
                 className={`px-6 py-2 text-sm font-medium rounded-md transition-all duration-200 relative ${
                   isAnnual
-                    ? 'bg-gold-500 text-midnight-900 shadow-sm'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-gold-500 text-white shadow-sm'
+                    : 'text-slate-500 hover:text-slate-700'
                 }`}
               >
                 Annual
@@ -110,9 +106,9 @@ export default function PricingPage() {
       <section className="py-8 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up" delay={200}>
-            <div className="bg-midnight-800 rounded-2xl text-center border border-gold-500/30 shadow-lg relative">
+            <div className="bg-slate-900 rounded-2xl text-center border border-gold-500/30 shadow-lg relative">
               {!isAnnual && (
-                <div className="bg-gradient-to-r from-gold-600 to-gold-400 text-midnight-900 px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
+                <div className="bg-gradient-to-r from-gold-600 to-gold-400 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
                   <span className="animate-pulse">✦</span>
                   <span className="uppercase">Launch Special — 50% off your first 3 months</span>
                   <span className="animate-pulse">✦</span>
@@ -165,7 +161,7 @@ export default function PricingPage() {
 
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-500 text-midnight-900 font-semibold rounded-lg hover:bg-gold-400 shadow-gold transition-all text-lg w-full block text-center py-4 mb-4"
+                className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold transition-all text-lg w-full block text-center py-4 mb-4"
               >
                 Start Free Trial →
               </Link>
@@ -284,8 +280,8 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-midnight-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(234,179,8,0.08),transparent_70%)]" />
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08),transparent_70%)]" />
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-4xl font-display font-bold text-white mb-6">
@@ -299,7 +295,7 @@ export default function PricingPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-500 text-midnight-900 font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="bg-gold-500 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
               Start Free Trial →
             </Link>

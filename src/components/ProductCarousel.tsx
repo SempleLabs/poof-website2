@@ -40,7 +40,7 @@ export default function ProductCarousel({ slides }: ProductCarouselProps) {
   return (
     <div className="relative">
       <div className="relative rounded-2xl overflow-hidden shadow-hover border border-slate-200">
-        <div className="relative aspect-video bg-midnight-800">
+        <div className="relative aspect-video bg-slate-100">
           <Image
             src={slides[currentSlide].image}
             alt={slides[currentSlide].alt}
@@ -74,7 +74,7 @@ export default function ProductCarousel({ slides }: ProductCarouselProps) {
         )}
 
         {slides.length > 1 && (
-          <div className="absolute top-4 right-4 bg-midnight-900/60 text-white px-3 py-1 rounded-full text-sm">
+          <div className="absolute top-4 right-4 bg-slate-900/60 text-white px-3 py-1 rounded-full text-sm">
             {currentSlide + 1} / {slides.length}
           </div>
         )}

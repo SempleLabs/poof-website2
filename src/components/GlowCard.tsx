@@ -12,7 +12,7 @@ interface GlowCardProps {
 export default function GlowCard({
   children,
   className = '',
-  glowColor = 'rgba(234, 179, 8, 0.08)',
+  glowColor = 'rgba(139, 92, 246, 0.08)',
   tilt = false,
 }: GlowCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)

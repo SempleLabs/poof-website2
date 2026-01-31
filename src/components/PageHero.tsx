@@ -31,7 +31,7 @@ export default function PageHero({ title, subtitle, children }: PageHeroProps) {
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
         <h1
-          className="font-display text-5xl sm:text-6xl font-bold text-white mb-6 pb-2 leading-[1.15] tracking-tight transition-transform duration-300 ease-out"
+          className="font-display text-5xl sm:text-6xl font-bold text-slate-900 mb-6 pb-2 leading-[1.15] tracking-tight transition-transform duration-300 ease-out"
           style={{
             letterSpacing: '-0.02em',
             transform: 'translate(calc(var(--mx, 0) * 0.5), calc(var(--my, 0) * 0.5))',
@@ -40,7 +40,7 @@ export default function PageHero({ title, subtitle, children }: PageHeroProps) {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             {subtitle}
           </p>
         )}

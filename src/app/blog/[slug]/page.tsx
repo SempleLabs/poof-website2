@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="bg-midnight-900 border border-slate-700 rounded-2xl p-8 text-center">
+          <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold font-display text-white mb-4">
               Ready to Automate Your Bookkeeping?
             </h3>
@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </p>
             <Link
               href="/demo"
-              className="inline-block bg-gold-500 text-midnight-900 font-semibold px-8 py-3 rounded-lg hover:bg-gold-400 shadow-gold transition-colors"
+              className="inline-block bg-gold-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gold-400 shadow-gold transition-colors"
             >
               Try Poof Free
             </Link>

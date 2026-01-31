@@ -25,7 +25,7 @@ export default function WhatIsPoof() {
             { value: 24, label: 'Built-in Features', prefix: '', suffix: '' },
             { value: 12000, label: 'Bank Connections', prefix: '', suffix: '+' },
             { value: 8, label: 'Financial Reports', prefix: '', suffix: '' },
-            { value: 16, label: 'Per Month', prefix: '$', suffix: '' },
+            { value: 95, label: 'Accuracy Rate', prefix: '', suffix: '%' },
           ].map((stat, i) => (
             <AnimateOnScroll key={i} animation="scale-up" delay={200 + i * 100}>
               <GlowCard className="rounded-2xl bg-white border border-slate-200 shadow-card-light">

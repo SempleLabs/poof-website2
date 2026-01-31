@@ -70,7 +70,7 @@ const securityFeatures = [
 
 export default function SecurityPage() {
   return (
-    <main className="min-h-screen bg-midnight-900">
+    <main className="min-h-screen">
       <Header />
 
       <PageHero
@@ -79,17 +79,17 @@ export default function SecurityPage() {
       />
 
       {/* Security Features */}
-      <section className="py-24 bg-midnight-900">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 80}>
-                <div className="bg-midnight-800 border border-midnight-600 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                  <div className="w-14 h-14 bg-teal-900/40 rounded-2xl flex items-center justify-center text-teal-400 mb-6">
+                <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold font-display text-white mb-3">{feature.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold font-display text-slate-900 mb-3">{feature.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{feature.description}</p>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -98,27 +98,27 @@ export default function SecurityPage() {
       </section>
 
       {/* Plaid Section */}
-      <section className="py-24 bg-midnight-800">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
-            <h2 className="text-3xl font-bold font-display text-white mb-6">Bank Connections Powered by Plaid</h2>
-            <p className="text-lg text-slate-400 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold font-display text-slate-900 mb-6">Bank Connections Powered by Plaid</h2>
+            <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
               Poof uses Plaid to connect to your bank accounts. Plaid is the same infrastructure trusted by Venmo, Robinhood, and thousands of other financial applications. Your bank credentials are never stored by Poof — they are handled entirely by Plaid.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-up" delay={200}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-              <div className="bg-midnight-900 rounded-xl p-6 border border-midnight-600">
-                <div className="text-3xl font-bold text-gold-400 mb-1">12,000+</div>
-                <div className="text-sm text-slate-400">Banks supported</div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="text-3xl font-bold text-gold-500 mb-1">12,000+</div>
+                <div className="text-sm text-slate-600">Banks supported</div>
               </div>
-              <div className="bg-midnight-900 rounded-xl p-6 border border-midnight-600">
-                <div className="text-3xl font-bold text-gold-400 mb-1">256-bit</div>
-                <div className="text-sm text-slate-400">AES encryption</div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="text-3xl font-bold text-gold-500 mb-1">256-bit</div>
+                <div className="text-sm text-slate-600">AES encryption</div>
               </div>
-              <div className="bg-midnight-900 rounded-xl p-6 border border-midnight-600">
-                <div className="text-3xl font-bold text-gold-400 mb-1">Read-only</div>
-                <div className="text-sm text-slate-400">Bank access</div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="text-3xl font-bold text-gold-500 mb-1">Read-only</div>
+                <div className="text-sm text-slate-600">Bank access</div>
               </div>
             </div>
           </AnimateOnScroll>
@@ -126,7 +126,7 @@ export default function SecurityPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-midnight-900 relative overflow-hidden">
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl animate-float" />
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl animate-float-slow" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -140,7 +140,7 @@ export default function SecurityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gold-500 text-midnight-900 font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 Contact Us
               </Link>

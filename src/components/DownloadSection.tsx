@@ -80,7 +80,7 @@ export default function DownloadSection() {
                 </div>
                 <button
                   onClick={() => handleDownloadClick(guide)}
-                  className="w-full bg-gold-500 text-midnight-900 font-semibold py-2 px-4 rounded-lg hover:bg-gold-400 transition-colors text-sm"
+                  className="w-full bg-gold-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gold-400 transition-colors text-sm"
                 >
                   Download Free
                 </button>

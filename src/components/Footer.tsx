@@ -45,12 +45,12 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-midnight-950 border-t border-midnight-600">
+    <footer className="bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <Image src="/poof-logo.png" alt="Poof logo" width={52} height={52} className="-mr-1" />
+              <Image src="/poof-logo.png" alt="Poof logo" width={72} height={72} className="-mr-1" />
               <span className="poof-brand">Poof</span>
             </div>
             <p className="text-slate-500 mb-6">
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-4">Product</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Product</h3>
             <ul className="space-y-3">
               <li><Link href="/features" className="text-slate-500 hover:text-gold-400 transition-colors">Features</Link></li>
               <li><Link href="/pricing" className="text-slate-500 hover:text-gold-400 transition-colors">Pricing</Link></li>
@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-4">Resources</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Resources</h3>
             <ul className="space-y-3">
               <li><Link href="/resources" className="text-slate-500 hover:text-gold-400 transition-colors">Blog & Guides</Link></li>
               <li><Link href="/poof-vs-quickbooks" className="text-slate-500 hover:text-gold-400 transition-colors">Poof vs QuickBooks</Link></li>
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-4">Company</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Company</h3>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-slate-500 hover:text-gold-400 transition-colors">About</Link></li>
               <li><Link href="/contact" className="text-slate-500 hover:text-gold-400 transition-colors">Contact</Link></li>
@@ -101,9 +101,9 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="border-t border-midnight-600 mt-12 pt-8 pb-8">
+        <div className="border-t border-slate-200 mt-12 pt-8 pb-8">
           <div className="max-w-md mx-auto text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">Stay Updated</h3>
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">Stay Updated</h3>
             <p className="text-slate-500 text-sm mb-4">Get bookkeeping tips and product updates delivered to your inbox.</p>
 
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
@@ -113,12 +113,12 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 disabled={status === 'loading' || status === 'success'}
-                className="flex-1 px-4 py-2 rounded-lg bg-midnight-800 border border-midnight-600 text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 transition-colors"
+                className="flex-1 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 transition-colors"
               />
               <button
                 type="submit"
                 disabled={status === 'loading' || status === 'success'}
-                className="px-6 py-2 bg-gold-500 text-midnight-900 font-semibold rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
               </button>
@@ -134,7 +134,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-midnight-600 pt-8">
+        <div className="border-t border-slate-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-slate-600">
               © 2026 Poof. All rights reserved.

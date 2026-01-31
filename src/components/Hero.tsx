@@ -1,46 +1,28 @@
 'use client'
 
-import { useRef, useCallback } from 'react'
 import Link from 'next/link'
-import VaporField from './ParticleField'
+import DotGrid from './DotGrid'
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!containerRef.current) return
-    const rect = containerRef.current.getBoundingClientRect()
-    const x = (e.clientX - rect.left) / rect.width - 0.5
-    const y = (e.clientY - rect.top) / rect.height - 0.5
-    containerRef.current.style.setProperty('--mx', `${x * 20}px`)
-    containerRef.current.style.setProperty('--my', `${y * 15}px`)
-  }, [])
-
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
-      <VaporField particleCount={25} />
+      <DotGrid />
 
-      <div
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-      >
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div
-            className="inline-flex items-center px-4 py-1.5 rounded-full bg-midnight-700/80 border border-gold-500/30 text-gold-400 text-sm font-medium tracking-wide uppercase mb-8 mt-24 md:mt-0 transition-transform duration-300 ease-out"
-            style={{ transform: 'translate(var(--mx, 0), var(--my, 0))' }}
+            className="inline-flex items-center px-5 py-2 rounded-full bg-violet-50 border border-gold-500/30 text-gold-600 text-sm font-medium tracking-[0.15em] uppercase mb-8 mt-24 md:mt-8"
           >
             AI-Powered Bookkeeping
           </div>
 
           {/* Main Heading */}
           <h1
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.05] tracking-tight transition-transform duration-300 ease-out"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
             style={{
               fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
               letterSpacing: '-0.03em',
-              transform: 'translate(calc(var(--mx, 0) * 0.5), calc(var(--my, 0) * 0.5))',
             }}
           >
             <span className="text-gradient-gold">Magical</span> Bookkeeping
@@ -50,8 +32,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <p
-            className="text-xl sm:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed transition-transform duration-300 ease-out"
-            style={{ transform: 'translate(calc(var(--mx, 0) * 0.3), calc(var(--my, 0) * 0.3))' }}
+            className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
             Stop wrestling with QuickBooks. Poof automates your bookkeeping with artificial intelligence,
             giving you back hours every week to focus on growing your business.
@@ -64,7 +45,7 @@ export default function Hero() {
           {/* Benefit badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {['5-minute setup', '90% fewer manual entries', '30-day free trial'].map((text) => (
-              <div key={text} className="flex items-center bg-midnight-700/60 border border-midnight-600 rounded-full px-4 py-2 text-sm text-slate-300">
+              <div key={text} className="flex items-center bg-slate-100 border border-slate-200 rounded-full px-4 py-2 text-sm text-slate-700">
                 <span className="w-2 h-2 rounded-full bg-teal-400 mr-2" />
                 {text}
               </div>
@@ -75,7 +56,7 @@ export default function Hero() {
           <div className="flex flex-col items-center gap-3 mb-6">
             <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 rounded-lg px-5 py-2.5">
               <span className="text-gold-400 font-semibold">Launch Special:</span>
-              <span className="text-white">50% off your first 3 months + free 1-on-1 onboarding</span>
+              <span className="text-slate-800">50% off your first 3 months + free 1-on-1 onboarding</span>
             </div>
             <p className="text-sm text-red-400 font-medium animate-pulse">Only 77 onboarding spots remaining — claim yours today</p>
           </div>
@@ -84,13 +65,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
             <Link
               href="https://app.poofai.com/register"
-              className="glow-border shimmer-hover bg-gold-500 text-midnight-900 font-semibold px-8 py-3.5 rounded-lg text-lg hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]"
+              className="glow-border shimmer-hover bg-gold-500 text-white font-semibold px-8 py-3.5 rounded-lg text-lg hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Start Free Trial →
             </Link>
             <Link
               href="/demo"
-              className="border-2 border-slate-600 text-white font-semibold px-8 py-3.5 rounded-lg text-lg hover:border-gold-500/50 hover:text-gold-400 transition-all duration-200"
+              className="border-2 border-slate-300 text-slate-700 font-semibold px-8 py-3.5 rounded-lg text-lg hover:border-gold-500/50 hover:text-gold-500 transition-all duration-200"
             >
               Request Demo
             </Link>
@@ -103,7 +84,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom fade to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
 
       {/* Scroll indicator */}
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">

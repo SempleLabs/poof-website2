@@ -43,12 +43,12 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <section className="py-16 bg-midnight-900">
+    <section className="py-16 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-display text-3xl font-bold text-white mb-4">
+        <h2 className="font-display text-3xl font-bold text-slate-900 mb-4">
           Stay Updated with Bookkeeping Tips
         </h2>
-        <p className="text-xl text-slate-400 mb-8">
+        <p className="text-xl text-slate-600 mb-8">
           Get weekly insights, tips, and resources delivered to your inbox.
         </p>
 
@@ -60,13 +60,13 @@ export default function NewsletterSignup() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               disabled={status === 'loading' || status === 'success'}
-              className="flex-1 px-4 py-3 rounded-lg bg-midnight-800 border border-midnight-600 text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 disabled:cursor-not-allowed"
               required
             />
             <button
               type="submit"
               disabled={status === 'loading' || status === 'success'}
-              className="bg-gold-500 text-midnight-900 font-semibold px-6 py-3 rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-gold-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
             </button>

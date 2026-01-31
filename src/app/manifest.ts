@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'AI-powered bookkeeping automation for small businesses',
     start_url: '/',
     display: 'standalone',
-    background_color: '#0a0a0f',
-    theme_color: '#eab308',
+    background_color: '#ffffff',
+    theme_color: '#8b5cf6',
     icons: [
       {
         src: '/favicon-192x192.png',

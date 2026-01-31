@@ -188,7 +188,7 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section className="py-20 bg-midnight-900">
+      <section className="py-20 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-16">
@@ -200,7 +200,7 @@ export default function AboutPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="bg-midnight-800 border border-slate-700 rounded-2xl p-10">
+            <div className="bg-slate-800 border border-slate-700 rounded-2xl p-10">
               <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
                 <div className="flex-shrink-0 mx-auto md:mx-0">
                   <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-gold-500/30 shadow-lg">
@@ -254,7 +254,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-midnight-900 relative overflow-hidden">
+      <section className="py-16 bg-slate-900 relative overflow-hidden">
         {/* Sparkle stars */}
         {[...Array(6)].map((_, i) => (
           <span
@@ -284,7 +284,7 @@ export default function AboutPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-500 text-midnight-900 font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
               Start Free Trial →
             </Link>

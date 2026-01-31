@@ -21,13 +21,13 @@ export default function TestimonialSection() {
   ]
 
   return (
-    <section className="py-24 bg-midnight-900">
+    <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
             Don&apos;t Just Take Our Word For It
           </h2>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             See how small business owners are saving time and reducing stress with Poof.
           </p>
         </div>
@@ -36,22 +36,22 @@ export default function TestimonialSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-midnight-800 border border-midnight-600 rounded-2xl p-8 relative"
+              className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 relative"
             >
               <div className="absolute top-4 left-6 text-gold-500/20 text-6xl font-serif leading-none">&ldquo;</div>
 
               <div className="flex items-start mb-6 relative z-10">
-                <div className="w-12 h-12 bg-midnight-700 rounded-full flex items-center justify-center mr-4 text-gold-400">
+                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mr-4 text-gold-400">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="font-semibold text-slate-900">{testimonial.name}</div>
                   <div className="text-sm text-slate-500">{testimonial.business}</div>
                 </div>
               </div>
-              <blockquote className="text-slate-300 mb-6 leading-relaxed italic">
+              <blockquote className="text-slate-600 mb-6 leading-relaxed italic">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 text-sm font-medium">
@@ -72,8 +72,8 @@ export default function TestimonialSection() {
               </svg>
             ))}
           </div>
-          <p className="text-slate-400">
-            <span className="font-semibold text-white">Loved by</span> small business owners everywhere
+          <p className="text-slate-600">
+            <span className="font-semibold text-slate-900">Loved by</span> small business owners everywhere
           </p>
         </div>
       </div>
