@@ -24,7 +24,7 @@ export default function PricingPage() {
     'Accrual & cash basis toggle',
     'Team roles (RBAC)',
     'Two-factor authentication',
-    'SOC 2 audit logs',
+    'Audit logs with timestamps',
     'Works on any device',
     'Unlimited transactions'
   ]
@@ -36,7 +36,7 @@ export default function PricingPage() {
     },
     {
       question: 'Is my financial data secure?',
-      answer: 'Absolutely. We use bank-level 256-bit encryption and read-only access to your accounts. Your data is never shared and is protected by the same standards used by major banks.'
+      answer: 'Yes. All data is encrypted in transit via HTTPS/TLS. Bank connections are read-only through Plaid — we never see or store your credentials. Two-factor authentication, role-based permissions, and automatic session timeouts keep your account locked down.'
     },
     {
       question: 'Can my accountant access my books?',
@@ -69,9 +69,19 @@ export default function PricingPage() {
         subtitle="One plan with everything you need. Start with a 30-day free trial."
       />
 
-      {/* Pricing Toggle */}
+      {/* Free Trial Banner + Pricing Toggle */}
       <section className="pt-12 pb-4 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-8">
+              <span className="inline-flex items-center gap-2 bg-gold-50 text-gold-600 font-semibold text-sm px-5 py-2.5 rounded-full border border-gold-200">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                Start with a free 30-day trial — full access, cancel anytime
+              </span>
+            </div>
+          </AnimateOnScroll>
           <div className="flex items-center justify-center">
             <div className="relative bg-slate-200 p-1 rounded-lg flex">
               <button
@@ -107,11 +117,17 @@ export default function PricingPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up" delay={200}>
             <div className="bg-slate-900 rounded-2xl text-center border border-gold-500/30 shadow-lg relative">
-              {!isAnnual && (
+              {!isAnnual ? (
                 <div className="bg-gradient-to-r from-gold-600 to-gold-400 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
                   <span className="animate-pulse">✦</span>
                   <span className="uppercase">Launch Special — 50% off your first 3 months</span>
                   <span className="animate-pulse">✦</span>
+                </div>
+              ) : (
+                <div className="bg-gradient-to-r from-teal-600 to-teal-400 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
+                  <span>★</span>
+                  <span className="uppercase">Best Value — Save $58/year + 30-day free trial</span>
+                  <span>★</span>
                 </div>
               )}
 
@@ -138,11 +154,9 @@ export default function PricingPage() {
                       : '50% off for your first 3 months, then $29/mo'
                     }
                   </p>
-                  {!isAnnual && (
-                    <p className="text-sm text-red-400 font-medium mt-2 animate-pulse">
-                      Includes free 1-on-1 onboarding — only 77 spots remaining
-                    </p>
-                  )}
+                  <p className="text-sm text-red-400 font-medium mt-2 animate-pulse">
+                    Includes free 1-on-1 onboarding — only 77 spots remaining
+                  </p>
                 </div>
 
               <div className="text-left mb-8">
@@ -225,8 +239,8 @@ export default function PricingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
-                title: 'Bank-Level Security',
-                description: 'Your financial data is protected with AES-256 encryption and read-only bank connections. We never store your login credentials or have access to move money from your accounts.'
+                title: 'Secure by Design',
+                description: 'All data encrypted in transit. Bank connections are read-only through Plaid — we never see or store your credentials. Two-factor authentication and role-based permissions keep your books locked down.'
               }
             ].map((card, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>

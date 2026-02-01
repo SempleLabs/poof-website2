@@ -159,10 +159,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 hero-animated-bg relative overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <span key={i} className="absolute text-white/20 animate-sparkle-drift" style={{ top: `${15 + Math.random() * 70}%`, left: `${5 + Math.random() * 90}%`, fontSize: `${10 + Math.random() * 14}px`, animationDelay: `${i * 0.7}s` }}>&#10022;</span>
-        ))}
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl animate-float" />
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

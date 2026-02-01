@@ -7,8 +7,8 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Security — How Poof Protects Your Financial Data | Poof',
-  description: 'Learn how Poof keeps your financial data secure with SOC 2 audit logs, two-factor authentication, role-based access, and encrypted bank connections via Plaid.',
-  keywords: 'bookkeeping security, SOC 2, two-factor authentication, Plaid bank connection, data encryption, RBAC',
+  description: 'Learn how Poof keeps your financial data secure with audit logging, two-factor authentication, role-based access, and encrypted bank connections via Plaid.',
+  keywords: 'bookkeeping security, two-factor authentication, Plaid bank connection, data encryption, RBAC',
 }
 
 const securityFeatures = [
@@ -31,8 +31,8 @@ const securityFeatures = [
     ),
   },
   {
-    title: 'SOC 2 Audit Logs',
-    description: 'Every action in Poof is logged with timestamps and user attribution. Maintain a complete audit trail for compliance and accountability.',
+    title: 'Audit Logs',
+    description: 'Every action in Poof is logged with timestamps and user attribution. Maintain a complete audit trail for accountability and transparency.',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
@@ -41,7 +41,7 @@ const securityFeatures = [
   },
   {
     title: 'Encrypted Bank Connections',
-    description: 'Bank data is transmitted and stored using 256-bit AES encryption. Poof connects via Plaid, the same infrastructure used by major fintech companies.',
+    description: 'All data is encrypted in transit via HTTPS/TLS. Poof connects via Plaid, the same infrastructure used by major fintech companies. We never store your banking credentials.',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
@@ -113,8 +113,8 @@ export default function SecurityPage() {
                 <div className="text-sm text-slate-600">Banks supported</div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <div className="text-3xl font-bold text-gold-500 mb-1">256-bit</div>
-                <div className="text-sm text-slate-600">AES encryption</div>
+                <div className="text-3xl font-bold text-gold-500 mb-1">HTTPS</div>
+                <div className="text-sm text-slate-600">TLS encryption</div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
                 <div className="text-3xl font-bold text-gold-500 mb-1">Read-only</div>

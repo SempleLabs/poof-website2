@@ -16,7 +16,7 @@ const features = [
   { name: 'Accrual & Cash Basis Toggle', poof: true, quickbooks: true, xero: true, freshbooks: false },
   { name: 'Team Roles (RBAC)', poof: true, quickbooks: false, xero: true, freshbooks: true },
   { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true, xero: true, freshbooks: true },
-  { name: 'SOC 2 Audit Logs', poof: true, quickbooks: false, xero: false, freshbooks: false },
+  { name: 'Audit Logs', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Built for Small Business', poof: true, quickbooks: true, xero: false, freshbooks: true },
 ]
 
@@ -61,7 +61,7 @@ export default function ComparisonSection() {
                   </th>
                   <th className="px-4 py-5 text-center bg-gold-500/10">
                     <div className="text-sm font-bold text-gold-400">Poof</div>
-                    <div className="text-xs text-slate-500">$14.50/mo</div>
+                    <div className="text-xs text-slate-500">$14.50/mo+</div>
                     <div className="mt-1 inline-block bg-gold-500 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
                   </th>
                   <th className="px-4 py-5 text-center">

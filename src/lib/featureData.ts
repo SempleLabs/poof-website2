@@ -134,7 +134,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Audit Logs",
-        description: "SOC 2 compliant audit trail of all user actions"
+        description: "Timestamped audit trail of all user actions"
       },
       {
         title: "Session Management",
@@ -167,7 +167,7 @@ export const faqData = [
   },
   {
     question: "Is Poof secure?",
-    answer: "Yes. Poof uses AES-256 encryption, two-factor authentication (TOTP-based MFA with backup codes), SOC 2 compliant audit logs, and session management. Bank connections are read-only through Plaid — Poof never stores your bank login credentials or has the ability to move money."
+    answer: "Yes. All data is encrypted in transit via HTTPS/TLS. Poof includes two-factor authentication (TOTP-based MFA with backup codes), role-based access controls with 5 permission levels, audit logging, and session management. Bank connections are read-only through Plaid — Poof never stores your bank login credentials or has the ability to move money. Passwords are hashed with bcrypt and never stored in plaintext."
   },
   {
     question: "How does Poof compare to QuickBooks?",

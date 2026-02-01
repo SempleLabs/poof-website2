@@ -33,7 +33,7 @@ const comparisonData = [
   { category: 'Security & Team', features: [
     { name: 'Team Roles (RBAC)', poof: true, quickbooks: false },
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
-    { name: 'SOC 2 Audit Logs', poof: true, quickbooks: false },
+    { name: 'Audit Logs', poof: true, quickbooks: false },
   ]},
   { category: 'Small Business Focus', features: [
     { name: 'Built for Small Business', poof: true, quickbooks: true },

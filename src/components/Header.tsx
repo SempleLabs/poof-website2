@@ -87,7 +87,7 @@ export default function Header() {
 
       {/* Mobile Menu - full screen overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-slate-900/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center">
+        <div className="md:hidden fixed inset-0 bg-slate-900/98 backdrop-blur-lg z-[60] flex flex-col items-center justify-center">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-5 right-5 text-white"

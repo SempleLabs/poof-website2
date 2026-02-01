@@ -246,7 +246,7 @@ export default function DotGrid() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none hidden md:block"
       aria-hidden="true"
     />
   )

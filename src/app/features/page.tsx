@@ -117,8 +117,8 @@ export default function FeaturesPage() {
               {[
                 {
                   icon: <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9V17H10Z"/>,
-                  title: 'Bank-Level Security',
-                  desc: '256-bit encryption and read-only access to your accounts',
+                  title: 'Secure by Design',
+                  desc: 'Encrypted in transit, read-only bank access through Plaid',
                 },
                 {
                   icon: <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z"/>,
