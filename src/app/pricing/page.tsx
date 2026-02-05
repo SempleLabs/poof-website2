@@ -154,8 +154,8 @@ export default function PricingPage() {
                       : '50% off for your first 3 months, then $29/mo'
                     }
                   </p>
-                  <p className="text-sm text-red-400 font-medium mt-2 animate-pulse">
-                    Includes free 1-on-1 onboarding — only 77 spots remaining
+                  <p className="text-sm text-violet-400 font-medium mt-2">
+                    Free video tutorials included • <a href="/demo" className="underline hover:text-violet-300">Book a live walkthrough</a>
                   </p>
                 </div>
 
