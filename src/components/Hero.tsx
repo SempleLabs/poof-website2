@@ -56,9 +56,8 @@ export default function Hero() {
           <div className="flex flex-col items-center gap-3 mb-6">
             <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 rounded-lg px-5 py-2.5">
               <span className="text-gold-400 font-semibold">Launch Special:</span>
-              <span className="text-slate-800">50% off your first 3 months + free 1-on-1 onboarding</span>
+              <span className="text-slate-800">50% off your first 3 months</span>
             </div>
-            <p className="text-sm text-red-400 font-medium animate-pulse">Only 77 onboarding spots remaining — claim yours today</p>
           </div>
 
           {/* CTA Buttons */}

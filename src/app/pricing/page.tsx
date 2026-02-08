@@ -154,9 +154,6 @@ export default function PricingPage() {
                       : '50% off for your first 3 months, then $29/mo'
                     }
                   </p>
-                  <p className="text-sm text-violet-400 font-medium mt-2">
-                    Free video tutorials included • <a href="/demo" className="underline hover:text-violet-300">Book a live walkthrough</a>
-                  </p>
                 </div>
 
               <div className="text-left mb-8">
@@ -301,11 +298,8 @@ export default function PricingPage() {
             <h2 className="text-4xl font-display font-bold text-white mb-6">
               Ready to Automate Your Bookkeeping?
             </h2>
-            <p className="text-xl text-slate-400 mb-4">
+            <p className="text-xl text-slate-400 mb-8">
               Start your 30-day free trial, then get 50% off your first 3 months.
-            </p>
-            <p className="text-sm text-red-400 font-medium mb-8 animate-pulse">
-              Free 1-on-1 onboarding included — only 77 spots remaining
             </p>
             <Link
               href="https://app.poofai.com/register"

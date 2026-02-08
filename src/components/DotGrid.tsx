@@ -157,7 +157,7 @@ export default function DotGrid() {
 
       // Inner dots fade out — peak opacity at mid-range
       const fadeInner = proximity > 0.4 ? 1 - (proximity - 0.4) / 0.6 * 0.85 : 1
-      ctx.globalAlpha = (0.15 + proximity * 0.7) * fadeInner
+      ctx.globalAlpha = (0.08 + proximity * 0.35) * fadeInner
       ctx.fillStyle = `hsl(${hue}, 70%, 55%)`
 
       ctx.beginPath()

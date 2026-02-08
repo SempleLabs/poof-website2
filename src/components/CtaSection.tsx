@@ -20,11 +20,8 @@ export default function CtaSection() {
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up" delay={100}>
-          <p className="text-xl text-slate-400 mb-4 max-w-2xl mx-auto">
-            Start your 30-day free trial, then get 50% off your first 3 months. Free 1-on-1 onboarding included.
-          </p>
-          <p className="text-sm text-red-400 font-medium mb-8 animate-pulse">
-            Only 77 onboarding spots remaining
+          <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+            Start your 30-day free trial, then get 50% off your first 3 months.
           </p>
         </AnimateOnScroll>
 
