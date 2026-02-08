@@ -16,12 +16,14 @@
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
     "@next/mdx": "^15.5.4",
+    "@supabase/supabase-js": "^2.95.3",
     "@types/mdx": "^2.0.13",
     "autoprefixer": "^10.4.21",
     "gray-matter": "^4.0.3",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "resend": "^6.9.1"
   },
   "devDependencies": {
     "@types/node": "^20",
