@@ -84,7 +84,7 @@ export default function SecurityPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 80}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow h-full">
                   <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
                     {feature.icon}
                   </div>
