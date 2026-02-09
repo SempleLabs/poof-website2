@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Send welcome email
+    // Send welcome email to subscriber
     await resend.emails.send({
       from: 'Poof <noreply@poofai.com>',
       to: email,
@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
                       <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
                         <tr>
                           <td style="background-color: #8b5cf6; border-radius: 8px;">
-                            <a href="https://poof.money" style="display: inline-block; padding: 14px 28px; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;">
+                            <a href="https://www.poofai.com" style="display: inline-block; padding: 14px 28px; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;">
                               Learn More About Poof
                             </a>
                           </td>
@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
                         Poof - AI-Powered Bookkeeping for Small Businesses
                       </p>
                       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-                        You received this email because you subscribed at poof.money
+                        You received this email because you subscribed at poofai.com
                       </p>
                     </td>
                   </tr>
@@ -132,6 +132,21 @@ export async function POST(request: NextRequest) {
         </html>
       `
     })
+
+    // Notify you of new subscriber
+    const notifyEmail = process.env.NOTIFY_EMAIL
+    if (notifyEmail) {
+      await resend.emails.send({
+        from: 'Poof <noreply@poofai.com>',
+        to: notifyEmail,
+        subject: `New newsletter subscriber: ${email}`,
+        html: `
+          <p>A new subscriber signed up for the Poof newsletter:</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Time:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET</p>
+        `
+      })
+    }
 
     return NextResponse.json(
       {
