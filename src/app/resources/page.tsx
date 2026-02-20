@@ -134,8 +134,36 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Quick Links */}
+      {/* Blog Articles */}
       <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold font-display text-slate-900 mb-4">From the Blog</h2>
+              <p className="text-xl text-slate-600">Articles on AI bookkeeping, small business finance, and more</p>
+            </div>
+          </AnimateOnScroll>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimateOnScroll animation="fade-up" delay={100}>
+              <Link href="/blog/ai-bookkeeping-small-business" className="block bg-white border border-slate-200 rounded-xl p-8 h-full hover:border-gold-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gold-50 text-gold-600">
+                    AI &amp; Automation
+                  </span>
+                  <span className="text-sm text-slate-500">8 min read</span>
+                </div>
+                <h3 className="text-xl font-bold font-display text-slate-900 mb-2">AI Bookkeeping for Small Business: What It Is, How It Works, and Why It Matters</h3>
+                <p className="text-slate-600 mb-4">AI bookkeeping automates transaction categorization, receipt scanning, and financial reporting — saving small business owners hours every week.</p>
+                <span className="text-gold-600 font-medium text-sm">Read article →</span>
+              </Link>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-16">
