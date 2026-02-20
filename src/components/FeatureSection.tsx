@@ -51,7 +51,7 @@ export default function FeatureSection() {
             <span className="text-gradient-gold"> Automate Your Books</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            24 built-in features across 6 categories — from AI-powered categorization to financial reporting.
+            30+ built-in features across 7 categories — from AI-powered categorization to financial reporting.
             No add-ons, no hidden fees.
           </p>
         </AnimateOnScroll>

@@ -22,9 +22,9 @@ export default function WhatIsPoof() {
         </AnimateOnScroll>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: 24, label: 'Built-in Features', prefix: '', suffix: '' },
+            { value: 30, label: 'Built-in Features', prefix: '', suffix: '+' },
             { value: 12000, label: 'Bank Connections', prefix: '', suffix: '+' },
-            { value: 8, label: 'Financial Reports', prefix: '', suffix: '' },
+            { value: 12, label: 'Financial Reports', prefix: '', suffix: '' },
             { value: 95, label: 'Accuracy Rate', prefix: '', suffix: '%' },
           ].map((stat, i) => (
             <AnimateOnScroll key={i} animation="scale-up" delay={200 + i * 100}>

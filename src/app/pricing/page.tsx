@@ -12,20 +12,23 @@ export default function PricingPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
   const features = [
     'AI transaction categorization',
-    'Built-in AI assistant',
-    'Auto chart of accounts generation',
+    'Built-in AI assistant (Preston)',
+    'Receipt & invoice scanning (OCR)',
+    'AI recurring charge detection',
+    'Smart transaction matching',
     'Invoicing & credit notes',
-    'Expense tracking & receipt uploads',
+    'Expense & mileage tracking',
     'Bill & vendor management',
     'Bank connection via Plaid (12,000+ banks)',
+    'Bank statement import (CSV/PDF)',
     'Bank reconciliation',
     'Double-entry accounting',
-    '8 financial reports (P&L, balance sheet, etc.)',
+    '12 financial reports',
+    'Recurring journal entry templates',
     'Accrual & cash basis toggle',
-    'Team roles (RBAC)',
+    'Team roles (5 roles, 26 permissions)',
     'Two-factor authentication',
-    'Audit logs with timestamps',
-    'Works on any device',
+    'Dashboard with KPIs',
     'Unlimited transactions'
   ]
 

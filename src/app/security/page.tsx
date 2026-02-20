@@ -23,7 +23,7 @@ const securityFeatures = [
   },
   {
     title: 'Role-Based Access Control (RBAC)',
-    description: 'Assign specific roles to team members and accountants. Control who can view, edit, or approve transactions and reports.',
+    description: '5 roles (Owner, Admin, Accountant, Bookkeeper, Viewer) with 26 granular permissions across financial, invoicing, customer management, and admin categories.',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"/>
@@ -63,6 +63,24 @@ const securityFeatures = [
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Email Verification',
+    description: 'Secure account activation and email change confirmation. Verified emails ensure only authorized users access your financial data.',
+    icon: (
+      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'GDPR/CCPA Account Deletion',
+    description: 'Full data removal on request for privacy compliance. Delete your account and all associated data at any time.',
+    icon: (
+      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M11,7H13V13H11V7M11,15H13V17H11V15Z"/>
       </svg>
     ),
   },
@@ -120,6 +138,34 @@ export default function SecurityPage() {
                 <div className="text-3xl font-bold text-gold-500 mb-1">Read-only</div>
                 <div className="text-sm text-slate-600">Bank access</div>
               </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Additional Security Details */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="text-3xl font-bold font-display text-slate-900 mb-8 text-center">Additional Security Measures</h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                'Rate limiting (10 auth attempts/15min, 100 API requests/min)',
+                'CSRF protection on all endpoints',
+                'Security headers (Helmet.js)',
+                'PII sanitization in logs',
+                'JWT authentication with expiration',
+                'Bcrypt password hashing',
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-3 bg-slate-50 rounded-lg p-4">
+                  <svg className="w-5 h-5 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-slate-700 text-sm font-medium">{item}</span>
+                </div>
+              ))}
             </div>
           </AnimateOnScroll>
         </div>

@@ -67,7 +67,7 @@ export default function ResourcesPage() {
       linkText: 'Learn more →',
     },
     {
-      title: 'All 24 Features',
+      title: 'All 30+ Features',
       description: 'Explore every feature included in your Poof subscription.',
       href: '/features',
       linkText: 'View features →',

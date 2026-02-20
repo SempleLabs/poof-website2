@@ -17,6 +17,9 @@ const comparisonData = [
     { name: 'AI Transaction Categorization', poof: true, quickbooks: true },
     { name: 'Built-in AI Assistant', poof: true, quickbooks: false },
     { name: 'Auto Chart of Accounts Generation', poof: true, quickbooks: false },
+    { name: 'AI Recurring Charge Detection', poof: true, quickbooks: false },
+    { name: 'Receipt Scanning & OCR', poof: true, quickbooks: false },
+    { name: 'Smart Transaction Matching', poof: true, quickbooks: false },
   ]},
   { category: 'Core Bookkeeping', features: [
     { name: 'Invoicing & Credit Notes', poof: true, quickbooks: true },
@@ -25,13 +28,16 @@ const comparisonData = [
     { name: 'Double-Entry Accounting', poof: true, quickbooks: true },
     { name: 'Bank Reconciliation', poof: true, quickbooks: true },
     { name: 'Accrual & Cash Basis Toggle', poof: true, quickbooks: true },
+    { name: 'Recurring Journal Entry Templates', poof: true, quickbooks: false },
+    { name: 'Transaction Approval Workflows', poof: true, quickbooks: false },
   ]},
   { category: 'Banking & Reports', features: [
     { name: 'Bank Connection (Plaid)', poof: true, quickbooks: true },
-    { name: '8 Financial Reports', poof: true, quickbooks: true },
+    { name: 'Bank Statement Import (CSV/PDF)', poof: true, quickbooks: false },
+    { name: '12 Financial Reports', poof: true, quickbooks: true },
   ]},
   { category: 'Security & Team', features: [
-    { name: 'Team Roles (RBAC)', poof: true, quickbooks: false },
+    { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false },
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
     { name: 'Audit Logs', poof: true, quickbooks: false },
   ]},
@@ -83,7 +89,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $29/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 24 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 30+ features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -151,7 +157,7 @@ export default function PoofVsQuickbooksPage() {
           </AnimateOnScroll>
 
           <p className="text-sm text-slate-500 text-center mt-6">
-            Comparison based on QuickBooks Simple Start plan as of January 2026. Features and pricing may vary.
+            Comparison based on QuickBooks Simple Start plan as of February 2026. Features and pricing may vary.
           </p>
         </div>
       </section>
@@ -166,7 +172,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. All 24 features included.
+              See the difference AI bookkeeping makes. All 30+ features included.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

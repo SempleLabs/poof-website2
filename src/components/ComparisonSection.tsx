@@ -6,15 +6,18 @@ const features = [
   { name: 'AI Transaction Categorization', poof: true, quickbooks: true, xero: false, freshbooks: false },
   { name: 'Built-in AI Assistant', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Auto Chart of Accounts Generation', poof: true, quickbooks: false, xero: false, freshbooks: false },
+  { name: 'Receipt Scanning & OCR', poof: true, quickbooks: false, xero: false, freshbooks: false },
+  { name: 'AI Recurring Charge Detection', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Invoicing & Credit Notes', poof: true, quickbooks: true, xero: true, freshbooks: true },
   { name: 'Expense Tracking & Receipt Uploads', poof: true, quickbooks: true, xero: true, freshbooks: true },
   { name: 'Bank Connection (Plaid)', poof: true, quickbooks: true, xero: true, freshbooks: true },
+  { name: 'Bank Statement Import (CSV/PDF)', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Bank Reconciliation', poof: true, quickbooks: true, xero: true, freshbooks: true },
   { name: 'Double-Entry Accounting', poof: true, quickbooks: true, xero: true, freshbooks: false },
   { name: 'Bill & Vendor Management', poof: true, quickbooks: false, xero: true, freshbooks: false },
-  { name: '8 Financial Reports', poof: true, quickbooks: true, xero: true, freshbooks: false },
+  { name: '12 Financial Reports', poof: true, quickbooks: true, xero: true, freshbooks: false },
   { name: 'Accrual & Cash Basis Toggle', poof: true, quickbooks: true, xero: true, freshbooks: false },
-  { name: 'Team Roles (RBAC)', poof: true, quickbooks: false, xero: true, freshbooks: true },
+  { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false, xero: true, freshbooks: true },
   { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true, xero: true, freshbooks: true },
   { name: 'Audit Logs', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Built for Small Business', poof: true, quickbooks: true, xero: false, freshbooks: true },
@@ -104,7 +107,7 @@ export default function ComparisonSection() {
         </AnimateOnScroll>
 
         <p className="text-sm text-slate-500 text-center mt-6">
-          Comparison based on each platform&apos;s base plan as of January 2026. Features and pricing may vary.
+          Comparison based on each platform&apos;s base plan as of February 2026. Features and pricing may vary.
         </p>
       </div>
     </section>

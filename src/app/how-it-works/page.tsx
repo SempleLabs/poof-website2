@@ -17,11 +17,11 @@ export default function HowItWorksPage() {
     {
       step: 1,
       title: "Upload & Connect",
-      description: "Import your bank statements, Excel files, or connect accounts directly. Multiple ways to get your financial data into Poof.",
+      description: "Import bank statements (CSV/PDF), Excel files, connect via Plaid, or upload receipts and invoices for automatic scanning.",
       details: [
-        "Import bank statements & Excel files",
+        "Import bank statements (CSV/PDF) & Excel files",
         "Connect accounts directly via Plaid",
-        "Support for CSV and QBO files",
+        "Upload receipts & invoices for OCR scanning",
         "One-time setup with automatic syncing"
       ],
       icon: (
@@ -34,12 +34,12 @@ export default function HowItWorksPage() {
     {
       step: 2,
       title: "AI Does the Work",
-      description: "Watch Poof automatically categorize transactions and suggest account mappings. Our AI learns your business patterns.",
+      description: "Watch Poof automatically categorize transactions, detect recurring charges, match transactions to invoices and bills, and scan receipts.",
       details: [
         "Automatic transaction categorization",
-        "Smart account mapping suggestions",
-        "AI learns from your corrections",
-        "Handles complex business transactions"
+        "Recurring charge detection & prediction",
+        "Smart transaction matching to invoices & bills",
+        "Receipt scanning with data extraction"
       ],
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function HowItWorksPage() {
     },
     {
       title: "Real-Time Financial Reporting",
-      description: "Generate professional financial reports instantly with real-time data and professional formatting.",
+      description: "Generate 12 professional financial reports instantly with real-time data.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
@@ -108,9 +108,54 @@ export default function HowItWorksPage() {
       ),
       process: [
         "Choose your date range - Any period you need",
-        "Select report type - P&L, Balance Sheet, Cash Flow, Trial Balance",
+        "Select report type - P&L, Balance Sheet, Cash Flow, and 9 more",
         "Generate in seconds - Real-time data, professional formatting",
         "Export or share easily - PDF, Excel, or direct sharing"
+      ]
+    },
+    {
+      title: "Receipt Scanning & OCR",
+      description: "Upload photos of receipts and invoices for automatic data extraction and categorization.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"/>
+        </svg>
+      ),
+      process: [
+        "Snap a photo - Upload receipts or invoices (including HEIC)",
+        "AI extracts data - Vendor, amount, date, and category identified",
+        "Duplicate detection - Prevents double-entry of the same receipt",
+        "Auto-categorized - Expense is created and categorized automatically"
+      ]
+    },
+    {
+      title: "Recurring Charge Detection",
+      description: "AI automatically identifies and predicts recurring transactions in your accounts.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"/>
+        </svg>
+      ),
+      process: [
+        "AI scans transactions - Identifies repeating patterns automatically",
+        "Frequency analysis - Weekly, biweekly, monthly, quarterly, or annual",
+        "Confidence scoring - Know how certain each detection is",
+        "Next payment prediction - See when charges are expected next"
+      ]
+    },
+    {
+      title: "Bank Statement Import",
+      description: "Upload CSV or PDF bank statements for transactions beyond the 30-day Plaid sync window.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z"/>
+        </svg>
+      ),
+      process: [
+        "Upload statement - CSV or PDF files up to 25MB",
+        "Intelligent column mapping - AI maps your statement format",
+        "Duplicate prevention - No double-counting of transactions",
+        "Batch preview & import - Review everything before committing"
       ]
     }
   ]

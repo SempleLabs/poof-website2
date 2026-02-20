@@ -7,8 +7,8 @@ import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
-  title: 'Features — 24 AI Bookkeeping Tools for Small Business | Poof',
-  description: 'Explore all 24 Poof features: AI transaction categorization, invoicing, expense tracking, bank reconciliation, financial reports, team roles, and more.',
+  title: 'Features — 30+ AI Bookkeeping Tools for Small Business | Poof',
+  description: 'Explore all 30+ Poof features: AI transaction categorization, receipt scanning, invoicing, expense tracking, bank reconciliation, 12 financial reports, team roles, and more.',
   keywords: 'AI bookkeeping features, automated categorization, invoicing, expense tracking, bank reconciliation, financial reports, receipt processing, team roles',
 }
 
@@ -43,6 +43,11 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9V17H10Z"/>
     </svg>
   ),
+  productivity: (
+    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M13,2.05V5.08C16.39,5.57 19,8.47 19,12C19,12.9 18.82,13.75 18.5,14.54L21.12,16.07C21.68,14.83 22,13.45 22,12C22,6.82 18.05,2.55 13,2.05M12,19A7,7 0 0,1 5,12C5,8.47 7.61,5.57 11,5.08V2.05C5.94,2.55 2,6.81 2,12A10,10 0 0,0 12,22C15.3,22 18.23,20.39 20.05,17.91L17.45,16.38C16.17,18 14.21,19 12,19Z"/>
+    </svg>
+  ),
 }
 
 export default function FeaturesPage() {
@@ -51,8 +56,8 @@ export default function FeaturesPage() {
       <Header />
 
       <PageHero
-        title={<>24 Features for <span className="text-gradient-gold">Effortless Bookkeeping</span></>}
-        subtitle="Everything you need to automate your bookkeeping — organized into six capability groups. All features included in every plan, starting at $14.50/month."
+        title={<>30+ Features for <span className="text-gradient-gold">Effortless Bookkeeping</span></>}
+        subtitle="Everything you need to automate your bookkeeping — organized into seven capability groups. All features included in every plan, starting at $14.50/month."
       >
         <Link
           href="https://app.poofai.com/register"
@@ -155,7 +160,7 @@ export default function FeaturesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Try All 24 Features?
+              Ready to Try All 30+ Features?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
               Start your 30-day free trial. All features included, starting at $14.50/month.
