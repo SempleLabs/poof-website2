@@ -246,5 +246,13 @@ export const faqData = [
   {
     question: "Can my accountant access Poof?",
     answer: "Yes. Poof supports team management with role-based access control. You can invite your accountant or bookkeeper with a specific role (Owner, Admin, Accountant, Bookkeeper, or Viewer) so they can review your books, run reports, and make adjustments as needed."
+  },
+  {
+    question: "What is AI bookkeeping?",
+    answer: "AI bookkeeping uses artificial intelligence to automate routine bookkeeping tasks like categorizing transactions, scanning receipts, matching payments to invoices, and generating financial reports. Instead of manually entering data, AI learns your business patterns and handles the work automatically — saving small business owners hours every week."
+  },
+  {
+    question: "What's the difference between bookkeeping and accounting?",
+    answer: "Bookkeeping is the day-to-day recording of financial transactions — categorizing expenses, reconciling bank statements, and maintaining accurate records. Accounting is the higher-level analysis, reporting, and tax preparation based on those records. Poof automates the bookkeeping so you or your accountant can focus on the accounting."
   }
 ]

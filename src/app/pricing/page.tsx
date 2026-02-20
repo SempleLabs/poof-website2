@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
+import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false)
@@ -60,11 +61,23 @@ export default function PricingPage() {
     {
       question: 'Do you integrate with my existing tools?',
       answer: 'Yes. Poof integrates with most banks, credit cards, and popular business tools. We\'re constantly adding new integrations based on customer requests.'
+    },
+    {
+      question: 'How much does bookkeeping software cost for a small business?',
+      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month, while Poof starts at $14.50/month (launch special) with all 30+ features included in one plan — no tiers or add-ons.'
+    },
+    {
+      question: 'Do I still need a bookkeeper if I use Poof?',
+      answer: 'Many small businesses use Poof to handle their day-to-day bookkeeping without hiring a bookkeeper. Poof automates transaction categorization, receipt scanning, recurring charge detection, and report generation. For tax preparation or complex accounting needs, you can invite your accountant to collaborate directly inside Poof.'
     }
   ]
 
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs)) }}
+      />
       <Header />
 
       <PageHero

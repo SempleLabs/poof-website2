@@ -1,9 +1,28 @@
 import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
+function getBlogSlugs(): { slug: string; date: string }[] {
+  const blogDir = path.join(process.cwd(), 'content', 'blog')
+  if (!fs.existsSync(blogDir)) return []
+
+  return fs.readdirSync(blogDir)
+    .filter(file => file.endsWith('.mdx'))
+    .map(file => {
+      const content = fs.readFileSync(path.join(blogDir, file), 'utf8')
+      const { data } = matter(content)
+      return {
+        slug: file.replace('.mdx', ''),
+        date: data.date || new Date().toISOString(),
+      }
+    })
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://poof.ai'
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -65,4 +84,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
   ]
+
+  const blogPosts: MetadataRoute.Sitemap = getBlogSlugs().map(post => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
+
+  return [...staticPages, ...blogPosts]
 }

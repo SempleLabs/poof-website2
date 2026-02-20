@@ -5,12 +5,40 @@ import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
 import ImagePlaceholder from '@/components/ImagePlaceholder'
+import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'How It Works - AI Bookkeeping Process | Poof',
   description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize, get reports.',
   keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization process',
 }
+
+const howItWorksFaqs = [
+  {
+    question: "How long does it take to set up?",
+    answer: "Most businesses are up and running in under 5 minutes. Simply connect your bank accounts and our AI takes care of the rest. No complex configuration or manual data entry required."
+  },
+  {
+    question: "What if the AI categorizes something wrong?",
+    answer: "Simply click to correct any categorization and our AI learns from your input. The more you use Poof, the more accurate it becomes for your specific business patterns."
+  },
+  {
+    question: "Can I import my existing bookkeeping data?",
+    answer: "Yes. We support imports from QuickBooks, Xero, CSV files, and most other accounting software. You can also upload CSV or PDF bank statements for transactions beyond the 30-day Plaid sync window."
+  },
+  {
+    question: "How does the AI categorization work?",
+    answer: "Our BRAID engine analyzes transaction patterns, merchant information, and your business type to automatically categorize transactions. It also detects recurring charges and matches transactions to invoices and bills. It learns from your corrections and gets more accurate over time."
+  },
+  {
+    question: "What types of receipts can I process?",
+    answer: "Upload photos of any receipt or invoice — paper, digital, or email receipts in JPG, PNG, or HEIC format. Our OCR engine extracts vendor name, amount, date, and category automatically, with built-in duplicate detection."
+  },
+  {
+    question: "How accurate is the bank reconciliation?",
+    answer: "Our AI matches and categorizes transactions with 95%+ accuracy. Any discrepancies are flagged for quick review, and the system learns from your corrections."
+  }
+]
 
 export default function HowItWorksPage() {
   const steps = [
@@ -162,6 +190,10 @@ export default function HowItWorksPage() {
 
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(howItWorksFaqs)) }}
+      />
       <Header />
 
       <PageHero
@@ -367,32 +399,7 @@ export default function HowItWorksPage() {
           </AnimateOnScroll>
 
           <div className="space-y-8">
-            {[
-              {
-                question: "How long does it take to set up?",
-                answer: "Most businesses are up and running in under 5 minutes. Simply connect your bank accounts and our AI takes care of the rest. No complex configuration or manual data entry required."
-              },
-              {
-                question: "What if the AI categorizes something wrong?",
-                answer: "Simply click to correct any categorization and our AI learns from your input. The more you use Poof, the more accurate it becomes for your specific business patterns."
-              },
-              {
-                question: "Can I import my existing bookkeeping data?",
-                answer: "Yes. We support imports from QuickBooks, Xero, CSV files, and most other accounting software. Our team can help with larger migrations if needed."
-              },
-              {
-                question: "How does the AI categorization work?",
-                answer: "Our AI analyzes transaction patterns, merchant information, and your business type to automatically categorize transactions. It learns from your corrections and gets more accurate over time."
-              },
-              {
-                question: "What types of receipts can I process?",
-                answer: "Snap photos of any receipt - paper, digital, or email receipts. Our AI extracts all details automatically including vendor, amount, date, and expense category."
-              },
-              {
-                question: "How accurate is the bank reconciliation?",
-                answer: "Our AI matches and categorizes transactions with 95%+ accuracy. Any discrepancies are flagged for quick review, and the system learns from your corrections."
-              }
-            ].map((faq, index) => (
+            {howItWorksFaqs.map((faq, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-6">
                   <h3 className="text-lg font-semibold font-display text-slate-900 mb-3">
