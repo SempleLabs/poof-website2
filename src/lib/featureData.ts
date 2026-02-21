@@ -11,20 +11,12 @@ export interface FeatureGroup {
 
 export const featureGroups: FeatureGroup[] = [
   {
-    name: "AI-Powered Automation",
+    name: "AI Automation",
     icon: "ai",
     features: [
       {
         title: "AI Transaction Categorization",
         description: "Automatically categorizes bank transactions using the BRAID engine that learns your business patterns"
-      },
-      {
-        title: "Preston AI Assistant",
-        description: "Built-in AI assistant with specialist agents for accounting, invoicing, expenses, reports, and banking questions"
-      },
-      {
-        title: "AI Chart of Accounts Generation",
-        description: "Generates a customized chart of accounts based on your business type"
       },
       {
         title: "Automated Daily Bookkeeping",
@@ -35,12 +27,26 @@ export const featureGroups: FeatureGroup[] = [
         description: "Automatic detection of recurring transactions with frequency analysis (weekly, biweekly, monthly, quarterly, annual), confidence scoring, and next payment date prediction"
       },
       {
-        title: "Receipt & Invoice Scanning (OCR)",
-        description: "Upload photos of receipts and invoices for automatic data extraction, vendor identification, category suggestion, and duplicate detection. Supports HEIC/HEIF images"
-      },
-      {
         title: "Smart Transaction Matching",
         description: "AI-powered matching between invoices and bank deposits, bills and payments, credit notes and overpayments, with partial payment support and confidence-based recommendations"
+      }
+    ]
+  },
+  {
+    name: "AI Assistant & Setup",
+    icon: "assistant",
+    features: [
+      {
+        title: "Preston AI Assistant",
+        description: "Built-in AI assistant with specialist agents for accounting, invoicing, expenses, reports, and banking questions"
+      },
+      {
+        title: "AI Chart of Accounts Generation",
+        description: "Generates a customized chart of accounts based on your business type"
+      },
+      {
+        title: "Receipt & Invoice Scanning (OCR)",
+        description: "Upload photos of receipts and invoices for automatic data extraction, vendor identification, category suggestion, and duplicate detection. Supports HEIC/HEIF images"
       },
       {
         title: "AI-Guided Onboarding",
