@@ -2,6 +2,7 @@
 
 import AnimateOnScroll from './AnimateOnScroll'
 import GlowCard from './GlowCard'
+import VaporField from './ParticleField'
 
 const steps = [
   {
@@ -50,9 +51,16 @@ const steps = [
   },
 ]
 
+const ArrowRight = () => (
+  <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+  </svg>
+)
+
 export default function MagicWorkflowSection() {
   return (
     <section className="py-24 bg-slate-900 relative overflow-hidden">
+      <VaporField particleCount={15} />
       <div className="absolute top-20 left-1/4 w-72 h-72 bg-teal-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
@@ -69,17 +77,61 @@ export default function MagicWorkflowSection() {
           </p>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 relative">
-          {/* Desktop connector line */}
-          <div className="hidden md:block absolute top-1/2 left-[calc(33.33%+12px)] right-[calc(33.33%+12px)] -translate-y-1/2 z-0">
-            <div className="border-t-2 border-dashed border-slate-700 w-full" />
-          </div>
+        {/* Desktop: 3 cards with arrows between them */}
+        <div className="hidden md:flex items-stretch gap-4">
+          {steps.map((step, i) => (
+            <div key={i} className="contents">
+              <div className="flex-1">
+                <AnimateOnScroll animation="fade-up" delay={200 + i * 150} className="h-full">
+                  <GlowCard
+                    className="rounded-2xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm h-full"
+                    glowColor={step.glowColor}
+                    tilt={true}
+                  >
+                    <div className="p-8 text-center">
+                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-700 text-slate-300 text-sm font-mono font-bold mb-6">
+                        {step.step}
+                      </div>
 
+                      <div
+                        className={`w-16 h-16 ${step.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-6 ${step.iconColor}`}
+                      >
+                        {step.icon}
+                      </div>
+
+                      <h3 className="font-display text-xl font-bold mb-4 text-white">
+                        {step.step === 3 ? (
+                          <>
+                            <span className="animated-gradient-text">Poof.</span> It&apos;s Done.
+                          </>
+                        ) : (
+                          step.title
+                        )}
+                      </h3>
+
+                      <p className="text-slate-400 leading-relaxed">{step.description}</p>
+                    </div>
+                  </GlowCard>
+                </AnimateOnScroll>
+              </div>
+
+              {/* Arrow between cards */}
+              {i < steps.length - 1 && (
+                <div className="flex items-center flex-shrink-0">
+                  <ArrowRight />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: stacked cards with down arrows */}
+        <div className="md:hidden space-y-4">
           {steps.map((step, i) => (
             <div key={i}>
               <AnimateOnScroll animation="fade-up" delay={200 + i * 150}>
                 <GlowCard
-                  className="rounded-2xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm relative z-10 h-full"
+                  className="rounded-2xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm"
                   glowColor={step.glowColor}
                   tilt={true}
                 >
@@ -109,9 +161,8 @@ export default function MagicWorkflowSection() {
                 </GlowCard>
               </AnimateOnScroll>
 
-              {/* Mobile connector arrow */}
               {i < steps.length - 1 && (
-                <div className="flex justify-center my-4 md:hidden">
+                <div className="flex justify-center my-4">
                   <svg
                     className="w-6 h-6 text-slate-600"
                     fill="none"
