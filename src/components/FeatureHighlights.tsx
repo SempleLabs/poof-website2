@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { featureGroups } from '@/lib/featureData'
 import AnimateOnScroll from './AnimateOnScroll'
@@ -20,11 +21,8 @@ const showcases = [
     iconColor: 'text-gold-500',
     glowColor: 'rgba(139, 92, 246, 0.08)',
     iconLeft: true,
-    icon: (
-      <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z" />
-      </svg>
-    ),
+    isPrestonImage: true,
+    icon: null,
   },
   {
     title: 'Snap a Photo, Skip the Data Entry',
@@ -149,12 +147,28 @@ export default function FeatureHighlights() {
                     item.iconLeft ? 'md:order-1' : 'md:order-2'
                   }`}
                 >
-                  <GlowCard
-                    className={`rounded-2xl ${item.iconBg} border ${item.iconBorder} w-full max-w-xs aspect-square flex items-center justify-center`}
-                    glowColor={item.glowColor}
-                  >
-                    <div className={`${item.iconColor} p-12`}>{item.icon}</div>
-                  </GlowCard>
+                  {item.isPrestonImage ? (
+                    <GlowCard
+                      className="rounded-2xl bg-slate-900 border border-violet-500/20 w-full max-w-xs overflow-hidden"
+                      glowColor="rgba(139, 92, 246, 0.15)"
+                    >
+                      <Image
+                        src="/Preston.png"
+                        alt="Preston — Your AI Bookkeeper"
+                        width={400}
+                        height={500}
+                        className="w-full h-auto"
+                        priority
+                      />
+                    </GlowCard>
+                  ) : (
+                    <GlowCard
+                      className={`rounded-2xl ${item.iconBg} border ${item.iconBorder} w-full max-w-xs aspect-square flex items-center justify-center`}
+                      glowColor={item.glowColor}
+                    >
+                      <div className={`${item.iconColor} p-12`}>{item.icon}</div>
+                    </GlowCard>
+                  )}
                 </div>
 
                 {/* Text Panel */}

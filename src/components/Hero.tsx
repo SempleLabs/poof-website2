@@ -1,12 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import DotGrid from './DotGrid'
+import AuroraBackground from './AuroraBackground'
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
-      <DotGrid />
+      <AuroraBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
