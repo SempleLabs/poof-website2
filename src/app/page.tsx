@@ -1,9 +1,10 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import WhatIsPoof from '@/components/WhatIsPoof'
-import FeatureSection from '@/components/FeatureSection'
+import MagicWorkflowSection from '@/components/MagicWorkflowSection'
+import FeatureHighlights from '@/components/FeatureHighlights'
 import ComparisonSection from '@/components/ComparisonSection'
-import ProductDemoSection from '@/components/ProductDemoSection'
+import DemoVideoSection from '@/components/DemoVideoSection'
 import HomeFaqSection from '@/components/HomeFaqSection'
 import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
@@ -19,9 +20,10 @@ export default function Home() {
       <Header />
       <Hero />
       <WhatIsPoof />
-      <FeatureSection />
+      <MagicWorkflowSection />
+      <FeatureHighlights />
       <ComparisonSection />
-      <ProductDemoSection />
+      <DemoVideoSection />
       <HomeFaqSection />
       <CtaSection />
       <Footer />
