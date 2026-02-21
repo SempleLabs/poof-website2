@@ -84,9 +84,9 @@ export default function FeaturesPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {group.features.map((feature, featureIndex) => (
-                    <AnimateOnScroll key={featureIndex} animation="fade-up" delay={100 + featureIndex * 80}>
+                    <AnimateOnScroll key={featureIndex} animation="fade-up" delay={100 + featureIndex * 80} className="h-full">
                       <div
-                        className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm"
+                        className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm h-full"
                       >
                         <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
                           {feature.title}

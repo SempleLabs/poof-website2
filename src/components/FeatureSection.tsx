@@ -76,6 +76,7 @@ export default function FeatureSection() {
                     key={featureIndex}
                     animation="fade-up"
                     delay={150 + featureIndex * 80}
+                    className="h-full"
                   >
                     <GlowCard
                       className="rounded-xl bg-white border border-slate-200 shadow-sm h-full card-hover-lift"

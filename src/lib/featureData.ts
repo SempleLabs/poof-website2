@@ -54,11 +54,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Professional Invoicing",
-        description: "Create, customize, and send invoices with PDF export, email delivery, custom branding/logo, and line-item tax and discounts"
-      },
-      {
-        title: "Credit Notes",
-        description: "Issue credit notes linked to invoices"
+        description: "Create, customize, and send invoices with PDF export, email delivery, custom branding/logo, line-item tax and discounts, and credit notes"
       },
       {
         title: "Payment Tracking",
@@ -93,10 +89,6 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Vendor Management",
         description: "Maintain vendor profiles with 1099 tracking"
-      },
-      {
-        title: "Transaction Matching",
-        description: "Automatically match bank transactions to invoices and bills"
       }
     ]
   },
@@ -114,11 +106,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Bank Reconciliation",
-        description: "Multi-step reconciliation workflow with history and reports"
-      },
-      {
-        title: "Bank Deposits",
-        description: "Track and manage bank deposits"
+        description: "Multi-step reconciliation workflow with deposit tracking, history, and reports"
       },
       {
         title: "Multi-Account Support",
@@ -162,7 +150,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Team Management",
-        description: "Invite team members with role-based access control — 5 roles: Owner, Admin, Accountant, Bookkeeper, and Viewer"
+        description: "Invite team members with role-based access control — 5 roles: Owner, Admin, Accountant, Bookkeeper, and Viewer with 26 granular permissions"
       },
       {
         title: "Two-Factor Authentication",
@@ -183,10 +171,6 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Email Verification",
         description: "Secure account verification and email change confirmation"
-      },
-      {
-        title: "Role-Based Permissions (RBAC)",
-        description: "26 granular permissions across financial, invoicing, customer management, and admin categories"
       }
     ]
   },
