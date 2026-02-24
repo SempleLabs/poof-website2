@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Poof vs QuickBooks — AI Bookkeeping Comparison | Poof',
   description: 'Compare Poof and QuickBooks side by side. See how Poof\'s AI-powered bookkeeping compares on features, pricing, and ease of use for small businesses.',
   keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping',
+  alternates: {
+    canonical: 'https://poof.ai/poof-vs-quickbooks',
+  },
 }
 
 const comparisonData = [

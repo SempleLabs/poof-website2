@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
   keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI financial management, invoicing software, expense tracking, bank reconciliation',
   authors: [{ name: 'Poof' }],
+  alternates: {
+    canonical: 'https://poof.ai',
+  },
   openGraph: {
     title: 'Poof — AI Bookkeeping Software for Small Business',
     description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',

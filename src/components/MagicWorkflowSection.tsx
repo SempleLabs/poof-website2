@@ -10,9 +10,9 @@ const steps = [
     title: 'Connect Your Bank',
     description:
       'Link your accounts via Plaid in under 5 minutes. Transactions from the last 30 days sync automatically.',
-    glowColor: 'rgba(20, 184, 166, 0.15)',
-    iconBg: 'bg-teal-500/10',
-    iconColor: 'text-teal-400',
+    glowColor: 'rgba(139, 92, 246, 0.15)',
+    iconBg: 'bg-gold-500/10',
+    iconColor: 'text-gold-400',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z" />
@@ -24,9 +24,9 @@ const steps = [
     title: 'AI Does the Work',
     description:
       'The BRAID engine categorizes every transaction, detects recurring charges, matches payments to invoices, and scans receipts — while you sleep.',
-    glowColor: 'rgba(139, 92, 246, 0.15)',
-    iconBg: 'bg-gold-500/10',
-    iconColor: 'text-gold-400',
+    glowColor: 'rgba(20, 184, 166, 0.15)',
+    iconBg: 'bg-teal-500/10',
+    iconColor: 'text-teal-400',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z" />
@@ -37,15 +37,20 @@ const steps = [
     step: 3,
     title: 'done',
     description:
-      'Wake up to clean books, accurate reports, and zero manual data entry. Every. Single. Day.',
+      'Wake up to clean books, accurate reports, and zero manual data entry. Tell Preston "we received a check for invoice 1234" and he records the payment, marks it paid, and books the journal entry. Every. Single. Day.',
     glowColor: 'rgba(139, 92, 246, 0.2)',
     iconBg: 'bg-gold-500/10',
     iconColor: 'text-gold-400',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-        <circle cx="19" cy="3" r="1.5" />
-        <circle cx="21.5" cy="6" r="1" />
+        {/* Cloud base */}
+        <path d="M6.5 20a4.5 4.5 0 01-.42-8.98 7 7 0 0113.84 0A4.5 4.5 0 0119.5 20h-13z" />
+        {/* Poof sparkle particles */}
+        <circle cx="8" cy="6" r="1.2" opacity="0.7" />
+        <circle cx="12" cy="3.5" r="1" opacity="0.5" />
+        <circle cx="16" cy="5.5" r="0.8" opacity="0.4" />
+        <circle cx="5" cy="8" r="0.6" opacity="0.3" />
+        <circle cx="19" cy="7.5" r="0.7" opacity="0.35" />
       </svg>
     ),
   },

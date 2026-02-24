@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Resources - Small Business Bookkeeping Guides | Poof',
   description: 'Free resources for small business bookkeeping. Guides, templates, and tips to help you manage your finances better.',
   keywords: 'small business bookkeeping guides, financial templates, accounting resources, bookkeeping tips',
+  alternates: {
+    canonical: 'https://poof.ai/resources',
+  },
 }
 
 export default function ResourcesPage() {

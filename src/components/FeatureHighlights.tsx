@@ -10,11 +10,12 @@ const showcases = [
   {
     title: 'Meet Preston, Your AI Bookkeeper',
     description:
-      'Built-in AI assistant with specialist agents for accounting, invoicing, expenses, reports, and banking. Preston walks you through setup, answers questions, and handles the details.',
+      'Preston isn\'t just a chatbot — he\'s your AI bookkeeper. Create invoices, record payments, update customer records, generate P&L reports, and manage your books entirely through conversation.',
     bullets: [
-      'Specialist agents for every area of your books',
-      'Guided onboarding that sets up your chart of accounts',
-      'Natural-language answers to any bookkeeping question',
+      'Record payments and auto-book journal entries via chat',
+      'Update invoices, customers, vendors, and expenses by name',
+      'Generate financial reports directly in conversation',
+      'Privacy controls let you decide what Preston can access',
     ],
     iconBg: 'bg-gold-500/10',
     iconBorder: 'border-gold-500/20',
@@ -38,22 +39,9 @@ const showcases = [
     iconColor: 'text-teal-500',
     glowColor: 'rgba(20, 184, 166, 0.08)',
     iconLeft: false,
-    icon: (
-      <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
+    imageSrc: '/snapphoto.png',
+    imageAlt: 'Receipt scanning with automatic data extraction',
+    icon: null,
   },
   {
     title: 'Invoices Meet Payments, Automatically',
@@ -69,16 +57,9 @@ const showcases = [
     iconColor: 'text-gold-500',
     glowColor: 'rgba(139, 92, 246, 0.08)',
     iconLeft: true,
-    icon: (
-      <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-        />
-      </svg>
-    ),
+    imageSrc: '/invoicesmeetpayments.png',
+    imageAlt: 'Invoices automatically matched to payments',
+    icon: null,
   },
 ]
 
@@ -147,18 +128,17 @@ export default function FeatureHighlights() {
                     item.iconLeft ? 'md:order-1' : 'md:order-2'
                   }`}
                 >
-                  {item.isPrestonImage ? (
+                  {item.isPrestonImage || item.imageSrc ? (
                     <GlowCard
                       className="rounded-2xl bg-slate-900 border border-violet-500/20 w-full max-w-xs overflow-hidden"
-                      glowColor="rgba(139, 92, 246, 0.15)"
+                      glowColor={item.isPrestonImage ? 'rgba(139, 92, 246, 0.15)' : item.glowColor}
                     >
                       <Image
-                        src="/Preston.png"
-                        alt="Preston — Your AI Bookkeeper"
+                        src={item.imageSrc || '/Preston.png'}
+                        alt={item.imageAlt || item.title}
                         width={400}
                         height={500}
                         className="w-full h-auto"
-                        priority
                       />
                     </GlowCard>
                   ) : (

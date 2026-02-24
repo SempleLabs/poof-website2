@@ -38,7 +38,11 @@ export function getSoftwareApplicationSchema() {
     },
     featureList: [
       'AI Transaction Categorization',
-      'Preston AI Assistant',
+      'Preston AI Bookkeeper',
+      'Conversational Payment Recording',
+      'Edit Records via Chat',
+      'AI Financial Reports in Chat',
+      'AI Data Sharing Controls',
       'AI Chart of Accounts Generation',
       'Automated Daily Bookkeeping',
       'AI Recurring Charge Detection',

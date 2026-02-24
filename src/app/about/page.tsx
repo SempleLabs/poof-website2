@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'About Poof - AI Bookkeeping for Small Business',
   description: 'Learn about Poof&apos;s mission to automate bookkeeping for small businesses. Meet our team and discover our story.',
   keywords: 'about Poof, company story, bookkeeping automation team, AI accounting mission',
+  alternates: {
+    canonical: 'https://poof.ai/about',
+  },
 }
 
 export default function AboutPage() {

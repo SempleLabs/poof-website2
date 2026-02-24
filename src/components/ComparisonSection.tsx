@@ -4,7 +4,8 @@ import AnimateOnScroll from './AnimateOnScroll'
 
 const features = [
   { name: 'AI Transaction Categorization', poof: true, quickbooks: true, xero: false, freshbooks: false },
-  { name: 'Built-in AI Assistant', poof: true, quickbooks: false, xero: false, freshbooks: false },
+  { name: 'Built-in AI Assistant (Creates, Edits & Records)', poof: true, quickbooks: false, xero: false, freshbooks: false },
+  { name: 'AI Payment Recording with Journal Entries', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Auto Chart of Accounts Generation', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Receipt Scanning & OCR', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'AI Recurring Charge Detection', poof: true, quickbooks: false, xero: false, freshbooks: false },

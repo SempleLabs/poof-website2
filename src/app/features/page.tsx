@@ -7,9 +7,12 @@ import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
-  title: 'Features — 30+ AI Bookkeeping Tools for Small Business | Poof',
-  description: 'Explore all 30+ Poof features: AI transaction categorization, receipt scanning, invoicing, expense tracking, bank reconciliation, 12 financial reports, team roles, and more.',
-  keywords: 'AI bookkeeping features, automated categorization, invoicing, expense tracking, bank reconciliation, financial reports, receipt processing, team roles',
+  title: 'Features — 40 AI Bookkeeping Tools for Small Business | Poof',
+  description: 'Explore all 40 Poof features: AI transaction categorization, conversational payment recording, receipt scanning, invoicing, expense tracking, bank reconciliation, 12 financial reports, team roles, and more.',
+  keywords: 'AI bookkeeping features, automated categorization, AI payment recording, invoicing, expense tracking, bank reconciliation, financial reports, receipt processing, team roles',
+  alternates: {
+    canonical: 'https://poof.ai/features',
+  },
 }
 
 const groupIcons: Record<string, JSX.Element> = {
@@ -56,8 +59,8 @@ export default function FeaturesPage() {
       <Header />
 
       <PageHero
-        title={<>30+ Features for <span className="text-gradient-gold">Effortless Bookkeeping</span></>}
-        subtitle="Everything you need to automate your bookkeeping — organized into seven capability groups. All features included in every plan, starting at $14.50/month."
+        title={<>40 Features for <span className="text-gradient-gold">Effortless Bookkeeping</span></>}
+        subtitle="Everything you need to automate your bookkeeping — organized into eight capability groups. All features included in every plan, starting at $14.50/month."
       >
         <Link
           href="https://app.poofai.com/register"
@@ -160,7 +163,7 @@ export default function FeaturesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Try All 30+ Features?
+              Ready to Try All 40 Features?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
               Start your 30-day free trial. All features included, starting at $14.50/month.

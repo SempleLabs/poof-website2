@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'How It Works - AI Bookkeeping Process | Poof',
   description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize, get reports.',
   keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization process',
+  alternates: {
+    canonical: 'https://poof.ai/how-it-works',
+  },
 }
 
 const howItWorksFaqs = [

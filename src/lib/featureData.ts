@@ -38,7 +38,23 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Preston AI Assistant",
-        description: "Built-in AI assistant with specialist agents for accounting, invoicing, expenses, reports, and banking questions"
+        description: "Built-in AI bookkeeper that creates invoices, records payments, updates records, generates financial reports, and manages your books — all through natural conversation"
+      },
+      {
+        title: "Conversational Payment Recording",
+        description: "Tell Preston 'we received two checks covering invoices 1001 and 1003' and he records the payments, marks invoices as paid, and books the journal entries (DR Bank, CR Accounts Receivable). Supports partial payments, check, ACH, cash, and credit card methods"
+      },
+      {
+        title: "Edit Records via Chat",
+        description: "Update invoices, customers, vendors, expenses, bills, and transactions by telling Preston what to change — no need to navigate to any page. Change due dates, descriptions, statuses, contact info, categories, and more"
+      },
+      {
+        title: "AI Financial Reports in Chat",
+        description: "Preston generates P&L, Balance Sheet, Cash Flow, Trial Balance, and General Ledger reports directly in conversation with formatted summaries"
+      },
+      {
+        title: "AI Data Sharing Controls",
+        description: "Control exactly what data Preston can access — transactions, invoices, expenses, customer names, vendor names, journal entries, and more. All of Preston's tools respect your privacy preferences"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -231,7 +247,7 @@ export const faqData = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant (Preston), receipt scanning with OCR, recurring charge detection, smart transaction matching, and generates your chart of accounts automatically. Poof costs $29/month vs QuickBooks Simple Start at $38/month."
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes Preston — an AI bookkeeper that records payments, updates records, and generates reports through conversation. Poof also offers receipt scanning with OCR, recurring charge detection, smart transaction matching, AI-powered payment recording with automatic journal entries, and generates your chart of accounts automatically. Poof costs $29/month vs QuickBooks Simple Start at $38/month."
   },
   {
     question: "Can my accountant access Poof?",

@@ -22,8 +22,8 @@ export default function Home() {
       <WhatIsPoof />
       <MagicWorkflowSection />
       <FeatureHighlights />
-      <ComparisonSection />
       <DemoVideoSection />
+      <ComparisonSection />
       <HomeFaqSection />
       <CtaSection />
       <Footer />
