@@ -44,7 +44,7 @@ export default function Hero() {
 
           {/* Benefit badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {['5-minute setup', '90% fewer manual entries', '30-day free trial'].map((text) => (
+            {['Built-in AI bookkeeper', '90% fewer manual entries', '30-day free trial'].map((text) => (
               <div key={text} className="flex items-center bg-slate-100 border border-slate-200 rounded-full px-4 py-2 text-sm text-slate-700">
                 <span className="w-2 h-2 rounded-full bg-teal-400 mr-2" />
                 {text}
