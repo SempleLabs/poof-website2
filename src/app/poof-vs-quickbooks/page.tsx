@@ -8,8 +8,8 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Poof vs QuickBooks — AI Bookkeeping Comparison | Poof',
-  description: 'Compare Poof and QuickBooks side by side. See how Poof\'s AI-powered bookkeeping compares on features, pricing, and ease of use for small businesses.',
-  keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping',
+  description: 'Compare Poof and QuickBooks side by side. AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, and 13 differentiators that set Poof apart.',
+  keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping, AI budgeting, cash flow forecasting',
   alternates: {
     canonical: 'https://poof.ai/poof-vs-quickbooks',
   },
@@ -18,18 +18,28 @@ export const metadata: Metadata = {
 const comparisonData = [
   { category: 'AI & Automation', features: [
     { name: 'AI Transaction Categorization', poof: true, quickbooks: true },
-    { name: 'Built-in AI Assistant', poof: true, quickbooks: false },
+    { name: 'Built-in AI Assistant (Preston)', poof: true, quickbooks: false },
     { name: 'Auto Chart of Accounts Generation', poof: true, quickbooks: false },
     { name: 'AI Recurring Charge Detection', poof: true, quickbooks: false },
-    { name: 'Receipt Scanning & OCR', poof: true, quickbooks: false },
+    { name: 'Receipt Scanning & OCR (with duplicate detection)', poof: true, quickbooks: false },
     { name: 'Smart Transaction Matching', poof: true, quickbooks: false },
+    { name: 'AI Budget & Forecast Generation', poof: true, quickbooks: false },
+  ]},
+  { category: 'Budgeting & Forecasting', features: [
+    { name: 'AI-Powered Budget Creation', poof: true, quickbooks: false },
+    { name: 'Budget vs Actual Variance Dashboard', poof: true, quickbooks: false },
+    { name: 'AI Cash Flow Forecasting (12-month)', poof: true, quickbooks: false },
+    { name: 'Budget Alerts', poof: true, quickbooks: false },
   ]},
   { category: 'Core Bookkeeping', features: [
     { name: 'Invoicing & Credit Notes', poof: true, quickbooks: true },
+    { name: 'Recurring Invoices with Auto-Send', poof: true, quickbooks: false },
+    { name: 'Automated Invoice Follow-ups', poof: true, quickbooks: false },
     { name: 'Expense Tracking & Receipt Uploads', poof: true, quickbooks: true },
     { name: 'Bill & Vendor Management', poof: true, quickbooks: false },
     { name: 'Double-Entry Accounting', poof: true, quickbooks: true },
     { name: 'Bank Reconciliation', poof: true, quickbooks: true },
+    { name: 'Auto-Reconciliation', poof: true, quickbooks: false },
     { name: 'Accrual & Cash Basis Toggle', poof: true, quickbooks: true },
     { name: 'Recurring Journal Entry Templates', poof: true, quickbooks: false },
     { name: 'Transaction Approval Workflows', poof: true, quickbooks: false },
@@ -37,15 +47,16 @@ const comparisonData = [
   { category: 'Banking & Reports', features: [
     { name: 'Bank Connection (Plaid)', poof: true, quickbooks: true },
     { name: 'Bank Statement Import (CSV/PDF)', poof: true, quickbooks: false },
-    { name: '12 Financial Reports', poof: true, quickbooks: true },
+    { name: '13 Financial Reports', poof: true, quickbooks: true },
   ]},
   { category: 'Security & Team', features: [
     { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false },
+    { name: 'SOC 2 Audit Logs with PII Masking', poof: true, quickbooks: false },
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
-    { name: 'Audit Logs', poof: true, quickbooks: false },
   ]},
-  { category: 'Small Business Focus', features: [
-    { name: 'Built for Small Business', poof: true, quickbooks: true },
+  { category: 'Productivity & UX', features: [
+    { name: 'Drag-and-Drop Dashboard', poof: true, quickbooks: false },
+    { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false },
     { name: 'Simple, Flat Pricing (from $14.50/mo)', poof: true, quickbooks: false },
   ]},
 ]
@@ -92,7 +103,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $29/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 30+ features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 40+ features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -175,7 +186,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. All 30+ features included.
+              See the difference AI bookkeeping makes. All 40+ features included.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

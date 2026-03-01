@@ -8,9 +8,9 @@ import ImagePlaceholder from '@/components/ImagePlaceholder'
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'How It Works - AI Bookkeeping Process | Poof',
-  description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize, get reports.',
-  keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization process',
+  title: 'How It Works — AI Bookkeeping in 3 Steps | Poof',
+  description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize and reconcile, get 13 financial reports, budgets, and cash flow forecasts.',
+  keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization, AI budgeting, cash flow forecasting, auto-reconciliation',
   alternates: {
     canonical: 'https://poof.ai/how-it-works',
   },
@@ -82,12 +82,12 @@ export default function HowItWorksPage() {
     {
       step: 3,
       title: "Run Your Business",
-      description: "Get insights, send invoices, and make informed financial decisions. Your books are always ready when you need them.",
+      description: "Get insights, send invoices, create budgets, forecast cash flow, and make informed financial decisions. Your books are always ready when you need them.",
       details: [
-        "Real-time financial insights",
-        "Professional invoice creation",
-        "Tax-ready books year-round",
-        "Make informed business decisions"
+        "13 financial reports with real-time data",
+        "AI-powered budgeting and cash flow forecasting",
+        "Professional invoicing with automated follow-ups",
+        "Tax-ready books year-round"
       ],
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -131,7 +131,7 @@ export default function HowItWorksPage() {
     },
     {
       title: "Real-Time Financial Reporting",
-      description: "Generate 12 professional financial reports instantly with real-time data.",
+      description: "Generate 13 professional financial reports instantly with real-time data.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
@@ -139,7 +139,7 @@ export default function HowItWorksPage() {
       ),
       process: [
         "Choose your date range - Any period you need",
-        "Select report type - P&L, Balance Sheet, Cash Flow, and 9 more",
+        "Select report type - P&L, Balance Sheet, Cash Flow, Budget vs Actual, and 9 more",
         "Generate in seconds - Real-time data, professional formatting",
         "Export or share easily - PDF, Excel, or direct sharing"
       ]
@@ -176,7 +176,7 @@ export default function HowItWorksPage() {
     },
     {
       title: "Bank Statement Import",
-      description: "Upload CSV or PDF bank statements for transactions beyond the 30-day Plaid sync window.",
+      description: "Upload CSV or PDF bank statements for transactions beyond the Plaid sync window.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z"/>

@@ -69,7 +69,7 @@ export default function AboutPage() {
     {
       year: "2026",
       title: "Reimagining Bookkeeping",
-      description: "Today, Poof includes 30+ features — AI receipt scanning, recurring charge detection, bank statement import, 12 financial reports, smart transaction matching, and more. We're combining deep industry expertise with cutting-edge AI to make bookkeeping truly effortless."
+      description: "Today, Poof includes 40+ features — AI budgeting & forecasting, recurring invoices with automated follow-ups, receipt scanning, recurring charge detection, bank statement import, 13 financial reports, smart transaction matching, and more. We're combining deep industry expertise with cutting-edge AI to make bookkeeping truly effortless."
     }
   ]
 

@@ -34,7 +34,7 @@ export default function Hero() {
           <p
             className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Stop wrestling with QuickBooks. Poof automates your bookkeeping with artificial intelligence,
+            Stop wrestling with QuickBooks. Poof automates your bookkeeping, budgeting, and cash flow forecasting with AI,
             giving you back hours every week to focus on growing your business.
           </p>
 

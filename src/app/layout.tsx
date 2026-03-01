@@ -26,16 +26,16 @@ const cabinet = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Poof — AI Bookkeeping Software for Small Business | Invoicing, Expenses & Reports',
-  description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
-  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI financial management, invoicing software, expense tracking, bank reconciliation',
+  title: 'Poof — AI Bookkeeping Software for Small Business | Invoicing, Budgeting & Reports',
+  description: 'Poof automates bookkeeping with AI — transaction categorization, invoicing, budgeting, cash flow forecasting, expense tracking, bank reconciliation, and 13 financial reports. 30-day free trial.',
+  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI budgeting, cash flow forecasting, invoicing software, expense tracking, bank reconciliation, recurring invoices',
   authors: [{ name: 'Poof' }],
   alternates: {
     canonical: 'https://poof.ai',
   },
   openGraph: {
     title: 'Poof — AI Bookkeeping Software for Small Business',
-    description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
+    description: 'Poof automates bookkeeping with AI — transaction categorization, invoicing, budgeting, cash flow forecasting, expense tracking, bank reconciliation, and 13 financial reports. 30-day free trial.',
     url: 'https://poof.ai',
     siteName: 'Poof',
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Poof — AI Bookkeeping Software for Small Business',
-    description: 'Poof automates bookkeeping with AI-powered transaction categorization, invoicing, expense tracking, bank reconciliation, and financial reports. 30-day free trial.',
+    description: 'Poof automates bookkeeping with AI — transaction categorization, invoicing, budgeting, cash flow forecasting, expense tracking, bank reconciliation, and 13 financial reports. 30-day free trial.',
   },
 }
 

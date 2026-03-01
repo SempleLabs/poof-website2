@@ -61,6 +61,27 @@ const showcases = [
     imageAlt: 'Invoices automatically matched to payments',
     icon: null,
   },
+  {
+    title: 'Budgets & Forecasts, Powered by AI',
+    description:
+      'Tell Poof your goal in plain English — like "20% revenue growth" — and AI builds the budget for you. Then track variance, get spending alerts, and see 12-month cash flow projections.',
+    bullets: [
+      'AI-generated budgets from natural language goals',
+      'Budget vs actual variance dashboard with alerts',
+      '12-month cash flow forecasting with confidence bands',
+      'Budget lifecycle: Draft → Active → Locked → Archived',
+    ],
+    iconBg: 'bg-teal-500/10',
+    iconBorder: 'border-teal-500/20',
+    iconColor: 'text-teal-500',
+    glowColor: 'rgba(20, 184, 166, 0.08)',
+    iconLeft: false,
+    icon: (
+      <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5M5 5H19V19H5V5M7 7V9H17V7H7M7 11V13H14V11H7M7 15V17H17V15H7Z"/>
+      </svg>
+    ),
+  },
 ]
 
 const Check = () => (

@@ -17,14 +17,14 @@ export default function WhatIsPoof() {
           <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
             Poof is an AI-powered bookkeeping platform built for small businesses.
             It automates transaction categorization, invoicing, expense tracking, bank reconciliation,
-            and financial reporting — so you spend less time on books and more time growing your business.
+            budgeting, cash flow forecasting, and financial reporting — so you spend less time on books and more time growing your business.
           </p>
         </AnimateOnScroll>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: 30, label: 'Built-in Features', prefix: '', suffix: '+' },
+            { value: 40, label: 'Built-in Features', prefix: '', suffix: '+' },
             { value: 12000, label: 'Bank Connections', prefix: '', suffix: '+' },
-            { value: 12, label: 'Financial Reports', prefix: '', suffix: '' },
+            { value: 13, label: 'Financial Reports', prefix: '', suffix: '' },
             { value: 95, label: 'Accuracy Rate', prefix: '', suffix: '%' },
           ].map((stat, i) => (
             <AnimateOnScroll key={i} animation="scale-up" delay={200 + i * 100}>
