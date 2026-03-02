@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     url: 'https://poof.ai',
     logo: 'https://poof.ai/poof-logo.png',
-    description: 'AI-powered bookkeeping platform for small businesses with budgeting, forecasting, invoicing, and 13 financial reports',
+    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 40+ features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +26,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'AI-powered bookkeeping platform that automates transaction categorization, invoicing, expense tracking, bank reconciliation, budgeting, cash flow forecasting, and financial reporting for small businesses.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 40+ features including budgeting, forecasting, invoicing, and 13 financial reports.',
     url: 'https://poof.ai',
     offers: {
       '@type': 'Offer',

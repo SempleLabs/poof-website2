@@ -342,5 +342,29 @@ export const faqData = [
   {
     question: "Can Poof forecast my cash flow?",
     answer: "Yes. Poof generates AI-powered 12-month cash flow projections with confidence bands, seasonal adjustments, and rolling forecast refresh. See where your cash is headed and make informed decisions about spending, hiring, and growth."
+  },
+  {
+    question: "Can AI do my bookkeeping for me?",
+    answer: "Yes. AI bookkeeping tools like Poof can handle most of your day-to-day bookkeeping automatically — categorizing transactions, reconciling bank accounts, scanning receipts, matching payments to invoices, generating financial reports, and even creating budgets from plain-English goals. You still review and approve the work, but AI eliminates 90% of the manual data entry. For tax filing and complex accounting decisions, you can invite your accountant to collaborate inside Poof."
+  },
+  {
+    question: "What's the best bookkeeping app for freelancers?",
+    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions overnight, sends recurring invoices on autopilot, scans receipts from your phone, and generates 13 financial reports including P&L and cash flow statements. It's $29/mo with everything included (no tiers), compared to QuickBooks which starts at $38/mo and locks features behind higher plans."
+  },
+  {
+    question: "Do I need QuickBooks for my small business?",
+    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks starts at $38/mo with tiered pricing that locks features behind $65 and $200/mo plans. Alternatives like Poof offer AI-powered automation (transaction categorization, receipt scanning, recurring charge detection, budgeting) at $29/mo with every feature included in one plan. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler."
+  },
+  {
+    question: "How do I automate my bookkeeping?",
+    answer: "To automate your bookkeeping: (1) Connect your bank accounts so transactions sync automatically, (2) Use AI-powered software like Poof to categorize transactions, detect recurring charges, and match payments to invoices, (3) Set up recurring invoices so billing happens on autopilot, (4) Upload receipts for automatic OCR scanning instead of manual data entry, and (5) Use AI-generated budgets and cash flow forecasts to stay on top of your finances. With Poof, most businesses go from hours of manual bookkeeping to minutes of reviewing AI-categorized transactions."
+  },
+  {
+    question: "Can I do my own bookkeeping without an accountant?",
+    answer: "Yes. Many small business owners handle their own bookkeeping using AI-powered tools like Poof. The AI categorizes transactions, reconciles your bank accounts, generates financial reports, and even creates budgets — tasks that traditionally required a bookkeeper. You don't need accounting knowledge because Poof uses plain language, not accounting jargon. For year-end taxes or complex accounting questions, you can invite your accountant into Poof with role-based access so they can review your books and make adjustments."
+  },
+  {
+    question: "What's the cheapest QuickBooks alternative?",
+    answer: "Poof is $29/mo for all 40+ features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant (Preston). Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required."
   }
 ]

@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import WhoPoofIsFor from '@/components/WhoPoofIsFor'
 import WhatIsPoof from '@/components/WhatIsPoof'
 import MagicWorkflowSection from '@/components/MagicWorkflowSection'
 import FeatureHighlights from '@/components/FeatureHighlights'
@@ -19,6 +20,7 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <WhoPoofIsFor />
       <WhatIsPoof />
       <MagicWorkflowSection />
       <FeatureHighlights />

@@ -25,17 +25,16 @@ export default function Hero() {
               letterSpacing: '-0.03em',
             }}
           >
-            <span className="text-gradient-gold">Magical</span> Bookkeeping
+            Bookkeeping That
             <br />
-            for Small Business
+            <span className="text-gradient-gold">Does Itself</span>
           </h1>
 
           {/* Subheading */}
           <p
             className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Stop wrestling with QuickBooks. Poof automates your bookkeeping, budgeting, and cash flow forecasting with AI,
-            giving you back hours every week to focus on growing your business.
+            AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again.
           </p>
 
           <p className="font-display text-2xl sm:text-3xl text-gold-400 font-bold italic mb-8 tracking-tight">
@@ -44,7 +43,7 @@ export default function Hero() {
 
           {/* Benefit badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {['Built-in AI bookkeeper', '90% fewer manual entries', '30-day free trial'].map((text) => (
+            {['5-minute setup', '90% fewer manual entries', '30-day free trial'].map((text) => (
               <div key={text} className="flex items-center bg-slate-100 border border-slate-200 rounded-full px-4 py-2 text-sm text-slate-700">
                 <span className="w-2 h-2 rounded-full bg-teal-400 mr-2" />
                 {text}

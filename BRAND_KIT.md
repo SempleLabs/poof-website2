@@ -1,6 +1,6 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: February 28, 2026
+> **Living document** — Last updated: March 2, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 ---
@@ -26,11 +26,50 @@
 
 ## What is Poof?
 
-Poof is an AI-powered bookkeeping app for small businesses. It automates the tedious parts of bookkeeping — transaction categorization, reconciliation, invoicing, receipt scanning, budgeting, and cash flow forecasting — so business owners can spend less time on the books and more time running their business.
+Poof is an AI-powered bookkeeping app for small businesses. It automates the tedious parts of bookkeeping — transaction categorization, reconciliation, invoicing, receipt scanning, budgeting, and cash flow forecasting — so business owners can spend minutes on their books instead of hours.
 
-**One-liner:** "Magical bookkeeping for small business."
+**One-liner:** "Bookkeeping that does itself."
 
 **Website:** poofai.com
+
+---
+
+## Positioning
+
+### Who Poof Is For
+- Solo founders and freelancers tired of spreadsheet bookkeeping
+- Small business owners who dread reconciling their books each month
+- Service businesses that want invoicing + bookkeeping in one place
+- Anyone who's been told "just use QuickBooks" and found it overwhelming
+
+### Positioning Statement
+> **For** small business owners who've been doing their own bookkeeping in spreadsheets or struggling with QuickBooks,
+> **Poof is** an AI-powered bookkeeping app
+> **that** handles categorization, reconciliation, and reporting automatically — so you spend minutes on your books instead of hours.
+> **Unlike** QuickBooks, which charges more for features behind paywalls and requires accounting knowledge,
+> **Poof** includes everything in one plan and uses AI to do the work you'd normally hire a bookkeeper for.
+
+### Primary Competitive Alternative
+**QuickBooks** is the default choice for most small businesses. Poof positions directly against QuickBooks on three axes:
+1. **Simplicity** — One flat price, no feature tiers, no accounting jargon
+2. **AI-first automation** — Poof does the work; QuickBooks gives you tools to do the work yourself
+3. **Price** — $29/mo for everything vs. $38+/mo for tiered, gated features
+
+### Messaging Principle: Outcomes Over Features
+Always lead with what changes in the customer's life, not what the product does. The feature name can appear as a label, but the **headline should be the outcome.**
+
+| Feature | Outcome-Oriented Headline |
+|---|---|
+| AI transaction categorization | "Wake up to categorized books — every morning" |
+| Preston AI assistant | "Ask a question, get an answer — not a help article" |
+| Receipt & invoice scanning | "Snap a photo. Never type an expense again." |
+| Smart transaction matching | "Invoices match to payments while you sleep" |
+| Budgeting & forecasting | "Describe your goal. Get a budget in seconds." |
+| 13 financial reports | "Know exactly where your money went — in 30 seconds" |
+| Reconciliation | "Reconciliation that takes minutes, not hours" |
+| Recurring invoices | "Send invoices on autopilot — follow-ups included" |
+| Bank connection | "Connect your bank. AI handles the rest." |
+| Flat pricing | "Everything you need. Nothing you don't. One price." |
 
 ---
 
@@ -186,15 +225,23 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ## Key Messaging & Taglines
 
 ### Primary
-- **"Magical Bookkeeping for Small Business"** — Main hero headline
+- **"Bookkeeping That Does Itself"** — Main hero headline
 - **"Poof. It's done."** — Primary tagline
+- **"AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again."** — Hero subhead
+
+### Supporting Headlines (use on feature sections, ads, social)
+- "Stop doing your own bookkeeping"
+- "Your books, done — every morning"
+- "All the power of QuickBooks. None of the complexity."
+- "Everything you need. Nothing you don't. One price."
+- "Describe your goal. Get a budget in seconds."
+- "Snap a photo. Never type an expense again."
 
 ### Supporting Messages
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "AI-powered bookkeeping that learns your business"
-- "Tell AI your goal, get a budget in seconds"
+- "40+ features, one flat price — $29/mo"
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -202,6 +249,12 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - Confident, not arrogant
 - Simple, not dumbed-down
 - Magical, not gimmicky
+
+### Messaging Don'ts
+- Don't lead with "magical" in headlines — let the product *feel* magical through the experience. Use outcome-oriented headlines instead.
+- Don't list features without tying them to a customer outcome
+- Don't mention tiers, plans, or "Basic/Pro" — Poof has one plan with everything included
+- Don't use accounting jargon without explaining it
 
 ---
 
@@ -240,7 +293,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. Transaction matching
 
 #### 4. Banking & Reconciliation (6 features)
-1. Bank connection via Plaid (12,000+ banks, 2-year transaction history on first sync)
+1. Bank connection via Plaid (12,000+ banks, syncs last 30 days)
 2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing, intelligent column mapping, duplicate prevention)
 3. Reconciliation (multi-step wizard, reconciliation reports, history)
 4. Auto-reconciliation (opt-in, weekly or monthly, with notifications)
@@ -298,7 +351,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
 | Manual entry reduction | 90% |
-| Plaid sync window | 2-year transaction history on first connect (use bank statement import for older transactions) |
+| Plaid sync window | Last 30 days (use bank statement import for older transactions) |
 | Team roles | 5 (Owner, Admin, Accountant, Bookkeeper, Viewer) |
 | Granular permissions | 26 |
 | Free trial | 30 days |
@@ -308,27 +361,37 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 ## Pricing
 
-**One plan. All features. Simple.**
+**One plan. Every feature. No surprises.**
+
+Poof has a single plan called **Poof Professional**. There are no tiers, no "Basic" or "Pro" distinctions, and no features locked behind upgrades. Every customer gets every feature.
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | $29/mo | |
+| Monthly | $29/mo | All 40+ features included |
 | Monthly (launch special) | **$14.50/mo** | 50% off first 3 months |
 | Annual | $290/year ($24.17/mo) | Save $58 |
 
-- No feature tiers — every plan gets everything
+- **No feature tiers** — never reference "Basic," "Pro," or "Enterprise" plans in any customer-facing content
 - 30-day free trial, no credit card required
 - Launch special: 50% off first 3 months
+- Cancel anytime, 30-day money-back guarantee
+
+### Pricing Messaging
+- Lead with: "$29/mo for everything QuickBooks charges $38+ for"
+- Emphasize: "One plan. Every feature. No surprises."
+- On comparison pages: highlight that QuickBooks locks features behind $38, $65, and $200/mo tiers
 
 ---
 
 ## Competitive Positioning
 
+QuickBooks is the primary competitive alternative. Thread this contrast throughout all marketing — not just on a comparison page. Every feature claim is stronger when framed as "unlike QuickBooks, which..."
+
 ### Poof vs QuickBooks
 
 | | Poof | QuickBooks |
 |---|---|---|
-| **Starting price** | $14.50/mo (all features) | $38/mo+ (tiered, features locked behind higher plans) |
+| **Starting price** | $29/mo — all features ($14.50/mo launch special) | $38/mo+ (tiered, features locked behind higher plans) |
 | **AI assistant** | Preston (built-in, context-aware) | No |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | No |
 | **Auto chart of accounts** | Yes | No |
@@ -368,7 +431,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 ### Company Timeline
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
-- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, receipt scanning, recurring charge detection, bank statement import, 13 reports, 40+ features
+- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, receipt scanning, recurring charge detection, bank statement import (for older transactions beyond Plaid's 30-day window), 13 reports, 40+ features
 
 ---
 
@@ -406,6 +469,19 @@ All files located in `frontend/public/`:
 
 ## Changelog
 
+### March 2, 2026 — Positioning overhaul (Obviously Awesome framework)
+- **New hero headline:** "Bookkeeping That Does Itself" (replaces "Magical Bookkeeping for Small Business")
+- **New hero subhead:** "AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again."
+- Added **Positioning** section with positioning statement, target customer profiles, competitive framing, and outcome-oriented headline table
+- Added **Supporting Headlines** for feature sections, ads, and social
+- Added **Messaging Don'ts** to prevent common positioning mistakes
+- Updated **Pricing** section to explicitly prohibit tier language (Basic/Pro/Enterprise) in customer-facing content
+- Added **Pricing Messaging** guidance for comparison framing against QuickBooks
+- Updated **Competitive Positioning** intro to emphasize threading contrast through all marketing
+- Updated **meta description** and **OG tags** in index.html
+- Rewrote **SubscriptionPaywall** component to single plan (was incorrectly showing Basic $29 / Pro $59 tiers)
+- Updated **one-liner** from "Magical bookkeeping for small business" to "Bookkeeping that does itself"
+
 ### February 28, 2026 — Major feature update
 - Added **Budgeting & Forecasting** as new feature group (5 features): AI-generated budgets, budget lifecycle, variance dashboard, cash flow forecasting, budget alerts
 - Added **Recurring Invoices** and **Automated Invoice Follow-ups** to Invoicing group
@@ -413,7 +489,7 @@ All files located in `frontend/public/`:
 - Added **Budget vs Actual** report (13 total reports now)
 - Added **Preston AI Capabilities** as dedicated feature group: business-context awareness, books health check, sparkle animation
 - Updated **Dashboard** to reflect drag-and-drop tile layout, budget status card, and forecast summary card
-- Updated **Plaid sync** from 30 days to 2-year transaction history on first connect
+- Confirmed **Plaid sync** remains at 30 days (use bank statement import for older data)
 - Updated **Competitive Positioning** with 13 differentiators (was 8)
 - Updated feature count from 30+ to 40+
 - Added **Command bar** (Cmd+K) to Productivity group

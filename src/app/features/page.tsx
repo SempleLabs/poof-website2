@@ -7,8 +7,8 @@ import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
-  title: 'Features — 40+ AI Bookkeeping Tools for Small Business | Poof',
-  description: 'Explore all 40+ Poof features: AI transaction categorization, budgeting, cash flow forecasting, recurring invoices, receipt scanning, auto-reconciliation, 13 financial reports, and more.',
+  title: 'Features — Everything You Need, Nothing You Don\'t | Poof AI Bookkeeping',
+  description: '40+ features, one flat price — $29/mo. AI categorization, budgeting, cash flow forecasting, recurring invoices, receipt scanning, auto-reconciliation, 13 reports, and more. Everything QuickBooks charges $38+ for.',
   keywords: 'AI bookkeeping features, automated categorization, AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, expense tracking, bank reconciliation, financial reports, receipt scanning',
   alternates: {
     canonical: 'https://poof.ai/features',
@@ -69,8 +69,8 @@ export default function FeaturesPage() {
       <Header />
 
       <PageHero
-        title={<>40+ Features for <span className="text-gradient-gold">Effortless Bookkeeping</span></>}
-        subtitle="Everything you need to automate your bookkeeping — organized into nine capability groups including AI-powered budgeting and cash flow forecasting. All features included in every plan, starting at $14.50/month."
+        title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
+        subtitle="40+ features, one flat price — $29/mo for everything QuickBooks charges $38+ for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"

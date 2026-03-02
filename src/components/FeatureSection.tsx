@@ -62,12 +62,12 @@ export default function FeatureSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
-            Everything You Need to
-            <span className="text-gradient-gold"> Automate Your Books</span>
+            Stop Doing Your Own
+            <span className="text-gradient-gold"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            40+ built-in features across 9 categories — from AI-powered categorization to budgeting and cash flow forecasting.
-            No add-ons, no hidden fees.
+            40+ features across 9 categories — all included in one plan.
+            $29/mo for everything QuickBooks charges $38+ for.
           </p>
         </AnimateOnScroll>
 

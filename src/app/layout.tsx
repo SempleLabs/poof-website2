@@ -26,24 +26,24 @@ const cabinet = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Poof — AI Bookkeeping Software for Small Business | Invoicing, Budgeting & Reports',
-  description: 'Poof automates bookkeeping with AI — transaction categorization, invoicing, budgeting, cash flow forecasting, expense tracking, bank reconciliation, and 13 financial reports. 30-day free trial.',
-  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI budgeting, cash flow forecasting, invoicing software, expense tracking, bank reconciliation, recurring invoices',
+  title: 'Poof — Bookkeeping That Does Itself | AI Bookkeeping for Small Business',
+  description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 40+ features, 13 reports, $29/mo. 30-day free trial.',
+  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI budgeting, cash flow forecasting, invoicing software, expense tracking, bank reconciliation, recurring invoices, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   alternates: {
     canonical: 'https://poof.ai',
   },
   openGraph: {
-    title: 'Poof — AI Bookkeeping Software for Small Business',
-    description: 'Poof automates bookkeeping with AI — transaction categorization, invoicing, budgeting, cash flow forecasting, expense tracking, bank reconciliation, and 13 financial reports. 30-day free trial.',
+    title: 'Poof — Bookkeeping That Does Itself',
+    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 40+ features, 13 reports, $29/mo. 30-day free trial.',
     url: 'https://poof.ai',
     siteName: 'Poof',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Poof — AI Bookkeeping Software for Small Business',
-    description: 'Poof automates bookkeeping with AI — transaction categorization, invoicing, budgeting, cash flow forecasting, expense tracking, bank reconciliation, and 13 financial reports. 30-day free trial.',
+    title: 'Poof — Bookkeeping That Does Itself',
+    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 40+ features, 13 reports, $29/mo. 30-day free trial.',
   },
 }
 

@@ -8,7 +8,7 @@ import GlowCard from './GlowCard'
 
 const showcases = [
   {
-    title: 'Meet Preston, Your AI Bookkeeper',
+    title: 'Ask a Question, Get an Answer — Not a Help Article',
     description:
       'Preston isn\'t just a chatbot — he\'s your AI bookkeeper. Create invoices, record payments, update customer records, generate P&L reports, and manage your books entirely through conversation.',
     bullets: [
@@ -26,7 +26,7 @@ const showcases = [
     icon: null,
   },
   {
-    title: 'Snap a Photo, Skip the Data Entry',
+    title: 'Snap a Photo. Never Type an Expense Again.',
     description:
       'Upload receipts and invoices for automatic data extraction. AI identifies vendors, suggests categories, detects duplicates, and works with HEIC/HEIF images.',
     bullets: [
@@ -44,7 +44,7 @@ const showcases = [
     icon: null,
   },
   {
-    title: 'Invoices Meet Payments, Automatically',
+    title: 'Invoices Match to Payments While You Sleep',
     description:
       'AI matches bank deposits to outstanding invoices and payments to bills — including partial payments — with confidence scoring.',
     bullets: [
@@ -62,7 +62,7 @@ const showcases = [
     icon: null,
   },
   {
-    title: 'Budgets & Forecasts, Powered by AI',
+    title: 'Describe Your Goal. Get a Budget in Seconds.',
     description:
       'Tell Poof your goal in plain English — like "20% revenue growth" — and AI builds the budget for you. Then track variance, get spending alerts, and see 12-month cash flow projections.',
     bullets: [
@@ -126,11 +126,12 @@ export default function FeatureHighlights() {
             className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6"
             style={{ letterSpacing: '-0.02em' }}
           >
-            Powerful Features,
-            <span className="text-gradient-gold"> Zero Complexity</span>
+            Your Books, Done —
+            <span className="text-gradient-gold"> Every Morning</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Built-in AI that handles the details so you don&apos;t have to.
+            All the power of QuickBooks. None of the complexity.
+            $29/mo for everything QuickBooks charges $38+ for.
           </p>
         </AnimateOnScroll>
 

@@ -54,10 +54,11 @@ export default function ComparisonSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
-            <span className="text-gradient-gold">Poof vs.</span> Other Bookkeeping Software
+            Everything You Need.
+            <span className="text-gradient-gold"> Nothing You Don&apos;t.</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            See how Poof compares to QuickBooks, Xero, and FreshBooks on the features that matter most to small businesses.
+            $29/mo for everything QuickBooks charges $38+ for — with AI that does the work, not just gives you tools.
           </p>
         </AnimateOnScroll>
 
