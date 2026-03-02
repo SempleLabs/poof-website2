@@ -219,10 +219,10 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-display font-bold text-slate-800 mb-6">
-              Why Small Businesses Choose Poof
+              Why Small Businesses Switch to Poof
             </h2>
             <p className="text-xl text-slate-600 mb-12">
-              Designed specifically for small businesses who want professional bookkeeping without the complexity.
+              $29/mo for everything QuickBooks charges $38+ for — with AI that actually does the work.
             </p>
           </AnimateOnScroll>
 
@@ -234,8 +234,8 @@ export default function PricingPage() {
                     <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
                   </svg>
                 ),
-                title: 'AI-Powered Categorization',
-                description: 'Our AI suggests categories for your transactions, making bookkeeping faster and more accurate. Review and approve with one click.'
+                title: 'Wake Up to Clean Books',
+                description: 'Poof categorizes your transactions, reconciles your accounts, and closes your books overnight. No manual data entry. No weekend catch-up sessions.'
               },
               {
                 icon: (
@@ -243,8 +243,8 @@ export default function PricingPage() {
                     <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
                   </svg>
                 ),
-                title: '5-Minute Setup',
-                description: 'Most accounting software takes weeks to configure. Connect your accounts and start getting organized books in minutes, not months. No chart of accounts to build or complex setup required.'
+                title: 'Set Up in 5 Minutes',
+                description: 'Connect your bank, and Poof starts organizing your books immediately. No chart of accounts to build, no accountant required to get started.'
               },
               {
                 icon: (
@@ -252,8 +252,8 @@ export default function PricingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
-                title: 'Secure by Design',
-                description: 'All data encrypted in transit. Bank connections are read-only through Plaid — we never see or store your credentials. Two-factor authentication and role-based permissions keep your books locked down.'
+                title: 'Bank-Grade Security',
+                description: 'Read-only bank connections through Plaid. Two-factor authentication. Role-based permissions. Your financial data stays encrypted and locked down.'
               }
             ].map((card, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
