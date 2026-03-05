@@ -13,11 +13,12 @@ export default function PricingPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
   const features = [
     'AI transaction categorization',
-    'Built-in AI assistant (Preston)',
+    'Built-in AI assistant (Poof)',
     'Receipt & invoice scanning (OCR)',
     'AI recurring charge detection',
     'Smart transaction matching',
     'Invoicing & credit notes',
+    'Estimates & quotes',
     'Expense & mileage tracking',
     'Bill & vendor management',
     'Bank connection via Plaid (12,000+ banks)',
@@ -29,7 +30,8 @@ export default function PricingPage() {
     'Accrual & cash basis toggle',
     'Team roles (5 roles, 26 permissions)',
     'Two-factor authentication',
-    'Dashboard with KPIs',
+    'AI budgeting & cash flow forecasting',
+    'Personalized dashboard with KPIs',
     'Unlimited transactions'
   ]
 
@@ -52,7 +54,7 @@ export default function PricingPage() {
     },
     {
       question: 'How does Poof compare to QuickBooks?',
-      answer: 'Poof is $29/mo for everything QuickBooks charges $38+ for. Unlike QuickBooks, Poof includes Preston — an AI assistant that records payments, creates invoices, and generates reports through conversation. Poof also includes AI budgeting, cash flow forecasting, auto-reconciliation, recurring charge detection, and a drag-and-drop dashboard — all in one plan with no tiers.'
+      answer: 'Poof is $29/mo for everything QuickBooks charges $38+ for. Unlike QuickBooks, Poof includes a built-in AI assistant that records payments, creates invoices, and generates reports through conversation. Poof also includes AI budgeting, cash flow forecasting, auto-reconciliation, recurring charge detection, estimates, and a personalized dashboard — all in one plan with no tiers.'
     },
     {
       question: 'What reports can I generate?',
@@ -64,7 +66,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 40+ features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 60 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',

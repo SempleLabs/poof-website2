@@ -63,6 +63,8 @@
 
 **Hero** — [CHANGED] "**Everything You Need. Nothing You Don't.**" (was "30+ Features for Effortless Bookkeeping") / 40+ features, one flat price — $29/mo
 
+**[CHANGED] Layout:** Tabbed category UI with sticky tab bar below header. One category visible at a time (not a long scrolling list). Tab bar is horizontally scrollable on mobile. Prev/Next navigation below feature cards.
+
 **[CHANGED] Note:** Each feature group header should use outcome-oriented copy. See BRAND_KIT.md > Positioning > Messaging Principle for the full headline table.
 
 ### 40+ Features in 9 groups:
@@ -159,9 +161,9 @@
 - [CHANGED] Updated included features list to reflect 40+ features
 - [CHANGED] Add contrast line: "$29/mo for everything QuickBooks charges $38+ for"
 
-**Value props** — AI categorization, 5-minute setup, secure by design
+**[CHANGED] Value props** — "Why Small Businesses Switch to Poof" with QuickBooks contrast subtitle. Three outcome-oriented cards: Wake Up to Clean Books, Set Up in 5 Minutes, Bank-Grade Security
 
-**7 FAQs** — Trial, security, accountant access, cancellation, vs QuickBooks, reports, integrations
+**[CHANGED] 9 FAQs** — Trial, security, accountant access, cancellation, vs QuickBooks, reports, integrations, bookkeeping software cost, do I need a bookkeeper
 
 **CTA**
 

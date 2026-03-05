@@ -19,8 +19,8 @@ export const featureGroups: FeatureGroup[] = [
         description: "Automatically categorizes bank transactions using the BRAID engine that learns your business patterns over time"
       },
       {
-        title: "Preston AI Assistant",
-        description: "Built-in AI bookkeeper that lives in the sidebar, is always one click away, and is context-aware — he knows your company name, industry, business type, location, and timezone"
+        title: "Poof AI Assistant",
+        description: "Built-in AI assistant that lives in the sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -44,7 +44,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "AI-Guided Onboarding",
-        description: "Preston walks new users through setup, analyzes uploaded documents, generates your chart of accounts, and calculates opening balances"
+        description: "Poof walks new users through setup, analyzes uploaded documents, generates your chart of accounts, and calculates opening balances"
       },
       {
         title: "AI Budget & Forecast Generation",
@@ -59,6 +59,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Professional Invoicing",
         description: "Create, customize, and send invoices with PDF export, email delivery, custom branding/logo, and line-item tax and discounts"
+      },
+      {
+        title: "Estimates & Quotes",
+        description: "Create professional estimates and quotes, send them to clients for approval, and convert approved estimates to invoices with one click. Track status through Draft, Sent, Approved, Declined, and Converted stages — with PDF export, email delivery, and custom branding"
       },
       {
         title: "Credit Notes",
@@ -237,8 +241,8 @@ export const featureGroups: FeatureGroup[] = [
     icon: "productivity",
     features: [
       {
-        title: "Drag-and-Drop Dashboard",
-        description: "Customizable dashboard with reorderable KPI tiles — cash flow charts, P&L tracking, top expense categories, budget status, and forecast summary"
+        title: "Personalized Dashboard",
+        description: "Morning brief with time-aware greeting and 4 animated KPIs, proactive 'Needs Your Attention' alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter"
       },
       {
         title: "Global Search",
@@ -259,32 +263,44 @@ export const featureGroups: FeatureGroup[] = [
     ]
   },
   {
-    name: "Preston AI Capabilities",
-    icon: "preston",
+    name: "Poof AI Capabilities",
+    icon: "poof",
     features: [
       {
         title: "Business-Context-Aware Chat",
-        description: "Preston knows your company name, industry, business type, location, and timezone — every response is tailored to your specific business"
+        description: "Poof knows your company name, industry, business type, location, and timezone — every response is tailored to your specific business"
       },
       {
         title: "Books Health Check & Month-End Close",
-        description: "Ask Preston to audit your books for missing categorizations, unreconciled transactions, and open items — then get step-by-step guidance through month-end close"
+        description: "Ask Poof to audit your books for missing categorizations, unreconciled transactions, and open items — then get step-by-step guidance through month-end close"
       },
       {
         title: "Invoice & Payment Management",
-        description: "Create invoices, edit records, and record payments through conversation — tell Preston 'we received two checks covering invoices 1001 and 1003' and he handles the rest, including journal entries"
+        description: "Create invoices, edit records, and record payments through conversation — tell Poof 'we received two checks covering invoices 1001 and 1003' and it handles the rest, including journal entries"
       },
       {
         title: "Budgeting & Forecasting Guidance",
-        description: "Ask Preston about your budget variance, spending trends, or cash flow outlook — get instant answers with data-backed insights"
+        description: "Ask Poof about your budget variance, spending trends, or cash flow outlook — get instant answers with data-backed insights"
       },
       {
         title: "Recurring Charge Analysis",
-        description: "Ask Preston about your recurring charges, subscription costs, and payment patterns — he surfaces insights from your transaction history"
+        description: "Ask Poof about your recurring charges, subscription costs, and payment patterns — it surfaces insights from your transaction history"
       },
       {
         title: "Chart of Accounts Setup",
-        description: "Upload your existing chart of accounts, set it up manually, let AI auto-generate one, or have Preston guide you through it step by step"
+        description: "Upload your existing chart of accounts, set it up manually, let AI auto-generate one, or have Poof guide you through it step by step"
+      },
+      {
+        title: "Account Search & Creation",
+        description: "Poof can look up and create chart of accounts entries autonomously — no need to provide account numbers"
+      },
+      {
+        title: "Journal Entry Creation with Account Validation",
+        description: "Poof verifies that accounts exist in your chart of accounts before posting journal entries — preventing errors and ensuring accuracy"
+      },
+      {
+        title: "Recurring Journal Entry Setup",
+        description: "Tell Poof about depreciation, amortization, rent, or insurance and it calculates periodic amounts, creates the necessary accounts, and sets up recurring journal entry templates automatically"
       }
     ]
   }
@@ -301,7 +317,7 @@ export const faqData = [
   },
   {
     question: "Can I send invoices with Poof?",
-    answer: "Yes. Poof includes full invoicing with PDF generation, email delivery, custom branding, payment tracking, credit notes, and a products/services catalog. You can also set up recurring invoices on weekly, monthly, quarterly, or yearly schedules with automated follow-up reminders for overdue payments."
+    answer: "Yes. Poof includes full invoicing with PDF generation, email delivery, custom branding, payment tracking, credit notes, and a products/services catalog. You can start with an estimate or quote, convert it to an invoice when your client approves, and set up recurring invoices on weekly, monthly, quarterly, or yearly schedules with automated follow-up reminders for overdue payments."
   },
   {
     question: "Does Poof connect to my bank?",
@@ -321,7 +337,7 @@ export const faqData = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes Preston — an AI bookkeeper that records payments, updates records, and generates reports through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, and a drag-and-drop customizable dashboard. Poof starts at $14.50/month (all features included) vs QuickBooks Simple Start at $38/month with tiered pricing."
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant that records payments, updates records, and generates reports through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, and a personalized dashboard. Poof starts at $14.50/month (all features included) vs QuickBooks Simple Start at $38/month with tiered pricing."
   },
   {
     question: "Can my accountant access Poof?",
@@ -338,6 +354,10 @@ export const faqData = [
   {
     question: "Does Poof support recurring invoices?",
     answer: "Yes. Set up recurring invoices on weekly, monthly, quarterly, or yearly schedules. Poof auto-generates and auto-sends invoices on schedule, and includes automated follow-up reminders at due date, 3, 7, 14, and 30 days past due — with smart pause when payment is received."
+  },
+  {
+    question: "Can I create estimates and quotes in Poof?",
+    answer: "Yes. Create professional estimates, send them to clients, and track status — Draft, Sent, Approved, Declined, or Converted. When approved, convert to an invoice with one click. The full workflow — Estimate → Approval → Invoice → Payment — is built in."
   },
   {
     question: "Can Poof forecast my cash flow?",
@@ -365,6 +385,6 @@ export const faqData = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "Poof is $29/mo for all 40+ features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant (Preston). Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required."
+    answer: "Poof is $29/mo for all 60 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required."
   }
 ]

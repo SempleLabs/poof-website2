@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     url: 'https://poof.ai',
     logo: 'https://poof.ai/poof-logo.png',
-    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 40+ features, 13 reports, $29/mo.',
+    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 60 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +26,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 40+ features including budgeting, forecasting, invoicing, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 60 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://poof.ai',
     offers: {
       '@type': 'Offer',
@@ -38,7 +38,7 @@ export function getSoftwareApplicationSchema() {
     },
     featureList: [
       'AI Transaction Categorization',
-      'Preston AI Bookkeeper',
+      'Poof AI Assistant',
       'AI Chart of Accounts Generation',
       'Automated Daily Bookkeeping',
       'AI Recurring Charge Detection',
@@ -47,6 +47,7 @@ export function getSoftwareApplicationSchema() {
       'AI-Guided Onboarding',
       'AI Budget & Forecast Generation',
       'Professional Invoicing & Credit Notes',
+      'Estimates & Quotes',
       'Recurring Invoices with Auto-Send',
       'Automated Invoice Follow-ups',
       'Payment Tracking & Payment Receipts',
@@ -76,13 +77,16 @@ export function getSoftwareApplicationSchema() {
       'Two-Factor Authentication',
       'SOC 2 Audit Logs',
       'Session Management',
-      'Drag-and-Drop Dashboard with KPIs',
+      'Personalized Dashboard with Morning Brief',
       'Global Search',
       'Notification Center',
       'Transaction Approval Workflows',
       'Command Bar (Cmd+K)',
       'Business-Context-Aware AI Chat',
-      'Books Health Check & Month-End Close Guidance'
+      'Books Health Check & Month-End Close Guidance',
+      'Account Search & Creation',
+      'Journal Entry Creation with Account Validation',
+      'AI Recurring Journal Entry Setup'
     ]
   }
 }

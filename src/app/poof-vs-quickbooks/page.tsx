@@ -18,12 +18,13 @@ export const metadata: Metadata = {
 const comparisonData = [
   { category: 'AI & Automation', features: [
     { name: 'AI Transaction Categorization', poof: true, quickbooks: true },
-    { name: 'Built-in AI Assistant (Preston)', poof: true, quickbooks: false },
+    { name: 'Built-in AI Assistant (Poof)', poof: true, quickbooks: false },
     { name: 'Auto Chart of Accounts Generation', poof: true, quickbooks: false },
     { name: 'AI Recurring Charge Detection', poof: true, quickbooks: false },
     { name: 'Receipt Scanning & OCR (with duplicate detection)', poof: true, quickbooks: false },
     { name: 'Smart Transaction Matching', poof: true, quickbooks: false },
     { name: 'AI Budget & Forecast Generation', poof: true, quickbooks: false },
+    { name: 'AI Depreciation & Recurring Entry Setup', poof: true, quickbooks: false },
   ]},
   { category: 'Budgeting & Forecasting', features: [
     { name: 'AI-Powered Budget Creation', poof: true, quickbooks: false },
@@ -33,6 +34,7 @@ const comparisonData = [
   ]},
   { category: 'Core Bookkeeping', features: [
     { name: 'Invoicing & Credit Notes', poof: true, quickbooks: true },
+    { name: 'Estimates with One-Click Invoice Conversion', poof: true, quickbooks: false },
     { name: 'Recurring Invoices with Auto-Send', poof: true, quickbooks: false },
     { name: 'Automated Invoice Follow-ups', poof: true, quickbooks: false },
     { name: 'Expense Tracking & Receipt Uploads', poof: true, quickbooks: true },
@@ -55,7 +57,7 @@ const comparisonData = [
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
   ]},
   { category: 'Productivity & UX', features: [
-    { name: 'Drag-and-Drop Dashboard', poof: true, quickbooks: false },
+    { name: 'Personalized Dashboard with Morning Brief', poof: true, quickbooks: false },
     { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false },
     { name: 'Simple, Flat Pricing (from $14.50/mo)', poof: true, quickbooks: false },
   ]},
@@ -103,7 +105,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $29/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 40+ features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 60 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -186,7 +188,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. All 40+ features included.
+              See the difference AI bookkeeping makes. All 60 features included.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,6 +1,6 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: March 2, 2026
+> **Living document** — Last updated: March 5, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 ---
@@ -61,13 +61,14 @@ Always lead with what changes in the customer's life, not what the product does.
 | Feature | Outcome-Oriented Headline |
 |---|---|
 | AI transaction categorization | "Wake up to categorized books — every morning" |
-| Preston AI assistant | "Ask a question, get an answer — not a help article" |
+| Poof AI assistant | "Ask a question, get an answer — not a help article" |
 | Receipt & invoice scanning | "Snap a photo. Never type an expense again." |
 | Smart transaction matching | "Invoices match to payments while you sleep" |
 | Budgeting & forecasting | "Describe your goal. Get a budget in seconds." |
 | 13 financial reports | "Know exactly where your money went — in 30 seconds" |
 | Reconciliation | "Reconciliation that takes minutes, not hours" |
 | Recurring invoices | "Send invoices on autopilot — follow-ups included" |
+| Estimates | "Send a quote. Convert to an invoice in one click." |
 | Bank connection | "Connect your bank. AI handles the rest." |
 | Flat pricing | "Everything you need. Nothing you don't. One price." |
 
@@ -87,8 +88,8 @@ Always lead with what changes in the customer's life, not what the product does.
 3. **Trust & Security** — Bank-grade security, SOC 2 audit logging, 2FA, RBAC
 4. **Continuous Learning** — The AI gets smarter over time
 
-### AI Assistant — "Preston"
-Poof includes a built-in AI assistant named **Preston**. Preston lives in the sidebar, is always one click away, and is context-aware — he knows your company name, industry, business type, location, and timezone. Preston helps with onboarding, answers bookkeeping questions, and can perform actions like creating invoices, categorizing transactions, running a books health check, and guiding you through month-end close. He features a signature sparkle animation effect. When creating content, Preston can be referenced as "your AI bookkeeper" or "Poof's AI assistant, Preston."
+### AI Assistant — Poof
+Poof's AI assistant is the product itself — there is no separate character. The AI lives in the sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. Poof helps with onboarding, answers bookkeeping questions, and can perform actions like creating invoices, setting up accounts, recording journal entries, configuring recurring depreciation schedules, building budgets, generating forecasts, and guiding you through month-end close. It features a signature sparkle animation effect. When creating content, the AI can be referenced as "your AI bookkeeper" or simply "Poof."
 
 ---
 
@@ -241,7 +242,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "40+ features, one flat price — $29/mo"
+- "60 features, one flat price — $29/mo"
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -261,29 +262,30 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ## Product Overview
 
 ### What Poof Does
-Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, budgeting, forecasting, and reporting.
+Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 40+ Features in 9 Groups
+### 60 Features in 9 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
-2. Preston AI assistant (sidebar-based, context-aware, with sparkle animation)
+2. Poof AI assistant (sidebar-based, context-aware, with sparkle animation)
 3. AI chart of accounts generation
 4. Automated daily bookkeeping
 5. AI-powered recurring charge detection (frequency analysis, confidence scoring, next payment prediction)
 6. Receipt & invoice scanning (OCR) — photo upload, data extraction, vendor ID, duplicate detection, HEIC/HEIF support
 7. Smart transaction matching — AI matches invoices to deposits, bills to payments, with partial payment support
-8. AI-guided onboarding — Preston walks new users through setup
+8. AI-guided onboarding — Poof walks new users through setup
 9. AI-powered budget & forecast generation — natural language goal input, AI builds line items and 12-month projections
 
-#### 2. Invoicing & Payments (7 features)
+#### 2. Invoicing & Payments (8 features)
 1. Invoicing (PDF export, email delivery, custom branding/logo, line-item tax & discounts)
-2. Credit notes
-3. Payment tracking & payment receipts
-4. Products & services catalog
-5. Customer management (full database with contact info, billing/shipping addresses, sales reporting)
-6. Recurring invoices — weekly, monthly, quarterly, or yearly schedules with auto-generation and auto-send
-7. Automated invoice follow-ups — configurable reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment
+2. Estimates — create, send, and convert estimates to invoices in one click (PDF export, email delivery, custom branding)
+3. Credit notes
+4. Payment tracking & payment receipts
+5. Products & services catalog
+6. Customer management (full database with contact info, billing/shipping addresses, sales reporting)
+7. Recurring invoices — weekly, monthly, quarterly, or yearly schedules with auto-generation and auto-send
+8. Automated invoice follow-ups — configurable reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment
 
 #### 3. Expense & Bill Management (5 features)
 1. Expense tracking
@@ -325,19 +327,22 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. Role-based permissions (RBAC) — 26 granular permissions
 
 #### 8. Productivity & Workflow (5 features)
-1. Drag-and-drop dashboard with KPIs (cash flow charts, P&L tracking, top expense categories, budget status, forecast summary — all tiles reorderable)
+1. Personalized dashboard — morning brief with time-aware greeting and 4 animated KPIs, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
 2. Global search (across transactions, invoices, bills, expenses)
 3. Notification center (in-app and email)
 4. Transaction approval workflows
 5. Command bar (Cmd+K) — natural language navigation
 
-#### 9. Preston AI Capabilities (6 features)
+#### 9. Poof AI Capabilities (9 features)
 1. Business-context-aware chat (knows your company, industry, timezone)
 2. Books health check & month-end close guidance
 3. Invoice creation, editing, and payment receipt recording
 4. Budgeting, variance, and forecasting guidance
 5. Recurring charge analysis and questions
 6. Chart of accounts setup (upload, manual, auto-generate, or guided)
+7. Account search & creation — AI can look up and create chart of accounts entries autonomously
+8. Journal entry creation with account validation — AI verifies accounts exist before posting
+9. Recurring journal entry setup — AI handles depreciation, amortization, rent, and insurance schedules (calculates periodic amounts, creates accounts, sets up the recurring template)
 
 ---
 
@@ -345,7 +350,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 40+ (all included in every plan) |
+| Total features | 60 (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
 | AI accuracy rate | 95% |
@@ -367,7 +372,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | $29/mo | All 40+ features included |
+| Monthly | $29/mo | All 60 features included |
 | Monthly (launch special) | **$14.50/mo** | 50% off first 3 months |
 | Annual | $290/year ($24.17/mo) | Save $58 |
 
@@ -392,7 +397,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 | | Poof | QuickBooks |
 |---|---|---|
 | **Starting price** | $29/mo — all features ($14.50/mo launch special) | $38/mo+ (tiered, features locked behind higher plans) |
-| **AI assistant** | Preston (built-in, context-aware) | No |
+| **AI assistant** | Poof (built-in, context-aware) | No |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | No |
 | **Auto chart of accounts** | Yes | No |
 | **Receipt scanning + OCR** | Yes (with duplicate detection) | Yes (but limited in lower tiers) |
@@ -402,11 +407,13 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 | **Cash flow forecasting** | Yes (AI-generated with confidence bands) | Limited (higher tiers only) |
 | **RBAC** | 5 roles, 26 permissions | Limited |
 | **Audit logs** | Yes (SOC 2, PII masking) | Limited |
-| **Drag-and-drop dashboard** | Yes (reorderable tiles) | No |
+| **Estimates** | Yes (create, send, convert to invoice) | Yes (higher tiers only) |
+| **AI depreciation & recurring entries** | Yes (AI sets up accounts and schedules) | No |
+| **Personalized dashboard** | Yes (morning brief, attention alerts, animations, reorderable tiles) | No |
 | **Pricing model** | Flat — one plan | Tiered — must upgrade for features |
 
 ### Key Differentiators (What Poof Has That QuickBooks Doesn't)
-1. AI assistant (Preston) with business-context awareness and books health checks
+1. AI assistant (Poof) with business-context awareness and books health checks
 2. AI-powered budgeting — describe your goal in plain English, AI builds the budget
 3. AI cash flow forecasting with confidence bands and rolling refresh
 4. AI-powered auto chart of accounts generation
@@ -418,7 +425,9 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 10. SOC 2 audit logging with PII masking
 11. Simple, flat pricing (no tiers)
 12. Transaction approval workflows
-13. Drag-and-drop customizable dashboard
+13. Personalized dashboard with morning brief, proactive attention alerts, count-up animations, and drag-and-drop tiles
+14. AI account management — AI creates chart of accounts entries, validates journal entries, and sets up recurring depreciation/amortization schedules autonomously
+15. Estimates with one-click conversion to invoices
 
 ---
 
@@ -431,7 +440,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 ### Company Timeline
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
-- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, receipt scanning, recurring charge detection, bank statement import (for older transactions beyond Plaid's 30-day window), 13 reports, 40+ features
+- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (for older transactions beyond Plaid's 30-day window), AI-powered account management and depreciation setup, personalized dashboard, 13 reports, 60 features
 
 ---
 
@@ -469,6 +478,17 @@ All files located in `frontend/public/`:
 
 ## Changelog
 
+### March 5, 2026 — Estimates, dashboard redesign, AI assistant upgrade
+- Added **Estimates** to Invoicing & Payments (create, send, convert to invoice with PDF export and custom branding)
+- Added **Estimate** to Create dropdown menu
+- Redesigned **Dashboard** with personalized morning brief (time-aware greeting, 4 animated KPIs with count-up effect), proactive "Needs Your Attention" alerts, global date filter (replaces per-tile filters), P&L spanning full width, staggered fade-in tile animations, semantic color system, actionable empty states with CTAs, and quick-action buttons
+- Upgraded **Poof AI assistant** with 3 new tools: `search_accounts` (look up chart of accounts), `create_account` (create new accounts autonomously), `create_recurring_journal` (set up depreciation, amortization, rent, and insurance schedules)
+- Fixed **journal entry creation** — AI now validates that accounts exist in the chart of accounts before posting entries
+- Updated AI system prompt so Poof handles accounting setup autonomously without asking users for account numbers
+- Renamed internal AI references from "Preston" to "Poof" / "assistant" across backend and frontend
+- Updated feature count from 56 to 60 (was listed as "40+" — corrected to actual count)
+- Updated **Competitive Positioning** with 15 differentiators (was 13)
+
 ### March 2, 2026 — Positioning overhaul (Obviously Awesome framework)
 - **New hero headline:** "Bookkeeping That Does Itself" (replaces "Magical Bookkeeping for Small Business")
 - **New hero subhead:** "AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again."
@@ -487,7 +507,7 @@ All files located in `frontend/public/`:
 - Added **Recurring Invoices** and **Automated Invoice Follow-ups** to Invoicing group
 - Added **Auto-reconciliation** to Banking group
 - Added **Budget vs Actual** report (13 total reports now)
-- Added **Preston AI Capabilities** as dedicated feature group: business-context awareness, books health check, sparkle animation
+- Added **Poof AI Capabilities** as dedicated feature group: business-context awareness, books health check, sparkle animation
 - Updated **Dashboard** to reflect drag-and-drop tile layout, budget status card, and forecast summary card
 - Confirmed **Plaid sync** remains at 30 days (use bank statement import for older data)
 - Updated **Competitive Positioning** with 13 differentiators (was 8)

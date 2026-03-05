@@ -54,7 +54,7 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5M5 5H19V19H5V5M7 7V9H17V7H7M7 11V13H14V11H7M7 15V17H17V15H7Z"/>
     </svg>
   ),
-  preston: (
+  poof: (
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
     </svg>
@@ -71,7 +71,7 @@ const tabLabels: Record<string, string> = {
   'Budgeting & Forecasting': 'Budgeting',
   'Team & Security': 'Security',
   'Productivity & Workflow': 'Productivity',
-  'Preston AI Capabilities': 'Preston AI',
+  'Poof AI Capabilities': 'Poof AI',
 }
 
 export default function FeaturesPage() {
@@ -98,7 +98,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
-        subtitle="40+ features, one flat price — $29/mo for everything QuickBooks charges $38+ for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
+        subtitle="60 features, one flat price — $29/mo for everything QuickBooks charges $38+ for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"
@@ -268,7 +268,7 @@ export default function FeaturesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Try All 40+ Features?
+              Ready to Try All 60 Features?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
               Start your 30-day free trial. All features included, starting at $14.50/month.

@@ -10,12 +10,12 @@ const showcases = [
   {
     title: 'Ask a Question, Get an Answer — Not a Help Article',
     description:
-      'Preston isn\'t just a chatbot — he\'s your AI bookkeeper. Create invoices, record payments, update customer records, generate P&L reports, and manage your books entirely through conversation.',
+      'Poof isn\'t just a chatbot — it\'s your AI assistant. Create invoices, record payments, set up depreciation schedules, and manage your books entirely through conversation.',
     bullets: [
       'Record payments and auto-book journal entries via chat',
-      'Update invoices, customers, vendors, and expenses by name',
-      'Generate financial reports directly in conversation',
-      'Privacy controls let you decide what Preston can access',
+      'Set up recurring depreciation, amortization, and rent entries',
+      'Search and create chart of accounts entries autonomously',
+      'Privacy controls let you decide what Poof can access',
     ],
     iconBg: 'bg-gold-500/10',
     iconBorder: 'border-gold-500/20',
@@ -76,11 +76,9 @@ const showcases = [
     iconColor: 'text-teal-500',
     glowColor: 'rgba(20, 184, 166, 0.08)',
     iconLeft: false,
-    icon: (
-      <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5M5 5H19V19H5V5M7 7V9H17V7H7M7 11V13H14V11H7M7 15V17H17V15H7Z"/>
-      </svg>
-    ),
+    imageSrc: '/budgetvsactual-website.png',
+    imageAlt: 'Budget vs actual variance dashboard',
+    icon: null,
   },
 ]
 

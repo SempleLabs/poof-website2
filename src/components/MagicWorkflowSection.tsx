@@ -37,7 +37,7 @@ const steps = [
     step: 3,
     title: 'done',
     description:
-      'Wake up to clean books, accurate reports, and zero manual data entry. Tell Preston "we received a check for invoice 1234" and he records the payment, marks it paid, and books the journal entry. Every. Single. Day.',
+      'Wake up to clean books, accurate reports, and zero manual data entry. Tell Poof "we received a check for invoice 1234" and it records the payment, marks it paid, and books the journal entry. Every. Single. Day.',
     glowColor: 'rgba(139, 92, 246, 0.2)',
     iconBg: 'bg-gold-500/10',
     iconColor: 'text-gold-400',
