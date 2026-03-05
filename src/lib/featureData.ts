@@ -49,7 +49,13 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "AI Budget & Forecast Generation",
         description: "Describe your goal in plain English (e.g., '20% revenue growth') and AI builds line items, allocations, and 12-month cash flow projections automatically"
-      },
+      }
+    ]
+  },
+  {
+    name: "Poof AI Capabilities",
+    icon: "poof",
+    features: [
       {
         title: "Business-Context-Aware Chat",
         description: "Poof knows your company name, industry, business type, location, and timezone — every response is tailored to your specific business"

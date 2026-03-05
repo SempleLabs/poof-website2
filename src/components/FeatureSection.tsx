@@ -45,6 +45,12 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M13,2.05V5.08C16.39,5.57 19,8.47 19,12C19,12.9 18.82,13.75 18.5,14.54L21.12,16.07C21.68,14.83 22,13.45 22,12C22,6.82 18.05,2.55 13,2.05M12,19A7,7 0 0,1 5,12C5,8.47 7.61,5.57 11,5.08V2.05C5.94,2.55 2,6.81 2,12A10,10 0 0,0 12,22C15.3,22 18.23,20.39 20.05,17.91L17.45,16.38C16.17,18 14.21,19 12,19Z"/>
     </svg>
   ),
+  poof: (
+    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+      <path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+    </svg>
+  ),
 }
 
 export default function FeatureSection() {
@@ -61,7 +67,7 @@ export default function FeatureSection() {
             <span className="text-gradient-gold"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            60 features across 8 categories — all included in one plan.
+            60 features across 9 categories — all included in one plan.
             $29/mo for everything QuickBooks charges $38+ for.
           </p>
         </AnimateOnScroll>
