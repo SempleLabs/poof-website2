@@ -49,6 +49,42 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "AI Budget & Forecast Generation",
         description: "Describe your goal in plain English (e.g., '20% revenue growth') and AI builds line items, allocations, and 12-month cash flow projections automatically"
+      },
+      {
+        title: "Business-Context-Aware Chat",
+        description: "Poof knows your company name, industry, business type, location, and timezone — every response is tailored to your specific business"
+      },
+      {
+        title: "Books Health Check & Month-End Close",
+        description: "Ask Poof to audit your books for missing categorizations, unreconciled transactions, and open items — then get step-by-step guidance through month-end close"
+      },
+      {
+        title: "Invoice & Payment Management",
+        description: "Create invoices, edit records, and record payments through conversation — tell Poof 'we received two checks covering invoices 1001 and 1003' and it handles the rest, including journal entries"
+      },
+      {
+        title: "Budgeting & Forecasting Guidance",
+        description: "Ask Poof about your budget variance, spending trends, or cash flow outlook — get instant answers with data-backed insights"
+      },
+      {
+        title: "Recurring Charge Analysis",
+        description: "Ask Poof about your recurring charges, subscription costs, and payment patterns — it surfaces insights from your transaction history"
+      },
+      {
+        title: "Chart of Accounts Setup",
+        description: "Upload your existing chart of accounts, set it up manually, let AI auto-generate one, or have Poof guide you through it step by step"
+      },
+      {
+        title: "Account Search & Creation",
+        description: "Poof can look up and create chart of accounts entries autonomously — no need to provide account numbers"
+      },
+      {
+        title: "Journal Entry Creation with Account Validation",
+        description: "Poof verifies that accounts exist in your chart of accounts before posting journal entries — preventing errors and ensuring accuracy"
+      },
+      {
+        title: "Recurring Journal Entry Setup",
+        description: "Tell Poof about depreciation, amortization, rent, or insurance and it calculates periodic amounts, creates the necessary accounts, and sets up recurring journal entry templates automatically"
       }
     ]
   },
@@ -262,48 +298,6 @@ export const featureGroups: FeatureGroup[] = [
       }
     ]
   },
-  {
-    name: "Poof AI Capabilities",
-    icon: "poof",
-    features: [
-      {
-        title: "Business-Context-Aware Chat",
-        description: "Poof knows your company name, industry, business type, location, and timezone — every response is tailored to your specific business"
-      },
-      {
-        title: "Books Health Check & Month-End Close",
-        description: "Ask Poof to audit your books for missing categorizations, unreconciled transactions, and open items — then get step-by-step guidance through month-end close"
-      },
-      {
-        title: "Invoice & Payment Management",
-        description: "Create invoices, edit records, and record payments through conversation — tell Poof 'we received two checks covering invoices 1001 and 1003' and it handles the rest, including journal entries"
-      },
-      {
-        title: "Budgeting & Forecasting Guidance",
-        description: "Ask Poof about your budget variance, spending trends, or cash flow outlook — get instant answers with data-backed insights"
-      },
-      {
-        title: "Recurring Charge Analysis",
-        description: "Ask Poof about your recurring charges, subscription costs, and payment patterns — it surfaces insights from your transaction history"
-      },
-      {
-        title: "Chart of Accounts Setup",
-        description: "Upload your existing chart of accounts, set it up manually, let AI auto-generate one, or have Poof guide you through it step by step"
-      },
-      {
-        title: "Account Search & Creation",
-        description: "Poof can look up and create chart of accounts entries autonomously — no need to provide account numbers"
-      },
-      {
-        title: "Journal Entry Creation with Account Validation",
-        description: "Poof verifies that accounts exist in your chart of accounts before posting journal entries — preventing errors and ensuring accuracy"
-      },
-      {
-        title: "Recurring Journal Entry Setup",
-        description: "Tell Poof about depreciation, amortization, rent, or insurance and it calculates periodic amounts, creates the necessary accounts, and sets up recurring journal entry templates automatically"
-      }
-    ]
-  }
 ]
 
 export const faqData = [

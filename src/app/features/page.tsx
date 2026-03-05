@@ -54,11 +54,6 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5M5 5H19V19H5V5M7 7V9H17V7H7M7 11V13H14V11H7M7 15V17H17V15H7Z"/>
     </svg>
   ),
-  poof: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
-    </svg>
-  ),
 }
 
 // Short labels for tabs
@@ -71,7 +66,6 @@ const tabLabels: Record<string, string> = {
   'Budgeting & Forecasting': 'Budgeting',
   'Team & Security': 'Security',
   'Productivity & Workflow': 'Productivity',
-  'Poof AI Capabilities': 'Poof AI',
 }
 
 export default function FeaturesPage() {
