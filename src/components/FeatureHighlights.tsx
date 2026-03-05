@@ -22,7 +22,8 @@ const showcases = [
     iconColor: 'text-gold-500',
     glowColor: 'rgba(139, 92, 246, 0.08)',
     iconLeft: true,
-    isPrestonImage: true,
+    imageSrc: '/chatassistant.png',
+    imageAlt: 'Poof AI assistant chat interface',
     icon: null,
   },
   {
@@ -148,13 +149,13 @@ export default function FeatureHighlights() {
                     item.iconLeft ? 'md:order-1' : 'md:order-2'
                   }`}
                 >
-                  {item.isPrestonImage || item.imageSrc ? (
+                  {item.imageSrc ? (
                     <GlowCard
                       className="rounded-2xl bg-slate-900 border border-violet-500/20 w-full max-w-xs overflow-hidden"
-                      glowColor={item.isPrestonImage ? 'rgba(139, 92, 246, 0.15)' : item.glowColor}
+                      glowColor={item.glowColor}
                     >
                       <Image
-                        src={item.imageSrc || '/Preston.png'}
+                        src={item.imageSrc}
                         alt={item.imageAlt || item.title}
                         width={400}
                         height={500}
