@@ -369,7 +369,7 @@ export const faqData = [
   },
   {
     question: "What's the best bookkeeping app for freelancers?",
-    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions overnight, sends recurring invoices on autopilot, scans receipts from your phone, and generates 13 financial reports including P&L and cash flow statements. It's $29/mo with everything included (no tiers), compared to QuickBooks which starts at $38/mo and locks features behind higher plans."
+    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 13 financial reports including P&L and cash flow statements. It's $29/mo with everything included (no tiers), compared to QuickBooks which starts at $38/mo and locks features behind higher plans."
   },
   {
     question: "Do I need QuickBooks for my small business?",

@@ -10,7 +10,7 @@ const personas = [
       </svg>
     ),
     title: 'Solo Founders & Freelancers',
-    description: 'Tired of spreadsheet bookkeeping? Poof categorizes your transactions overnight so you wake up to clean books.',
+    description: 'Tired of spreadsheet bookkeeping? Poof categorizes your transactions automatically — clean books without the manual work.',
   },
   {
     icon: (

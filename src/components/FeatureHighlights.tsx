@@ -45,7 +45,7 @@ const showcases = [
     icon: null,
   },
   {
-    title: 'Invoices Match to Payments While You Sleep',
+    title: 'Invoices Match to Payments Automatically',
     description:
       'AI matches bank deposits to outstanding invoices and payments to bills — including partial payments — with confidence scoring.',
     bullets: [
@@ -126,7 +126,7 @@ export default function FeatureHighlights() {
             style={{ letterSpacing: '-0.02em' }}
           >
             Your Books, Done —
-            <span className="text-gradient-gold"> Every Morning</span>
+            <span className="text-gradient-gold"> Automatically</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             All the power of QuickBooks. None of the complexity.

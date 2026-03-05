@@ -23,7 +23,7 @@ const steps = [
     step: 2,
     title: 'AI Does the Work',
     description:
-      'The BRAID engine categorizes every transaction, detects recurring charges, matches payments to invoices, and scans receipts — while you sleep.',
+      'The BRAID engine categorizes every transaction, detects recurring charges, matches payments to invoices, and scans receipts — automatically.',
     glowColor: 'rgba(20, 184, 166, 0.15)',
     iconBg: 'bg-teal-500/10',
     iconColor: 'text-teal-400',
@@ -37,7 +37,7 @@ const steps = [
     step: 3,
     title: 'done',
     description:
-      'Wake up to clean books, accurate reports, and zero manual data entry. Tell Poof "we received a check for invoice 1234" and it records the payment, marks it paid, and books the journal entry. Every. Single. Day.',
+      'Clean books, accurate reports, and zero manual data entry. Tell Poof "we received a check for invoice 1234" and it records the payment, marks it paid, and books the journal entry — instantly.',
     glowColor: 'rgba(139, 92, 246, 0.2)',
     iconBg: 'bg-gold-500/10',
     iconColor: 'text-gold-400',
