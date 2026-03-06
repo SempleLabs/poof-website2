@@ -130,6 +130,7 @@ export default function FeatureHighlights() {
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             All the power of QuickBooks. None of the complexity.
+            <br className="hidden sm:block" />
             $29/mo for everything QuickBooks charges $38+ for.
           </p>
         </AnimateOnScroll>
