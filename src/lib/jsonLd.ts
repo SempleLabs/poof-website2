@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     url: 'https://poof.ai',
     logo: 'https://poof.ai/poof-logo.png',
-    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 60 features, 13 reports, $29/mo.',
+    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 68 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +26,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 60 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 68 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://poof.ai',
     offers: {
       '@type': 'Offer',
@@ -67,7 +67,9 @@ export function getSoftwareApplicationSchema() {
       'Financial Import (Excel, CSV, PDF)',
       'Accrual & Cash Basis Reporting',
       'Recurring Journal Entry Templates',
-      'Reversing Journal Entries',
+      'Report Drill-Down',
+      'Shareable Report URLs',
+      'Scheduled Report Delivery',
       'AI-Powered Budget Creation',
       'Budget Lifecycle Management',
       'Budget vs Actual Variance Dashboard',
@@ -77,7 +79,7 @@ export function getSoftwareApplicationSchema() {
       'Two-Factor Authentication',
       'SOC 2 Audit Logs',
       'Session Management',
-      'Personalized Dashboard with Morning Brief',
+      'Personalized Dashboard with AI Daily Briefing',
       'Global Search',
       'Notification Center',
       'Transaction Approval Workflows',
@@ -86,7 +88,14 @@ export function getSoftwareApplicationSchema() {
       'Books Health Check & Month-End Close Guidance',
       'Account Search & Creation',
       'Journal Entry Creation with Account Validation',
-      'AI Recurring Journal Entry Setup'
+      'AI Recurring Journal Entry Setup',
+      'Invoice, Estimate & Credit Note Creation via AI',
+      'Record Creation via Natural Language',
+      'Record Updates via AI',
+      'Financial Report Generation via AI',
+      'Bank Statement PDF Import via AI Chat',
+      'Guided Onboarding Walkthrough',
+      'File Attachment Handling'
     ]
   }
 }

@@ -143,7 +143,7 @@ Poof logo animation, then transition to the Poof login/landing screen. User clic
 **On Screen:**
 1. Return to dashboard or a clean Poof-branded screen
 2. Text overlay or animated text:
-   - **"60 features. One price. $29/month."**
+   - **"68 features. One price. $29/month."**
    - **"Start your free trial today."**
 3. Poof logo + tagline: **"Poof. It's done."**
 4. CTA button: "Start Free Trial →"

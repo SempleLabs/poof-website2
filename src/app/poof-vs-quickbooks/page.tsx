@@ -8,7 +8,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Poof vs QuickBooks — AI Bookkeeping Comparison | Poof',
-  description: 'Compare Poof and QuickBooks side by side. AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, and 13 differentiators that set Poof apart.',
+  description: 'Compare Poof and QuickBooks side by side. AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, and 18 differentiators that set Poof apart.',
   keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping, AI budgeting, cash flow forecasting',
   alternates: {
     canonical: 'https://poof.ai/poof-vs-quickbooks',
@@ -49,7 +49,11 @@ const comparisonData = [
   { category: 'Banking & Reports', features: [
     { name: 'Bank Connection (Plaid)', poof: true, quickbooks: true },
     { name: 'Bank Statement Import (CSV/PDF)', poof: true, quickbooks: false },
+    { name: 'Bank Statement PDF Import via AI Chat', poof: true, quickbooks: false },
     { name: '13 Financial Reports', poof: true, quickbooks: true },
+    { name: 'Report Drill-Down (Click to See Journal Entries)', poof: true, quickbooks: false },
+    { name: 'Shareable Report URLs', poof: true, quickbooks: false },
+    { name: 'Scheduled Report Delivery (Email, PDF/CSV)', poof: true, quickbooks: false },
   ]},
   { category: 'Security & Team', features: [
     { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false },
@@ -57,7 +61,7 @@ const comparisonData = [
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
   ]},
   { category: 'Productivity & UX', features: [
-    { name: 'Personalized Dashboard with Morning Brief', poof: true, quickbooks: false },
+    { name: 'Personalized Dashboard with AI Daily Briefing', poof: true, quickbooks: false },
     { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false },
     { name: 'Simple, Flat Pricing (from $14.50/mo)', poof: true, quickbooks: false },
   ]},
@@ -105,7 +109,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $29/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 60 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 68 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -188,7 +192,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. All 60 features included.
+              See the difference AI bookkeeping makes. All 68 features included.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,6 +1,6 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: March 5, 2026
+> **Living document** — Last updated: March 22, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 ---
@@ -66,6 +66,8 @@ Always lead with what changes in the customer's life, not what the product does.
 | Smart transaction matching | "Invoices match to payments while you sleep" |
 | Budgeting & forecasting | "Describe your goal. Get a budget in seconds." |
 | 13 financial reports | "Know exactly where your money went — in 30 seconds" |
+| Report drill-down | "Click any number. See exactly what's behind it." |
+| Scheduled reports | "Your reports, delivered to your inbox — automatically." |
 | Reconciliation | "Reconciliation that takes minutes, not hours" |
 | Recurring invoices | "Send invoices on autopilot — follow-ups included" |
 | Estimates | "Send a quote. Convert to an invoice in one click." |
@@ -89,7 +91,7 @@ Always lead with what changes in the customer's life, not what the product does.
 4. **Continuous Learning** — The AI gets smarter over time
 
 ### AI Assistant — Poof
-Poof's AI assistant is the product itself — there is no separate character. The AI lives in the sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. Poof helps with onboarding, answers bookkeeping questions, and can perform actions like creating invoices, setting up accounts, recording journal entries, configuring recurring depreciation schedules, building budgets, generating forecasts, and guiding you through month-end close. It features a signature sparkle animation effect. When creating content, the AI can be referenced as "your AI bookkeeper" or simply "Poof."
+Poof's AI assistant is the product itself — there is no separate character or persona name. The AI lives in a right-hand sidebar (with a branded purple-to-teal gradient header), is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. Poof gives concise, action-oriented responses (2–4 sentences) and can perform 30+ actions: creating invoices, estimates, expenses, bills, credit notes, deposits, customers, vendors, and products; setting up chart of accounts; recording journal entries; configuring recurring depreciation schedules; building budgets and forecasts; generating all 13 financial reports; sending invoices and credit notes via email; importing bank statement PDFs; and guiding users through onboarding and month-end close. Uploaded receipts and invoices are automatically scanned and attached to the records Poof creates. It features a signature sparkle animation icon. When creating content, the AI can be referenced as "your AI bookkeeper" or simply "Poof."
 
 ---
 
@@ -181,6 +183,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 |---|---|---|
 | **Primary** | `linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)` | Buttons, icon backgrounds, CTA elements |
 | **Brand / Magical** | `linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%)` | Special decorative elements, hero sections, gradient text |
+| **AI Assistant Header** | `linear-gradient(135deg, rgba(139,92,246,0.25) 0%, rgba(99,102,241,0.18) 50%, rgba(20,184,166,0.25) 100%)` | AI assistant sidebar header — soft brand gradient at ~25% opacity |
 | **CTA** | `linear-gradient(160deg, #0f172a 0%, #1e293b 100%)` | Dark call-to-action sections |
 | **Glass** | `linear-gradient(135deg, rgba(139,92,246,0.05) 0%, rgba(99,102,241,0.05) 100%)` | Subtle glass-effect backgrounds |
 
@@ -242,7 +245,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "60 features, one flat price — $29/mo"
+- "68 features, one flat price — $29/mo"
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -264,23 +267,23 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 60 Features in 9 Groups
+### 68 Features in 9 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
-2. Poof AI assistant (sidebar-based, context-aware, with sparkle animation)
+2. Poof AI assistant (sidebar-based, context-aware, 30+ tools, branded gradient header with sparkle icon)
 3. AI chart of accounts generation
 4. Automated daily bookkeeping
 5. AI-powered recurring charge detection (frequency analysis, confidence scoring, next payment prediction)
 6. Receipt & invoice scanning (OCR) — photo upload, data extraction, vendor ID, duplicate detection, HEIC/HEIF support
 7. Smart transaction matching — AI matches invoices to deposits, bills to payments, with partial payment support
-8. AI-guided onboarding — Poof walks new users through setup
+8. AI-guided onboarding — Poof walks new users through setup with interactive survey and getting-started checklist
 9. AI-powered budget & forecast generation — natural language goal input, AI builds line items and 12-month projections
 
 #### 2. Invoicing & Payments (8 features)
-1. Invoicing (PDF export, email delivery, custom branding/logo, line-item tax & discounts)
+1. Invoicing (PDF export, email delivery via AI or UI, custom branding/logo, line-item tax & discounts)
 2. Estimates — create, send, and convert estimates to invoices in one click (PDF export, email delivery, custom branding)
-3. Credit notes
+3. Credit notes (create, send via email, AI-assisted)
 4. Payment tracking & payment receipts
 5. Products & services catalog
 6. Customer management (full database with contact info, billing/shipping addresses, sales reporting)
@@ -295,20 +298,22 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. Transaction matching
 
 #### 4. Banking & Reconciliation (6 features)
-1. Bank connection via Plaid (12,000+ banks, syncs last 30 days)
-2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing, intelligent column mapping, duplicate prevention)
+1. Bank connection via Plaid (12,000+ banks, syncs last 30 days, optional liability accounts for broader institution support)
+2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing with GPT-4o Vision for PDFs, intelligent column mapping, bank name auto-detection, duplicate prevention) — also importable via AI chat by uploading a PDF
 3. Reconciliation (multi-step wizard, reconciliation reports, history)
 4. Auto-reconciliation (opt-in, weekly or monthly, with notifications)
 5. Deposits
 6. Multi-account support
 
-#### 5. Accounting & Reporting (6 features)
+#### 5. Accounting & Reporting (8 features)
 1. Double-entry accounting
 2. 13 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail Report, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual
-3. Financial import (bulk chart of accounts, transactions, customers/vendors, invoices)
-4. Accrual & cash basis toggle
-5. Recurring journal entry templates (daily, weekly, monthly, quarterly, annually)
-6. Reversing journal entries (automatic accrual reversals)
+3. Report drill-down — click any account in Balance Sheet, Income Statement, or Trial Balance to see underlying journal entries; click a journal entry to edit it
+4. Shareable report URLs — filter state (date range, basis, hide-zero-balances) persists in URL for bookmarking and sharing
+5. Scheduled report delivery — automated email delivery of any report (daily, weekly, monthly, or quarterly) as PDF or CSV to multiple recipients
+6. Financial import (bulk chart of accounts, transactions, customers/vendors, invoices)
+7. Accrual & cash basis toggle
+8. Recurring journal entry templates (daily, weekly, monthly, quarterly, annually) with reversing journal entry support
 
 #### 6. Budgeting & Forecasting (5 features)
 1. Budget creation — manual or AI-generated from a natural language goal (e.g., "20% revenue growth")
@@ -327,22 +332,28 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. Role-based permissions (RBAC) — 26 granular permissions
 
 #### 8. Productivity & Workflow (5 features)
-1. Personalized dashboard — morning brief with time-aware greeting and 4 animated KPIs, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
+1. Personalized dashboard — AI-generated daily briefing with "Reply to Poof" action, time-aware greeting, 4 animated KPIs, Y-axis dollar labels on all chart tiles, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
 2. Global search (across transactions, invoices, bills, expenses)
 3. Notification center (in-app and email)
 4. Transaction approval workflows
 5. Command bar (Cmd+K) — natural language navigation
 
-#### 9. Poof AI Capabilities (9 features)
-1. Business-context-aware chat (knows your company, industry, timezone)
+#### 9. Poof AI Capabilities (15 features)
+1. Business-context-aware chat (knows your company, industry, timezone) with concise, action-oriented responses
 2. Books health check & month-end close guidance
-3. Invoice creation, editing, and payment receipt recording
-4. Budgeting, variance, and forecasting guidance
-5. Recurring charge analysis and questions
-6. Chart of accounts setup (upload, manual, auto-generate, or guided)
-7. Account search & creation — AI can look up and create chart of accounts entries autonomously
-8. Journal entry creation with account validation — AI verifies accounts exist before posting
-9. Recurring journal entry setup — AI handles depreciation, amortization, rent, and insurance schedules (calculates periodic amounts, creates accounts, sets up the recurring template)
+3. Invoice, estimate, and credit note creation — AI creates, edits, and sends via email
+4. Expense, bill, deposit, customer, vendor, and product creation — AI creates any record via natural language
+5. Record updates — AI can update existing invoices, customers, vendors, expenses, bills, and transactions
+6. Budgeting, variance, and forecasting guidance
+7. Recurring charge analysis and questions
+8. Chart of accounts setup (upload, manual, auto-generate, or guided)
+9. Account search & creation — AI can look up and create chart of accounts entries autonomously
+10. Journal entry creation with account validation — AI verifies accounts exist before posting
+11. Recurring journal entry setup — AI handles depreciation, amortization, rent, and insurance schedules (calculates periodic amounts, creates accounts, sets up the recurring template)
+12. Financial report generation — AI generates all 13 reports on request
+13. Bank statement PDF import via chat — upload a PDF, AI extracts transactions with GPT-4o Vision, presents summary, and imports to selected bank account with BRAID auto-categorization
+14. Guided onboarding walkthrough — AI navigates the UI, highlights elements, and walks new users through setup step by step
+15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
 
 ---
 
@@ -350,9 +361,10 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 60 (all included in every plan) |
+| Total features | 68 (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
+| AI assistant tools | 30+ (create, update, search, send, generate, import) |
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
 | Manual entry reduction | 90% |
@@ -372,7 +384,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | $29/mo | All 60 features included |
+| Monthly | $29/mo | All 68 features included |
 | Monthly (launch special) | **$14.50/mo** | 50% off first 3 months |
 | Annual | $290/year ($24.17/mo) | Save $58 |
 
@@ -397,7 +409,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 | | Poof | QuickBooks |
 |---|---|---|
 | **Starting price** | $29/mo — all features ($14.50/mo launch special) | $38/mo+ (tiered, features locked behind higher plans) |
-| **AI assistant** | Poof (built-in, context-aware) | No |
+| **AI assistant** | Poof (built-in, context-aware, 30+ tools) | No |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | No |
 | **Auto chart of accounts** | Yes | No |
 | **Receipt scanning + OCR** | Yes (with duplicate detection) | Yes (but limited in lower tiers) |
@@ -405,15 +417,18 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 | **Recurring invoices** | Yes (with automated follow-ups) | Yes (but limited in lower tiers) |
 | **Smart transaction matching** | Yes | Limited |
 | **Cash flow forecasting** | Yes (AI-generated with confidence bands) | Limited (higher tiers only) |
+| **Report drill-down** | Yes (click any account → see journal entries) | No |
+| **Scheduled report delivery** | Yes (daily/weekly/monthly/quarterly, PDF or CSV, email) | No |
+| **Bank statement PDF import via AI** | Yes (upload PDF to AI, auto-parsed with GPT-4o Vision) | No |
 | **RBAC** | 5 roles, 26 permissions | Limited |
 | **Audit logs** | Yes (SOC 2, PII masking) | Limited |
 | **Estimates** | Yes (create, send, convert to invoice) | Yes (higher tiers only) |
 | **AI depreciation & recurring entries** | Yes (AI sets up accounts and schedules) | No |
-| **Personalized dashboard** | Yes (morning brief, attention alerts, animations, reorderable tiles) | No |
+| **Personalized dashboard** | Yes (AI briefing, attention alerts, animations, reorderable tiles) | No |
 | **Pricing model** | Flat — one plan | Tiered — must upgrade for features |
 
 ### Key Differentiators (What Poof Has That QuickBooks Doesn't)
-1. AI assistant (Poof) with business-context awareness and books health checks
+1. AI assistant (Poof) with 30+ tools, business-context awareness, and books health checks
 2. AI-powered budgeting — describe your goal in plain English, AI builds the budget
 3. AI cash flow forecasting with confidence bands and rolling refresh
 4. AI-powered auto chart of accounts generation
@@ -425,9 +440,12 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 10. SOC 2 audit logging with PII masking
 11. Simple, flat pricing (no tiers)
 12. Transaction approval workflows
-13. Personalized dashboard with morning brief, proactive attention alerts, count-up animations, and drag-and-drop tiles
+13. Personalized dashboard with AI-generated daily briefing, proactive attention alerts, count-up animations, and drag-and-drop tiles
 14. AI account management — AI creates chart of accounts entries, validates journal entries, and sets up recurring depreciation/amortization schedules autonomously
 15. Estimates with one-click conversion to invoices
+16. Report drill-down — click any account row in key reports to see the underlying journal entries
+17. Scheduled report delivery — automated email delivery of any of the 13 reports on a recurring schedule
+18. Bank statement PDF import via AI chat — upload a PDF, AI parses and imports transactions automatically
 
 ---
 
@@ -440,7 +458,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 ### Company Timeline
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
-- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (for older transactions beyond Plaid's 30-day window), AI-powered account management and depreciation setup, personalized dashboard, 13 reports, 60 features
+- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, 13 reports, 68 features
 
 ---
 
@@ -477,6 +495,35 @@ All files located in `frontend/public/`:
 ---
 
 ## Changelog
+
+### March 22, 2026 — Scheduled reports, report drill-down, AI expansion, performance overhaul
+- Added **Scheduled Report Delivery** — automated email delivery of any of the 13 financial reports on a daily, weekly, monthly, or quarterly schedule as PDF or CSV to multiple recipients. Managed from Settings with enable/disable toggles, manual trigger, and edit/delete. Cron-based execution with timezone support.
+- Added **Report Drill-Down** — click any account row in Balance Sheet, Income Statement, or Trial Balance to see underlying journal entries in a modal; click a journal entry to open the edit modal. Running balances use natural-balance convention.
+- Added **Shareable Report URLs** — report filter state (date range, basis, hide-zero-balances) persists in URL search params via new `useUrlFilters` hook, enabling bookmarkable and shareable filtered reports
+- Expanded **Poof AI Capabilities** from 9 to 15 features:
+  - AI can now create estimates, expenses, bills, credit notes, deposits, customers, vendors, and products via natural language
+  - AI can send invoices and credit notes via email (`send_invoice`, `send_credit_note` tools)
+  - AI can update existing records (invoices, customers, vendors, expenses, bills, transactions)
+  - AI generates all 13 financial reports on request
+  - AI imports bank statement PDFs via chat — upload a PDF, AI parses with GPT-4o Vision (Puppeteer + pdf.js for PDF-to-image conversion), presents transaction summary, imports to selected bank account with BRAID auto-categorization
+  - AI provides guided onboarding walkthrough with UI navigation and element highlighting
+  - Uploaded files (receipts, invoices, PDFs) are automatically attached to any record the AI creates
+- Tuned **AI assistant personality** — responses are now concise and action-oriented (2–4 sentences, max_tokens reduced from 1000 to 600)
+- Added **"Reply to Poof" chip** on dashboard below AI briefing summary — opens chat sidebar with one click
+- Restyled **AI assistant sidebar header** from flat gray (`#e4e4e8`) to a branded purple-to-teal gradient at ~25% opacity
+- Removed floating magic icon overlay from assistant toggle button for cleaner UI
+- Enhanced **Dashboard charts** with Y-axis dollar labels ($0, $5K, $12.5K, $1.2M) on all chart tiles
+- Fixed **Expenses by Category** dashboard tile to include Plaid-synced and bank statement-imported transactions (not just manual expenses/bills)
+- Added **skip option for opening balance** during Plaid account setup (useful when importing full transaction history)
+- Fixed **Plaid liability accounts** — made liabilities an optional Plaid product so institutions without credit products (e.g., Wells Fargo checking-only) don't error
+- Fixed **duplicate detection** — payments no longer incorrectly match with reversals (added transaction type to duplicate matching query)
+- Fixed **invoice sending by number** — backend now supports sending invoices and credit notes by invoice number (e.g., "INV-016"), not just UUID
+- Added **bank name auto-detection** for statement PDF uploads (pattern matching for Wells Fargo, Chase, Citi, BofA, Capital One, PNC, etc.)
+- **UI performance overhaul** — disabled MUI ripple globally, replaced `transition: 'all'` with specific property transitions across 25+ components (buttons 0.3s → 0.15s, cards 0.2s, list items 0.12s), reduced sidebar layout shift from 225ms to 150ms, reduced count-up animation from 800ms to 400ms, extracted keyframes to module-level constants
+- Added **Onboarding survey** (8-question progressive flow: role, business type, team size, priorities, current tools, tech comfort, industry, referral source) with conditional logic
+- Updated **Competitive Positioning** with 18 differentiators (was 15)
+- Updated feature count from 60 to 68
+- Added **AI Assistant Header** gradient to Color Palette
 
 ### March 5, 2026 — Estimates, dashboard redesign, AI assistant upgrade
 - Added **Estimates** to Invoicing & Payments (create, send, convert to invoice with PDF export and custom branding)

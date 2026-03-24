@@ -26,12 +26,14 @@ export default function PricingPage() {
     'Bank reconciliation',
     'Double-entry accounting',
     '13 financial reports',
+    'Report drill-down (click to see journal entries)',
+    'Scheduled report delivery (email, PDF/CSV)',
     'Recurring journal entry templates',
     'Accrual & cash basis toggle',
     'Team roles (5 roles, 26 permissions)',
     'Two-factor authentication',
     'AI budgeting & cash flow forecasting',
-    'Personalized dashboard with KPIs',
+    'Personalized dashboard with AI daily briefing',
     'Unlimited transactions'
   ]
 
@@ -66,7 +68,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 60 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 68 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',

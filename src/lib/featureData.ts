@@ -20,7 +20,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Poof AI Assistant",
-        description: "Built-in AI assistant that lives in the sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone"
+        description: "Built-in AI assistant with 30+ tools that lives in the sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -58,15 +58,23 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Business-Context-Aware Chat",
-        description: "Poof knows your company name, industry, business type, location, and timezone — every response is tailored to your specific business"
+        description: "Poof knows your company name, industry, business type, location, and timezone — every response is concise, action-oriented, and tailored to your specific business"
       },
       {
         title: "Books Health Check & Month-End Close",
         description: "Ask Poof to audit your books for missing categorizations, unreconciled transactions, and open items — then get step-by-step guidance through month-end close"
       },
       {
-        title: "Invoice & Payment Management",
-        description: "Create invoices, edit records, and record payments through conversation — tell Poof 'we received two checks covering invoices 1001 and 1003' and it handles the rest, including journal entries"
+        title: "Invoice, Estimate & Credit Note Creation",
+        description: "Create invoices, estimates, and credit notes through conversation — Poof creates, edits, and sends them via email. Tell Poof 'we received two checks covering invoices 1001 and 1003' and it handles the rest"
+      },
+      {
+        title: "Record Creation via Natural Language",
+        description: "Create expenses, bills, deposits, customers, vendors, and products through conversation — tell Poof what you need and it creates the record instantly"
+      },
+      {
+        title: "Record Updates",
+        description: "Update existing invoices, customers, vendors, expenses, bills, and transactions through conversation — no need to navigate to each record manually"
       },
       {
         title: "Budgeting & Forecasting Guidance",
@@ -91,6 +99,22 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Recurring Journal Entry Setup",
         description: "Tell Poof about depreciation, amortization, rent, or insurance and it calculates periodic amounts, creates the necessary accounts, and sets up recurring journal entry templates automatically"
+      },
+      {
+        title: "Financial Report Generation",
+        description: "Ask Poof to generate any of the 13 financial reports — Income Statement, Balance Sheet, Cash Flow, and more — instantly from conversation"
+      },
+      {
+        title: "Bank Statement PDF Import via Chat",
+        description: "Upload a bank statement PDF to Poof and it parses the transactions automatically, presents a summary, and imports them to your selected bank account with AI categorization"
+      },
+      {
+        title: "Guided Onboarding Walkthrough",
+        description: "Poof navigates the UI, highlights elements, and walks new users through setup step by step — from connecting your bank to categorizing your first transactions"
+      },
+      {
+        title: "File Attachment Handling",
+        description: "Receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record Poof creates"
       }
     ]
   },
@@ -164,11 +188,11 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Bank Connection",
-        description: "Connect to 12,000+ financial institutions via Plaid for automatic syncing of the last 30 days of transactions — no manual entry needed"
+        description: "Connect to 12,000+ financial institutions via Plaid for automatic syncing of the last 30 days of transactions, with optional liability accounts for broader institution support"
       },
       {
         title: "Bank Statement Import",
-        description: "Upload CSV or PDF bank statements (up to 25MB) with AI-powered parsing, intelligent column mapping, duplicate prevention, and batch import preview. Use this for transactions older than the Plaid sync window"
+        description: "Upload CSV or PDF bank statements (up to 25MB) with AI-powered parsing, intelligent column mapping, bank name auto-detection, duplicate prevention, and batch import preview — also importable via AI chat by uploading a PDF"
       },
       {
         title: "Bank Reconciliation",
@@ -201,6 +225,18 @@ export const featureGroups: FeatureGroup[] = [
         description: "Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, and Budget vs Actual"
       },
       {
+        title: "Report Drill-Down",
+        description: "Click any account in Balance Sheet, Income Statement, or Trial Balance to see underlying journal entries — then click a journal entry to edit it directly"
+      },
+      {
+        title: "Shareable Report URLs",
+        description: "Report filter state — date range, basis, and hide-zero-balances — persists in the URL so you can bookmark and share filtered reports"
+      },
+      {
+        title: "Scheduled Report Delivery",
+        description: "Automated email delivery of any of the 13 reports on a daily, weekly, monthly, or quarterly schedule as PDF or CSV to multiple recipients"
+      },
+      {
         title: "Financial Import",
         description: "Bulk import chart of accounts, transactions, customers/vendors, and invoices from Excel, CSV, or PDF"
       },
@@ -210,11 +246,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Recurring Journal Entry Templates",
-        description: "Set up recurring entries (daily, weekly, monthly, quarterly, annually) with timezone-aware automatic posting"
-      },
-      {
-        title: "Reversing Journal Entries",
-        description: "Automatically create reversing entries for accrual adjustments at period end"
+        description: "Set up recurring entries (daily, weekly, monthly, quarterly, annually) with timezone-aware automatic posting and reversing journal entry support"
       }
     ]
   },
@@ -284,7 +316,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Personalized Dashboard",
-        description: "Morning brief with time-aware greeting and 4 animated KPIs, proactive 'Needs Your Attention' alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter"
+        description: "AI-generated daily briefing with 'Reply to Poof' action, time-aware greeting, 4 animated KPIs with Y-axis dollar labels, proactive 'Needs Your Attention' alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter"
       },
       {
         title: "Global Search",
@@ -337,7 +369,7 @@ export const faqData = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant that records payments, updates records, and generates reports through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, and a personalized dashboard. Poof starts at $14.50/month (all features included) vs QuickBooks Simple Start at $38/month with tiered pricing."
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof starts at $14.50/month (all 68 features included) vs QuickBooks Simple Start at $38/month with tiered pricing."
   },
   {
     question: "Can my accountant access Poof?",
@@ -385,6 +417,6 @@ export const faqData = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "Poof is $29/mo for all 60 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required."
+    answer: "Poof is $29/mo for all 68 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required."
   }
 ]

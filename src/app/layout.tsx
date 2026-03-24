@@ -27,7 +27,7 @@ const cabinet = localFont({
 
 export const metadata: Metadata = {
   title: 'Poof — Bookkeeping That Does Itself | AI Bookkeeping for Small Business',
-  description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 60 features, 13 reports, $29/mo. 30-day free trial.',
+  description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 68 features, 13 reports, $29/mo. 30-day free trial.',
   keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI budgeting, cash flow forecasting, invoicing software, expense tracking, bank reconciliation, recurring invoices, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   alternates: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Poof — Bookkeeping That Does Itself',
-    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 60 features, 13 reports, $29/mo. 30-day free trial.',
+    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 68 features, 13 reports, $29/mo. 30-day free trial.',
     url: 'https://poof.ai',
     siteName: 'Poof',
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Poof — Bookkeeping That Does Itself',
-    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 60 features, 13 reports, $29/mo. 30-day free trial.',
+    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 68 features, 13 reports, $29/mo. 30-day free trial.',
   },
 }
 

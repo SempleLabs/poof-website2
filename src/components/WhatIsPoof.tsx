@@ -22,7 +22,7 @@ export default function WhatIsPoof() {
         </AnimateOnScroll>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: 60, label: 'Built-in Features', prefix: '', suffix: '' },
+            { value: 68, label: 'Built-in Features', prefix: '', suffix: '' },
             { value: 12000, label: 'Bank Connections', prefix: '', suffix: '+' },
             { value: 13, label: 'Financial Reports', prefix: '', suffix: '' },
             { value: 95, label: 'Accuracy Rate', prefix: '', suffix: '%' },
