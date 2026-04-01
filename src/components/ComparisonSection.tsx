@@ -32,6 +32,7 @@ const features = [
   { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false, xero: true, freshbooks: true },
   { name: 'SOC 2 Audit Logs', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true, xero: true, freshbooks: true },
+  { name: 'AI Chat Folders & Multi-Session Conversations', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Built for Small Business', poof: true, quickbooks: true, xero: false, freshbooks: true },
 ]
 

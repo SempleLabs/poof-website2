@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     url: 'https://poof.ai',
     logo: 'https://poof.ai/poof-logo.png',
-    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 68 features, 13 reports, $29/mo.',
+    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 69 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +26,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 68 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://poof.ai',
     offers: {
       '@type': 'Offer',
@@ -95,7 +95,8 @@ export function getSoftwareApplicationSchema() {
       'Financial Report Generation via AI',
       'Bank Statement PDF Import via AI Chat',
       'Guided Onboarding Walkthrough',
-      'File Attachment Handling'
+      'File Attachment Handling',
+      'AI Chat Folders & Multi-Session Conversations'
     ]
   }
 }
