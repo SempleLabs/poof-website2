@@ -4,6 +4,30 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+
+function getBlogPosts() {
+  const blogDir = path.join(process.cwd(), 'content', 'blog')
+  if (!fs.existsSync(blogDir)) return []
+
+  return fs.readdirSync(blogDir)
+    .filter(file => file.endsWith('.mdx'))
+    .map(file => {
+      const content = fs.readFileSync(path.join(blogDir, file), 'utf8')
+      const { data } = matter(content)
+      return {
+        slug: file.replace('.mdx', ''),
+        title: data.title,
+        excerpt: data.excerpt,
+        category: data.category,
+        readTime: data.readTime,
+        date: data.date,
+      }
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+}
 
 export const metadata: Metadata = {
   title: 'Resources - Small Business Bookkeeping Guides | Poof',
@@ -14,7 +38,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  const blogPosts = getBlogPosts()
   const guides = [
     {
       title: 'Small Business Bookkeeping Setup Guide',
@@ -147,20 +172,22 @@ export default function ResourcesPage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimateOnScroll animation="fade-up" delay={100}>
-              <Link href="/blog/ai-bookkeeping-small-business" className="block bg-white border border-slate-200 rounded-xl p-8 h-full hover:border-gold-300 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gold-50 text-gold-600">
-                    AI &amp; Automation
-                  </span>
-                  <span className="text-sm text-slate-500">8 min read</span>
-                </div>
-                <h3 className="text-xl font-bold font-display text-slate-900 mb-2">AI Bookkeeping for Small Business: What It Is, How It Works, and Why It Matters</h3>
-                <p className="text-slate-600 mb-4">AI bookkeeping automates transaction categorization, receipt scanning, and financial reporting — saving small business owners hours every week.</p>
-                <span className="text-gold-600 font-medium text-sm">Read article →</span>
-              </Link>
-            </AnimateOnScroll>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <AnimateOnScroll key={post.slug} animation="fade-up" delay={100 + index * 80}>
+                <Link href={`/blog/${post.slug}`} className="block bg-white border border-slate-200 rounded-xl p-8 h-full hover:border-gold-300 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gold-50 text-gold-600">
+                      {post.category}
+                    </span>
+                    <span className="text-sm text-slate-500">{post.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-bold font-display text-slate-900 mb-2">{post.title}</h3>
+                  <p className="text-slate-600 mb-4">{post.excerpt}</p>
+                  <span className="text-gold-600 font-medium text-sm">Read article →</span>
+                </Link>
+              </AnimateOnScroll>
+            ))}
           </div>
         </div>
       </section>

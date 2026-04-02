@@ -73,6 +73,15 @@ export default function HomeFaqSection() {
             </AnimateOnScroll>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <a
+            href="/faq"
+            className="text-gold-500 hover:text-gold-400 font-semibold transition-colors"
+          >
+            View all frequently asked questions →
+          </a>
+        </div>
       </div>
     </section>
   )
