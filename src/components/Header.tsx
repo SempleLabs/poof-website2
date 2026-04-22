@@ -53,6 +53,12 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-4">
             <Link
+              href="/spend-score"
+              className="text-violet-600 font-semibold text-sm hover:text-violet-500 transition-colors"
+            >
+              Free Spend Score
+            </Link>
+            <Link
               href="/demo"
               className={`font-semibold transition-colors ${
                 scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
@@ -109,6 +115,9 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-6 border-t border-slate-600 flex flex-col items-center space-y-4 w-full">
+              <Link href="/spend-score" onClick={() => setIsMenuOpen(false)} className="text-violet-400 text-xl font-semibold">
+                Free Spend Score
+              </Link>
               <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="text-gold-400 text-xl font-semibold">
                 Request Demo
               </Link>

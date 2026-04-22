@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     url: 'https://poof.ai',
     logo: 'https://poof.ai/poof-logo.png',
-    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 69 features, 13 reports, $29/mo.',
+    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 72 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +26,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 72 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://poof.ai',
     offers: {
       '@type': 'Offer',
@@ -96,8 +96,44 @@ export function getSoftwareApplicationSchema() {
       'Bank Statement PDF Import via AI Chat',
       'Guided Onboarding Walkthrough',
       'File Attachment Handling',
-      'AI Chat Folders & Multi-Session Conversations'
+      'AI Chat Folders & Multi-Session Conversations',
+      'AI Text-to-Speech',
+      'In-App Navigation Links',
+      'Budget Overview & Account Comparison'
     ]
+  }
+}
+
+export function getSpendScoreToolSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Free Spend Score Generator',
+    url: 'https://poof.ai/spend-score',
+    description: 'Upload a bank statement (CSV, PDF, or image) and get your free AI-powered Spend Score. AI categorizes your transactions, scores your spending habits, and generates a personalized report with an infographic — in under 60 seconds.',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
+    featureList: [
+      'AI transaction categorization into 15 spending categories',
+      'Bank statement parsing (CSV, PDF, image)',
+      'AI-generated spending score and financial narrative',
+      'AI-generated infographic',
+      'Spending breakdown with donut chart',
+      'Income vs expense analysis',
+      'Top spending category identification',
+      'OCR for bank statement images and PDFs',
+    ],
+    creator: {
+      '@type': 'Organization',
+      name: 'Poof',
+      url: 'https://poof.ai',
+    },
   }
 }
 

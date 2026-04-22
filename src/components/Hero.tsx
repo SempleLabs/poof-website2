@@ -51,12 +51,18 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Launch Special */}
+          {/* Spend Score CTA */}
           <div className="flex flex-col items-center gap-3 mb-6">
-            <div className="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 rounded-lg px-5 py-2.5">
-              <span className="text-gold-400 font-semibold">Launch Special:</span>
-              <span className="text-slate-800">50% off your first 3 months</span>
-            </div>
+            <Link
+              href="/spend-score"
+              className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/30 rounded-lg px-5 py-2.5 hover:bg-violet-500/20 transition-all duration-200 group"
+            >
+              <span className="text-violet-600 font-semibold">Get your free Spend Score</span>
+              <span className="text-slate-600">— upload a bank statement, 60 seconds</span>
+              <svg className="w-4 h-4 text-violet-500 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
 
           {/* CTA Buttons */}

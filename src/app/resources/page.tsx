@@ -89,13 +89,19 @@ export default async function ResourcesPage() {
 
   const quickLinks = [
     {
+      title: 'Free Spend Score',
+      description: 'Upload a bank statement and get your free AI-powered Spend Score in 60 seconds.',
+      href: '/spend-score',
+      linkText: 'Try it free →',
+    },
+    {
       title: 'How Poof Works',
       description: 'See how Poof automates your bookkeeping in 3 simple steps.',
       href: '/how-it-works',
       linkText: 'Learn more →',
     },
     {
-      title: 'All 30+ Features',
+      title: 'All 72 Features',
       description: 'Explore every feature included in your Poof subscription.',
       href: '/features',
       linkText: 'View features →',

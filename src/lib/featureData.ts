@@ -20,7 +20,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Poof AI Assistant",
-        description: "Built-in AI assistant with 30+ tools that lives in the sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
+        description: "Built-in AI assistant with 30+ tools that lives in the sidebar with split-screen mode on desktop, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization, text-to-speech, and in-app navigation links"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -115,6 +115,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "File Attachment Handling",
         description: "Receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record Poof creates"
+      },
+      {
+        title: "Text-to-Speech",
+        description: "Click the audio icon on any AI message to hear it read aloud — powered by GPT-4o-mini TTS with a custom Poof voice personality, with tts-1 fallback"
+      },
+      {
+        title: "In-App Navigation Links",
+        description: "AI responses include clickable links to real app pages (budgeting, reports, settings, and more) using client-side routing — no hallucinated URLs"
       }
     ]
   },
@@ -263,8 +271,12 @@ export const featureGroups: FeatureGroup[] = [
         description: "Move budgets through Draft → Active → Locked → Archived stages with clone support for quick iteration"
       },
       {
+        title: "Budget Overview & Account Comparison",
+        description: "Clean summary showing Budget, Spent, Remaining, and Status with a monthly spending pace tracker. Pick accounts to compare side by side with per-account stats, progress bars, and monthly budget mini charts — selections persist across sessions"
+      },
+      {
         title: "Variance Dashboard",
-        description: "Budget vs actual comparison with bar charts, percent variance, and status indicators — on track, approaching, over budget, or critical"
+        description: "Budget vs actual comparison with bar charts, percent variance, status indicators (on track, approaching, over budget, critical), top variance items with clickable status filters, and monthly spending pace"
       },
       {
         title: "Cash Flow Forecasting",
@@ -386,7 +398,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof starts at $14.50/month (all 69 features included) vs QuickBooks Simple Start at $38/month with tiered pricing.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof starts at $14.50/month (all 72 features included) vs QuickBooks Simple Start at $38/month with tiered pricing.",
     category: "Pricing & Plans"
   },
   {
@@ -446,7 +458,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "Poof is $29/mo for all 69 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "Poof is $29/mo for all 72 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -481,7 +493,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 69 features — no credit card required to start. When your trial ends, you can subscribe at $29/month (or $14.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 72 features — no credit card required to start. When your trial ends, you can subscribe at $29/month (or $14.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {
@@ -498,5 +510,25 @@ export const faqData: FaqItem[] = [
     question: "Is my financial data safe with AI bookkeeping?",
     answer: "Yes. Poof takes data security seriously. All data is encrypted in transit via HTTPS/TLS, and bank connections go through Plaid with read-only access — Poof never sees or stores your bank login credentials and cannot move money. Poof includes two-factor authentication, role-based access controls with 26 granular permissions, SOC 2 compliant audit logging with PII masking, and session management. Your financial data is never shared with third parties or used to train AI models. You can manage active sessions, revoke access, and export your data at any time.",
     category: "Security & Data"
+  },
+  {
+    question: "What is the Free Spend Score tool?",
+    answer: "The Spend Score tool is a free AI-powered feature on poof.ai that lets you upload a bank statement (CSV, PDF, or image) and get an instant financial analysis. AI categorizes every transaction into spending buckets like Groceries, Dining Out, Subscriptions, and more — then writes a personalized narrative about your spending patterns and generates a shareable infographic. It takes under 60 seconds and your data is never stored.",
+    category: "AI & Automation"
+  },
+  {
+    question: "Is the Spend Score tool really free?",
+    answer: "Yes, completely free. You can upload a bank statement and get your full AI-powered Spend Score report — including categorized transactions, a spending breakdown chart, a written narrative, and an AI-generated infographic — at no cost. You can generate up to 3 reports per hour. The tool is powered by Poof's AI to give you a taste of what automated bookkeeping looks like.",
+    category: "Pricing & Plans"
+  },
+  {
+    question: "Is my data safe when I use the Spend Score tool?",
+    answer: "Yes. Your bank statement is processed entirely in memory and deleted immediately after generating your report. Poof never stores, logs, or shares your financial data from the Spend Score tool. All AI processing happens on secure servers, and no transaction data is retained after your report is generated. The only information saved is your email address if you choose to enter it to unlock the full report.",
+    category: "Security & Data"
+  },
+  {
+    question: "How do I analyze my bank statement with AI?",
+    answer: "Visit poof.ai/spend-score and upload your bank statement as a CSV file, PDF, or even a photo/screenshot. Poof's AI will automatically extract and categorize every transaction into spending categories like Income, Groceries, Dining Out, Transportation, Subscriptions, and more. You'll get a written financial narrative analyzing your spending patterns, a visual spending breakdown chart, and an AI-generated infographic you can share — all in under 60 seconds.",
+    category: "Getting Started"
   }
 ]
