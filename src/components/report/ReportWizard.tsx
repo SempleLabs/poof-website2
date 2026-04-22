@@ -96,7 +96,7 @@ export default function ReportWizard() {
       }
       setReport(fullReport)
 
-      // Save lead email (fire and forget)
+      // Send rich report email to user (fire and forget)
       fetch('/api/report/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -104,6 +104,9 @@ export default function ReportWizard() {
           email,
           transactionCount: report.summary.transactionCount,
           topCategory: report.summary.topCategories[0]?.name,
+          summary: report.summary,
+          spendScore: report.spendScore,
+          narrative: report.narrative,
         }),
       }).catch(() => {})  // Don't block on email save
 

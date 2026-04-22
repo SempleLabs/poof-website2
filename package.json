@@ -23,6 +23,7 @@
     "next": "14.2.14",
     "openai": "^6.34.0",
     "papaparse": "^5.5.3",
+    "pdf-parse": "^2.4.5",
     "react": "^18",
     "react-dom": "^18",
     "resend": "^6.9.1"
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@types/node": "^20",
     "@types/papaparse": "^5.5.2",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "baseline-browser-mapping": "^2.10.0",
