@@ -107,7 +107,30 @@ function parseCSV(text: string): ParsedTransaction[] {
   return transactions
 }
 
-async function parseWithVision(base64Data: string, mimeType: string): Promise<ParsedTransaction[]> {
+const EXTRACTION_PROMPT = `Extract ALL transactions from this bank statement. Return a JSON array where each object has:
+- "date": string (the transaction date as shown)
+- "description": string (the transaction description/payee)
+- "amount": number (positive value, no currency symbols)
+- "type": "debit" or "credit"
+
+Debits are withdrawals/expenses/charges. Credits are deposits/income/payments received.
+Return ONLY the JSON array, nothing else.`
+
+function parseTransactionJson(content: string): ParsedTransaction[] {
+  const cleaned = content.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '')
+  const parsed = JSON.parse(cleaned)
+  if (!Array.isArray(parsed) || parsed.length === 0) {
+    throw new Error('No transactions found in the uploaded file.')
+  }
+  return parsed.map((t: Record<string, unknown>) => ({
+    date: String(t.date || ''),
+    description: String(t.description || ''),
+    amount: Math.abs(Number(t.amount) || 0),
+    type: (t.type === 'credit' ? 'credit' : 'debit') as 'debit' | 'credit',
+  })).filter((t: ParsedTransaction) => t.amount > 0 && t.description)
+}
+
+async function parseImageWithVision(base64Data: string, mimeType: string): Promise<ParsedTransaction[]> {
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
   const response = await openai.chat.completions.create({
@@ -120,17 +143,7 @@ async function parseWithVision(base64Data: string, mimeType: string): Promise<Pa
       {
         role: 'user',
         content: [
-          {
-            type: 'text',
-            text: `Extract ALL transactions from this bank statement image/PDF. Return a JSON array where each object has:
-- "date": string (the transaction date as shown)
-- "description": string (the transaction description/payee)
-- "amount": number (positive value, no currency symbols)
-- "type": "debit" or "credit"
-
-Debits are withdrawals/expenses/charges. Credits are deposits/income/payments received.
-Return ONLY the JSON array, nothing else.`,
-          },
+          { type: 'text', text: EXTRACTION_PROMPT },
           {
             type: 'image_url',
             image_url: {
@@ -145,21 +158,35 @@ Return ONLY the JSON array, nothing else.`,
     temperature: 0,
   })
 
-  const content = response.choices[0]?.message?.content?.trim() || '[]'
-  // Strip markdown code fences if present
-  const cleaned = content.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '')
+  return parseTransactionJson(response.choices[0]?.message?.content || '[]')
+}
 
-  const parsed = JSON.parse(cleaned)
-  if (!Array.isArray(parsed) || parsed.length === 0) {
-    throw new Error('No transactions found in the uploaded file.')
-  }
+async function parsePdfWithVision(base64Data: string): Promise<ParsedTransaction[]> {
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-  return parsed.map((t: Record<string, unknown>) => ({
-    date: String(t.date || ''),
-    description: String(t.description || ''),
-    amount: Math.abs(Number(t.amount) || 0),
-    type: (t.type === 'credit' ? 'credit' : 'debit') as 'debit' | 'credit',
-  })).filter((t: ParsedTransaction) => t.amount > 0 && t.description)
+  // PDFs must use the file content type, not image_url
+  const response = await openai.responses.create({
+    model: 'gpt-4o',
+    input: [
+      {
+        role: 'system',
+        content: 'You extract financial transactions from bank statements. Return ONLY valid JSON — no markdown, no code fences, no explanation.',
+      },
+      {
+        role: 'user',
+        content: [
+          { type: 'input_text', text: EXTRACTION_PROMPT },
+          {
+            type: 'input_file',
+            filename: 'statement.pdf',
+            file_data: `data:application/pdf;base64,${base64Data}`,
+          },
+        ],
+      },
+    ],
+  })
+
+  return parseTransactionJson(response.output_text || '[]')
 }
 
 export async function POST(request: NextRequest) {
@@ -197,10 +224,12 @@ export async function POST(request: NextRequest) {
       const base64 = btoa(
         new Uint8Array(buffer).reduce((data, byte) => data + String.fromCharCode(byte), '')
       )
-      const mimeType = ext === 'pdf' ? 'application/pdf'
-        : ext === 'png' ? 'image/png'
-        : 'image/jpeg'
-      transactions = await parseWithVision(base64, mimeType)
+      if (ext === 'pdf') {
+        transactions = await parsePdfWithVision(base64)
+      } else {
+        const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg'
+        transactions = await parseImageWithVision(base64, mimeType)
+      }
     } else {
       return NextResponse.json(
         { error: 'Unsupported file type. Please upload a CSV, PDF, PNG, or JPG.' },
