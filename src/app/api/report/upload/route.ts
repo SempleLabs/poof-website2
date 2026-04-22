@@ -162,31 +162,43 @@ async function parseImageWithVision(base64Data: string, mimeType: string): Promi
 }
 
 async function parsePdfWithVision(base64Data: string): Promise<ParsedTransaction[]> {
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-
-  // PDFs must use the file content type, not image_url
-  const response = await openai.responses.create({
-    model: 'gpt-4o',
-    input: [
-      {
-        role: 'system',
-        content: 'You extract financial transactions from bank statements. Return ONLY valid JSON — no markdown, no code fences, no explanation.',
-      },
-      {
-        role: 'user',
-        content: [
-          { type: 'input_text', text: EXTRACTION_PROMPT },
-          {
-            type: 'input_file',
-            filename: 'statement.pdf',
-            file_data: `data:application/pdf;base64,${base64Data}`,
-          },
-        ],
-      },
-    ],
+  // PDFs must use the Responses API with input_file (Chat Completions image_url rejects non-image MIME types)
+  const res = await fetch('https://api.openai.com/v1/responses', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'gpt-4o',
+      instructions: 'You extract financial transactions from bank statements. Return ONLY valid JSON — no markdown, no code fences, no explanation.',
+      input: [
+        {
+          role: 'user',
+          content: [
+            { type: 'input_text', text: EXTRACTION_PROMPT },
+            {
+              type: 'input_file',
+              filename: 'statement.pdf',
+              file_data: `data:application/pdf;base64,${base64Data}`,
+            },
+          ],
+        },
+      ],
+    }),
   })
 
-  return parseTransactionJson(response.output_text || '[]')
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}))
+    throw new Error(errorData?.error?.message || `OpenAI API error: ${res.status}`)
+  }
+
+  const data = await res.json()
+  const text = data.output_text
+    || data.output?.[0]?.content?.[0]?.text
+    || '[]'
+
+  return parseTransactionJson(text)
 }
 
 export async function POST(request: NextRequest) {
