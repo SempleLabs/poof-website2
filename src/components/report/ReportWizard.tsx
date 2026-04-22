@@ -68,7 +68,7 @@ export default function ReportWizard() {
         transactions: categorized.transactions,
         summary: categorized.summary,
         spendScore: categorized.spendScore,
-        narrative: categorized.narrative,
+        insights: categorized.insights,
       })
       setStep('email-gate')
     } catch (err) {
@@ -115,7 +115,7 @@ export default function ReportWizard() {
           topCategory: report.summary.topCategories[0]?.name,
           summary: report.summary,
           spendScore: report.spendScore,
-          narrative: report.narrative,
+          insights: report.insights,
         }),
       }).catch(() => {})  // Don't block on email save
 

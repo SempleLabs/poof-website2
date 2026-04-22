@@ -27,11 +27,17 @@ export interface ReportSummary {
   largestTransaction: { description: string; amount: number; date: string }
 }
 
+export interface Insight {
+  emoji: string
+  title: string
+  detail: string
+}
+
 export interface FinancialReport {
   transactions: CategorizedTransaction[]
   summary: ReportSummary
   spendScore: SpendScore
-  narrative: string
+  insights: Insight[]
   imageBase64?: string
 }
 

@@ -1,7 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import type { FinancialReport } from '@/lib/report-types'
+import type { FinancialReport, CategorizedTransaction } from '@/lib/report-types'
 import CategoryBreakdown from './CategoryBreakdown'
 
 interface ReportResultsProps {
@@ -23,8 +24,74 @@ function ScoreBar({ score, label }: { score: number; label: string }) {
   )
 }
 
+function TransactionsByCategory({ transactions }: { transactions: CategorizedTransaction[] }) {
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+
+  // Group transactions by category
+  const grouped: Record<string, CategorizedTransaction[]> = {}
+  for (const tx of transactions) {
+    if (!grouped[tx.category]) grouped[tx.category] = []
+    grouped[tx.category].push(tx)
+  }
+
+  // Sort categories by total amount descending
+  const sortedCategories = Object.entries(grouped).sort(
+    (a, b) => b[1].reduce((s, t) => s + t.amount, 0) - a[1].reduce((s, t) => s + t.amount, 0)
+  )
+
+  return (
+    <div className="space-y-2">
+      {sortedCategories.map(([category, txs]) => {
+        const total = txs.reduce((s, t) => s + t.amount, 0)
+        const isExpanded = expandedCategory === category
+        const isIncome = txs[0]?.type === 'credit'
+
+        return (
+          <div key={category} className="border border-slate-200 rounded-xl overflow-hidden">
+            <button
+              onClick={() => setExpandedCategory(isExpanded ? null : category)}
+              className="w-full flex items-center justify-between p-4 hover:bg-slate-50 transition-colors text-left"
+            >
+              <div className="flex items-center space-x-3">
+                <span className="text-sm font-semibold text-slate-900">{category}</span>
+                <span className="text-xs text-slate-400">{txs.length} transaction{txs.length !== 1 ? 's' : ''}</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className={`text-sm font-bold ${isIncome ? 'text-emerald-600' : 'text-slate-900'}`}>
+                  ${total.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                </span>
+                <svg
+                  className={`w-4 h-4 text-slate-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </button>
+            {isExpanded && (
+              <div className="border-t border-slate-100 bg-slate-50/50">
+                {txs.map((tx, i) => (
+                  <div key={i} className="flex items-center justify-between px-4 py-2.5 text-sm border-b border-slate-100 last:border-0">
+                    <div className="flex items-center space-x-3 min-w-0 flex-1">
+                      <span className="text-slate-400 text-xs w-20 flex-shrink-0">{tx.date}</span>
+                      <span className="text-slate-700 truncate">{tx.description}</span>
+                    </div>
+                    <span className={`font-medium flex-shrink-0 ml-3 ${tx.type === 'credit' ? 'text-emerald-600' : 'text-slate-900'}`}>
+                      {tx.type === 'credit' ? '+' : '-'}${tx.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function ReportResults({ report }: ReportResultsProps) {
-  const { summary, spendScore, narrative, imageBase64 } = report
+  const { summary, spendScore, insights, transactions, imageBase64 } = report
   const scoreColor = spendScore.overall >= 70 ? '#10b981' : spendScore.overall >= 50 ? '#f59e0b' : '#ef4444'
   const scoreLabel = spendScore.overall >= 90 ? 'Excellent' : spendScore.overall >= 70 ? 'Good' : spendScore.overall >= 50 ? 'Fair' : 'Needs Attention'
 
@@ -94,20 +161,35 @@ export default function ReportResults({ report }: ReportResultsProps) {
         </div>
       </div>
 
-      {/* Narrative */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
-        <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Your Financial Narrative</h3>
-        <div className="prose prose-slate max-w-none">
-          {narrative.split('\n\n').map((paragraph, i) => (
-            <p key={i} className="text-slate-700 leading-relaxed mb-4 last:mb-0">{paragraph}</p>
-          ))}
+      {/* Key Insights */}
+      {insights && insights.length > 0 && (
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <h3 className="text-xl font-bold font-display text-slate-900 mb-5">Key Insights</h3>
+          <div className="space-y-4">
+            {insights.map((insight, i) => (
+              <div key={i} className="flex items-start space-x-3 bg-slate-50 rounded-xl p-4">
+                <span className="text-xl flex-shrink-0">{insight.emoji}</span>
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">{insight.title}</p>
+                  <p className="text-slate-600 text-sm mt-0.5">{insight.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Category Breakdown */}
       <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
         <h3 className="text-xl font-bold font-display text-slate-900 mb-6">Spending Breakdown</h3>
         <CategoryBreakdown categories={summary.topCategories} />
+      </div>
+
+      {/* Transaction Details */}
+      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+        <h3 className="text-xl font-bold font-display text-slate-900 mb-2">Transaction Details</h3>
+        <p className="text-sm text-slate-500 mb-5">Tap a category to see which transactions are inside.</p>
+        <TransactionsByCategory transactions={transactions} />
       </div>
 
       {/* AI-Generated Infographic */}

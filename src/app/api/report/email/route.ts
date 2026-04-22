@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
-import type { ReportSummary, SpendScore } from '@/lib/report-types'
+import type { ReportSummary, SpendScore, Insight } from '@/lib/report-types'
 
 interface EmailPayload {
   email: string
@@ -9,7 +9,7 @@ interface EmailPayload {
   topCategory?: string
   summary?: ReportSummary
   spendScore?: SpendScore
-  narrative?: string
+  insights?: Insight[]
 }
 
 function getScoreColor(score: number): string {
@@ -26,7 +26,7 @@ function getScoreLabel(score: number): string {
 }
 
 function buildReportEmail(payload: EmailPayload): string {
-  const { summary, spendScore, narrative } = payload
+  const { summary, spendScore } = payload
 
   if (!summary || !spendScore) {
     return `<p>Thanks for using the Spend Score tool! Visit <a href="https://poof.ai/spend-score">poof.ai/spend-score</a> to generate your report.</p>`
@@ -52,8 +52,11 @@ function buildReportEmail(payload: EmailPayload): string {
       </tr>`
   }).join('')
 
-  const narrativeParagraphs = (narrative || '').split('\n\n').map(p =>
-    `<p style="margin: 0 0 16px; color: #334155; font-size: 15px; line-height: 1.7;">${p}</p>`
+  const insightRows = (payload.insights || []).map(insight =>
+    `<tr><td style="padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+      <div style="font-size: 14px;"><span style="margin-right: 8px;">${insight.emoji}</span><strong style="color: #0f172a;">${insight.title}</strong></div>
+      <div style="font-size: 13px; color: #64748b; margin-top: 4px;">${insight.detail}</div>
+    </td></tr>`
   ).join('')
 
   const subScores = [
@@ -127,10 +130,10 @@ function buildReportEmail(payload: EmailPayload): string {
       </table>
     </div>
 
-    <!-- Narrative -->
+    <!-- Key Insights -->
     <div style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #e2e8f0;">
-      <div style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Your Financial Narrative</div>
-      ${narrativeParagraphs}
+      <div style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Key Insights</div>
+      <table width="100%" cellpadding="0" cellspacing="0">${insightRows}</table>
     </div>
 
     <!-- Category Breakdown -->

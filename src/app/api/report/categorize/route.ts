@@ -4,6 +4,83 @@ import type { ParsedTransaction } from '@/lib/report-types'
 
 export const runtime = 'edge'
 
+// Pre-built categorization decision tree (simplified BRAID approach)
+// This replaces Stage 1 of BRAID — no need to generate per user since categories are fixed
+const CATEGORIZATION_TREE = `
+CATEGORIZATION DECISION TREE — follow this in order for each transaction:
+
+1. CHECK TRANSACTION TYPE FIRST:
+   - If type is "credit" (money IN): category = "Income" UNLESS description clearly indicates a refund/return → then category matches the original purchase category
+
+2. FOR DEBITS (money OUT), follow these keyword rules in priority order:
+
+   RENT/MORTGAGE:
+   - Keywords: rent, mortgage, lease, landlord, property management
+   - Zelle/Venmo with "rent" in description → Rent/Mortgage (NOT Transfers)
+   - Example: "Zelle to Chawla Sumesh February Rent" → Rent/Mortgage
+
+   CREDIT CARD PAYMENTS:
+   - Keywords: "credit card", "visa", "mastercard", "amex", "discover", "bill pay.*card", "online transfer.*card", "cash back visa"
+   - These are payments TO credit cards → category = "Credit Card Payments"
+   - Example: "Online Transfer to Wells Fargo Cash Back VISA" → Credit Card Payments
+   - Example: "Bill Pay Target Credit Card" → Credit Card Payments
+
+   GROCERIES:
+   - Keywords: walmart grocery, kroger, safeway, whole foods, trader joe, aldi, publix, heb, costco, sam's club, grocery, supermarket, food lion, wegmans, sprouts
+
+   DINING OUT:
+   - Keywords: restaurant, mcdonald, starbucks, chipotle, chick-fil-a, pizza, doordash, uber eats, grubhub, cafe, bar, grill, taco, sushi, diner, panera, subway
+
+   TRANSPORTATION:
+   - Keywords: gas, shell, chevron, exxon, bp, uber, lyft, parking, toll, transit, metro, fuel, speedway, wawa fuel
+
+   UTILITIES:
+   - Keywords: electric, water, gas bill, power, energy, sewage, trash, waste, internet, comcast, att, verizon, tmobile, spectrum, xfinity, phone bill
+
+   SUBSCRIPTIONS:
+   - Keywords: netflix, spotify, hulu, disney, apple.com/bill, amazon prime, youtube, adobe, microsoft 365, dropbox, icloud, hbo, paramount, the athletic, gym membership
+   - Recurring small charges from tech companies → Subscriptions
+
+   INSURANCE:
+   - Keywords: insurance, ins, geico, state farm, allstate, progressive, farmers ins, usaa, liberty mutual, aetna, cigna, blue cross
+
+   HEALTHCARE:
+   - Keywords: doctor, hospital, pharmacy, cvs pharmacy, walgreens rx, dental, vision, medical, copay, urgent care, lab, health
+
+   ENTERTAINMENT:
+   - Keywords: movie, theater, concert, ticket, gaming, steam, playstation, xbox, amusement, museum, zoo, bowling, golf
+
+   SHOPPING:
+   - Keywords: amazon, target, walmart (non-grocery), best buy, home depot, lowes, ikea, tj maxx, marshalls, kohls, macys, nordstrom, etsy, ebay
+
+   SAVINGS/INVESTMENTS:
+   - Keywords: savings, 401k, ira, investment, brokerage, fidelity, schwab, vanguard, robinhood, acorns, transfer to savings
+
+   TRANSFERS (use ONLY when no better category fits):
+   - Internal bank transfers between own accounts (NOT credit card payments)
+   - Zelle/Venmo to individuals WITHOUT context clues about purpose
+   - Wire transfers without clear purpose
+   - IMPORTANT: Do NOT put credit card payments, rent payments, or contextual Zelle/Venmo here
+
+   FEES/INTEREST:
+   - Keywords: fee, service charge, atm fee, overdraft, interest charge, late fee, nsf
+
+   OTHER:
+   - Checks without clear payee context
+   - Anything that truly doesn't fit above categories
+
+3. VENMO/ZELLE/CASHAPP SPECIAL RULES:
+   - Look at the FULL description for context clues
+   - "Venmo Payment" with no context → Transfers
+   - "Zelle to [name] [purpose]" → categorize by the purpose (e.g., "rent" → Rent/Mortgage)
+   - "Venmo Cashout" or "Zelle From" = incoming money → Income
+   - "Cashapp" follows same rules as Venmo
+
+4. PAYROLL/DIRECT DEPOSIT:
+   - "payroll", "direct dep", "dir dep", "salary" → Income
+   - Company name + "payroll" → Income
+`
+
 export async function POST(request: NextRequest) {
   try {
     const { transactions } = await request.json() as { transactions: ParsedTransaction[] }
@@ -14,7 +91,6 @@ export async function POST(request: NextRequest) {
 
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-    // Build a compact representation to minimize tokens
     const txSummary = transactions.map(t =>
       `${t.date}|${t.description}|${t.amount}|${t.type}`
     ).join('\n')
@@ -24,7 +100,7 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: 'system',
-          content: `You are a financial analyst AI. You categorize transactions, calculate spending scores, and write insightful financial narratives.
+          content: `You are a financial analyst AI. You categorize transactions using a decision tree and generate spending scores and insights.
 Return ONLY valid JSON — no markdown, no code fences, no explanation.`,
         },
         {
@@ -33,7 +109,9 @@ Return ONLY valid JSON — no markdown, no code fences, no explanation.`,
 
 ${txSummary}
 
-Analyze these transactions and return a JSON object with this exact structure:
+${CATEGORIZATION_TREE}
+
+Return a JSON object with this exact structure:
 {
   "transactions": [
     { "date": "...", "description": "...", "amount": number, "type": "debit"|"credit", "category": "..." }
@@ -54,36 +132,36 @@ Analyze these transactions and return a JSON object with this exact structure:
     "subscriptionLoad": { "score": number, "label": "..." },
     "largestTransactionRatio": { "score": number, "label": "..." }
   },
-  "narrative": "..."
+  "insights": [
+    { "emoji": "...", "title": "short title", "detail": "1-2 sentence actionable insight" }
+  ]
 }
 
-CATEGORIZATION RULES:
-- Use these categories: Income, Rent/Mortgage, Utilities, Groceries, Dining Out, Transportation, Entertainment, Subscriptions, Healthcare, Insurance, Shopping, Transfers, Fees/Interest, Savings, Other
-- Match transactions to the most specific category possible
-- Credits are typically Income or Transfers unless they're clearly refunds
-
-SUMMARY RULES:
-- totalIncome = sum of all credit amounts
-- totalExpenses = sum of all debit amounts
-- net = totalIncome - totalExpenses
-- topCategories should include ALL categories found, sorted by total descending, with percentage of total spending (debits only)
-- largestTransaction = the single transaction with the highest absolute amount
+CRITICAL COUNTING RULES:
+- EVERY credit transaction MUST be counted in totalIncome — payroll, Zelle incoming, Venmo cashouts, mobile deposits, interest, refunds — ALL of them
+- EVERY debit transaction MUST be counted in totalExpenses — even credit card payments, transfers, rent, everything
+- transactionCount = total number of transactions in the array
+- net = totalIncome - totalExpenses (can be negative)
+- Double-check your sums. If the statement shows totals, your numbers should match.
+- topCategories: include ALL expense categories found (debits only), sorted by total descending, percentage = category total / totalExpenses * 100
+- largestTransaction: the single transaction with highest amount (debit or credit)
 
 SPEND SCORE RULES (each sub-score is 0-100):
-- savingsRate: Based on (totalIncome - totalExpenses) / totalIncome. 30%+ savings = 100, 20-30% = 80, 10-20% = 60, 0-10% = 40, negative = 20. Label describes the finding (e.g., "You saved 24% of your income").
-- spendingDiversity: Based on how evenly spending is distributed across categories. If top category is <25% of spending = 100, 25-40% = 75, 40-60% = 50, >60% = 25. Label describes it (e.g., "Spending is well-balanced across 8 categories").
-- subscriptionLoad: Based on recurring/subscription charges as % of total expenses. <5% = 100, 5-10% = 80, 10-20% = 60, 20-30% = 40, >30% = 20. Label describes it (e.g., "Subscriptions are 12% of your spending").
-- largestTransactionRatio: Based on largest single transaction as % of total expenses. <5% = 100, 5-15% = 80, 15-25% = 60, 25-40% = 40, >40% = 20. Label describes it (e.g., "Your largest expense was 8% of total spending").
-- overall: Weighted average — savingsRate (40%) + spendingDiversity (20%) + subscriptionLoad (20%) + largestTransactionRatio (20%). Round to nearest integer.
+- savingsRate: Based on net / totalIncome. 30%+ = 100, 20-30% = 80, 10-20% = 60, 0-10% = 40, negative = 20. Label: describe the finding.
+- spendingDiversity: How evenly REAL spending (exclude Credit Card Payments and Transfers) is distributed. Top real category <25% = 100, 25-40% = 75, 40-60% = 50, >60% = 25. Label: describe.
+- subscriptionLoad: Subscriptions as % of total expenses. <5% = 100, 5-10% = 80, 10-20% = 60, 20-30% = 40, >30% = 20. Label: describe.
+- largestTransactionRatio: Largest single debit as % of total expenses. <5% = 100, 5-15% = 80, 15-25% = 60, 25-40% = 40, >40% = 20. Label: describe.
+- overall: Weighted average — savingsRate 40% + spendingDiversity 20% + subscriptionLoad 20% + largestTransactionRatio 20%. Round to integer.
 
-NARRATIVE RULES:
-- Write a 3-paragraph narrative in second person ("you")
-- Paragraph 1: Lead with the Spend Score number and what it means. Overview of income vs expenses and whether they're in the green or red.
-- Paragraph 2: Key patterns — top spending categories, notable transactions, recurring charges. Reference the sub-scores.
-- Paragraph 3: One specific, actionable tip based on the weakest sub-score.
-- Tone: friendly, insightful, conversational — like a smart friend reviewing your finances
-- Include specific dollar amounts
-- Separate paragraphs with double newlines
+INSIGHTS RULES (generate exactly 4):
+- Each insight should be specific, actionable, and reference actual dollar amounts from this data
+- Insight 1: The most surprising or notable finding (biggest category, unusual pattern)
+- Insight 2: A specific money-saving opportunity based on the weakest sub-score
+- Insight 3: Something positive to acknowledge (best sub-score or good habit)
+- Insight 4: A concrete next step they can take this week
+- Use a relevant emoji for each (e.g., "💡", "⚠️", "✅", "🎯")
+- Tone: direct and specific, like a friend who's good with money — NOT generic financial advice
+- Do NOT just restate the numbers — tell them something they didn't already know
 
 Return ONLY the JSON object.`,
         },
@@ -96,8 +174,7 @@ Return ONLY the JSON object.`,
     const content = response.choices[0]?.message?.content?.trim() || '{}'
     const result = JSON.parse(content)
 
-    // Validate required fields exist
-    if (!result.transactions || !result.summary || !result.narrative || !result.spendScore) {
+    if (!result.transactions || !result.summary || !result.spendScore || !result.insights) {
       throw new Error('Incomplete analysis result.')
     }
 
