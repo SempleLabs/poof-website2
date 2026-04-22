@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
 import Papa from 'papaparse'
-import { PDFParse } from 'pdf-parse'
+// pdf-parse is dynamically imported only when needed to avoid breaking other upload paths
 import type { ParsedTransaction } from '@/lib/report-types'
 
 // Use Node.js serverless runtime (not Edge) so we can use pdf-parse
@@ -189,6 +189,7 @@ function parseTransactionJson(content: string): ParsedTransaction[] {
 async function parsePdf(buffer: Buffer): Promise<ParsedTransaction[]> {
   // Stage 1: Try text extraction first (fast, cheap)
   try {
+    const { PDFParse } = await import('pdf-parse')
     const parser = new PDFParse({ data: buffer })
     const result = await parser.getText()
     const text = result.text || ''

@@ -32,11 +32,16 @@ export default function ReportWizard() {
       })
 
       if (!uploadRes.ok) {
-        const data = await uploadRes.json()
-        throw new Error(data.error || 'Failed to parse your statement. Please try a different file.')
+        const contentType = uploadRes.headers.get('content-type') || ''
+        if (contentType.includes('application/json')) {
+          const data = await uploadRes.json()
+          throw new Error(data.error || 'Failed to parse your statement. Please try a different file.')
+        }
+        throw new Error('Server error. Please try again or use a CSV file instead.')
       }
 
-      const { transactions } = await uploadRes.json()
+      const uploadData = await uploadRes.json()
+      const { transactions } = uploadData
       setProcessingPhase(1)
 
       // Phase 2: Categorize + narrative
@@ -47,8 +52,12 @@ export default function ReportWizard() {
       })
 
       if (!categorizeRes.ok) {
-        const data = await categorizeRes.json()
-        throw new Error(data.error || 'Failed to analyze transactions. Please try again.')
+        const contentType = categorizeRes.headers.get('content-type') || ''
+        if (contentType.includes('application/json')) {
+          const data = await categorizeRes.json()
+          throw new Error(data.error || 'Failed to analyze transactions. Please try again.')
+        }
+        throw new Error('Analysis timed out. Please try a smaller file or CSV format.')
       }
 
       const categorized = await categorizeRes.json()
