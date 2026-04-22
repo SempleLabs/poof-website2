@@ -174,8 +174,73 @@ Return ONLY the JSON object.`,
     const content = response.choices[0]?.message?.content?.trim() || '{}'
     const result = JSON.parse(content)
 
-    if (!result.transactions || !result.summary || !result.spendScore || !result.insights) {
+    if (!result.transactions || !result.spendScore || !result.insights) {
       throw new Error('Incomplete analysis result.')
+    }
+
+    // Recalculate totals ourselves — LLMs can't do math reliably
+    const txs = result.transactions as { amount: number; type: string; category: string; date: string; description: string }[]
+    const totalIncome = txs.filter(t => t.type === 'credit').reduce((s, t) => s + t.amount, 0)
+    const totalExpenses = txs.filter(t => t.type === 'debit').reduce((s, t) => s + t.amount, 0)
+    const net = totalIncome - totalExpenses
+
+    // Recalculate category totals (debits only)
+    const catMap: Record<string, number> = {}
+    for (const t of txs) {
+      if (t.type === 'debit') {
+        catMap[t.category] = (catMap[t.category] || 0) + t.amount
+      }
+    }
+    const topCategories = Object.entries(catMap)
+      .map(([name, total]) => ({
+        name,
+        total: Math.round(total * 100) / 100,
+        percentage: totalExpenses > 0 ? Math.round((total / totalExpenses) * 10000) / 100 : 0,
+      }))
+      .sort((a, b) => b.total - a.total)
+
+    // Find largest transaction
+    const largest = txs.reduce((max, t) => t.amount > max.amount ? t : max, txs[0])
+
+    // Find date range
+    const dates = txs.map(t => t.date).sort()
+
+    // Recalculate spend score
+    const savingsRatio = totalIncome > 0 ? net / totalIncome : -1
+    const savingsScore = savingsRatio >= 0.3 ? 100 : savingsRatio >= 0.2 ? 80 : savingsRatio >= 0.1 ? 60 : savingsRatio >= 0 ? 40 : 20
+
+    // Spending diversity: exclude Credit Card Payments and Transfers
+    const realSpending = topCategories.filter(c => c.name !== 'Credit Card Payments' && c.name !== 'Transfers')
+    const realTotal = realSpending.reduce((s, c) => s + c.total, 0)
+    const topRealPct = realTotal > 0 && realSpending.length > 0 ? (realSpending[0].total / realTotal) * 100 : 100
+    const diversityScore = topRealPct < 25 ? 100 : topRealPct < 40 ? 75 : topRealPct < 60 ? 50 : 25
+
+    const subTotal = topCategories.find(c => c.name === 'Subscriptions')?.total || 0
+    const subPct = totalExpenses > 0 ? (subTotal / totalExpenses) * 100 : 0
+    const subScore = subPct < 5 ? 100 : subPct < 10 ? 80 : subPct < 20 ? 60 : subPct < 30 ? 40 : 20
+
+    const largestDebit = txs.filter(t => t.type === 'debit').reduce((max, t) => t.amount > max.amount ? t : max, { amount: 0 })
+    const largestPct = totalExpenses > 0 ? (largestDebit.amount / totalExpenses) * 100 : 0
+    const concScore = largestPct < 5 ? 100 : largestPct < 15 ? 80 : largestPct < 25 ? 60 : largestPct < 40 ? 40 : 20
+
+    const overall = Math.round(savingsScore * 0.4 + diversityScore * 0.2 + subScore * 0.2 + concScore * 0.2)
+
+    result.summary = {
+      totalIncome: Math.round(totalIncome * 100) / 100,
+      totalExpenses: Math.round(totalExpenses * 100) / 100,
+      net: Math.round(net * 100) / 100,
+      transactionCount: txs.length,
+      dateRange: { start: dates[0] || '', end: dates[dates.length - 1] || '' },
+      topCategories,
+      largestTransaction: { description: largest.description, amount: largest.amount, date: largest.date },
+    }
+
+    result.spendScore = {
+      overall,
+      savingsRate: { score: savingsScore, label: result.spendScore.savingsRate?.label || `You saved ${(savingsRatio * 100).toFixed(1)}% of your income` },
+      spendingDiversity: { score: diversityScore, label: result.spendScore.spendingDiversity?.label || `Top real spending category is ${topRealPct.toFixed(0)}% of non-transfer expenses` },
+      subscriptionLoad: { score: subScore, label: result.spendScore.subscriptionLoad?.label || `Subscriptions are ${subPct.toFixed(1)}% of your spending` },
+      largestTransactionRatio: { score: concScore, label: result.spendScore.largestTransactionRatio?.label || `Your largest expense was ${largestPct.toFixed(1)}% of total spending` },
     }
 
     return NextResponse.json(result)
