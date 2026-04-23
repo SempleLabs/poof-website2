@@ -125,16 +125,16 @@ export default function ReportResults({ report }: ReportResultsProps) {
             <p className="text-xs text-slate-500 mt-2">{spendScore.savingsRate.label}</p>
           </div>
           <div className="bg-slate-50 rounded-xl p-4">
-            <ScoreBar score={spendScore.spendingDiversity.score} label="Spending Diversity" />
-            <p className="text-xs text-slate-500 mt-2">{spendScore.spendingDiversity.label}</p>
+            <ScoreBar score={spendScore.needsVsWants.score} label="Needs vs Wants" />
+            <p className="text-xs text-slate-500 mt-2">{spendScore.needsVsWants.label}</p>
           </div>
           <div className="bg-slate-50 rounded-xl p-4">
-            <ScoreBar score={spendScore.subscriptionLoad.score} label="Subscription Load" />
-            <p className="text-xs text-slate-500 mt-2">{spendScore.subscriptionLoad.label}</p>
+            <ScoreBar score={spendScore.recurringCosts.score} label="Recurring Costs" />
+            <p className="text-xs text-slate-500 mt-2">{spendScore.recurringCosts.label}</p>
           </div>
           <div className="bg-slate-50 rounded-xl p-4">
-            <ScoreBar score={spendScore.largestTransactionRatio.score} label="Expense Concentration" />
-            <p className="text-xs text-slate-500 mt-2">{spendScore.largestTransactionRatio.label}</p>
+            <ScoreBar score={spendScore.spendingStability.score} label="Spending Stability" />
+            <p className="text-xs text-slate-500 mt-2">{spendScore.spendingStability.label}</p>
           </div>
         </div>
       </div>

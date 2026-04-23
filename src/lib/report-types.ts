@@ -12,9 +12,9 @@ export interface CategorizedTransaction extends ParsedTransaction {
 export interface SpendScore {
   overall: number // 0-100
   savingsRate: { score: number; label: string }
-  spendingDiversity: { score: number; label: string }
-  subscriptionLoad: { score: number; label: string }
-  largestTransactionRatio: { score: number; label: string }
+  needsVsWants: { score: number; label: string }
+  recurringCosts: { score: number; label: string }
+  spendingStability: { score: number; label: string }
 }
 
 export interface ReportSummary {

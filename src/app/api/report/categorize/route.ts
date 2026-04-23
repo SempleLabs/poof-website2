@@ -128,9 +128,9 @@ Return a JSON object with this exact structure:
   "spendScore": {
     "overall": number,
     "savingsRate": { "score": number, "label": "..." },
-    "spendingDiversity": { "score": number, "label": "..." },
-    "subscriptionLoad": { "score": number, "label": "..." },
-    "largestTransactionRatio": { "score": number, "label": "..." }
+    "needsVsWants": { "score": number, "label": "..." },
+    "recurringCosts": { "score": number, "label": "..." },
+    "spendingStability": { "score": number, "label": "..." }
   },
   "insights": [
     { "emoji": "...", "title": "short title", "detail": "1-2 sentence actionable insight" }
@@ -146,22 +146,21 @@ CRITICAL COUNTING RULES:
 - topCategories: include ALL expense categories found (debits only), sorted by total descending, percentage = category total / totalExpenses * 100
 - largestTransaction: the single transaction with highest amount (debit or credit)
 
-SPEND SCORE RULES (each sub-score is 0-100):
-- savingsRate: Based on net / totalIncome. 30%+ = 100, 20-30% = 80, 10-20% = 60, 0-10% = 40, negative = 20. Label: describe the finding.
-- spendingDiversity: How evenly REAL spending (exclude Credit Card Payments and Transfers) is distributed. Top real category <25% = 100, 25-40% = 75, 40-60% = 50, >60% = 25. Label: describe.
-- subscriptionLoad: Subscriptions as % of total expenses. <5% = 100, 5-10% = 80, 10-20% = 60, 20-30% = 40, >30% = 20. Label: describe.
-- largestTransactionRatio: Largest single debit as % of total expenses. <5% = 100, 5-15% = 80, 15-25% = 60, 25-40% = 40, >40% = 20. Label: describe.
-- overall: Weighted average — savingsRate 40% + spendingDiversity 20% + subscriptionLoad 20% + largestTransactionRatio 20%. Round to integer.
+SPEND SCORE RULES (each sub-score is 0-100, AI generates labels only — scores are recalculated server-side):
+- savingsRate: How much income was saved. Label: describe the finding concisely.
+- needsVsWants: How spending splits between essentials (Rent/Mortgage, Utilities, Groceries, Insurance, Healthcare, Transportation) vs discretionary (Dining Out, Entertainment, Shopping, Subscriptions). Based on 50/30/20 rule. Label: e.g., "62% of spending went to essentials, 18% to wants"
+- recurringCosts: All recurring/fixed costs (Rent, Utilities, Insurance, Subscriptions) as % of income. Shows how "locked in" spending is. Label: e.g., "Fixed costs are 45% of your income"
+- spendingStability: Whether spending is dominated by a few large transactions or spread evenly. Label: e.g., "Your top 3 transactions account for 58% of spending"
+- overall: Will be recalculated server-side.
 
 INSIGHTS RULES (generate exactly 4):
-- Each insight should be specific, actionable, and reference actual dollar amounts from this data
-- Insight 1: The most surprising or notable finding (biggest category, unusual pattern)
-- Insight 2: A specific money-saving opportunity based on the weakest sub-score
-- Insight 3: Something positive to acknowledge (best sub-score or good habit)
-- Insight 4: A concrete next step they can take this week
-- Use a relevant emoji for each (e.g., "💡", "⚠️", "✅", "🎯")
-- Tone: direct and specific, like a friend who's good with money — NOT generic financial advice
-- Do NOT just restate the numbers — tell them something they didn't already know
+- Each insight MUST be specific to THIS person's data with actual dollar amounts — never generic
+- Insight 1 (Discovery): Something surprising they probably didn't realize — a hidden pattern, a merchant they're spending more at than they'd guess, or a trend (e.g., "You spent $847 at Amazon across 6 transactions — that's $141/month if this is typical")
+- Insight 2 (Opportunity): A specific, actionable saving opportunity with dollar estimate (e.g., "Your 3 subscriptions total $22/mo. If you dropped just The Athletic ($1/mo trial), you'd save $60-120/year at full price")
+- Insight 3 (Benchmark): Compare one aspect of their spending to a common benchmark like the 50/30/20 rule (e.g., "Your needs-to-wants ratio is 72/28 — tighter than the recommended 50/30, which means most of your money goes to essentials")
+- Insight 4 (Action): One concrete thing they can do THIS WEEK based on the data (e.g., "Set up a $500 auto-transfer to savings on payday — based on your income, that's 3% and you wouldn't feel it")
+- Use emojis: "🔍", "💰", "📊", "✅"
+- Tone: like a sharp friend reviewing your bank statement over coffee — specific, honest, no fluff
 
 Return ONLY the JSON object.`,
         },
@@ -213,25 +212,32 @@ Return ONLY the JSON object.`,
     // Find date range
     const dates = txs.map(t => t.date).sort()
 
-    // Recalculate spend score
+    // Recalculate spend score with improved metrics
     const savingsRatio = totalIncome > 0 ? net / totalIncome : -1
     const savingsScore = savingsRatio >= 0.3 ? 100 : savingsRatio >= 0.2 ? 80 : savingsRatio >= 0.1 ? 60 : savingsRatio >= 0 ? 40 : 20
 
-    // Spending diversity: exclude Credit Card Payments and Transfers
-    const realSpending = topCategories.filter(c => c.name !== 'Credit Card Payments' && c.name !== 'Transfers')
-    const realTotal = realSpending.reduce((s, c) => s + c.total, 0)
-    const topRealPct = realTotal > 0 && realSpending.length > 0 ? (realSpending[0].total / realTotal) * 100 : 100
-    const diversityScore = topRealPct < 25 ? 100 : topRealPct < 40 ? 75 : topRealPct < 60 ? 50 : 25
+    // Needs vs Wants: essentials vs discretionary spending
+    const needsCats = ['Rent/Mortgage', 'Utilities', 'Groceries', 'Insurance', 'Healthcare', 'Transportation']
+    const wantsCats = ['Dining Out', 'Entertainment', 'Shopping', 'Subscriptions']
+    const needsTotal = topCategories.filter(c => needsCats.includes(c.name)).reduce((s, c) => s + c.total, 0)
+    const wantsTotal = topCategories.filter(c => wantsCats.includes(c.name)).reduce((s, c) => s + c.total, 0)
+    const wantsPct = totalExpenses > 0 ? (wantsTotal / totalExpenses) * 100 : 0
+    // 50/30/20: wants should be ≤30% of spending
+    const needsWantsScore = wantsPct <= 20 ? 100 : wantsPct <= 30 ? 80 : wantsPct <= 40 ? 60 : wantsPct <= 50 ? 40 : 20
 
-    const subTotal = topCategories.find(c => c.name === 'Subscriptions')?.total || 0
-    const subPct = totalExpenses > 0 ? (subTotal / totalExpenses) * 100 : 0
-    const subScore = subPct < 5 ? 100 : subPct < 10 ? 80 : subPct < 20 ? 60 : subPct < 30 ? 40 : 20
+    // Recurring costs as % of income
+    const recurringCats = ['Rent/Mortgage', 'Utilities', 'Insurance', 'Subscriptions']
+    const recurringTotal = topCategories.filter(c => recurringCats.includes(c.name)).reduce((s, c) => s + c.total, 0)
+    const recurringPct = totalIncome > 0 ? (recurringTotal / totalIncome) * 100 : 100
+    const recurringScore = recurringPct <= 30 ? 100 : recurringPct <= 40 ? 80 : recurringPct <= 50 ? 60 : recurringPct <= 65 ? 40 : 20
 
-    const largestDebit = txs.filter(t => t.type === 'debit').reduce((max, t) => t.amount > max.amount ? t : max, { amount: 0 })
-    const largestPct = totalExpenses > 0 ? (largestDebit.amount / totalExpenses) * 100 : 0
-    const concScore = largestPct < 5 ? 100 : largestPct < 15 ? 80 : largestPct < 25 ? 60 : largestPct < 40 ? 40 : 20
+    // Spending stability: how much top 3 transactions dominate
+    const sortedDebits = txs.filter(t => t.type === 'debit').sort((a, b) => b.amount - a.amount)
+    const top3Total = sortedDebits.slice(0, 3).reduce((s, t) => s + t.amount, 0)
+    const top3Pct = totalExpenses > 0 ? (top3Total / totalExpenses) * 100 : 0
+    const stabilityScore = top3Pct <= 25 ? 100 : top3Pct <= 40 ? 80 : top3Pct <= 55 ? 60 : top3Pct <= 70 ? 40 : 20
 
-    const overall = Math.round(savingsScore * 0.4 + diversityScore * 0.2 + subScore * 0.2 + concScore * 0.2)
+    const overall = Math.round(savingsScore * 0.35 + needsWantsScore * 0.25 + recurringScore * 0.2 + stabilityScore * 0.2)
 
     result.summary = {
       totalIncome: Math.round(totalIncome * 100) / 100,
@@ -243,12 +249,13 @@ Return ONLY the JSON object.`,
       largestTransaction: { description: largest.description, amount: largest.amount, date: largest.date },
     }
 
+    const needsPct = totalExpenses > 0 ? (needsTotal / totalExpenses) * 100 : 0
     result.spendScore = {
       overall,
       savingsRate: { score: savingsScore, label: result.spendScore.savingsRate?.label || `You saved ${(savingsRatio * 100).toFixed(1)}% of your income` },
-      spendingDiversity: { score: diversityScore, label: result.spendScore.spendingDiversity?.label || `Top real spending category is ${topRealPct.toFixed(0)}% of non-transfer expenses` },
-      subscriptionLoad: { score: subScore, label: result.spendScore.subscriptionLoad?.label || `Subscriptions are ${subPct.toFixed(1)}% of your spending` },
-      largestTransactionRatio: { score: concScore, label: result.spendScore.largestTransactionRatio?.label || `Your largest expense was ${largestPct.toFixed(1)}% of total spending` },
+      needsVsWants: { score: needsWantsScore, label: result.spendScore.needsVsWants?.label || `${needsPct.toFixed(0)}% needs, ${wantsPct.toFixed(0)}% wants` },
+      recurringCosts: { score: recurringScore, label: result.spendScore.recurringCosts?.label || `Fixed costs are ${recurringPct.toFixed(0)}% of your income` },
+      spendingStability: { score: stabilityScore, label: result.spendScore.spendingStability?.label || `Your top 3 transactions are ${top3Pct.toFixed(0)}% of spending` },
     }
 
     return NextResponse.json(result)

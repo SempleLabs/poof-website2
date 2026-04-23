@@ -35,7 +35,7 @@ Layout (top to bottom):
    - ${netStatus} (in ${summary.net >= 0 ? 'green' : 'red/coral'})
 4. SPENDING BREAKDOWN: A stylized horizontal bar chart or donut chart showing the top spending categories: ${categoryList}
 5. QUICK STATS: "${summary.transactionCount} transactions analyzed | ${summary.dateRange.start} — ${summary.dateRange.end}"
-6. FOOTER: Small text "poof.ai — Bookkeeping That Does Itself" with a subtle violet accent
+6. FOOTER: Small text "poofai.com — Bookkeeping That Does Itself" with a subtle violet accent
 
 Color palette: Primary violet (#8b5cf6), indigo (#6366f1), teal (#14b8a6) as accents on a clean white/light gray background. Use the violet and teal for chart colors.
 Typography: Clean, modern sans-serif. Large bold numbers for the metrics.
