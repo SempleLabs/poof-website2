@@ -52,17 +52,29 @@ export default function Hero() {
           </div>
 
           {/* Spend Score CTA */}
-          <div className="flex flex-col items-center gap-3 mb-6">
+          <div className="flex flex-col items-center gap-2 mb-6">
+            <p className="text-lg sm:text-xl font-bold text-slate-800">
+              What&apos;s your <span className="text-violet-600">Spend Score</span>?
+            </p>
+            <p className="text-sm text-slate-500 mb-2">
+              Upload a bank statement. AI scores your spending in 60 seconds.
+            </p>
             <Link
               href="/spend-score"
-              className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/30 rounded-lg px-5 py-2.5 hover:bg-violet-500/20 transition-all duration-200 group"
+              className="bg-violet-600 text-white font-semibold px-6 py-3 rounded-lg text-base hover:bg-violet-500 shadow-md transition-all duration-200 hover:-translate-y-0.5"
             >
-              <span className="text-violet-600 font-semibold">Get your free Spend Score</span>
-              <span className="text-slate-600">— upload a bank statement, 60 seconds</span>
-              <svg className="w-4 h-4 text-violet-500 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              Get My Score
             </Link>
+            <div className="flex items-center gap-3 text-xs text-slate-400 mt-1.5">
+              <span className="flex items-center gap-1">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                Secure
+              </span>
+              <span>No signup required</span>
+              <span>Data never stored</span>
+            </div>
           </div>
 
           {/* CTA Buttons */}
