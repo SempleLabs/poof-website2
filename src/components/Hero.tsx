@@ -25,7 +25,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again.
+            AI categorizes your transactions, reconciles your accounts, and generates your reports — so you spend minutes on your books, not hours.
           </p>
 
           {/* Spend Score CTA — visually distinct card */}
