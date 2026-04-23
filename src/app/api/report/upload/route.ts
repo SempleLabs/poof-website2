@@ -156,9 +156,15 @@ Rules:
 - Include EVERY transaction on the statement — do not skip any
 - Return ONLY valid JSON, no markdown, no code fences, no explanation`
 
-// --- Parse AI response with number cleaning ---
+// --- Parse AI response with number cleaning + reconciliation ---
 
-function parseTransactionJson(content: string): ParsedTransaction[] {
+interface ParseResult {
+  transactions: ParsedTransaction[]
+  totalDeposits?: number
+  totalWithdrawals?: number
+}
+
+function parseTransactionJson(content: string): ParseResult {
   let cleaned = content.trim()
     .replace(/^```(?:json)?\s*/i, '')
     .replace(/\s*```$/i, '')
@@ -176,12 +182,70 @@ function parseTransactionJson(content: string): ParsedTransaction[] {
     throw new Error('No transactions found in the uploaded file.')
   }
 
-  return txArray.map((t: Record<string, unknown>) => ({
+  const transactions = txArray.map((t: Record<string, unknown>) => ({
     date: String(t.date || ''),
     description: String(t.description || '').trim(),
     amount: Math.abs(Number(String(t.amount).replace(/[,$]/g, '')) || 0),
     type: (t.type === 'credit' ? 'credit' : 'debit') as 'debit' | 'credit',
   })).filter((t: ParsedTransaction) => t.amount > 0 && t.description)
+
+  return {
+    transactions,
+    totalDeposits: parsed.totalDeposits ? Number(String(parsed.totalDeposits).replace(/[,$]/g, '')) : undefined,
+    totalWithdrawals: parsed.totalWithdrawals ? Number(String(parsed.totalWithdrawals).replace(/[,$]/g, '')) : undefined,
+  }
+}
+
+// Reconcile transaction types against statement totals
+function reconcileTransactions(result: ParseResult): ParsedTransaction[] {
+  const { transactions, totalDeposits, totalWithdrawals } = result
+
+  // If no statement totals available, can't reconcile
+  if (!totalDeposits || !totalWithdrawals) return transactions
+
+  const round = (n: number) => Math.round(n * 100) / 100
+
+  // Calculate current sums
+  let creditSum = round(transactions.filter(t => t.type === 'credit').reduce((s, t) => s + t.amount, 0))
+  let debitSum = round(transactions.filter(t => t.type === 'debit').reduce((s, t) => s + t.amount, 0))
+  const expectedCredits = round(totalDeposits)
+  const expectedDebits = round(totalWithdrawals)
+
+  // If sums already match (within $0.02 tolerance), no reconciliation needed
+  if (Math.abs(creditSum - expectedCredits) < 0.02 && Math.abs(debitSum - expectedDebits) < 0.02) {
+    return transactions
+  }
+
+  // Try to fix misclassified transactions by flipping them
+  // Sort by amount ascending so we try small fixes first
+  const sortedTxs = [...transactions].sort((a, b) => a.amount - b.amount)
+
+  for (const tx of sortedTxs) {
+    // Recalculate current sums
+    creditSum = round(transactions.filter(t => t.type === 'credit').reduce((s, t) => s + t.amount, 0))
+    debitSum = round(transactions.filter(t => t.type === 'debit').reduce((s, t) => s + t.amount, 0))
+
+    // Check if flipping this transaction would bring both sums closer to expected
+    if (tx.type === 'credit') {
+      const newCreditSum = round(creditSum - tx.amount)
+      const newDebitSum = round(debitSum + tx.amount)
+      const currentError = Math.abs(creditSum - expectedCredits) + Math.abs(debitSum - expectedDebits)
+      const newError = Math.abs(newCreditSum - expectedCredits) + Math.abs(newDebitSum - expectedDebits)
+      if (newError < currentError) {
+        tx.type = 'debit'
+      }
+    } else {
+      const newCreditSum = round(creditSum + tx.amount)
+      const newDebitSum = round(debitSum - tx.amount)
+      const currentError = Math.abs(creditSum - expectedCredits) + Math.abs(debitSum - expectedDebits)
+      const newError = Math.abs(newCreditSum - expectedCredits) + Math.abs(newDebitSum - expectedDebits)
+      if (newError < currentError) {
+        tx.type = 'credit'
+      }
+    }
+  }
+
+  return transactions
 }
 
 // --- PDF Parsing: Text-first with Vision fallback ---
@@ -214,7 +278,8 @@ async function parsePdf(buffer: Buffer): Promise<ParsedTransaction[]> {
         response_format: { type: 'json_object' },
       })
 
-      return parseTransactionJson(response.choices[0]?.message?.content || '[]')
+      const parseResult = parseTransactionJson(response.choices[0]?.message?.content || '[]')
+      return reconcileTransactions(parseResult)
     }
   } catch {
     // Text extraction failed — fall through to Vision
@@ -257,7 +322,7 @@ async function parsePdf(buffer: Buffer): Promise<ParsedTransaction[]> {
     || data.output?.[0]?.content?.[0]?.text
     || '[]'
 
-  return parseTransactionJson(text)
+  return reconcileTransactions(parseTransactionJson(text))
 }
 
 // --- Image parsing via GPT-4o Vision ---
@@ -290,7 +355,7 @@ async function parseImageWithVision(base64Data: string, mimeType: string): Promi
     temperature: 0,
   })
 
-  return parseTransactionJson(response.choices[0]?.message?.content || '[]')
+  return reconcileTransactions(parseTransactionJson(response.choices[0]?.message?.content || '[]'))
 }
 
 // --- Main handler ---
