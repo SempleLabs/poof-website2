@@ -178,8 +178,16 @@ Return ONLY the JSON object.`,
       throw new Error('Incomplete analysis result.')
     }
 
+    // Restore original debit/credit types from parsed data — AI only provides categories
+    // The original parsing (from the bank statement) is the source of truth for debit/credit
+    const aiTxs = result.transactions as { amount: number; type: string; category: string; date: string; description: string }[]
+    for (let i = 0; i < aiTxs.length && i < transactions.length; i++) {
+      aiTxs[i].type = transactions[i].type
+      aiTxs[i].amount = transactions[i].amount
+    }
+
     // Recalculate totals ourselves — LLMs can't do math reliably
-    const txs = result.transactions as { amount: number; type: string; category: string; date: string; description: string }[]
+    const txs = aiTxs
     const totalIncome = txs.filter(t => t.type === 'credit').reduce((s, t) => s + t.amount, 0)
     const totalExpenses = txs.filter(t => t.type === 'debit').reduce((s, t) => s + t.amount, 0)
     const net = totalIncome - totalExpenses
