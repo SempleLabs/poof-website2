@@ -106,8 +106,10 @@ function buildReportEmail(payload: EmailPayload): string {
 
     <!-- Header with Logo -->
     <div style="text-align: center; padding: 24px 0;">
-      <img src="https://www.poofai.com/poof-logo.png" alt="Poof" width="48" height="48" style="display: inline-block; vertical-align: middle; margin-right: 4px;" />
-      <span style="font-family: 'Righteous', 'Inter', sans-serif; font-size: 28px; font-weight: 800; color: #8b5cf6; vertical-align: middle;">Poof</span>
+      <img src="https://www.poofai.com/poof-logo.png" alt="Poof" width="72" height="72" style="display: block; margin: 0 auto 4px;" />
+      <!--[if mso]><![endif]-->
+      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+      <span style="font-family: 'Righteous', 'Inter', sans-serif; font-size: 32px; color: #8b5cf6;">Poof</span>
       <div class="email-text-muted" style="font-size: 13px; color: #94a3b8; margin-top: 6px;">Your Spend Score Report</div>
     </div>
 
@@ -185,10 +187,7 @@ function buildReportEmail(payload: EmailPayload): string {
 
     <!-- Footer -->
     <div style="text-align: center; padding: 24px 0;">
-      <a href="https://www.poofai.com" style="text-decoration: none;">
-        <img src="https://www.poofai.com/poof-logo.png" alt="Poof" width="24" height="24" style="display: inline-block; vertical-align: middle; margin-right: 4px;" />
-        <span style="font-size: 12px; color: #8b5cf6; vertical-align: middle;">www.poofai.com</span>
-      </a>
+      <a href="https://www.poofai.com" style="font-size: 12px; color: #8b5cf6; text-decoration: none;">www.poofai.com</a>
       <div class="email-text-muted" style="font-size: 11px; color: #94a3b8; margin-top: 4px;">Bookkeeping That Does Itself</div>
     </div>
 
