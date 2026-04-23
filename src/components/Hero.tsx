@@ -10,16 +10,9 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Badge */}
-          <div
-            className="inline-flex items-center px-5 py-2 rounded-full bg-violet-50 border border-gold-500/30 text-gold-600 text-sm font-medium tracking-[0.15em] uppercase mb-8 mt-24 md:mt-8"
-          >
-            AI-Powered Bookkeeping
-          </div>
-
           {/* Main Heading */}
           <h1
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight mt-24 md:mt-8"
             style={{
               fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
               letterSpacing: '-0.03em',
@@ -32,24 +25,10 @@ export default function Hero() {
 
           {/* Subheading */}
           <p
-            className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl sm:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again.
           </p>
-
-          <p className="font-display text-2xl sm:text-3xl text-gold-400 font-bold italic mb-8 tracking-tight">
-            Poof. It&apos;s done.
-          </p>
-
-          {/* Benefit badges */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {['5-minute setup', '90% fewer manual entries', '30-day free trial'].map((text) => (
-              <div key={text} className="flex items-center bg-slate-100 border border-slate-200 rounded-full px-4 py-2 text-sm text-slate-700">
-                <span className="w-2 h-2 rounded-full bg-teal-400 mr-2" />
-                {text}
-              </div>
-            ))}
-          </div>
 
           {/* Spend Score CTA */}
           <div className="flex flex-col items-center gap-2 mb-6">
@@ -93,9 +72,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-16 text-slate-500 text-sm">
-            <p>Built for small businesses who hate manual bookkeeping</p>
-          </div>
         </div>
       </div>
 
