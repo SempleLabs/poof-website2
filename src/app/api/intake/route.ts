@@ -5,7 +5,7 @@ import { Resend } from 'resend'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, business_name, website, revenue_range, pain_point, accounting_software, platforms, source } = body
+    const { name, email, business_name, website, revenue_range, pain_point, accounting_software, business_type, platforms, source } = body
 
     if (!name || !email || !business_name || !revenue_range) {
       return NextResponse.json(
@@ -40,6 +40,7 @@ export async function POST(request: NextRequest) {
           revenue_range,
           pain_point: pain_point || null,
           accounting_software: accounting_software || null,
+          business_type: business_type || null,
           platforms: platforms || [],
           source: source || 'profit-analysis',
           submitted_at: new Date().toISOString(),
@@ -67,6 +68,7 @@ export async function POST(request: NextRequest) {
           <p><strong>Business:</strong> ${business_name}</p>
           <p><strong>Website:</strong> ${website || 'Not provided'}</p>
           <p><strong>Monthly Revenue:</strong> ${revenue_range}</p>
+          <p><strong>Business Type:</strong> ${business_type || 'Not specified'}</p>
           <p><strong>Accounting Software:</strong> ${accounting_software || 'Not specified'}</p>
           <p><strong>Platforms:</strong> ${platforms?.length ? platforms.join(', ') : 'None selected'}</p>
           <p><strong>Pain Point:</strong> ${pain_point || 'Not provided'}</p>

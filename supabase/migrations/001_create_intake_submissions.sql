@@ -8,6 +8,7 @@ create table if not exists public.intake_submissions (
   revenue_range text not null,
   pain_point text,
   accounting_software text,
+  business_type text,
   platforms jsonb default '[]'::jsonb,
   source text default 'profit-analysis',
   submitted_at timestamptz default now(),

@@ -23,6 +23,17 @@ const accountingSoftware = [
   'Other',
 ]
 
+const businessTypes = [
+  'Service-based',
+  'Ecommerce / Retail',
+  'Freelance / Consulting',
+  'Restaurant / Food service',
+  'Construction / Trades',
+  'Real estate',
+  'Healthcare / Wellness',
+  'Other',
+]
+
 const platforms = [
   'Stripe',
   'PayPal',
@@ -56,6 +67,7 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
       revenue_range: formData.get('revenue_range') as string,
       pain_point: formData.get('pain_point') as string,
       accounting_software: formData.get('accounting_software') as string,
+      business_type: formData.get('business_type') as string,
       platforms: selectedPlatforms,
       source,
     }
@@ -202,6 +214,22 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
                   ))}
                 </select>
               </div>
+            </div>
+
+            {/* Business type */}
+            <div>
+              <label htmlFor="business_type" className="block text-sm font-medium text-slate-700 mb-1.5">Business Type</label>
+              <select
+                id="business_type"
+                name="business_type"
+                required
+                className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-900 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 transition-colors"
+              >
+                <option value="">Select type</option>
+                {businessTypes.map(type => (
+                  <option key={type} value={type}>{type}</option>
+                ))}
+              </select>
             </div>
 
             {/* Platforms */}

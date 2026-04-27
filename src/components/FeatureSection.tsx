@@ -67,7 +67,7 @@ export default function FeatureSection() {
             <span className="text-gradient-gold"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            69 features across 9 categories — all included in one plan.
+            72 features across 9 categories — all included in one plan.
             $29/mo for everything QuickBooks charges $38+ for.
           </p>
         </AnimateOnScroll>
