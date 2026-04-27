@@ -5,11 +5,11 @@ import IntakeForm from '@/components/IntakeForm'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Profit & Cash Flow Analysis | Poof',
+  title: 'Profit & Cash Flow Analysis for Small Business | Poof',
   description: 'We analyze your financial data to uncover cash flow risks, spend inefficiencies, and automation opportunities — then give you a clear plan to fix them.',
   openGraph: {
-    title: 'Ecommerce Profit & Cash Flow Analysis | Poof',
-    description: 'Find the profit leaks hiding in your ecommerce business. Get a clear plan to fix them.',
+    title: 'Profit & Cash Flow Analysis for Small Business | Poof',
+    description: 'Find the profit leaks hiding in your business. Get a clear plan to fix them.',
     url: 'https://poof.ai/profit-analysis',
     siteName: 'Poof',
     type: 'website',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const config = {
   hero: {
-    headline: 'Find the profit leaks hiding in your ecommerce business.',
+    headline: 'Find the profit leaks hiding in your business.',
     highlightedWord: 'profit leaks',
     subheadline: 'We analyze your financial data to uncover cash flow risks, spend inefficiencies, and automation opportunities — then give you a clear plan to fix them.',
     ctaText: 'Apply for Analysis',
@@ -27,12 +27,12 @@ const config = {
   painPoints: {
     title: 'Sound Familiar?',
     items: [
-      'Sales are growing but profit is unclear',
-      'Cash is constantly tied up in inventory',
+      'Revenue is growing but profit is unclear',
+      'Cash flow is unpredictable month to month',
       'Books are behind or hard to trust',
-      "Don't know your true margins",
+      'No clear view of where your money is actually going',
       'Too much manual bookkeeping and admin work',
-      'No clear financial dashboard or forecast',
+      'No financial dashboard or forecast to plan with',
     ],
   },
   whatsIncluded: {
@@ -56,7 +56,7 @@ const config = {
     ],
   },
   socialProof: {
-    title: 'What Founders Are Saying',
+    title: 'What Business Owners Are Saying',
     items: [],
   },
   cta: {

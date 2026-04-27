@@ -24,10 +24,10 @@ const accountingSoftware = [
 ]
 
 const platforms = [
-  'Shopify',
-  'Amazon',
   'Stripe',
-  'WooCommerce',
+  'PayPal',
+  'Square',
+  'Gusto',
   'Other',
 ]
 

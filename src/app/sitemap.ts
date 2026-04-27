@@ -102,19 +102,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/amazon-sellers`,
+      url: `${baseUrl}/freelancers`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/shopify-brands`,
+      url: `${baseUrl}/service-businesses`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/ecommerce-agencies`,
+      url: `${baseUrl}/quickbooks-alternative`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

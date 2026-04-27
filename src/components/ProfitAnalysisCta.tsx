@@ -17,7 +17,7 @@ export default function ProfitAnalysisCta() {
               Want expert eyes on your numbers?
             </h2>
             <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-              We&apos;ll analyze your ecommerce finances, uncover profit leaks, and show you exactly what to automate.
+              We&apos;ll analyze your finances, uncover profit leaks, and show you exactly what to automate.
             </p>
             <Link
               href="/profit-analysis"
