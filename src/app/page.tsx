@@ -7,6 +7,7 @@ import FeatureHighlights from '@/components/FeatureHighlights'
 import ComparisonSection from '@/components/ComparisonSection'
 import DemoVideoSection from '@/components/DemoVideoSection'
 import HomeFaqSection from '@/components/HomeFaqSection'
+import ProfitAnalysisCta from '@/components/ProfitAnalysisCta'
 import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
 import { getSoftwareApplicationSchema } from '@/lib/jsonLd'
@@ -27,6 +28,7 @@ export default function Home() {
       <DemoVideoSection />
       <ComparisonSection />
       <HomeFaqSection />
+      <ProfitAnalysisCta />
       <CtaSection />
       <Footer />
     </main>
