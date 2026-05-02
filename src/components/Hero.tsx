@@ -1,78 +1,140 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import AuroraBackground from './AuroraBackground'
+import Image from 'next/image'
+
+const CAROUSEL_IMAGES = [
+  { src: '/hero/hero-dashboard.png', alt: 'Poof dashboard overview', phrase: 'Show me how my business is doing' },
+  { src: '/hero/hero-transactions.png', alt: 'Transaction categorization', phrase: 'Categorize my transactions' },
+  { src: '/hero/hero-bank-reconciliation.png', alt: 'Bank reconciliation', phrase: 'Reconcile my bank accounts' },
+  { src: '/hero/hero-pnl.png', alt: 'Profit & Loss report', phrase: 'Generate my P&L report' },
+  { src: '/hero/hero-spend-score.png', alt: 'Spend Score results', phrase: 'Score my spending habits' },
+  { src: '/hero/hero-chat-assistant.png', alt: 'AI chat assistant', phrase: 'Ask Poof anything' },
+  { src: '/hero/hero-invoices.png', alt: 'Invoice management', phrase: 'Send and track my invoices' },
+  { src: '/hero/hero-expenses.png', alt: 'Expense tracking', phrase: 'Track my expenses' },
+]
+
+function useTypewriter(phrases: string[], typingSpeed = 60, deletingSpeed = 35, pauseDuration = 2000) {
+  const [text, setText] = useState('')
+  const [phraseIndex, setPhraseIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex]
+
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          setText(currentPhrase.slice(0, text.length + 1))
+          if (text.length + 1 === currentPhrase.length) {
+            setTimeout(() => setIsDeleting(true), pauseDuration)
+          }
+        } else {
+          setText(currentPhrase.slice(0, text.length - 1))
+          if (text.length === 0) {
+            setIsDeleting(false)
+            setPhraseIndex((prev) => (prev + 1) % phrases.length)
+          }
+        }
+      },
+      isDeleting ? deletingSpeed : typingSpeed
+    )
+
+    return () => clearTimeout(timeout)
+  }, [text, phraseIndex, isDeleting, phrases, typingSpeed, deletingSpeed, pauseDuration])
+
+  return text
+}
+
+const PHRASES = CAROUSEL_IMAGES.map((img) => img.phrase)
 
 export default function Hero() {
+  const typedText = useTypewriter(PHRASES)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center hero-bg overflow-hidden pt-16">
-      <AuroraBackground />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Main Heading */}
-          <h1
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-5 leading-[1.05] tracking-tight"
-            style={{
-              fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
-              letterSpacing: '-0.03em',
-            }}
-          >
-            Bookkeeping That
-            <br />
-            <span className="text-gradient-gold">Does Itself</span>
-          </h1>
-
-          {/* Subheading */}
-          <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            AI categorizes your transactions, reconciles your accounts, and generates your reports — so you spend minutes on your books, not hours.
-          </p>
-
-          {/* Spend Score CTA — visually distinct card */}
-          <div className="bg-white/60 backdrop-blur-sm border border-violet-200 rounded-2xl px-6 py-5 max-w-md mx-auto mb-8">
-            <p className="text-lg font-bold text-slate-800 mb-1">
-              What&apos;s your <span className="text-violet-600">Spend Score</span>?
-            </p>
-            <p className="text-sm text-slate-500 mb-3">
-              Upload a bank statement. AI scores your spending in 60 seconds.
-            </p>
-            <Link
-              href="/spend-score"
-              className="inline-block bg-violet-600 text-white font-semibold px-8 py-3 rounded-lg text-base hover:bg-violet-500 shadow-md transition-all duration-200 hover:-translate-y-0.5"
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-50 pt-16">
+      {/* Carousel background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Scrolling row - top */}
+        <div className="carousel-row carousel-row-left absolute top-[5%] left-0 flex gap-6">
+          {[...CAROUSEL_IMAGES.slice(0, 4), ...CAROUSEL_IMAGES.slice(0, 4)].map((img, i) => (
+            <div
+              key={`top-${i}`}
+              className="relative w-[260px] h-[350px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg bg-white border border-slate-200/60"
             >
-              Get My Score
-            </Link>
-            <div className="flex items-center justify-center gap-3 text-xs text-slate-400 mt-3">
-              <span className="flex items-center gap-1">
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-                Secure
-              </span>
-              <span>No signup required</span>
-              <span>Data never stored</span>
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover"
+                sizes="260px"
+                priority={i < 4}
+              />
             </div>
-          </div>
-
-          {/* CTA Buttons — consistent sizing */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <Link
-              href="https://app.poofai.com/register"
-              className="glow-border shimmer-hover bg-gold-500 text-white font-semibold px-8 py-3 rounded-lg text-base hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]"
-            >
-              Start Free Trial →
-            </Link>
-            <Link
-              href="/demo"
-              className="border-2 border-slate-300 text-slate-700 font-semibold px-8 py-3 rounded-lg text-base hover:border-gold-500/50 hover:text-gold-500 transition-all duration-200"
-            >
-              Request Demo
-            </Link>
-          </div>
+          ))}
         </div>
+
+        {/* Scrolling row - bottom */}
+        <div className="carousel-row carousel-row-right absolute bottom-[5%] left-0 flex gap-6">
+          {[...CAROUSEL_IMAGES.slice(4, 8), ...CAROUSEL_IMAGES.slice(4, 8)].map((img, i) => (
+            <div
+              key={`bottom-${i}`}
+              className="relative w-[260px] h-[350px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg bg-white border border-slate-200/60"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover"
+                sizes="260px"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Center fade overlay so text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/40 via-slate-50/95 to-slate-50/40" />
       </div>
 
-      {/* Bottom fade to next section */}
+      {/* Center content */}
+      <div
+        className={`relative z-10 flex flex-col items-center px-4 transition-all duration-700 ${
+          mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+      >
+        {/* Typewriter card */}
+        <div className="bg-white rounded-2xl shadow-xl border border-slate-200 px-8 py-6 sm:px-12 sm:py-8 max-w-xl w-full mb-8">
+          <div className="flex items-start">
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 leading-tight">
+              {typedText}
+              <span className="inline-block w-[3px] h-[1em] bg-gold-500 ml-1 align-middle animate-pulse" />
+            </span>
+          </div>
+        </div>
+
+        {/* CTA button */}
+        <Link
+          href="https://app.poofai.com/register"
+          className="glow-border shimmer-hover bg-gold-500 text-white font-semibold px-10 py-4 rounded-xl text-lg hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]"
+        >
+          Get Started
+        </Link>
+
+        {/* Tagline */}
+        <p className="mt-6 text-slate-500 text-base sm:text-lg max-w-md text-center leading-relaxed">
+          AI bookkeeping that does itself.
+          <br className="hidden sm:block" />
+          {' '}Minutes on your books, not hours.
+        </p>
+      </div>
+
+      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
     </section>
   )

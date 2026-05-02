@@ -51,26 +51,26 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <Link
-              href="/spend-score"
-              className="text-violet-600 font-semibold text-sm hover:text-violet-500 transition-colors"
+              href="https://app.poofai.com/login"
+              className={`font-semibold text-sm transition-colors ${
+                scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
+              }`}
             >
-              Free Spend Score
+              Log in
             </Link>
             <Link
               href="/demo"
-              className={`font-semibold transition-colors ${
-                scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
-              }`}
+              className="border-2 border-slate-800 text-slate-800 px-5 py-2 rounded-lg font-semibold text-sm hover:border-gold-500 hover:text-gold-500 transition-all duration-200"
             >
               Request Demo
             </Link>
             <Link
-              href="https://app.poofai.com/login"
-              className="bg-gold-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-gold-400 shadow-gold transition-all duration-200 shimmer-hover"
+              href="https://app.poofai.com/register"
+              className="bg-slate-900 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-slate-800 transition-all duration-200"
             >
-              Sign In
+              Get Started Free
             </Link>
           </div>
 
@@ -115,18 +115,18 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-6 border-t border-slate-600 flex flex-col items-center space-y-4 w-full">
-              <Link href="/spend-score" onClick={() => setIsMenuOpen(false)} className="text-violet-400 text-xl font-semibold">
-                Free Spend Score
+              <Link href="https://app.poofai.com/login" onClick={() => setIsMenuOpen(false)} className="text-slate-300 text-xl font-semibold hover:text-white transition-colors">
+                Log in
               </Link>
-              <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="text-gold-400 text-xl font-semibold">
+              <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
                 Request Demo
               </Link>
               <Link
-                href="https://app.poofai.com/login"
+                href="https://app.poofai.com/register"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-gold-500 text-white px-8 py-3 rounded-lg font-semibold text-lg"
+                className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold text-lg"
               >
-                Sign In
+                Get Started Free
               </Link>
             </div>
           </div>

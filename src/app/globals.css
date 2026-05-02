@@ -312,6 +312,43 @@
   pointer-events: none;
 }
 
+/* Hero carousel rows */
+@keyframes carousel-scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes carousel-scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.carousel-row {
+  will-change: transform;
+}
+
+.carousel-row-left {
+  animation: carousel-scroll-left 30s linear infinite;
+}
+
+.carousel-row-right {
+  animation: carousel-scroll-right 30s linear infinite;
+}
+
+.carousel-row:hover {
+  animation-play-state: paused;
+}
+
+/* Spend Score sticky bar */
+.spend-score-bar {
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spend-score-bar.visible {
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

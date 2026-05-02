@@ -1,5 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import SpendScoreSection from '@/components/SpendScoreSection'
+import SpendScoreBar from '@/components/SpendScoreBar'
 import WhoPoofIsFor from '@/components/WhoPoofIsFor'
 import WhatIsPoof from '@/components/WhatIsPoof'
 import MagicWorkflowSection from '@/components/MagicWorkflowSection'
@@ -21,7 +23,9 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <SpendScoreSection />
       <WhoPoofIsFor />
+      <SpendScoreBar />
       <WhatIsPoof />
       <MagicWorkflowSection />
       <FeatureHighlights />
