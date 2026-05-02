@@ -312,33 +312,6 @@
   pointer-events: none;
 }
 
-/* Hero carousel rows */
-@keyframes carousel-scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes carousel-scroll-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-.carousel-row {
-  will-change: transform;
-}
-
-.carousel-row-left {
-  animation: carousel-scroll-left 30s linear infinite;
-}
-
-.carousel-row-right {
-  animation: carousel-scroll-right 30s linear infinite;
-}
-
-.carousel-row:hover {
-  animation-play-state: paused;
-}
-
 /* Spend Score sticky bar */
 .spend-score-bar {
   transform: translateY(100%);
