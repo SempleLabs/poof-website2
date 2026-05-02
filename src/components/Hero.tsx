@@ -41,7 +41,6 @@ function useTypewriter(phrase: string, typingSpeed = 50) {
   return { text, isTypingComplete }
 }
 
-// Get wrapped offset: how far slide `i` is from `active`, wrapping around
 function getWrappedOffset(i: number, active: number, total: number) {
   let diff = i - active
   if (diff > total / 2) diff -= total
@@ -55,24 +54,31 @@ export default function Hero() {
   const [mounted, setMounted] = useState(false)
   const { text: typedText, isTypingComplete } = useTypewriter(SLIDES[activeIndex].phrase)
   const autoAdvanceRef = useRef<NodeJS.Timeout | null>(null)
+  const prevIndexRef = useRef(0)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   const goTo = useCallback((index: number) => {
+    prevIndexRef.current = activeIndex
     setActiveIndex(index)
-  }, [])
+  }, [activeIndex])
 
   const goNext = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % SLIDES.length)
+    setActiveIndex((prev) => {
+      prevIndexRef.current = prev
+      return (prev + 1) % SLIDES.length
+    })
   }, [])
 
   const goPrev = useCallback(() => {
-    setActiveIndex((prev) => (prev - 1 + SLIDES.length) % SLIDES.length)
+    setActiveIndex((prev) => {
+      prevIndexRef.current = prev
+      return (prev - 1 + SLIDES.length) % SLIDES.length
+    })
   }, [])
 
-  // Auto-advance after typing completes
   useEffect(() => {
     if (isPaused || !isTypingComplete) return
 
@@ -93,26 +99,32 @@ export default function Hero() {
         }`}
       >
         {/* Carousel area */}
-        <div className="relative w-full h-[480px] sm:h-[540px] lg:h-[600px]">
+        <div className="relative w-full h-[520px] sm:h-[600px] lg:h-[680px]">
           {SLIDES.map((slide, i) => {
             const offset = getWrappedOffset(i, activeIndex, SLIDES.length)
+            const prevOffset = getWrappedOffset(i, prevIndexRef.current, SLIDES.length)
             const absOffset = Math.abs(offset)
             const isActive = offset === 0
 
-            // Hide slides too far away
-            if (absOffset > 4) return null
+            // Only render slides within range
+            if (absOffset > 3) return null
 
-            // Spacing between cards (px from center)
-            const spacing = 320
-            const scale = isActive ? 1 : Math.max(0.65, 0.8 - (absOffset - 1) * 0.05)
-            const opacity = isActive ? 1 : Math.max(0.25, 0.6 - (absOffset - 1) * 0.15)
+            // Detect if this slide just wrapped around (jumped sides)
+            // If previous and current offsets have different signs and are far apart, skip transition
+            const didWrap = Math.abs(prevOffset - offset) > SLIDES.length / 2
+
+            const spacing = 400
+            const scale = isActive ? 1 : Math.max(0.7, 0.85 - (absOffset - 1) * 0.07)
+            const opacity = isActive ? 1 : Math.max(0.3, 0.65 - (absOffset - 1) * 0.15)
             const xPos = offset * spacing
             const zIndex = 10 - absOffset
 
             return (
               <div
                 key={slide.src}
-                className="absolute top-1/2 left-1/2 transition-all duration-500 ease-out"
+                className={`absolute top-1/2 left-1/2 ease-out ${
+                  didWrap ? 'duration-0' : 'transition-all duration-500'
+                }`}
                 style={{
                   transform: `translate(-50%, -50%) translateX(${xPos}px) scale(${scale})`,
                   zIndex,
@@ -121,13 +133,13 @@ export default function Hero() {
                 }}
                 onClick={() => !isActive && goTo(i)}
               >
-                <div className="relative w-[260px] h-[360px] sm:w-[300px] sm:h-[410px] lg:w-[340px] lg:h-[460px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
+                <div className="relative w-[320px] h-[440px] sm:w-[380px] sm:h-[520px] lg:w-[440px] lg:h-[590px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
                   <Image
                     src={slide.src}
                     alt={slide.alt}
                     fill
                     className="object-cover object-top"
-                    sizes="340px"
+                    sizes="440px"
                     priority={i < 3}
                   />
                 </div>
@@ -136,16 +148,16 @@ export default function Hero() {
           })}
 
           {/* Typewriter card */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[88%] max-w-lg">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-slate-200 px-6 py-5 sm:px-10 sm:py-7">
-              <span className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-slate-900 leading-tight">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[90%] max-w-xl">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-slate-200 px-8 py-6 sm:px-12 sm:py-8">
+              <span className="text-2xl sm:text-3xl lg:text-[2.5rem] font-display font-bold text-slate-900 leading-tight">
                 {typedText}
                 <span className="inline-block w-[2px] h-[1em] bg-gold-500 ml-0.5 align-middle animate-pulse" />
               </span>
-              <div className="mt-4 flex justify-end">
+              <div className="mt-5 flex justify-end">
                 <Link
                   href="https://app.poofai.com/register"
-                  className="bg-gold-500 text-white font-semibold px-6 py-2.5 rounded-lg text-sm hover:bg-gold-400 transition-all duration-200"
+                  className="bg-gold-500 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-400 transition-all duration-200"
                 >
                   Get started
                 </Link>
@@ -198,7 +210,7 @@ export default function Hero() {
 
       {/* Tagline */}
       <div className="relative z-10 text-center pb-10 pt-2 px-4">
-        <p className="text-slate-600 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+        <p className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed">
           AI bookkeeping that does itself. Minutes on your books, not hours.
         </p>
       </div>
