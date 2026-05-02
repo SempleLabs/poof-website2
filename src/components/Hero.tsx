@@ -15,10 +15,6 @@ const SLIDES = [
   { src: '/hero/hero-expenses.png', alt: 'Expense tracking', phrase: 'Track my expenses' },
 ]
 
-// Card dimensions at each breakpoint (width in px)
-const CARD_W = 300
-const GAP = 24
-
 function useTypewriter(phrase: string, typingSpeed = 50) {
   const [text, setText] = useState('')
   const [isTypingComplete, setIsTypingComplete] = useState(false)
@@ -43,6 +39,14 @@ function useTypewriter(phrase: string, typingSpeed = 50) {
   }, [text, phrase, typingSpeed])
 
   return { text, isTypingComplete }
+}
+
+// Get wrapped offset: how far slide `i` is from `active`, wrapping around
+function getWrappedOffset(i: number, active: number, total: number) {
+  let diff = i - active
+  if (diff > total / 2) diff -= total
+  if (diff < -total / 2) diff += total
+  return diff
 }
 
 export default function Hero() {
@@ -81,10 +85,6 @@ export default function Hero() {
     }
   }, [isTypingComplete, isPaused, goNext, activeIndex])
 
-  // Calculate the translateX offset: shift the entire strip so active slide is centered
-  // Each slide occupies CARD_W + GAP px. We offset by -activeIndex * (CARD_W + GAP).
-  const stripOffset = -activeIndex * (CARD_W + GAP)
-
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-16">
       <div
@@ -92,49 +92,51 @@ export default function Hero() {
           mounted ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        {/* Slide strip container */}
-        <div className="relative w-full h-[460px] sm:h-[520px] lg:h-[580px] overflow-visible">
-          {/* The strip: all slides in a row, translated to center the active one */}
-          <div
-            className="absolute top-0 h-full flex items-center transition-transform duration-500 ease-out"
-            style={{
-              left: '50%',
-              marginLeft: -(CARD_W / 2),
-              transform: `translateX(${stripOffset}px)`,
-              gap: `${GAP}px`,
-            }}
-          >
-            {SLIDES.map((slide, i) => {
-              const isActive = i === activeIndex
-              return (
-                <div
-                  key={slide.src}
-                  className="flex-shrink-0 transition-all duration-500 ease-out cursor-pointer"
-                  style={{
-                    width: CARD_W,
-                    transform: isActive ? 'scale(1)' : 'scale(0.85)',
-                    opacity: isActive ? 1 : 0.5,
-                    zIndex: isActive ? 5 : 1,
-                  }}
-                  onClick={() => goTo(i)}
-                >
-                  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
-                    <Image
-                      src={slide.src}
-                      alt={slide.alt}
-                      fill
-                      className="object-cover object-top"
-                      sizes="300px"
-                      priority={i < 3}
-                    />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
+        {/* Carousel area */}
+        <div className="relative w-full h-[480px] sm:h-[540px] lg:h-[600px]">
+          {SLIDES.map((slide, i) => {
+            const offset = getWrappedOffset(i, activeIndex, SLIDES.length)
+            const absOffset = Math.abs(offset)
+            const isActive = offset === 0
 
-          {/* Typewriter card - floating over center */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[88%] max-w-lg pointer-events-auto">
+            // Hide slides too far away
+            if (absOffset > 4) return null
+
+            // Spacing between cards (px from center)
+            const spacing = 320
+            const scale = isActive ? 1 : Math.max(0.65, 0.8 - (absOffset - 1) * 0.05)
+            const opacity = isActive ? 1 : Math.max(0.25, 0.6 - (absOffset - 1) * 0.15)
+            const xPos = offset * spacing
+            const zIndex = 10 - absOffset
+
+            return (
+              <div
+                key={slide.src}
+                className="absolute top-1/2 left-1/2 transition-all duration-500 ease-out"
+                style={{
+                  transform: `translate(-50%, -50%) translateX(${xPos}px) scale(${scale})`,
+                  zIndex,
+                  opacity,
+                  cursor: isActive ? 'default' : 'pointer',
+                }}
+                onClick={() => !isActive && goTo(i)}
+              >
+                <div className="relative w-[260px] h-[360px] sm:w-[300px] sm:h-[410px] lg:w-[340px] lg:h-[460px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    className="object-cover object-top"
+                    sizes="340px"
+                    priority={i < 3}
+                  />
+                </div>
+              </div>
+            )
+          })}
+
+          {/* Typewriter card */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[88%] max-w-lg">
             <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-slate-200 px-6 py-5 sm:px-10 sm:py-7">
               <span className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-slate-900 leading-tight">
                 {typedText}
@@ -151,13 +153,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Left/right edge fades */}
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          {/* Edge fades */}
+          <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-[15] pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-[15] pointer-events-none" />
         </div>
 
         {/* Navigation controls */}
-        <div className="flex items-center gap-2 mt-4 z-30">
+        <div className="flex items-center gap-2 mt-2 z-30">
           <button
             onClick={goPrev}
             className="w-10 h-10 rounded-full border-2 border-slate-800 flex items-center justify-center hover:bg-slate-100 transition-colors"
@@ -195,14 +197,11 @@ export default function Hero() {
       </div>
 
       {/* Tagline */}
-      <div className="relative z-10 text-center pb-12 pt-2 px-4">
+      <div className="relative z-10 text-center pb-10 pt-2 px-4">
         <p className="text-slate-600 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
           AI bookkeeping that does itself. Minutes on your books, not hours.
         </p>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
     </section>
   )
 }
