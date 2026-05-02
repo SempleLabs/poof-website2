@@ -113,7 +113,7 @@ export default function Hero() {
             // If previous and current offsets have different signs and are far apart, skip transition
             const didWrap = Math.abs(prevOffset - offset) > SLIDES.length / 2
 
-            const spacing = 400
+            const spacing = 480
             const scale = isActive ? 1 : Math.max(0.7, 0.85 - (absOffset - 1) * 0.07)
             const opacity = isActive ? 1 : Math.max(0.3, 0.65 - (absOffset - 1) * 0.15)
             const xPos = offset * spacing
