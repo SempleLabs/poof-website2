@@ -99,7 +99,7 @@ export default function Hero() {
         }`}
       >
         {/* Carousel area */}
-        <div className="relative w-full h-[520px] sm:h-[600px] lg:h-[680px]">
+        <div className="relative w-full h-[420px] sm:h-[480px] lg:h-[540px]">
           {SLIDES.map((slide, i) => {
             const offset = getWrappedOffset(i, activeIndex, SLIDES.length)
             const prevOffset = getWrappedOffset(i, prevIndexRef.current, SLIDES.length)
@@ -133,7 +133,7 @@ export default function Hero() {
                 }}
                 onClick={() => !isActive && goTo(i)}
               >
-                <div className="relative w-[320px] h-[440px] sm:w-[380px] sm:h-[520px] lg:w-[440px] lg:h-[590px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
+                <div className="relative w-[280px] h-[360px] sm:w-[340px] sm:h-[430px] lg:w-[380px] lg:h-[480px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
                   <Image
                     src={slide.src}
                     alt={slide.alt}
@@ -173,7 +173,7 @@ export default function Hero() {
         </div>
 
         {/* Navigation controls */}
-        <div className="flex items-center gap-2 mt-2 z-30">
+        <div className="flex items-center gap-2 mt-1 z-30">
           <button
             onClick={goPrev}
             className="w-10 h-10 rounded-full border-2 border-slate-800 flex items-center justify-center hover:bg-slate-100 transition-colors"
@@ -211,7 +211,7 @@ export default function Hero() {
       </div>
 
       {/* Tagline */}
-      <div className="relative z-10 text-center pb-10 pt-2 px-4">
+      <div className="relative z-10 text-center pb-6 pt-1 px-4">
         <p className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed">
           AI bookkeeping that does itself. Minutes on your books, not hours.
         </p>
