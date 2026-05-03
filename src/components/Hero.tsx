@@ -92,14 +92,14 @@ export default function Hero() {
   }, [isTypingComplete, isPaused, goNext, activeIndex])
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-[6.5rem]">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-[5.5rem]">
       <div
         className={`relative w-full flex-1 flex flex-col items-center justify-center transition-opacity duration-700 ${
           mounted ? 'opacity-100' : 'opacity-0'
         }`}
       >
         {/* Carousel area */}
-        <div className="relative w-full h-[420px] sm:h-[480px] lg:h-[540px]">
+        <div className="relative w-full h-[440px] sm:h-[520px] lg:h-[580px]">
           {SLIDES.map((slide, i) => {
             const offset = getWrappedOffset(i, activeIndex, SLIDES.length)
             const prevOffset = getWrappedOffset(i, prevIndexRef.current, SLIDES.length)
@@ -133,7 +133,7 @@ export default function Hero() {
                 }}
                 onClick={() => !isActive && goTo(i)}
               >
-                <div className="relative w-[280px] h-[360px] sm:w-[340px] sm:h-[430px] lg:w-[380px] lg:h-[480px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
+                <div className="relative w-[300px] h-[380px] sm:w-[360px] sm:h-[460px] lg:w-[400px] lg:h-[520px] rounded-2xl overflow-hidden shadow-xl bg-white border border-slate-200/80">
                   <Image
                     src={slide.src}
                     alt={slide.alt}
