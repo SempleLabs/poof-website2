@@ -213,7 +213,9 @@ export default function Hero() {
       {/* Tagline */}
       <div className="relative z-10 text-center pb-6 pt-1 px-4">
         <p className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed">
-          AI bookkeeping that does itself. Minutes on your books, not hours.
+          AI bookkeeping that does itself.
+          <br />
+          Minutes on your books, not hours.
         </p>
       </div>
     </section>
