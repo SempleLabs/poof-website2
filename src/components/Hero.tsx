@@ -210,11 +210,20 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Tagline */}
+      {/* Tagline + Spend Score CTA */}
       <div className="relative z-10 text-center pb-10 pt-2 px-4">
         <p className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed">
           AI bookkeeping that does itself. Minutes on your books, not hours.
         </p>
+        <Link
+          href="/spend-score"
+          className="inline-flex items-center gap-1.5 mt-3 text-violet-600 font-semibold text-sm sm:text-base hover:text-violet-500 transition-colors"
+        >
+          Try your free Spend Score
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
     </section>
   )
