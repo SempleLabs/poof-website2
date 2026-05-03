@@ -60,6 +60,7 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
 
     const formData = new FormData(e.currentTarget)
     const data = {
+      company_url: formData.get('company_url') as string,
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       business_name: formData.get('business_name') as string,
@@ -81,6 +82,11 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
 
       if (response.ok) {
         setStatus('success')
+        if (typeof window !== 'undefined' && (window as any).twq) {
+          (window as any).twq('event', 'tw-rc7s1-rc82r', {
+            email_address: data.email,
+          })
+        }
       } else {
         const result = await response.json()
         setErrorMessage(result.error || 'Something went wrong. Please try again.')
@@ -128,6 +134,11 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
 
         <AnimateOnScroll animation="fade-up" delay={100}>
           <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-2xl p-8 space-y-6">
+            {/* Honeypot - hidden from real users */}
+            <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+              <label htmlFor="company_url">Company URL</label>
+              <input type="text" id="company_url" name="company_url" tabIndex={-1} autoComplete="off" />
+            </div>
             {/* Name & Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>

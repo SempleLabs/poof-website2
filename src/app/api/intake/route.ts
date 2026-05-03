@@ -5,7 +5,12 @@ import { Resend } from 'resend'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, business_name, website, revenue_range, pain_point, accounting_software, business_type, platforms, source } = body
+    const { name, email, business_name, website, revenue_range, pain_point, accounting_software, business_type, platforms, source, company_url } = body
+
+    // Honeypot: if this hidden field is filled, it's a bot
+    if (company_url) {
+      return NextResponse.json({ message: 'Application received!', success: true }, { status: 200 })
+    }
 
     if (!name || !email || !business_name || !revenue_range) {
       return NextResponse.json(
