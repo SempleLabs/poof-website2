@@ -150,10 +150,12 @@ export default function Hero() {
           {/* Typewriter card */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[90%] max-w-xl">
             <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-slate-200 px-8 py-6 sm:px-12 sm:py-8">
-              <span className="text-2xl sm:text-3xl lg:text-[2.5rem] font-display font-bold text-slate-900 leading-tight">
-                {typedText}
-                <span className="inline-block w-[2px] h-[1em] bg-gold-500 ml-0.5 align-middle animate-pulse" />
-              </span>
+              <div className="h-[4.5rem] sm:h-[5rem] lg:h-[5.5rem] flex items-start">
+                <span className="text-2xl sm:text-3xl lg:text-[2.5rem] font-display font-bold text-slate-900 leading-tight">
+                  {typedText}
+                  <span className="inline-block w-[2px] h-[1em] bg-gold-500 ml-0.5 align-middle animate-pulse" />
+                </span>
+              </div>
               <div className="mt-5 flex justify-end">
                 <Link
                   href="https://app.poofai.com/register"
