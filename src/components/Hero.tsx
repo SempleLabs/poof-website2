@@ -92,7 +92,7 @@ export default function Hero() {
   }, [isTypingComplete, isPaused, goNext, activeIndex])
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-16">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-[6.5rem]">
       <div
         className={`relative w-full flex-1 flex flex-col items-center justify-center transition-opacity duration-700 ${
           mounted ? 'opacity-100' : 'opacity-0'
@@ -156,13 +156,7 @@ export default function Hero() {
                   <span className="inline-block w-[2px] h-[1em] bg-gold-500 ml-0.5 align-middle animate-pulse" />
                 </span>
               </div>
-              <div className="mt-5 flex items-center justify-between">
-                <Link
-                  href="/spend-score"
-                  className="text-violet-600 font-semibold text-sm hover:text-violet-500 transition-colors"
-                >
-                  Try free Spend Score →
-                </Link>
+              <div className="mt-5 flex justify-end">
                 <Link
                   href="https://app.poofai.com/register"
                   className="bg-gold-500 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-400 transition-all duration-200"

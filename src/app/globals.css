@@ -312,15 +312,6 @@
   pointer-events: none;
 }
 
-/* Spend Score sticky bar */
-.spend-score-bar {
-  transform: translateY(100%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.spend-score-bar.visible {
-  transform: translateY(0);
-}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
