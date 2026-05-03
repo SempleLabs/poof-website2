@@ -70,7 +70,7 @@ export default function Header() {
               href="https://app.poofai.com/register"
               className="bg-slate-900 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-slate-800 transition-all duration-200"
             >
-              Get Started Free
+              Start Free Trial
             </Link>
           </div>
 
@@ -126,7 +126,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold text-lg"
               >
-                Get Started Free
+                Start Free Trial
               </Link>
             </div>
           </div>

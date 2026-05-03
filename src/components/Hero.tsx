@@ -167,7 +167,7 @@ export default function Hero() {
                   href="https://app.poofai.com/register"
                   className="bg-gold-500 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-400 transition-all duration-200"
                 >
-                  Get started
+                  Start Free Trial
                 </Link>
               </div>
             </div>
