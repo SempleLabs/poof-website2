@@ -9,8 +9,7 @@ export default function SpendScoreBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling past the hero (roughly one viewport height)
-      setVisible(window.scrollY > window.innerHeight * 0.8)
+      setVisible(window.scrollY > 100)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
