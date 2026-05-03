@@ -53,12 +53,6 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-3">
             <Link
-              href="/spend-score"
-              className="text-violet-600 font-semibold text-sm hover:text-violet-500 transition-colors"
-            >
-              Free Spend Score
-            </Link>
-            <Link
               href="https://app.poofai.com/login"
               className={`font-semibold text-sm transition-colors ${
                 scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'

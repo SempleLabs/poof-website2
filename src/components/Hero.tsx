@@ -156,7 +156,13 @@ export default function Hero() {
                   <span className="inline-block w-[2px] h-[1em] bg-gold-500 ml-0.5 align-middle animate-pulse" />
                 </span>
               </div>
-              <div className="mt-5 flex justify-end">
+              <div className="mt-5 flex items-center justify-between">
+                <Link
+                  href="/spend-score"
+                  className="text-violet-600 font-semibold text-sm hover:text-violet-500 transition-colors"
+                >
+                  Try free Spend Score →
+                </Link>
                 <Link
                   href="https://app.poofai.com/register"
                   className="bg-gold-500 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-400 transition-all duration-200"
@@ -210,20 +216,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Tagline + Spend Score CTA */}
+      {/* Tagline */}
       <div className="relative z-10 text-center pb-10 pt-2 px-4">
         <p className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed">
           AI bookkeeping that does itself. Minutes on your books, not hours.
         </p>
-        <Link
-          href="/spend-score"
-          className="inline-flex items-center gap-1.5 mt-3 text-violet-600 font-semibold text-sm sm:text-base hover:text-violet-500 transition-colors"
-        >
-          Try your free Spend Score
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
       </div>
     </section>
   )
