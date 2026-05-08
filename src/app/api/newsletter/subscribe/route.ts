@@ -2,9 +2,42 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 
+// Simple in-memory rate limiting: max 5 requests per IP per 10 minutes
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+const RATE_LIMIT_WINDOW = 10 * 60 * 1000 // 10 minutes
+const RATE_LIMIT_MAX = 5
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now()
+  const entry = rateLimitMap.get(ip)
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW })
+    return false
+  }
+  entry.count++
+  return entry.count > RATE_LIMIT_MAX
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const { email } = await request.json()
+    // Rate limit by IP
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
+    const { email, website } = await request.json()
+
+    // Honeypot: if this hidden field is filled, it's a bot
+    if (website) {
+      return NextResponse.json(
+        { message: 'Thanks for subscribing!', success: true },
+        { status: 200 }
+      )
+    }
 
     // Validate email
     if (!email || !email.includes('@')) {
@@ -92,13 +125,13 @@ export async function POST(request: NextRequest) {
                       </p>
 
                       <ul style="margin: 0 0 20px; padding-left: 20px; color: #334155; font-size: 16px; line-height: 1.8;">
-                        <li>Bookkeeping tips and best practices</li>
-                        <li>Product updates and new features</li>
-                        <li>Exclusive insights for small business owners</li>
+                        <li>Bookkeeping tips that save you hours every month</li>
+                        <li>Product updates — new ways Poof automates your books</li>
+                        <li>Insights to help small business owners stay on top of their finances</li>
                       </ul>
 
                       <p style="margin: 0 0 30px; color: #334155; font-size: 16px; line-height: 1.6;">
-                        We're building AI-powered bookkeeping that actually works for small businesses. Stay tuned for updates!
+                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 72 features, one flat price.
                       </p>
 
                       <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
@@ -117,7 +150,7 @@ export async function POST(request: NextRequest) {
                   <tr>
                     <td style="padding: 30px; background-color: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0;">
                       <p style="margin: 0 0 10px; color: #64748b; font-size: 14px;">
-                        Poof - AI-Powered Bookkeeping for Small Businesses
+                        Poof — Bookkeeping That Does Itself
                       </p>
                       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
                         You received this email because you subscribed at poofai.com
@@ -132,21 +165,6 @@ export async function POST(request: NextRequest) {
         </html>
       `
     })
-
-    // Notify you of new subscriber
-    const notifyEmail = process.env.NOTIFY_EMAIL
-    if (notifyEmail) {
-      await resend.emails.send({
-        from: 'Poof <noreply@poofai.com>',
-        to: notifyEmail,
-        subject: `New newsletter subscriber: ${email}`,
-        html: `
-          <p>A new subscriber signed up for the Poof newsletter:</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Time:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET</p>
-        `
-      })
-    }
 
     return NextResponse.json(
       {

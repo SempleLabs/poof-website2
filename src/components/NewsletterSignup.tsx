@@ -4,6 +4,7 @@ import { useState, FormEvent } from 'react'
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('') // honeypot
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
 
@@ -23,7 +24,7 @@ export default function NewsletterSignup() {
       const response = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, website }),
       })
 
       const data = await response.json()
@@ -53,6 +54,17 @@ export default function NewsletterSignup() {
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          {/* Honeypot field - hidden from real users, filled by bots */}
+          <input
+            type="text"
+            name="website"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+          />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <input
               type="email"
