@@ -40,11 +40,20 @@ export const metadata: Metadata = {
     url: 'https://poof.ai',
     siteName: 'Poof',
     type: 'website',
+    images: [
+      {
+        url: 'https://poof.ai/demo/dashboard.png',
+        width: 3550,
+        height: 1712,
+        alt: 'Poof dashboard — AI bookkeeping that does itself',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Poof — Bookkeeping That Does Itself',
     description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 72 features, 13 reports, $29/mo. 30-day free trial.',
+    images: ['https://poof.ai/demo/dashboard.png'],
   },
 }
 
