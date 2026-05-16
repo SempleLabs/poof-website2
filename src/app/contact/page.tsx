@@ -238,12 +238,6 @@ export default function ContactPage() {
                 </button>
               </div>
 
-              <div className="mt-6 text-center text-sm text-slate-500">
-                You can also email us directly at{' '}
-                <a href="mailto:support@poof.ai" className="text-gold-600 hover:text-gold-700">
-                  support@poof.ai
-                </a>
-              </div>
             </form>
           </AnimateOnScroll>
         </div>

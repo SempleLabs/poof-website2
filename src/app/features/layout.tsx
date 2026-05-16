@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: '72 features, one flat price — $29/mo. AI categorization, budgeting, cash flow forecasting, recurring invoices, receipt scanning, auto-reconciliation, 13 reports, and more. Everything QuickBooks charges $38+ for.',
   keywords: 'AI bookkeeping features, automated categorization, AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, expense tracking, bank reconciliation, financial reports, receipt scanning',
   alternates: {
-    canonical: 'https://poof.ai/features',
+    canonical: 'https://www.poofai.com/features',
   },
 }
 

@@ -20,7 +20,7 @@ function getBlogSlugs(): { slug: string; date: string }[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://poof.ai'
+  const baseUrl = 'https://www.poofai.com'
 
   const staticPages: MetadataRoute.Sitemap = [
     {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Bookkeeping for Freelancers & Solo Founders | Poof',
     description: 'Automated bookkeeping built for one-person businesses. Get clean books without the manual work.',
-    url: 'https://poof.ai/freelancers',
+    url: 'https://www.poofai.com/freelancers',
     siteName: 'Poof',
     type: 'website',
   },

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Bookkeeping for Service Businesses | Poof',
     description: 'Invoicing, expense tracking, and bookkeeping in one place. Built for service businesses.',
-    url: 'https://poof.ai/service-businesses',
+    url: 'https://www.poofai.com/service-businesses',
     siteName: 'Poof',
     type: 'website',
   },

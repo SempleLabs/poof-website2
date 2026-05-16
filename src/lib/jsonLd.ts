@@ -3,8 +3,8 @@ export function getOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Poof',
-    url: 'https://poof.ai',
-    logo: 'https://poof.ai/poof-logo.png',
+    url: 'https://www.poofai.com',
+    logo: 'https://www.poofai.com/poof-logo.png',
     description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 72 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
@@ -27,14 +27,14 @@ export function getSoftwareApplicationSchema() {
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 72 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
-    url: 'https://poof.ai',
+    url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
       price: '29',
       priceCurrency: 'USD',
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
-      url: 'https://poof.ai/pricing'
+      url: 'https://www.poofai.com/pricing'
     },
     featureList: [
       'AI Transaction Categorization',
@@ -109,7 +109,7 @@ export function getSpendScoreToolSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: 'Free Spend Score Generator',
-    url: 'https://poof.ai/spend-score',
+    url: 'https://www.poofai.com/spend-score',
     description: 'Upload a bank statement (CSV, PDF, or image) and get your free AI-powered Spend Score. AI categorizes your transactions, scores your spending habits, and generates a personalized report with an infographic — in under 60 seconds.',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Web',
@@ -132,7 +132,7 @@ export function getSpendScoreToolSchema() {
     creator: {
       '@type': 'Organization',
       name: 'Poof',
-      url: 'https://poof.ai',
+      url: 'https://www.poofai.com',
     },
   }
 }

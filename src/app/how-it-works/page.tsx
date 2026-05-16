@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize and reconcile, get 13 financial reports, budgets, and cash flow forecasts.',
   keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization, AI budgeting, cash flow forecasting, auto-reconciliation',
   alternates: {
-    canonical: 'https://poof.ai/how-it-works',
+    canonical: 'https://www.poofai.com/how-it-works',
   },
 }
 

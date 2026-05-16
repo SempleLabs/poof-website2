@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Profit & Cash Flow Analysis for Small Business | Poof',
     description: 'Find the profit leaks hiding in your business. Get a clear plan to fix them.',
-    url: 'https://poof.ai/profit-analysis',
+    url: 'https://www.poofai.com/profit-analysis',
     siteName: 'Poof',
     type: 'website',
   },

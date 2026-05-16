@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: 'Upload a bank statement and get your free Spend Score. AI categorizes your transactions, scores your spending habits, and generates a personalized report with infographic — in under 60 seconds.',
   keywords: 'spend score, free spending report, AI bank statement analysis, spending analysis, transaction categorization, spending score, Poof AI',
   alternates: {
-    canonical: 'https://poof.ai/spend-score',
+    canonical: 'https://www.poofai.com/spend-score',
   },
   openGraph: {
     title: 'Get Your Free Spend Score — Powered by AI',
     description: 'Upload a bank statement and get your free AI Spend Score. See your spending categorized, scored, and analyzed in under 60 seconds.',
-    url: 'https://poof.ai/spend-score',
+    url: 'https://www.poofai.com/spend-score',
     siteName: 'Poof',
     type: 'website',
   },

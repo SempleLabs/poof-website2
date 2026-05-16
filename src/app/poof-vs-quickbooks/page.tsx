@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Compare Poof and QuickBooks side by side. AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, and 21 differentiators that set Poof apart.',
   keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping, AI budgeting, cash flow forecasting',
   alternates: {
-    canonical: 'https://poof.ai/poof-vs-quickbooks',
+    canonical: 'https://www.poofai.com/poof-vs-quickbooks',
   },
 }
 

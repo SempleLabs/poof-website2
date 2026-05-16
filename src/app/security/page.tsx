@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Learn how Poof keeps your financial data secure with audit logging, two-factor authentication, role-based access, and encrypted bank connections via Plaid.',
   keywords: 'bookkeeping security, two-factor authentication, Plaid bank connection, data encryption, RBAC',
   alternates: {
-    canonical: 'https://poof.ai/security',
+    canonical: 'https://www.poofai.com/security',
   },
 }
 

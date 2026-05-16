@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'QuickBooks Alternative for Small Business | Poof',
     description: 'Same power, fraction of the cost, none of the complexity. See why small businesses are switching from QuickBooks to Poof.',
-    url: 'https://poof.ai/quickbooks-alternative',
+    url: 'https://www.poofai.com/quickbooks-alternative',
     siteName: 'Poof',
     type: 'website',
   },

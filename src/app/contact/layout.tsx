@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Have a question about Poof AI bookkeeping? Contact us and we\'ll respond within 24 hours. We\'re here to help with setup, features, and support.',
   keywords: 'contact Poof, bookkeeping support, AI bookkeeping help, Poof support',
   alternates: {
-    canonical: 'https://poof.ai/contact',
+    canonical: 'https://www.poofai.com/contact',
   },
 }
 

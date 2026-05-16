@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: `${post.title} - Poof Blog`,
     description: post.excerpt,
     alternates: {
-      canonical: `https://poof.ai/blog/${params.slug}`,
+      canonical: `https://www.poofai.com/blog/${params.slug}`,
     },
   }
 }

@@ -513,7 +513,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What is the Free Spend Score tool?",
-    answer: "The Spend Score tool is a free AI-powered feature on poof.ai that lets you upload a bank statement (CSV, PDF, or image) and get an instant financial analysis. AI categorizes every transaction into spending buckets like Groceries, Dining Out, Subscriptions, and more — then writes a personalized narrative about your spending patterns and generates a shareable infographic. It takes under 60 seconds and your data is never stored.",
+    answer: "The Spend Score tool is a free AI-powered feature on poofai.com that lets you upload a bank statement (CSV, PDF, or image) and get an instant financial analysis. AI categorizes every transaction into spending buckets like Groceries, Dining Out, Subscriptions, and more — then writes a personalized narrative about your spending patterns and generates a shareable infographic. It takes under 60 seconds and your data is never stored.",
     category: "AI & Automation"
   },
   {
@@ -528,7 +528,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How do I analyze my bank statement with AI?",
-    answer: "Visit poof.ai/spend-score and upload your bank statement as a CSV file, PDF, or even a photo/screenshot. Poof's AI will automatically extract and categorize every transaction into spending categories like Income, Groceries, Dining Out, Transportation, Subscriptions, and more. You'll get a written financial narrative analyzing your spending patterns, a visual spending breakdown chart, and an AI-generated infographic you can share — all in under 60 seconds.",
+    answer: "Visit poofai.com/spend-score and upload your bank statement as a CSV file, PDF, or even a photo/screenshot. Poof's AI will automatically extract and categorize every transaction into spending categories like Income, Groceries, Dining Out, Transportation, Subscriptions, and more. You'll get a written financial narrative analyzing your spending patterns, a visual spending breakdown chart, and an AI-generated infographic you can share — all in under 60 seconds.",
     category: "Getting Started"
   }
 ]

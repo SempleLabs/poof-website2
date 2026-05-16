@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description: 'Get answers to common questions about Poof AI bookkeeping — pricing, features, security, QuickBooks migration, tax preparation, and how AI automates your books. 30-day free trial, $29/mo.',
   keywords: 'Poof FAQ, AI bookkeeping questions, bookkeeping software FAQ, QuickBooks alternative FAQ, small business bookkeeping help, AI accounting questions',
   alternates: {
-    canonical: 'https://poof.ai/faq',
+    canonical: 'https://www.poofai.com/faq',
   },
   openGraph: {
     title: 'FAQ — Frequently Asked Questions | Poof AI Bookkeeping',
     description: 'Get answers to common questions about Poof AI bookkeeping — pricing, features, security, QuickBooks migration, and how AI automates your books.',
-    url: 'https://poof.ai/faq',
+    url: 'https://www.poofai.com/faq',
     siteName: 'Poof',
     type: 'website',
   },

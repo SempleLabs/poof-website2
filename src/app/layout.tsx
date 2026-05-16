@@ -32,17 +32,17 @@ export const metadata: Metadata = {
   keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI budgeting, cash flow forecasting, invoicing software, expense tracking, bank reconciliation, recurring invoices, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   alternates: {
-    canonical: 'https://poof.ai',
+    canonical: 'https://www.poofai.com',
   },
   openGraph: {
     title: 'Poof — Bookkeeping That Does Itself',
     description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 72 features, 13 reports, $29/mo. 30-day free trial.',
-    url: 'https://poof.ai',
+    url: 'https://www.poofai.com',
     siteName: 'Poof',
     type: 'website',
     images: [
       {
-        url: 'https://poof.ai/demo/dashboard.png',
+        url: 'https://www.poofai.com/demo/dashboard.png',
         width: 3550,
         height: 1712,
         alt: 'Poof dashboard — AI bookkeeping that does itself',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Poof — Bookkeeping That Does Itself',
     description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 72 features, 13 reports, $29/mo. 30-day free trial.',
-    images: ['https://poof.ai/demo/dashboard.png'],
+    images: ['https://www.poofai.com/demo/dashboard.png'],
   },
 }
 
