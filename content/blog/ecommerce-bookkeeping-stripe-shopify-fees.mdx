@@ -1,0 +1,155 @@
+---
+title: "Ecommerce Bookkeeping: How to Handle Stripe, Shopify, and Marketplace Fees"
+excerpt: "Payment processor and marketplace fees quietly distort your ecommerce books if you record them wrong. Here is how to track gross revenue, fees, refunds, and payouts cleanly — so your profit numbers actually reflect reality."
+category: "Ecommerce"
+readTime: "9 min read"
+date: "2026-05-16"
+author: "Poof Team"
+---
+
+## Why Ecommerce Bookkeeping Is Different
+
+If you run an ecommerce business, your bank account does not tell the whole financial story. When Stripe deposits $9,418 into your checking account on Friday, that number bundles together gross sales, processing fees, refunds, chargebacks, and sometimes payouts from multiple days. Recording it as $9,418 of revenue is the most common ecommerce bookkeeping mistake — and it understates your real sales while hiding thousands of dollars in deductible fees.
+
+Clean ecommerce books require you to separate three things on every sale:
+
+1. **Gross revenue** — what the customer actually paid
+2. **Fees** — what the payment processor or marketplace kept
+3. **Net payout** — what hit your bank account
+
+When these three are tracked correctly, your profit and loss statement reflects what your business is really doing. When they are not, you lose visibility into your true margins, miss tax deductions, and end up reconciling forever at tax time.
+
+## The Core Problem: Net Deposits Hide Gross Sales
+
+Almost every ecommerce platform deposits **net** amounts into your bank — the customer's payment minus the platform's cut.
+
+Here is what a typical Stripe payout actually contains:
+
+- $10,000 in customer charges
+- Minus $290 in processing fees (2.9% + $0.30 per transaction)
+- Minus $292 in refunds issued that period
+- Equals an $9,418 deposit
+
+If you record the $9,418 as a single revenue entry, three problems happen:
+
+- Your **revenue is understated** by $582 — making your business look smaller than it is
+- Your **processing fees are invisible** — and you cannot deduct what you do not record
+- Your **refunds are invisible** — making it impossible to track refund rate as a KPI
+
+Lenders, investors, and the IRS all want to see gross revenue, not net. So do you, frankly — net deposits make it impossible to know your true sales volume.
+
+## How to Record Stripe Transactions Correctly
+
+Stripe is the most common processor in ecommerce, and getting Stripe right covers most of the patterns you will run into elsewhere.
+
+**For every payout, split the deposit into three line items:**
+
+- **Revenue** — the gross amount customers were charged (a positive entry to your Sales account)
+- **Processing fees** — Stripe's cut (a positive entry to a Merchant Fees or Payment Processing Fees expense account)
+- **Refunds** — anything refunded during the payout period (a contra-revenue or Refunds account)
+
+The net of these three should equal the deposit that hit your bank.
+
+**What this looks like in practice:**
+
+- $10,000 deposit to Revenue
+- $290 expense to Processing Fees
+- $292 contra-revenue to Refunds
+- Net $9,418 reconciles to the bank deposit
+
+**The shortcut most people get wrong:** Importing Stripe transactions one-by-one from the Stripe dashboard. This creates duplicate revenue entries when the bank payout also imports. Either record the payout in detail (as above) **or** record individual charges and exclude the payout — never both.
+
+## Handling Shopify Payments
+
+Shopify Payments works similarly to Stripe — in fact, it is Stripe under the hood for most merchants. The key difference is that Shopify bundles **shipping income, sales tax collected, gift card redemptions, and tips** into the payout alongside product revenue and fees.
+
+**For Shopify payouts, your split should include:**
+
+- **Product revenue** — sales of physical or digital goods
+- **Shipping income** — what customers paid for shipping (separate from product revenue)
+- **Sales tax collected** — a **liability**, not revenue (you are holding it for the state)
+- **Gift cards sold** — also a liability until redeemed
+- **Tips** — usually pass-through, depending on your setup
+- **Processing fees** — Shopify's cut
+- **Refunds and chargebacks**
+
+**The most common mistake:** Recording sales tax as revenue. Sales tax you collect is money you owe the state. It belongs on the balance sheet as a liability, not on the P&L as income. If you treat it as revenue, you will overpay income tax on money that was never yours to begin with.
+
+## Marketplace Fees: Amazon, Etsy, eBay, Walmart
+
+Marketplaces are even messier than payment processors because they take **multiple fees per sale** — referral fees, FBA fees, storage fees, advertising, refund administration, and more.
+
+Amazon, for example, deducts:
+
+- A **referral fee** (8 to 15% of sale price, varies by category)
+- **FBA fulfillment fees** if you use Amazon's warehouses
+- **Monthly storage fees** for inventory
+- **Long-term storage surcharges** for slow-moving inventory
+- **Advertising spend** if you run sponsored ads
+- **Returns processing fees**
+
+A $50 sale on Amazon FBA might net you $28 after all fees. If you record $28 as revenue, you have lost visibility into:
+
+- Your gross sales (you appear smaller than you are)
+- Your effective fee rate by SKU (critical for pricing decisions)
+- Which fee categories are eating your margin (advertising? storage? returns?)
+
+**The right approach:** Pull a marketplace settlement report at least monthly. Most marketplaces (Amazon, Etsy, eBay) provide a downloadable settlement or transaction report showing every line item. Use it to record:
+
+- Gross sales as revenue
+- Each fee category as a separate expense line
+- Refunds as contra-revenue
+- The net amount should reconcile to the deposit
+
+This level of detail is what makes the difference between "I think Amazon is profitable" and "Amazon is netting me 18% after all fees, and storage is my biggest cost."
+
+## Refunds and Chargebacks: Track Them Separately
+
+Refunds and chargebacks are different events and should be tracked separately, even though they both reduce your bank balance.
+
+- **Refunds** — you voluntarily return the customer's money. Often a sign of product issues, shipping problems, or policy generosity. Track as contra-revenue.
+- **Chargebacks** — the customer disputes the charge with their bank. The bank pulls the money back, often with an additional $15 to $25 chargeback fee. Track the reversed sale as contra-revenue and the chargeback fee as a separate expense.
+
+**Why this matters:** Refund rate and chargeback rate are both KPIs you want to watch. A rising refund rate signals product or expectation problems. A rising chargeback rate signals fraud or customer service problems — and if it exceeds 1% of transactions, payment processors can freeze your account or terminate your merchant agreement. You cannot manage either metric if you cannot see them in your books.
+
+## Inventory: The Other Ecommerce Trap
+
+If you sell physical products, inventory is the biggest single thing that distinguishes ecommerce bookkeeping from service-business bookkeeping. Inventory is **not an expense when you buy it** — it is an asset on your balance sheet that becomes an expense only when you sell it (as Cost of Goods Sold, or COGS).
+
+**The cash-basis mistake:** Recording a $10,000 inventory purchase as an expense in the month you bought it. If you sell that inventory over six months, your books will show a huge loss in month one and inflated profits in months two through six. None of those numbers reflect what your business actually did.
+
+**The right approach:**
+
+- Record inventory purchases as an **asset** (Inventory account on the balance sheet)
+- When you sell, move the cost of the sold units from Inventory to **Cost of Goods Sold** on the P&L
+- Your gross profit = Revenue minus COGS, which is the most important number for an ecommerce business
+
+This is harder to do manually and is one of the main reasons ecommerce businesses outgrow spreadsheets quickly. Most ecommerce-focused bookkeeping tools handle this automatically once your inventory is set up.
+
+## A Monthly Ecommerce Bookkeeping Workflow
+
+Here is a clean monthly close process for an ecommerce business running on Stripe, Shopify, and one or two marketplaces:
+
+1. **Pull settlement reports** from each platform (Stripe, Shopify, Amazon, etc.) for the month
+2. **Record each platform's activity** in summary — gross revenue, fees by category, refunds, sales tax, shipping income
+3. **Reconcile** the net of each platform's activity to the actual bank deposits
+4. **Update inventory** — record purchases as assets, move sold units to COGS
+5. **Review refund rate, chargeback rate, and effective fee rate by channel**
+6. **Generate P&L** by sales channel — knowing whether Amazon, Shopify, or Etsy is your most profitable channel is the kind of insight that changes business decisions
+
+Tools like [Poof](https://www.poofai.com) can automate most of this — pulling Stripe and Shopify data, splitting payouts into the right accounts, and tracking COGS — so you spend the month-end review checking numbers instead of entering them. But the principles apply regardless of which tool you use.
+
+## Common Ecommerce Bookkeeping Mistakes
+
+- **Recording net payouts as revenue** — hides gross sales and processing fees
+- **Treating sales tax as revenue** — leads to overpaying income tax
+- **Expensing inventory at purchase** — distorts monthly profit
+- **Mixing channels** — without per-channel reporting, you cannot tell which platform is actually profitable
+- **Ignoring marketplace fee categories** — lumping all Amazon fees together hides storage costs, ad spend, and return costs that you could optimize separately
+- **Double-counting transactions** — importing individual Stripe charges *and* the bank payout
+
+## The Bottom Line
+
+Ecommerce bookkeeping is only complicated if you treat it like service-business bookkeeping. The core idea is simple: every payout from a processor or marketplace is a bundle, and your job is to unbundle it into gross revenue, fees, refunds, and (where relevant) sales tax and shipping.
+
+Do that consistently, and your P&L will tell you the truth — what you actually sold, what each channel actually costs, and where your margin is going. That is the difference between running an ecommerce business on instinct and running it on numbers.
