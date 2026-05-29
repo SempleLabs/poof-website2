@@ -17,6 +17,7 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -29,6 +30,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMsg('')
 
     try {
       const response = await fetch('https://formspree.io/f/maqnoywd', {
@@ -43,10 +45,10 @@ export default function ContactPage() {
       if (response.ok) {
         setIsSubmitted(true)
       } else {
-        alert('There was an error sending your message. Please try again.')
+        setErrorMsg('There was an error sending your message. Please try again, or email us at support@poofai.com.')
       }
     } catch (error) {
-      alert('There was an error sending your message. Please try again.')
+      setErrorMsg('There was an error sending your message. Please try again, or email us at support@poofai.com.')
     } finally {
       setIsSubmitting(false)
     }
@@ -215,6 +217,12 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
+
+              {errorMsg && (
+                <div role="alert" aria-live="assertive" className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                  {errorMsg}
+                </div>
+              )}
 
               <div className="mt-8">
                 <button

@@ -181,7 +181,7 @@ function buildReportEmail(payload: EmailPayload): string {
     <!-- CTA -->
     <div class="email-cta-section" style="background: #7c3aed; border-radius: 16px; padding: 32px; margin-top: 24px; text-align: center;">
       <div class="email-cta-text" style="font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Want to improve your Spend Score?</div>
-      <div class="email-cta-subtext" style="font-size: 14px; color: #e0d5ff; margin-bottom: 20px;">Poof does this automatically, every day. AI categorization, reconciliation, invoicing, and 13 financial reports — $29/mo.</div>
+      <div class="email-cta-subtext" style="font-size: 14px; color: #e0d5ff; margin-bottom: 20px;">Poof does this automatically, every day. AI categorization, reconciliation, invoicing, budgeting, forecasting, and 13 financial reports — 69 features, $29/mo.</div>
       <a href="https://app.poofai.com/register" style="display: inline-block; background: white; color: #7c3aed; font-weight: 600; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 15px;">Start Free Trial</a>
     </div>
 

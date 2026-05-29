@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Behind on Your Bookkeeping? Get Caught Up Fast | Poof',
   description: 'Haven\'t done your bookkeeping all year? Poof analyzes your bank statements, categorizes every transaction, and gets your books tax-ready in days, not weeks.',
   keywords: 'catch up bookkeeping, behind on bookkeeping, tax season bookkeeping, last minute bookkeeping, get books ready for taxes',
+  alternates: {
+    canonical: 'https://www.poofai.com/tax-season',
+  },
   openGraph: {
     title: 'Behind on Your Bookkeeping? Get Caught Up Fast | Poof',
     description: 'Tax deadline approaching and your books are a mess? We\'ll get them sorted in days.',

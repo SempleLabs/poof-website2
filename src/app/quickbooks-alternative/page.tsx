@@ -7,6 +7,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'QuickBooks Alternative for Small Business | Poof',
   description: 'Frustrated with QuickBooks? Get a free financial analysis that shows you exactly what you\'re overpaying for and how to simplify your bookkeeping.',
+  alternates: {
+    canonical: 'https://www.poofai.com/quickbooks-alternative',
+  },
   openGraph: {
     title: 'QuickBooks Alternative for Small Business | Poof',
     description: 'Same power, fraction of the cost, none of the complexity. See why small businesses are switching from QuickBooks to Poof.',

@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     url: 'https://www.poofai.com',
     logo: 'https://www.poofai.com/poof-logo.png',
-    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 72 features, 13 reports, $29/mo.',
+    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 69 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +26,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 72 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
@@ -77,7 +77,7 @@ export function getSoftwareApplicationSchema() {
       'Budget Alerts',
       'Team Management with RBAC (5 roles, 26 permissions)',
       'Two-Factor Authentication',
-      'SOC 2 Audit Logs',
+      'Audit Logs with PII Masking',
       'Session Management',
       'Personalized Dashboard with AI Daily Briefing',
       'Global Search',
@@ -96,10 +96,7 @@ export function getSoftwareApplicationSchema() {
       'Bank Statement PDF Import via AI Chat',
       'Guided Onboarding Walkthrough',
       'File Attachment Handling',
-      'AI Chat Folders & Multi-Session Conversations',
-      'AI Text-to-Speech',
-      'In-App Navigation Links',
-      'Budget Overview & Account Comparison'
+      'AI Chat Folders & Multi-Session Conversations'
     ]
   }
 }

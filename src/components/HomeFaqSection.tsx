@@ -37,7 +37,10 @@ export default function HomeFaqSection() {
                 }`}
               >
                 <button
+                  type="button"
                   onClick={() => toggle(index)}
+                  aria-expanded={openIndex === index}
+                  aria-controls={`home-faq-panel-${index}`}
                   className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl"
                 >
                   <h3 className={`text-lg font-semibold pr-4 transition-colors ${
@@ -60,7 +63,12 @@ export default function HomeFaqSection() {
                     </svg>
                   </div>
                 </button>
-                <div className={`accordion-content ${openIndex === index ? 'open' : ''}`}>
+                <div
+                  id={`home-faq-panel-${index}`}
+                  role="region"
+                  aria-hidden={openIndex !== index}
+                  className={`accordion-content ${openIndex === index ? 'open' : ''}`}
+                >
                   <div>
                     <div className="px-6 pb-5">
                       <p className="text-slate-600 leading-relaxed">
@@ -77,7 +85,7 @@ export default function HomeFaqSection() {
         <div className="text-center mt-12">
           <a
             href="/faq"
-            className="text-gold-500 hover:text-gold-400 font-semibold transition-colors"
+            className="text-gold-600 hover:text-gold-700 font-semibold transition-colors"
           >
             View all frequently asked questions →
           </a>

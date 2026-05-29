@@ -68,7 +68,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 72 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 69 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
@@ -292,7 +292,7 @@ export default function PricingPage() {
             {faqs.map((faq, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
                 <div className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${openFaqIndex === index ? 'border-gold-500/30 shadow-md' : 'border-slate-200'}`}>
-                  <button onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)} className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl">
+                  <button type="button" onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)} aria-expanded={openFaqIndex === index} aria-controls={`pricing-faq-panel-${index}`} className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl">
                     <h3 className="text-lg font-semibold text-slate-800 pr-4">{faq.question}</h3>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openFaqIndex === index ? 'bg-gold-50 rotate-180' : 'bg-slate-100'}`}>
                       <svg className={`w-4 h-4 transition-colors duration-300 ${openFaqIndex === index ? 'text-gold-500' : 'text-slate-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -300,7 +300,7 @@ export default function PricingPage() {
                       </svg>
                     </div>
                   </button>
-                  <div className={`accordion-content ${openFaqIndex === index ? 'open' : ''}`}>
+                  <div id={`pricing-faq-panel-${index}`} role="region" aria-hidden={openFaqIndex !== index} className={`accordion-content ${openFaqIndex === index ? 'open' : ''}`}>
                     <div><div className="px-6 pb-5"><p className="text-slate-600 leading-relaxed">{faq.answer}</p></div></div>
                   </div>
                 </div>

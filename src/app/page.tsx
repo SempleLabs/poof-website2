@@ -12,6 +12,13 @@ import ProfitAnalysisCta from '@/components/ProfitAnalysisCta'
 import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
 import { getSoftwareApplicationSchema } from '@/lib/jsonLd'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default function Home() {
   return (

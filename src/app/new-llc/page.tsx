@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Bookkeeping for New LLCs & First-Time Business Owners | Poof',
   description: 'Just started an LLC? Set up your books the right way from day one. AI-powered bookkeeping that handles categorization, reconciliation, and reporting automatically.',
   keywords: 'new LLC bookkeeping, how to set up bookkeeping for LLC, new business accounting, first-time business owner bookkeeping, LLC bookkeeping software',
+  alternates: {
+    canonical: 'https://www.poofai.com/new-llc',
+  },
   openGraph: {
     title: 'Bookkeeping for New LLCs & First-Time Business Owners | Poof',
     description: 'Just formed your LLC? Get your books set up in 5 minutes with AI-powered bookkeeping.',

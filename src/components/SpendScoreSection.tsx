@@ -33,7 +33,7 @@ export default function SpendScoreSection() {
               Secure
             </span>
             <span>No signup required</span>
-            <span>Data never stored</span>
+            <span>Statement not retained</span>
           </div>
         </div>
       </div>

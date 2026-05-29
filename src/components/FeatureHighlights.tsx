@@ -271,7 +271,7 @@ export default function FeatureHighlights() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              All features included · $14.50/month · 30-day free trial
+              All features included · $29/mo · 30-day free trial
             </div>
           </AnimateOnScroll>
         </div>

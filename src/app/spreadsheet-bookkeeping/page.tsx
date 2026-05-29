@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Stop Doing Bookkeeping in Spreadsheets | Poof',
   description: 'Still tracking finances in Excel or Google Sheets? Get an analysis that shows what it\'s costing you and how to automate everything in minutes.',
   keywords: 'spreadsheet bookkeeping, Excel bookkeeping, Google Sheets accounting, automate bookkeeping, bookkeeping automation',
+  alternates: {
+    canonical: 'https://www.poofai.com/spreadsheet-bookkeeping',
+  },
   openGraph: {
     title: 'Stop Doing Bookkeeping in Spreadsheets | Poof',
     description: 'Your spreadsheet is costing you hours every week. See what automated bookkeeping looks like.',

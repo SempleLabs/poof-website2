@@ -137,11 +137,11 @@ Welcome emails are automatically sent when someone subscribes to your newsletter
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
 
-          <!-- Header with gradient -->
+          <!-- Header with brand gradient -->
           <tr>
-            <td style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); padding: 40px 40px 40px 40px; text-align: center;">
+            <td style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%); padding: 40px 40px 40px 40px; text-align: center;">
               <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;">
-                Welcome to Poof! ✨
+                Welcome to Poof!
               </h1>
             </td>
           </tr>
@@ -154,7 +154,7 @@ Welcome emails are automatically sent when someone subscribes to your newsletter
               </p>
 
               <p style="font-size: 16px; line-height: 24px; color: #374151; margin: 0 0 20px 0;">
-                Thanks for subscribing to our newsletter! You're now part of a growing community of small business owners who are transforming their bookkeeping with AI.
+                Thanks for subscribing! You're now part of a growing community of small business owners who spend minutes on their books instead of hours.
               </p>
 
               <p style="font-size: 16px; line-height: 24px; color: #374151; margin: 0 0 30px 0;">
@@ -166,19 +166,19 @@ Welcome emails are automatically sent when someone subscribes to your newsletter
                 <tr>
                   <td style="padding: 12px 0;">
                     <span style="color: #10B981; font-size: 20px; margin-right: 10px;">✓</span>
-                    <span style="font-size: 16px; color: #374151;">Bookkeeping tips and best practices</span>
+                    <span style="font-size: 16px; color: #374151;">Bookkeeping tips that save you hours every month</span>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0;">
                     <span style="color: #10B981; font-size: 20px; margin-right: 10px;">✓</span>
-                    <span style="font-size: 16px; color: #374151;">Product updates and new features</span>
+                    <span style="font-size: 16px; color: #374151;">Product updates — new ways Poof automates your books</span>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0;">
                     <span style="color: #10B981; font-size: 20px; margin-right: 10px;">✓</span>
-                    <span style="font-size: 16px; color: #374151;">Small business financial insights</span>
+                    <span style="font-size: 16px; color: #374141;">Insights to help you stay on top of your finances</span>
                   </td>
                 </tr>
                 <tr>
@@ -201,7 +201,7 @@ Welcome emails are automatically sent when someone subscribes to your newsletter
               </table>
 
               <p style="font-size: 16px; line-height: 24px; color: #374151; margin: 30px 0 0 0;">
-                Haven't tried Poof yet? Start your free 30-day trial today—no credit card required!
+                Haven't tried Poof yet? 69 features, one flat price — $29/mo. Start your free 30-day trial today, no credit card required.
               </p>
 
               <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 15px;">
@@ -232,7 +232,7 @@ Welcome emails are automatically sent when someone subscribes to your newsletter
               </p>
 
               <p style="font-size: 12px; color: #9ca3af; margin: 10px 0 0 0; text-align: center;">
-                © 2025 Poof. All rights reserved.
+                © 2026 Poof. All rights reserved.
               </p>
             </td>
           </tr>
@@ -304,7 +304,7 @@ await resend.emails.send({
 
           <!-- Header -->
           <tr>
-            <td style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); padding: 30px; text-align: center;">
+            <td style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%); padding: 30px; text-align: center;">
               <h1 style="color: #ffffff; margin: 0; font-size: 24px;">Poof Newsletter</h1>
               <p style="color: #ffffff; margin: 10px 0 0 0; opacity: 0.9;">January 2026</p>
             </td>
@@ -335,13 +335,13 @@ await resend.emails.send({
               </h3>
 
               <p style="color: #374151; line-height: 26px; margin: 0 0 15px 0; font-size: 16px;">
-                We've added new features to make your bookkeeping even more magical:
+                Here's what's new — more ways Poof handles your books automatically:
               </p>
 
               <ul style="color: #374151; line-height: 28px; font-size: 16px; padding-left: 20px;">
-                <li>Enhanced AI categorization for better accuracy</li>
-                <li>New financial reports dashboard</li>
-                <li>Bulk transaction editing</li>
+                <li>[Feature update 1]</li>
+                <li>[Feature update 2]</li>
+                <li>[Feature update 3]</li>
               </ul>
 
               <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
@@ -370,7 +370,7 @@ await resend.emails.send({
               </p>
               <p style="color: #9ca3af; margin: 0; font-size: 12px;">
                 <a href="{{unsubscribe_url}}" style="color: #9ca3af;">Unsubscribe</a> |
-                © 2025 Poof
+                © 2026 Poof
               </p>
             </td>
           </tr>

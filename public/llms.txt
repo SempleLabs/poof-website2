@@ -1,0 +1,97 @@
+# Poof
+
+> Poof is an AI-powered bookkeeping app for small businesses. It automates the tedious parts of bookkeeping — transaction categorization, reconciliation, invoicing, receipt scanning, budgeting, and cash flow forecasting — so business owners spend minutes on their books instead of hours. One-liner: "Bookkeeping that does itself."
+
+Poof is built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses. The product launched in June 2025 and now includes 69 features across 9 categories, 13 financial reports, and a built-in AI assistant with 30+ tools.
+
+Poof has two distinct offerings:
+
+1. **Poof Professional** — Self-serve SaaS at $29/mo ($14.50/mo launch special, $290/yr annual) for small businesses doing 1–50 employees and 100–10,000 monthly transactions. One plan, every feature included. 30-day free trial, no credit card required.
+
+2. **Poof Managed for Trades** — Managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue. $999/mo (2–4 truck shops) or $1,499/mo (5+ truck shops). Per-job profitability within 48 hours of job completion, monthly close in 24 hours. AI agents do the work, a former controller reviews every customer-facing decision. Direct Jobber and Housecall Pro integration — no manual rekeying. $1,500 one-time onboarding, $250 refundable 30-day pilot.
+
+## Core Pages
+
+- [Home](https://www.poofai.com): Hero, product overview, feature highlights, comparison to QuickBooks
+- [Features](https://www.poofai.com/features): All 69 features across 9 categories
+- [Pricing](https://www.poofai.com/pricing): $29/mo Poof Professional plan, FAQs, launch special
+- [How It Works](https://www.poofai.com/how-it-works): Three-step setup and automation overview
+- [Poof vs QuickBooks](https://www.poofai.com/poof-vs-quickbooks): Side-by-side feature comparison with QuickBooks
+- [About](https://www.poofai.com/about): Founder story, mission, company timeline
+- [Security](https://www.poofai.com/security): Bank-grade security, SOC 2 audit logging, encryption, 2FA, RBAC
+- [FAQ](https://www.poofai.com/faq): Full FAQ on features, pricing, security, AI capabilities
+
+## Free Tools
+
+- [Spend Score Generator](https://www.poofai.com/spend-score): Upload a bank statement (CSV, PDF, image) for a free AI-powered spending analysis in under 60 seconds
+- [Profit Analysis](https://www.poofai.com/profit-analysis): Apply for a free operational financial analysis
+
+## Vertical Landing Pages
+
+- [HVAC, Plumbing & Electrical Shops](https://www.poofai.com/hvac): Poof Managed for Trades — managed service for service contractor shops
+- [Service Businesses](https://www.poofai.com/service-businesses): Agencies, consultants, and professional service businesses
+- [Freelancers](https://www.poofai.com/freelancers): Solo founders and freelancers
+- [Creators](https://www.poofai.com/creators): Content creators, YouTubers, podcasters
+- [Ecommerce](https://www.poofai.com/ecommerce): Online retailers, Stripe/Shopify shops
+- [New LLC](https://www.poofai.com/new-llc): New LLC owners setting up bookkeeping from day one
+- [QuickBooks Alternative](https://www.poofai.com/quickbooks-alternative): For users frustrated with QuickBooks
+- [Spreadsheet Bookkeeping](https://www.poofai.com/spreadsheet-bookkeeping): For owners moving off spreadsheets
+- [Tax Season](https://www.poofai.com/tax-season): Tax season prep and bookkeeping checklist
+
+## Key Features (69 total across 9 categories)
+
+**AI-Powered Automation (9):** AI transaction categorization (BRAID engine), Poof AI assistant, AI chart of accounts generation, automated daily bookkeeping, AI recurring charge detection, receipt and invoice scanning (OCR with HEIC support), smart transaction matching, AI-guided onboarding, AI budget and forecast generation.
+
+**Invoicing & Payments (8):** Invoicing with PDF export and email delivery, estimates with one-click conversion to invoices, credit notes, payment tracking, products and services catalog, customer management, recurring invoices, automated invoice follow-ups.
+
+**Expense & Bill Management (5):** Expense tracking, mileage tracking, bill management, vendor management, transaction matching.
+
+**Banking & Reconciliation (6):** Bank connection via Plaid (12,000+ banks), bank statement import (CSV/PDF with GPT-4o Vision parsing), reconciliation, auto-reconciliation, deposits, multi-account support.
+
+**Accounting & Reporting (8):** Double-entry accounting, 13 financial reports (P&L, Balance Sheet, Cash Flow, Trial Balance, General Ledger, Account Detail, AR/AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual), report drill-down, shareable report URLs, scheduled report delivery, financial import, accrual/cash basis toggle, recurring journal entry templates.
+
+**Budgeting & Forecasting (5):** Budget creation (manual or AI-generated), budget lifecycle management, variance dashboard, 12-month cash flow forecasting with confidence bands, budget alerts.
+
+**Team & Security (7):** Team management with 5 roles, two-factor authentication, SOC 2 audit logs with PII masking, session management, GDPR/CCPA-compliant account deletion, email verification, RBAC with 26 granular permissions.
+
+**Productivity & Workflow (6):** Personalized dashboard with AI daily briefing, global search, notification center, transaction approval workflows, command bar (Cmd+K), AI chat folders with drag-and-drop organization.
+
+**Poof AI Capabilities (15):** Business-context-aware chat, books health check and month-end close guidance, invoice/estimate/credit note creation via AI, record creation via natural language, record updates, budgeting and forecasting guidance, recurring charge analysis, chart of accounts setup, account search and creation, journal entry creation with account validation, recurring journal entry setup (depreciation, amortization, rent, insurance), financial report generation, bank statement PDF import via chat, guided onboarding walkthrough, file attachment handling.
+
+## Key Numbers & Claims
+
+- 69 total features, all included in every plan (no tiers)
+- 12,000+ bank connections via Plaid
+- 13 financial reports
+- 30+ AI assistant tools (create, update, search, send, generate, import)
+- 95% AI accuracy rate
+- 5-minute setup time
+- 90% reduction in manual data entry
+- 5 team roles, 26 granular RBAC permissions
+- 30-day free trial, no credit card required
+- 12-month cash flow forecast horizon with confidence bands
+
+## Pricing
+
+- **Monthly:** $29/mo, all 69 features included
+- **Monthly (launch special):** $14.50/mo (50% off first 3 months)
+- **Annual:** $290/year ($24.17/mo, save $58)
+- **Free trial:** 30 days, no credit card required
+- **Money-back guarantee:** 30 days
+
+Poof Managed for Trades (HVAC, plumbing, electrical):
+
+- **Managed for Trades:** $999/mo (2–4 truck shops, $750K–$1.5M revenue)
+- **Managed for Trades Plus:** $1,499/mo (5+ truck shops, $1.5M–$3M revenue)
+- **Onboarding (one-time):** $1,500 (historical cleanup up to 18 months)
+- **Trade pilot:** $250 refundable (30-day full-service trial)
+
+## Founder
+
+Austin Semple — CEO and Founder. 10+ years of auditing and controller experience working with small businesses before founding Poof in June 2025 to solve the bookkeeping pain points he witnessed firsthand.
+
+## Optional
+
+- [Resources](https://www.poofai.com/resources): Blog, guides, and educational content
+- [Demo](https://www.poofai.com/demo): Request a product demo
+- [Contact](https://www.poofai.com/contact): Get in touch

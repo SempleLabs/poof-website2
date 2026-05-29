@@ -7,6 +7,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Bookkeeping for Service Businesses | Poof',
   description: 'Agencies, consultants, and service pros: get a financial analysis that uncovers where you\'re leaking profit and wasting time on manual bookkeeping.',
+  alternates: {
+    canonical: 'https://www.poofai.com/service-businesses',
+  },
   openGraph: {
     title: 'Bookkeeping for Service Businesses | Poof',
     description: 'Invoicing, expense tracking, and bookkeeping in one place. Built for service businesses.',

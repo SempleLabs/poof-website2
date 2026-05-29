@@ -7,6 +7,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Bookkeeping for Freelancers & Solo Founders | Poof',
   description: 'Stop spending nights and weekends on your books. Poof automates categorization, reconciliation, and reporting so you can focus on your business.',
+  alternates: {
+    canonical: 'https://www.poofai.com/freelancers',
+  },
   openGraph: {
     title: 'Bookkeeping for Freelancers & Solo Founders | Poof',
     description: 'Automated bookkeeping built for one-person businesses. Get clean books without the manual work.',

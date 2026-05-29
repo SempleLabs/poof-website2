@@ -2,6 +2,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 
+// Escape user-provided values before interpolating into email HTML to prevent HTML/content injection.
+function escapeHtml(value: unknown): string {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -66,17 +76,17 @@ export async function POST(request: NextRequest) {
         subject: `New Profit Analysis Application: ${business_name}`,
         html: `
           <h2>New Intake Submission</h2>
-          <p><strong>Source:</strong> ${source || 'profit-analysis'}</p>
+          <p><strong>Source:</strong> ${escapeHtml(source || 'profit-analysis')}</p>
           <hr />
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Business:</strong> ${business_name}</p>
-          <p><strong>Website:</strong> ${website || 'Not provided'}</p>
-          <p><strong>Monthly Revenue:</strong> ${revenue_range}</p>
-          <p><strong>Business Type:</strong> ${business_type || 'Not specified'}</p>
-          <p><strong>Accounting Software:</strong> ${accounting_software || 'Not specified'}</p>
-          <p><strong>Platforms:</strong> ${platforms?.length ? platforms.join(', ') : 'None selected'}</p>
-          <p><strong>Pain Point:</strong> ${pain_point || 'Not provided'}</p>
+          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Business:</strong> ${escapeHtml(business_name)}</p>
+          <p><strong>Website:</strong> ${escapeHtml(website || 'Not provided')}</p>
+          <p><strong>Monthly Revenue:</strong> ${escapeHtml(revenue_range)}</p>
+          <p><strong>Business Type:</strong> ${escapeHtml(business_type || 'Not specified')}</p>
+          <p><strong>Accounting Software:</strong> ${escapeHtml(accounting_software || 'Not specified')}</p>
+          <p><strong>Platforms:</strong> ${escapeHtml(platforms?.length ? platforms.join(', ') : 'None selected')}</p>
+          <p><strong>Pain Point:</strong> ${escapeHtml(pain_point || 'Not provided')}</p>
           <p><strong>Time:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET</p>
         `
       })
@@ -103,10 +113,10 @@ export async function POST(request: NextRequest) {
                     <tr>
                       <td style="padding: 40px 30px;">
                         <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
-                          Hi ${name},
+                          Hi ${escapeHtml(name)},
                         </p>
                         <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
-                          Thanks for applying for a Poof Ecommerce Profit & Cash Flow Analysis. We've received your submission for <strong>${business_name}</strong>.
+                          Thanks for applying for a Poof Ecommerce Profit & Cash Flow Analysis. We've received your submission for <strong>${escapeHtml(business_name)}</strong>.
                         </p>
                         <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
                           Here's what happens next:

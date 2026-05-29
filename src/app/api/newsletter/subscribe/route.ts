@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 
+// Physical mailing address for CAN-SPAM compliance in marketing email.
+// Set COMPANY_MAILING_ADDRESS in your environment to your real business postal address.
+const MAILING_ADDRESS = process.env.COMPANY_MAILING_ADDRESS || 'Semple Labs LLC'
+
 // Simple in-memory rate limiting: max 5 requests per IP per 10 minutes
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
 const RATE_LIMIT_WINDOW = 10 * 60 * 1000 // 10 minutes
@@ -98,6 +102,9 @@ export async function POST(request: NextRequest) {
       from: 'Poof <noreply@poofai.com>',
       to: email,
       subject: 'Welcome to Poof!',
+      headers: {
+        'List-Unsubscribe': '<mailto:support@poofai.com?subject=Unsubscribe>',
+      },
       html: `
         <!DOCTYPE html>
         <html>
@@ -131,7 +138,7 @@ export async function POST(request: NextRequest) {
                       </ul>
 
                       <p style="margin: 0 0 30px; color: #334155; font-size: 16px; line-height: 1.6;">
-                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 72 features, one flat price.
+                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 69 features, one flat price.
                       </p>
 
                       <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
@@ -152,8 +159,12 @@ export async function POST(request: NextRequest) {
                       <p style="margin: 0 0 10px; color: #64748b; font-size: 14px;">
                         Poof — Bookkeeping That Does Itself
                       </p>
+                      <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">
+                        You received this email because you subscribed at poofai.com.
+                        <a href="mailto:support@poofai.com?subject=Unsubscribe" style="color: #7c3aed; text-decoration: underline;">Unsubscribe</a>
+                      </p>
                       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
-                        You received this email because you subscribed at poofai.com
+                        ${MAILING_ADDRESS}
                       </p>
                     </td>
                   </tr>

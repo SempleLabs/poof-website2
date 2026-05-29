@@ -141,7 +141,10 @@ export default function FaqPage() {
                             }`}
                           >
                             <button
+                              type="button"
                               onClick={() => toggle(key)}
+                              aria-expanded={openIndex === key}
+                              aria-controls={`faq-panel-${key.replace(/\W+/g, '-')}`}
                               className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl"
                             >
                               <h3 className={`text-lg font-semibold pr-4 transition-colors ${
@@ -164,7 +167,12 @@ export default function FaqPage() {
                                 </svg>
                               </div>
                             </button>
-                            <div className={`accordion-content ${openIndex === key ? 'open' : ''}`}>
+                            <div
+                              id={`faq-panel-${key.replace(/\W+/g, '-')}`}
+                              role="region"
+                              aria-hidden={openIndex !== key}
+                              className={`accordion-content ${openIndex === key ? 'open' : ''}`}
+                            >
                               <div>
                                 <div className="px-6 pb-5">
                                   <p className="text-slate-600 leading-relaxed">

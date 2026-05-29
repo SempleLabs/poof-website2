@@ -47,8 +47,8 @@ export default function Footer() {
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
               <Image src="/poof-logo.png" alt="Poof logo" width={72} height={72} className="-mr-1" />
               <span className="poof-brand">Poof</span>
@@ -61,28 +61,42 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Product</h3>
             <ul className="space-y-3">
-              <li><Link href="/features" className="text-slate-500 hover:text-gold-400 transition-colors">Features</Link></li>
-              <li><Link href="/pricing" className="text-slate-500 hover:text-gold-400 transition-colors">Pricing</Link></li>
-              <li><Link href="/how-it-works" className="text-slate-500 hover:text-gold-400 transition-colors">How it Works</Link></li>
-              <li><Link href="/demo" className="text-slate-500 hover:text-gold-400 transition-colors">Request Demo</Link></li>
+              <li><Link href="/features" className="text-slate-500 hover:text-gold-600 transition-colors">Features</Link></li>
+              <li><Link href="/pricing" className="text-slate-500 hover:text-gold-600 transition-colors">Pricing</Link></li>
+              <li><Link href="/how-it-works" className="text-slate-500 hover:text-gold-600 transition-colors">How it Works</Link></li>
+              <li><Link href="/demo" className="text-slate-500 hover:text-gold-600 transition-colors">Request Demo</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Industries</h3>
+            <ul className="space-y-3">
+              <li><Link href="/hvac" className="text-slate-500 hover:text-gold-600 transition-colors">HVAC</Link></li>
+              <li><Link href="/plumbing" className="text-slate-500 hover:text-gold-600 transition-colors">Plumbing</Link></li>
+              <li><Link href="/electrical" className="text-slate-500 hover:text-gold-600 transition-colors">Electrical</Link></li>
+              <li><Link href="/service-businesses" className="text-slate-500 hover:text-gold-600 transition-colors">Service Businesses</Link></li>
+              <li><Link href="/freelancers" className="text-slate-500 hover:text-gold-600 transition-colors">Freelancers</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><Link href="/resources" className="text-slate-500 hover:text-gold-400 transition-colors">Blog & Guides</Link></li>
-              <li><Link href="/poof-vs-quickbooks" className="text-slate-500 hover:text-gold-400 transition-colors">Poof vs QuickBooks</Link></li>
-              <li><Link href="/faq" className="text-slate-500 hover:text-gold-400 transition-colors">FAQ</Link></li>
-              <li><Link href="/security" className="text-slate-500 hover:text-gold-400 transition-colors">Security</Link></li>
+              <li><Link href="/blog" className="text-slate-500 hover:text-gold-600 transition-colors">Blog</Link></li>
+              <li><Link href="/resources" className="text-slate-500 hover:text-gold-600 transition-colors">Guides &amp; Templates</Link></li>
+              <li><Link href="/poof-vs-quickbooks" className="text-slate-500 hover:text-gold-600 transition-colors">Poof vs QuickBooks</Link></li>
+              <li><Link href="/faq" className="text-slate-500 hover:text-gold-600 transition-colors">FAQ</Link></li>
+              <li><Link href="/security" className="text-slate-500 hover:text-gold-600 transition-colors">Security</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-slate-500 hover:text-gold-400 transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-slate-500 hover:text-gold-400 transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="text-slate-500 hover:text-gold-600 transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-slate-500 hover:text-gold-600 transition-colors">Contact</Link></li>
+              <li><Link href="/privacy" className="text-slate-500 hover:text-gold-600 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-slate-500 hover:text-gold-600 transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

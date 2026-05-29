@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Bookkeeping for Content Creators & Influencers | Poof',
   description: 'YouTube, TikTok, podcast, and social media creators: see your real income after platform fees, sponsorships, and taxes. AI bookkeeping built for creator businesses.',
   keywords: 'content creator bookkeeping, influencer accounting, YouTube bookkeeping, creator tax deductions, social media business finances',
+  alternates: {
+    canonical: 'https://www.poofai.com/creators',
+  },
   openGraph: {
     title: 'Bookkeeping for Content Creators & Influencers | Poof',
     description: 'Multiple revenue streams, 1099s everywhere, business vs personal expenses — we sort it all out automatically.',

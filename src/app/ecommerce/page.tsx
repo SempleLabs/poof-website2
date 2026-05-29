@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Bookkeeping for Ecommerce Sellers | Poof',
   description: 'Shopify, Amazon, and DTC sellers: get a profit analysis that uncovers hidden fees, margin leaks, and cash flow risks in your ecommerce business.',
   keywords: 'ecommerce bookkeeping, Shopify bookkeeping, Amazon seller accounting, ecommerce profit analysis, DTC bookkeeping software',
+  alternates: {
+    canonical: 'https://www.poofai.com/ecommerce',
+  },
   openGraph: {
     title: 'Bookkeeping for Ecommerce Sellers | Poof',
     description: 'See your true margins after fees, COGS, and returns. AI-powered bookkeeping built for ecommerce.',

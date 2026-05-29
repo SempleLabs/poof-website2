@@ -82,10 +82,12 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
 
       if (response.ok) {
         setStatus('success')
+        // Fire the conversion event only if the visitor granted marketing consent
+        // (the X pixel is loaded by ConsentBanner on opt-in, so window.twq is otherwise undefined).
+        // We intentionally do NOT pass the email address — sending PII to an ad network
+        // would contradict the "we'll never share your data" promise on this form.
         if (typeof window !== 'undefined' && (window as any).twq) {
-          (window as any).twq('event', 'tw-rc7s1-rc82r', {
-            email_address: data.email,
-          })
+          (window as any).twq('event', 'tw-rc7s1-rc82r', {})
         }
       } else {
         const result = await response.json()

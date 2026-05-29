@@ -7,6 +7,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Profit & Cash Flow Analysis for Small Business | Poof',
   description: 'We analyze your financial data to uncover cash flow risks, spend inefficiencies, and automation opportunities — then give you a clear plan to fix them.',
+  alternates: {
+    canonical: 'https://www.poofai.com/profit-analysis',
+  },
   openGraph: {
     title: 'Profit & Cash Flow Analysis for Small Business | Poof',
     description: 'Find the profit leaks hiding in your business. Get a clear plan to fix them.',

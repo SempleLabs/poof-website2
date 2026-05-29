@@ -75,7 +75,10 @@ export default function Header() {
           </div>
 
           <button
+            type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
             className={`md:hidden transition-colors ${
               scrolled ? 'text-slate-700' : 'text-slate-700'
             }`}

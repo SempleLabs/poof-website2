@@ -23,6 +23,7 @@ export default function DemoPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -35,6 +36,7 @@ export default function DemoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMsg('')
 
     try {
       const response = await fetch('https://formspree.io/f/xkgqjrba', {
@@ -49,10 +51,10 @@ export default function DemoPage() {
       if (response.ok) {
         setIsSubmitted(true)
       } else {
-        alert('There was an error submitting your demo request. Please try again.')
+        setErrorMsg('There was an error submitting your demo request. Please try again, or email us at support@poofai.com.')
       }
     } catch (error) {
-      alert('There was an error submitting your demo request. Please try again.')
+      setErrorMsg('There was an error submitting your demo request. Please try again, or email us at support@poofai.com.')
     } finally {
       setIsSubmitting(false)
     }
@@ -336,6 +338,12 @@ export default function DemoPage() {
                 />
               </div>
             </div>
+
+            {errorMsg && (
+              <div role="alert" aria-live="assertive" className="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                {errorMsg}
+              </div>
+            )}
 
             <div className="mt-8">
               <button
