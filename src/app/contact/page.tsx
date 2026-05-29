@@ -45,10 +45,10 @@ export default function ContactPage() {
       if (response.ok) {
         setIsSubmitted(true)
       } else {
-        setErrorMsg('There was an error sending your message. Please try again, or email us at support@poofai.com.')
+        setErrorMsg('There was an error sending your message. Please try again, or email us at semplelabs@gmail.com.')
       }
     } catch (error) {
-      setErrorMsg('There was an error sending your message. Please try again, or email us at support@poofai.com.')
+      setErrorMsg('There was an error sending your message. Please try again, or email us at semplelabs@gmail.com.')
     } finally {
       setIsSubmitting(false)
     }

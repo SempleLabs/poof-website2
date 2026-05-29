@@ -51,10 +51,10 @@ export default function DemoPage() {
       if (response.ok) {
         setIsSubmitted(true)
       } else {
-        setErrorMsg('There was an error submitting your demo request. Please try again, or email us at support@poofai.com.')
+        setErrorMsg('There was an error submitting your demo request. Please try again, or email us at semplelabs@gmail.com.')
       }
     } catch (error) {
-      setErrorMsg('There was an error submitting your demo request. Please try again, or email us at support@poofai.com.')
+      setErrorMsg('There was an error submitting your demo request. Please try again, or email us at semplelabs@gmail.com.')
     } finally {
       setIsSubmitting(false)
     }

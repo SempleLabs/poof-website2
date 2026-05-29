@@ -79,7 +79,7 @@ export default function TermsPage() {
         <Section title="Contact us">
           <p>
             Questions about these Terms? Email{' '}
-            <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700">support@poofai.com</a>{' '}
+            <a href="mailto:semplelabs@gmail.com" className="text-gold-600 underline hover:text-gold-700">semplelabs@gmail.com</a>{' '}
             or use our <Link href="/contact" className="text-gold-600 underline hover:text-gold-700">contact page</Link>.
           </p>
         </Section>

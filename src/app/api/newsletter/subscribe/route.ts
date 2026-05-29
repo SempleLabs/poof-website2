@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
       to: email,
       subject: 'Welcome to Poof!',
       headers: {
-        'List-Unsubscribe': '<mailto:support@poofai.com?subject=Unsubscribe>',
+        'List-Unsubscribe': '<mailto:semplelabs@gmail.com?subject=Unsubscribe>',
       },
       html: `
         <!DOCTYPE html>
@@ -161,7 +161,7 @@ export async function POST(request: NextRequest) {
                       </p>
                       <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">
                         You received this email because you subscribed at poofai.com.
-                        <a href="mailto:support@poofai.com?subject=Unsubscribe" style="color: #7c3aed; text-decoration: underline;">Unsubscribe</a>
+                        <a href="mailto:semplelabs@gmail.com?subject=Unsubscribe" style="color: #7c3aed; text-decoration: underline;">Unsubscribe</a>
                       </p>
                       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
                         ${MAILING_ADDRESS}
