@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
+import { makeUnsubscribeUrl } from '@/lib/unsubscribe'
 
 // Physical mailing address for CAN-SPAM compliance in marketing email.
 // Set COMPANY_MAILING_ADDRESS in your environment to your real business postal address.
@@ -66,36 +67,54 @@ export async function POST(request: NextRequest) {
     const supabase = createClient(supabaseUrl, supabaseKey)
     const resend = new Resend(resendApiKey)
 
-    // Check if already subscribed
+    // Check if already subscribed (and whether they previously unsubscribed)
     const { data: existing } = await supabase
       .from('newsletter_subscribers')
-      .select('id')
+      .select('id, unsubscribed_at')
       .eq('email', email.toLowerCase())
-      .single()
+      .maybeSingle()
 
-    if (existing) {
+    if (existing && !existing.unsubscribed_at) {
       return NextResponse.json(
         { message: "You're already subscribed!", success: true },
         { status: 200 }
       )
     }
 
-    // Add subscriber to database
-    const { error: insertError } = await supabase
-      .from('newsletter_subscribers')
-      .insert({
-        email: email.toLowerCase(),
-        subscribed_at: new Date().toISOString(),
-        source: 'website_footer'
-      })
+    if (existing && existing.unsubscribed_at) {
+      // Previously unsubscribed — this form submit is a fresh opt-in, so clear suppression
+      const { error: resubscribeError } = await supabase
+        .from('newsletter_subscribers')
+        .update({ unsubscribed_at: null, subscribed_at: new Date().toISOString() })
+        .eq('email', email.toLowerCase())
 
-    if (insertError) {
-      console.error('Supabase insert error:', insertError)
-      return NextResponse.json(
-        { error: 'Failed to subscribe. Please try again.' },
-        { status: 500 }
-      )
+      if (resubscribeError) {
+        console.error('Supabase resubscribe error:', resubscribeError)
+        return NextResponse.json(
+          { error: 'Failed to subscribe. Please try again.' },
+          { status: 500 }
+        )
+      }
+    } else {
+      // Add new subscriber to database
+      const { error: insertError } = await supabase
+        .from('newsletter_subscribers')
+        .insert({
+          email: email.toLowerCase(),
+          subscribed_at: new Date().toISOString(),
+          source: 'website_footer'
+        })
+
+      if (insertError) {
+        console.error('Supabase insert error:', insertError)
+        return NextResponse.json(
+          { error: 'Failed to subscribe. Please try again.' },
+          { status: 500 }
+        )
+      }
     }
+
+    const unsubscribeUrl = makeUnsubscribeUrl(email)
 
     // Send welcome email to subscriber
     await resend.emails.send({
@@ -103,7 +122,8 @@ export async function POST(request: NextRequest) {
       to: email,
       subject: 'Welcome to Poof!',
       headers: {
-        'List-Unsubscribe': '<mailto:semplelabs@gmail.com?subject=Unsubscribe>',
+        'List-Unsubscribe': `<${unsubscribeUrl}>, <mailto:semplelabs@gmail.com?subject=Unsubscribe>`,
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
       },
       html: `
         <!DOCTYPE html>
@@ -161,7 +181,7 @@ export async function POST(request: NextRequest) {
                       </p>
                       <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">
                         You received this email because you subscribed at poofai.com.
-                        <a href="mailto:semplelabs@gmail.com?subject=Unsubscribe" style="color: #7c3aed; text-decoration: underline;">Unsubscribe</a>
+                        <a href="${unsubscribeUrl}" style="color: #7c3aed; text-decoration: underline;">Unsubscribe</a>
                       </p>
                       <p style="margin: 0; color: #94a3b8; font-size: 12px;">
                         ${MAILING_ADDRESS}
