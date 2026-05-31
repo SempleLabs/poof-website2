@@ -68,7 +68,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $65, and $200/mo tiers. Poof starts at $14.50/month (launch special) with all 69 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $75, and $115/mo tiers. Poof starts at $14.50/month (launch special) with all 69 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
@@ -146,7 +146,7 @@ export default function PricingPage() {
               ) : (
                 <div className="bg-gradient-to-r from-teal-600 to-teal-400 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
                   <span>★</span>
-                  <span className="uppercase">Best Value — Save $58/year + 30-day free trial</span>
+                  <span className="uppercase">Best Value — 2 months free, your lowest rate locked in</span>
                   <span>★</span>
                 </div>
               )}
@@ -156,21 +156,19 @@ export default function PricingPage() {
                   <h2 className="text-3xl font-display font-bold text-white mb-4">Poof Professional</h2>
                   <p className="text-slate-400 mb-6">Everything you need for automated bookkeeping</p>
                   <div className="mb-2">
-                    {!isAnnual && (
-                      <span className="text-3xl font-mono font-bold text-slate-500 line-through mr-3">
-                        $29
-                      </span>
-                    )}
+                    <span className="text-3xl font-mono font-bold text-slate-500 line-through mr-3">
+                      $29
+                    </span>
                     <span className="text-6xl font-mono font-bold text-gold-400">
-                      ${isAnnual ? '290' : '14.50'}
+                      ${isAnnual ? '24.17' : '14.50'}
                     </span>
                     <span className="text-xl font-normal text-slate-400">
-                      /{isAnnual ? 'year' : 'mo'}
+                      /mo
                     </span>
                   </div>
                   <p className="text-sm text-slate-500">
                     {isAnnual
-                      ? '$24.17/mo • Save $58 per year'
+                      ? 'Billed $290/year — your lowest rate, locked in (2 months free)'
                       : '50% off for your first 3 months, then $29/mo'
                     }
                   </p>
