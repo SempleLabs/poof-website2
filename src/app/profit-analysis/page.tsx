@@ -68,6 +68,13 @@ const config = {
     buttonText: 'Apply Now',
     buttonHref: '#apply',
   },
+  faqs: [
+    { question: 'What exactly does the analysis include, and what do I get back?', answer: 'You get a 10-15 slide report covering a profit breakdown, cash flow risk review, spend and vendor review, revenue and profit leak identification, an automation opportunity map, and a prioritized 30-day action plan. We also include an optional Loom walkthrough so you can hear the findings explained directly.' },
+    { question: 'Is this really free? What\'s the catch?', answer: 'Yes, the analysis is free, and there is no obligation to buy anything afterward. We offer it because it\'s a genuine way to show the value of cleaner books and better financial visibility, and some businesses choose to use Poof or our team once they see what\'s possible.' },
+    { question: 'What data do I need to share, and how secure is it?', answer: 'You connect your accounting software through a secure, read-only link or upload your financial exports, so we can view your numbers without ever moving money or changing anything. Everything is encrypted and kept strictly confidential, and it is used only to prepare your analysis.' },
+    { question: 'How long does it take, and how does the application process work?', answer: 'After you apply and are accepted, the analysis typically takes about 5-7 business days from the time you share your data. We review every application and accept a limited number of businesses each month so we can give each one real attention.' },
+    { question: 'Is this a tax or audit service, and am I required to buy Poof afterward?', answer: 'No. This is an operational financial analysis, not a CPA audit, attestation, tax, or assurance service, and we do not file taxes. You are never obligated to purchase anything, though if you\'d like ongoing AI bookkeeping, Poof is a flat $29/mo with all 69 features and a 30-day free trial that requires no credit card.' },
+  ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }
 

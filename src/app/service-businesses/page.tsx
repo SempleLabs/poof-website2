@@ -68,6 +68,15 @@ const config = {
     buttonText: 'Apply for Analysis',
     buttonHref: '#apply',
   },
+  faqs: [
+    { question: 'Can I see profitability by client, project, or job?', answer: 'Yes. Poof categorizes your income and expenses so you can see which clients and projects actually make money and which ones quietly drain your time. That visibility is exactly what the free analysis on this page surfaces first.' },
+    { question: 'Will this help me get invoices paid faster and stay on top of AR aging?', answer: 'Poof keeps your books current so you always know who owes you, how much, and how overdue it is. Clean, up-to-date records make it far easier to chase late payments and spot accounts receivable that are slipping into trouble.' },
+    { question: 'Should service businesses use cash or accrual accounting?', answer: 'Many small service providers start on cash basis because it\'s simpler, but accrual gives a truer picture when you bill on retainers or long projects. Poof tracks your transactions cleanly either way, and your analysis will flag which approach fits how you actually get paid.' },
+    { question: 'How do I handle client deposits and retainers I haven\'t earned yet?', answer: 'Deposits and retainers are unearned revenue until the work is delivered, so counting them as income too early overstates your profit. Poof helps you keep that money clearly tracked so your reports reflect what you\'ve truly earned, not just what\'s in the bank.' },
+    { question: 'Does Poof help me keep subcontractor payments organized for 1099s?', answer: 'Yes. Poof tracks and categorizes what you pay each subcontractor across the year, so the totals you need for 1099 reporting are easy to pull. Note that Poof is bookkeeping software and does not file taxes or run payroll for you.' },
+    { question: 'What does the free financial analysis include, and how fast do I get it?', answer: 'It\'s an operational financial analysis covering your billing, client profitability, recurring expenses, cash flow timing, and automation opportunities, with results typically in about 5 to 7 days. Spots are limited each month, so apply using the form below to be considered.' },
+    { question: 'How much is Poof, and is there a free trial?', answer: 'Poof is a flat $29 a month with all 69 features included, no tiers or add-ons, plus a launch special of $14.50 a month for your first 3 months. You can start with a 30-day free trial and no credit card required.' },
+  ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }
 

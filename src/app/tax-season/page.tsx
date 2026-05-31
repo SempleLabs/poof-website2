@@ -69,6 +69,13 @@ const config = {
     buttonText: 'Get Caught Up Now',
     buttonHref: '#apply',
   },
+  faqs: [
+    { question: 'I\'m months behind and my books are a mess. Can you catch me up and reconcile everything before the deadline?', answer: 'Yes. We pull in your full year of transactions from bank statements or a direct bank connection, categorize everything, and match deposits and withdrawals against your income and expenses so the totals tie out — typically in days, not weeks. Even if you haven\'t touched your books all year, we start from your raw statements, so there\'s nothing for you to untangle first. Our Tax Season Bookkeeping Checklist on the blog walks through the same catch-up steps in more detail.' },
+    { question: 'What documents will my CPA or tax preparer need from me?', answer: 'At minimum, a clean, properly categorized Profit & Loss statement, your reconciled bank and card activity for the year, and records of income like 1099s. The catch-up analysis assembles all of that into an accountant-ready package you can hand off — Poof gets the books ready, then you or your CPA files the return.' },
+    { question: 'Do I need to issue 1099-NEC forms, and when are they due?', answer: 'Generally you must issue a 1099-NEC to any non-incorporated contractor or vendor you paid $600 or more for services during the year, and they\'re due to both the recipient and the IRS by January 31. As we clean up and categorize your year, we surface contractor and vendor payments so you can spot who likely needs one — though we don\'t file the forms for you.' },
+    { question: 'What is the free financial analysis, and how do I get one?', answer: 'It\'s a complimentary, operational review of your year\'s numbers that scans for commonly missed deductions like home office, mileage, software, and equipment — not a CPA audit or tax filing. Apply using the form on this page; spots are limited, and once you share your statements we typically return your results in about 5 to 7 days.' },
+    { question: 'How much does Poof cost after the analysis, and is there a trial?', answer: 'Poof is $29/month flat for all 69 features — no tiers, no add-ons — with a launch special of $14.50/month for your first 3 months. There\'s a 30-day free trial with no credit card required, so you can keep your books clean automatically and never fall this far behind again.' },
+  ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }
 

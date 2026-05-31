@@ -4,6 +4,7 @@ import Link from 'next/link'
 import AnimateOnScroll from './AnimateOnScroll'
 import GlowCard from './GlowCard'
 import VaporField from './ParticleField'
+import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export interface LandingPageConfig {
   hero: {
@@ -35,6 +36,7 @@ export interface LandingPageConfig {
     buttonText: string
     buttonHref: string
   }
+  faqs?: { question: string; answer: string }[]
   showIntakeForm?: boolean
   complianceNote?: string
 }
@@ -208,6 +210,38 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
                       <p className="text-slate-400 text-xs">{item.company}</p>
                     </div>
                   </GlowCard>
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ Section */}
+      {config.faqs && config.faqs.length > 0 && (
+        <section className="py-20 bg-white">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(config.faqs)) }}
+          />
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimateOnScroll animation="fade-up">
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-12">
+                Frequently Asked Questions
+              </h2>
+            </AnimateOnScroll>
+            <div className="space-y-4">
+              {config.faqs.map((faq, i) => (
+                <AnimateOnScroll key={i} animation="fade-up" delay={i * 60}>
+                  <details className="group bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
+                      {faq.question}
+                      <svg className="w-5 h-5 flex-shrink-0 text-gold-500 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </summary>
+                    <p className="mt-3 text-slate-600 leading-relaxed">{faq.answer}</p>
+                  </details>
                 </AnimateOnScroll>
               ))}
             </div>

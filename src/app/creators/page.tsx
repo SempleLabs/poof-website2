@@ -69,6 +69,13 @@ const config = {
     buttonText: 'Apply for Analysis',
     buttonHref: '#apply',
   },
+  faqs: [
+    { question: 'Can Poof track all my different income streams in one place?', answer: 'Yes. Connect your bank and Poof automatically pulls in payouts from YouTube ad revenue, Patreon, sponsorships, merch sales, and affiliate programs through one read-only Plaid connection covering 12,000+ banks. You\'ll see every revenue source mapped and totaled instead of guessing across a dozen platform dashboards.' },
+    { question: 'How do I separate business and personal expenses if everything\'s in one account?', answer: 'Poof auto-categorizes each transaction as business or personal as it imports, so you can start cleaning things up immediately even before you open a dedicated business account. Since the income Poof reads from your bank already reflects platform fees, agent cuts, and processing costs, your reports also show your true net take-home rather than inflated platform gross numbers.' },
+    { question: 'What creator deductions can Poof help me capture?', answer: 'Poof flags and categorizes common creator write-offs like cameras and gear, editing and design software, your home office, internet and phone, travel, and meals tied to your work. It tracks these throughout the year so you\'re not scrambling to reconstruct them in April.' },
+    { question: 'Does Poof handle my 1099s and quarterly self-employment taxes?', answer: 'Poof keeps your income and expense records organized so they match the 1099s you receive and so you can see what to set aside for quarterly estimated and self-employment taxes. Note that Poof does not file taxes or give formal tax advice — it gives you and your accountant clean, reliable numbers to work from.' },
+    { question: 'What is the free analysis, and what does Poof cost after?', answer: 'The free creator finance analysis is an operational review — you apply, spots are limited, and you get your results in about 5-7 days; it is not a CPA audit or tax filing. If you continue with the software, Poof is $29/mo flat (currently $14.50/mo for your first 3 months) with all 69 features and 13 reports included, no tiers or add-ons, plus a 30-day free trial with no credit card.' },
+  ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }
 

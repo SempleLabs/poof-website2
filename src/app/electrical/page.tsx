@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
+import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping for Electrical Contractors | Poof Managed for Trades',
@@ -159,6 +160,10 @@ const faqs = [
 export default function ElectricalPage() {
   return (
     <main id="main-content" className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs.map((f) => ({ question: f.q, answer: f.a })))) }}
+      />
       <Header />
 
       {/* Hero */}

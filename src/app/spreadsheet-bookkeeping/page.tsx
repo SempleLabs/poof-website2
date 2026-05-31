@@ -69,6 +69,13 @@ const config = {
     buttonText: 'Apply for Analysis',
     buttonHref: '#apply',
   },
+  faqs: [
+    { question: 'Why isn\'t a spreadsheet real bookkeeping?', answer: 'A spreadsheet stores numbers, but it doesn\'t enforce double-entry accounting, so nothing checks that your books actually balance. That\'s why you can\'t reliably produce a true P&L, balance sheet, or cash flow statement from a sheet of rows. Poof uses double-entry accounting under the hood and generates 13 financial reports automatically.' },
+    { question: 'How do I know my spreadsheet numbers are even right?', answer: 'You usually don\'t — a single mistyped figure, a formula that stops copying down, or a transaction you forgot to enter can quietly throw everything off, and there\'s no built-in way to catch it. Poof pulls transactions straight from your bank through a read-only Plaid connection and reconciles them against your records, so errors get surfaced instead of hiding in a cell.' },
+    { question: 'Can I bring my existing spreadsheet history into Poof?', answer: 'Yes. You can import your historical bank activity using CSV or PDF bank statements, and Poof also connects directly to 12,000+ banks through Plaid to pull your transactions. You don\'t have to abandon your history or start from a blank slate.' },
+    { question: 'Isn\'t a spreadsheet good enough until my business is bigger?', answer: 'Spreadsheets often feel fine at the start, but the manual entry, hand-categorizing, and line-by-line bank checking only grow as your transaction volume grows. Because Poof is one flat $29/mo for all 69 features with no tiers or add-ons, automating early costs the same as automating later — you just stop losing the hours sooner.' },
+    { question: 'What is the free financial analysis, and how do I get it?', answer: 'It\'s an operational financial analysis of your current spreadsheet setup — your time cost, error risk, and a migration plan — not a CPA audit or tax filing. Spots are limited each month, so you apply using the form on this page; if accepted, you typically receive your results in about 5 to 7 days.' },
+  ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }
 
