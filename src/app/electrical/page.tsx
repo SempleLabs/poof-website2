@@ -158,7 +158,7 @@ const faqs = [
 
 export default function ElectricalPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main id="main-content" className="min-h-screen bg-white">
       <Header />
 
       {/* Hero */}
@@ -189,7 +189,7 @@ export default function ElectricalPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 href="/contact"
-                className="glow-border shimmer-hover inline-block bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
+                className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
               >
                 Book a 20-minute call
               </Link>
@@ -299,7 +299,7 @@ export default function ElectricalPage() {
                   {i < howItWorks.length - 1 && (
                     <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-gradient-to-b from-violet-300 to-slate-200" />
                   )}
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-600 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
                     {step.number}
                   </div>
                   <div className="pb-10">
@@ -412,7 +412,7 @@ export default function ElectricalPage() {
                     href={plan.ctaHref}
                     className={`block w-full text-center font-semibold px-6 py-3 rounded-lg transition-all duration-200 ${
                       plan.highlight
-                        ? 'bg-gold-500 text-white hover:bg-gold-400'
+                        ? 'bg-gold-600 text-white hover:bg-gold-700'
                         : 'bg-slate-900 text-white hover:bg-slate-800'
                     }`}
                   >
@@ -515,7 +515,7 @@ export default function ElectricalPage() {
           <AnimateOnScroll animation="scale-up" delay={200}>
             <Link
               href="/contact"
-              className="glow-border shimmer-hover inline-block bg-gold-500 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-400 hover:-translate-y-0.5 transition-all duration-200"
+              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-0.5 transition-all duration-200"
             >
               Book a 20-minute call
             </Link>

@@ -75,7 +75,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
           <AnimateOnScroll animation="scale-up" delay={200}>
             <Link
               href={config.hero.ctaHref}
-              className="glow-border shimmer-hover inline-block bg-gold-500 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02]"
+              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02]"
             >
               {config.hero.ctaText}
             </Link>
@@ -173,7 +173,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
                     {i < config.howItWorks!.steps.length - 1 && (
                       <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-gradient-to-b from-gold-300 to-slate-200" />
                     )}
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-600 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
                       {step.number}
                     </div>
                     <div className="pb-10">
@@ -237,7 +237,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
           <AnimateOnScroll animation="scale-up" delay={200}>
             <Link
               href={config.cta.buttonHref}
-              className="glow-border shimmer-hover inline-block bg-gold-500 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-400 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200"
+              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200"
             >
               {config.cta.buttonText}
             </Link>

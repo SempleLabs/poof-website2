@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <div className="pt-24 pb-16">

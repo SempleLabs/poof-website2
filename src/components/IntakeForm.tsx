@@ -256,7 +256,7 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
                     onClick={() => togglePlatform(platform)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all duration-200 ${
                       selectedPlatforms.includes(platform)
-                        ? 'bg-gold-500 text-white border-gold-500'
+                        ? 'bg-gold-600 text-white border-gold-500'
                         : 'bg-white text-slate-600 border-slate-300 hover:border-gold-300'
                     }`}
                   >
@@ -287,7 +287,7 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full glow-border shimmer-hover bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-gold-400 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full glow-border shimmer-hover bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? 'Submitting...' : 'Submit Application'}
             </button>

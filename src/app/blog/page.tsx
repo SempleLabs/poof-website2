@@ -71,7 +71,7 @@ export default function BlogIndexPage() {
   const posts = getAllPosts()
 
   return (
-    <main className="min-h-screen bg-white">
+    <main id="main-content" className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBlogSchema(posts)) }}

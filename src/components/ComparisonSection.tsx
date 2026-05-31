@@ -79,7 +79,7 @@ export default function ComparisonSection() {
                   <th className="px-4 py-5 text-center bg-gold-500/10">
                     <div className="text-sm font-bold text-gold-400">Poof</div>
                     <div className="text-xs text-slate-500">$29/mo</div>
-                    <div className="mt-1 inline-block bg-gold-500 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
+                    <div className="mt-1 inline-block bg-gold-600 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">QuickBooks</div>

@@ -192,7 +192,7 @@ export default function HowItWorksPage() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(howItWorksFaqs)) }}
@@ -205,7 +205,7 @@ export default function HowItWorksPage() {
       >
         <Link
           href="https://app.poofai.com/register"
-          className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg mt-8 inline-block px-8 py-4"
+          className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg mt-8 inline-block px-8 py-4"
         >
           Start Your Free Trial →
         </Link>
@@ -356,7 +356,7 @@ export default function HowItWorksPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg flex items-center justify-center px-8 py-4"
+                className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg flex items-center justify-center px-8 py-4"
               >
                 Start Free Trial →
               </Link>
@@ -435,7 +435,7 @@ export default function HowItWorksPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-500 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
+              className="bg-gold-600 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
             >
               Start Free Trial →
             </Link>

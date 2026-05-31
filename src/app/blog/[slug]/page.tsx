@@ -328,7 +328,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     .slice(0, 3)
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBlogPostingSchema(post, params.slug)) }}

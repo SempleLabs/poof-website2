@@ -121,7 +121,7 @@ export default async function ResourcesPage() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <PageHero
@@ -156,7 +156,7 @@ export default async function ResourcesPage() {
                       href={guide.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 rounded-lg bg-gold-500 text-white text-sm font-semibold hover:bg-gold-400 shadow-gold transition-colors"
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-gold-600 text-white text-sm font-semibold hover:bg-gold-700 shadow-gold transition-colors"
                     >
                       View Guide →
                     </a>
@@ -236,7 +236,7 @@ export default async function ResourcesPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
               Start Free Trial →
             </Link>

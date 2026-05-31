@@ -49,7 +49,7 @@ export default function EmailGateForm({ onSubmit, isLoading }: EmailGateFormProp
         <button
           type="submit"
           disabled={isLoading}
-          className={`bg-gold-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold-400 shadow-gold transition-all duration-200 shimmer-hover whitespace-nowrap ${
+          className={`bg-gold-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold-700 shadow-gold transition-all duration-200 shimmer-hover whitespace-nowrap ${
             isLoading ? 'opacity-70 cursor-not-allowed' : ''
           }`}
         >

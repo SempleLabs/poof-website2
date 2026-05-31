@@ -21,7 +21,7 @@ export default function ProfitAnalysisCta() {
             </p>
             <Link
               href="/profit-analysis"
-              className="glow-border shimmer-hover inline-block bg-gold-500 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-400 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200"
+              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200"
             >
               Get My Analysis
             </Link>

@@ -8,7 +8,7 @@ import ReportWizard from '@/components/report/ReportWizard'
 
 export default function SpendScorePage() {
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <PageHero

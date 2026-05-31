@@ -119,7 +119,7 @@ export default function Footer() {
               <button
                 type="submit"
                 disabled={status === 'loading' || status === 'success'}
-                className="px-6 py-2 bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2 bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
               </button>

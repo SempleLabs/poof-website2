@@ -101,6 +101,12 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${inter.className} ${cabinet.variable} ${jetbrains.variable} ${righteous.variable}`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-gold-700 focus:shadow-lg focus:ring-2 focus:ring-gold-600"
+        >
+          Skip to content
+        </a>
         {children}
         <ConsentBanner />
       </body>

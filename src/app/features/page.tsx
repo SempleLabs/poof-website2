@@ -94,7 +94,7 @@ export default function FeaturesPage() {
   const activeGroup = featureGroups[activeTab]
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <PageHero
@@ -103,7 +103,7 @@ export default function FeaturesPage() {
       >
         <Link
           href="https://app.poofai.com/register"
-          className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg mt-8 inline-block px-8 py-4"
+          className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg mt-8 inline-block px-8 py-4"
         >
           Start Free Trial →
         </Link>
@@ -126,7 +126,7 @@ export default function FeaturesPage() {
                 }}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
                   activeTab === index
-                    ? 'bg-gold-500 text-white shadow-md'
+                    ? 'bg-gold-600 text-white shadow-md'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-800'
                 }`}
               >
@@ -302,7 +302,7 @@ export default function FeaturesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transition-all duration-300 text-lg"
+                className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transition-all duration-300 text-lg"
               >
                 Start Free Trial →
               </Link>

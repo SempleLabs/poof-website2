@@ -159,7 +159,7 @@ export default function Hero() {
               <div className="mt-5 flex justify-end">
                 <Link
                   href="https://app.poofai.com/register"
-                  className="bg-gold-500 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-400 transition-all duration-200"
+                  className="bg-gold-600 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-700 transition-all duration-200"
                 >
                   Start Free Trial
                 </Link>

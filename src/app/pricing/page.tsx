@@ -77,7 +77,7 @@ export default function PricingPage() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs)) }}
@@ -108,7 +108,7 @@ export default function PricingPage() {
                 onClick={() => setIsAnnual(false)}
                 className={`px-6 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                   !isAnnual
-                    ? 'bg-gold-500 text-white shadow-sm'
+                    ? 'bg-gold-600 text-white shadow-sm'
                     : 'text-slate-500 hover:text-slate-700'
                 }`}
               >
@@ -118,7 +118,7 @@ export default function PricingPage() {
                 onClick={() => setIsAnnual(true)}
                 className={`px-6 py-2 text-sm font-medium rounded-md transition-all duration-200 relative ${
                   isAnnual
-                    ? 'bg-gold-500 text-white shadow-sm'
+                    ? 'bg-gold-600 text-white shadow-sm'
                     : 'text-slate-500 hover:text-slate-700'
                 }`}
               >
@@ -192,7 +192,7 @@ export default function PricingPage() {
 
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold transition-all text-lg w-full block text-center py-4 mb-4"
+                className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold transition-all text-lg w-full block text-center py-4 mb-4"
               >
                 Start Free Trial →
               </Link>
@@ -323,7 +323,7 @@ export default function PricingPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-500 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="bg-gold-600 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
               Start Free Trial →
             </Link>

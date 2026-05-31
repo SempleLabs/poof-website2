@@ -73,7 +73,7 @@ const config = {
 
 export default function ServiceBusinessesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main id="main-content" className="min-h-screen bg-white">
       <Header />
       <LandingPageTemplate config={config} />
       <IntakeForm source="service-businesses" />

@@ -64,7 +64,7 @@ export default function FaqPage() {
     : faqCategories
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <script
@@ -85,7 +85,7 @@ export default function FaqPage() {
               onClick={() => setActiveCategory(null)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === null
-                  ? 'bg-gold-500 text-white shadow-gold'
+                  ? 'bg-gold-600 text-white shadow-gold'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -97,7 +97,7 @@ export default function FaqPage() {
                 onClick={() => setActiveCategory(activeCategory === category ? null : category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === category
-                    ? 'bg-gold-500 text-white shadow-gold'
+                    ? 'bg-gold-600 text-white shadow-gold'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
@@ -231,7 +231,7 @@ export default function FaqPage() {
               </Link>
               <Link
                 href="/demo"
-                className="bg-gold-500 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-400 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 Watch Demo
               </Link>

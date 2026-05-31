@@ -62,7 +62,7 @@ export default function DemoPage() {
 
   if (isSubmitted) {
     return (
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <Header />
         <section className="pt-24 pb-16 min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-50 to-white">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -136,7 +136,7 @@ export default function DemoPage() {
   }
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <PageHero
@@ -349,7 +349,7 @@ export default function DemoPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full bg-gold-500 text-white font-semibold rounded-lg hover:bg-gold-400 shadow-gold text-lg py-4 ${
+                className={`w-full bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg py-4 ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
