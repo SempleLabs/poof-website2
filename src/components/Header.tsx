@@ -15,6 +15,7 @@ export default function Header() {
   }, [])
 
   const navLinks = [
+    { href: '/trades', label: 'For Trades' },
     { href: '/features', label: 'Features' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/how-it-works', label: 'How it Works' },

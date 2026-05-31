@@ -9,14 +9,14 @@ import { getFaqPageSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Bookkeeping for Plumbing Shops | Poof Managed for Trades',
   description:
-    'A managed bookkeeping service for plumbing shops doing $750K–$3M. Per-job profitability in 48 hours. Monthly close in 24 hours. Works with your existing Jobber or Housecall Pro.',
+    'A managed bookkeeping service for plumbing shops doing $750K–$3M. Per-job profit on every monthly close — know which jobs made money. AI-powered, controller-reviewed, built from your Jobber or Housecall Pro data.',
   alternates: {
     canonical: 'https://www.poofai.com/plumbing',
   },
   openGraph: {
     title: 'Poof Managed for Trades — Bookkeeping for Plumbing Shops',
     description:
-      'Per-job profitability in 48 hours. Monthly close in 24 hours. AI-powered, controller-reviewed bookkeeping for plumbing service shops.',
+      'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for plumbing service shops.',
     url: 'https://www.poofai.com/plumbing',
     siteName: 'Poof',
     type: 'website',
@@ -42,12 +42,12 @@ const howItWorks = [
   {
     number: '1',
     title: 'Connect your bank, cards, and field-service tool',
-    body: 'Plaid links your accounts. We connect to Jobber or Housecall Pro directly — no manual rekeying, no CSV exports.',
+    body: 'Plaid links your bank and cards. We bring your Jobber or Housecall Pro data into your books — so job revenue and costs land in the ledger without you rekeying them.',
   },
   {
     number: '2',
-    title: 'AI agents categorize and reconcile in real time',
-    body: 'Transactions land in your ledger, mapped to a chart of accounts built for plumbing. Receipts from supply-house runs are scanned and matched to jobs.',
+    title: 'AI agents categorize and reconcile your books',
+    body: 'Transactions are categorized against a chart of accounts built for plumbing, and supply-house costs get matched to the right job.',
   },
   {
     number: '3',
@@ -56,8 +56,8 @@ const howItWorks = [
   },
   {
     number: '4',
-    title: 'Per-job P&L in Slack within 48 hours',
-    body: 'Ask "did the Park Ave repipe make money?" in your dedicated Slack channel. Get an answer back the same day — not three weeks later.',
+    title: 'Per-job P&L with every monthly close',
+    body: 'Want to know if the Park Ave repipe made money? Ask Poof\'s assistant, or text your controller — and get a straight answer instead of a P&L that\'s three weeks late.',
   },
 ]
 
@@ -70,10 +70,10 @@ const replaces = {
     'Year-end 1099 fire drill across spreadsheets and email threads',
   ],
   poof: [
-    'Poof handles QBO categorization and reconciliation in real time',
-    'Direct Jobber and Housecall Pro sync — job data flows into the ledger automatically',
-    'Managed-service tier at $999/mo — with controller review on every decision',
-    'Monthly close in 24 hours. Per-job P&L within 48 hours of job completion',
+    'Poof handles categorization and reconciliation, with controller review on every decision',
+    'Your Jobber and Housecall Pro job data flows into the ledger — no manual rekeying',
+    'Managed-service tier at $1,200/mo — a controller-grade service, not a part-time login',
+    'Monthly close with per-job P&L — you finally see which jobs made money, and which lost it',
     '1099-ready every January — subs tracked all year, not the week before the deadline',
   ],
 }
@@ -81,15 +81,15 @@ const replaces = {
 const plans = [
   {
     name: 'Poof Managed for Trades',
-    price: '$999',
+    price: '$1,200',
     cadence: '/mo',
-    bestFor: '2–4 truck shops, $750K–$1.5M revenue',
+    bestFor: '2–4 truck shops, $750K–$1.8M revenue',
     features: [
       'All Poof Professional features included',
-      'Per-job P&L within 48 hours',
-      'Monthly close in 24 hours',
-      'Direct Jobber / Housecall Pro sync',
-      'Dedicated Slack channel',
+      'Per-job P&L with every monthly close',
+      'Monthly close + controller review',
+      'Jobber / Housecall Pro data brought into your books',
+      'A controller you can text or email',
       'Monthly variance review',
     ],
     cta: 'Book a 20-minute call',
@@ -98,9 +98,9 @@ const plans = [
   },
   {
     name: 'Poof Managed for Trades Plus',
-    price: '$1,499',
+    price: '$1,500',
     cadence: '/mo',
-    bestFor: '5+ truck shops, $1.5M–$3M revenue',
+    bestFor: '5–6 truck shops, $1.8M–$3M revenue',
     features: [
       'Everything in Managed for Trades',
       'Multi-location reporting',
@@ -129,7 +129,7 @@ const extras = [
 const faqs = [
   {
     q: 'Do I need to switch from Jobber or Housecall Pro?',
-    a: 'No. Keep using exactly what your techs use today. Poof connects directly to Jobber and Housecall Pro — your dispatcher and techs see no change. The handoff into your books is what we replace, not the field tool.',
+    a: 'No. Keep using exactly what your techs use today. We bring your Jobber or Housecall Pro data into your books for you — your dispatcher and techs see no change. The handoff into your books is what we replace, not the field tool.',
   },
   {
     q: 'How do you handle materials sales tax on jobs?',
@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: 'How is this different from my current bookkeeper?',
-    a: 'Three differences. Speed: monthly close in 24 hours, not 2–3 weeks. Granularity: per-job P&L in 48 hours, which most part-time bookkeepers can\'t deliver at any price. Accountability: a former controller reviewing the work, with an audit-grade ledger underneath.',
+    a: 'Three differences. Granularity: per-job P&L on every close, which most part-time bookkeepers can\'t deliver at any price. Accountability: a former controller reviewing the work, with an audit-grade ledger underneath. Responsiveness: a real person you can text about a specific job, not someone who logs in once a month.',
   },
   {
     q: 'Do you work with new-construction plumbing or just service?',
@@ -180,7 +180,7 @@ export default function PlumbingPage() {
               className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
               style={{ letterSpacing: '-0.03em' }}
             >
-              Bookkeeping for plumbing shops. <span className="text-gradient-gold">Per-job profitability in 48 hours.</span> Monthly close in 24.
+              Bookkeeping for plumbing shops. <span className="text-gradient-gold">Finally know which jobs actually made money.</span>
             </h1>
           </AnimateOnScroll>
 
@@ -217,8 +217,8 @@ export default function PlumbingPage() {
             <div className="mt-16 max-w-3xl mx-auto">
               <div className="rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
                 <div className="px-6 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-job P&amp;L · Park Ave repipe · completed Mon</div>
-                  <div className="text-xs text-violet-600 font-semibold">Delivered to Slack · 38 hrs</div>
+                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-job P&amp;L · Park Ave repipe</div>
+                  <div className="text-xs text-violet-600 font-semibold">From your monthly profit report</div>
                 </div>
                 <div className="px-6 py-5">
                   <div className="grid grid-cols-3 gap-4 mb-5">
@@ -251,7 +251,7 @@ export default function PlumbingPage() {
                   </div>
                 </div>
               </div>
-              <p className="text-xs text-slate-400 mt-3 italic">Sample report. Your shop&apos;s real per-job P&amp;Ls land in your Slack channel within 48 hours of job completion.</p>
+              <p className="text-xs text-slate-400 mt-3 italic">Sample report. Your shop&apos;s real per-job P&amp;Ls come with every monthly close.</p>
             </div>
           </AnimateOnScroll>
         </div>
@@ -509,7 +509,7 @@ export default function PlumbingPage() {
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight" style={{ letterSpacing: '-0.02em' }}>
-              Per-job P&amp;L in 48 hours. Monthly close in 24. Starts at $999/mo.
+              Per-job profit on every monthly close. Starts at $1,200/mo.
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>

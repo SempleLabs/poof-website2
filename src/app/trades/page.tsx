@@ -7,34 +7,52 @@ import GlowCard from '@/components/GlowCard'
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Bookkeeping for HVAC Companies | Poof Managed for Trades',
+  title: 'Bookkeeping for Trade Contractors | Poof Managed for Trades',
   description:
-    'A managed bookkeeping service for HVAC shops doing $750K–$3M. Per-job profit on every monthly close — know which jobs made money. AI-powered, controller-reviewed, built from your Jobber or Housecall Pro data.',
+    'A managed bookkeeping service for HVAC, plumbing, and electrical shops doing $750K–$3M. Per-job profit on every monthly close — know which jobs made money. AI-powered, controller-reviewed, built from your Jobber or Housecall Pro data.',
   alternates: {
-    canonical: 'https://www.poofai.com/hvac',
+    canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
-    title: 'Poof Managed for Trades — Bookkeeping for HVAC Companies',
+    title: 'Poof Managed for Trades — Bookkeeping for Trade Contractors',
     description:
-      'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for service contractor shops.',
-    url: 'https://www.poofai.com/hvac',
+      'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for HVAC, plumbing, and electrical shops.',
+    url: 'https://www.poofai.com/trades',
     siteName: 'Poof',
     type: 'website',
   },
 }
 
+const trades = [
+  {
+    name: 'HVAC',
+    href: '/hvac',
+    body: 'Per-job P&L on every install and replacement — so the next bid is priced on real margin, not last month\'s guess.',
+  },
+  {
+    name: 'Plumbing',
+    href: '/plumbing',
+    body: 'Know which repipes, service calls, and remodels actually made money before you bid two more like them.',
+  },
+  {
+    name: 'Electrical',
+    href: '/electrical',
+    body: 'Job-level profit on panel upgrades and service work, with subs tracked all year for a clean 1099 January.',
+  },
+]
+
 const pains = [
   {
-    title: 'Your May P&L lands June 20th, not June 2nd',
-    body: 'You\'re pricing this week\'s bids on numbers that are three weeks stale. Bookkeeper turnaround is the bottleneck.',
+    title: 'Your monthly P&L lands weeks after the month ends',
+    body: 'You\'re bidding this week\'s jobs on numbers that are three weeks stale. Bookkeeper turnaround is the bottleneck.',
   },
   {
     title: 'You can\'t tell which jobs actually made money',
     body: 'The big commercial install might have been a loss. By the time the P&L lands, the next quote is already out the door.',
   },
   {
-    title: 'Jobber data gets rekeyed into QBO by hand',
-    body: 'A part-time bookkeeper at $800–$1,500/mo manually moves invoices and payments between systems. Slow, error-prone, expensive.',
+    title: 'Field data gets rekeyed into QBO by hand',
+    body: 'A part-time bookkeeper at $800–$1,500/mo manually moves Jobber or Housecall Pro data into QuickBooks. Slow, error-prone, expensive.',
   },
 ]
 
@@ -57,26 +75,9 @@ const howItWorks = [
   {
     number: '4',
     title: 'Per-job P&L with every monthly close',
-    body: 'Want to know if the Henderson install made money? Ask Poof\'s assistant, or text your controller — and get a straight answer instead of a P&L that\'s three weeks late.',
+    body: 'Want to know if a specific job made money? Ask Poof\'s assistant, or text your controller — and get a straight answer instead of a P&L that\'s three weeks late.',
   },
 ]
-
-const replaces = {
-  current: [
-    'QuickBooks Online — you and the bookkeeper share the login',
-    'Jobber or Housecall Pro — field-service data stays trapped on its own island',
-    'Part-time bookkeeper at $800–$1,500/mo who logs in once a month',
-    'Monthly P&L 2–3 weeks late, in a PDF, with no per-job detail',
-    'Year-end 1099 fire drill across spreadsheets and email threads',
-  ],
-  poof: [
-    'Poof handles categorization and reconciliation, with controller review on every decision',
-    'Your Jobber and Housecall Pro job data flows into the ledger — no manual rekeying',
-    'Managed-service tier at $1,200/mo — a controller-grade service, not a part-time login',
-    'Monthly close with per-job P&L — you finally see which jobs made money, and which lost it',
-    '1099-ready every January — contractors tracked all year, not the week before the deadline',
-  ],
-}
 
 const plans = [
   {
@@ -128,36 +129,24 @@ const extras = [
 
 const faqs = [
   {
+    q: 'Which trades do you work with?',
+    a: 'HVAC, plumbing, and electrical service shops doing roughly $750K–$3M with 2–6 trucks. Other field-service trades on the same Jobber or Housecall Pro setup are usually a fit too — book a call and we\'ll be straight about it.',
+  },
+  {
     q: 'Do I need to switch from Jobber or Housecall Pro?',
     a: 'No. Keep using exactly what your techs use today. We bring your Jobber or Housecall Pro data into your books for you — your dispatcher and techs see no change. The handoff into your books is what we replace, not the field tool.',
   },
   {
-    q: 'What if I\'m on ServiceTitan?',
-    a: 'Talk to us. ServiceTitan customers are usually larger than our typical fit, but we have a path for the right shops. Book a call and we\'ll be straight about whether Poof makes sense for you.',
-  },
-  {
-    q: 'Will my CPA still work with me at tax time?',
-    a: 'Yes — and they\'ll be happier. We deliver clean, audit-grade books on accrual or cash basis with full general ledger access. We coordinate with your CPA at year-end so 1099 filings and tax prep land without the usual scramble.',
-  },
-  {
     q: 'Is this real bookkeeping or just AI guessing?',
-    a: 'Real bookkeeping. Every customer-facing decision is reviewed by a credentialed human — Austin or someone on his team, with audit and controller experience. The AI does the volume work. The human signs off on the calls that matter. The ledger is real double-entry with reversal entries, built to survive any IRS or insurance audit.',
-  },
-  {
-    q: 'What if I want to leave?',
-    a: 'You take everything with you. Export your full QBO file anytime — no data lock-in, no exit fees. We\'d rather you stay because the service is worth it, not because leaving is painful.',
+    a: 'Real bookkeeping. Every customer-facing decision is reviewed by a credentialed human — Austin or someone on his team, with audit and controller experience. The AI does the volume work. The human signs off on the calls that matter. The ledger is real double-entry, built to survive any IRS or insurance audit.',
   },
   {
     q: 'How is this different from my current bookkeeper?',
-    a: 'Three differences. Granularity: per-job P&L on every close, which most part-time bookkeepers can\'t deliver at any price. Accountability: a former controller reviewing the work, with an audit-grade ledger underneath. Responsiveness: a real person you can text about a specific job, not someone who logs in once a month.',
-  },
-  {
-    q: 'How is this different from Workyard, Knowify, or ServiceTitan accounting?',
-    a: 'Those are field-service or construction tools that bolted on accounting. Poof is the opposite — accounting-first, with direct integrations into the field tools you already use. And none of them include a managed-service tier with controller review.',
+    a: 'Granularity: per-job P&L on every close, which most part-time bookkeepers can\'t deliver at any price. Accountability: a former controller reviewing the work, with an audit-grade ledger underneath. Responsiveness: a real person you can text about a specific job, not someone who logs in once a month.',
   },
 ]
 
-export default function HvacPage() {
+export default function TradesPage() {
   return (
     <main id="main-content" className="min-h-screen bg-white">
       <script
@@ -180,13 +169,13 @@ export default function HvacPage() {
               className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
               style={{ letterSpacing: '-0.03em' }}
             >
-              The bookkeeping service for HVAC shops. <span className="text-gradient-gold">Finally know which jobs actually made money.</span>
+              Bookkeeping for trade contractors. <span className="text-gradient-gold">Finally know which jobs actually made money.</span>
             </h1>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Built for shops doing $750K–$3M in revenue with 2–6 trucks. Powered by AI agents, reviewed by a former controller. Works with your existing Jobber or Housecall Pro.
+              A managed bookkeeping service for shops doing $750K–$3M with 2–6 trucks. Powered by AI agents, reviewed by a former controller. Works with your existing Jobber or Housecall Pro.
             </p>
           </AnimateOnScroll>
 
@@ -199,10 +188,10 @@ export default function HvacPage() {
                 Book a 20-minute call
               </Link>
               <Link
-                href="#pricing"
+                href="#trades"
                 className="inline-block border-2 border-slate-300 text-slate-700 font-semibold px-8 py-4 rounded-lg text-base hover:border-slate-900 hover:text-slate-900 transition-all duration-200"
               >
-                See pricing
+                Find your trade
               </Link>
             </div>
           </AnimateOnScroll>
@@ -212,54 +201,39 @@ export default function HvacPage() {
               30-day refundable pilot · Founder-led onboarding · Cancel anytime
             </p>
           </AnimateOnScroll>
+        </div>
+      </section>
 
-          {/* Per-job P&L mockup */}
-          <AnimateOnScroll animation="fade-up" delay={400}>
-            <div className="mt-16 max-w-3xl mx-auto">
-              <div className="rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
-                <div className="px-6 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-job P&amp;L · Henderson install</div>
-                  <div className="text-xs text-violet-600 font-semibold">From your monthly profit report</div>
-                </div>
-                <div className="px-6 py-5">
-                  <div className="grid grid-cols-3 gap-4 mb-5">
-                    <div>
-                      <div className="text-xs text-slate-500 mb-1">Revenue</div>
-                      <div className="text-xl font-bold text-slate-900">$18,400</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-slate-500 mb-1">Cost</div>
-                      <div className="text-xl font-bold text-slate-900">$12,890</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-slate-500 mb-1">Margin</div>
-                      <div className="text-xl font-bold text-emerald-600">$5,510 · 29.9%</div>
-                    </div>
-                  </div>
-                  <div className="space-y-1.5 text-sm">
-                    {[
-                      ['Equipment (2.5-ton heat pump)', '$6,200'],
-                      ['Materials — Ferguson, Johnstone', '$1,840'],
-                      ['Labor — 22 tech hours', '$3,520'],
-                      ['Permits & inspection', '$430'],
-                      ['Truck & fuel allocated', '$900'],
-                    ].map(([k, v]) => (
-                      <div key={k} className="flex justify-between text-slate-600">
-                        <span>{k}</span>
-                        <span className="font-medium text-slate-900">{v}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-slate-400 mt-3 italic">Sample report. Your shop&apos;s real per-job P&amp;Ls come with every monthly close.</p>
-            </div>
+      {/* Trade cards */}
+      <section id="trades" className="py-20 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">
+              Built for your trade
+            </h2>
+            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
+              Same managed service, a chart of accounts and job costing tuned to how your work actually gets billed.
+            </p>
           </AnimateOnScroll>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {trades.map((t, i) => (
+              <AnimateOnScroll key={t.name} animation="fade-up" delay={i * 100}>
+                <Link href={t.href} className="block h-full">
+                  <GlowCard className="bg-white border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
+                    <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">{t.name}</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed mb-4">{t.body}</p>
+                    <span className="text-sm font-semibold text-violet-600">View details →</span>
+                  </GlowCard>
+                </Link>
+              </AnimateOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Pain points */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">
@@ -273,7 +247,7 @@ export default function HvacPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {pains.map((p, i) => (
               <AnimateOnScroll key={p.title} animation="fade-up" delay={i * 100}>
-                <GlowCard className="bg-white border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
+                <GlowCard className="bg-slate-50 border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
                   <div className="w-10 h-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold mb-4">
                     !
                   </div>
@@ -287,7 +261,7 @@ export default function HvacPage() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-3">
@@ -315,56 +289,6 @@ export default function HvacPage() {
                 </div>
               </AnimateOnScroll>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Replaces your current bookkeeper */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-3">
-              Replaces your current bookkeeper
-            </h2>
-            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              Cheaper than QBO + a part-time bookkeeper + manual Jobber handoff. Faster, and with detail they can&apos;t deliver.
-            </p>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <AnimateOnScroll animation="fade-up">
-              <div className="bg-white border border-slate-200 rounded-2xl p-7 h-full">
-                <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">Today</div>
-                <h3 className="font-semibold text-xl text-slate-900 mb-5">Your current setup</h3>
-                <ul className="space-y-3">
-                  {replaces.current.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-slate-600">
-                      <svg className="w-5 h-5 text-slate-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                      <span className="text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll animation="fade-up" delay={100}>
-              <div className="bg-white border-2 border-violet-300 rounded-2xl p-7 h-full shadow-lg">
-                <div className="text-xs font-semibold uppercase tracking-wider text-violet-600 mb-3">With Poof Managed for Trades</div>
-                <h3 className="font-semibold text-xl text-slate-900 mb-5">Your new setup</h3>
-                <ul className="space-y-3">
-                  {replaces.poof.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-slate-700">
-                      <svg className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimateOnScroll>
           </div>
         </div>
       </section>

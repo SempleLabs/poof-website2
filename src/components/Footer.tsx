@@ -69,13 +69,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Industries</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">For Trades</h3>
             <ul className="space-y-3">
+              <li><Link href="/trades" className="text-slate-500 hover:text-gold-600 transition-colors">All trades</Link></li>
               <li><Link href="/hvac" className="text-slate-500 hover:text-gold-600 transition-colors">HVAC</Link></li>
               <li><Link href="/plumbing" className="text-slate-500 hover:text-gold-600 transition-colors">Plumbing</Link></li>
               <li><Link href="/electrical" className="text-slate-500 hover:text-gold-600 transition-colors">Electrical</Link></li>
-              <li><Link href="/service-businesses" className="text-slate-500 hover:text-gold-600 transition-colors">Service Businesses</Link></li>
+            </ul>
+
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4 mt-8">Online &amp; Solo</h3>
+            <ul className="space-y-3">
+              <li><Link href="/ecommerce" className="text-slate-500 hover:text-gold-600 transition-colors">Ecommerce</Link></li>
               <li><Link href="/freelancers" className="text-slate-500 hover:text-gold-600 transition-colors">Freelancers</Link></li>
+              <li><Link href="/creators" className="text-slate-500 hover:text-gold-600 transition-colors">Creators</Link></li>
+              <li><Link href="/service-businesses" className="text-slate-500 hover:text-gold-600 transition-colors">Service Businesses</Link></li>
+              <li><Link href="/new-llc" className="text-slate-500 hover:text-gold-600 transition-colors">New LLCs</Link></li>
             </ul>
           </div>
 
