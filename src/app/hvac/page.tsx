@@ -375,7 +375,7 @@ export default function HvacPage() {
               Pricing built for trade shops
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              Replaces a $1,000–$1,500/mo bookkeeper, and delivers detail they can&apos;t. No long-term contract.
+              Replaces a part-time bookkeeper, and delivers detail they can&apos;t. No long-term contract.
             </p>
           </AnimateOnScroll>
 
@@ -457,7 +457,7 @@ export default function HvacPage() {
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Before Poof, Austin spent a decade auditing and running the books for small service businesses. The pattern was always the same: an owner who built a real business from a service truck, paying $1,000+/mo for a bookkeeper who delivered a PDF three weeks late and couldn&apos;t answer the one question that mattered — &ldquo;which jobs made money?&rdquo;
+                  Before Poof, Austin spent a decade auditing and running the books for small service businesses. The pattern was always the same: an owner who built a real business from a service truck, paying $800–$1,500/mo for a bookkeeper who delivered a PDF three weeks late and couldn&apos;t answer the one question that mattered — &ldquo;which jobs made money?&rdquo;
                 </p>
                 <p>
                   Poof Managed for Trades is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
