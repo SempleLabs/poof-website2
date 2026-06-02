@@ -36,6 +36,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.poofai.com/resources',
   },
+  openGraph: {
+    title: 'Poof Resources — Small Business Bookkeeping Guides',
+    description:
+      'Free guides and templates on AI bookkeeping, automating your finances, taxes, and keeping clean books for your small business.',
+    url: 'https://www.poofai.com/resources',
+    siteName: 'Poof',
+    type: 'website',
+  },
 }
 
 export default async function ResourcesPage() {

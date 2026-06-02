@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.poofai.com/how-it-works',
   },
+  openGraph: {
+    title: 'How Poof Works — AI Bookkeeping in 3 Steps',
+    description:
+      'Connect your banks, let AI categorize and reconcile, and get 13 financial reports, budgets, and cash flow forecasts — automatically.',
+    url: 'https://www.poofai.com/how-it-works',
+    siteName: 'Poof',
+    type: 'website',
+  },
 }
 
 const howItWorksFaqs = [

@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.poofai.com/poof-vs-quickbooks',
   },
+  openGraph: {
+    title: 'Poof vs QuickBooks — AI Bookkeeping Comparison',
+    description:
+      'Compare Poof and QuickBooks side by side: AI budgeting, cash flow forecasting, auto-reconciliation, and 19 differentiators that set Poof apart.',
+    url: 'https://www.poofai.com/poof-vs-quickbooks',
+    siteName: 'Poof',
+    type: 'website',
+  },
 }
 
 const comparisonData = [

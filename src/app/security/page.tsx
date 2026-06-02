@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.poofai.com/security',
   },
+  openGraph: {
+    title: 'Security — How Poof Protects Your Financial Data',
+    description:
+      'Audit logging, two-factor authentication, role-based access, and encrypted, read-only bank connections via Plaid. See how Poof keeps your data safe.',
+    url: 'https://www.poofai.com/security',
+    siteName: 'Poof',
+    type: 'website',
+  },
 }
 
 const securityFeatures = [

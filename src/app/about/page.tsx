@@ -9,10 +9,18 @@ import { getPersonSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'About Poof - AI Bookkeeping for Small Business',
-  description: 'Learn about Poof&apos;s mission to automate bookkeeping for small businesses. Meet our team and discover our story.',
+  description: 'Learn about Poof and our mission to automate bookkeeping for small businesses — built by Austin Semple, a former controller with 10+ years of audit experience.',
   keywords: 'about Poof, company story, bookkeeping automation team, AI accounting mission',
   alternates: {
     canonical: 'https://www.poofai.com/about',
+  },
+  openGraph: {
+    title: 'About Poof — Built by a Former Controller',
+    description:
+      'Poof automates bookkeeping for small businesses. Built by Austin Semple, a former controller with 10+ years of audit and controller experience.',
+    url: 'https://www.poofai.com/about',
+    siteName: 'Poof',
+    type: 'website',
   },
 }
 

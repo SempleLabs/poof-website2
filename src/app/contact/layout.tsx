@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.poofai.com/contact',
   },
+  openGraph: {
+    title: 'Contact the Poof Team',
+    description:
+      "Have a question about Poof AI bookkeeping? Contact us and we'll respond within 24 hours — setup, features, and support.",
+    url: 'https://www.poofai.com/contact',
+    siteName: 'Poof',
+    type: 'website',
+  },
 }
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
