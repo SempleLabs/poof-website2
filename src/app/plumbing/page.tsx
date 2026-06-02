@@ -94,7 +94,6 @@ const plans = [
       'Monthly variance review',
     ],
     cta: 'Book a 20-minute call',
-    ctaHref: '/contact',
     highlight: true,
   },
   {
@@ -109,7 +108,6 @@ const plans = [
       'Priority response',
     ],
     cta: 'Book a 20-minute call',
-    ctaHref: '/contact',
     highlight: false,
   },
 ]
