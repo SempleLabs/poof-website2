@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
+import BookCallButton from '@/components/BookCallButton'
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -181,12 +182,11 @@ export default function TradesPage() {
 
           <AnimateOnScroll animation="scale-up" delay={200}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link
-                href="/contact"
+              <BookCallButton
                 className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
               >
                 Book a 20-minute call
-              </Link>
+              </BookCallButton>
               <Link
                 href="#trades"
                 className="inline-block border-2 border-slate-300 text-slate-700 font-semibold px-8 py-4 rounded-lg text-base hover:border-slate-900 hover:text-slate-900 transition-all duration-200"
@@ -338,8 +338,7 @@ export default function TradesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={plan.ctaHref}
+                  <BookCallButton
                     className={`block w-full text-center font-semibold px-6 py-3 rounded-lg transition-all duration-200 ${
                       plan.highlight
                         ? 'bg-gold-600 text-white hover:bg-gold-700'
@@ -347,7 +346,7 @@ export default function TradesPage() {
                     }`}
                   >
                     {plan.cta}
-                  </Link>
+                  </BookCallButton>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -443,12 +442,11 @@ export default function TradesPage() {
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-up" delay={200}>
-            <Link
-              href="/contact"
+            <BookCallButton
               className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-0.5 transition-all duration-200"
             >
               Book a 20-minute call
-            </Link>
+            </BookCallButton>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={300}>
