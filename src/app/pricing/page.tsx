@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
-import { getFaqPageSchema } from '@/lib/jsonLd'
+import { getFaqPageSchema, getSoftwareApplicationSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export default function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false)
@@ -81,6 +81,21 @@ export default function PricingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getSoftwareApplicationSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Home', url: 'https://www.poofai.com' },
+              { name: 'Pricing', url: 'https://www.poofai.com/pricing' },
+            ])
+          ),
+        }}
       />
       <Header />
 

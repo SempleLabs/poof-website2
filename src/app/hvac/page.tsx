@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
-import { getFaqPageSchema } from '@/lib/jsonLd'
+import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping for HVAC Companies | Poof Managed for Trades',
@@ -162,6 +162,32 @@ export default function HvacPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs.map((f) => ({ question: f.q, answer: f.a })))) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getServiceSchema({
+              name: 'Poof Managed for Trades — HVAC Bookkeeping',
+              description:
+                'Managed bookkeeping for HVAC contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
+              price: '1200',
+              url: 'https://www.poofai.com/hvac',
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Home', url: 'https://www.poofai.com' },
+              { name: 'For Trades', url: 'https://www.poofai.com/trades' },
+              { name: 'HVAC', url: 'https://www.poofai.com/hvac' },
+            ])
+          ),
+        }}
       />
       <Header />
 

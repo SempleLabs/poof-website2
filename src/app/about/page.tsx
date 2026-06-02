@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
+import { getPersonSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'About Poof - AI Bookkeeping for Small Business',
@@ -75,6 +76,21 @@ export default function AboutPage() {
 
   return (
     <main id="main-content" className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getPersonSchema()) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Home', url: 'https://www.poofai.com' },
+              { name: 'About', url: 'https://www.poofai.com/about' },
+            ])
+          ),
+        }}
+      />
       <Header />
 
       <PageHero

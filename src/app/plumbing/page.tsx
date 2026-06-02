@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
-import { getFaqPageSchema } from '@/lib/jsonLd'
+import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping for Plumbing Shops | Poof Managed for Trades',
@@ -162,6 +162,32 @@ export default function PlumbingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs.map((f) => ({ question: f.q, answer: f.a })))) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getServiceSchema({
+              name: 'Poof Managed for Trades — Plumbing Bookkeeping',
+              description:
+                'Managed bookkeeping for plumbing shops doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
+              price: '1200',
+              url: 'https://www.poofai.com/plumbing',
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: 'Home', url: 'https://www.poofai.com' },
+              { name: 'For Trades', url: 'https://www.poofai.com/trades' },
+              { name: 'Plumbing', url: 'https://www.poofai.com/plumbing' },
+            ])
+          ),
+        }}
       />
       <Header />
 

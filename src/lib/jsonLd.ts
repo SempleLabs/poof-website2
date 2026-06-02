@@ -134,6 +134,77 @@ export function getSpendScoreToolSchema() {
   }
 }
 
+export function getPersonSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Austin Semple',
+    jobTitle: 'CEO & Founder',
+    description:
+      'Founder of Poof. Former controller with 10+ years of audit and controller experience building and running the books for small service businesses.',
+    url: 'https://www.poofai.com/about',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Poof',
+      url: 'https://www.poofai.com',
+    },
+    knowsAbout: [
+      'Bookkeeping',
+      'Accounting',
+      'Financial controllership',
+      'Auditing',
+      'Small business finance',
+      'Tax preparation',
+    ],
+  }
+}
+
+export function getServiceSchema(opts: {
+  name: string
+  description: string
+  price: string
+  url: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Bookkeeping service',
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    provider: {
+      '@type': 'Organization',
+      name: 'Poof',
+      url: 'https://www.poofai.com',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United States',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: opts.price,
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
+      url: opts.url,
+    },
+  }
+}
+
+export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
+}
+
 export function getFaqPageSchema(faqs: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',
