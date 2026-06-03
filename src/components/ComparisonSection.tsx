@@ -83,15 +83,15 @@ export default function ComparisonSection() {
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">QuickBooks</div>
-                    <div className="text-xs text-slate-500">$38/mo+</div>
+                    <div className="text-xs text-slate-500">$38+/mo</div>
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">Xero</div>
-                    <div className="text-xs text-slate-500">$15/mo+</div>
+                    <div className="text-xs text-slate-500">$15+/mo</div>
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">FreshBooks</div>
-                    <div className="text-xs text-slate-500">$19/mo+</div>
+                    <div className="text-xs text-slate-500">$19+/mo</div>
                   </th>
                 </tr>
               </thead>
