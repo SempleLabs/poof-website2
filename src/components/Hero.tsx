@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackEvent } from '@/lib/analytics'
 
 const SLIDES = [
   { src: '/hero/hero-dashboard.png', alt: 'Poof dashboard overview', phrase: 'Show me how my business is doing' },
@@ -159,6 +160,7 @@ export default function Hero() {
               <div className="mt-5 flex justify-end">
                 <Link
                   href="https://app.poofai.com/register"
+                  onClick={() => trackEvent('start_trial_click', { location: 'hero' })}
                   className="bg-gold-600 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-700 transition-all duration-200"
                 >
                   Start Free Trial

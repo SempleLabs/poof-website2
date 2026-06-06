@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import AnimateOnScroll from './AnimateOnScroll'
+import { trackEvent } from '@/lib/analytics'
 
 interface IntakeFormProps {
   source?: string
@@ -82,6 +83,9 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
 
       if (response.ok) {
         setStatus('success')
+        // GA4 lead conversion. Consent Mode (app/layout.tsx) governs cookie use,
+        // so this is safe to fire unconditionally — no PII is included.
+        trackEvent('generate_lead', { source: source || 'intake_form' })
         // Fire the conversion event only if the visitor granted marketing consent
         // (the X pixel is loaded by ConsentBanner on opt-in, so window.twq is otherwise undefined).
         // We intentionally do NOT pass the email address — sending PII to an ad network

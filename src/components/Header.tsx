@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackEvent } from '@/lib/analytics'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -69,6 +70,7 @@ export default function Header() {
             </Link>
             <Link
               href="https://app.poofai.com/register"
+              onClick={() => trackEvent('start_trial_click', { location: 'header' })}
               className="bg-slate-900 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-slate-800 transition-all duration-200"
             >
               Start Free Trial
@@ -127,7 +129,7 @@ export default function Header() {
               </Link>
               <Link
                 href="https://app.poofai.com/register"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => { trackEvent('start_trial_click', { location: 'header_mobile' }); setIsMenuOpen(false) }}
                 className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold text-lg"
               >
                 Start Free Trial
