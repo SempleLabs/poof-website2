@@ -25,6 +25,7 @@ export default function Header() {
   ]
 
   return (
+    <>
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
@@ -96,10 +97,13 @@ export default function Header() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile Menu - full screen overlay */}
+      {/* Mobile Menu - full screen overlay (rendered outside <header> so the
+          scrolled header's backdrop-blur doesn't become its containing block
+          and collapse the fixed overlay to the header's height) */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-slate-900 z-[60] flex flex-col items-center justify-center">
+        <div className="md:hidden fixed inset-0 bg-slate-900 z-[100] flex flex-col items-center justify-center">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-5 right-5 text-white"
@@ -138,6 +142,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   )
 }
