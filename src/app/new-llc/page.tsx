@@ -56,7 +56,7 @@ const config = {
       { number: '1', title: 'Apply and get accepted', description: 'Fill out the form below. We help new business owners who want clean books without the learning curve.' },
       { number: '2', title: 'Share your current setup', description: 'Tell us what you\'re working with — bank accounts, existing tools, how you\'re tracking things now. No judgment.' },
       { number: '3', title: 'Receive your setup analysis', description: 'Get a clear report on what you need, what you don\'t, and exactly how to set up your books the right way.' },
-      { number: '4', title: 'Decide on next steps', description: 'Set it up yourself with our plan, or let Poof handle everything automatically for $29/mo.' },
+      { number: '4', title: 'Decide on next steps', description: 'Set it up yourself with our plan, or let Poof handle everything automatically for $79/mo.' },
     ],
   },
   socialProof: {
@@ -75,7 +75,7 @@ const config = {
     { question: 'Do I need an EIN to set up my books?', answer: 'You can apply for an EIN for free directly from the IRS, and most banks require one to open a business account. You do not strictly need it to begin tracking transactions, but getting it early lets you separate finances and stay organized from the start. Poof does not file paperwork or give legal advice on formation.' },
     { question: 'Should a new LLC use cash or accrual accounting?', answer: 'Most brand-new, single-owner LLCs start with cash-basis accounting because it is simpler — you record income when money lands and expenses when you pay them. Some businesses with inventory or higher revenue use accrual. A CPA can confirm the right fit, and Poof works with whichever method you choose.' },
     { question: 'What does the free financial analysis on this page include, and how fast do I hear back?', answer: 'It is a no-cost operational review of your setup — account separation, chart of accounts, missed deductions, and a 30-day foundation plan. Apply using the form below; spots are limited, and results typically come back within about 5 to 7 days. It is not a CPA audit or tax filing service.' },
-    { question: 'How much does Poof cost after I set up my books?', answer: 'Poof is flat $29 a month with all 78 features included — no tiers, add-ons, or surprise upgrades — plus a 30-day free trial that needs no credit card. New users can get a launch special of $14.50 a month for the first three months. It connects read-only to 12,000+ banks through Plaid; note that Poof does not run payroll or file taxes.' },
+    { question: 'How much does Poof cost after I set up my books?', answer: 'Poof is flat $79 a month with all 78 features included — no tiers, add-ons, or surprise upgrades — plus a 30-day free trial that needs no credit card. New users can get a launch special of $39.50 a month for the first three months. It connects read-only to 12,000+ banks through Plaid; note that Poof does not run payroll or file taxes.' },
   ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }

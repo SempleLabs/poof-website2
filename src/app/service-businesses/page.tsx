@@ -55,7 +55,7 @@ const config = {
       { number: '1', title: 'Apply and get accepted', description: 'Fill out the form below. We work with agencies, consultants, and service businesses of all sizes.' },
       { number: '2', title: 'Share your financial data securely', description: 'Connect your bank accounts or accounting software. All data is encrypted and confidential.' },
       { number: '3', title: 'Receive your analysis', description: 'Get a detailed report with actionable insights, plus an optional Loom walkthrough.' },
-      { number: '4', title: 'Decide on next steps', description: 'Implement the fixes yourself or let Poof handle your bookkeeping for $29/mo.' },
+      { number: '4', title: 'Decide on next steps', description: 'Implement the fixes yourself or let Poof handle your bookkeeping for $79/mo.' },
     ],
   },
   socialProof: {
@@ -75,7 +75,7 @@ const config = {
     { question: 'How do I handle client deposits and retainers I haven\'t earned yet?', answer: 'Deposits and retainers are unearned revenue until the work is delivered, so counting them as income too early overstates your profit. Poof helps you keep that money clearly tracked so your reports reflect what you\'ve truly earned, not just what\'s in the bank.' },
     { question: 'Does Poof help me keep subcontractor payments organized for 1099s?', answer: 'Yes. Poof tracks and categorizes what you pay each subcontractor across the year, so the totals you need for 1099 reporting are easy to pull. Note that Poof is bookkeeping software and does not file taxes or run payroll for you.' },
     { question: 'What does the free financial analysis include, and how fast do I get it?', answer: 'It\'s an operational financial analysis covering your billing, client profitability, recurring expenses, cash flow timing, and automation opportunities, with results typically in about 5 to 7 days. Spots are limited each month, so apply using the form below to be considered.' },
-    { question: 'How much is Poof, and is there a free trial?', answer: 'Poof is a flat $29 a month with all 78 features included, no tiers or add-ons, plus a launch special of $14.50 a month for your first 3 months. You can start with a 30-day free trial and no credit card required.' },
+    { question: 'How much is Poof, and is there a free trial?', answer: 'Poof is a flat $79 a month with all 78 features included, no tiers or add-ons, plus a launch special of $39.50 a month for your first 3 months. You can start with a 30-day free trial and no credit card required.' },
   ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }

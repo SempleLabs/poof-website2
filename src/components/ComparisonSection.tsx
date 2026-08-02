@@ -64,7 +64,7 @@ export default function ComparisonSection() {
             <span className="text-gradient-gold"> Nothing You Don&apos;t.</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            $29/mo for everything QuickBooks charges $38+ for — with AI that does the work, not just gives you tools.
+            $79/mo for everything QuickBooks Plus charges $115 for — with AI that does the work, not just gives you tools.
           </p>
         </AnimateOnScroll>
 
@@ -78,7 +78,7 @@ export default function ComparisonSection() {
                   </th>
                   <th className="px-4 py-5 text-center bg-gold-500/10">
                     <div className="text-sm font-bold text-gold-400">Poof</div>
-                    <div className="text-xs text-slate-500">$29/mo</div>
+                    <div className="text-xs text-slate-500">$79/mo</div>
                     <div className="mt-1 inline-block bg-gold-600 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
                   </th>
                   <th className="px-4 py-5 text-center">

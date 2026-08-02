@@ -8,7 +8,7 @@ Poof has two distinct offerings:
 
 1. **Poof Managed for Trades** (primary) — Managed bookkeeping for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue with 2–6 trucks. $1,200/mo (2–4 truck shops, $750K–$1.5M) or $1,500/mo (5+ truck shops, $1.5M–$3M). Per-job profitability with every monthly close. AI agents do the work; a former controller reviews every customer-facing decision, and you can text or email your controller directly. Jobber and Housecall Pro data is brought into your books from your monthly exports — no manual rekeying by you. $1,500 one-time onboarding (historical cleanup up to 18 months, QBO/Xero migration), $250 fully refundable 30-day pilot.
 
-2. **Poof Professional** (self-serve) — SaaS at $29/mo ($14.50/mo launch special for the first 3 months, $290/yr annual) for small businesses with 1–50 employees and 100–10,000 monthly transactions. One plan, every feature included. 30-day free trial, no credit card required.
+2. **Poof Professional** (self-serve) — SaaS at $79/mo ($39.50/mo launch special for the first 3 months, $790/yr annual) for small businesses with 1–50 employees and 100–10,000 monthly transactions. One plan, every feature included. 30-day free trial, no credit card required.
 
 ## Core Pages
 
@@ -18,7 +18,7 @@ Poof has two distinct offerings:
 - [Plumbing Bookkeeping](https://www.poofai.com/plumbing): Managed bookkeeping for plumbing shops
 - [Electrical Bookkeeping](https://www.poofai.com/electrical): Managed bookkeeping for electrical shops
 - [Features](https://www.poofai.com/features): All 78 features across 10 categories
-- [Pricing](https://www.poofai.com/pricing): $29/mo Poof Professional plan, FAQs, launch special
+- [Pricing](https://www.poofai.com/pricing): $79/mo Poof Professional plan, FAQs, launch special
 - [How It Works](https://www.poofai.com/how-it-works): Three-step setup and automation overview
 - [Poof vs QuickBooks](https://www.poofai.com/poof-vs-quickbooks): Side-by-side feature comparison with QuickBooks
 - [About](https://www.poofai.com/about): Founder story, mission, company timeline
@@ -105,9 +105,9 @@ Poof Managed for Trades (HVAC, plumbing, electrical — primary offering):
 
 Poof Professional (self-serve software):
 
-- **Monthly:** $29/mo, all 78 features included
-- **Monthly (launch special):** $14.50/mo (50% off first 3 months)
-- **Annual:** $290/year ($24.17/mo, save $58)
+- **Monthly:** $79/mo, all 78 features included
+- **Monthly (launch special):** $39.50/mo (50% off first 3 months)
+- **Annual:** $790/year ($65.83/mo, save $158)
 - **Free trial:** 30 days, no credit card required
 - **Money-back guarantee:** 30 days
 

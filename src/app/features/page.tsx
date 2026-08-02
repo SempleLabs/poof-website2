@@ -105,7 +105,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
-        subtitle="78 features, one flat price — $29/mo for everything QuickBooks charges $38+ for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
+        subtitle="78 features, one flat price — $79/mo for everything QuickBooks Plus charges $115 for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"
@@ -303,7 +303,7 @@ export default function FeaturesPage() {
               Ready to Try All 78 Features?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              Start your 30-day free trial. All features included, starting at $14.50/month.
+              Start your 30-day free trial. All features included, starting at $39.50/month.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

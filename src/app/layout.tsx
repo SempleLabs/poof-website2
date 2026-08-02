@@ -29,7 +29,7 @@ const cabinet = localFont({
 
 export const metadata: Metadata = {
   title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-  description: 'Poof Managed for Trades: AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping for any small business at $29/mo.',
+  description: 'Poof Managed for Trades: AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping for any small business at $79/mo.',
   keywords: 'hvac bookkeeping, plumbing bookkeeping, electrical contractor bookkeeping, bookkeeping for trades, job costing, per-job profitability, managed bookkeeping service, AI bookkeeping, small business bookkeeping, QuickBooks alternative, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   metadataBase: new URL('https://www.poofai.com'),
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $29/mo.',
+    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $79/mo.',
     url: 'https://www.poofai.com',
     siteName: 'Poof',
     type: 'website',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $29/mo.',
+    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $79/mo.',
     images: ['/og-image.png'],
   },
 }

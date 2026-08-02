@@ -73,7 +73,7 @@ const comparisonData = [
     { name: 'Personalized Dashboard with AI Daily Briefing', poof: true, quickbooks: false },
     { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false },
     { name: 'AI Chat Folders & Multi-Session Conversations', poof: true, quickbooks: false },
-    { name: 'Simple, Flat Pricing (from $14.50/mo)', poof: true, quickbooks: false },
+    { name: 'Simple, Flat Pricing (from $39.50/mo)', poof: true, quickbooks: false },
   ]},
 ]
 
@@ -102,7 +102,7 @@ export default function PoofVsQuickbooksPage() {
 
       <PageHero
         title={<><span className="text-gradient-gold">Poof</span> vs QuickBooks</>}
-        subtitle="Both platforms handle core bookkeeping. Poof adds AI automation and is built specifically for small businesses — starting at $14.50/month with no feature tiers."
+        subtitle="Both platforms handle core bookkeeping. Poof adds AI automation and is built specifically for small businesses — starting at $39.50/month with no feature tiers."
       />
 
       {/* Pricing Comparison */}
@@ -113,11 +113,11 @@ export default function PoofVsQuickbooksPage() {
               <div className="bg-slate-900 border border-gold-500/30 rounded-2xl p-8 h-full">
                 <h3 className="text-2xl font-bold font-display text-white mb-2">Poof</h3>
                 <div className="mb-1">
-                  <span className="text-2xl font-bold text-slate-500 line-through mr-2">$29</span>
-                  <span className="text-4xl font-bold text-gold-400">$14.50</span>
+                  <span className="text-2xl font-bold text-slate-500 line-through mr-2">$79</span>
+                  <span className="text-4xl font-bold text-gold-400">$39.50</span>
                   <span className="text-lg text-slate-400">/mo</span>
                 </div>
-                <p className="text-slate-400 mb-6">50% off for your first 3 months, then $29/mo. All features included.</p>
+                <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-center gap-2"><PoofCheck /> 78 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>

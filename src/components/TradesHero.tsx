@@ -96,7 +96,7 @@ export default function TradesHero() {
           <p className="text-sm text-slate-500 mt-10">
             Not a trade shop?{' '}
             <a href="#software" className="text-gold-600 font-semibold hover:text-gold-700 transition-colors">
-              Poof Professional — self-serve AI bookkeeping for any small business, $29/mo ↓
+              Poof Professional — self-serve AI bookkeeping for any small business, $79/mo ↓
             </a>
           </p>
         </AnimateOnScroll>

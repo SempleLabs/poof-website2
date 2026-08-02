@@ -68,7 +68,7 @@ export default function FeatureSection() {
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             78 features across 9 categories — all included in one plan.
-            $29/mo for everything QuickBooks charges $38+ for.
+            $79/mo for everything QuickBooks Plus charges $115 for.
           </p>
         </AnimateOnScroll>
 
@@ -119,7 +119,7 @@ export default function FeatureSection() {
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            All features included · $14.50/month · 30-day free trial
+            All features included · $39.50/month · 30-day free trial
           </div>
         </AnimateOnScroll>
       </div>

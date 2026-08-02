@@ -68,7 +68,7 @@ Under the hood, Poof is a complete AI-powered bookkeeping platform — categoriz
 **QuickBooks** is the default choice for most small businesses. Poof positions directly against QuickBooks on three axes:
 1. **Simplicity** — One flat price, no feature tiers, no accounting jargon
 2. **AI-first automation** — Poof does the work; QuickBooks gives you tools to do the work yourself
-3. **Price** — $29/mo for everything vs. $38+/mo for tiered, gated features
+3. **Value** — $79/mo for everything, including what QuickBooks reserves for its $115/mo Plus tier (job costing, budgets, comprehensive reports)
 
 ### Messaging Principle: Outcomes Over Features
 Always lead with what changes in the customer's life, not what the product does. The feature name can appear as a label, but the **headline should be the outcome.**
@@ -269,7 +269,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "78 features, one flat price — $29/mo" (self-serve tier)
+- "78 features, one flat price — $79/mo" (self-serve tier)
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -420,9 +420,9 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | $29/mo | All 78 features included (self-serve tier) |
-| Monthly (launch special) | **$14.50/mo** | 50% off first 3 months |
-| Annual | $290/year ($24.17/mo) | Save $58 |
+| Monthly | $79/mo | All 78 features included (self-serve tier) |
+| Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
+| Annual | $790/year ($65.83/mo) | Save $158 (2 months free) |
 
 - **No feature tiers** — never reference "Basic," "Pro," or "Enterprise" plans in any customer-facing content
 - 30-day free trial, no credit card required
@@ -430,9 +430,9 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 - Cancel anytime, 30-day money-back guarantee
 
 ### Pricing Messaging
-- Lead with: "$29/mo for everything QuickBooks charges $38+ for"
+- Lead with: "$79/mo for everything QuickBooks Plus charges $115 for — plus an AI bookkeeper that does the work"
 - Emphasize: "One plan. Every feature. No surprises."
-- On comparison pages: highlight that QuickBooks locks features behind $38, $65, and $200/mo tiers
+- On comparison pages: anchor against the QuickBooks tier a buyer would actually need — Plus at $115/mo (job costing, budgets, comprehensive reports) — not Simple Start at $38. Do NOT claim Poof is the cheapest option; claim it is the best value (Wave is free; the honest comparison is feature-for-feature)
 
 ---
 
@@ -444,7 +444,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 
 | | Poof | QuickBooks |
 |---|---|---|
-| **Starting price** | $29/mo — all features ($14.50/mo launch special) | $38/mo+ (tiered, features locked behind higher plans) |
+| **Starting price** | $79/mo — all features ($39.50/mo launch special) | $38–$275/mo tiered; job costing & budgets require Plus at $115/mo |
 | **AI assistant** | Poof (built-in, context-aware, 30+ tools) | No |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | No |
 | **Auto chart of accounts** | Yes | No |
@@ -581,7 +581,7 @@ Always lead with the outcome the owner cares about, never the feature.
 | Cash flow forecasting | "Know your shoulder-season cash position 90 days out." |
 
 ### Vertical Pricing Tier — "Poof Managed for Trades"
-Distinct from the $29/mo Poof Professional self-serve product.
+Distinct from the $79/mo Poof Professional self-serve product.
 
 | Plan | Price | Best for | Includes |
 |---|---|---|---|
@@ -593,7 +593,7 @@ Distinct from the $29/mo Poof Professional self-serve product.
 **Pricing messaging:**
 - "$1,200/mo replaces a $1,000 – $1,500/mo bookkeeper *and* gives you per-job profitability they can't provide"
 - "Cheaper than your current QBO + bookkeeper + manual handoff. Faster and more accurate."
-- Never quote managed-service pricing alongside the $29/mo Professional plan on the same page — different products, different audiences.
+- Never quote managed-service pricing alongside the $79/mo Professional plan on the same page — different products, different audiences.
 
 ### Competitive Alternatives (Trade-Specific)
 On HVAC landing pages, reference these competitors — NOT QuickBooks (their issue isn't QBO, it's the *handoff to* QBO).
@@ -662,6 +662,12 @@ The cold outreach voice should match the landing page voice. Drafts already prod
 ---
 
 ## Changelog
+
+### August 2, 2026 — Poof Professional repriced $29 → $79/mo
+- **Repriced the self-serve tier** from $29/mo to **$79/mo** ($790/yr = $65.83/mo; launch special 50% off first 3 months = $39.50/mo) after market research across 15 competitors (Aug 2026, vendor pricing pages): AI-first bookkeeping software converged at ~$100/mo for its capable tiers (Puzzle Complete $100, Digits Core $100, Kick Plus $100, Pilot AI-tier $99), and the traditional-software tier that includes job costing runs $70–$129 (Zoho Premium $70, Xero Established $90, QBO Plus $115, Sage 50 Pro $129). $29 priced Poof with the crippled entry tiers while delivering the $100-tier product.
+- **Comparison framing shifted** from price-vs-Simple-Start ($38) to value-vs-Plus ($115): Poof is no longer marketed as the cheapest option, but as the best value ("everything Plus charges $115 for, plus an AI bookkeeper, one plan").
+- Existing subscribers are grandfathered at $29/mo.
+- Managed for Trades pricing unchanged ($1,200/$1,500); the coherent ladder ($79 self-serve → $1,200 managed) was part of the rationale.
 
 ### July 31, 2026 — Trades as PRIMARY go-to-market; feature refresh
 - **Repositioned Poof's primary focus to trade contractors** (HVAC/plumbing/electrical), sold as the managed service "Poof Managed for Trades." The website should now **lead** with the Section 14 trades positioning; the horizontal self-serve product is the underlying engine and a secondary offering. Supersedes the earlier "trades is a parallel `/hvac` page alongside a horizontal homepage" guidance.

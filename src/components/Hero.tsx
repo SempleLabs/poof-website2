@@ -105,7 +105,7 @@ export default function Hero() {
           Poof Professional — bookkeeping that does itself
         </h2>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          The same AI engine behind the managed service, self-serve. Every feature included, $29/mo.
+          The same AI engine behind the managed service, self-serve. Every feature included, $79/mo.
         </p>
       </div>
       <div

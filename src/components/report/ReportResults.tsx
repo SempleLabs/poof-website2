@@ -239,7 +239,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
           Want to improve your Spend Score?
         </h3>
         <p className="text-violet-100 mb-6 max-w-xl mx-auto">
-          Poof tracks your score automatically — every transaction, every day. AI categorization, reconciliation, invoicing, budgets, forecasts, and 13 financial reports — all for $29/mo.
+          Poof tracks your score automatically — every transaction, every day. AI categorization, reconciliation, invoicing, budgets, forecasts, and 13 financial reports — all for $79/mo.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link

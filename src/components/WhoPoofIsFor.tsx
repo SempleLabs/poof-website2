@@ -37,7 +37,7 @@ const personas = [
       </svg>
     ),
     title: 'QuickBooks Refugees',
-    description: 'Been told "just use QuickBooks" and found it overwhelming? Poof gives you the same power at $29/mo — without the complexity.',
+    description: 'Been told "just use QuickBooks" and found it overwhelming? Poof gives you the same power at $79/mo — without the complexity.',
   },
 ]
 

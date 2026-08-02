@@ -56,7 +56,7 @@ export default function PricingPage() {
     },
     {
       question: 'How does Poof compare to QuickBooks?',
-      answer: 'Poof is $29/mo for everything QuickBooks charges $38+ for. Unlike QuickBooks, Poof includes a built-in AI assistant that records payments, creates invoices, and generates reports through conversation. Poof also includes AI budgeting, cash flow forecasting, auto-reconciliation, recurring charge detection, estimates, and a personalized dashboard — all in one plan with no tiers.'
+      answer: 'Poof is $79/mo for everything QuickBooks Plus charges $115/mo for — job costing, budgets, and comprehensive reports — plus things QuickBooks doesn\'t offer at any tier: a built-in AI assistant that records payments, creates invoices, and generates reports through conversation, AI budgeting, cash flow forecasting, auto-reconciliation, and recurring charge detection. One plan, no tiers.'
     },
     {
       question: 'What reports can I generate?',
@@ -68,7 +68,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $75, and $115/mo tiers. Poof starts at $14.50/month (launch special) with all 78 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $75, and $115/mo tiers. Poof starts at $39.50/month (launch special) with all 78 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
@@ -139,7 +139,7 @@ export default function PricingPage() {
               >
                 Annual
                 <span className="absolute -top-2 -right-2 bg-teal-500 text-white text-xs px-2 py-1 rounded-full">
-                  Save $58
+                  Save $158
                 </span>
               </button>
             </div>
@@ -172,10 +172,10 @@ export default function PricingPage() {
                   <p className="text-slate-400 mb-6">Everything you need for automated bookkeeping</p>
                   <div className="mb-2">
                     <span className="text-3xl font-mono font-bold text-slate-500 line-through mr-3">
-                      $29
+                      $79
                     </span>
                     <span className="text-6xl font-mono font-bold text-gold-400">
-                      ${isAnnual ? '24.17' : '14.50'}
+                      ${isAnnual ? '65.83' : '39.50'}
                     </span>
                     <span className="text-xl font-normal text-slate-400">
                       /mo
@@ -183,8 +183,8 @@ export default function PricingPage() {
                   </div>
                   <p className="text-sm text-slate-500">
                     {isAnnual
-                      ? 'Billed $290/year — your lowest rate, locked in (2 months free)'
-                      : '50% off for your first 3 months, then $29/mo'
+                      ? 'Billed $790/year — your lowest rate, locked in (2 months free)'
+                      : '50% off for your first 3 months, then $79/mo'
                     }
                   </p>
                 </div>
@@ -239,7 +239,7 @@ export default function PricingPage() {
               Why Small Businesses Switch to Poof
             </h2>
             <p className="text-xl text-slate-600 mb-12">
-              $29/mo for everything QuickBooks charges $38+ for — with AI that actually does the work.
+              $79/mo for everything QuickBooks Plus charges $115 for — with AI that actually does the work.
             </p>
           </AnimateOnScroll>
 

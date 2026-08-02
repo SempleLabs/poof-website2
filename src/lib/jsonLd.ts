@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 78 features, 13 reports, $29/mo.',
+    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 78 features, 13 reports, $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -39,7 +39,7 @@ export function getSoftwareApplicationSchema() {
     url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
-      price: '29',
+      price: '79',
       priceCurrency: 'USD',
       priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
