@@ -103,6 +103,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/about" className="text-slate-500 hover:text-gold-600 transition-colors">About</Link></li>
               <li><Link href="/contact" className="text-slate-500 hover:text-gold-600 transition-colors">Contact</Link></li>
+              <li><Link href="/support" className="text-slate-500 hover:text-gold-600 transition-colors">Support</Link></li>
               <li><Link href="/privacy" className="text-slate-500 hover:text-gold-600 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-slate-500 hover:text-gold-600 transition-colors">Terms of Service</Link></li>
             </ul>
@@ -144,9 +145,18 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-200 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-slate-600">
-              © 2026 Poof. All rights reserved.
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-slate-600 text-center md:text-left space-y-1">
+              <p>© 2026 Semple Labs LLC. All rights reserved.</p>
+              <p>Poof is a product of Semple Labs LLC.</p>
+              <p>
+                <a
+                  href="mailto:support@poofai.com"
+                  className="text-slate-600 hover:text-gold-600 transition-colors"
+                >
+                  support@poofai.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

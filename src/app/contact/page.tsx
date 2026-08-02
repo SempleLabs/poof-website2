@@ -45,10 +45,10 @@ export default function ContactPage() {
       if (response.ok) {
         setIsSubmitted(true)
       } else {
-        setErrorMsg('There was an error sending your message. Please try again, or email us at semplelabs@gmail.com.')
+        setErrorMsg('There was an error sending your message. Please try again, or email us at support@poofai.com.')
       }
     } catch (error) {
-      setErrorMsg('There was an error sending your message. Please try again, or email us at semplelabs@gmail.com.')
+      setErrorMsg('There was an error sending your message. Please try again, or email us at support@poofai.com.')
     } finally {
       setIsSubmitting(false)
     }
@@ -92,7 +92,7 @@ export default function ContactPage() {
                       2
                     </div>
                     <div>
-                      <div className="font-medium text-slate-900">We&apos;ll respond within 24 hours</div>
+                      <div className="font-medium text-slate-900">We&apos;ll respond within 2 business days</div>
                       <div className="text-sm text-slate-600">You&apos;ll receive a reply at {formData.email}</div>
                     </div>
                   </div>
@@ -269,6 +269,23 @@ export default function ContactPage() {
               </AnimateOnScroll>
             ))}
           </div>
+
+          <AnimateOnScroll animation="fade-up" delay={200}>
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 mt-8 max-w-2xl mx-auto text-center">
+              <h3 className="font-semibold font-display text-slate-900 mb-3">Prefer email?</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Write to{' '}
+                <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700 font-medium">
+                  support@poofai.com
+                </a>{' '}
+                and we&apos;ll respond within 2 business days. For account, billing, or data requests, see our{' '}
+                <Link href="/support" className="text-gold-600 underline hover:text-gold-700">support page</Link>.
+              </p>
+              <p className="text-slate-500 text-sm mt-4">
+                Poof is a product of <span className="font-medium text-slate-700">Semple Labs LLC</span>.
+              </p>
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
