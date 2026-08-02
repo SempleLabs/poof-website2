@@ -93,7 +93,21 @@ export default function Hero() {
   }, [isTypingComplete, isPaused, goNext, activeIndex])
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-white pt-[5.5rem]">
+    <section id="software" className="relative flex flex-col items-center justify-center overflow-hidden bg-white py-16 scroll-mt-20">
+      <div className="text-center px-4 mb-4">
+        <p className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-3">
+          Prefer to run your own books?
+        </p>
+        <h2
+          className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3"
+          style={{ letterSpacing: '-0.02em' }}
+        >
+          Poof Professional — bookkeeping that does itself
+        </h2>
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          The same AI engine behind the managed service, self-serve. Every feature included, $29/mo.
+        </p>
+      </div>
       <div
         className={`relative w-full flex-1 flex flex-col items-center justify-center transition-opacity duration-700 ${
           mounted ? 'opacity-100' : 'opacity-0'
@@ -214,11 +228,11 @@ export default function Hero() {
 
       {/* Tagline */}
       <div className="relative z-10 text-center pb-6 pt-1 px-4">
-        <h1 className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed font-normal">
+        <p className="text-slate-600 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed font-normal">
           AI bookkeeping that does itself.
           <br />
           Minutes on your books, not hours.
-        </h1>
+        </p>
       </div>
     </section>
   )

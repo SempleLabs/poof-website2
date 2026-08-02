@@ -3,9 +3,18 @@ export function getOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Poof',
+    legalName: 'Semple Labs LLC',
     url: 'https://www.poofai.com',
     logo: 'https://www.poofai.com/poof-logo.png',
-    description: 'Bookkeeping that does itself. AI categorizes transactions, reconciles accounts, and closes your books — 69 features, 13 reports, $29/mo.',
+    email: 'support@poofai.com',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'support@poofai.com',
+      url: 'https://www.poofai.com/support',
+      availableLanguage: 'English',
+    },
+    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 78 features, 13 reports, $29/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -26,7 +35,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features including budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 78 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
@@ -96,7 +105,16 @@ export function getSoftwareApplicationSchema() {
       'Bank Statement PDF Import via AI Chat',
       'Guided Onboarding Walkthrough',
       'File Attachment Handling',
-      'AI Chat Folders & Multi-Session Conversations'
+      'AI Chat Folders & Multi-Session Conversations',
+      'Job Costing & Per-Job Profitability',
+      'AP Cash Planner',
+      'Period Close & Locking',
+      'AI Close Narrative',
+      'Monthly Financial Package',
+      'Books-Integrity Checks',
+      'Proactive Insights Engine',
+      'Online Invoice Payments (ACH & Card via Stripe)',
+      'Inbound Email Capture for Receipts & Bills'
     ]
   }
 }

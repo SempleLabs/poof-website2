@@ -11,6 +11,48 @@ export interface FeatureGroup {
 
 export const featureGroups: FeatureGroup[] = [
   {
+    name: "Job Costing, Month-End Close & Payments",
+    icon: "jobs",
+    features: [
+      {
+        title: "Job Costing & Per-Job Profitability",
+        description: "Tag transactions, bills, and invoices to jobs and see profit per job — know which jobs actually made money, every month"
+      },
+      {
+        title: "AP Cash Planner",
+        description: "Forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it"
+      },
+      {
+        title: "Period Close & Locking",
+        description: "Close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot"
+      },
+      {
+        title: "AI Close Narrative",
+        description: "A plain-English month-end summary of what moved and why, generated automatically with every close"
+      },
+      {
+        title: "Monthly Financial Package",
+        description: "One-click close package — P&L, balance sheet, cash flow, and variance — ready to review and send"
+      },
+      {
+        title: "Books-Integrity Checks",
+        description: "Automated general-ledger integrity sweep that flags imbalances and posting errors before they become problems"
+      },
+      {
+        title: "Proactive Insights Engine",
+        description: "Auto-detected issues and opportunities — margin dips, unusual spend, cash risks — surfaced without being asked"
+      },
+      {
+        title: "Accept Online Payments",
+        description: "Customers pay invoices by ACH or card via Stripe; payments reconcile to the ledger automatically"
+      },
+      {
+        title: "Inbound Email Capture",
+        description: "Forward receipts and bills to a dedicated Poof address; AI extracts the data and files them"
+      }
+    ]
+  },
+  {
     name: "AI-Powered Automation",
     icon: "ai",
     features: [
@@ -351,7 +393,17 @@ export interface FaqItem {
 export const faqData: FaqItem[] = [
   {
     question: "What is Poof?",
-    answer: "Poof is an AI-powered bookkeeping platform built for small businesses. It automates transaction categorization, invoicing, expense tracking, bank reconciliation, budgeting, cash flow forecasting, and financial reporting — so you spend less time on books and more time growing your business.",
+    answer: "Poof is AI-powered bookkeeping, offered two ways. Poof Managed for Trades is a done-for-you bookkeeping service for HVAC, plumbing, and electrical shops — AI agents categorize, reconcile, and job-cost the books, and a former controller reviews every monthly close, so owners see per-job profitability every month. Poof Professional is the same platform as self-serve software for any small business: it automates transaction categorization, invoicing, expense tracking, bank reconciliation, budgeting, cash flow forecasting, and financial reporting at a flat $29/mo.",
+    category: "General"
+  },
+  {
+    question: "What is Poof Managed for Trades?",
+    answer: "Poof Managed for Trades is a managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M in revenue. We build your books from the Jobber or Housecall Pro data you already have plus your bank feeds — AI agents do the categorization, reconciliation, and job costing, and a former controller reviews every monthly close. You get per-job profit with every close and a controller you can text or email. Plans start at $1,200/mo, with a $250 fully refundable 30-day pilot.",
+    category: "General"
+  },
+  {
+    question: "Do I have to use bookkeeping software myself on the managed service?",
+    answer: "No. On Poof Managed for Trades, Poof does the books for you — your team keeps using Jobber or Housecall Pro exactly as they do today, and the monthly close lands ready to read, with per-job P&L included. You can log in anytime to look around, but nothing about your month requires it. If you'd rather run your own books, the self-serve Poof Professional plan is $29/mo.",
     category: "General"
   },
   {
@@ -386,7 +438,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof starts at $14.50/month (all 69 features included) vs QuickBooks Simple Start at $38/month with tiered pricing.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof starts at $14.50/month (all 78 features included) vs QuickBooks Simple Start at $38/month with tiered pricing.",
     category: "Pricing & Plans"
   },
   {
@@ -446,7 +498,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "Poof is $29/mo for all 69 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "Poof is $29/mo for all 78 features — compared to QuickBooks Simple Start at $38/mo, Essentials at $65/mo, and Plus at $200/mo. Poof includes features that QuickBooks locks behind higher tiers: AI-powered budgeting, cash flow forecasting, receipt scanning, recurring invoices, auto-reconciliation, and a built-in AI assistant. Poof also offers a 50% launch discount ($14.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -481,7 +533,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 69 features — no credit card required to start. When your trial ends, you can subscribe at $29/month (or $14.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 78 features — no credit card required to start. When your trial ends, you can subscribe at $29/month (or $14.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

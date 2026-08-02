@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import AnimateOnScroll from './AnimateOnScroll'
 import VaporField from './ParticleField'
+import BookCallButton from './BookCallButton'
 
 export default function CtaSection() {
   return (
@@ -16,28 +17,27 @@ export default function CtaSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <AnimateOnScroll animation="fade-up">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6 pb-2 leading-[1.15]" style={{ letterSpacing: '-0.02em' }}>
-            Ready to Automate Your Bookkeeping?
+            Ready for books that tell you which jobs made money?
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up" delay={100}>
           <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-            Start your 30-day free trial, then get 50% off your first 3 months.
+            Book a 20-minute call about the managed service for trades — or start the self-serve free trial and run your own books.
           </p>
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="scale-up" delay={200}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link
-              href="https://app.poofai.com/register"
+            <BookCallButton
               className="glow-border shimmer-hover bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 text-lg"
             >
-              Start Your Free Trial →
-            </Link>
+              Book a 20-minute call
+            </BookCallButton>
             <Link
-              href="/demo"
+              href="https://app.poofai.com/register"
               className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:border-gold-500/50 hover:text-gold-400 transition-all duration-200 text-lg"
             >
-              Schedule a Demo
+              Start the Free Trial
             </Link>
           </div>
         </AnimateOnScroll>
@@ -45,8 +45,8 @@ export default function CtaSection() {
         <AnimateOnScroll animation="fade-up" delay={300}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-slate-300">
             {[
-              { label: '30-Day Free Trial', icon: '✦' },
-              { label: '5-Minute Setup', icon: '⚡' },
+              { label: 'Controller-Reviewed', icon: '✦' },
+              { label: '30-Day Refundable Pilot', icon: '⚡' },
               { label: 'Cancel Anytime', icon: '✓' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center">

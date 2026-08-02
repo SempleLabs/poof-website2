@@ -84,7 +84,7 @@ const plans = [
     name: 'Poof Managed for Trades',
     price: '$1,200',
     cadence: '/mo',
-    bestFor: '2–4 truck shops, $750K–$1.8M revenue',
+    bestFor: '2–4 truck shops, $750K–$1.5M revenue',
     features: [
       'All Poof Professional features included',
       'Per-job P&L with every monthly close',
@@ -100,7 +100,7 @@ const plans = [
     name: 'Poof Managed for Trades Plus',
     price: '$1,500',
     cadence: '/mo',
-    bestFor: '5–6 truck shops, $1.8M–$3M revenue',
+    bestFor: '5+ truck shops, $1.5M–$3M revenue',
     features: [
       'Everything in Managed for Trades',
       'Multi-location reporting',
@@ -152,7 +152,7 @@ const faqs = [
   },
   {
     q: 'How is this different from Workyard, Knowify, or ServiceTitan accounting?',
-    a: 'Those are field-service or construction tools that bolted on accounting. Poof is the opposite — accounting-first, with direct integrations into the field tools you already use. And none of them include a managed-service tier with controller review.',
+    a: 'Those are field-service or construction tools that bolted on accounting. Poof is the opposite — accounting-first, built to work with the field tools you already use: we bring your Jobber or Housecall Pro data into your books every month. And none of them include a managed-service tier with controller review.',
   },
 ]
 

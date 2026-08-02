@@ -28,9 +28,9 @@ const cabinet = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Poof — Bookkeeping That Does Itself | AI Bookkeeping for Small Business',
-  description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features, 13 reports, $29/mo. 30-day free trial.',
-  keywords: 'AI bookkeeping, automated accounting, small business bookkeeping, QuickBooks alternative, AI budgeting, cash flow forecasting, invoicing software, expense tracking, bank reconciliation, recurring invoices, bookkeeping that does itself',
+  title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
+  description: 'Poof Managed for Trades: AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping for any small business at $29/mo.',
+  keywords: 'hvac bookkeeping, plumbing bookkeeping, electrical contractor bookkeeping, bookkeeping for trades, job costing, per-job profitability, managed bookkeeping service, AI bookkeeping, small business bookkeeping, QuickBooks alternative, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   metadataBase: new URL('https://www.poofai.com'),
   manifest: '/manifest.webmanifest',
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     apple: '/favicon-192x192.png',
   },
   openGraph: {
-    title: 'Poof — Bookkeeping That Does Itself',
-    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features, 13 reports, $29/mo. 30-day free trial.',
+    title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
+    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $29/mo.',
     url: 'https://www.poofai.com',
     siteName: 'Poof',
     type: 'website',
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Poof — AI bookkeeping that does itself',
+        alt: 'Poof — managed bookkeeping for trade contractors',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Poof — Bookkeeping That Does Itself',
-    description: 'AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 69 features, 13 reports, $29/mo. 30-day free trial.',
+    title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
+    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $29/mo.',
     images: ['/og-image.png'],
   },
 }

@@ -60,10 +60,16 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5M5 5H19V19H5V5M7 7V9H17V7H7M7 11V13H14V11H7M7 15V17H17V15H7Z"/>
     </svg>
   ),
+  jobs: (
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V8A2,2 0 0,1 4,6H8V4A2,2 0 0,1 10,2M14,6V4H10V6H14Z"/>
+    </svg>
+  ),
 }
 
 // Short labels for tabs
 const tabLabels: Record<string, string> = {
+  'Job Costing, Month-End Close & Payments': 'Job Costing & Close',
   'AI-Powered Automation': 'AI Automation',
   'Invoicing & Payments': 'Invoicing',
   'Expense & Bill Management': 'Expenses',
@@ -99,7 +105,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
-        subtitle="69 features, one flat price — $29/mo for everything QuickBooks charges $38+ for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
+        subtitle="78 features, one flat price — $29/mo for everything QuickBooks charges $38+ for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"
@@ -294,7 +300,7 @@ export default function FeaturesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Try All 69 Features?
+              Ready to Try All 78 Features?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
               Start your 30-day free trial. All features included, starting at $14.50/month.

@@ -1,25 +1,33 @@
 # Poof
 
-> Poof is an AI-powered bookkeeping app for small businesses. It automates the tedious parts of bookkeeping — transaction categorization, reconciliation, invoicing, receipt scanning, budgeting, and cash flow forecasting — so business owners spend minutes on their books instead of hours. One-liner: "Bookkeeping that does itself."
+> Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops — built on an AI-powered bookkeeping platform. AI agents handle categorization, reconciliation, and job costing; a former controller reviews every monthly close. Shop owners get per-job profitability with every close, from the Jobber or Housecall Pro data they already have. One-liner (trades): "Know which jobs make money — every month, from a real controller."
 
-Poof is built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses. The product launched in June 2025 and now includes 69 features across 9 categories, 13 financial reports, and a built-in AI assistant with 30+ tools.
+Poof is built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses. The underlying platform is also available as self-serve software for any small business — 78 features across 10 categories, 13 financial reports, and a built-in AI assistant with 30+ tools. One-liner (self-serve): "Bookkeeping that does itself."
 
 Poof has two distinct offerings:
 
-1. **Poof Professional** — Self-serve SaaS at $29/mo ($14.50/mo launch special, $290/yr annual) for small businesses doing 1–50 employees and 100–10,000 monthly transactions. One plan, every feature included. 30-day free trial, no credit card required.
+1. **Poof Managed for Trades** (primary) — Managed bookkeeping for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue with 2–6 trucks. $1,200/mo (2–4 truck shops, $750K–$1.5M) or $1,500/mo (5+ truck shops, $1.5M–$3M). Per-job profitability with every monthly close. AI agents do the work; a former controller reviews every customer-facing decision, and you can text or email your controller directly. Jobber and Housecall Pro data is brought into your books from your monthly exports — no manual rekeying by you. $1,500 one-time onboarding (historical cleanup up to 18 months, QBO/Xero migration), $250 fully refundable 30-day pilot.
 
-2. **Poof Managed for Trades** — Managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue. $999/mo (2–4 truck shops) or $1,499/mo (5+ truck shops). Per-job profitability within 48 hours of job completion, monthly close in 24 hours. AI agents do the work, a former controller reviews every customer-facing decision. Direct Jobber and Housecall Pro integration — no manual rekeying. $1,500 one-time onboarding, $250 refundable 30-day pilot.
+2. **Poof Professional** (self-serve) — SaaS at $29/mo ($14.50/mo launch special for the first 3 months, $290/yr annual) for small businesses with 1–50 employees and 100–10,000 monthly transactions. One plan, every feature included. 30-day free trial, no credit card required.
 
 ## Core Pages
 
-- [Home](https://www.poofai.com): Hero, product overview, feature highlights, comparison to QuickBooks
-- [Features](https://www.poofai.com/features): All 69 features across 9 categories
+- [Home](https://www.poofai.com): Trades-first positioning, per-job P&L sample, managed-service overview, self-serve product tour
+- [For Trades](https://www.poofai.com/trades): Poof Managed for Trades — overview for all service contractor shops
+- [HVAC Bookkeeping](https://www.poofai.com/hvac): Managed bookkeeping for HVAC shops
+- [Plumbing Bookkeeping](https://www.poofai.com/plumbing): Managed bookkeeping for plumbing shops
+- [Electrical Bookkeeping](https://www.poofai.com/electrical): Managed bookkeeping for electrical shops
+- [Features](https://www.poofai.com/features): All 78 features across 10 categories
 - [Pricing](https://www.poofai.com/pricing): $29/mo Poof Professional plan, FAQs, launch special
 - [How It Works](https://www.poofai.com/how-it-works): Three-step setup and automation overview
 - [Poof vs QuickBooks](https://www.poofai.com/poof-vs-quickbooks): Side-by-side feature comparison with QuickBooks
 - [About](https://www.poofai.com/about): Founder story, mission, company timeline
 - [Security](https://www.poofai.com/security): Bank-grade security, SOC 2 audit logging, encryption, 2FA, RBAC
-- [FAQ](https://www.poofai.com/faq): Full FAQ on features, pricing, security, AI capabilities
+- [FAQ](https://www.poofai.com/faq): Full FAQ on the managed service, features, pricing, security, AI capabilities
+- [Support](https://www.poofai.com/support): Customer support — email support@poofai.com, response within 2 business days
+- [Contact](https://www.poofai.com/contact): Contact form and email
+
+Poof is a product of Semple Labs LLC, a United States limited liability company. Support and billing: support@poofai.com.
 
 ## Free Tools
 
@@ -28,7 +36,6 @@ Poof has two distinct offerings:
 
 ## Vertical Landing Pages
 
-- [HVAC, Plumbing & Electrical Shops](https://www.poofai.com/hvac): Poof Managed for Trades — managed service for service contractor shops
 - [Service Businesses](https://www.poofai.com/service-businesses): Agencies, consultants, and professional service businesses
 - [Freelancers](https://www.poofai.com/freelancers): Solo founders and freelancers
 - [Creators](https://www.poofai.com/creators): Content creators, YouTubers, podcasters
@@ -36,9 +43,25 @@ Poof has two distinct offerings:
 - [New LLC](https://www.poofai.com/new-llc): New LLC owners setting up bookkeeping from day one
 - [QuickBooks Alternative](https://www.poofai.com/quickbooks-alternative): For users frustrated with QuickBooks
 - [Spreadsheet Bookkeeping](https://www.poofai.com/spreadsheet-bookkeeping): For owners moving off spreadsheets
-- [Tax Season](https://www.poofai.com/tax-season): Tax season prep and bookkeeping checklist
+- [Tax Season](https://www.poofai.com/tax-season): Catch-up bookkeeping and tax-season prep
 
-## Key Features (69 total across 9 categories)
+## Blog
+
+- [HVAC Bookkeeping: The Complete Guide for Shop Owners](https://www.poofai.com/blog/hvac-bookkeeping-guide)
+- [Bookkeeping Cleanup Checklist: 9 Steps to Catch Up Your Books Before Tax Season](https://www.poofai.com/blog/tax-season-bookkeeping-checklist)
+- [How HVAC Shops Should Track Per-Job Profitability](https://www.poofai.com/blog/hvac-per-job-profitability)
+- [How to Set Up Bookkeeping for a New LLC: A Complete Guide](https://www.poofai.com/blog/how-to-set-up-bookkeeping-new-llc)
+- [How to Automate Your Small Business Bookkeeping (Step by Step)](https://www.poofai.com/blog/how-to-automate-small-business-bookkeeping)
+- [AI Bookkeeping for Small Business: What It Is, How It Works, and Why It Matters](https://www.poofai.com/blog/ai-bookkeeping-small-business)
+- [Do I Need a Bookkeeper, an Accountant, or Can AI Do It?](https://www.poofai.com/blog/do-i-need-bookkeeper-or-ai)
+- [Best QuickBooks Alternatives for Small Business in 2026](https://www.poofai.com/blog/best-quickbooks-alternatives-small-business)
+- [QuickBooks Too Expensive? 5 Things You Can Do Right Now](https://www.poofai.com/blog/quickbooks-too-expensive-alternatives)
+- [Ecommerce Bookkeeping: How to Handle Stripe, Shopify, and Marketplace Fees](https://www.poofai.com/blog/ecommerce-bookkeeping-stripe-shopify-fees)
+- [Free AI Bank Statement Analyzer: Get Your Spend Score in 60 Seconds](https://www.poofai.com/blog/free-ai-bank-statement-analyzer)
+
+## Key Features (78 total across 10 categories)
+
+**Job Costing, Month-End Close & Payments (9):** Job costing & per-job profitability (tag transactions, bills, and invoices to jobs; see profit per job — the trades headline feature), AP cash planner, period close & locking with immutable trial-balance snapshot, AI close narrative (plain-English month-end summary), monthly financial package (one-click close package: P&L, balance sheet, cash flow, variance), books-integrity checks, proactive insights engine (margin dips, unusual spend, cash risks), accept online payments (ACH or card via Stripe, auto-reconciled), inbound email capture (forward receipts and bills; AI extracts and files them).
 
 **AI-Powered Automation (9):** AI transaction categorization (BRAID engine), Poof AI assistant, AI chart of accounts generation, automated daily bookkeeping, AI recurring charge detection, receipt and invoice scanning (OCR with HEIC support), smart transaction matching, AI-guided onboarding, AI budget and forecast generation.
 
@@ -46,7 +69,7 @@ Poof has two distinct offerings:
 
 **Expense & Bill Management (5):** Expense tracking, mileage tracking, bill management, vendor management, transaction matching.
 
-**Banking & Reconciliation (6):** Bank connection via Plaid (12,000+ banks), bank statement import (CSV/PDF with GPT-4o Vision parsing), reconciliation, auto-reconciliation, deposits, multi-account support.
+**Banking & Reconciliation (6):** Bank connection via Plaid (12,000+ banks), bank statement import (CSV/PDF with AI vision parsing), reconciliation, auto-reconciliation, deposits, multi-account support.
 
 **Accounting & Reporting (8):** Double-entry accounting, 13 financial reports (P&L, Balance Sheet, Cash Flow, Trial Balance, General Ledger, Account Detail, AR/AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual), report drill-down, shareable report URLs, scheduled report delivery, financial import, accrual/cash basis toggle, recurring journal entry templates.
 
@@ -60,35 +83,37 @@ Poof has two distinct offerings:
 
 ## Key Numbers & Claims
 
-- 69 total features, all included in every plan (no tiers)
+- 78 total features, all included in every plan (no tiers)
 - 12,000+ bank connections via Plaid
 - 13 financial reports
 - 30+ AI assistant tools (create, update, search, send, generate, import)
 - 95% AI accuracy rate
-- 5-minute setup time
+- 5-minute setup time (self-serve)
 - 90% reduction in manual data entry
 - 5 team roles, 26 granular RBAC permissions
-- 30-day free trial, no credit card required
+- 30-day free trial, no credit card required (self-serve)
 - 12-month cash flow forecast horizon with confidence bands
 
 ## Pricing
 
-- **Monthly:** $29/mo, all 69 features included
+Poof Managed for Trades (HVAC, plumbing, electrical — primary offering):
+
+- **Managed for Trades:** $1,200/mo (2–4 truck shops, $750K–$1.5M revenue) — monthly close with per-job P&L, controller review, a controller you can text or email, monthly variance review
+- **Managed for Trades Plus:** $1,500/mo (5+ truck shops, $1.5M–$3M revenue) — everything above plus multi-location reporting, quarterly review call, priority response
+- **Onboarding (one-time):** $1,500 (historical cleanup up to 18 months, QBO/Xero migration, Jobber/Housecall Pro setup)
+- **Trade pilot:** $250, fully refundable (30-day full-service trial)
+
+Poof Professional (self-serve software):
+
+- **Monthly:** $29/mo, all 78 features included
 - **Monthly (launch special):** $14.50/mo (50% off first 3 months)
 - **Annual:** $290/year ($24.17/mo, save $58)
 - **Free trial:** 30 days, no credit card required
 - **Money-back guarantee:** 30 days
 
-Poof Managed for Trades (HVAC, plumbing, electrical):
-
-- **Managed for Trades:** $999/mo (2–4 truck shops, $750K–$1.5M revenue)
-- **Managed for Trades Plus:** $1,499/mo (5+ truck shops, $1.5M–$3M revenue)
-- **Onboarding (one-time):** $1,500 (historical cleanup up to 18 months)
-- **Trade pilot:** $250 refundable (30-day full-service trial)
-
 ## Founder
 
-Austin Semple — CEO and Founder. 10+ years of auditing and controller experience working with small businesses before founding Poof in June 2025 to solve the bookkeeping pain points he witnessed firsthand.
+Austin Semple — CEO and Founder. 10+ years of auditing and controller experience working with small service businesses before founding Poof in June 2025. In 2026, Poof focused its go-to-market on managed bookkeeping for trade contractors — the audience Austin knows best from his controller career.
 
 ## Optional
 

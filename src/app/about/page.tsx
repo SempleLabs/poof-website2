@@ -78,7 +78,7 @@ export default function AboutPage() {
     {
       year: "2026",
       title: "Reimagining Bookkeeping",
-      description: "Today, Poof includes 69 features — AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, and more. We're combining deep industry expertise with cutting-edge AI to make bookkeeping truly effortless."
+      description: "Today, Poof includes 78 features — job costing with per-job profitability, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 13 reports, and more. And we found our focus: managed bookkeeping for HVAC, plumbing, and electrical shops — AI agents do the work, and a former controller reviews every monthly close."
     }
   ]
 
@@ -275,6 +275,32 @@ export default function AboutPage() {
                   so they can focus on what truly matters &mdash; growing their dreams.
                 </p>
               </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Company Information */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <div className="bg-white border border-slate-200 rounded-2xl p-8">
+              <h2 className="text-2xl font-bold font-display text-slate-900 mb-4">Company Information</h2>
+              <p className="text-slate-600 leading-relaxed">
+                Poof is a product of <span className="font-semibold text-slate-900">Semple Labs LLC</span>, a United
+                States limited liability company founded by Austin Semple. Semple Labs LLC builds, operates, and
+                supports Poof.
+              </p>
+              <p className="text-slate-600 leading-relaxed mt-4">
+                For support, billing, or privacy questions, email{' '}
+                <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700">
+                  support@poofai.com
+                </a>
+                . We respond within 2 business days. You can also visit our{' '}
+                <Link href="/support" className="text-gold-600 underline hover:text-gold-700">support page</Link>
+                {' '}or{' '}
+                <Link href="/contact" className="text-gold-600 underline hover:text-gold-700">contact page</Link>.
+              </p>
             </div>
           </AnimateOnScroll>
         </div>

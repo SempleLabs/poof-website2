@@ -84,7 +84,7 @@ const plans = [
     name: 'Poof Managed for Trades',
     price: '$1,200',
     cadence: '/mo',
-    bestFor: '2–4 truck shops, $750K–$1.8M revenue',
+    bestFor: '2–4 truck shops, $750K–$1.5M revenue',
     features: [
       'All Poof Professional features included',
       'Per-job P&L with every monthly close',
@@ -100,7 +100,7 @@ const plans = [
     name: 'Poof Managed for Trades Plus',
     price: '$1,500',
     cadence: '/mo',
-    bestFor: '5–6 truck shops, $1.8M–$3M revenue',
+    bestFor: '5+ truck shops, $1.5M–$3M revenue',
     features: [
       'Everything in Managed for Trades',
       'Multi-location reporting',
