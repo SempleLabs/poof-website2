@@ -14,13 +14,14 @@ function getBlogSlugs(): { slug: string; date: string }[] {
       const { data } = matter(content)
       return {
         slug: file.replace('.mdx', ''),
-        date: data.date || new Date().toISOString(),
+        date: data.updated || data.date || new Date().toISOString(),
       }
     })
 }
 
 // Stable date so the sitemap doesn't report every page as "modified" on every deploy.
-const BUILD_DATE = new Date('2026-05-29')
+// Bump manually on deploys that meaningfully change page content.
+const BUILD_DATE = new Date('2026-08-01')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.poofai.com'
@@ -70,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/contact`,
+      lastModified: BUILD_DATE,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/support`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',
       priority: 0.7,

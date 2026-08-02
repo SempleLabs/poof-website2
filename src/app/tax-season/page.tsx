@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import LandingPageTemplate from '@/components/LandingPageTemplate'
 import IntakeForm from '@/components/IntakeForm'
@@ -74,7 +75,7 @@ const config = {
     { question: 'What documents will my CPA or tax preparer need from me?', answer: 'At minimum, a clean, properly categorized Profit & Loss statement, your reconciled bank and card activity for the year, and records of income like 1099s. The catch-up analysis assembles all of that into an accountant-ready package you can hand off — Poof gets the books ready, then you or your CPA files the return.' },
     { question: 'Do I need to issue 1099-NEC forms, and when are they due?', answer: 'Generally you must issue a 1099-NEC to any non-incorporated contractor or vendor you paid $600 or more for services during the year, and they\'re due to both the recipient and the IRS by January 31. As we clean up and categorize your year, we surface contractor and vendor payments so you can spot who likely needs one — though we don\'t file the forms for you.' },
     { question: 'What is the free financial analysis, and how do I get one?', answer: 'It\'s a complimentary, operational review of your year\'s numbers that scans for commonly missed deductions like home office, mileage, software, and equipment — not a CPA audit or tax filing. Apply using the form on this page; spots are limited, and once you share your statements we typically return your results in about 5 to 7 days.' },
-    { question: 'How much does Poof cost after the analysis, and is there a trial?', answer: 'Poof is $29/month flat for all 69 features — no tiers, no add-ons — with a launch special of $14.50/month for your first 3 months. There\'s a 30-day free trial with no credit card required, so you can keep your books clean automatically and never fall this far behind again.' },
+    { question: 'How much does Poof cost after the analysis, and is there a trial?', answer: 'Poof is $29/month flat for all 78 features — no tiers, no add-ons — with a launch special of $14.50/month for your first 3 months. There\'s a 30-day free trial with no credit card required, so you can keep your books clean automatically and never fall this far behind again.' },
   ],
   complianceNote: 'This is not a CPA audit, attestation, tax, or assurance service. It is an operational financial analysis designed to help business owners understand their numbers and identify improvement opportunities.',
 }
@@ -84,6 +85,27 @@ export default function TaxSeasonPage() {
     <main id="main-content" className="min-h-screen bg-white">
       <Header />
       <LandingPageTemplate config={config} />
+      <section className="py-12 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:flex sm:items-center sm:justify-between gap-6">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-gold-600 mb-2">Prefer to do it yourself?</div>
+              <h2 className="font-display text-xl font-bold text-slate-900 mb-1">
+                The 9-step bookkeeping cleanup checklist
+              </h2>
+              <p className="text-sm text-slate-600">
+                Reconcile, categorize, match receipts, issue 1099s, and get tax-ready — with honest estimates of how long it takes and what it costs.
+              </p>
+            </div>
+            <Link
+              href="/blog/tax-season-bookkeeping-checklist"
+              className="mt-4 sm:mt-0 inline-block flex-shrink-0 border-2 border-slate-300 text-slate-700 font-semibold px-6 py-3 rounded-lg hover:border-slate-900 hover:text-slate-900 transition-all duration-200"
+            >
+              Read the checklist →
+            </Link>
+          </div>
+        </div>
+      </section>
       <IntakeForm source="tax-season" />
       <Footer />
     </main>

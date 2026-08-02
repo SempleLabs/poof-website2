@@ -6,6 +6,7 @@ import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { getFaqPageSchema } from '@/lib/jsonLd'
 
 interface BlogPost {
   slug: string
@@ -14,8 +15,10 @@ interface BlogPost {
   category: string
   readTime: string
   date: string
+  updated?: string
   author: string
   content: string
+  faqs?: { question: string; answer: string }[]
 }
 
 interface PostMeta {
@@ -42,8 +45,10 @@ async function getPost(slug: string): Promise<BlogPost | null> {
       category: data.category,
       readTime: data.readTime,
       date: data.date,
+      updated: data.updated,
       author: data.author || 'Poof Team',
-      content
+      content,
+      faqs: data.faqs
     }
   } catch (error) {
     return null
@@ -99,6 +104,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url,
       siteName: 'Poof',
       publishedTime: post.date,
+      modifiedTime: post.updated || post.date,
       authors: [post.author],
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: post.title }],
     },
@@ -133,7 +139,7 @@ function getBlogPostingSchema(post: BlogPost, slug: string) {
       },
     },
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated || post.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': url,
@@ -337,6 +343,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(post, params.slug)) }}
       />
+      {post.faqs && post.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(post.faqs)) }}
+        />
+      )}
       <Header />
 
       <article className="pt-24 pb-16">
@@ -362,7 +374,16 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <div className="flex items-center text-slate-600 text-sm space-x-4">
             <span>{post.author}</span>
             <span>•</span>
-            <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
+            <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time>
+            {post.updated && (
+              <>
+                <span>•</span>
+                <span>
+                  Updated{' '}
+                  <time dateTime={post.updated}>{new Date(post.updated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time>
+                </span>
+              </>
+            )}
             <span>•</span>
             <span>{post.readTime}</span>
           </div>

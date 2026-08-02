@@ -112,7 +112,7 @@ export default function BlogIndexPage() {
                   </p>
                   <div className="mt-4 flex items-center text-xs text-slate-500 space-x-3">
                     <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                      {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
                     </time>
                     <span>•</span>
                     <span>{post.readTime}</span>
