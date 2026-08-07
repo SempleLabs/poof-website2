@@ -21,7 +21,7 @@ function getBlogSlugs(): { slug: string; date: string }[] {
 
 // Stable date so the sitemap doesn't report every page as "modified" on every deploy.
 // Bump manually on deploys that meaningfully change page content.
-const BUILD_DATE = new Date('2026-08-01')
+const BUILD_DATE = new Date('2026-08-06')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.poofai.com'
