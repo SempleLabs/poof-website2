@@ -39,6 +39,25 @@ const pains = [
   },
 ]
 
+const plumberBasics = [
+  {
+    title: 'High ticket volume',
+    body: 'A service shop closes 200 tickets in a month, not 20. Costing every one by hand is what kills job costing in most shops — large jobs get costed individually, small tickets roll up by category.',
+  },
+  {
+    title: 'Callbacks and warranty work',
+    body: 'A return trip nobody invoices leaves the original job showing margin it never earned. Callbacks need their own cost account, charged back to the job that caused them.',
+  },
+  {
+    title: 'Truck stock',
+    body: 'Fittings, valves, and water heaters leave the shelf without a purchase order. Untracked truck stock becomes a materials expense that can\'t be matched to any job.',
+  },
+  {
+    title: 'Service and construction are two businesses',
+    body: 'Service bills immediately and collects fast. New-construction and remodel work bills in draws with retainage held back. Blended into one P&L, both get hidden.',
+  },
+]
+
 const howItWorks = [
   {
     number: '1',
@@ -306,6 +325,42 @@ export default function PlumbingPage() {
               </AnimateOnScroll>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* What bookkeeping for plumbers covers */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">
+              What bookkeeping for plumbers has to handle
+            </h2>
+            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
+              Generic bookkeeping records what you spent. Bookkeeping for a plumbing business has to answer which
+              work made money — and four things in the trade make that harder than it sounds.
+            </p>
+          </AnimateOnScroll>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {plumberBasics.map((b, i) => (
+              <AnimateOnScroll key={b.title} animation="fade-up" delay={i * 100}>
+                <GlowCard className="bg-white border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
+                  <h3 className="font-semibold text-slate-900 mb-2 leading-snug">{b.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">{b.body}</p>
+                </GlowCard>
+              </AnimateOnScroll>
+            ))}
+          </div>
+
+          <AnimateOnScroll animation="fade-up">
+            <p className="text-center text-slate-600 mt-10">
+              For the full walkthrough — chart of accounts, job costing, retainage, and a monthly close routine —{' '}
+              <Link href="/blog/plumbing-bookkeeping-guide" className="text-violet-700 font-semibold hover:underline">
+                read the complete guide to plumbing bookkeeping
+              </Link>
+              .
+            </p>
+          </AnimateOnScroll>
         </div>
       </section>
 
