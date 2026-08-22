@@ -29,7 +29,7 @@ const cabinet = localFont({
 
 export const metadata: Metadata = {
   title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-  description: 'Poof Managed for Trades: AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping for any small business at $79/mo.',
+  description: 'Managed bookkeeping for HVAC, plumbing, and electrical shops. AI does the books, a former controller reviews every close. Per-job profit from $1,200/mo.',
   keywords: 'hvac bookkeeping, plumbing bookkeeping, electrical contractor bookkeeping, bookkeeping for trades, job costing, per-job profitability, managed bookkeeping service, AI bookkeeping, small business bookkeeping, QuickBooks alternative, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   metadataBase: new URL('https://www.poofai.com'),
