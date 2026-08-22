@@ -10,7 +10,7 @@ import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/j
 export const metadata: Metadata = {
   title: 'Bookkeeping for Trade Contractors | Poof Managed for Trades',
   description:
-    'A managed bookkeeping service for HVAC, plumbing, and electrical shops doing $750K–$3M. Per-job profit on every monthly close — know which jobs made money. AI-powered, controller-reviewed, built from your Jobber or Housecall Pro data.',
+    'Bookkeeping for HVAC, plumbing, and electrical shops doing $750K–$3M. Per-job profit on every monthly close, reviewed by a former controller. From $1,200/mo.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },

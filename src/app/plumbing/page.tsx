@@ -8,14 +8,14 @@ import BookCallButton from '@/components/BookCallButton'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Bookkeeping for Plumbing Shops | Poof Managed for Trades',
+  title: 'Plumbing Bookkeeping Services for Shop Owners | Poof',
   description:
-    'A managed bookkeeping service for plumbing shops doing $750K–$3M. Per-job profit on every monthly close — know which jobs made money. AI-powered, controller-reviewed, built from your Jobber or Housecall Pro data.',
+    'Plumbing bookkeeping for shops doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
   alternates: {
     canonical: 'https://www.poofai.com/plumbing',
   },
   openGraph: {
-    title: 'Poof Managed for Trades — Bookkeeping for Plumbing Shops',
+    title: 'Plumbing Bookkeeping Services for Shop Owners | Poof',
     description:
       'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for plumbing service shops.',
     url: 'https://www.poofai.com/plumbing',
@@ -224,13 +224,13 @@ export default function PlumbingPage() {
               className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
               style={{ letterSpacing: '-0.03em' }}
             >
-              Bookkeeping for plumbing shops. <span className="text-gradient-gold">Finally know which jobs actually made money.</span>
+              Plumbing bookkeeping, done for you. <span className="text-gradient-gold">Finally know which jobs actually made money.</span>
             </h1>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Built for shops doing $750K–$3M in revenue with 2–6 trucks. Powered by AI agents, reviewed by a former controller. Works with your existing Jobber or Housecall Pro.
+              Managed plumbing bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents do the books, a former controller reviews every close, and your Jobber or Housecall Pro data comes in without you rekeying it.
             </p>
           </AnimateOnScroll>
 
@@ -305,10 +305,10 @@ export default function PlumbingPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">
-              The pain you have today
+              Why plumbing bookkeeping breaks down as a shop grows
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              You didn&apos;t get into plumbing to chase down a part-time bookkeeper for last month&apos;s P&amp;L.
+              Plumbing bookkeeping decides whether your P&amp;L can answer a pricing question or only tell you what the bank did. And you didn&apos;t get into plumbing to chase a part-time bookkeeper for last month&apos;s numbers.
             </p>
           </AnimateOnScroll>
 
@@ -369,7 +369,7 @@ export default function PlumbingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-3">
-              How it works in 60 seconds
+              How Poof does your plumbing bookkeeping
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
               Connect, sync, review, deliver. The handoff into your books is the part we replace.
@@ -452,7 +452,7 @@ export default function PlumbingPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-3">
-              Pricing built for trade shops
+              What plumbing bookkeeping costs
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
               Replaces a part-time bookkeeper, and delivers detail they can&apos;t. No long-term contract.
@@ -556,7 +556,7 @@ export default function PlumbingPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-12">
-              Questions shop owners ask
+              Plumbing bookkeeping questions shop owners ask
             </h2>
           </AnimateOnScroll>
 

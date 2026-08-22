@@ -21,7 +21,7 @@ function getBlogSlugs(): { slug: string; date: string }[] {
 
 // Stable date so the sitemap doesn't report every page as "modified" on every deploy.
 // Bump manually on deploys that meaningfully change page content.
-const BUILD_DATE = new Date('2026-08-10')
+const BUILD_DATE = new Date('2026-08-22')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.poofai.com'
@@ -203,6 +203,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // Static guides served from /public and linked from /resources.
+  const guides: MetadataRoute.Sitemap = [
+    'expense-categorization-cheat-sheet',
+    'monthly-bookkeeping-checklist',
+    'small-business-bookkeeping-setup-guide',
+    'year-end-closing-procedures',
+  ].map(slug => ({
+    url: `${baseUrl}/guides/${slug}.html`,
+    lastModified: BUILD_DATE,
+    changeFrequency: 'yearly' as const,
+    priority: 0.4,
+  }))
+
   const blogPosts: MetadataRoute.Sitemap = getBlogSlugs().map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
@@ -210,5 +223,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...blogPosts]
+  return [...staticPages, ...guides, ...blogPosts]
 }

@@ -186,6 +186,20 @@ function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
       const isInternal = href.startsWith('/') || href.startsWith('https://www.poofai.com')
       if (isInternal) {
         const internalPath = href.replace('https://www.poofai.com', '') || '/'
+        // Files served from /public are not router routes; Link would client-navigate and 404.
+        const asset = internalPath.match(/\.([a-z0-9]{2,4})$/i)
+        if (asset) {
+          return (
+            <a
+              key={key}
+              href={internalPath}
+              {...(asset[1].toLowerCase() !== 'html' && { download: '' })}
+              className="text-gold-600 underline hover:text-gold-700"
+            >
+              {label}
+            </a>
+          )
+        }
         return (
           <Link key={key} href={internalPath} className="text-gold-600 underline hover:text-gold-700">
             {label}
@@ -395,6 +409,23 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             {formatContent(post.content)}
           </div>
         </div>
+
+        {/* Must stay rendered: the FAQPage JSON-LD above may not describe content a reader can't see. */}
+        {post.faqs && post.faqs.length > 0 && (
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+            <h2 className="text-2xl font-bold font-display text-slate-900 mb-6">
+              Frequently asked questions
+            </h2>
+            <div className="border-t border-slate-200 divide-y divide-slate-200">
+              {post.faqs.map((faq, i) => (
+                <div key={i} className="py-6">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-700 leading-relaxed">{renderInline(faq.answer, `faq-${i}`)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
