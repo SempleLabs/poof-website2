@@ -1,0 +1,59 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,Invoiced work not yet collected
+1150,Retainage receivable,Asset,Other Current Asset,"Earned but withheld until job closeout - keep out of ordinary AR so it does not read as collectible cash"
+1200,Inventory - truck stock,Asset,Other Current Asset,Fittings valves and copper on the trucks that has not been consumed on a job yet
+1300,Vehicles,Asset,Fixed Asset,Capitalize trucks - expensing one destroys the month and misstates every margin from it
+1310,Tools & equipment,Asset,Fixed Asset,Jetters sewer cameras locators press tools - durable equipment gets capitalized
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset - required for Section 179 and bonus depreciation elections
+2010,Accounts payable,Liability,Accounts Payable,Supply house and vendor invoices not yet paid
+2020,Credit cards,Liability,Credit Card,Cards used for fuel parts and small purchases
+2100,Equipment loans & vehicle notes,Liability,Long Term Liability,Financed trucks jetters and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withheld taxes and benefits owed but not remitted
+2300,Sales tax payable,Liability,Other Current Liability,Not your money - sits here until remitted
+2400,Deferred service agreement revenue,Liability,Other Current Liability,Agreements billed before the work is performed - confirm treatment with your CPA
+2500,Customer deposits,Liability,Other Current Liability,Money taken up front on repipes and construction work before any work is done
+3010,Owner's capital,Equity,Equity,Money put into the business
+3020,Owner's draw,Equity,Equity,Money taken out - keep separate from wages
+3900,Retained earnings,Equity,Equity,Accumulated prior-year profit
+4010,Service & repair revenue,Income,Income,Leak repair fixture repair general service calls
+4020,Drain & sewer revenue,Income,Income,Drain cleaning camera work hydro jetting sewer repair
+4030,Water heater & fixture install revenue,Income,Income,Tank and tankless swaps toilets faucets disposals
+4040,Repipe & major repair revenue,Income,Income,Whole-house repipes and slab leaks - different margin and duration from service
+4050,New construction & remodel revenue,Income,Income,Builder and remodel work - bills in draws collects slowly carries retainage
+4060,Emergency & after-hours revenue,Income,Income,"Premium-rate nights weekends holidays - usually your best margin, worth measuring"
+4070,Service agreement revenue,Income,Income,Recurring plan billings - your predictable baseline
+4080,Backflow testing & certification revenue,Income,Income,Recurring compliance work with its own margin profile
+4900,Other income,Income,Other Income,Rebates referral fees warranty reimbursements - not operating revenue
+5010,Materials - supply house,COGS,Cost of Goods Sold,Fittings valves pipe solder copper PEX from Ferguson Winsupply and the like
+5020,Fixtures & equipment,COGS,Cost of Goods Sold,"Water heaters toilets faucets pumps - large traceable items you mark up deliberately"
+5030,Truck stock consumed,COGS,Cost of Goods Sold,Parts pulled off the truck onto a job - moves inventory to COGS instead of vanishing
+5040,Direct labor - service (burdened),COGS,Cost of Goods Sold,"Wage plus payroll taxes comp and benefits, typically 1.3-1.4x base - belongs in COGS not opex"
+5050,Direct labor - after-hours (burdened),COGS,Cost of Goods Sold,Premium labor tracked separately so after-hours margin is measured not guessed
+5060,Direct labor - construction (burdened),COGS,Cost of Goods Sold,New construction and remodel labor - different pace and margin from service
+5070,Permits & inspections,COGS,Cost of Goods Sold,Directly attributable and routinely forgotten
+5080,Subcontractors,COGS,Cost of Goods Sold,Excavation concrete cutting electrical restoration
+5090,Equipment rental,COGS,Cost of Goods Sold,Excavators trenchers specialty tools rented per job
+5100,Callbacks & warranty,COGS,Cost of Goods Sold,"Return trips on work already invoiced - charge back to the original job or it stays wrong forever"
+5110,Freight & delivery,COGS,Cost of Goods Sold,Supply house delivery and drop-shipped fixtures
+5120,Disposal & dump fees,COGS,Cost of Goods Sold,Spoil haul-off old water heaters and fixtures - real per-job cost on demo work
+6010,Vehicles - fuel,Expense,Expense,Fuel for the fleet
+6020,Vehicles - maintenance & repairs,Expense,Expense,Service tires and repairs
+6030,Vehicles - registration & insurance,Expense,Expense,Registration plates and vehicle insurance
+6100,Insurance - general liability,Expense,Expense,GL coverage
+6110,Insurance - workers' compensation,Expense,Expense,The portion not already loaded into burdened labor - do not double count
+6120,Contractor bonding,Expense,Expense,License and performance bonds required in most states
+6200,Office rent & utilities,Expense,Expense,Shop and office occupancy cost
+6210,Dispatch & office salaries,Expense,Expense,Non-billable staff - stays out of COGS
+6220,Office supplies,Expense,Expense,General administrative supplies
+6300,Software & technology,Expense,Expense,Jobber or Housecall Pro accounting software phone system
+6400,Marketing & advertising,Expense,Expense,Ads truck wraps website review platforms
+6500,Professional fees - CPA & legal,Expense,Expense,Tax preparation lien filings and legal counsel
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping and controller services
+6600,Licensing & continuing education,Expense,Expense,Master and journeyman licensing state fees and training
+6610,Backflow certification & testing fees,Expense,Expense,Certification renewals and gauge calibration
+6700,Bank fees,Expense,Expense,Account and transaction fees
+6710,Merchant & financing fees,Expense,Expense,"Processor and consumer-financing dealer fees - several percent on repipes, keep visible"
+6800,Small tools & consumables,Expense,Expense,Blades bits torch gas and hand tools below your capitalization threshold
+6900,Depreciation,Expense,Expense,Non-cash but it belongs on the P&L
