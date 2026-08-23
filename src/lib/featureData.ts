@@ -7,6 +7,8 @@ export interface FeatureGroup {
   name: string
   icon: string
   features: Feature[]
+  /** Optional availability caveat rendered with the group (e.g. managed-service-only features) */
+  note?: string
 }
 
 export const featureGroups: FeatureGroup[] = [
@@ -49,6 +51,30 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Inbound Email Capture",
         description: "Forward receipts and bills to a dedicated Poof address; AI extracts the data and files them"
+      },
+      {
+        title: "Per-Job Labor Allocation",
+        description: "Spread technician labor cost across the jobs it was actually spent on, so a job's margin includes the hours — not just the materials"
+      },
+      {
+        title: "Financing Gross-Up",
+        description: "When a job is sold through dealer financing, the dealer fee is recognized as a cost of that job instead of quietly inflating its margin"
+      },
+      {
+        title: "Peer Benchmarks on the Per-Job P&L",
+        description: "See how a job's margin compares to similar jobs, with the outliers called out"
+      },
+      {
+        title: "Period Tie-Out Engine",
+        description: "A standing check dashboard that proves the period actually ties before it's closed — not after"
+      },
+      {
+        title: "Accrual Roll-Forward Subledger",
+        description: "Deposits, deferrals, and accrued items carried forward period to period with their own schedule"
+      },
+      {
+        title: "Document Playbooks",
+        description: "Forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected"
       }
     ]
   },
@@ -349,6 +375,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Role-Based Permissions (RBAC)",
         description: "26 granular permissions across financial, invoicing, customer management, and admin categories"
+      },
+      {
+        title: "Bot-Abuse Gate on Registration",
+        description: "A Cloudflare Turnstile challenge on public sign-up that stops scraped-address subscription bombing before it reaches your inbox"
+      },
+      {
+        title: "AI Privacy Chokepoint (Gateway)",
+        description: "Every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail. Runs automatically — nothing to configure"
       }
     ]
   },
@@ -382,6 +416,41 @@ export const featureGroups: FeatureGroup[] = [
       }
     ]
   },
+  {
+    name: "AI Receptionist & Dispatch",
+    icon: "phone",
+    note: "Installed by Poof as part of Poof Managed for Trades — our team provisions the number and the voice agent. It is not a switch you flip yourself. Outbound confirmations, reminders, and \u201con my way\u201d texts are not built yet, and the receptionist does not take payment on the call.",
+    features: [
+      {
+        title: "AI Phone Receptionist",
+        description: "Answers the shop's line, knows the shop's name, hours, and service area, understands the caller's problem, and books the job"
+      },
+      {
+        title: "Deterministic Safety Triage",
+        description: "Gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted \u201cleave the building, call 911\u201d response. No-heat below 45\u00b0F and no-cool above 95\u00b0F are emergencies too. These are rules in code, not instructions to a language model — the AI narrates the call, it never decides whether something is an emergency"
+      },
+      {
+        title: "Real-Calendar Booking",
+        description: "Availability is computed from your technicians, their weekly windows, and their time off, minus existing appointments — respecting drive-time buffer and skill match. The database refuses overlapping bookings outright, so two calls arriving at once can't double-book a tech"
+      },
+      {
+        title: "Rule-Based Human Escalation",
+        description: "A safety trigger, an after-hours emergency, no slot inside the urgency window, a caller who asks for a person, a repeat caller within 24 hours, a cancellation threat, or low agent confidence all hand the call to a human"
+      },
+      {
+        title: "Multi-Channel Notifications",
+        description: "One event fans out to the channels you configure — SMS, email, push, Slack, Telegram, or a webhook — with every delivery attempt logged"
+      },
+      {
+        title: "Dispatch Board, Call Log & Technician Management",
+        description: "See the day's board, every call with its transcript, outcome, duration, and cost, and manage who can be dispatched"
+      },
+      {
+        title: "Receptionist Settings",
+        description: "Greeting, hours, timezone, service area, urgency SLA windows, booking rules, and notification channels — all configurable for your shop"
+      }
+    ]
+  },
 ]
 
 export interface FaqItem {
@@ -398,7 +467,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What is Poof Managed for Trades?",
-    answer: "Poof Managed for Trades is a managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M in revenue. We build your books from the Jobber or Housecall Pro data you already have plus your bank feeds — AI agents do the categorization, reconciliation, and job costing, and a former controller reviews every monthly close. You get per-job profit with every close and a controller you can text or email. Plans start at $1,200/mo, with a $250 fully refundable 30-day pilot.",
+    answer: "Poof Managed for Trades is a managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M in revenue. We build your books from the Jobber or Housecall Pro data you already have plus your bank feeds — AI agents do the categorization, reconciliation, and job costing, and a former controller reviews every monthly close. You get per-job profit with every close and a controller you can text or email. Plans start at $1,200/mo. Most shops start with the $750 Job Margin & Recovery Audit — a paid one-week diagnostic that hands you a dollar number in five days and credits against onboarding if you sign within 30 days.",
     category: "General"
   },
   {
@@ -438,7 +507,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof starts at $39.50/month (all 78 features included) vs QuickBooks Simple Start at $38/month with tiered pricing.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 93 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -478,12 +547,12 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the best bookkeeping app for freelancers?",
-    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 13 financial reports including P&L and cash flow statements. It's $79/mo with everything included (no tiers) — while QuickBooks locks project profitability, budgets, and comprehensive reporting behind its $115/mo Plus plan.",
+    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 13 financial reports including P&L and cash flow statements. It's $79/mo with everything included (no tiers) — while QuickBooks locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
     category: "General"
   },
   {
     question: "Do I need QuickBooks for my small business?",
-    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks starts at $38/mo with tiered pricing that locks features behind $75 and $115/mo plans. Alternatives like Poof offer AI-powered automation (transaction categorization, receipt scanning, recurring charge detection, budgeting) at $79/mo with every feature included in one plan. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler.",
+    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks starts at $38/mo with tiered pricing that locks features behind its $85/mo Essentials and $140/mo Plus plans (Intuit raised prices on August 1, 2026). Alternatives like Poof offer AI-powered automation (transaction categorization, receipt scanning, recurring charge detection, budgeting) at $79/mo with every feature included in one plan. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler.",
     category: "Pricing & Plans"
   },
   {
@@ -498,7 +567,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature: QuickBooks charges $38/mo for Simple Start, $75/mo for Essentials, and $115/mo for Plus — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 78 features in one plan, including what QuickBooks reserves for Plus, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 93 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -533,7 +602,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 78 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 93 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

@@ -8,7 +8,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Poof vs QuickBooks — AI Bookkeeping Comparison | Poof',
-  description: 'Compare Poof and QuickBooks side by side. AI budgeting, cash flow forecasting, recurring invoices, auto-reconciliation, and 19 differentiators that set Poof apart.',
+  description: 'Compare Poof and QuickBooks side by side. Poof is $79/mo flat vs $140/mo for QuickBooks Plus — with AI budgeting, cash flow forecasting, job costing, and auto-reconciliation QuickBooks doesn\'t offer at any tier.',
   keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping, AI budgeting, cash flow forecasting',
   alternates: {
     canonical: 'https://www.poofai.com/poof-vs-quickbooks',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Poof vs QuickBooks — AI Bookkeeping Comparison',
     description:
-      'Compare Poof and QuickBooks side by side: AI budgeting, cash flow forecasting, auto-reconciliation, and 19 differentiators that set Poof apart.',
+      'Compare Poof and QuickBooks side by side: $79/mo flat vs $140/mo QuickBooks Plus, with AI budgeting, cash flow forecasting, job costing, and auto-reconciliation.',
     url: 'https://www.poofai.com/poof-vs-quickbooks',
     siteName: 'Poof',
     type: 'website',
@@ -75,6 +75,15 @@ const comparisonData = [
     { name: 'AI Chat Folders & Multi-Session Conversations', poof: true, quickbooks: false },
     { name: 'Simple, Flat Pricing (from $39.50/mo)', poof: true, quickbooks: false },
   ]},
+  { category: 'Job Costing & Close', features: [
+    { name: 'Job Costing & Per-Job Profitability', poof: true, quickbooks: true },
+    { name: 'Per-Job Labor Allocation', poof: true, quickbooks: false },
+    { name: 'Financing Gross-Up (Dealer Fees Costed to the Job)', poof: true, quickbooks: false },
+    { name: 'Peer Benchmarks on the Per-Job P&L', poof: true, quickbooks: false },
+    { name: 'Period Close & Locking with Tie-Out Checks', poof: true, quickbooks: false },
+    { name: 'AI Close Narrative', poof: true, quickbooks: false },
+    { name: 'AI Phone Receptionist + Dispatch (managed service)', poof: true, quickbooks: false },
+  ]},
 ]
 
 const PoofCheck = () => (
@@ -102,7 +111,7 @@ export default function PoofVsQuickbooksPage() {
 
       <PageHero
         title={<><span className="text-gradient-gold">Poof</span> vs QuickBooks</>}
-        subtitle="Both platforms handle core bookkeeping. Poof adds AI automation and is built specifically for small businesses — starting at $39.50/month with no feature tiers."
+        subtitle="Both platforms handle core bookkeeping. Poof is one plan at $79/mo — 44% less than the $140/mo QuickBooks Plus tier that carries job costing and budgets — with AI automation QuickBooks doesn't offer at any tier."
       />
 
       {/* Pricing Comparison */}
@@ -119,7 +128,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 78 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 93 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -129,18 +138,52 @@ export default function PoofVsQuickbooksPage() {
 
             <AnimateOnScroll animation="fade-up" delay={150}>
               <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full shadow-sm">
-                <h3 className="text-2xl font-bold font-display text-slate-900 mb-2">QuickBooks Simple Start</h3>
-                <div className="text-4xl font-bold text-slate-700 mb-1">$38+<span className="text-lg text-slate-500">/mo</span></div>
-                <p className="text-slate-600 mb-6">Base plan. Advanced features cost more.</p>
+                <h3 className="text-2xl font-bold font-display text-slate-900 mb-2">QuickBooks Plus</h3>
+                <div className="text-4xl font-bold text-slate-700 mb-1">$140<span className="text-lg text-slate-500">/mo</span></div>
+                <p className="text-slate-600 mb-6">The tier that carries job costing and budgets. Up 22% on August 1, 2026 &mdash; from $115.</p>
                 <ul className="space-y-3 text-slate-700">
-                  <li className="flex items-center gap-2"><QBCheck /> Core bookkeeping features</li>
+                  <li className="flex items-center gap-2"><QBCheck /> Core bookkeeping + project tracking</li>
                   <li className="flex items-center gap-2"><Cross /> No built-in AI assistant</li>
-                  <li className="flex items-center gap-2"><Cross /> No team roles or audit logs</li>
-                  <li className="flex items-center gap-2"><Cross /> Complex, tiered pricing</li>
+                  <li className="flex items-center gap-2"><Cross /> No AI budgeting or cash flow forecasting</li>
+                  <li className="flex items-center gap-2"><Cross /> Team roles and audit logs need Advanced ($340/mo)</li>
                 </ul>
               </div>
             </AnimateOnScroll>
           </div>
+
+          {/* Why Plus, not Simple Start */}
+          <AnimateOnScroll animation="fade-up">
+            <div className="mb-16 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+              <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
+                Why we compare against Plus, not Simple Start
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                QuickBooks Simple Start is $38/mo, and it is the number every comparison page reaches for. But it is
+                single-user, with no team roles, no budgets, and a fraction of the reporting &mdash; a business that
+                needs what Poof does can&apos;t run on it. Plus, at $140/mo, is the tier that actually matches this
+                feature set. That is the honest comparison, and it is the one where the numbers favor Poof:
+              </p>
+              <ul className="space-y-2 text-slate-700 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>$79 flat vs $140.</strong> Poof is 44% cheaper &mdash; and adds the AI assistant, budgeting,
+                  forecasting, and per-job labor allocation that Plus doesn&apos;t have at any price.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>Roles and audit logging are Advanced-tier at QuickBooks.</strong> Poof&apos;s 5 roles,
+                  26 granular permissions, and SOC 2 audit logging with PII masking are included &mdash; QuickBooks puts
+                  that class of capability on its $340/mo plan.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>Intuit raised prices on August 1, 2026.</strong> Plus went from $115 to $140 (+22%) and
+                  Advanced from $275 to $340 (+24%), with no new capability attached. Poof is $79, flat, everything
+                  included.</span>
+                </li>
+              </ul>
+            </div>
+          </AnimateOnScroll>
 
           {/* Detailed Comparison Table */}
           <AnimateOnScroll animation="fade-up">
@@ -187,7 +230,7 @@ export default function PoofVsQuickbooksPage() {
           </AnimateOnScroll>
 
           <p className="text-sm text-slate-500 text-center mt-6">
-            Comparison based on QuickBooks Simple Start plan as of February 2026. Features and pricing may vary.
+            Compared against QuickBooks Online Plus at $140/mo &mdash; the plan that matches Poof&apos;s capability set. QuickBooks list prices as of August 2026, following Intuit&apos;s August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340. Features and pricing may vary; re-check before relying on these figures.
           </p>
         </div>
       </section>
@@ -202,7 +245,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. All 78 features included.
+              See the difference AI bookkeeping makes. One plan, 93 features, no tier to grow into.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -65,6 +65,11 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V8A2,2 0 0,1 4,6H8V4A2,2 0 0,1 10,2M14,6V4H10V6H14Z"/>
     </svg>
   ),
+  phone: (
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+    </svg>
+  ),
 }
 
 // Short labels for tabs
@@ -79,6 +84,7 @@ const tabLabels: Record<string, string> = {
   'Team & Security': 'Security',
   'Productivity & Workflow': 'Productivity',
   'Poof AI Capabilities': 'Poof AI',
+  'AI Receptionist & Dispatch': 'Receptionist',
 }
 
 export default function FeaturesPage() {
@@ -105,7 +111,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
-        subtitle="78 features, one flat price — $79/mo for everything QuickBooks Plus charges $115 for. AI-powered categorization, budgeting, forecasting, invoicing, and 13 reports — all included."
+        subtitle="93 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"
@@ -170,6 +176,14 @@ export default function FeaturesPage() {
                   <p className="text-slate-500 text-sm mt-1">{activeGroup.features.length} features</p>
                 </div>
               </div>
+              {activeGroup.note && (
+                <div className="mb-8 rounded-xl border border-violet-200 bg-violet-50 px-5 py-4">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-violet-700 mb-1">
+                    Availability
+                  </div>
+                  <p className="text-sm text-slate-700 leading-relaxed">{activeGroup.note}</p>
+                </div>
+              )}
             </AnimateOnScroll>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -300,10 +314,10 @@ export default function FeaturesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Try All 78 Features?
+              Ready to Put Poof to Work?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              Start your 30-day free trial. All features included, starting at $39.50/month.
+              Start your 30-day free trial — no credit card required. One plan, every self-serve feature, $79/mo after your first 3 months at $39.50.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

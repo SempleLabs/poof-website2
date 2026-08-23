@@ -64,7 +64,7 @@ export default function ComparisonSection() {
             <span className="text-gradient-gold"> Nothing You Don&apos;t.</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            $79/mo for everything QuickBooks Plus charges $115 for — with AI that does the work, not just gives you tools.
+            One price, every feature — $79/mo flat, versus $140/mo for the QuickBooks Plus tier that carries job costing and budgets. And Poof's AI does the work, instead of handing you more tools.
           </p>
         </AnimateOnScroll>
 
@@ -83,7 +83,7 @@ export default function ComparisonSection() {
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">QuickBooks</div>
-                    <div className="text-xs text-slate-500">$38+/mo</div>
+                    <div className="text-xs text-slate-500">$140/mo Plus</div>
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">Xero</div>
@@ -121,7 +121,7 @@ export default function ComparisonSection() {
         </AnimateOnScroll>
 
         <p className="text-sm text-slate-500 text-center mt-6">
-          Comparison based on each platform&apos;s base plan as of February 2026. Features and pricing may vary.
+          QuickBooks is shown at the Plus tier ($140/mo) — the plan that carries job costing, budgets, and full reporting, and the honest match for Poof&apos;s feature set. Simple Start ($38/mo) is single-user and can&apos;t do this work. Xero and FreshBooks are shown at their entry prices. QuickBooks pricing verified August 2026, after Intuit&apos;s August 1 increase; features and pricing may vary.
         </p>
       </div>
     </section>

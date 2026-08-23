@@ -57,8 +57,11 @@ export default function HomeTradesSection() {
             <p className="font-display text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
               Per-job profit on every monthly close. From $1,200/mo.
             </p>
-            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              AI does the work. A controller you can text reviews every close. Cheaper than QBO + a part-time bookkeeper + the manual handoff — with detail they can&apos;t deliver.
+            <p className="text-slate-300 mb-4 max-w-2xl mx-auto">
+              AI does the work. A controller you can text reviews every close. Books closed by the 15th business day, every completed job costed within 5 business days, and an unbilled-work report every Friday.
+            </p>
+            <p className="text-slate-400 text-sm mb-6 max-w-2xl mx-auto">
+              Most shops start with the <span className="text-violet-300 font-semibold">$750 Job Margin &amp; Recovery Audit</span> — one week, and you get a dollar figure for the margin you&apos;re leaving on the table. It credits against onboarding if you sign.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <BookCallButton className="inline-block bg-gold-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-gold-700 shadow-gold transition-all duration-200">

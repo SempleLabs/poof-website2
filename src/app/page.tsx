@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import TradesHero from '@/components/TradesHero'
 import HomeTradesSection from '@/components/HomeTradesSection'
+import ReceptionistSection from '@/components/ReceptionistSection'
 import Hero from '@/components/Hero'
 import SpendScoreBar from '@/components/SpendScoreBar'
 import WhoPoofIsFor from '@/components/WhoPoofIsFor'
@@ -46,6 +47,7 @@ export default function Home() {
       <Header />
       <TradesHero />
       <HomeTradesSection />
+      <ReceptionistSection />
       <Hero />
       <WhoPoofIsFor />
       <SpendScoreBar />

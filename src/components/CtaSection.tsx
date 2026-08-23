@@ -46,7 +46,7 @@ export default function CtaSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-slate-300">
             {[
               { label: 'Controller-Reviewed', icon: '✦' },
-              { label: '30-Day Refundable Pilot', icon: '⚡' },
+              { label: 'Books Closed by the 15th', icon: '⚡' },
               { label: 'Cancel Anytime', icon: '✓' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center">

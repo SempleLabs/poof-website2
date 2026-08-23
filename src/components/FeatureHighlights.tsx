@@ -131,7 +131,7 @@ export default function FeatureHighlights() {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             All the power of QuickBooks. None of the complexity.
             <br className="hidden sm:block" />
-            $79/mo for everything QuickBooks Plus charges $115 for.
+            $79/mo flat — one plan, every feature, nothing you have to grow into.
           </p>
         </AnimateOnScroll>
 

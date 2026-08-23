@@ -2,11 +2,11 @@
 
 > Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops — built on an AI-powered bookkeeping platform. AI agents handle categorization, reconciliation, and job costing; a former controller reviews every monthly close. Shop owners get per-job profitability with every close, from the Jobber or Housecall Pro data they already have. One-liner (trades): "Know which jobs make money — every month, from a real controller."
 
-Poof is built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses. The underlying platform is also available as self-serve software for any small business — 78 features across 10 categories, 13 financial reports, and a built-in AI assistant with 30+ tools. One-liner (self-serve): "Bookkeeping that does itself."
+Poof is built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses. Managed customers can also have Poof answer the shop's phone: an AI receptionist triages the call, books a real slot on a real tech's calendar, and escalates anything unsafe to a human. The underlying platform is also available as self-serve software for any small business — 93 features across 11 categories, 13 financial reports, and a built-in AI assistant with 30+ tools. One-liner (self-serve): "Bookkeeping that does itself."
 
 Poof has two distinct offerings:
 
-1. **Poof Managed for Trades** (primary) — Managed bookkeeping for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue with 2–6 trucks. $1,200/mo (2–4 truck shops, $750K–$1.5M) or $1,500/mo (5+ truck shops, $1.5M–$3M). Per-job profitability with every monthly close. AI agents do the work; a former controller reviews every customer-facing decision, and you can text or email your controller directly. Jobber and Housecall Pro data is brought into your books from your monthly exports — no manual rekeying by you. $1,500 one-time onboarding (historical cleanup up to 18 months, QBO/Xero migration), $250 fully refundable 30-day pilot.
+1. **Poof Managed for Trades** (primary) — Managed bookkeeping for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue with 2–6 trucks. $1,200/mo (2–4 truck shops, $750K–$1.5M) or $1,500/mo (5+ truck shops, $1.5M–$3M). Per-job profitability with every monthly close. AI agents do the work; a former controller reviews every customer-facing decision, and you can text or email your controller directly. Jobber and Housecall Pro data is brought into your books from your monthly exports — no manual rekeying by you. $1,500 one-time onboarding (historical cleanup up to 18 months, QBO/Xero migration). Most shops start with the $750 Job Margin & Recovery Audit — a paid one-week diagnostic that returns a dollar figure in five days and credits in full against onboarding if they sign within 30 days. Service commitments: books closed by the 15th business day every month, every completed job costed within 5 business days, an unbilled-work report every Friday, and a controller who responds within 1 business day. Shops above $3M revenue are handled by Poof Managed for Trades Pro at $2,400/mo, scoped per shop and sold on exception.
 
 2. **Poof Professional** (self-serve) — SaaS at $79/mo ($39.50/mo launch special for the first 3 months, $790/yr annual) for small businesses with 1–50 employees and 100–10,000 monthly transactions. One plan, every feature included. 30-day free trial, no credit card required.
 
@@ -17,7 +17,7 @@ Poof has two distinct offerings:
 - [HVAC Bookkeeping](https://www.poofai.com/hvac): Managed bookkeeping for HVAC shops
 - [Plumbing Bookkeeping](https://www.poofai.com/plumbing): Managed bookkeeping for plumbing shops
 - [Electrical Bookkeeping](https://www.poofai.com/electrical): Managed bookkeeping for electrical shops
-- [Features](https://www.poofai.com/features): All 78 features across 10 categories
+- [Features](https://www.poofai.com/features): All 93 features across 11 categories
 - [Pricing](https://www.poofai.com/pricing): $79/mo Poof Professional plan, FAQs, launch special
 - [How It Works](https://www.poofai.com/how-it-works): Three-step setup and automation overview
 - [Poof vs QuickBooks](https://www.poofai.com/poof-vs-quickbooks): Side-by-side feature comparison with QuickBooks
@@ -60,10 +60,11 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 - [QuickBooks Too Expensive? 5 Things You Can Do Right Now](https://www.poofai.com/blog/quickbooks-too-expensive-alternatives)
 - [Ecommerce Bookkeeping: How to Handle Stripe, Shopify, and Marketplace Fees](https://www.poofai.com/blog/ecommerce-bookkeeping-stripe-shopify-fees)
 - [Free AI Bank Statement Analyzer: Get Your Spend Score in 60 Seconds](https://www.poofai.com/blog/free-ai-bank-statement-analyzer)
+- [Plumbing Chart of Accounts: A Complete Template for Shop Owners](https://www.poofai.com/blog/plumbing-chart-of-accounts)
 
-## Key Features (78 total across 10 categories)
+## Key Features (93 total across 11 categories)
 
-**Job Costing, Month-End Close & Payments (9):** Job costing & per-job profitability (tag transactions, bills, and invoices to jobs; see profit per job — the trades headline feature), AP cash planner, period close & locking with immutable trial-balance snapshot, AI close narrative (plain-English month-end summary), monthly financial package (one-click close package: P&L, balance sheet, cash flow, variance), books-integrity checks, proactive insights engine (margin dips, unusual spend, cash risks), accept online payments (ACH or card via Stripe, auto-reconciled), inbound email capture (forward receipts and bills; AI extracts and files them).
+**Job Costing, Month-End Close & Payments (15):** Job costing & per-job profitability (tag transactions, bills, and invoices to jobs; see profit per job — the trades headline feature), AP cash planner, period close & locking with immutable trial-balance snapshot, AI close narrative (plain-English month-end summary), monthly financial package (one-click close package: P&L, balance sheet, cash flow, variance), books-integrity checks, proactive insights engine (margin dips, unusual spend, cash risks), accept online payments (ACH or card via Stripe, auto-reconciled), inbound email capture (forward receipts and bills; AI extracts and files them), per-job labor allocation (technician hours land on the jobs they were spent on), financing gross-up (dealer fees recognized as a cost of the job), peer benchmarks on the per-job P&L, period tie-out engine, accrual roll-forward subledger, document playbooks (per-sender handling learned from corrections).
 
 **AI-Powered Automation (9):** AI transaction categorization (BRAID engine), Poof AI assistant, AI chart of accounts generation, automated daily bookkeeping, AI recurring charge detection, receipt and invoice scanning (OCR with HEIC support), smart transaction matching, AI-guided onboarding, AI budget and forecast generation.
 
@@ -77,7 +78,9 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 
 **Budgeting & Forecasting (5):** Budget creation (manual or AI-generated), budget lifecycle management, variance dashboard, 12-month cash flow forecasting with confidence bands, budget alerts.
 
-**Team & Security (7):** Team management with 5 roles, two-factor authentication, SOC 2 audit logs with PII masking, session management, GDPR/CCPA-compliant account deletion, email verification, RBAC with 26 granular permissions.
+**Team & Security (9):** Team management with 5 roles, two-factor authentication, SOC 2 audit logs with PII masking, session management, GDPR/CCPA-compliant account deletion, email verification, RBAC with 26 granular permissions, bot-abuse gate on registration (Cloudflare Turnstile), AI privacy chokepoint — every model call is PII-redacted before it leaves the process, routed to its configured destination, and logged with destination, model, redaction count, and token usage.
+
+**AI Receptionist & Dispatch (7):** AI phone receptionist (answers the shop's line, knows its name, hours, and service area, and books the job), deterministic safety triage (gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger immediate emergency escalation and a scripted "leave the building, call 911" response; no-heat below 45°F and no-cool above 95°F are emergencies too — these are rules in code, not instructions to a language model), real-calendar booking (availability computed from technicians, weekly windows, and time off, minus existing appointments, respecting drive-time buffer and skill match; the database refuses overlapping bookings), rule-based human escalation, multi-channel notifications (SMS, email, push, Slack, Telegram, webhook), dispatch board with call log and technician management, receptionist settings. This group is operator-installed as part of Poof Managed for Trades — Poof staff provision the number and the voice agent; it is not self-serve. Outbound confirmations, reminders, and "on my way" texts are not built. It does not take payment on the call, optimize routes, or clone voices, and there are no outbound sales calls.
 
 **Productivity & Workflow (6):** Personalized dashboard with AI daily briefing, global search, notification center, transaction approval workflows, command bar (Cmd+K), AI chat folders with drag-and-drop organization.
 
@@ -85,7 +88,9 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 
 ## Key Numbers & Claims
 
-- 78 total features, all included in every plan (no tiers)
+- 93 total features, all included in every plan (no tiers)
+- 6 receptionist notification channels (SMS, email, push, Slack, Telegram, webhook)
+- Managed SLAs: books closed by the 15th business day, every completed job costed within 5 business days, unbilled-work report every Friday, controller responds within 1 business day
 - 12,000+ bank connections via Plaid
 - 13 financial reports
 - 30+ AI assistant tools (create, update, search, send, generate, import)
@@ -102,14 +107,16 @@ Poof Managed for Trades (HVAC, plumbing, electrical — primary offering):
 
 - **Managed for Trades:** $1,200/mo (2–4 truck shops, $750K–$1.5M revenue) — monthly close with per-job P&L, controller review, a controller you can text or email, monthly variance review
 - **Managed for Trades Plus:** $1,500/mo (5+ truck shops, $1.5M–$3M revenue) — everything above plus multi-location reporting, quarterly review call, priority response
+- **Managed for Trades Pro:** $2,400/mo, for shops above $3M revenue — above the core target range, scoped per shop, sold on exception
 - **Onboarding (one-time):** $1,500 (historical cleanup up to 18 months, QBO/Xero migration, Jobber/Housecall Pro setup)
-- **Trade pilot:** $250, fully refundable (30-day full-service trial)
+- **Job Margin & Recovery Audit:** $750, paid, one week — the usual entry point. A diagnostic that returns a dollar figure in five days and credits in full against onboarding if the shop signs within 30 days. Not refundable and not discounted.
 
 Poof Professional (self-serve software):
 
-- **Monthly:** $79/mo, all 78 features included
+- **Monthly:** $79/mo, all 93 features included
 - **Monthly (launch special):** $39.50/mo (50% off first 3 months)
 - **Annual:** $790/year ($65.83/mo, save $158)
+- Comparison anchor: the fair QuickBooks Online comparison is Plus at $140/mo — the tier carrying job costing, budgets, and full reporting — not Simple Start at $38/mo, which is single-user. Against Plus, Poof is 44% cheaper. QuickBooks list prices verified August 2026 after Intuit's August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340.
 - **Free trial:** 30 days, no credit card required
 - **Money-back guarantee:** 30 days
 

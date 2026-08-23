@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'QuickBooks Alternative for Small Business | Poof',
-    description: 'Same power, fraction of the cost, none of the complexity. See why small businesses are switching from QuickBooks to Poof.',
+    description: 'Same power, one flat price, none of the complexity. See why small businesses are switching from QuickBooks to Poof.',
     url: 'https://www.poofai.com/quickbooks-alternative',
     siteName: 'Poof',
     type: 'website',
@@ -71,7 +71,7 @@ const config = {
   faqs: [
     { question: 'Can I move my QuickBooks Online history into Poof without losing my past transactions?', answer: 'Yes. The transition plan walks you through exporting your existing transaction history so it comes with you, rather than starting from a blank slate. You keep your record of where your business has been.' },
     { question: 'Can I run QuickBooks and Poof side by side while I switch over?', answer: 'You can. Many people keep QuickBooks active for a billing cycle or two while they get comfortable in Poof and confirm the numbers match before fully cutting over. There is a 30-day free trial with no credit card, so you can run them in parallel at no extra cost.' },
-    { question: 'What does Poof include that QuickBooks Online charges extra for or locks behind a higher plan?', answer: 'Poof is one flat plan at $79/mo with all 78 features and 13 reports included, no tiers or add-ons. With QuickBooks Online, deeper reporting and capabilities typically mean upgrading from Simple Start ($38/mo) to Essentials ($75/mo) or Plus ($115/mo). Note that neither Poof nor QuickBooks files your taxes, and Poof does not run payroll.' },
+    { question: 'What does Poof include that QuickBooks Online charges extra for or locks behind a higher plan?', answer: 'Poof is one flat plan at $79/mo with all 93 features and 13 reports included, no tiers or add-ons. With QuickBooks Online, deeper reporting and capabilities typically mean upgrading from Simple Start ($38/mo) to Essentials ($85/mo) or Plus ($140/mo) — Intuit raised those prices on August 1, 2026. Note that neither Poof nor QuickBooks files your taxes, and Poof does not run payroll.' },
     { question: 'I am not an accountant. Is Poof easier to learn than QuickBooks?', answer: 'That is the point. QuickBooks was built for accountants, so everyday tasks can feel like they need an accounting degree. Poof is AI bookkeeping that does the categorizing for you, so there is far less software to learn. You connect your accounts and review, rather than operate a complex tool.' },
     { question: 'Can I bring over my chart of accounts and opening balances?', answer: 'Yes. Your existing chart of accounts and opening balances can be imported so your books continue cleanly from where QuickBooks left off, instead of forcing you to rebuild your categories from scratch.' },
     { question: 'How does the free financial analysis on this page work?', answer: 'Apply using the form below and, if accepted, securely share your data. We review your current QuickBooks setup and return results in roughly 5 to 7 days. Spots are limited each month, and this is an operational financial analysis, not a CPA audit or tax filing.' },

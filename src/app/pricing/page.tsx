@@ -56,7 +56,7 @@ export default function PricingPage() {
     },
     {
       question: 'How does Poof compare to QuickBooks?',
-      answer: 'Poof is $79/mo for everything QuickBooks Plus charges $115/mo for — job costing, budgets, and comprehensive reports — plus things QuickBooks doesn\'t offer at any tier: a built-in AI assistant that records payments, creates invoices, and generates reports through conversation, AI budgeting, cash flow forecasting, auto-reconciliation, and recurring charge detection. One plan, no tiers.'
+      answer: 'One price, every feature. The fair comparison is QuickBooks Plus at $140/mo — the tier that carries job costing, budgets, and comprehensive reports — not Simple Start at $38/mo, which is single-user and can\'t do this work. Poof is $79/mo for all of it, 44% less than Plus, plus things QuickBooks doesn\'t offer at any tier: a built-in AI assistant that records payments, creates invoices, and generates reports through conversation, AI budgeting, cash flow forecasting, auto-reconciliation, and recurring charge detection. One plan, no tiers. (QuickBooks pricing verified August 2026.)'
     },
     {
       question: 'What reports can I generate?',
@@ -68,7 +68,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically costs $15–$75/month depending on features. QuickBooks starts at $38/month and locks features behind $38, $75, and $115/mo tiers. Poof starts at $39.50/month (launch special) with all 78 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically runs $15–$140/month depending on features and tier. As of August 2026, QuickBooks starts at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140 — and Plus is the tier you need for job costing and budgets. Poof starts at $39.50/month (launch special, then $79/month) with all 93 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
@@ -239,7 +239,7 @@ export default function PricingPage() {
               Why Small Businesses Switch to Poof
             </h2>
             <p className="text-xl text-slate-600 mb-12">
-              $79/mo for everything QuickBooks Plus charges $115 for — with AI that actually does the work.
+              One price. Every feature. No plan you have to grow into — and AI that actually does the work.
             </p>
           </AnimateOnScroll>
 

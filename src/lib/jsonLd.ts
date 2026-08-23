@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 78 features, 13 reports, $79/mo.',
+    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 93 features, 13 reports, $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,7 +35,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 78 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 93 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
@@ -114,7 +114,22 @@ export function getSoftwareApplicationSchema() {
       'Books-Integrity Checks',
       'Proactive Insights Engine',
       'Online Invoice Payments (ACH & Card via Stripe)',
-      'Inbound Email Capture for Receipts & Bills'
+      'Inbound Email Capture for Receipts & Bills',
+      'Per-Job Labor Allocation',
+      'Financing Gross-Up (Dealer Fees Costed to the Job)',
+      'Peer Benchmarks on the Per-Job P&L',
+      'Period Tie-Out Engine',
+      'Accrual Roll-Forward Subledger',
+      'Document Playbooks',
+      'Bot-Abuse Gate on Registration (Cloudflare Turnstile)',
+      'AI Privacy Chokepoint (PII Redaction on Every Model Call)',
+      'AI Phone Receptionist (Managed Service)',
+      'Deterministic Safety Triage',
+      'Real-Calendar Booking with Double-Booking Prevention',
+      'Rule-Based Human Escalation',
+      'Multi-Channel Notifications (SMS, Email, Push, Slack, Telegram, Webhook)',
+      'Dispatch Board, Call Log & Technician Management',
+      'Receptionist Settings'
     ]
   }
 }

@@ -7,7 +7,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Security — How Poof Protects Your Financial Data | Poof',
-  description: 'Learn how Poof keeps your financial data secure with audit logging, two-factor authentication, role-based access, and encrypted bank connections via Plaid.',
+  description: 'Learn how Poof keeps your financial data secure with audit logging, two-factor authentication, role-based access, encrypted bank connections via Plaid, and PII redaction on every AI call.',
   keywords: 'bookkeeping security, two-factor authentication, Plaid bank connection, data encryption, RBAC',
   alternates: {
     canonical: 'https://www.poofai.com/security',
@@ -95,6 +95,24 @@ const securityFeatures = [
       </svg>
     ),
   },
+  {
+    title: 'AI Privacy Chokepoint',
+    description: 'Every AI call Poof makes runs through one path: personally identifiable information is redacted before anything leaves the process, the call is routed to its configured destination, and the destination, model, redaction count, and token usage are written to the audit trail. It is enforced at a single chokepoint rather than promised feature by feature, it runs for every customer, and there is nothing to configure.',
+    icon: (
+      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7A2,2 0 0,1 14,9A2,2 0 0,1 12,11A2,2 0 0,1 10,9A2,2 0 0,1 12,7M12,12C13.5,12 16.5,12.75 16.5,14.25V16H7.5V14.25C7.5,12.75 10.5,12 12,12Z"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Bot-Abuse Gate on Registration',
+    description: 'Public sign-up is protected by a Cloudflare Turnstile challenge, which stops scraped-address subscription bombing before it reaches anyone\'s inbox.',
+    icon: (
+      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A2.25,2.25 0 0,1 14.25,11A2.25,2.25 0 0,1 12,13.25A2.25,2.25 0 0,1 9.75,11A2.25,2.25 0 0,1 12,8.75M12,14.5C13.5,14.5 16.5,15.25 16.5,16.75V18H7.5V16.75C7.5,15.25 10.5,14.5 12,14.5Z"/>
+      </svg>
+    ),
+  },
 ]
 
 export default function SecurityPage() {
@@ -104,7 +122,7 @@ export default function SecurityPage() {
 
       <PageHero
         title={<>Security at <span className="text-gradient-gold">Poof</span></>}
-        subtitle="Your financial data is sensitive. Poof uses industry-standard security practices including encryption, two-factor authentication, audit logging, and secure bank connections."
+        subtitle="Your financial data is sensitive. Poof uses industry-standard security practices including encryption, two-factor authentication, audit logging, secure bank connections, and a single privacy chokepoint that redacts personal information out of every AI call."
       />
 
       {/* Security Features */}

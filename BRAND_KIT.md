@@ -1,10 +1,28 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: July 31, 2026
+> **Living document** — Last updated: August 23, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
-> **⭐ PRIMARY GO-TO-MARKET FOCUS (as of July 2026): TRADE CONTRACTORS.**
+> **⭐ PRIMARY GO-TO-MARKET FOCUS (as of August 2026): TRADE CONTRACTORS.**
 > Poof's primary audience is now HVAC, plumbing, and electrical service contractors, sold as a **managed bookkeeping service** ("Poof Managed for Trades"). **Lead the main website with the trades positioning in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical)** — job costing, per-job profitability, and done-for-you monthly close. The horizontal, self-serve "any small business" product (the QuickBooks-alternative framing throughout the rest of this doc) is the **underlying engine and a secondary self-serve option** — not the headline. Restaurants/multi-unit were deprioritized (features remain in the code but are not marketed).
+
+---
+
+## ⚠️ Outstanding website corrections (as of 2026-08-23)
+
+**Read this before writing any copy.** These are live pages that contradict this document.
+Checked against the running site on 2026-08-23. Delete each line as it is fixed.
+
+| Page | What's wrong now | Should be |
+|---|---|---|
+| **poofai.com/trades** | Offers the **"$250 trade pilot, fully refundable"** | The pilot was replaced by the **$750 Job Margin & Recovery Audit**. This is a live offer mismatch — a prospect can currently ask for an offer that no longer exists. **Most urgent item here.** |
+| **poofai.com/poof-vs-quickbooks** | Compares Poof against **QuickBooks Simple Start at "$38+/mo"** | Compare against **QuickBooks Plus at $140/mo**. Simple Start cannot do what Poof does, so the current table makes Poof look like twice the price while measuring against a plan that doesn't do the job. See [Which plan to compare against](#which-plan-to-compare-against--this-is-the-whole-argument) |
+| **poofai.com/poof-vs-quickbooks** | Footnote reads *"as of February 2026"* | *"as of August 2026"* — Intuit raised prices on **August 1, 2026** and the February figures are wrong |
+| **poofai.com/poof-vs-quickbooks** | States **78 features** | **93 features** |
+| Anywhere quoting the managed tiers | Two tiers only | Fine as-is. The new **$2,400 Pro tier is deliberately not a third column** — see [pricing](#vertical-pricing-tier--poof-managed-for-trades) |
+
+**Already correct, do not "fix":** the comparison page's Poof pricing ($79, $39.50 launch) is
+current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are current.
 
 ---
 
@@ -24,13 +42,14 @@
 12. [Content Guidelines](#content-guidelines)
 13. [Available Logo Files](#available-logo-files)
 14. [Vertical Positioning: Trade Contractors](#vertical-positioning-trade-contractors-hvac-plumbing-electrical)
-15. [Changelog](#changelog)
+15. [Technical & Partner Positioning](#technical--partner-positioning)
+16. [Changelog](#changelog)
 
 ---
 
 ## What is Poof?
 
-**Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops.** AI agents handle categorization, reconciliation, and job costing; a former controller reviews the calls that matter. Shop owners get **per-job profitability with every monthly close** and **books closed faster and cleaner than a part-time bookkeeper's** — using their existing Jobber/Housecall Pro exports and bank data, without touching the software themselves. (Full trades positioning, pricing, and landing-page spec: [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical).)
+**Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops.** AI agents handle categorization, reconciliation, and job costing; a former controller reviews the calls that matter. Shop owners get **per-job profitability with every monthly close** and **books closed by the 15th business day, every month** — using their existing Jobber/Housecall Pro exports and bank data, without touching the software themselves. Managed customers can also have Poof **answer the shop's phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-7-features)). (Full trades positioning, pricing, and landing-page spec: [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical).)
 
 Under the hood, Poof is a complete AI-powered bookkeeping platform — categorization, reconciliation, invoicing, receipt scanning, reports, budgeting, and forecasting. That same platform is also available as **self-serve software for any small business** (the QuickBooks-alternative product described throughout this doc), but the trades managed service is the primary go-to-market.
 
@@ -68,7 +87,7 @@ Under the hood, Poof is a complete AI-powered bookkeeping platform — categoriz
 **QuickBooks** is the default choice for most small businesses. Poof positions directly against QuickBooks on three axes:
 1. **Simplicity** — One flat price, no feature tiers, no accounting jargon
 2. **AI-first automation** — Poof does the work; QuickBooks gives you tools to do the work yourself
-3. **Value** — $79/mo for everything, including what QuickBooks reserves for its $115/mo Plus tier (job costing, budgets, comprehensive reports)
+3. **One price, everything included** — no tiers, no add-ons, no per-feature upsell. QuickBooks splits the same capability set across three plans and charges for the ones you grow into
 
 ### Messaging Principle: Outcomes Over Features
 Always lead with what changes in the customer's life, not what the product does. The feature name can appear as a label, but the **headline should be the outcome.**
@@ -88,6 +107,8 @@ Always lead with what changes in the customer's life, not what the product does.
 | Estimates | "Send a quote. Convert to an invoice in one click." |
 | Bank connection | "Connect your bank. AI handles the rest." |
 | Flat pricing | "Everything you need. Nothing you don't. One price." |
+| AI receptionist | "Every call answered. Every job on the board." |
+| Deterministic safety triage | "A gas-smell call never gets booked for Tuesday." |
 
 ---
 
@@ -269,7 +290,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "78 features, one flat price — $79/mo" (self-serve tier)
+- "93 features, one flat price — $79/mo" (self-serve tier)
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -291,7 +312,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 78 Features in 10 Groups
+### 93 Features in 11 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
@@ -346,7 +367,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 4. Cash flow forecasting — AI-generated 12-month projections with confidence bands, seasonal adjustments, and rolling forecast option
 5. Budget alerts — proactive spending alerts when approaching or exceeding thresholds
 
-#### 7. Team & Security (7 features)
+#### 7. Team & Security (9 features)
 1. Team management — 5 roles: Owner / Admin / Accountant / Bookkeeper / Viewer
 2. Two-factor authentication (TOTP with QR code setup and 8 backup codes)
 3. Audit logs (SOC 2 compliant, PII masking)
@@ -354,6 +375,8 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. GDPR/CCPA-compliant account deletion
 6. Email verification
 7. Role-based permissions (RBAC) — 26 granular permissions
+8. Bot-abuse gate on registration — Cloudflare Turnstile challenge on public sign-up, stopping scraped-address subscription bombing
+9. AI privacy chokepoint ("Gateway") — every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail
 
 #### 8. Productivity & Workflow (6 features)
 1. Personalized dashboard — AI-generated daily briefing with "Reply to Poof" action, time-aware greeting, 4 animated KPIs, Y-axis dollar labels on all chart tiles, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
@@ -380,7 +403,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 14. Guided onboarding walkthrough — AI navigates the UI, highlights elements, and walks new users through setup step by step
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
 
-#### 10. Job Costing, Month-End Close & Payments (9 features)
+#### 10. Job Costing, Month-End Close & Payments (15 features)
 1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**)
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
@@ -390,6 +413,26 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. Proactive insights engine — auto-detected issues and opportunities (margin dips, unusual spend, cash risks) surfaced without being asked
 8. Accept online payments — customers pay invoices by ACH or card via Stripe; payments reconcile to the ledger automatically
 9. Inbound email capture — forward receipts and bills to a dedicated Poof address; AI extracts the data and files them
+10. Per-job labor allocation — spread technician labor cost across the jobs it was spent on, so a job's margin includes the hours, not just the materials
+11. Financing gross-up — when a job is sold through dealer financing, the dealer fee is recognized as a cost of that job instead of quietly inflating its margin
+12. Peer benchmarks on the Per-Job P&L — see how a job's margin compares to similar jobs, with the outliers called out
+13. Period tie-out engine — a standing check dashboard that proves the period actually ties before it is closed, not after
+14. Accrual roll-forward subledger — deposits, deferrals, and accrued items carried forward period to period with their own schedule
+15. Document playbooks — forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected
+
+#### 11. AI Receptionist & Dispatch (7 features)
+
+> **Availability note:** operator-installed as part of the managed service — Poof staff provision the number and the voice agent. It is **not self-serve**; a shop owner cannot sign up and switch it on. Market it as part of "Poof Managed for Trades," never as a button in the app. See the caveats at the end of this group.
+
+1. AI phone receptionist — answers the shop's line, knows the shop's name, hours, and service area, understands the caller's problem, and books the job
+2. Deterministic safety triage — gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted "leave the building, call 911" response. No-heat below 45°F and no-cool above 95°F are emergencies too. **These are rules in code, not instructions to a language model** — the AI narrates the call, it never decides whether something is an emergency
+3. Real-calendar booking — availability computed from technicians, their weekly windows, and their time off, minus existing appointments, respecting drive-time buffer and skill match. The database refuses overlapping bookings outright, so two calls arriving at once cannot double-book a tech
+4. Rule-based human escalation — safety trigger, after-hours emergency, no slot inside the urgency window, caller asks for a person, repeat caller within 24 hours, cancellation threat, or low agent confidence
+5. Multi-channel notifications — one event fans out to the channels a shop configures: SMS, email, push, Slack, Telegram, or a webhook, with every delivery attempt logged
+6. Dispatch board, call log, and technician management — see the day's board, every call with its transcript, outcome, duration, and cost, and manage who can be dispatched
+7. Receptionist settings — greeting, hours, timezone, service area, urgency SLA windows, booking rules, and notification channels, all configurable by the shop
+
+**What it does not do (do not imply otherwise):** outbound confirmations, reminders, and "on my way" texts are **not built yet**. It does not take payment on the call, does not optimize routes across a day's board, and does not clone the owner's voice. There are no autonomous outbound sales calls.
 
 ---
 
@@ -397,7 +440,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 78 (all included in every plan) |
+| Total features | 93 (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
 | AI assistant tools | 30+ (create, update, search, send, generate, import) |
@@ -409,6 +452,10 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 | Granular permissions | 26 |
 | Free trial | 30 days |
 | Cash flow forecast horizon | 12 months with confidence bands |
+| Receptionist notification channels | 6 (SMS, email, push, Slack, Telegram, webhook) |
+| Managed close SLA | Books closed by the 15th business day |
+| Managed job-costing SLA | Every completed job costed within 5 business days |
+| Managed response SLA | Controller responds within 1 business day |
 
 ---
 
@@ -420,19 +467,21 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | $79/mo | All 78 features included (self-serve tier) |
+| Monthly | **$79/mo** | All 93 features included (self-serve tier) |
 | Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
-| Annual | $790/year ($65.83/mo) | Save $158 (2 months free) |
+| Annual | **$790/year ($65.83/mo)** | Save $158 |
 
 - **No feature tiers** — never reference "Basic," "Pro," or "Enterprise" plans in any customer-facing content
-- 30-day free trial, no credit card required
+- 30-day free trial, **no credit card required** — every new organization gets it automatically
 - Launch special: 50% off first 3 months
 - Cancel anytime, 30-day money-back guarantee
 
 ### Pricing Messaging
-- Lead with: "$79/mo for everything QuickBooks Plus charges $115 for — plus an AI bookkeeper that does the work"
+- Lead with capability, not undercutting: **"One price. Every feature. No plan you have to grow into."**
 - Emphasize: "One plan. Every feature. No surprises."
-- On comparison pages: anchor against the QuickBooks tier a buyer would actually need — Plus at $115/mo (job costing, budgets, comprehensive reports) — not Simple Start at $38. Do NOT claim Poof is the cheapest option; claim it is the best value (Wave is free; the honest comparison is feature-for-feature)
+- On comparison pages, frame it as scope, not discount — Poof's single plan covers what QuickBooks splits across its mid and upper tiers plus add-ons.
+- **Do not repeat the old "$29/mo vs QuickBooks' $38" line.** It is untrue at $79, and it argues on the axis Poof loses.
+- **Compare against QuickBooks Plus ($140/mo), not Simple Start ($38/mo)** — see [QuickBooks pricing, verified](#quickbooks-pricing-verified-2026-08-23) for why this is the honest comparison and the stronger one.
 
 ---
 
@@ -440,11 +489,45 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 QuickBooks is the primary competitive alternative. Thread this contrast throughout all marketing — not just on a comparison page. Every feature claim is stronger when framed as "unlike QuickBooks, which..."
 
+### QuickBooks pricing, verified 2026-08-23
+
+**Intuit raised prices on August 1, 2026.** Any comparison written before that date is wrong.
+
+| QuickBooks Online plan | Monthly list | Change on Aug 1, 2026 |
+|---|---|---|
+| Simple Start | **$38** | +$3 (from $35) |
+| Essentials | **$85** | +$10 (from $75) |
+| Plus | **$140** | **+$25 (from $115) — a 22% jump** |
+| Advanced | **$340** | **+$65 (from $275) — a 24% jump** |
+
+*Verified 2026-08-23 against three independent sources plus Intuit's own product-update announcement. Re-check before any campaign; Intuit has now raised prices twice in 2026.*
+
+#### Which plan to compare against — this is the whole argument
+
+**Compare Poof to QuickBooks Plus ($140), not Simple Start ($38).** Simple Start is single-user,
+with no team roles, no budgets, and a fraction of the reporting. A business that needs what Poof
+does cannot run on it. Comparing $79 to $38 makes Poof look like the expensive option by
+measuring it against a plan that does not do the job — and it is the comparison a QuickBooks
+salesperson would choose for us.
+
+Against the plan that actually matches Poof's capability, the story inverts:
+
+- **Poof $79 flat vs QuickBooks Plus $140** — Poof is **44% cheaper** and adds the AI assistant,
+  budgeting, forecasting, and job costing that Plus does not have at any price.
+- Poof's 5 roles and 26 granular permissions, plus SOC 2 audit logging with PII masking, are
+  **Advanced-tier ($340) capabilities** at QuickBooks. That contrast is worth making explicitly.
+- **Intuit's own increase is the argument.** Plus users just absorbed +22% and Advanced users
+  +24%, with no new capability attached. "Your bookkeeping software raised its price 22% this
+  month. Poof is $79, flat, with everything included" is a campaign, not just a table row.
+
+**Always state the plan being compared and the date checked**, in the table footnote. It is the
+difference between a comparison and a claim.
+
 ### Poof vs QuickBooks
 
 | | Poof | QuickBooks |
 |---|---|---|
-| **Starting price** | $79/mo — all features ($39.50/mo launch special) | $38–$275/mo tiered; job costing & budgets require Plus at $115/mo |
+| **Starting price** | $79/mo — all features ($39.50/mo launch special) | $38 Simple Start / $85 Essentials / **$140 Plus** / $340 Advanced (verified 2026-08-23; compare against Plus) |
 | **AI assistant** | Poof (built-in, context-aware, 30+ tools) | No |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | No |
 | **Auto chart of accounts** | Yes | No |
@@ -462,6 +545,8 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 | **AI depreciation & recurring entries** | Yes (AI sets up accounts and schedules) | No |
 | **Personalized dashboard** | Yes (AI briefing, attention alerts, animations, reorderable tiles) | No |
 | **AI chat organization** | Yes (multi-session, folders, drag-and-drop, 3 view modes) | No |
+| **AI phone receptionist + dispatch** | Yes (managed service; triage, real-calendar booking, escalation) | No |
+| **Per-job labor allocation** | Yes | No |
 | **Pricing model** | Flat — one plan | Tiered — must upgrade for features |
 
 ### Key Differentiators (What Poof Has That QuickBooks Doesn't)
@@ -496,7 +581,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 ### Company Timeline
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
-- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, and job costing, month-end close, and online payments — 78 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
+- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, job costing, month-end close, online payments, and an AI phone receptionist that books and dispatches — 93 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
 
 ---
 
@@ -520,7 +605,7 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 
 ## Available Logo Files
 
-All files located in `frontend/public/`:
+All files located in `apps/poof-web/public/`:
 
 | File | Description |
 |---|---|
@@ -551,7 +636,7 @@ Independent service contractors are Poof's first vertical focus because they (1)
 ### Vertical Positioning Statement
 > **For** HVAC, plumbing, and electrical service contractor owners doing $750K – $3M who are tired of waiting 2 – 3 weeks for last month's P&L from a part-time bookkeeper,
 > **Poof Managed for Trades is** a managed bookkeeping service powered by AI agents and reviewed by a former controller
-> **that** delivers per-job profitability and a monthly close that's faster and cleaner than a part-time bookkeeper's — using your existing Jobber/Housecall Pro exports and bank data.
+> **that** delivers per-job profitability and books closed by the 15th business day, every month — using your existing Jobber/Housecall Pro exports and bank data, with an AI receptionist answering the shop's phone if you want it.
 > **Unlike** outsourced bookkeepers who rekey job data manually and cost $800 – $1,500/mo for slow monthly reports, or field-service-first tools like Workyard and ServiceTitan that bolt on accounting as an afterthought,
 > **Poof's agents** handle categorization and reconciliation, with a credentialed human reviewing every customer-facing action — so the answer to "did the Henderson install make money?" comes with your monthly close, from a controller you can text — instead of never.
 
@@ -579,21 +664,55 @@ Always lead with the outcome the owner cares about, never the feature.
 | Sales tax on materials | "Materials sales tax tracked automatically, by job and state." |
 | A controller you can text | "Text a question about your business. Get a straight answer from a real controller." |
 | Cash flow forecasting | "Know your shoulder-season cash position 90 days out." |
+| AI receptionist | "The phone gets answered at 9pm. The job's on the board before you wake up." |
+| Safety triage | "A gas-smell call gets 911 and a callback — not a Tuesday appointment." |
+| Per-job labor allocation | "Your techs' hours land on the jobs they were spent on." |
+| Financing gross-up | "That financed install wasn't a 40% job. Here's what the dealer fee really cost you." |
+| Peer benchmarks | "This install ran 12 points under your other installs. Here's why." |
 
 ### Vertical Pricing Tier — "Poof Managed for Trades"
 Distinct from the $79/mo Poof Professional self-serve product.
 
 | Plan | Price | Best for | Includes |
 |---|---|---|---|
+| **Job Margin & Recovery Audit** | **$750 (paid, one week)** | **The front door — lead with this** | A one-week paid diagnostic that hands the owner a dollar number in five days. Credits against the $1,500 onboarding if he signs within 30 days |
 | **Poof Managed for Trades** | **$1,200/mo** | 2 – 4 truck shops, $750K – $1.5M revenue | All Poof Professional features + monthly per-job P&L + monthly close + we bring your Jobber/HCP data into your books + a controller you can text or email + monthly variance review |
 | **Poof Managed for Trades Plus** | **$1,500/mo** | 5+ truck shops, $1.5M – $3M revenue | Everything above + multi-location reporting + quarterly review call + priority response |
+| **Poof Managed for Trades Pro** | **$2,400/mo** | Shops **above $3M** revenue — above the core ICP, sold on exception | Everything above; scope agreed per shop at this size |
 | **Onboarding (one-time)** | **$1,500** | All managed customers | Historical cleanup (up to 18 months), QBO/Xero migration, Jobber/HCP setup, chart of accounts aligned to your trade |
-| **Trade pilot** | **$250 (refundable)** | First-time customers | 30-day full-service trial, fully refundable if not delighted |
+
+**About the $2,400 Pro tier (decided 2026-08-23).** It sits **above** the $750K–$3M ICP, not
+inside it. The two lower tiers already span the whole target band, and their boundaries — live
+on `poofai.com/trades` — are unchanged by it. Three consequences worth holding onto:
+
+- **It is priced on revenue alone.** Truck count is the sizing proxy for the two lower tiers;
+  above $3M it stops tracking cleanly, so do not attach a truck number to this one.
+- **It is not a reason to prospect above $3M.** Outreach, the landing page, and the persona work
+  all stay aimed at $750K–$3M. This tier exists for shops that grow into it and for inbound that
+  arrives already there — not as permission to chase bigger shops. Above $3M is ServiceTitan's
+  buyer, a different sale, and the whole rationale for picking this vertical
+  ([Why This Vertical](#why-this-vertical)) assumes the smaller operator.
+- **Scope is agreed per shop.** At this size the work is not a bigger version of the $1,500 tier,
+  so the plan row says so rather than implying the same deliverable at a higher price.
+
+**On the website:** lead with $1,200 and $1,500. Show Pro as an "above $3M? let's talk" line, not
+as a third column competing for attention — it would pull the eye toward the price the target
+buyer is *not* paying.
+
+**The $750 audit replaces the $250 refundable pilot.** The pilot asked a contractor to commit a month of onboarding before he saw anything; the audit hands him a number in five days. It is simultaneously the sales pitch, the case study, the first slice of onboarding work, and the qualification filter. **Do not discount it** — a free audit attracts people who will never buy.
+
+**The SLAs, stated as commitments** (these are the promise; do not soften or inflate them):
+- Books closed by the **15th business day**, every month
+- Every completed job costed within **5 business days**
+- **Unbilled-work report every Friday**
+- Controller responds within **1 business day**
+- Monthly variance review; text access to your controller
 
 **Pricing messaging:**
 - "$1,200/mo replaces a $1,000 – $1,500/mo bookkeeper *and* gives you per-job profitability they can't provide"
 - "Cheaper than your current QBO + bookkeeper + manual handoff. Faster and more accurate."
 - Never quote managed-service pricing alongside the $79/mo Professional plan on the same page — different products, different audiences.
+- **Never present a recovery share or contingency fee.** The recovery number is the argument, not a billing mechanism.
 
 ### Competitive Alternatives (Trade-Specific)
 On HVAC landing pages, reference these competitors — NOT QuickBooks (their issue isn't QBO, it's the *handoff to* QBO).
@@ -601,10 +720,15 @@ On HVAC landing pages, reference these competitors — NOT QuickBooks (their iss
 | Alternative | What it is | Why owners switch to Poof |
 |---|---|---|
 | **Part-time / outsourced bookkeeper** ($500 – $1,500/mo) | A person who logs into QBO once a month, sends a PDF P&L | Slow, no per-job visibility, manually rekeys Jobber data, expensive |
-| **Workyard** (~$186/mo + accounting) | Field-service tool with bolt-on accounting | Built for the field, accounting is an afterthought; no managed service |
-| **Knowify** (~$186 – $450/mo) | Construction accounting (general contractors) | Designed for general contractors, not service trades; complex for HVAC service work |
-| **ServiceTitan + accounting add-on** ($300 – $1,000+/loc/mo) | Enterprise field-service platform | Built for 30+ tech shops, not 4 – 15 tech operators; price gates small shops out |
+| **Workyard** ($50/mo base + $6 – $16 per user) | Field-service time tracking with job costing | Priced per user, so it scales with headcount; built for the field, accounting is an afterthought; no managed service. An 8-person shop lands near $180/mo **plus** accounting |
+| **Knowify** ($179 / $349 / $549 per month) | Construction accounting (general contractors) | Designed for general contractors, not service trades; complex for HVAC service work, and the useful tier is $349+ |
+| **ServiceTitan** ($245 – $500 **per technician** per month) | Enterprise field-service platform | Priced per tech, not per location — a 6-tech shop is roughly $1,800 – $2,400/mo before the $5K – $15K implementation and a 12-month minimum contract. Purpose-built for 20+ tech shops doing $5M+; it gates small operators out by design |
 | **QBO + Jobber/HCP DIY** | Owner reconciles + categorizes themselves | The handoff is the daily pain; owner's time isn't free |
+| **Answering service** ($200 – $600/mo) | Humans take a message, maybe book into a calendar | They take a message; they don't know your books, your techs' skills, or which calls are emergencies. Poof's receptionist books against real availability and costs the job it creates |
+
+*Competitor pricing verified 2026-08-23. ServiceTitan and Knowify both price per user or per
+technician, so a flat monthly figure understates them at shop scale — always convert to the
+prospect's actual headcount before quoting a contrast. Re-verify before any campaign.*
 
 ### Tone & Language Shifts for This Vertical
 The horizontal Poof brand voice ("magical but professional") still applies, but on HVAC landing pages and outreach, lean into these shifts:
@@ -629,6 +753,9 @@ What HVAC owners get with Poof that no alternative offers all together:
 6. **Audit-grade ledger underneath** — built on proper double-entry bookkeeping with reversal entries; survives any IRS or insurance audit
 7. **Built for $750K – $3M shops specifically** — not enterprise overkill, not solo-truck underpowered
 8. **Replaces your current bookkeeper at lower cost** — and delivers faster, more granular books
+9. **An AI receptionist that answers the phone and books the job** — no other bookkeeping service touches the shop's revenue at the moment it walks in the door. Safety triage is deterministic, so a gas-smell call is escalated, never booked
+10. **Labor lands on the job it was spent on** — most job-costing setups cost materials and guess at hours
+11. **Financing fees are costed to the job** — a financed install stops looking more profitable than it was
 
 ### Trust & Social Proof Elements (for HVAC Landing Page)
 - **Lead with Austin's credentials:** "Built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses."
@@ -645,11 +772,12 @@ For the website project building `/hvac` or a dedicated subdomain:
 2. **Three-up "the pain you have today"** — late P&L, no per-job visibility, manual Jobber/QBO handoff
 3. **"How it works in 60 seconds"** — connect Plaid + send us your monthly Jobber/HCP export + your monthly close lands in your inbox, with a controller on call
 4. **Per-job P&L sample** — screenshot or animated mockup of a real per-job report
-5. **Pricing table** — Managed for Trades $1,200, Managed for Trades Plus $1,500, $1,500 onboarding, $250 refundable pilot
+5. **Pricing table** — the $750 Job Margin & Recovery Audit as the headline entry point, then **two** columns: Managed for Trades $1,200 and Plus $1,500, plus the $1,500 onboarding. State the SLAs beside the price. The $2,400 Pro tier is a single "above $3M? let's talk" line beneath the table, **not** a third column — it is above the ICP and a third price pulls the target buyer's eye off the one he is actually paying
 6. **"Replaces your current bookkeeper"** swap-out diagram (current vs Poof)
 7. **Austin's bio section** — controller background, why he built Poof for trades
 8. **FAQs aimed at HVAC objections** — "Do I need to switch from Jobber?" (no), "What if I'm on ServiceTitan?" (we'll talk), "Will my CPA still work with me?" (yes — we coordinate at year-end), "Is this real bookkeeping or just AI guessing?" (real, with controller review), "What if I want to leave?" (export your full QBO file anytime)
-9. **CTA:** "Book a 20-minute call" → Calendly. Secondary CTA: "Start the $250 pilot" (after page is mature)
+9. **CTA:** "Book a 20-minute call" → Calendly. Secondary CTA: **"Start the $750 Job Margin & Recovery Audit"** — the audit is the offer to push once the page is mature, not a free trial
+10. **Receptionist section** (if selling it) — "every call answered, every job on the board," with the safety-triage rule stated plainly as a trust element. Do **not** show it as something the owner switches on himself; it is installed as part of the managed service
 
 ### Outreach Voice (Cold Email & LinkedIn)
 The cold outreach voice should match the landing page voice. Drafts already produced separately; in BRAND_KIT terms:
@@ -661,13 +789,80 @@ The cold outreach voice should match the landing page voice. Drafts already prod
 
 ---
 
+## Technical & Partner Positioning
+
+> **Audience gate — read this first.** Nothing in this section belongs on the trades landing
+> page, in shop-owner outreach, or on social. An HVAC owner-operator does not buy "an MCP
+> server," and the trades tone rules in [Section 14](#tone--language-shifts-for-this-vertical)
+> explicitly rule out this vocabulary. **Use this section only for:** investor conversations and
+> decks, technical or partner discussions, developer-facing content, and any "why is Poof built
+> for the agent era" question. Everywhere else, it is noise.
+
+### The agent surface (MCP)
+
+Poof exposes its own books to outside AI agents through a **Model Context Protocol server** —
+live and tested against a real third-party agent since August 2026. An agent the customer
+already uses can read their financial data through org-scoped, permissioned tools instead of
+screen-scraping or being handed a database password.
+
+**Why it matters, stated for a technical audience:** most accounting software treats AI as a
+feature it ships. Poof treats agents as a client class it serves. The bet is that the interface
+to financial data stops being a dashboard and becomes an agent, and the software that survives
+is the software an agent can safely call.
+
+**The honest limits — state these, do not skip them:**
+- **It is provisioned by Poof, not self-serve.** There is no screen in the app where a customer
+  creates an agent credential; there are zero MCP references in the frontend. Access is granted
+  by Poof staff. Same posture as the AI receptionist.
+- Do not describe it as a published, open, or generally available API. It is a working surface
+  with real users, not a developer platform with docs and sign-up.
+
+### The privacy chokepoint (Gateway)
+
+Every AI call Poof makes — all of them, on one path — is PII-redacted before it leaves the
+process, routed to a configured destination, and logged with destination, model, redaction
+count, latency, and token usage. It runs automatically for every customer; nothing to
+configure.
+
+**Why it matters:** it is what makes the agent surface defensible rather than reckless, and it
+is the honest answer to "where does my financial data go when your AI touches it?" For a
+regulated or security-conscious audience, this is the strongest technical claim in the product,
+because it is enforced at a chokepoint rather than promised per feature.
+
+Gateway is also listed as a customer-facing feature (Group 7, #9), because unlike MCP it
+requires nothing of the customer and benefits every one of them.
+
+### What stays internal
+
+Not for any external audience, technical ones included: the AI learning-loop internals
+(correction traces), the Business Central connector, the Reddit lead-gen tool, the test
+dashboard, and the Firm Console (planned, on hold, nothing built).
+
+---
+
 ## Changelog
 
-### August 2, 2026 — Poof Professional repriced $29 → $79/mo
-- **Repriced the self-serve tier** from $29/mo to **$79/mo** ($790/yr = $65.83/mo; launch special 50% off first 3 months = $39.50/mo) after market research across 15 competitors (Aug 2026, vendor pricing pages): AI-first bookkeeping software converged at ~$100/mo for its capable tiers (Puzzle Complete $100, Digits Core $100, Kick Plus $100, Pilot AI-tier $99), and the traditional-software tier that includes job costing runs $70–$129 (Zoho Premium $70, Xero Established $90, QBO Plus $115, Sage 50 Pro $129). $29 priced Poof with the crippled entry tiers while delivering the $100-tier product.
-- **Comparison framing shifted** from price-vs-Simple-Start ($38) to value-vs-Plus ($115): Poof is no longer marketed as the cheapest option, but as the best value ("everything Plus charges $115 for, plus an AI bookkeeper, one plan").
-- Existing subscribers are grandfathered at $29/mo.
-- Managed for Trades pricing unchanged ($1,200/$1,500); the coherent ladder ($79 self-serve → $1,200 managed) was part of the rationale.
+### August 23, 2026 — AI receptionist, list price $79, the $750 audit replaces the pilot
+
+- **Corrected the self-serve list price: $29/mo → $79/mo, $290/yr → $790/yr.** This changed in the product on August 2 and this doc was wrong for three weeks. Launch special is now **$39.50/mo** (still 50% off first 3 months). Display price is centralized in `apps/poof-web/src/config/pricing.ts`; the amount actually charged comes from the Stripe price IDs.
+- **Retired the "$29 vs QuickBooks' $38" price-undercut line.** At $79 it is false and it argues on the axis Poof loses. Positioning axis 3 is now "one price, everything included" — scope, not discount. (The stale February figures were then verified and replaced the same day — see the pricing bullets below.)
+- **Added feature Group 11 — AI Receptionist & Dispatch (7 features):** AI phone receptionist, deterministic safety triage, real-calendar booking with database-enforced no-double-booking, rule-based human escalation, six notification channels (SMS/email/push/Slack/Telegram/webhook), dispatch board + call log + technician management, and receptionist settings. Live on a real phone number since August 22.
+  - **Honesty guardrails, do not cross:** outbound confirmations/reminders/"on my way" texts are **not built**. The receptionist is **operator-installed, not self-serve** — a shop owner cannot sign up and turn it on. No payment collection on the call, no route optimization, no voice cloning, no outbound sales calls.
+  - The safety rule is the trust story and it is literally true: gas smell, CO, smoke, sparking, or an active alarm are handled by rules in code, not by a prompt. The AI narrates; it never decides what counts as an emergency.
+- **Added 6 features to Group 10:** per-job labor allocation, financing gross-up (dealer fees costed to the job), peer benchmarks on the Per-Job P&L, period tie-out engine, accrual roll-forward subledger, document playbooks.
+- **Added 2 features to Group 7:** Cloudflare Turnstile bot gate on registration (stopped a real subscription-bombing campaign), and the AI privacy chokepoint ("Gateway") that PII-redacts, routes, and logs every model call.
+- Updated feature count **78 → 93** (10 → 11 groups).
+- **Trades pricing restructured.** The **$750 Job Margin & Recovery Audit** replaces the $250 refundable pilot as the front door — a paid one-week diagnostic that hands the owner a dollar number in five days and credits against the $1,500 onboarding. Managed tiers are now **$1,200 / $1,500 / $2,400** by revenue tier (was $1,200 / $1,500). Do not discount the audit; do not present a recovery share or contingency fee.
+- **Added the managed-service SLAs as stated commitments:** books closed by the 15th business day, every completed job costed within 5 business days, an unbilled-work report every Friday, controller responds within 1 business day. These replace the vaguer "faster and cleaner than a part-time bookkeeper's." They are promises now — do not soften or inflate them.
+- Added **answering services** ($200–$600/mo) to the trades competitive alternatives, now that the receptionist competes with them.
+- Corrected the logo file path: `frontend/public/` → `apps/poof-web/public/`.
+- Confirmed the 30-day free trial requires **no credit card** and is granted to every new organization automatically.
+- **Added Section 15 — Technical & Partner Positioning**, covering the **MCP agent surface** and the **Gateway** privacy chokepoint. MCP is deliberately *not* one of the 93 customer-facing features: there is no screen where a customer creates an agent credential (zero MCP references in the frontend), so listing it as a feature would repeat exactly the over-promise the July 31 pass cleaned up. It is real, live-tested against a third-party agent, and a genuine differentiator — for **investors, technical/partner conversations, and developer-facing content only**. It stays off the trades landing page and out of shop-owner outreach, where the vocabulary is noise and the tone rules forbid it.
+- **Defined the $2,400 Pro tier: shops above $3M revenue, above the core ICP, sold on exception.** The figure had appeared exactly once in the repo with no band beside it; the two lower tiers already spanned the whole stated $750K–$3M ICP, so the alternative reading would have re-cut the $1,200/$1,500 boundaries that are live on `poofai.com/trades`. Austin chose the band that leaves those untouched. Priced on revenue alone — truck count stops tracking above $3M — with scope agreed per shop. **It is explicitly not a mandate to prospect above $3M:** outreach and the landing page stay aimed at $750K–$3M, because above that is ServiceTitan's buyer and a different sale. On the site it belongs as an "above $3M? let's talk" line, not a third pricing column.
+- **Verified every competitor price in this doc (2026-08-23) and added a dated block for QuickBooks.** Intuit raised prices **August 1, 2026**: Plus $115 → **$140** (+22%), Advanced $275 → **$340** (+24%), Essentials $75 → **$85**, Simple Start $35 → **$38**. The kit's February figures ($38/$65/$200) were badly stale — Advanced alone was off by $140.
+- **Changed which QuickBooks plan we compare against: Plus ($140), not Simple Start ($38).** Simple Start is single-user with no team roles, no budgets, and a fraction of the reporting — a business that needs Poof cannot run on it. Comparing $79 to $38 measures Poof against a plan that does not do the job and makes it look expensive; it is the comparison a QuickBooks rep would pick for us. Against Plus, Poof is **44% cheaper and does more**. Poof's RBAC and audit logging are Advanced-tier ($340) capabilities. Every comparison must state the plan compared and the date checked.
+- **Verified the trades competitors too.** Knowify is $179/$349/$549 (was written as "~$186–$450"); ServiceTitan is **$245–$500 per technician per month** — per *tech*, not per location as this doc said — so a 6-tech shop is ~$1,800–$2,400/mo before a $5K–$15K implementation and a 12-month minimum. Workyard is $50/mo base plus $6–$16 per user. Per-seat pricing is the contrast to draw: Poof's managed fee does not scale with headcount.
+- Kept OUT of every external audience, technical ones included: the AI learning-loop internals, the Business Central connector, the Reddit lead-gen tool, the test dashboard, and the Firm Console (planned, on hold — nothing built).
 
 ### July 31, 2026 — Trades as PRIMARY go-to-market; feature refresh
 - **Repositioned Poof's primary focus to trade contractors** (HVAC/plumbing/electrical), sold as the managed service "Poof Managed for Trades." The website should now **lead** with the Section 14 trades positioning; the horizontal self-serve product is the underlying engine and a secondary offering. Supersedes the earlier "trades is a parallel `/hvac` page alongside a horizontal homepage" guidance.

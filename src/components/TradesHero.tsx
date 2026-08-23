@@ -23,7 +23,7 @@ export default function TradesHero() {
 
         <AnimateOnScroll animation="fade-up" delay={100}>
           <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Managed bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents categorize, reconcile, and job-cost your books; a former controller reviews every monthly close. Built from the Jobber or Housecall Pro data you already have.
+            Managed bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents categorize, reconcile, and job-cost your books; a former controller reviews every monthly close. Built from the Jobber or Housecall Pro data you already have — and Poof can answer your phone and book the job too.
           </p>
         </AnimateOnScroll>
 
@@ -45,7 +45,7 @@ export default function TradesHero() {
 
         <AnimateOnScroll animation="fade-in" delay={300}>
           <p className="text-sm text-slate-500 mt-6">
-            30-day refundable pilot · Founder-led onboarding · No long-term contract
+            Books closed by the 15th business day · Founder-led onboarding · No long-term contract
           </p>
         </AnimateOnScroll>
 

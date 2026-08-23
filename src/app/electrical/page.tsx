@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
+import ReceptionistSection from '@/components/ReceptionistSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -74,7 +75,7 @@ const replaces = {
     'Poof handles categorization and reconciliation, with controller review on every decision',
     'Your Jobber and Housecall Pro job data flows into the ledger — no manual rekeying',
     'Managed-service tier at $1,200/mo — a controller-grade service, not a part-time login',
-    'Monthly close with per-job P&L — you finally see which jobs made money, and which lost it',
+    'Monthly close with per-job P&L, closed by the 15th business day — you finally see which jobs made money, and which lost it',
     '1099-ready every January — subs tracked all year, not the week before the deadline',
   ],
 }
@@ -112,20 +113,43 @@ const plans = [
   },
 ]
 
+const audit = {
+  name: 'Job Margin & Recovery Audit',
+  price: '$750',
+  cadence: 'one week, paid',
+  body: 'Before you commit to anything monthly, we go through your last 12 months of jobs and bank activity and hand you a number: the margin you are leaving on the table, and where it is going. Five days from the day we get your data.',
+  bullets: [
+    'Per-job margin on your last 12 months of completed jobs',
+    'Where the leaks are — underbilled work, uncosted labor, financing fees eating installs',
+    'A dollar figure for what it is costing you a year',
+    'Credits in full against the $1,500 onboarding if you sign within 30 days',
+  ],
+}
+
+const slas = [
+  'Books closed by the 15th business day, every month',
+  'Every completed job costed within 5 business days',
+  'An unbilled-work report every Friday',
+  'Your controller responds within 1 business day',
+]
+
 const extras = [
   {
     name: 'Onboarding (one-time)',
     price: '$1,500',
-    body: 'Historical cleanup up to 18 months, QBO or Xero migration, Jobber / Housecall Pro setup, chart of accounts aligned to electrical service work.',
-  },
-  {
-    name: 'Trade pilot',
-    price: '$250',
-    body: '30-day full-service trial. Fully refundable if you\'re not delighted. The lowest-risk way to see if this fits your shop.',
+    body: 'Historical cleanup up to 18 months, QBO or Xero migration, Jobber / Housecall Pro setup, chart of accounts aligned to electrical service work. Your $750 audit credits against this in full if you sign within 30 days.',
   },
 ]
 
 const faqs = [
+  {
+    q: 'What is the $750 Job Margin & Recovery Audit?',
+    a: 'A paid, one-week diagnostic — the way most shops start with us. We take your last 12 months of jobs and bank activity and hand you a dollar number in five days: what your real per-job margins are, where money is leaking (underbilled work, labor that never got costed to a job, financing fees quietly eating installs), and what it adds up to over a year. It is $750, it is not refundable, and it credits in full against the $1,500 onboarding if you sign within 30 days. We do not do a free version — a free audit attracts people who were never going to buy, and you would get a worse look at your own numbers.',
+  },
+  {
+    q: 'What do you actually commit to once I am a client?',
+    a: 'Four things, in writing. Your books are closed by the 15th business day, every month. Every completed job is costed within 5 business days. You get an unbilled-work report every Friday. And your controller responds within 1 business day. If we miss, you will hear it from us first.',
+  },
   {
     q: 'Do I need to switch from Jobber or Housecall Pro?',
     a: 'No. Keep using exactly what your techs use today. We bring your Jobber or Housecall Pro data into your books for you — your dispatcher and techs see no change. The handoff into your books is what we replace, not the field tool.',
@@ -233,7 +257,7 @@ export default function ElectricalPage() {
 
           <AnimateOnScroll animation="fade-in" delay={300}>
             <p className="text-sm text-slate-500 mt-6">
-              30-day refundable pilot · Founder-led onboarding · Cancel anytime
+              Books closed by the 15th business day · Founder-led onboarding · No long-term contract
             </p>
           </AnimateOnScroll>
 
@@ -392,6 +416,8 @@ export default function ElectricalPage() {
         </div>
       </section>
 
+      <ReceptionistSection />
+
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -402,6 +428,40 @@ export default function ElectricalPage() {
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
               Replaces a part-time bookkeeper, and delivers detail they can&apos;t. No long-term contract.
             </p>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll animation="fade-up">
+            <div className="mb-10 rounded-2xl border-2 border-gold-400 bg-gradient-to-br from-gold-50 to-white p-8">
+              <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+                <div className="flex-1">
+                  <div className="inline-block bg-gold-600 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                    Start here
+                  </div>
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3">{audit.name}</h3>
+                  <p className="text-slate-600 leading-relaxed mb-5">{audit.body}</p>
+                  <ul className="space-y-2">
+                    {audit.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2 text-sm">
+                        <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-slate-700">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="lg:w-64 flex-shrink-0 lg:border-l lg:border-gold-200 lg:pl-8">
+                  <div className="text-5xl font-bold text-slate-900 mb-1">{audit.price}</div>
+                  <p className="text-sm text-slate-500 mb-5">{audit.cadence}</p>
+                  <BookCallButton className="block w-full text-center bg-gold-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gold-700 shadow-gold transition-all duration-200">
+                    Start the audit
+                  </BookCallButton>
+                  <p className="text-xs text-slate-500 mt-3 leading-relaxed">
+                    Book a 20-minute call to kick it off. No monthly commitment to find out.
+                  </p>
+                </div>
+              </div>
+            </div>
           </AnimateOnScroll>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -454,7 +514,7 @@ export default function ElectricalPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {extras.map((extra, i) => (
               <AnimateOnScroll key={extra.name} animation="fade-up" delay={i * 100}>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 h-full">
                   <div className="flex items-baseline justify-between mb-2">
                     <h4 className="font-semibold text-slate-900">{extra.name}</h4>
                     <div className="text-2xl font-bold text-violet-600">{extra.price}</div>
@@ -463,9 +523,31 @@ export default function ElectricalPage() {
                 </div>
               </AnimateOnScroll>
             ))}
+
+            <AnimateOnScroll animation="fade-up" delay={100}>
+              <div className="bg-slate-900 rounded-xl p-6 h-full">
+                <h4 className="font-semibold text-white mb-1">What we commit to</h4>
+                <p className="text-xs text-slate-400 mb-4">On every managed plan. Not aspirations — the deal.</p>
+                <ul className="space-y-2">
+                  {slas.map((s) => (
+                    <li key={s} className="flex items-start gap-2 text-sm text-slate-200">
+                      <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimateOnScroll>
           </div>
 
-          <p className="text-center text-sm text-slate-500 mt-8 max-w-xl mx-auto">
+          <p className="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
+            Above $3M in revenue? <span className="font-semibold text-slate-700">Poof Managed for Trades Pro</span> starts
+            at $2,400/mo, scoped per shop. Book a call and we&apos;ll size it with you.
+          </p>
+
+          <p className="text-center text-sm text-slate-500 mt-3 max-w-xl mx-auto">
             Not sure which tier fits? Book a 20-minute call. We&apos;ll be straight about whether Poof makes sense for your shop.
           </p>
         </div>
@@ -553,7 +635,7 @@ export default function ElectricalPage() {
               {[
                 { label: 'Controller-reviewed', icon: '✓' },
                 { label: 'Founder-led onboarding', icon: '✦' },
-                { label: '30-day refundable pilot', icon: '↻' },
+                { label: 'Closed by the 15th business day', icon: '↻' },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col items-center">
                   <span className="text-violet-300 text-xl mb-2">{item.icon}</span>

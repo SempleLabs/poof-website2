@@ -67,8 +67,8 @@ export default function FeatureSection() {
             <span className="text-gradient-gold"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            78 features across 9 categories — all included in one plan.
-            $79/mo for everything QuickBooks Plus charges $115 for.
+            93 features across 11 categories — all included in one plan.
+            One price. Every feature. No plan you have to grow into.
           </p>
         </AnimateOnScroll>
 
