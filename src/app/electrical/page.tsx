@@ -366,6 +366,21 @@ export default function ElectricalPage() {
         </div>
       </section>
 
+      {/* Guide link */}
+      <section className="pb-16 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <p className="text-center text-slate-600">
+              For the full walkthrough — chart of accounts, job costing, prevailing wage, subcontractor 1099s, and a monthly close routine —{' '}
+              <Link href="/blog/electrical-contractor-bookkeeping-guide" className="text-violet-700 font-semibold hover:underline">
+                read the complete guide to electrical contractor bookkeeping
+              </Link>
+              .
+            </p>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
       {/* Replaces */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

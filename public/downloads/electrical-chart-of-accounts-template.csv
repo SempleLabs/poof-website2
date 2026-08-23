@@ -1,0 +1,58 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,Invoiced work not yet collected
+1150,Retainage receivable,Asset,Other Current Asset,"Earned but withheld until closeout - keep out of ordinary AR so it does not read as collectible cash"
+1200,Inventory - truck stock,Asset,Other Current Asset,Wire breakers boxes and devices on the vans that have not been consumed on a job yet
+1210,Inventory - gear on hand,Asset,Other Current Asset,Panels transformers and switchgear bought ahead or staged for a job
+1300,Vehicles,Asset,Fixed Asset,Capitalize vans and trucks - expensing one destroys the month and misstates every margin from it
+1310,Tools & equipment,Asset,Fixed Asset,Benders wire pullers thermal cameras test equipment - durable equipment gets capitalized
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset - required for Section 179 and bonus depreciation elections
+2010,Accounts payable,Liability,Accounts Payable,Supply house and vendor invoices not yet paid
+2020,Credit cards,Liability,Credit Card,Cards used for fuel parts and small purchases
+2100,Equipment loans & vehicle notes,Liability,Long Term Liability,Financed vans trucks and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withheld taxes and benefits owed but not remitted
+2250,Prevailing wage fringe payable,Liability,Other Current Liability,Fringe owed on prevailing-wage hours where it is not paid as cash
+2300,Sales tax payable,Liability,Other Current Liability,Not your money - sits here until remitted
+2400,Deferred service agreement revenue,Liability,Other Current Liability,Agreements billed before the work is performed - confirm treatment with your CPA
+2500,Customer deposits,Liability,Other Current Liability,Money taken up front on generator and contract work before any work is done
+3010,Owner's capital,Equity,Equity,Money put into the business
+3020,Owner's draw,Equity,Equity,Money taken out - keep separate from wages
+3900,Retained earnings,Equity,Equity,Accumulated prior-year profit
+4010,Service & troubleshooting revenue,Income,Income,Diagnostic calls repairs device and circuit work
+4020,Panel & service upgrade revenue,Income,Income,Panel changes service upgrades meter work - high volume and high margin when priced right
+4030,EV charger install revenue,Income,Income,Residential and commercial EV equipment installs - growing line worth watching separately
+4040,Lighting & retrofit revenue,Income,Income,Fixture replacement and commercial lighting retrofits
+4050,Generator sales & install revenue,Income,Income,Standby generator equipment and installation - equipment-heavy with its own margin
+4060,New construction & tenant improvement revenue,Income,Income,Builder and TI work - bills in draws collects slowly carries retainage
+4070,Prevailing wage / public works revenue,Income,Income,Public and publicly-funded work - mandated wage rates and different margin
+4080,Emergency & after-hours revenue,Income,Income,Premium-rate nights weekends holidays
+4090,Service agreement revenue,Income,Income,Recurring plan billings - your predictable baseline
+4100,Low-voltage & data revenue,Income,Income,Structured cabling access control and data work if you carry it
+4900,Other income,Income,Income,Rebates referral fees warranty reimbursements - not operating revenue
+5010,Materials - wire & conduit,COGS,Cost of Goods Sold,"Copper pricing moves - cost this to the job at what you actually paid not what you quoted"
+5020,Materials - devices & fixtures,COGS,Cost of Goods Sold,Receptacles switches luminaires and trim
+5030,Gear & panels,COGS,Cost of Goods Sold,Panels breakers disconnects transformers - large traceable and deliberately marked up
+5040,EV & generator equipment,COGS,Cost of Goods Sold,Chargers and generator units - equipment cost kept off general materials
+5050,Truck stock consumed,COGS,Cost of Goods Sold,Parts pulled off the van onto a job - relieved from inventory not expensed at purchase
+5100,Direct labor - standard (burdened),COGS,Cost of Goods Sold,"Burdened tech cost on standard work - wage plus taxes comp and benefits roughly 1.3-1.4x"
+5110,Direct labor - prevailing wage (burdened),COGS,Cost of Goods Sold,"Mandated rate plus fringe - never blend with standard hours or you misprice both"
+5120,Direct labor - after-hours (burdened),COGS,Cost of Goods Sold,Premium labor tracked separately so after-hours margin is measurable
+5200,Permits & inspections,COGS,Cost of Goods Sold,Directly attributable heavier in electrical than most trades and routinely forgotten
+5300,Subcontractors,COGS,Cost of Goods Sold,Trenching concrete cutting low-voltage fire alarm patch and paint - also your 1099 population
+5400,Equipment rental,COGS,Cost of Goods Sold,Lifts trenchers bucket trucks specialty tooling per job
+5500,Callbacks & warranty,COGS,Cost of Goods Sold,Return trips on work already invoiced - charge back to the job that caused it
+5600,Freight & delivery,COGS,Cost of Goods Sold,Supply house delivery and drop-shipped gear
+5700,Disposal & recycling,COGS,Cost of Goods Sold,Old gear haul-off and copper scrap handling
+6010,Vehicles - fuel & maintenance,Expense,Expense,Fuel maintenance repairs registration and vehicle insurance
+6020,Insurance,Expense,Expense,General liability workers comp non-burdened portion umbrella
+6030,Contractor bonding,Expense,Expense,License and performance bonds required in most states
+6040,Office & administrative,Expense,Expense,Rent utilities dispatch salaries office supplies
+6050,Software & technology,Expense,Expense,Field-service software accounting software phone system
+6060,Marketing,Expense,Expense,Ads van wraps website review platforms
+6070,Professional fees,Expense,Expense,CPA legal including lien filings bookkeeping
+6080,Licensing & continuing education,Expense,Expense,Master and journeyman licensing state fees code update training
+6090,Bank & merchant fees,Expense,Expense,Processor fees and consumer financing dealer costs
+6100,Small tools & consumables,Expense,Expense,Blades bits tape hand tools below your capitalization threshold
+6110,Safety & PPE,Expense,Expense,Arc flash gear gloves testing and certification of protective equipment
+6900,Depreciation,Expense,Expense,Non-cash but it belongs on the P&L

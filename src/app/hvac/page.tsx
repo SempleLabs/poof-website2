@@ -367,6 +367,21 @@ export default function HvacPage() {
         </div>
       </section>
 
+      {/* Guide link */}
+      <section className="pb-16 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-up">
+            <p className="text-center text-slate-600">
+              For the full walkthrough — chart of accounts, job costing, the Jobber-to-books handoff, and a monthly close routine —{' '}
+              <Link href="/blog/hvac-bookkeeping-guide" className="text-violet-700 font-semibold hover:underline">
+                read the complete guide to HVAC bookkeeping
+              </Link>
+              .
+            </p>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
       {/* Replaces your current bookkeeper */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
