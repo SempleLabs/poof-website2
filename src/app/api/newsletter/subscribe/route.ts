@@ -158,7 +158,7 @@ export async function POST(request: NextRequest) {
                       </ul>
 
                       <p style="margin: 0 0 30px; color: #334155; font-size: 16px; line-height: 1.6;">
-                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 105 features, one flat price.
+                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 108 features, one flat price.
                       </p>
 
                       <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">

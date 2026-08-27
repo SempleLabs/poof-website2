@@ -93,6 +93,9 @@ const comparisonData = [
     { name: 'Invoice Drafted From the Completed Visit', poof: true, quickbooks: false },
     { name: 'Trade-Format Invoice (diagnosis, work performed, warranty)', poof: true, quickbooks: false },
     { name: 'A Completed Service Call Becomes a Job', poof: true, quickbooks: false },
+    { name: 'Office Review of the Field Report Before Send', poof: true, quickbooks: false },
+    { name: 'Even Work Distribution Across Technicians', poof: true, quickbooks: false },
+    { name: 'Unassigned-Job Escalation Before Start Time', poof: true, quickbooks: false },
   ]},
 ]
 
@@ -138,7 +141,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 105 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 108 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -255,7 +258,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. One plan, 105 features, no tier to grow into.
+              See the difference AI bookkeeping makes. One plan, 108 features, no tier to grow into.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

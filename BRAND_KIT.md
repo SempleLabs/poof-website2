@@ -8,27 +8,31 @@
 
 ---
 
-## ⚠️ Outstanding website corrections (as of 2026-08-23)
+## ⚠️ Outstanding website corrections (verified against the live site 2026-08-27)
 
 **Read this before writing any copy.** These are live pages that contradict this document.
-Checked against the running site on 2026-08-23. Delete each line as it is fixed.
+**Re-check the page before acting on a line here.** On 2026-08-27 three of the four rows in this
+table had already been fixed on the site and simply never deleted, and the stale list was repeated
+back as though it were current. A correction list nobody prunes becomes a source of false urgency.
 
 | Page | What's wrong now | Should be |
 |---|---|---|
-| **poofai.com/trades** | Offers the **"$250 trade pilot, fully refundable"** | The pilot was replaced by the **$750 Job Margin & Recovery Audit**. This is a live offer mismatch — a prospect can currently ask for an offer that no longer exists. **Most urgent item here.** |
-| **poofai.com/poof-vs-quickbooks** | Compares Poof against **QuickBooks Simple Start at "$38+/mo"** | Compare against **QuickBooks Plus at $140/mo**. Simple Start cannot do what Poof does, so the current table makes Poof look like twice the price while measuring against a plan that doesn't do the job. See [Which plan to compare against](#which-plan-to-compare-against--this-is-the-whole-argument) |
-| **poofai.com/poof-vs-quickbooks** | Footnote reads *"as of February 2026"* | *"as of August 2026"* — Intuit raised prices on **August 1, 2026** and the February figures are wrong |
-| **poofai.com/poof-vs-quickbooks** | States **78 features** | **105 features** |
+| **poofai.com/poof-vs-quickbooks** | States **105 features** | **108 features** — Group 11 gained dispatch fairness and the unassigned-job alarm, Group 12 gained office review of the field report |
 | Anywhere quoting the managed tiers | Two tiers only | Fine as-is. The new **$2,400 Pro tier is deliberately not a third column** — see [pricing](#vertical-pricing-tier--poof-managed-for-trades) |
+
+**Verified correct on 2026-08-27, do not re-raise:** `/trades` advertises the **$750 Job Margin &
+Recovery Audit** (the $250 pilot is gone), and the tiers read $1,200 / $1,500 with $1,500 onboarding
+and Pro from $2,400. `/poof-vs-quickbooks` compares against **QuickBooks Online Plus at $140/mo**
+and footnotes **"as of August 2026, following Intuit's August 1, 2026 increase"**.
 
 **New as of 2026-08-27 — the field-service loop shipped.** These are additions, not corrections;
 nothing on the site contradicts them yet, but the site does not say them either:
 
 | Where | What to add |
 |---|---|
-| **poofai.com/trades** | The strongest new proof point: **"Your tech closes the job from a text. The invoice writes itself."** No account, no app install for the techs — which is the answer to the objection every owner raises about field software. See [Group 12](#12-field-service--job-handoff-9-features) |
+| **poofai.com/trades** | The strongest new proof point: **"Your tech closes the job from a text. The invoice writes itself."** No account, no app install for the techs — which is the answer to the objection every owner raises about field software. See [Group 12](#12-field-service--job-handoff-10-features) |
 | **poofai.com/trades** | The headline promise now actually closes. "Know which jobs make money" used to depend on somebody tagging the work; a completed service call now **becomes a job on its own** and carries its revenue, parts, and labor onto the Per-Job P&L |
-| **poofai.com/poof-vs-quickbooks** | Feature count **93 → 105**, and QuickBooks has no equivalent of any of Group 12 |
+| **poofai.com/poof-vs-quickbooks** | Feature count **105 → 108**, and QuickBooks has no equivalent of any of Group 12 |
 | Anywhere describing the receptionist | It now books **and** dispatches: the assigned tech is texted their job automatically, and a shop can turn either the auto-assignment or the auto-text off |
 
 **Already correct, do not "fix":** the comparison page's Poof pricing ($79, $39.50 launch) is
@@ -59,7 +63,7 @@ current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are c
 
 ## What is Poof?
 
-**Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops.** AI agents handle categorization, reconciliation, and job costing; a former controller reviews the calls that matter. Shop owners get **per-job profitability with every monthly close** and **books closed by the 15th business day, every month** — using their existing Jobber/Housecall Pro exports and bank data, without touching the software themselves. Managed customers can also have Poof **answer the shop's phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-7-features)). (Full trades positioning, pricing, and landing-page spec: [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical).)
+**Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops.** AI agents handle categorization, reconciliation, and job costing; a former controller reviews the calls that matter. Shop owners get **per-job profitability with every monthly close** and **books closed by the 15th business day, every month** — using their existing Jobber/Housecall Pro exports and bank data, without touching the software themselves. Managed customers can also have Poof **answer the shop's phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-12-features)). (Full trades positioning, pricing, and landing-page spec: [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical).)
 
 Under the hood, Poof is a complete AI-powered bookkeeping platform — categorization, reconciliation, invoicing, receipt scanning, reports, budgeting, and forecasting. That same platform is also available as **self-serve software for any small business** (the QuickBooks-alternative product described throughout this doc), but the trades managed service is the primary go-to-market.
 
@@ -300,7 +304,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "105 features, one flat price — $79/mo" (self-serve tier)
+- "108 features, one flat price — $79/mo" (self-serve tier)
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -322,7 +326,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 105 Features in 12 Groups
+### 108 Features in 12 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
@@ -414,7 +418,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
 
 #### 10. Job Costing, Month-End Close & Payments (15 features)
-1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-9-features))
+1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-10-features))
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
 4. AI close narrative — plain-English month-end summary of what moved and why, generated automatically
@@ -430,24 +434,26 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 14. Accrual roll-forward subledger — deposits, deferrals, and accrued items carried forward period to period with their own schedule
 15. Document playbooks — forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected
 
-#### 11. AI Receptionist & Dispatch (10 features)
+#### 11. AI Receptionist & Dispatch (12 features)
 
 > **Availability note:** operator-installed as part of the managed service — Poof staff provision the number and the voice agent. It is **not self-serve**; a shop owner cannot sign up and switch it on. Market it as part of "Poof Managed for Trades," never as a button in the app. See the caveats at the end of this group.
 
 1. AI phone receptionist — answers the shop's line, knows the shop's name, hours, and service area, understands the caller's problem, and books the job
 2. Deterministic safety triage — gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted "leave the building, call 911" response. No-heat below 45°F and no-cool above 95°F are emergencies too. **These are rules in code, not instructions to a language model** — the AI narrates the call, it never decides whether something is an emergency
-3. Real-calendar booking — availability computed from technicians, their weekly windows, and their time off, minus existing appointments, respecting drive-time buffer and skill match. The database refuses overlapping bookings outright, so two calls arriving at once cannot double-book a tech
+3. Real-calendar booking — availability computed from technicians, their weekly windows, and their time off, minus existing appointments, respecting drive-time buffer. Skills are a **preference, not a gate**: a tech tagged for the work is preferred, an untagged tech is next, and a shop that has tagged nobody is never told it has no availability. The database refuses overlapping bookings outright, so two calls arriving at once cannot double-book a tech
 4. Rule-based human escalation — safety trigger, after-hours emergency, no slot inside the urgency window, caller asks for a person, repeat caller within 24 hours, cancellation threat, or low agent confidence
 5. Multi-channel notifications — one event fans out to the channels a shop configures: SMS, email, push, Slack, Telegram, or a webhook, with every delivery attempt logged
 6. Dispatch board, call log, and technician management — see the day's board, every call with its transcript, outcome, duration, and cost, and manage who can be dispatched
 7. Receptionist settings — greeting, hours, timezone, service area, urgency SLA windows, booking rules, and notification channels, all configurable by the shop
 8. Manual or automatic dispatch — two independent switches: whether the AI picks *who* goes, and whether the system texts them. A shop that wants a human staffing the board keeps the booking and the customer's promised window, and the job simply lands under "Needs a tech"
 9. Customer record on the first call — the caller becomes a customer record when the job is booked, not when they are eventually invoiced, and is matched on the last ten digits of their number, so the same household calling from a different phone format is one customer, not two
-10. Automatic technician dispatch — the assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one
+10. Automatic technician dispatch — the assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one. A dispatcher can re-send it by hand from the board at any time
+11. Work spread evenly across the crew — when several techs are free for the same slot, the job goes to whoever has the fewest jobs that day, then the fewest that week. No one quietly absorbs every call
+12. A job nobody is going to raises the alarm — an appointment approaching its start time with no technician assigned escalates to the shop, whether that is because the shop dispatches by hand or because nobody was free when it was booked. Emergencies are always assigned automatically, no matter how the shop has set the switches
 
 **What it does not do (do not imply otherwise):** **customer-facing** outbound texts — booking confirmations, reminders, and "your tech is on the way" — are **not built yet**. (Outbound texts to the *technician* are; see 10 above and Group 12. Do not blur the two.) It does not take payment on the call, does not optimize routes across a day's board, and does not clone the owner's voice. There are no autonomous outbound sales calls.
 
-#### 12. Field Service & Job Handoff (9 features)
+#### 12. Field Service & Job Handoff (10 features)
 
 > **Availability note:** part of the trades managed service, alongside Group 11. The technician's page needs no account and no app install, which is the point — see the caveat at the end of this group.
 
@@ -460,6 +466,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. **The invoice writes itself** — the tech taps Complete and a draft invoice exists in the office, with their own words on it, ready for review. Nobody retypes a paper ticket
 8. Trade-format invoice — diagnosis, work performed, recommended follow-up, equipment, and warranty print under real headings, with the opted-in jobsite photos beneath them. Not a one-line "HVAC service call — $458"
 9. **A service call becomes a job** — completing a visit creates the job, links it to the customer, and tags the invoice to it, so the work reaches the Per-Job P&L without anybody remembering to tag anything
+10. Office review before it reaches the customer — the dispatcher opens the field report from the board: what the tech wrote, the photos, the parts and labor, the customer's sign-off, and the draft invoice it produced. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it
 
 **What it does not do (do not imply otherwise):** the tech's page does not do GPS tracking, does not take payment on site, does not capture a drawn signature (it records a typed name and the time), and does not work offline — it needs a signal. It does not schedule or re-route; that is the dispatch board's job.
 
@@ -469,7 +476,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 93 (all included in every plan) |
+| Total features | 108 (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
 | AI assistant tools | 30+ (create, update, search, send, generate, import) |
@@ -496,7 +503,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 105 features included (self-serve tier) |
+| Monthly | **$79/mo** | All 108 features included (self-serve tier) |
 | Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
@@ -610,7 +617,7 @@ difference between a comparison and a claim.
 ### Company Timeline
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
-- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, job costing, month-end close, online payments, an AI phone receptionist that books and dispatches, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself — 105 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
+- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, job costing, month-end close, online payments, an AI phone receptionist that books and dispatches, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself — 108 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
 
 ---
 
@@ -880,6 +887,20 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 - **Added 3 features to Group 11:** manual-or-automatic dispatch (two independent switches), a customer record created on the **first call** rather than at invoicing (matched on the last ten digits of the number, so one household is one customer), and automatic technician dispatch texts carrying the field link.
 - **Jobs now belong to customers.** "Every job we've done for this customer" was a name comparison and is now a real link, so it survives a rename or a typo.
 - Updated feature count **93 → 105** (11 → 12 groups).
+- **Added 2 more to Group 11 and 1 to Group 12 (later the same day): 105 → 108.**
+  - **Work is spread across the crew.** When several techs are free for the same slot the job goes
+    to whoever has the fewest jobs that day. Previously the tie was broken by an internal id, which
+    meant the same tech won every contested slot forever — invisible, and it got worse as a shop grew.
+  - **A job nobody is going to now raises the alarm.** An appointment approaching its start with no
+    tech assigned escalates. This is the honest answer to the one objection to manual dispatch, and
+    emergencies are auto-assigned regardless of how the shop has set its switches.
+  - **The office can read the field report before the customer sees anything.** The dispatcher opens
+    what the tech wrote, the photos, the parts and labor and the draft invoice from the board.
+    Without this, Group 12 #5's per-photo invoice opt-in had no screen to happen on.
+- **Corrected in this pass:** the Key Numbers table still said **93** while the rest of the document
+  said 105, and Group 11 #3 described skill matching as a gate. Skills are a **preference with a
+  fallback** — a shop that has tagged nobody is never told it has no availability, and a tag nobody
+  carries never blocks a booking. Do not write copy implying tags are required.
 - **Honesty guardrails, do not cross:** the tech page does **no GPS tracking**, takes **no payment on site**, captures a typed name and timestamp rather than a drawn signature, and **needs a signal** — it does not work offline. **Customer-facing** texts (booking confirmation, reminder, "your tech is on the way") are still **not built**; only the technician gets texted. Do not blur those two.
 
 ### August 23, 2026 — AI receptionist, list price $79, the $750 audit replaces the pilot

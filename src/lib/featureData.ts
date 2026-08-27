@@ -431,7 +431,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Real-Calendar Booking",
-        description: "Availability is computed from your technicians, their weekly windows, and their time off, minus existing appointments — respecting drive-time buffer and skill match. The database refuses overlapping bookings outright, so two calls arriving at once can't double-book a tech"
+        description: "Availability is computed from your technicians, their weekly windows, and their time off, minus existing appointments, respecting drive-time buffer. Skills are a preference, not a gate: a tech tagged for the work is preferred and an untagged tech is next, so a shop that has tagged nobody is never told it has no availability. The database refuses overlapping bookings outright, so two calls arriving at once can't double-book a tech"
       },
       {
         title: "Rule-Based Human Escalation",
@@ -459,7 +459,15 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Automatic Technician Dispatch",
-        description: "The assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one"
+        description: "The assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one. A dispatcher can re-send it by hand from the board at any time"
+      },
+      {
+        title: "Work Spread Evenly Across the Crew",
+        description: "When several techs are free for the same slot, the job goes to whoever has the fewest jobs that day, then the fewest that week. No one quietly absorbs every call"
+      },
+      {
+        title: "A Job Nobody Is Going To Raises the Alarm",
+        description: "An appointment approaching its start time with no technician assigned escalates to the shop — whether that is because the shop dispatches by hand or because nobody was free when it was booked. Emergencies are always assigned automatically, no matter how the shop has set the switches"
       }
     ]
   },
@@ -503,6 +511,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "A Service Call Becomes a Job",
         description: "Completing a visit creates the job, links it to the customer, and tags the invoice to it, so the work reaches the Per-Job P&L without anybody remembering to tag anything"
+      },
+      {
+        title: "Office Review Before It Reaches the Customer",
+        description: "The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer's sign-off, and the draft invoice it produced. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it"
       }
     ]
   },
@@ -562,7 +574,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 105 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 108 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -622,7 +634,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 105 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 108 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -657,7 +669,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 105 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 108 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

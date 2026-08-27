@@ -22,6 +22,11 @@ const steps = [
     title: 'They tap Complete, and the invoice exists',
     body: 'A draft invoice is waiting in the office with the tech’s own words on it, ready for review. Nobody retypes a paper ticket. And the completed call becomes a job — linked to the customer, with the invoice tagged to it, so it reaches your Per-Job P&L without anyone remembering to tag anything.',
   },
+  {
+    number: '5',
+    title: 'Your office reads it before your customer does',
+    body: 'The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer’s sign-off, and the draft invoice it produced. The tech’s internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it.',
+  },
 ]
 
 export default function FieldServiceSection() {

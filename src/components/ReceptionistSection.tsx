@@ -12,7 +12,7 @@ const capabilities = [
   },
   {
     title: 'It books against real availability',
-    body: 'Slots come from your technicians, their weekly windows, and their time off, minus what is already booked — with drive-time buffer and skill match respected. The database refuses overlapping bookings outright, so two calls landing at once cannot double-book a tech.',
+    body: 'Slots come from your technicians, their weekly windows, and their time off, minus what is already booked, with drive-time buffer respected. Skills are a preference rather than a gate — a tech tagged for the work is preferred, an untagged tech is next — so a shop that has never tagged anyone is still never told it has no availability. The database refuses overlapping bookings outright, so two calls landing at once cannot double-book a tech.',
   },
   {
     title: 'It knows when to hand off',
@@ -25,6 +25,14 @@ const capabilities = [
   {
     title: 'The caller becomes a customer immediately',
     body: 'A booked job creates the customer record on the first call, not weeks later when someone finally invoices it. Matching runs on the last ten digits of the number, so the same household calling from a different phone format stays one customer instead of becoming two.',
+  },
+  {
+    title: 'The work spreads across the crew',
+    body: 'When several techs are free for the same slot, the job goes to whoever has the fewest jobs that day, then the fewest that week. Nobody quietly absorbs every call — which is the kind of thing that stays invisible until a good tech burns out.',
+  },
+  {
+    title: 'A job nobody is going to raises the alarm',
+    body: 'An appointment approaching its start time with no tech assigned escalates to you — whether that is because you dispatch by hand or because nobody was free when it was booked. Emergencies are assigned automatically regardless of how you have set the switches.',
   },
 ]
 

@@ -68,7 +68,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically runs $15–$140/month depending on features and tier. As of August 2026, QuickBooks starts at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140 — and Plus is the tier you need for job costing and budgets. Poof starts at $39.50/month (launch special, then $79/month) with all 105 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically runs $15–$140/month depending on features and tier. As of August 2026, QuickBooks starts at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140 — and Plus is the tier you need for job costing and budgets. Poof starts at $39.50/month (launch special, then $79/month) with all 108 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
