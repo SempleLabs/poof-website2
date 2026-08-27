@@ -4,6 +4,7 @@ excerpt: "Missed after-hours calls don't show up anywhere in your books — whic
 category: "Trades"
 readTime: "10 min read"
 date: "2026-08-23"
+updated: "2026-08-27"
 author: "Austin Semple"
 faqs:
   - question: "How much revenue do trade shops lose to missed after-hours calls?"
@@ -13,7 +14,7 @@ faqs:
   - question: "Can an AI answer the phone for a trade business safely?"
     answer: "It can, provided the safety decisions are not left to the AI. In a well-built system, emergency triggers — gas smell, carbon monoxide, smoke, sparking, an active alarm — are rules written in code, not instructions given to a language model. The AI conducts the conversation, but it never decides what counts as an emergency. That distinction matters enormously in this trade, and it is the first question worth asking any vendor selling you an AI receptionist."
   - question: "What should an AI receptionist for contractors actually be able to do?"
-    answer: "Four things at minimum: answer with your shop's name, hours, and service area; work out what the caller needs; book into real availability computed from your technicians' schedules, time off, and skill match rather than a generic calendar; and escalate to a human on a fixed set of rules. Be equally clear on what a given system does not do — outbound reminders, payment collection, and route optimization are all separate capabilities that vendors often imply come along with call answering."
+    answer: "Four things at minimum: answer with your shop's name, hours, and service area; work out what the caller needs; book into real availability computed from your technicians' schedules, time off, and skill match rather than a generic calendar; and escalate to a human on a fixed set of rules. Be equally clear on what a given system does not do, and make vendors separate customer-facing texts from technician-facing ones — a system that texts the assigned tech their job is doing something quite different from one that sends your customer a booking confirmation. Payment collection and route optimization are separate capabilities again, and vendors often imply they come along with call answering."
   - question: "How do you know whether missed calls are actually a problem for your shop?"
     answer: "Run the numbers for one month before spending anything. Most phone systems and field-service platforms report missed calls, after-hours calls, and average call duration. Multiply missed calls by your booking rate and your average ticket. If the result is under a few hundred dollars, this is not your problem and you should go work on something else. If it is several thousand, it is probably the cheapest revenue available to you, because the demand already exists — you just are not capturing it."
 ---
@@ -111,7 +112,7 @@ There should be a fixed, stated list. A reasonable one: safety trigger, after-ho
 
 **4. What does it not do?**
 
-This is where you learn the most. Ask directly about outbound confirmations and reminder texts, "on my way" messages, taking payment on the call, and route optimization. These are commonly *implied* and much less commonly built. A vendor who answers that question straight is worth more than one who does not.
+This is where you learn the most. Ask directly about outbound texts — and insist they separate two very different things: texting **your technician** their job, and texting **your customer** a confirmation, a reminder, or an "on my way." Vendors blur these constantly, and they are not the same build. Then ask about taking payment on the call and route optimization. A vendor who answers all of that straight is worth more than one who does not.
 
 ## What we built, and what we did not
 
@@ -123,7 +124,8 @@ The safety triage is deterministic. Gas smell, carbon monoxide, smoke, sparking,
 
 What it does not do, stated as plainly as I can:
 
-- **Outbound confirmations, reminders, and "on my way" texts are not built.** Not "coming soon" as a sales line — not built today.
+- **Customer-facing texts are not built.** No booking confirmation, no reminder, no "your tech is on the way." Not "coming soon" as a sales line — not built today.
+- **Your technician does get texted.** When a job is dispatched, the assigned tech receives a link that opens that job on their phone — no account and no app install. That is a technician-facing text, and I am separating the two deliberately, because most vendors do not.
 - It does not take payment on the call.
 - It does not optimize routes across the day's board.
 - It does not clone anyone's voice, and there are no outbound sales calls.
@@ -138,6 +140,8 @@ The reason a bookkeeping company built a phone system at all: the call is where 
 When a receptionist books a job, that job can carry its source, its urgency, and its type into your books from the first moment. You end up able to answer questions most shops cannot: what is the margin on after-hours work versus standard hours, what does an emergency call actually return, which call types are worth staffing for.
 
 That is a per-job costing question, and it is covered in [how to track per-job profitability](/blog/hvac-per-job-profitability). The phone is just where the data starts.
+
+Since this post first ran we closed the other end of that loop. The dispatched tech opens their job from the text, records arrival, logs parts and labor at the jobsite tagged by type, and taps Complete — and a draft invoice exists in the office with their words on it. The completed call becomes a job, linked to the customer, with the invoice tagged to it. Which means the missed-call problem and the "which jobs made money" problem turn out to be the same problem viewed from opposite ends: a call nobody answered and a job nobody costed are both revenue that never reached your books.
 
 ## What I would actually do
 

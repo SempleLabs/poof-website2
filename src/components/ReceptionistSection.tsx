@@ -18,6 +18,14 @@ const capabilities = [
     title: 'It knows when to hand off',
     body: 'A safety trigger, an after-hours emergency, no slot inside the urgency window, a caller who asks for a person, a repeat caller within 24 hours, a cancellation threat, or low confidence — any of these route the call to a human.',
   },
+  {
+    title: 'Then it dispatches — or waits for you',
+    body: 'Two independent switches: whether the AI picks who goes, and whether the system texts them. Leave both on and the assigned tech gets their job on their phone. Turn the first off and the booking still stands with the customer’s promised window — the job just lands under “Needs a tech” for whoever staffs your board.',
+  },
+  {
+    title: 'The caller becomes a customer immediately',
+    body: 'A booked job creates the customer record on the first call, not weeks later when someone finally invoices it. Matching runs on the last ten digits of the number, so the same household calling from a different phone format stays one customer instead of becoming two.',
+  },
 ]
 
 export default function ReceptionistSection() {
@@ -38,9 +46,9 @@ export default function ReceptionistSection() {
             </h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Managed customers can have Poof answer the shop&apos;s line. An AI receptionist picks up, works out
-              what the caller needs, books a real slot on a real tech&apos;s calendar, and escalates anything unsafe
-              to a person. The revenue that used to go to voicemail lands on the board instead &mdash; and the job it
-              creates gets costed like every other job.
+              what the caller needs, books a real slot on a real tech&apos;s calendar, dispatches the tech, and
+              escalates anything unsafe to a person. The revenue that used to go to voicemail lands on the board
+              instead &mdash; and the job it creates gets costed like every other job on your P&amp;L.
             </p>
           </div>
         </AnimateOnScroll>
@@ -77,10 +85,12 @@ export default function ReceptionistSection() {
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed">
               We install it for you as part of the managed service &mdash; we provision the number and the voice
-              agent. It is not a switch you flip yourself. Outbound confirmations, reminders, and
-              &ldquo;on my way&rdquo; texts are not built yet. It does not take payment on the call, does not
-              optimize routes across the day&apos;s board, and does not clone your voice. There are no outbound
-              sales calls. We would rather tell you that now than after you have signed.
+              agent. It is not a switch you flip yourself. <strong className="text-slate-100">Customer-facing
+              texts are not built yet</strong>: no booking confirmation, no reminder, no &ldquo;your tech is on
+              the way.&rdquo; Your technician does get texted their job &mdash; your customer does not. It does not
+              take payment on the call, does not optimize routes across the day&apos;s board, and does not clone
+              your voice. There are no outbound sales calls. We would rather tell you that now than after you
+              have signed.
             </p>
           </div>
         </AnimateOnScroll>

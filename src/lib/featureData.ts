@@ -18,7 +18,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Job Costing & Per-Job Profitability",
-        description: "Tag transactions, bills, and invoices to jobs and see profit per job — know which jobs actually made money, every month"
+        description: "Tag transactions, bills, and invoices to jobs and see profit per job — know which jobs actually made money, every month. For shops using the receptionist and the technician field link, a completed service call becomes a job on its own, and its revenue, parts, and labor land on it without anyone tagging anything"
       },
       {
         title: "AP Cash Planner",
@@ -419,7 +419,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "Installed by Poof as part of Poof Managed for Trades — our team provisions the number and the voice agent. It is not a switch you flip yourself. Outbound confirmations, reminders, and \u201con my way\u201d texts are not built yet, and the receptionist does not take payment on the call.",
+    note: "Installed by Poof as part of Poof Managed for Trades \u2014 our team provisions the number and the voice agent. It is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -448,6 +448,61 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Receptionist Settings",
         description: "Greeting, hours, timezone, service area, urgency SLA windows, booking rules, and notification channels — all configurable for your shop"
+      },
+      {
+        title: "Manual or Automatic Dispatch",
+        description: "Two independent switches: whether the AI picks who goes, and whether the system texts them. A shop that wants a human staffing the board keeps the booking and the customer's promised window — the job simply lands under \u201cNeeds a tech\u201d"
+      },
+      {
+        title: "Customer Record on the First Call",
+        description: "The caller becomes a customer record when the job is booked, not when they are eventually invoiced — and is matched on the last ten digits of their number, so the same household calling from a different phone format is one customer, not two"
+      },
+      {
+        title: "Automatic Technician Dispatch",
+        description: "The assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one"
+      }
+    ]
+  },
+  {
+    name: "Field Service & Job Handoff",
+    icon: "field",
+    note: "Part of the trades managed service, alongside the AI receptionist. The technician's page needs no account and no app install \u2014 that is the point. It does not do GPS tracking, does not take payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal: it does not work offline.",
+    features: [
+      {
+        title: "Technician Field Link",
+        description: "The tech opens their job from a text message — no account, no password, no app install. The link is signed, opens exactly one job, and can be revoked; rescheduling invalidates it automatically. This is the answer to \u201cmy guys won't use another app\u201d"
+      },
+      {
+        title: "Arrival Tracking",
+        description: "On-my-way, arrived, and completed times are recorded when they happen, not estimated afterwards — which is the number that gets argued about with a customer six weeks later"
+      },
+      {
+        title: "Field Report",
+        description: "What was wrong, what was done, and what still needs doing, written on the phone at the jobsite"
+      },
+      {
+        title: "Equipment Capture",
+        description: "Make, model, and serial recorded against the visit, so the next tech to attend knows what is out there"
+      },
+      {
+        title: "Jobsite Photos",
+        description: "Before, after, nameplate, and receipt, taken through the same link. Each one is opted in or out of the customer's invoice individually, so the supply-house receipt showing what the shop paid can never reach the customer by accident"
+      },
+      {
+        title: "Parts & Labor Logged in the Field",
+        description: "Each line tagged as labor, part, or fee by the person who knows — which is what makes the margin on the job real instead of inferred from a description afterwards"
+      },
+      {
+        title: "The Invoice Writes Itself",
+        description: "The tech taps Complete and a draft invoice exists in the office, with their own words on it, ready for review. Nobody retypes a paper ticket"
+      },
+      {
+        title: "Trade-Format Invoice",
+        description: "Diagnosis, work performed, recommended follow-up, equipment, and warranty print under real headings, with the opted-in jobsite photos beneath them — not a one-line \u201cHVAC service call \u2014 $458\u201d"
+      },
+      {
+        title: "A Service Call Becomes a Job",
+        description: "Completing a visit creates the job, links it to the customer, and tags the invoice to it, so the work reaches the Per-Job P&L without anybody remembering to tag anything"
       }
     ]
   },
@@ -507,7 +562,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 93 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 105 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -567,7 +622,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 93 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 105 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -602,7 +657,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 93 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 105 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

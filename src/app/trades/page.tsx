@@ -6,6 +6,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
 import ReceptionistSection from '@/components/ReceptionistSection'
+import FieldServiceSection from '@/components/FieldServiceSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -341,6 +342,8 @@ export default function TradesPage() {
       </section>
 
       <ReceptionistSection />
+
+      <FieldServiceSection />
 
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">

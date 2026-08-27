@@ -70,6 +70,11 @@ const groupIcons: Record<string, JSX.Element> = {
       <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
     </svg>
   ),
+  field: (
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1M15.5,12.5L10.7,17.3L8.5,15.1L9.56,14.04L10.7,15.18L14.44,11.44L15.5,12.5Z"/>
+    </svg>
+  ),
 }
 
 // Short labels for tabs
@@ -85,6 +90,7 @@ const tabLabels: Record<string, string> = {
   'Productivity & Workflow': 'Productivity',
   'Poof AI Capabilities': 'Poof AI',
   'AI Receptionist & Dispatch': 'Receptionist',
+  'Field Service & Job Handoff': 'Field Service',
 }
 
 export default function FeaturesPage() {
@@ -111,7 +117,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
-        subtitle="93 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
+        subtitle="105 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"

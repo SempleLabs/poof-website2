@@ -66,7 +66,7 @@ export default function ProductHuntPage() {
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Connect your accounts and Poof categorizes, reconciles, and closes your books — 93 features, one plan, built by a former controller. Normally $79/mo with a 30-day trial.
+              Connect your accounts and Poof categorizes, reconciles, and closes your books — 105 features, one plan, built by a former controller. Normally $79/mo with a 30-day trial.
             </p>
           </AnimateOnScroll>
 
@@ -124,7 +124,7 @@ export default function ProductHuntPage() {
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="text-center mt-10">
               <Link href="/features" className="text-gold-600 font-semibold hover:text-gold-700 transition-colors">
-                See all 93 features →
+                See all 105 features →
               </Link>
             </div>
           </AnimateOnScroll>

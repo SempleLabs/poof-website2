@@ -67,7 +67,7 @@ export default function FeatureSection() {
             <span className="text-gradient-gold"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            93 features across 11 categories — all included in one plan.
+            105 features across 12 categories — all included in one plan.
             One price. Every feature. No plan you have to grow into.
           </p>
         </AnimateOnScroll>

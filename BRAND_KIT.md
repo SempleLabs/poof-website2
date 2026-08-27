@@ -1,6 +1,6 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: August 23, 2026
+> **Living document** — Last updated: August 27, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 > **⭐ PRIMARY GO-TO-MARKET FOCUS (as of August 2026): TRADE CONTRACTORS.**
@@ -18,8 +18,18 @@ Checked against the running site on 2026-08-23. Delete each line as it is fixed.
 | **poofai.com/trades** | Offers the **"$250 trade pilot, fully refundable"** | The pilot was replaced by the **$750 Job Margin & Recovery Audit**. This is a live offer mismatch — a prospect can currently ask for an offer that no longer exists. **Most urgent item here.** |
 | **poofai.com/poof-vs-quickbooks** | Compares Poof against **QuickBooks Simple Start at "$38+/mo"** | Compare against **QuickBooks Plus at $140/mo**. Simple Start cannot do what Poof does, so the current table makes Poof look like twice the price while measuring against a plan that doesn't do the job. See [Which plan to compare against](#which-plan-to-compare-against--this-is-the-whole-argument) |
 | **poofai.com/poof-vs-quickbooks** | Footnote reads *"as of February 2026"* | *"as of August 2026"* — Intuit raised prices on **August 1, 2026** and the February figures are wrong |
-| **poofai.com/poof-vs-quickbooks** | States **78 features** | **93 features** |
+| **poofai.com/poof-vs-quickbooks** | States **78 features** | **105 features** |
 | Anywhere quoting the managed tiers | Two tiers only | Fine as-is. The new **$2,400 Pro tier is deliberately not a third column** — see [pricing](#vertical-pricing-tier--poof-managed-for-trades) |
+
+**New as of 2026-08-27 — the field-service loop shipped.** These are additions, not corrections;
+nothing on the site contradicts them yet, but the site does not say them either:
+
+| Where | What to add |
+|---|---|
+| **poofai.com/trades** | The strongest new proof point: **"Your tech closes the job from a text. The invoice writes itself."** No account, no app install for the techs — which is the answer to the objection every owner raises about field software. See [Group 12](#12-field-service--job-handoff-9-features) |
+| **poofai.com/trades** | The headline promise now actually closes. "Know which jobs make money" used to depend on somebody tagging the work; a completed service call now **becomes a job on its own** and carries its revenue, parts, and labor onto the Per-Job P&L |
+| **poofai.com/poof-vs-quickbooks** | Feature count **93 → 105**, and QuickBooks has no equivalent of any of Group 12 |
+| Anywhere describing the receptionist | It now books **and** dispatches: the assigned tech is texted their job automatically, and a shop can turn either the auto-assignment or the auto-text off |
 
 **Already correct, do not "fix":** the comparison page's Poof pricing ($79, $39.50 launch) is
 current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are current.
@@ -290,7 +300,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "93 features, one flat price — $79/mo" (self-serve tier)
+- "105 features, one flat price — $79/mo" (self-serve tier)
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -312,7 +322,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 93 Features in 11 Groups
+### 105 Features in 12 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
@@ -404,7 +414,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
 
 #### 10. Job Costing, Month-End Close & Payments (15 features)
-1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**)
+1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-9-features))
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
 4. AI close narrative — plain-English month-end summary of what moved and why, generated automatically
@@ -420,7 +430,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 14. Accrual roll-forward subledger — deposits, deferrals, and accrued items carried forward period to period with their own schedule
 15. Document playbooks — forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected
 
-#### 11. AI Receptionist & Dispatch (7 features)
+#### 11. AI Receptionist & Dispatch (10 features)
 
 > **Availability note:** operator-installed as part of the managed service — Poof staff provision the number and the voice agent. It is **not self-serve**; a shop owner cannot sign up and switch it on. Market it as part of "Poof Managed for Trades," never as a button in the app. See the caveats at the end of this group.
 
@@ -431,8 +441,27 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. Multi-channel notifications — one event fans out to the channels a shop configures: SMS, email, push, Slack, Telegram, or a webhook, with every delivery attempt logged
 6. Dispatch board, call log, and technician management — see the day's board, every call with its transcript, outcome, duration, and cost, and manage who can be dispatched
 7. Receptionist settings — greeting, hours, timezone, service area, urgency SLA windows, booking rules, and notification channels, all configurable by the shop
+8. Manual or automatic dispatch — two independent switches: whether the AI picks *who* goes, and whether the system texts them. A shop that wants a human staffing the board keeps the booking and the customer's promised window, and the job simply lands under "Needs a tech"
+9. Customer record on the first call — the caller becomes a customer record when the job is booked, not when they are eventually invoiced, and is matched on the last ten digits of their number, so the same household calling from a different phone format is one customer, not two
+10. Automatic technician dispatch — the assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one
 
-**What it does not do (do not imply otherwise):** outbound confirmations, reminders, and "on my way" texts are **not built yet**. It does not take payment on the call, does not optimize routes across a day's board, and does not clone the owner's voice. There are no autonomous outbound sales calls.
+**What it does not do (do not imply otherwise):** **customer-facing** outbound texts — booking confirmations, reminders, and "your tech is on the way" — are **not built yet**. (Outbound texts to the *technician* are; see 10 above and Group 12. Do not blur the two.) It does not take payment on the call, does not optimize routes across a day's board, and does not clone the owner's voice. There are no autonomous outbound sales calls.
+
+#### 12. Field Service & Job Handoff (9 features)
+
+> **Availability note:** part of the trades managed service, alongside Group 11. The technician's page needs no account and no app install, which is the point — see the caveat at the end of this group.
+
+1. Technician field link — the tech opens their job from a text message. **No account, no password, no app install.** The link is signed, opens exactly one job, and can be revoked; rescheduling invalidates it automatically. This is the answer to "my guys won't use another app"
+2. Arrival tracking — on-my-way, arrived, and completed times are **recorded when they happen**, not estimated afterwards. That is the number that gets argued about with a customer six weeks later
+3. Field report — what was wrong, what was done, and what still needs doing, written on the phone at the jobsite
+4. Equipment capture — make, model, and serial recorded against the visit, so the next tech to attend knows what is out there
+5. Jobsite photos — before, after, nameplate, and receipt, taken through the same link. Each one is opted in or out of the customer's invoice individually, so the supply-house receipt showing what the shop paid can never reach the customer by accident
+6. Parts and labor logged in the field — each line tagged as labor, part, or fee **by the person who knows**, which is what makes the margin on the job real instead of inferred from a description afterwards
+7. **The invoice writes itself** — the tech taps Complete and a draft invoice exists in the office, with their own words on it, ready for review. Nobody retypes a paper ticket
+8. Trade-format invoice — diagnosis, work performed, recommended follow-up, equipment, and warranty print under real headings, with the opted-in jobsite photos beneath them. Not a one-line "HVAC service call — $458"
+9. **A service call becomes a job** — completing a visit creates the job, links it to the customer, and tags the invoice to it, so the work reaches the Per-Job P&L without anybody remembering to tag anything
+
+**What it does not do (do not imply otherwise):** the tech's page does not do GPS tracking, does not take payment on site, does not capture a drawn signature (it records a typed name and the time), and does not work offline — it needs a signal. It does not schedule or re-route; that is the dispatch board's job.
 
 ---
 
@@ -467,7 +496,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 93 features included (self-serve tier) |
+| Monthly | **$79/mo** | All 105 features included (self-serve tier) |
 | Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
@@ -581,7 +610,7 @@ difference between a comparison and a claim.
 ### Company Timeline
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
-- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, job costing, month-end close, online payments, and an AI phone receptionist that books and dispatches — 93 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
+- **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, job costing, month-end close, online payments, an AI phone receptionist that books and dispatches, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself — 105 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
 
 ---
 
@@ -841,6 +870,17 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### August 27, 2026 — the field-service loop: a tech closes the job, the invoice writes itself
+
+- **Added feature Group 12 — Field Service & Job Handoff (9 features).** The technician opens their job from a texted link with **no account and no app install**, records arrival, writes what was wrong / what was done / what still needs doing, captures equipment and jobsite photos, logs parts and labor tagged by type, and taps Complete — and a draft invoice exists in the office carrying their own words. Verified end to end against the live demo shop on August 27.
+  - **The sales point is the no-login part.** "My guys won't use another app" is the objection every owner raises about field software, and the honest answer here is that there is no app.
+  - **Photos are opted in per photo.** The supply-house receipt showing what the shop paid for a part defaults to *not* printing on the customer's invoice. Say this out loud — it is the detail that tells an owner somebody thought about their margin.
+- **The headline promise now actually closes.** "Know which jobs make money" previously depended on somebody remembering to tag work to a job — and nothing in the product created a job at all. A booked, dispatched, completed, invoiced service call could never reach the Per-Job P&L. Completing a visit now creates the job, links it to the customer, and tags the invoice to it. This was a real hole in the thing the product is sold on; it is closed.
+- **Added 3 features to Group 11:** manual-or-automatic dispatch (two independent switches), a customer record created on the **first call** rather than at invoicing (matched on the last ten digits of the number, so one household is one customer), and automatic technician dispatch texts carrying the field link.
+- **Jobs now belong to customers.** "Every job we've done for this customer" was a name comparison and is now a real link, so it survives a rename or a typo.
+- Updated feature count **93 → 105** (11 → 12 groups).
+- **Honesty guardrails, do not cross:** the tech page does **no GPS tracking**, takes **no payment on site**, captures a typed name and timestamp rather than a drawn signature, and **needs a signal** — it does not work offline. **Customer-facing** texts (booking confirmation, reminder, "your tech is on the way") are still **not built**; only the technician gets texted. Do not blur those two.
 
 ### August 23, 2026 — AI receptionist, list price $79, the $750 audit replaces the pilot
 
