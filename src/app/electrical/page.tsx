@@ -10,7 +10,7 @@ import FieldServiceSection from '@/components/FieldServiceSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Electrical Contractor Bookkeeping Services | Poof',
+  title: 'Outsourced Electrical Contractor Bookkeeping Service | Poof',
   description:
     'Electrical contractor bookkeeping for shops doing $750K–$3M. Per-job profit on every monthly close, reviewed by a former controller. From $1,200/mo.',
   alternates: {

@@ -10,14 +10,14 @@ import FieldServiceSection from '@/components/FieldServiceSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Plumbing Bookkeeping Services for Shop Owners | Poof',
+  title: 'Outsourced Plumbing Bookkeeping Service — Done For You | Poof',
   description:
-    'Plumbing bookkeeping for shops doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
+    'Done-for-you plumbing bookkeeping for shops doing $750K–$3M. We replace your part-time bookkeeper: per-job profit on every close, books closed by the 15th business day, reviewed by a former controller. From $1,200/mo.',
   alternates: {
     canonical: 'https://www.poofai.com/plumbing',
   },
   openGraph: {
-    title: 'Plumbing Bookkeeping Services for Shop Owners | Poof',
+    title: 'Outsourced Plumbing Bookkeeping Service — Done For You | Poof',
     description:
       'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for plumbing service shops.',
     url: 'https://www.poofai.com/plumbing',

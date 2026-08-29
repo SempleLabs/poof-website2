@@ -8,3 +8,7 @@ build/
 *.tsbuildinfo
 .DS_Store
 .vercel
+
+# GSC automation
+.gsc-reports/
+*service-account*.json

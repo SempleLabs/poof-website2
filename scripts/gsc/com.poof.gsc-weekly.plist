@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.poof.gsc-weekly</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-lc</string>
+    <string>cd "$HOME/Documents/Austin/Semple Labs LLC/AutoM8 Bookkeeping/Poof_app/poof-website2" &amp;&amp; node scripts/gsc/gsc.mjs</string>
+  </array>
+
+  <!-- Mondays at 8:07am. Off the :00 mark on purpose. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>1</integer>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>7</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/poof-gsc.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/poof-gsc.err</string>
+</dict>
+</plist>
