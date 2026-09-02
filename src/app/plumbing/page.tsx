@@ -7,6 +7,7 @@ import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
 import ReceptionistSection from '@/components/ReceptionistSection'
 import FieldServiceSection from '@/components/FieldServiceSection'
+import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -169,6 +170,10 @@ const faqs = [
   {
     q: 'What do you actually commit to once I am a client?',
     a: 'Four things, in writing. Your books are closed by the 15th business day, every month. Every completed job is costed within 5 business days. You get an unbilled-work report every Friday. And your controller responds within 1 business day. If we miss, you will hear it from us first.',
+  },
+  {
+    q: 'How do you handle deposits on repipes and prepaid service agreements?',
+    a: 'A deposit on a repipe or remodel is a liability from the day it lands, not revenue, and it is released to that job\'s revenue when the job is done — previewed first, with a warning if the job was also invoiced. A prepaid service agreement is deferred at sale and earns per visit, automatically when the tech taps Complete on a maintenance visit. If a plan customer cancels, your office records refund or forfeit and the books show which. That is what keeps a big-deposit month from reading as a big-profit month.',
   },
   {
     q: 'Do I need to switch from Jobber or Housecall Pro?',
@@ -475,6 +480,8 @@ export default function PlumbingPage() {
       <ReceptionistSection />
 
       <FieldServiceSection />
+
+      <UnearnedRevenueSection />
 
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">

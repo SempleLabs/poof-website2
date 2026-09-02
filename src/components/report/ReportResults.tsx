@@ -252,7 +252,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
             href="/features"
             className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
           >
-            See All 108 Features
+            See All 110 Features
           </Link>
         </div>
       </div>

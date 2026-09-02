@@ -7,6 +7,7 @@ import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
 import ReceptionistSection from '@/components/ReceptionistSection'
 import FieldServiceSection from '@/components/FieldServiceSection'
+import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -150,6 +151,10 @@ const faqs = [
   {
     q: 'What do you actually commit to once I am a client?',
     a: 'Four things, in writing. Your books are closed by the 15th business day, every month. Every completed job is costed within 5 business days. You get an unbilled-work report every Friday. And your controller responds within 1 business day. If we miss, you will hear it from us first.',
+  },
+  {
+    q: 'How do you handle maintenance agreements and install deposits?',
+    a: 'Both stay unearned until the work happens. A prepaid tune-up plan is deferred when it is sold, and each completed maintenance visit earns its share — automatically when your tech taps Complete. A repair call on a plan customer does not count against the plan. A deposit on a system install sits as a liability and is released to that job\'s revenue when the install is done, previewed first. If a plan customer cancels, your office records refund or forfeit and the books show which. So your agreement revenue is your real recurring baseline, not a lump that lands whenever the customer happened to pay.',
   },
   {
     q: 'Do I need to switch from Jobber or Housecall Pro?',
@@ -436,6 +441,8 @@ export default function HvacPage() {
       <ReceptionistSection />
 
       <FieldServiceSection />
+
+      <UnearnedRevenueSection />
 
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">

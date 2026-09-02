@@ -7,6 +7,7 @@ import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
 import ReceptionistSection from '@/components/ReceptionistSection'
 import FieldServiceSection from '@/components/FieldServiceSection'
+import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -150,6 +151,10 @@ const faqs = [
   {
     q: 'What do you actually commit to once I am a client?',
     a: 'Four things, in writing. Your books are closed by the 15th business day, every month. Every completed job is costed within 5 business days. You get an unbilled-work report every Friday. And your controller responds within 1 business day. If we miss, you will hear it from us first.',
+  },
+  {
+    q: 'How do you handle deposits on generator installs and panel upgrades?',
+    a: 'As a liability, until the work is done. A deposit sits in customer deposits from the day it lands and is released to that job\'s revenue when the install completes — previewed first, with a warning if the job was also invoiced. Prepaid maintenance plans, where you sell them, are deferred and earn per completed visit. If a plan customer cancels, your office records refund or forfeit and the books show which. Your P&L shows what you earned in the month, not what customers happened to pay in.',
   },
   {
     q: 'Do I need to switch from Jobber or Housecall Pro?',
@@ -435,6 +440,8 @@ export default function ElectricalPage() {
       <ReceptionistSection />
 
       <FieldServiceSection />
+
+      <UnearnedRevenueSection />
 
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">

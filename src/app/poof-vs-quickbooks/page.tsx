@@ -82,12 +82,14 @@ const comparisonData = [
     { name: 'Peer Benchmarks on the Per-Job P&L', poof: true, quickbooks: false },
     { name: 'Period Close & Locking with Tie-Out Checks', poof: true, quickbooks: false },
     { name: 'AI Close Narrative', poof: true, quickbooks: false },
+    { name: 'Customer Deposits Held as a Liability, Released to the Job on Completion', poof: true, quickbooks: false },
+    { name: 'Prepaid Maintenance Plans Earned Per Completed Visit', poof: true, quickbooks: false },
     { name: 'AI Phone Receptionist + Dispatch (managed service)', poof: true, quickbooks: false },
   ]},
   { category: 'Field Service & Job Handoff', features: [
     { name: 'Technician Field Link (no account, no app install)', poof: true, quickbooks: false },
     { name: 'Arrival Tracking (on-my-way, arrived, completed)', poof: true, quickbooks: false },
-    { name: 'Field Report & Equipment Capture', poof: true, quickbooks: false },
+    { name: 'Field Report & Equipment on File (per address)', poof: true, quickbooks: false },
     { name: 'Jobsite Photos, Opted In Per Photo', poof: true, quickbooks: false },
     { name: 'Parts & Labor Logged in the Field', poof: true, quickbooks: false },
     { name: 'Invoice Drafted From the Completed Visit', poof: true, quickbooks: false },
@@ -141,7 +143,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 108 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 110 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -243,7 +245,7 @@ export default function PoofVsQuickbooksPage() {
           </AnimateOnScroll>
 
           <p className="text-sm text-slate-500 text-center mt-6">
-            Compared against QuickBooks Online Plus at $140/mo &mdash; the plan that matches Poof&apos;s capability set. QuickBooks list prices as of August 2026, following Intuit&apos;s August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340. Features and pricing may vary; re-check before relying on these figures.
+            Compared against QuickBooks Online Plus at $140/mo &mdash; the plan that matches Poof&apos;s capability set. QuickBooks list prices as of August 2026, following Intuit&apos;s August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340. Features and pricing may vary; re-check before relying on these figures. A cross in the QuickBooks column means the capability is not built in: deposit release and per-visit plan revenue, for example, are manual journal entries there.
           </p>
         </div>
       </section>
@@ -258,7 +260,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. One plan, 108 features, no tier to grow into.
+              See the difference AI bookkeeping makes. One plan, 110 features, no tier to grow into.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

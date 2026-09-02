@@ -1,6 +1,6 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: August 27, 2026
+> **Living document** — Last updated: September 1, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 > **⭐ PRIMARY GO-TO-MARKET FOCUS (as of August 2026): TRADE CONTRACTORS.**
@@ -17,7 +17,7 @@ back as though it were current. A correction list nobody prunes becomes a source
 
 | Page | What's wrong now | Should be |
 |---|---|---|
-| **poofai.com/poof-vs-quickbooks** | States **105 features** | **108 features** — Group 11 gained dispatch fairness and the unassigned-job alarm, Group 12 gained office review of the field report |
+| **poofai.com/poof-vs-quickbooks** | States **108 features** (verified 2026-09-01 — the earlier 105 row was already fixed and has been pruned) | **110 features** — Group 10 gained customer-deposit release and maintenance-plan deferred revenue |
 | Anywhere quoting the managed tiers | Two tiers only | Fine as-is. The new **$2,400 Pro tier is deliberately not a third column** — see [pricing](#vertical-pricing-tier--poof-managed-for-trades) |
 
 **Verified correct on 2026-08-27, do not re-raise:** `/trades` advertises the **$750 Job Margin &
@@ -32,11 +32,21 @@ nothing on the site contradicts them yet, but the site does not say them either:
 |---|---|
 | **poofai.com/trades** | The strongest new proof point: **"Your tech closes the job from a text. The invoice writes itself."** No account, no app install for the techs — which is the answer to the objection every owner raises about field software. See [Group 12](#12-field-service--job-handoff-10-features) |
 | **poofai.com/trades** | The headline promise now actually closes. "Know which jobs make money" used to depend on somebody tagging the work; a completed service call now **becomes a job on its own** and carries its revenue, parts, and labor onto the Per-Job P&L |
-| **poofai.com/poof-vs-quickbooks** | Feature count **105 → 108**, and QuickBooks has no equivalent of any of Group 12 |
+| **poofai.com/poof-vs-quickbooks** | ~~Feature count 105 → 108~~ (done by 2026-09-01) — now **108 → 110**, and QuickBooks has no equivalent of any of Group 12 |
 | Anywhere describing the receptionist | It now books **and** dispatches: the assigned tech is texted their job automatically, and a shop can turn either the auto-assignment or the auto-text off |
 
 **Already correct, do not "fix":** the comparison page's Poof pricing ($79, $39.50 launch) is
 current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are current.
+
+**New as of 2026-09-01 — money that isn't earned yet stays unearned.** Additions again; the site
+does not contradict them, it just doesn't say them (verified: `/trades` has no mention of deposits
+or maintenance plans).
+
+| Where | What to add |
+|---|---|
+| **poofai.com/trades** | The controller-grade proof point: **"A down payment isn't revenue until the job is done. A plan isn't revenue until the visit happens."** A customer deposit on an install sits as a liability and is released to that job's revenue when the job completes; a prepaid maintenance plan earns its share per visit, **automatically when the tech taps Complete**. This is the difference between books that read the way a bank feed suggests and books a controller would sign |
+| **poofai.com/trades** | Cancellation is a recorded decision, not a silent write-off: when a plan customer leaves, the office chooses refund or forfeit and the books show which. Say this — it is what an owner who has been burned by "where did that prepaid money go" wants to hear |
+| **poofai.com/poof-vs-quickbooks** | Feature count **108 → 110**. QuickBooks Online has no per-visit plan release and no deposit-release workflow — both are manual journal entries there |
 
 ---
 
@@ -304,7 +314,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "108 features, one flat price — $79/mo" (self-serve tier)
+- "110 features, one flat price — $79/mo" (self-serve tier)
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -326,7 +336,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 108 Features in 12 Groups
+### 110 Features in 12 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
@@ -417,7 +427,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 14. Guided onboarding walkthrough — AI navigates the UI, highlights elements, and walks new users through setup step by step
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
 
-#### 10. Job Costing, Month-End Close & Payments (15 features)
+#### 10. Job Costing, Month-End Close & Payments (17 features)
 1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-10-features))
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
@@ -433,6 +443,8 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 13. Period tie-out engine — a standing check dashboard that proves the period actually ties before it is closed, not after
 14. Accrual roll-forward subledger — deposits, deferrals, and accrued items carried forward period to period with their own schedule
 15. Document playbooks — forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected
+16. Customer deposits released on completion — a down payment on an install is held as a liability, not booked as revenue on the day it lands, and released to that job's revenue when the job is done. The release previews first, refuses a deposit that isn't categorised as a deposit, and warns if the job was also invoiced
+17. Maintenance plans earn as visits are performed — a prepaid plan sale is deferred and each performed visit earns its share to the penny, **automatically when the tech completes a maintenance visit** (a repair call on a plan customer does not count; two open plans on one customer is left for the office to pick). Cancelling is a recorded decision — refund or forfeit — never a silent write-off, and a visit that was both released and invoiced is flagged at month-end close
 
 #### 11. AI Receptionist & Dispatch (12 features)
 
@@ -460,13 +472,13 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 1. Technician field link — the tech opens their job from a text message. **No account, no password, no app install.** The link is signed, opens exactly one job, and can be revoked; rescheduling invalidates it automatically. This is the answer to "my guys won't use another app"
 2. Arrival tracking — on-my-way, arrived, and completed times are **recorded when they happen**, not estimated afterwards. That is the number that gets argued about with a customer six weeks later
 3. Field report — what was wrong, what was done, and what still needs doing, written on the phone at the jobsite
-4. Equipment capture — make, model, and serial recorded against the visit, so the next tech to attend knows what is out there
+4. Equipment on file — the units at that address are on a list the tech taps to attach (several taps for a two-system house); an unlisted unit is typed once and is on file for whoever attends next. Make, model, and serial follow the unit, not the visit
 5. Jobsite photos — before, after, nameplate, and receipt, taken through the same link. Each one is opted in or out of the customer's invoice individually, so the supply-house receipt showing what the shop paid can never reach the customer by accident
-6. Parts and labor logged in the field — each line tagged as labor, part, or fee **by the person who knows**, which is what makes the margin on the job real instead of inferred from a description afterwards
+6. Parts and labor logged in the field — each line tagged as labor, part, or fee **by the person who knows**, parts picked from the shop's own price list so the invoice line lands on the right sales account, and the part's cost rides in from the catalogue — never from the tech's form, because a tech on a roof should not be looking up landed cost. That is what makes the margin on the job real instead of inferred from a description afterwards
 7. **The invoice writes itself** — the tech taps Complete and a draft invoice exists in the office, with their own words on it, ready for review. Nobody retypes a paper ticket
 8. Trade-format invoice — diagnosis, work performed, recommended follow-up, equipment, and warranty print under real headings, with the opted-in jobsite photos beneath them. Not a one-line "HVAC service call — $458"
 9. **A service call becomes a job** — completing a visit creates the job, links it to the customer, and tags the invoice to it, so the work reaches the Per-Job P&L without anybody remembering to tag anything
-10. Office review before it reaches the customer — the dispatcher opens the field report from the board: what the tech wrote, the photos, the parts and labor, the customer's sign-off, and the draft invoice it produced. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it
+10. Office review before it reaches the customer — the dispatcher opens the field report from the board: what the tech wrote, the photos, the parts and labor, the customer's sign-off, the draft invoice it produced, and — on a maintenance visit — the plan visit it earned, or a one-click way to record one. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it
 
 **What it does not do (do not imply otherwise):** the tech's page does not do GPS tracking, does not take payment on site, does not capture a drawn signature (it records a typed name and the time), and does not work offline — it needs a signal. It does not schedule or re-route; that is the dispatch board's job.
 
@@ -476,7 +488,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 108 (all included in every plan) |
+| Total features | 110 (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
 | AI assistant tools | 30+ (create, update, search, send, generate, import) |
@@ -503,7 +515,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 108 features included (self-serve tier) |
+| Monthly | **$79/mo** | All 110 features included (self-serve tier) |
 | Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
@@ -877,6 +889,25 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### September 1, 2026 — money that isn't earned yet stays unearned
+
+- **Added 2 features to Group 10: 108 → 110.** Customer deposits are held as a liability and
+  released to the job's revenue on completion; prepaid maintenance plans are deferred and earn
+  per visit — **automatically when the tech taps Complete** on a maintenance visit.
+  - **Lead with the controller's sentence:** "A down payment isn't revenue until the job is done.
+    A plan isn't revenue until the visit happens." That is the whole managed-service argument in
+    one line, and it is now literally what the product does.
+  - **Cancellation is a decision, not a write-off.** When a plan customer leaves, the office
+    records refund or forfeit and the books show which. Never say "automatically" here — the
+    product deliberately refuses to decide this for the shop.
+  - **Do not overclaim monthly plans.** Prepaid (annual) plans are what ships. Monthly-billed
+    plans are a separate piece of work; do not put "monthly" in copy about plan revenue.
+- **Group 12 wording tightened (count unchanged):** equipment is a per-address registry the tech
+  taps, parts come from the shop's price list with cost from the catalogue, and the office's
+  visit review shows the plan visit a tune-up earned.
+- **Pruned a stale correction row:** the comparison page has said 108 since before 2026-09-01;
+  the open gap is now 108 → 110.
 
 ### August 27, 2026 — the field-service loop: a tech closes the job, the invoice writes itself
 

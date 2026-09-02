@@ -10,12 +10,12 @@ const steps = [
   {
     number: '2',
     title: 'They work the job from their phone',
-    body: 'On-my-way, arrived, and completed times recorded when they happen, not guessed at afterwards. What was wrong, what was done, what still needs doing. Equipment make, model, and serial. Photos — before, after, nameplate, receipt.',
+    body: 'On-my-way, arrived, and completed times recorded when they happen, not guessed at afterwards. What was wrong, what was done, what still needs doing. The equipment at that address is already on a list the tech taps to attach — an unlisted unit gets typed once and is on file for whoever attends next. Photos — before, after, nameplate, receipt.',
   },
   {
     number: '3',
     title: 'Parts and labor get logged by the person who knows',
-    body: 'Each line tagged as labor, part, or fee at the jobsite by the tech who put it there. That is what makes the margin on the job real, instead of something the office infers from a description a week later.',
+    body: 'Each line tagged as labor, part, or fee at the jobsite by the tech who put it there. Parts are picked from your own price list, so the invoice line lands on the right sales account, and the part’s cost rides in from the catalogue — never from the tech’s form, because a tech on a roof should not be looking up landed cost. That is what makes the margin on the job real, instead of something the office infers from a description a week later.',
   },
   {
     number: '4',
@@ -25,7 +25,7 @@ const steps = [
   {
     number: '5',
     title: 'Your office reads it before your customer does',
-    body: 'The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer’s sign-off, and the draft invoice it produced. The tech’s internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it.',
+    body: 'The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer’s sign-off, the draft invoice it produced, and — on a maintenance visit — the plan visit it earned, or a one-click way to record one. The tech’s internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it.',
   },
 ]
 

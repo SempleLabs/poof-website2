@@ -117,7 +117,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
-        subtitle="108 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
+        subtitle="110 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"

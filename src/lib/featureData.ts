@@ -75,6 +75,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Document Playbooks",
         description: "Forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected"
+      },
+      {
+        title: "Customer Deposits Released on Completion",
+        description: "A down payment on an install is held as a liability, not booked as revenue the day it lands, and released to that job's revenue when the job is done. The release previews first, refuses a deposit that isn't categorized as a deposit, and warns if the job was also invoiced"
+      },
+      {
+        title: "Maintenance Plans Earn as Visits Are Performed",
+        description: "A prepaid plan sale is deferred, and each performed visit earns its share to the penny — automatically when the tech completes a maintenance visit. A repair call on a plan customer doesn't count, and two open plans on one customer is left for the office to pick. Cancelling is a recorded decision — refund or forfeit — never a silent write-off, and a visit that was both released and invoiced is flagged at month-end close"
       }
     ]
   },
@@ -489,8 +497,8 @@ export const featureGroups: FeatureGroup[] = [
         description: "What was wrong, what was done, and what still needs doing, written on the phone at the jobsite"
       },
       {
-        title: "Equipment Capture",
-        description: "Make, model, and serial recorded against the visit, so the next tech to attend knows what is out there"
+        title: "Equipment on File",
+        description: "The units at that address are on a list the tech taps to attach — several taps for a two-system house. An unlisted unit is typed once and is on file for whoever attends next. Make, model, and serial follow the unit, not the visit"
       },
       {
         title: "Jobsite Photos",
@@ -498,7 +506,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Parts & Labor Logged in the Field",
-        description: "Each line tagged as labor, part, or fee by the person who knows — which is what makes the margin on the job real instead of inferred from a description afterwards"
+        description: "Each line tagged as labor, part, or fee by the person who knows. Parts are picked from the shop's own price list so the invoice line lands on the right sales account, and the part's cost rides in from the catalogue — never from the tech's form, because a tech on a roof should not be looking up landed cost. That is what makes the margin on the job real instead of inferred from a description afterwards"
       },
       {
         title: "The Invoice Writes Itself",
@@ -514,7 +522,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Office Review Before It Reaches the Customer",
-        description: "The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer's sign-off, and the draft invoice it produced. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it"
+        description: "The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer's sign-off, the draft invoice it produced, and — on a maintenance visit — the plan visit it earned, or a one-click way to record one. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it"
       }
     ]
   },
@@ -574,7 +582,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 108 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 110 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -634,7 +642,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 108 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 110 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -669,7 +677,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 108 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 110 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

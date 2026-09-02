@@ -7,6 +7,7 @@ import GlowCard from '@/components/GlowCard'
 import BookCallButton from '@/components/BookCallButton'
 import ReceptionistSection from '@/components/ReceptionistSection'
 import FieldServiceSection from '@/components/FieldServiceSection'
+import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
@@ -151,6 +152,10 @@ const faqs = [
   {
     q: 'What do you actually commit to once I am a client?',
     a: 'Four things, in writing. Your books are closed by the 15th business day, every month. Every completed job is costed within 5 business days. You get an unbilled-work report every Friday. And your controller responds within 1 business day. If we miss, you will hear it from us first.',
+  },
+  {
+    q: 'What happens to a customer\'s deposit, or a prepaid maintenance plan, in my books?',
+    a: 'It stays unearned until you have earned it. A deposit on an install is held as a liability from the day it lands and released to that job\'s revenue when the job is done — previewed first, with a warning if the job was also invoiced. A prepaid maintenance plan is deferred when it is sold and earns its share per visit, automatically when the tech taps Complete on a maintenance visit. If a plan customer cancels, your office records refund or forfeit and the books show which; Poof never makes that call for you. It is the difference between books that read the way the bank feed suggests and books a controller would sign.',
   },
   {
     q: 'Which trades do you work with?',
@@ -344,6 +349,8 @@ export default function TradesPage() {
       <ReceptionistSection />
 
       <FieldServiceSection />
+
+      <UnearnedRevenueSection />
 
       {/* Pricing */}
       <section id="pricing" className="py-20 bg-white">
