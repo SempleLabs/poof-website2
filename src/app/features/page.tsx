@@ -1,249 +1,30 @@
-'use client'
-
-import { useState, useRef, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CtaSection from '@/components/CtaSection'
 import Link from 'next/link'
-import { featureGroups } from '@/lib/featureData'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
-
-const groupIcons: Record<string, JSX.Element> = {
-  sparkles: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
-    </svg>
-  ),
-  ai: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
-    </svg>
-  ),
-  invoice: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,12L16,16H13.5V19H10.5V16H8L12,12Z"/>
-    </svg>
-  ),
-  expense: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12,2A3,3 0 0,1 15,5V7H19A1,1 0 0,1 20,8V19A3,3 0 0,1 17,22H7A3,3 0 0,1 4,19V8A1,1 0 0,1 5,7H9V5A3,3 0 0,1 12,2M12,4A1,1 0 0,0 11,5V7H13V5A1,1 0 0,0 12,4M6,9V19A1,1 0 0,0 7,20H17A1,1 0 0,0 18,19V9H6Z"/>
-    </svg>
-  ),
-  bank: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z"/>
-    </svg>
-  ),
-  report: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </svg>
-  ),
-  security: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9V17H10Z"/>
-    </svg>
-  ),
-  productivity: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M13,2.05V5.08C16.39,5.57 19,8.47 19,12C19,12.9 18.82,13.75 18.5,14.54L21.12,16.07C21.68,14.83 22,13.45 22,12C22,6.82 18.05,2.55 13,2.05M12,19A7,7 0 0,1 5,12C5,8.47 7.61,5.57 11,5.08V2.05C5.94,2.55 2,6.81 2,12A10,10 0 0,0 12,22C15.3,22 18.23,20.39 20.05,17.91L17.45,16.38C16.17,18 14.21,19 12,19Z"/>
-    </svg>
-  ),
-  poof: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-      <path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
-    </svg>
-  ),
-  budget: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M5 3C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5M5 5H19V19H5V5M7 7V9H17V7H7M7 11V13H14V11H7M7 15V17H17V15H7Z"/>
-    </svg>
-  ),
-  jobs: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V8A2,2 0 0,1 4,6H8V4A2,2 0 0,1 10,2M14,6V4H10V6H14Z"/>
-    </svg>
-  ),
-  phone: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
-    </svg>
-  ),
-  field: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1M15.5,12.5L10.7,17.3L8.5,15.1L9.56,14.04L10.7,15.18L14.44,11.44L15.5,12.5Z"/>
-    </svg>
-  ),
-  approvals: (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M10.5,17.5L7,14L8.41,12.59L10.5,14.67L15.59,9.59L17,11L10.5,17.5Z"/>
-    </svg>
-  ),
-}
-
-// Short labels for tabs
-const tabLabels: Record<string, string> = {
-  'Job Costing, Month-End Close & Payments': 'Job Costing & Close',
-  'AI-Powered Automation': 'AI Automation',
-  'Invoicing & Payments': 'Invoicing',
-  'Expense & Bill Management': 'Expenses',
-  'Banking & Reconciliation': 'Banking',
-  'Accounting & Reporting': 'Reporting',
-  'Budgeting & Forecasting': 'Budgeting',
-  'Team & Security': 'Security',
-  'Productivity & Workflow': 'Productivity',
-  'Poof AI Capabilities': 'Poof AI',
-  'AI Receptionist & Dispatch': 'Receptionist',
-  'Field Service & Job Handoff': 'Field Service',
-  'Approvals & AI Autonomy': 'Approvals',
-}
+import FeatureLedger from '@/components/FeatureLedger'
 
 export default function FeaturesPage() {
-  const [activeTab, setActiveTab] = useState(0)
-  const tabBarRef = useRef<HTMLDivElement>(null)
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
-  const sectionRef = useRef<HTMLDivElement>(null)
-
-  // Scroll active tab into view in the tab bar
-  useEffect(() => {
-    const activeButton = tabRefs.current[activeTab]
-    if (activeButton && tabBarRef.current) {
-      const container = tabBarRef.current
-      const scrollLeft = activeButton.offsetLeft - container.offsetWidth / 2 + activeButton.offsetWidth / 2
-      container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
-    }
-  }, [activeTab])
-
-  const activeGroup = featureGroups[activeTab]
-
   return (
-    <main id="main-content" className="min-h-screen">
+    <main id="main-content" className="min-h-screen bg-paper">
       <Header />
 
       <PageHero
-        title={<>Everything You Need. <span className="text-ledger-600">Nothing You Don&apos;t.</span></>}
-        subtitle="128 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
+        title={<>Every feature. <span className="text-ledger-600">One price.</span></>}
+        subtitle="128 features in 13 groups, all on this page, nothing you have to grow into. $79/mo, every feature, 30-day trial with no card."
       >
         <Link
           href="https://app.poofai.com/register"
           className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg mt-8 inline-block px-8 py-4"
         >
-          Start Free Trial →
+          Start free trial
         </Link>
       </PageHero>
 
-      {/* Sticky Tab Bar — lives outside sections so it sticks across the full page */}
-      <div className="sticky top-16 z-30 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            ref={tabBarRef}
-            className="flex gap-2 overflow-x-auto py-3 scrollbar-hide"
-          >
-            {featureGroups.map((group, index) => (
-              <button
-                key={index}
-                ref={(el) => { tabRefs.current[index] = el }}
-                onClick={() => {
-                  setActiveTab(index)
-                  sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                }}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
-                  activeTab === index
-                    ? 'bg-ledger-500 text-white shadow-md'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-800'
-                }`}
-              >
-                <span className={activeTab === index ? 'text-white' : 'text-slate-400'}>
-                  {groupIcons[group.icon] || groupIcons.sparkles}
-                </span>
-                {tabLabels[group.name] || group.name}
-                <span className={`text-xs px-1.5 py-0.5 rounded-full ${
-                  activeTab === index
-                    ? 'bg-white/20 text-white'
-                    : 'bg-slate-200 text-slate-500'
-                }`}>
-                  {group.features.length}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Feature Groups Content */}
-      <section className="py-24 bg-white" ref={sectionRef}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Active Group Content */}
-          <div>
-            <AnimateOnScroll animation="fade-up" key={activeTab}>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 bg-ledger-500 rounded-xl flex items-center justify-center text-white shadow-lg">
-                  <span className="scale-[1.6]">
-                    {groupIcons[activeGroup.icon] || groupIcons.sparkles}
-                  </span>
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold font-display text-slate-900">{activeGroup.name}</h2>
-                  <p className="text-slate-500 text-sm mt-1">{activeGroup.features.length} features</p>
-                </div>
-              </div>
-              {activeGroup.note && (
-                <div className="mb-8 rounded-xl border border-ledger-300 bg-ledger-100 px-5 py-4">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-ledger-700 mb-1">
-                    Availability
-                  </div>
-                  <p className="text-sm text-slate-700 leading-relaxed">{activeGroup.note}</p>
-                </div>
-              )}
-            </AnimateOnScroll>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {activeGroup.features.map((feature, featureIndex) => (
-                <AnimateOnScroll key={`${activeTab}-${featureIndex}`} animation="fade-up" delay={80 + featureIndex * 60} className="h-full">
-                  <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm h-full hover:border-ledger-300 hover:shadow-md transition-all duration-300">
-                    <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </AnimateOnScroll>
-              ))}
-            </div>
-
-            {/* Tab navigation hints */}
-            <div className="flex justify-between items-center mt-10 pt-6 border-t border-slate-100">
-              <button
-                onClick={() => setActiveTab(prev => Math.max(0, prev - 1))}
-                disabled={activeTab === 0}
-                className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                  activeTab === 0 ? 'text-slate-300 cursor-default' : 'text-slate-500 hover:text-ledger-700'
-                }`}
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                {activeTab > 0 ? tabLabels[featureGroups[activeTab - 1].name] || featureGroups[activeTab - 1].name : 'Previous'}
-              </button>
-              <span className="text-sm text-slate-400">{activeTab + 1} of {featureGroups.length}</span>
-              <button
-                onClick={() => setActiveTab(prev => Math.min(featureGroups.length - 1, prev + 1))}
-                disabled={activeTab === featureGroups.length - 1}
-                className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                  activeTab === featureGroups.length - 1 ? 'text-slate-300 cursor-default' : 'text-slate-500 hover:text-ledger-700'
-                }`}
-              >
-                {activeTab < featureGroups.length - 1 ? tabLabels[featureGroups[activeTab + 1].name] || featureGroups[activeTab + 1].name : 'Next'}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
+      <section className="pb-20">
+        <FeatureLedger />
       </section>
 
       {/* Bank Connection Section */}
