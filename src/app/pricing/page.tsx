@@ -151,7 +151,7 @@ export default function PricingPage() {
       <section className="py-8 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up" delay={200}>
-            <div className="bg-slate-900 rounded-2xl text-center border border-ledger-500/30 shadow-lg relative">
+            <div className="bg-slate-900 rounded-xl text-center border border-ledger-500/30 shadow-lg relative">
               {!isAnnual ? (
                 <div className="bg-ledger-500 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
                   <span className="animate-pulse">✦</span>
@@ -274,8 +274,8 @@ export default function PricingPage() {
               }
             ].map((card, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-ledger-500 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg flex-shrink-0">
+                <div className="bg-white border border-slate-200 rounded-xl p-8 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-ledger-500 rounded-xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg flex-shrink-0">
                     {card.icon}
                   </div>
                   <h3 className="text-xl font-display font-bold text-slate-800 mb-3">{card.title}</h3>
@@ -304,8 +304,8 @@ export default function PricingPage() {
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
-                <div className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${openFaqIndex === index ? 'border-ledger-500/30 shadow-md' : 'border-slate-200'}`}>
-                  <button type="button" onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)} aria-expanded={openFaqIndex === index} aria-controls={`pricing-faq-panel-${index}`} className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl">
+                <div className={`bg-white border rounded-xl overflow-hidden transition-all duration-300 ${openFaqIndex === index ? 'border-ledger-500/30 shadow-md' : 'border-slate-200'}`}>
+                  <button type="button" onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)} aria-expanded={openFaqIndex === index} aria-controls={`pricing-faq-panel-${index}`} className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-xl">
                     <h3 className="text-lg font-semibold text-slate-800 pr-4">{faq.question}</h3>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openFaqIndex === index ? 'bg-ledger-100 rotate-180' : 'bg-slate-100'}`}>
                       <svg className={`w-4 h-4 transition-colors duration-300 ${openFaqIndex === index ? 'text-ledger-600' : 'text-slate-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -244,9 +244,6 @@ export default function PlumbingPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
-        </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
@@ -290,7 +287,7 @@ export default function PlumbingPage() {
 
           <AnimateOnScroll animation="fade-up" delay={400}>
             <div className="mt-16 max-w-3xl mx-auto">
-              <div className="rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
+              <div className="rounded-xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
                 <div className="px-6 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
                   <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-job P&amp;L · Park Ave repipe</div>
                   <div className="text-xs text-ledger-600 font-semibold">From your monthly profit report</div>
@@ -443,7 +440,7 @@ export default function PlumbingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <AnimateOnScroll animation="fade-up">
-              <div className="bg-white border border-slate-200 rounded-2xl p-7 h-full">
+              <div className="bg-white border border-slate-200 rounded-xl p-7 h-full">
                 <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">Today</div>
                 <h3 className="font-semibold text-xl text-slate-900 mb-5">Your current setup</h3>
                 <ul className="space-y-3">
@@ -460,7 +457,7 @@ export default function PlumbingPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" delay={100}>
-              <div className="bg-white border-2 border-ledger-300 rounded-2xl p-7 h-full shadow-lg">
+              <div className="bg-white border-2 border-ledger-300 rounded-xl p-7 h-full shadow-lg">
                 <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">With The Augmented Operator</div>
                 <h3 className="font-semibold text-xl text-slate-900 mb-5">Your new setup</h3>
                 <ul className="space-y-3">
@@ -502,7 +499,7 @@ export default function PlumbingPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
-            <div className="mb-10 rounded-2xl border-2 border-ledger-400 bg-ledger-100 p-8">
+            <div className="mb-10 rounded-xl border-2 border-ledger-400 bg-ledger-100 p-8">
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-block bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
@@ -539,7 +536,7 @@ export default function PlumbingPage() {
             {plans.map((plan, i) => (
               <AnimateOnScroll key={plan.name} animation="fade-up" delay={i * 100}>
                 <div
-                  className={`rounded-2xl p-8 h-full flex flex-col ${
+                  className={`rounded-xl p-8 h-full flex flex-col ${
                     plan.highlight
                       ? 'bg-slate-900 text-white border-2 border-ledger-400 shadow-xl'
                       : 'bg-white text-slate-900 border border-slate-200'
@@ -628,7 +625,7 @@ export default function PlumbingPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10">
               <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">Built by a controller, not a startup</div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
                 Austin Semple — 10+ years of audit and controller work
@@ -678,9 +675,6 @@ export default function PlumbingPage() {
 
       {/* Bottom CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-ledger-500/15 rounded-full blur-3xl" />
-        </div>
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">

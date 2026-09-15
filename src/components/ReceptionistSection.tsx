@@ -39,9 +39,6 @@ const capabilities = [
 export default function ReceptionistSection() {
   return (
     <section id="receptionist" className="py-20 bg-slate-900 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/10 rounded-full blur-3xl" />
-      </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up">

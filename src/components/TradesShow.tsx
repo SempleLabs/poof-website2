@@ -359,7 +359,7 @@ export default function TradesShow() {
           </div>
 
           <div className="relative max-w-[520px]">
-            <div className="relative flex items-center justify-between gap-3.5 rounded-2xl bg-ink px-5 py-[18px] text-paper">
+            <div className="relative flex items-center justify-between gap-3.5 rounded-xl bg-ink px-5 py-[18px] text-paper">
               <div className="text-[15px]">
                 <b className="block text-[19px] font-semibold">
                   <span
@@ -556,7 +556,7 @@ export default function TradesShow() {
                 Screen composited from the real job page before launch.
               </figcaption>
             </figure>
-            <div className="max-w-[420px] rounded-2xl bg-ink px-4 py-3.5 text-[14.5px] text-paper">
+            <div className="max-w-[420px] rounded-xl bg-ink px-4 py-3.5 text-[14.5px] text-paper">
               <span className="mb-1.5 block font-mono text-[11px] text-ledger-400">SMS · 9:43 PM · from the shop</span>
               Job: No-cool, emergency. D. Okafor, 1420 Mesa Verde Dr. Window 10:15 to 11:00 tonight. Open it:{' '}
               <a

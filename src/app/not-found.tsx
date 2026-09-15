@@ -23,9 +23,6 @@ export default function NotFound() {
       <Header />
 
       <section className="relative flex-grow flex items-center justify-center pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
-        </div>
 
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="font-display text-7xl sm:text-8xl font-extrabold text-ledger-600 mb-4 leading-none">

@@ -1,61 +1,28 @@
-'use client'
-
 import Link from 'next/link'
-import AnimateOnScroll from './AnimateOnScroll'
-import VaporField from './ParticleField'
 import BookCallButton from './BookCallButton'
 
+/** The site's closing panel. One sentence, two doors. */
 export default function CtaSection() {
   return (
-    <section className="py-24 bg-slate-900 relative overflow-hidden">
-      <VaporField particleCount={20} />
-
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-ledger-500/10 rounded-full blur-3xl" />
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <AnimateOnScroll animation="fade-up">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6 pb-2 leading-[1.15]" style={{ letterSpacing: '-0.02em' }}>
-            Ready for books that tell you which jobs made money?
-          </h2>
-        </AnimateOnScroll>
-        <AnimateOnScroll animation="fade-up" delay={100}>
-          <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-            Book a 20-minute call about the managed service for trades — or start the self-serve free trial and run your own books.
-          </p>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll animation="scale-up" delay={200}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <BookCallButton
-              className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 text-lg"
-            >
-              Book a 20-minute call
-            </BookCallButton>
-            <Link
-              href="https://app.poofai.com/register"
-              className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:border-ledger-500/50 hover:text-ledger-400 transition-all duration-200 text-lg"
-            >
-              Start the Free Trial
-            </Link>
-          </div>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll animation="fade-up" delay={300}>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-slate-300">
-            {[
-              { label: 'Controller-Reviewed', icon: '✦' },
-              { label: 'Books Closed by the 15th', icon: '⚡' },
-              { label: 'Cancel Anytime', icon: '✓' },
-            ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center">
-                <span className="text-ledger-400 text-xl mb-2">{item.icon}</span>
-                <div className="text-sm">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </AnimateOnScroll>
+    <section className="py-24 bg-ink">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="font-display text-4xl sm:text-5xl text-paper mb-5 leading-[1.05] tracking-[-0.035em] text-balance">
+          The work disappears. The evidence doesn&apos;t.
+        </h2>
+        <p className="text-lg text-ledger-400 mb-8 max-w-2xl mx-auto">
+          Thirty days free, no card, every feature. Or book twenty minutes and bring your books.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <Link
+            href="https://app.poofai.com/register"
+            className="bg-ledger-500 text-paper font-semibold px-7 py-3.5 rounded-lg hover:bg-ledger-400 hover:text-ink transition-colors text-base"
+          >
+            Start free trial
+          </Link>
+          <BookCallButton className="border-[1.5px] border-paper text-paper font-semibold px-7 py-3.5 rounded-lg hover:bg-paper/10 transition-colors text-base">
+            Book a call
+          </BookCallButton>
+        </div>
       </div>
     </section>
   )

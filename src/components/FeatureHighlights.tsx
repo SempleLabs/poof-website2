@@ -116,8 +116,6 @@ const totalFeatures = featureGroups.reduce((sum, g) => sum + g.features.length, 
 export default function FeatureHighlights() {
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="absolute top-20 left-10 w-72 h-72 bg-ledger-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-ledger-400/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
@@ -152,7 +150,7 @@ export default function FeatureHighlights() {
                 >
                   {item.imageSrc ? (
                     <GlowCard
-                      className="rounded-2xl bg-slate-900 border border-ledger-500/20 w-full max-w-xs overflow-hidden"
+                      className="rounded-xl bg-slate-900 border border-ledger-500/20 w-full max-w-xs overflow-hidden"
                       glowColor={item.glowColor}
                     >
                       <Image
@@ -165,7 +163,7 @@ export default function FeatureHighlights() {
                     </GlowCard>
                   ) : (
                     <GlowCard
-                      className={`rounded-2xl ${item.iconBg} border ${item.iconBorder} w-full max-w-xs aspect-square flex items-center justify-center`}
+                      className={`rounded-xl ${item.iconBg} border ${item.iconBorder} w-full max-w-xs aspect-square flex items-center justify-center`}
                       glowColor={item.glowColor}
                     >
                       <div className={`${item.iconColor} p-12`}>{item.icon}</div>

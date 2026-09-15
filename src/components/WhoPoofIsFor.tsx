@@ -61,7 +61,7 @@ export default function WhoPoofIsFor() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {personas.map((persona, i) => (
             <AnimateOnScroll key={i} animation="fade-up" delay={100 + i * 80}>
-              <div className="flex gap-4 p-6 rounded-2xl border border-slate-200 bg-slate-50/50 h-full">
+              <div className="flex gap-4 p-6 rounded-xl border border-slate-200 bg-slate-50/50 h-full">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-ledger-500/10 flex items-center justify-center text-ledger-600">
                   {persona.icon}
                 </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CtaSection from '@/components/CtaSection'
 import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
@@ -150,7 +151,7 @@ export default function PoofVsQuickbooksPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <AnimateOnScroll animation="fade-up" delay={0}>
-              <div className="bg-slate-900 border border-ledger-500/30 rounded-2xl p-8 h-full">
+              <div className="bg-slate-900 border border-ledger-500/30 rounded-xl p-8 h-full">
                 <h3 className="text-2xl font-bold font-display text-white mb-2">Poof</h3>
                 <div className="mb-1">
                   <span className="text-2xl font-bold text-slate-500 line-through mr-2">$79</span>
@@ -168,7 +169,7 @@ export default function PoofVsQuickbooksPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" delay={150}>
-              <div className="bg-white border border-slate-200 rounded-2xl p-8 h-full shadow-sm">
+              <div className="bg-white border border-slate-200 rounded-xl p-8 h-full shadow-sm">
                 <h3 className="text-2xl font-bold font-display text-slate-900 mb-2">QuickBooks Plus</h3>
                 <div className="text-4xl font-bold text-slate-700 mb-1">$140<span className="text-lg text-slate-500">/mo</span></div>
                 <p className="text-slate-600 mb-6">The tier that carries job costing and budgets. Up 22% on August 1, 2026 &mdash; from $115.</p>
@@ -184,7 +185,7 @@ export default function PoofVsQuickbooksPage() {
 
           {/* Bank rules: the difference that isn't about price */}
           <AnimateOnScroll animation="fade-up">
-            <div className="mb-16 rounded-2xl border border-slate-200 bg-white p-8">
+            <div className="mb-16 rounded-xl border border-slate-200 bg-white p-8">
               <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
                 The difference isn&apos;t that Poof has rules. It&apos;s what happens when one is wrong.
               </h3>
@@ -239,7 +240,7 @@ export default function PoofVsQuickbooksPage() {
 
           {/* Why Plus, not Simple Start */}
           <AnimateOnScroll animation="fade-up">
-            <div className="mb-16 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+            <div className="mb-16 rounded-xl border border-slate-200 bg-slate-50 p-8">
               <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
                 Why we compare against Plus, not Simple Start
               </h3>
@@ -277,7 +278,7 @@ export default function PoofVsQuickbooksPage() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="overflow-x-auto">
-              <table className="w-full bg-white rounded-2xl border border-slate-200 overflow-hidden">
+              <table className="w-full bg-white rounded-xl border border-slate-200 overflow-hidden">
                 <thead>
                   <tr className="border-b border-slate-200">
                     <th className="text-left px-6 py-5 text-sm font-semibold text-slate-600 w-1/2">Feature</th>
@@ -322,34 +323,7 @@ export default function PoofVsQuickbooksPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Try <span className="text-ledger-600">Poof</span> Free for 30 Days
-            </h2>
-            <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. One plan, 128 features, no tier to grow into.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://app.poofai.com/register"
-                className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
-              >
-                Start Free Trial →
-              </Link>
-              <Link
-                href="/demo"
-                className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
+      <CtaSection />
 
       <Footer />
     </main>

@@ -55,7 +55,7 @@ export default function DownloadModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-      <div className="relative bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl">
+      <div className="relative bg-white rounded-xl max-w-md w-full p-8 shadow-2xl">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors"

@@ -6,7 +6,7 @@ export default function SpendScoreSection() {
   return (
     <section className="relative bg-white py-16 sm:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="bg-ledger-100 border border-ledger-300 rounded-2xl px-6 py-10 sm:px-12 sm:py-12">
+        <div className="bg-ledger-100 border border-ledger-300 rounded-xl px-6 py-10 sm:px-12 sm:py-12">
           <div className="inline-flex items-center gap-2 bg-ledger-200 text-ledger-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

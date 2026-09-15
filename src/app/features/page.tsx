@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CtaSection from '@/components/CtaSection'
 import Link from 'next/link'
 import { featureGroups } from '@/lib/featureData'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
@@ -178,7 +179,7 @@ export default function FeaturesPage() {
           <div>
             <AnimateOnScroll animation="fade-up" key={activeTab}>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 bg-ledger-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                <div className="w-14 h-14 bg-ledger-500 rounded-xl flex items-center justify-center text-white shadow-lg">
                   <span className="scale-[1.6]">
                     {groupIcons[activeGroup.icon] || groupIcons.sparkles}
                   </span>
@@ -201,7 +202,7 @@ export default function FeaturesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {activeGroup.features.map((feature, featureIndex) => (
                 <AnimateOnScroll key={`${activeTab}-${featureIndex}`} animation="fade-up" delay={80 + featureIndex * 60} className="h-full">
-                  <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm h-full hover:border-ledger-300 hover:shadow-md transition-all duration-300">
+                  <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm h-full hover:border-ledger-300 hover:shadow-md transition-all duration-300">
                     <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
                       {feature.title}
                     </h3>
@@ -258,7 +259,7 @@ export default function FeaturesPage() {
             </p>
           </AnimateOnScroll>
 
-          <div className="bg-white border border-slate-200 rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
+          <div className="bg-white border border-slate-200 rounded-xl p-8 max-w-4xl mx-auto shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               {[
                 {
@@ -298,8 +299,8 @@ export default function FeaturesPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-ledger-100 border border-ledger-300 rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
-              <div className="w-16 h-16 bg-ledger-200 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div className="bg-ledger-100 border border-ledger-300 rounded-xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
+              <div className="w-16 h-16 bg-ledger-200 rounded-xl flex items-center justify-center flex-shrink-0">
                 <svg className="w-8 h-8 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -319,35 +320,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Put Poof to Work?
-            </h2>
-            <p className="text-xl text-slate-400 mb-8">
-              Start your 30-day free trial — no credit card required. One plan, every self-serve feature, $79/mo after your first 3 months at $39.50.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://app.poofai.com/register"
-                className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transition-all duration-300 text-lg"
-              >
-                Start Free Trial →
-              </Link>
-              <Link
-                href="/demo"
-                className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 text-lg"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
+      <CtaSection />
 
       <Footer />
     </main>

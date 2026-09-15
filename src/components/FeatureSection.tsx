@@ -57,8 +57,6 @@ export default function FeatureSection() {
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background glowing orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-ledger-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-ledger-400/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
@@ -77,7 +75,7 @@ export default function FeatureSection() {
             <div key={groupIndex}>
               <AnimateOnScroll animation="fade-up" delay={100}>
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-ledger-400 bg-white border border-slate-200 shadow-sm flex-shrink-0">
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center text-ledger-400 bg-white border border-slate-200 shadow-sm flex-shrink-0">
                     {groupIcons[group.icon]}
                   </div>
                   <h3 className="text-ledger-400 text-base font-semibold tracking-widest uppercase">

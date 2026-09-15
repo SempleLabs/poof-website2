@@ -327,7 +327,7 @@ export default function TradesPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
-            <div className="mb-10 rounded-2xl border-2 border-ledger-400 bg-ledger-100 p-8">
+            <div className="mb-10 rounded-xl border-2 border-ledger-400 bg-ledger-100 p-8">
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-block bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
@@ -364,7 +364,7 @@ export default function TradesPage() {
             {plans.map((plan, i) => (
               <AnimateOnScroll key={plan.name} animation="fade-up" delay={i * 100}>
                 <div
-                  className={`rounded-2xl p-8 h-full flex flex-col ${
+                  className={`rounded-xl p-8 h-full flex flex-col ${
                     plan.highlight
                       ? 'bg-slate-900 text-white border-2 border-ledger-400 shadow-xl'
                       : 'bg-white text-slate-900 border border-slate-200'
@@ -453,7 +453,7 @@ export default function TradesPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10">
               <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">Built by a controller, not a startup</div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
                 Austin Semple — 10+ years of audit and controller work
@@ -503,9 +503,6 @@ export default function TradesPage() {
 
       {/* Bottom CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-ledger-500/15 rounded-full blur-3xl" />
-        </div>
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">

@@ -1,206 +1,99 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
-import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
-import ImagePlaceholder from '@/components/ImagePlaceholder'
+import CtaSection from '@/components/CtaSection'
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'How It Works — AI Bookkeeping in 3 Steps | Poof',
-  description: 'Learn how Poof automates your bookkeeping in 3 simple steps. Connect banks, let AI categorize and reconcile, get 13 financial reports, budgets, and cash flow forecasts.',
-  keywords: 'how AI bookkeeping works, automated bookkeeping process, Poof setup, AI categorization, AI budgeting, cash flow forecasting, auto-reconciliation',
+  title: 'How It Works — Connect, propose, approve, sign | Poof',
+  description:
+    'How Poof does the books: you connect the feeds, the AI proposes every entry on a card with its evidence, you approve or reject, and the month closes as a signed record. The plain-words version of the homepage.',
+  keywords: 'how AI bookkeeping works, approvals inbox, month-end close, bank reconciliation, AI categorization, Poof setup',
   alternates: {
     canonical: 'https://www.poofai.com/how-it-works',
   },
   openGraph: {
-    title: 'How Poof Works — AI Bookkeeping in 3 Steps',
+    title: 'How Poof Works — Connect, propose, approve, sign',
     description:
-      'Connect your banks, let AI categorize and reconcile, and get 13 financial reports, budgets, and cash flow forecasts — automatically.',
+      'The AI proposes every entry with its evidence. A person approves it. The month closes as a record. Nothing reaches the books unseen.',
     url: 'https://www.poofai.com/how-it-works',
     siteName: 'Poof',
     type: 'website',
   },
 }
 
+const steps = [
+  {
+    n: '01',
+    title: 'Connect the feeds',
+    when: 'Five minutes, once',
+    body: 'Link your bank and card accounts through Plaid, or import statements as CSV or PDF for anything older than the 30-day sync window. Forward receipts and bills to your Poof address, or snap them on a phone. Bring your Jobber or Housecall Pro export if you run a shop.',
+    detail: 'Bank access is read-only. Poof can see transactions; it cannot move money.',
+  },
+  {
+    n: '02',
+    title: 'The AI proposes',
+    when: 'Every night, and whenever you ask',
+    body: 'Poof categorizes the new transactions, matches invoices to deposits and bills to payments, spots recurring charges, and drafts the entries. Each proposal lands as a card in the Approvals inbox with the evidence it found: the prior transactions for that merchant, the customer it resolved, the amount, the account.',
+    detail: 'A card that says "no history for this merchant" is telling you why it is asking instead of guessing. The evidence is gathered by code, never judged by the model.',
+  },
+  {
+    n: '03',
+    title: 'You approve',
+    when: 'A few minutes a day',
+    body: 'Approve a card, approve part of a batch, or reject it with a reason that gets recorded. When you have approved the same kind of work a few times, grant a standing rule from the card in front of you. Poof writes the rule in plain sentences, tells you how much of the card it covers, and stops the rule itself the first time you contradict it.',
+    detail: 'Nothing reaches your books without a person seeing it first. A rule can never send anything to a customer, and a rule that writes to the ledger must carry a dollar limit.',
+  },
+  {
+    n: '04',
+    title: 'The month closes as a record',
+    when: 'Business days one to seven',
+    body: 'The close is a checklist with due dates. Twelve of the seventeen tasks tick themselves when the books prove them: feeds reviewed, bank reconciled to one figure, deposits released on completed jobs, job costs tied to payroll. The rest are a person’s tick, recorded with who and when. Locking the period is the signature, and the package goes out after it.',
+    detail: 'The reconciliation carries last month’s outstanding items forward and shows one unexplained difference. It ties or it doesn’t.',
+  },
+]
+
+const afterward = [
+  { title: '13 reports, on request or on a schedule', body: 'P&L, balance sheet, cash flow, trial balance, aging, and the rest, with drill-down to the entries behind any number and email delivery on the cadence you choose.' },
+  { title: 'Per-job profitability', body: 'Tag work to jobs, or let a completed service call become a job on its own. Labor lands on the job it was spent on; dealer financing fees are costed to the install they financed.' },
+  { title: 'Invoices, estimates, and payments', body: 'Send invoices and estimates, convert an estimate in one click, follow up automatically, and take card or ACH through Stripe. Payments reconcile to the ledger by themselves.' },
+  { title: 'Budgets and the cash plan', body: 'Describe a goal and get a budget. See twelve months of cash with confidence bands, and a forward view of the bills coming due against the cash to cover them.' },
+  { title: 'Ask Poof', body: 'Ask where things stand: is August ready to close, what do we owe Ferguson, which bills are due this week. Ask it to invoice someone and the same approval card appears in the chat.' },
+  { title: 'The books, as evidence', body: 'Double-entry with reversing entries, an immutable trial-balance snapshot at each close, SOC 2 audit logging, five roles and 26 permissions. Built to survive an audit, not just a tax return.' },
+]
+
 const howItWorksFaqs = [
   {
-    question: "How long does it take to set up?",
-    answer: "Most businesses are up and running in under 5 minutes. Simply connect your bank accounts and our AI takes care of the rest. No complex configuration or manual data entry required."
+    question: 'How long does it take to set up?',
+    answer: 'Connecting accounts takes about five minutes. The first night’s sweep proposes categories for everything it can see, and your first session in the Approvals inbox is where Poof learns how you file things. Most people are approving in batches within a week.',
   },
   {
-    question: "What if the AI categorizes something wrong?",
-    answer: "Simply click to correct any categorization and our AI learns from your input. The more you use Poof, the more accurate it becomes for your specific business patterns."
+    question: 'What if the AI categorizes something wrong?',
+    answer: 'It never posts on its own. A wrong proposal is a card you reject with a reason, and that reason is recorded. If a standing rule made the mistake, correcting any transaction the rule is about pauses the rule, tells you which correction stopped it, and waits for you to resume or revoke it.',
   },
   {
-    question: "Can I import my existing bookkeeping data?",
-    answer: "Yes. We support imports from QuickBooks, Xero, CSV files, and most other accounting software. You can also upload CSV or PDF bank statements for transactions beyond the 30-day Plaid sync window."
+    question: 'Does anything get written to my books without me?',
+    answer: 'Only what a rule you granted covers, within the dollar limit you set, and only work of the same kind you already approved. Everything else waits on a card. There is no global switch that lets the AI do whatever it wants, and autonomy is off for every new account until its owner grants a rule.',
   },
   {
-    question: "How does the AI categorization work?",
-    answer: "Our BRAID engine analyzes transaction patterns, merchant information, and your business type to automatically categorize transactions. It also detects recurring charges and matches transactions to invoices and bills. It learns from your corrections and gets more accurate over time."
+    question: 'Can I import my existing bookkeeping data?',
+    answer: 'Yes. Poof imports from QuickBooks, Xero, and CSV files: the chart of accounts, transactions, customers and vendors, and invoices. Upload CSV or PDF bank statements for anything older than the 30-day Plaid sync window.',
   },
   {
-    question: "What types of receipts can I process?",
-    answer: "Upload photos of any receipt or invoice — paper, digital, or email receipts in JPG, PNG, or HEIC format. Our OCR engine extracts vendor name, amount, date, and category automatically, with built-in duplicate detection."
+    question: 'How does the reconciliation work?',
+    answer: 'Statement ending balance, less the books at period end, less what is still outstanding. Checks written last month that clear this month carry forward automatically. The screen reads one figure from the server, completion stores the same figure, and the close checks that figure. Auto-reconciliation signs a period only when the difference is under a penny; anything else becomes cards.',
   },
   {
-    question: "How accurate is the bank reconciliation?",
-    answer: "Our AI matches and categorizes transactions with 95%+ accuracy. Any discrepancies are flagged for quick review, and the system learns from your corrections."
-  }
+    question: 'What types of receipts can I process?',
+    answer: 'Photos of paper receipts, PDFs, and forwarded email receipts in JPG, PNG, HEIC, or PDF. Poof reads the vendor, amount, date, and likely category, checks for duplicates, and attaches the file to the record it creates.',
+  },
 ]
 
 export default function HowItWorksPage() {
-  const steps = [
-    {
-      step: 1,
-      title: "Upload & Connect",
-      description: "Import bank statements (CSV/PDF), Excel files, connect via Plaid, or upload receipts and invoices for automatic scanning.",
-      details: [
-        "Import bank statements (CSV/PDF) & Excel files",
-        "Connect accounts directly via Plaid",
-        "Upload receipts & invoices for OCR scanning",
-        "One-time setup with automatic syncing"
-      ],
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"/>
-        </svg>
-      ),
-      timeframe: "2-5 minutes"
-    },
-    {
-      step: 2,
-      title: "AI Does the Work",
-      description: "Watch Poof automatically categorize transactions, detect recurring charges, match transactions to invoices and bills, and scan receipts.",
-      details: [
-        "Automatic transaction categorization",
-        "Recurring charge detection & prediction",
-        "Smart transaction matching to invoices & bills",
-        "Receipt scanning with data extraction"
-      ],
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
-        </svg>
-      ),
-      timeframe: "Automated"
-    },
-    {
-      step: 3,
-      title: "Run Your Business",
-      description: "Get insights, send invoices, create budgets, forecast cash flow, and make informed financial decisions. Your books are always ready when you need them.",
-      details: [
-        "13 financial reports with real-time data",
-        "AI-powered budgeting and cash flow forecasting",
-        "Professional invoicing with automated follow-ups",
-        "Tax-ready books year-round"
-      ],
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12,2A3,3 0 0,1 15,5V7H19A1,1 0 0,1 20,8V19A3,3 0 0,1 17,22H7A3,3 0 0,1 4,19V8A1,1 0 0,1 5,7H9V5A3,3 0 0,1 12,2M12,4A1,1 0 0,0 11,5V7H13V5A1,1 0 0,0 12,4M6,9V19A1,1 0 0,0 7,20H17A1,1 0 0,0 18,19V9H6Z"/>
-        </svg>
-      ),
-      timeframe: "Ongoing"
-    }
-  ]
-
-  const features = [
-    {
-      title: "Financial Import & AI Mapping",
-      description: "Upload financial data and watch AI organize everything automatically with smart account mapping.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"/>
-        </svg>
-      ),
-      process: [
-        "Upload your files - Excel, CSV, PDF, or bank statements",
-        "AI analyzes & maps accounts - Smart suggestions for chart of accounts",
-        "Review & approve mappings - Quick validation of AI recommendations",
-        "Transactions auto-categorized - Your books are organized instantly"
-      ]
-    },
-    {
-      title: "Professional Invoicing",
-      description: "Create and send professional invoices in minutes with automated payment tracking.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M12,12L16,16H13.5V19H10.5V16H8L12,12Z"/>
-        </svg>
-      ),
-      process: [
-        "Select customer & services - From your organized customer database",
-        "Customize invoice template - Professional branded invoices",
-        "Send instantly - Email directly from Poof",
-        "Track payment status - Know exactly who owes what"
-      ]
-    },
-    {
-      title: "Real-Time Financial Reporting",
-      description: "Generate 13 professional financial reports instantly with real-time data.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-        </svg>
-      ),
-      process: [
-        "Choose your date range - Any period you need",
-        "Select report type - P&L, Balance Sheet, Cash Flow, Budget vs Actual, and 9 more",
-        "Generate in seconds - Real-time data, professional formatting",
-        "Export or share easily - PDF, Excel, or direct sharing"
-      ]
-    },
-    {
-      title: "Receipt Scanning & OCR",
-      description: "Upload photos of receipts and invoices for automatic data extraction and categorization.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"/>
-        </svg>
-      ),
-      process: [
-        "Snap a photo - Upload receipts or invoices (including HEIC)",
-        "AI extracts data - Vendor, amount, date, and category identified",
-        "Duplicate detection - Prevents double-entry of the same receipt",
-        "Auto-categorized - Expense is created and categorized automatically"
-      ]
-    },
-    {
-      title: "Recurring Charge Detection",
-      description: "AI automatically identifies and predicts recurring transactions in your accounts.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"/>
-        </svg>
-      ),
-      process: [
-        "AI scans transactions - Identifies repeating patterns automatically",
-        "Frequency analysis - Weekly, biweekly, monthly, quarterly, or annual",
-        "Confidence scoring - Know how certain each detection is",
-        "Next payment prediction - See when charges are expected next"
-      ]
-    },
-    {
-      title: "Bank Statement Import",
-      description: "Upload CSV or PDF bank statements for transactions beyond the Plaid sync window.",
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M11.5,1L2,6V8H21V6M16,10V17H19V19H5V17H8V10H10V17H14V10M2,22H21V20H2V22Z"/>
-        </svg>
-      ),
-      process: [
-        "Upload statement - CSV or PDF files up to 25MB",
-        "Intelligent column mapping - AI maps your statement format",
-        "Duplicate prevention - No double-counting of transactions",
-        "Batch preview & import - Review everything before committing"
-      ]
-    }
-  ]
-
   return (
-    <main id="main-content" className="min-h-screen">
+    <main id="main-content" className="min-h-screen bg-paper">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(howItWorksFaqs)) }}
@@ -208,249 +101,71 @@ export default function HowItWorksPage() {
       <Header />
 
       <PageHero
-        title={<>How <span className="text-ledger-600">Poof Works</span></>}
-        subtitle="Transform your bookkeeping in 3 simple steps. No accounting degree required - just connect your accounts and let our AI handle the rest."
+        title={<>Connect. Propose. Approve. <span className="text-ledger-600">Sign.</span></>}
+        subtitle="The plain-words version of the homepage. Four steps, and the AI never takes the third one."
       >
-        <Link
-          href="https://app.poofai.com/register"
-          className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg mt-8 inline-block px-8 py-4"
-        >
-          Start Your Free Trial →
-        </Link>
+        <p className="text-sm text-muted mt-6">
+          Prefer to press the buttons? <Link href="/" className="text-ledger-600 font-semibold hover:text-ledger-700">The homepage is a working demo</Link>.
+        </p>
       </PageHero>
 
-      {/* Steps Section */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
-                Get Started in 3 Simple Steps
-              </h2>
-              <p className="text-xl text-slate-600">
-                From setup to insights in under 10 minutes
-              </p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="relative">
-            {/* Connection Line */}
-            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-2/3 border-l-2 border-dashed border-ledger-300 h-0 border-t-2"></div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {steps.map((step, index) => (
-                <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 150}>
-                  <div className="relative h-full flex flex-col">
-                    <div className="bg-white border border-slate-200 rounded-2xl p-8 group relative overflow-hidden flex-1 flex flex-col">
-                      <div className="absolute top-0 left-0 w-full h-1 bg-ledger-500"></div>
-
-                      <div className="text-center">
-                        {/* Step Number */}
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-ledger-500 text-white rounded-full font-mono font-bold text-2xl mb-6 relative z-10">
-                          {step.step}
-                        </div>
-
-                        {/* Icon */}
-                        <div className="w-16 h-16 bg-ledger-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-ledger-600">
-                          {step.icon}
-                        </div>
-
-                        {/* Content */}
-                        <h3 className="text-2xl font-bold font-display text-slate-900 mb-4">
-                          {step.title}
-                        </h3>
-                        <p className="text-slate-600 mb-6 leading-relaxed text-lg">
-                          {step.description}
-                        </p>
-
-                        {/* Timeframe */}
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-ledger-100 text-ledger-700 text-sm font-medium mb-6">
-                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
-                          </svg>
-                          {step.timeframe}
-                        </div>
-                      </div>
-
-                      {/* Details */}
-                      <ul className="space-y-3 mt-auto">
-                        {step.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-center gap-3">
-                            <div className="w-2 h-2 bg-ledger-500 rounded-full flex-shrink-0"></div>
-                            <span className="text-slate-700 font-medium">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-6">
-                      <ImagePlaceholder
-                        alt={`Step ${step.step}: ${
-                          step.step === 1 ? 'Connect your bank' :
-                          step.step === 2 ? 'AI categorizes transactions' :
-                          'Review your reports'
-                        }`}
-                        aspectRatio="16/9"
-                      />
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Deep Dive */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
-                See Poof in Action
-              </h2>
-              <p className="text-xl text-slate-600">
-                Explore how our key features work behind the scenes
-              </p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {features.map((feature, index) => (
-              <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 150}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-8 group relative overflow-hidden h-full flex flex-col">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-ledger-500"></div>
-
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-ledger-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-ledger-600">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-600">
-                      {feature.description}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4 mt-auto">
-                    {feature.process.map((step, stepIndex) => (
-                      <div key={stepIndex} className="flex items-start">
-                        <div className="flex-shrink-0 w-6 h-6 bg-ledger-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
-                          {stepIndex + 1}
-                        </div>
-                        <span className="text-sm text-slate-700 font-medium">{step}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
-              Ready to Streamline Your Bookkeeping?
-            </h2>
-            <p className="text-xl text-slate-600 mb-8">
-              Built by a controller who understands your daily bookkeeping challenges.
-              Try Poof risk-free with our 30-day trial.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                href="https://app.poofai.com/register"
-                className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg flex items-center justify-center px-8 py-4"
-              >
-                Start Free Trial →
-              </Link>
-              <Link
-                href="/demo"
-                className="border-2 border-ledger-500 text-ledger-600 font-semibold px-8 py-4 rounded-lg hover:bg-ledger-100 transition-all duration-300 text-lg"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </AnimateOnScroll>
-
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            {[
-              { value: "30 days", label: "Free trial period" },
-              { value: "No setup fees", label: "Cancel anytime" },
-              { value: "10+ years", label: "Controller experience" },
-            ].map((item, index) => (
-              <AnimateOnScroll key={index} animation="fade-up" delay={index * 100}>
+      {/* The four steps */}
+      <section className="pb-16">
+        <div className="max-w-[860px] mx-auto px-4 sm:px-6">
+          <ol className="border-t border-ink">
+            {steps.map((s) => (
+              <li key={s.n} className="grid grid-cols-[48px_1fr] sm:grid-cols-[72px_1fr] gap-4 sm:gap-6 py-9 border-b border-rule">
+                <span className="font-mono tabular text-sm text-muted pt-2">{s.n}</span>
                 <div>
-                  <div className="text-2xl font-bold text-ledger-600">{item.value}</div>
-                  <div className="text-slate-600">{item.label}</div>
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h2 className="font-display text-2xl sm:text-[30px] leading-[1.05] tracking-[-0.03em] text-ink">{s.title}</h2>
+                    <span className="font-mono text-xs tracking-[0.06em] uppercase text-muted">{s.when}</span>
+                  </div>
+                  <p className="text-[17px] text-muted leading-relaxed mt-3 max-w-[64ch]">{s.body}</p>
+                  <p className="text-sm text-ink mt-3 max-w-[64ch] border-l-[3px] border-ledger-600 pl-3">{s.detail}</p>
                 </div>
-              </AnimateOnScroll>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* What you get after the fourth step */}
+      <section className="py-16 border-t border-rule">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6">
+          <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">After the signature</p>
+          <h2 className="font-display text-3xl sm:text-4xl leading-[1.05] tracking-[-0.035em] text-ink mb-8 max-w-[24ch] text-balance">Everything downstream reads from books a person signed.</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0 border-t border-ink">
+            {afterward.map((a) => (
+              <div key={a.title} className="py-5 border-b border-rule">
+                <h3 className="font-semibold text-ink text-[16px]">{a.title}</h3>
+                <p className="text-sm text-muted leading-relaxed mt-1.5">{a.body}</p>
+              </div>
             ))}
           </div>
+          <p className="text-sm text-muted mt-6">
+            All 128 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
+          </p>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">
-                Common Questions
-              </h2>
-              <p className="text-xl text-slate-600">
-                Everything you need to know about getting started
-              </p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="space-y-8">
-            {howItWorksFaqs.map((faq, index) => (
-              <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6">
-                  <h3 className="text-lg font-semibold font-display text-slate-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </AnimateOnScroll>
+      {/* FAQ */}
+      <section className="py-16 border-t border-rule">
+        <div className="max-w-[860px] mx-auto px-4 sm:px-6">
+          <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">Six questions</p>
+          <h2 className="font-display text-3xl sm:text-4xl leading-[1.05] tracking-[-0.035em] text-ink mb-8 text-balance">What people ask before they connect a bank.</h2>
+          <dl className="border-t border-ink">
+            {howItWorksFaqs.map((f) => (
+              <div key={f.question} className="py-5 border-b border-rule">
+                <dt className="font-semibold text-ink">{f.question}</dt>
+                <dd className="text-[15px] text-muted leading-relaxed mt-2 max-w-[68ch]">{f.answer}</dd>
+              </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Get Started Today
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Join small businesses who've transformed their bookkeeping with Poof.
-            </p>
-            <Link
-              href="https://app.poofai.com/register"
-              className="bg-ledger-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
-            >
-              Start Free Trial →
-            </Link>
-            <p className="text-white/80 text-sm mt-4">
-              30-day free trial &bull; Cancel anytime
-            </p>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
+      <CtaSection />
       <Footer />
     </main>
   )

@@ -36,7 +36,7 @@ export default function TestimonialSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8 relative"
+              className="bg-white border border-slate-200 shadow-sm rounded-xl p-8 relative"
             >
               <div className="absolute top-4 left-6 text-ledger-600/20 text-6xl font-serif leading-none">&ldquo;</div>
 

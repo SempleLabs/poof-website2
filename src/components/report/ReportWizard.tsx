@@ -161,7 +161,7 @@ export default function ReportWizard() {
       {step === 'email-gate' && report && (
         <div className="space-y-8">
           {/* Spend Score - the big reveal */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
+          <div className="bg-white border border-slate-200 rounded-xl p-8 text-center">
             <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Your Spend Score</p>
             <div className="relative w-36 h-36 mx-auto mb-4">
               <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
@@ -185,7 +185,7 @@ export default function ReportWizard() {
           </div>
 
           {/* Blurred breakdown + narrative teaser */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
             <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Spending Breakdown</h3>
             <CategoryBreakdown categories={report.summary.topCategories} blurred />
           </div>

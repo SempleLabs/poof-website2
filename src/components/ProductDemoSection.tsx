@@ -88,7 +88,7 @@ export default function ProductDemoSection() {
             },
           ].map((item, i) => (
             <AnimateOnScroll key={i} animation="fade-up" delay={300 + i * 100}>
-              <GlowCard className="rounded-2xl bg-white border border-slate-200 shadow-card-light h-full">
+              <GlowCard className="rounded-xl bg-white border border-slate-200 shadow-card-light h-full">
                 <div className="text-center p-6 h-full flex flex-col items-center justify-center">
                   <div className="w-16 h-16 bg-ledger-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     {item.icon}

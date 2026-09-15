@@ -48,9 +48,6 @@ export default function ProductHuntPage() {
 
       {/* PH welcome hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
-        </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-orange-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
@@ -71,7 +68,7 @@ export default function ProductHuntPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="scale-up" delay={200}>
-            <div className="bg-slate-900 rounded-2xl p-8 max-w-xl mx-auto mb-8">
+            <div className="bg-slate-900 rounded-xl p-8 max-w-xl mx-auto mb-8">
               <p className="text-orange-300 text-xs font-semibold uppercase tracking-wider mb-2">Product Hunt exclusive</p>
               <p className="font-display text-3xl font-bold text-white mb-2">90 days free</p>
               <p className="text-slate-300 text-sm mb-6">

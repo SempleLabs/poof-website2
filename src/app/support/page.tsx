@@ -90,8 +90,8 @@ export default function SupportPage() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up">
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 text-center">
-              <div className="w-14 h-14 bg-ledger-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10 text-center">
+              <div className="w-14 h-14 bg-ledger-200 rounded-xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-7 h-7 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -120,7 +120,7 @@ export default function SupportPage() {
 
           {/* Company identification */}
           <AnimateOnScroll animation="fade-up" delay={150}>
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 mt-6">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 mt-6">
               <h2 className="text-lg font-semibold font-display text-slate-900 mb-3">Who you&apos;re dealing with</h2>
               <p className="text-slate-600 leading-relaxed">
                 Poof is a product of <span className="font-semibold text-slate-900">Semple Labs LLC</span>, a United
@@ -181,7 +181,7 @@ export default function SupportPage() {
               },
             ].map((card, index) => (
               <AnimateOnScroll key={card.title} animation="fade-up" delay={100 + index * 100}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 h-full flex flex-col">
+                <div className="bg-white border border-slate-200 rounded-xl p-6 h-full flex flex-col">
                   <div className="w-12 h-12 bg-ledger-100 rounded-xl flex items-center justify-center mb-4">
                     <svg className="w-6 h-6 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {card.icon}
@@ -209,7 +209,7 @@ export default function SupportPage() {
           <div className="space-y-4">
             {supportFaqs.map((faq, index) => (
               <AnimateOnScroll key={faq.question} animation="fade-up" delay={60 * index}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6">
+                <div className="bg-white border border-slate-200 rounded-xl p-6">
                   <h3 className="font-semibold font-display text-slate-900 mb-2">{faq.question}</h3>
                   <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
                 </div>
