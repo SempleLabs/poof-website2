@@ -75,7 +75,7 @@ export default function ConsentBanner() {
         <p className="text-sm text-slate-600 leading-relaxed">
           We use cookies for analytics and to measure ad performance. You can accept or decline
           non-essential tracking. See our{' '}
-          <Link href="/privacy" className="text-gold-600 underline hover:text-gold-700">
+          <Link href="/privacy" className="text-ledger-600 underline hover:text-ledger-700">
             Privacy Policy
           </Link>
           .
@@ -91,7 +91,7 @@ export default function ConsentBanner() {
           <button
             type="button"
             onClick={() => choose(true)}
-            className="flex-1 sm:flex-none px-5 py-2 rounded-lg bg-gold-600 text-white font-semibold text-sm hover:bg-gold-700 transition-colors"
+            className="flex-1 sm:flex-none px-5 py-2 rounded-lg bg-ledger-500 text-white font-semibold text-sm hover:bg-ledger-600 transition-colors"
           >
             Accept
           </button>

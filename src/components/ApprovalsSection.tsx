@@ -29,12 +29,12 @@ export default function ApprovalsSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
               Included in every plan
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
               Nothing reaches your books{' '}
-              <span className="text-gradient-gold">without you seeing it first.</span>
+              <span className="text-ledger-600">without you seeing it first.</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Every write an AI proposes — the nightly categorization sweep, a request you typed into chat, a
@@ -64,7 +64,7 @@ export default function ApprovalsSection() {
                   </div>
                 ))}
                 <div className="flex gap-2 px-4 py-3 bg-white border-t border-slate-100">
-                  <span className="text-xs font-semibold text-white bg-emerald-600 px-3 py-1.5 rounded">Approve</span>
+                  <span className="text-xs font-semibold text-white bg-ledger-500 px-3 py-1.5 rounded">Approve</span>
                   <span className="text-xs font-semibold text-slate-600 border border-slate-300 px-3 py-1.5 rounded">
                     Reject with a reason
                   </span>

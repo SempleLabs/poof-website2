@@ -99,12 +99,12 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-2xl border border-slate-200 p-6 hover:border-gold-400 hover:shadow-lg transition-all"
+                  className="group flex flex-col rounded-2xl border border-slate-200 p-6 hover:border-ledger-400 hover:shadow-lg transition-all"
                 >
-                  <span className="inline-flex self-start items-center px-3 py-1 rounded-full text-xs font-medium bg-gold-50 text-gold-700 mb-4">
+                  <span className="inline-flex self-start items-center px-3 py-1 rounded-full text-xs font-medium bg-ledger-100 text-ledger-700 mb-4">
                     {post.category}
                   </span>
-                  <h2 className="text-xl font-bold font-display text-slate-900 leading-snug group-hover:text-gold-700 transition-colors">
+                  <h2 className="text-xl font-bold font-display text-slate-900 leading-snug group-hover:text-ledger-700 transition-colors">
                     {post.title}
                   </h2>
                   <p className="mt-3 text-slate-600 text-sm leading-relaxed line-clamp-3 flex-1">
@@ -123,7 +123,7 @@ export default function BlogIndexPage() {
           )}
 
           <div className="mt-12 text-center">
-            <Link href="/resources" className="text-gold-600 underline hover:text-gold-700 font-medium">
+            <Link href="/resources" className="text-ledger-600 underline hover:text-ledger-700 font-medium">
               Looking for downloadable guides &amp; templates? →
             </Link>
           </div>

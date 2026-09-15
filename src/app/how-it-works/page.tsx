@@ -208,12 +208,12 @@ export default function HowItWorksPage() {
       <Header />
 
       <PageHero
-        title={<>How <span className="text-gradient-gold">Poof Works</span></>}
+        title={<>How <span className="text-ledger-600">Poof Works</span></>}
         subtitle="Transform your bookkeeping in 3 simple steps. No accounting degree required - just connect your accounts and let our AI handle the rest."
       >
         <Link
           href="https://app.poofai.com/register"
-          className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg mt-8 inline-block px-8 py-4"
+          className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg mt-8 inline-block px-8 py-4"
         >
           Start Your Free Trial →
         </Link>
@@ -235,23 +235,23 @@ export default function HowItWorksPage() {
 
           <div className="relative">
             {/* Connection Line */}
-            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-2/3 border-l-2 border-dashed border-gold-200 h-0 border-t-2"></div>
+            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-2/3 border-l-2 border-dashed border-ledger-300 h-0 border-t-2"></div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {steps.map((step, index) => (
                 <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 150}>
                   <div className="relative h-full flex flex-col">
                     <div className="bg-white border border-slate-200 rounded-2xl p-8 group relative overflow-hidden flex-1 flex flex-col">
-                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-500 to-teal-500"></div>
+                      <div className="absolute top-0 left-0 w-full h-1 bg-ledger-500"></div>
 
                       <div className="text-center">
                         {/* Step Number */}
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-600 text-white rounded-full font-mono font-bold text-2xl mb-6 relative z-10">
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-ledger-500 text-white rounded-full font-mono font-bold text-2xl mb-6 relative z-10">
                           {step.step}
                         </div>
 
                         {/* Icon */}
-                        <div className="w-16 h-16 bg-gold-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-gold-500">
+                        <div className="w-16 h-16 bg-ledger-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-ledger-600">
                           {step.icon}
                         </div>
 
@@ -264,7 +264,7 @@ export default function HowItWorksPage() {
                         </p>
 
                         {/* Timeframe */}
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-50 text-teal-700 text-sm font-medium mb-6">
+                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-ledger-100 text-ledger-700 text-sm font-medium mb-6">
                           <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
                           </svg>
@@ -276,7 +276,7 @@ export default function HowItWorksPage() {
                       <ul className="space-y-3 mt-auto">
                         {step.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-center gap-3">
-                            <div className="w-2 h-2 bg-teal-500 rounded-full flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-ledger-500 rounded-full flex-shrink-0"></div>
                             <span className="text-slate-700 font-medium">{detail}</span>
                           </li>
                         ))}
@@ -318,10 +318,10 @@ export default function HowItWorksPage() {
             {features.map((feature, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 150}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-8 group relative overflow-hidden h-full flex flex-col">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-500 to-teal-500"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-ledger-500"></div>
 
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gold-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-gold-500">
+                    <div className="w-16 h-16 bg-ledger-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-ledger-600">
                       {feature.icon}
                     </div>
                     <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
@@ -335,7 +335,7 @@ export default function HowItWorksPage() {
                   <div className="space-y-4 mt-auto">
                     {feature.process.map((step, stepIndex) => (
                       <div key={stepIndex} className="flex items-start">
-                        <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-gold-500 to-gold-600 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="flex-shrink-0 w-6 h-6 bg-ledger-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                           {stepIndex + 1}
                         </div>
                         <span className="text-sm text-slate-700 font-medium">{step}</span>
@@ -364,13 +364,13 @@ export default function HowItWorksPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg flex items-center justify-center px-8 py-4"
+                className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg flex items-center justify-center px-8 py-4"
               >
                 Start Free Trial →
               </Link>
               <Link
                 href="/demo"
-                className="border-2 border-gold-500 text-gold-500 font-semibold px-8 py-4 rounded-lg hover:bg-gold-50 transition-all duration-300 text-lg"
+                className="border-2 border-ledger-500 text-ledger-600 font-semibold px-8 py-4 rounded-lg hover:bg-ledger-100 transition-all duration-300 text-lg"
               >
                 Schedule Demo
               </Link>
@@ -386,7 +386,7 @@ export default function HowItWorksPage() {
             ].map((item, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 100}>
                 <div>
-                  <div className="text-2xl font-bold text-gold-500">{item.value}</div>
+                  <div className="text-2xl font-bold text-ledger-600">{item.value}</div>
                   <div className="text-slate-600">{item.label}</div>
                 </div>
               </AnimateOnScroll>
@@ -428,11 +428,8 @@ export default function HowItWorksPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <span key={i} className="absolute text-gold-500/20 animate-sparkle-drift" style={{ top: `${15 + Math.random() * 70}%`, left: `${5 + Math.random() * 90}%`, fontSize: `${10 + Math.random() * 14}px`, animationDelay: `${i * 0.7}s` }}>&#10022;</span>
-        ))}
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
@@ -443,7 +440,7 @@ export default function HowItWorksPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-600 text-white font-bold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
+              className="bg-ledger-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg inline-block"
             >
               Start Free Trial →
             </Link>

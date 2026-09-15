@@ -17,10 +17,10 @@ const showcases = [
       'Search and create chart of accounts entries autonomously',
       'Privacy controls let you decide what Poof can access',
     ],
-    iconBg: 'bg-gold-500/10',
-    iconBorder: 'border-gold-500/20',
-    iconColor: 'text-gold-500',
-    glowColor: 'rgba(139, 92, 246, 0.08)',
+    iconBg: 'bg-ledger-500/10',
+    iconBorder: 'border-ledger-500/20',
+    iconColor: 'text-ledger-600',
+    glowColor: 'rgba(27, 94, 63, 0.08)',
     iconLeft: true,
     imageSrc: '/chatassistant.png',
     imageAlt: 'Poof AI assistant chat interface',
@@ -35,10 +35,10 @@ const showcases = [
       'Duplicate detection prevents double-entries',
       'Supports HEIC/HEIF from iPhone photos',
     ],
-    iconBg: 'bg-teal-500/10',
-    iconBorder: 'border-teal-500/20',
-    iconColor: 'text-teal-500',
-    glowColor: 'rgba(20, 184, 166, 0.08)',
+    iconBg: 'bg-ledger-500/10',
+    iconBorder: 'border-ledger-500/20',
+    iconColor: 'text-ledger-600',
+    glowColor: 'rgba(27, 94, 63, 0.08)',
     iconLeft: false,
     imageSrc: '/snapphoto.png',
     imageAlt: 'Receipt scanning with automatic data extraction',
@@ -53,10 +53,10 @@ const showcases = [
       'Handles partial payments and credit notes',
       'Automatic bill-to-payment reconciliation',
     ],
-    iconBg: 'bg-gold-500/10',
-    iconBorder: 'border-gold-500/20',
-    iconColor: 'text-gold-500',
-    glowColor: 'rgba(139, 92, 246, 0.08)',
+    iconBg: 'bg-ledger-500/10',
+    iconBorder: 'border-ledger-500/20',
+    iconColor: 'text-ledger-600',
+    glowColor: 'rgba(27, 94, 63, 0.08)',
     iconLeft: true,
     imageSrc: '/invoicesmeetpayments.png',
     imageAlt: 'Invoices automatically matched to payments',
@@ -72,10 +72,10 @@ const showcases = [
       '12-month cash flow forecasting with confidence bands',
       'Budget lifecycle: Draft → Active → Locked → Archived',
     ],
-    iconBg: 'bg-teal-500/10',
-    iconBorder: 'border-teal-500/20',
-    iconColor: 'text-teal-500',
-    glowColor: 'rgba(20, 184, 166, 0.08)',
+    iconBg: 'bg-ledger-500/10',
+    iconBorder: 'border-ledger-500/20',
+    iconColor: 'text-ledger-600',
+    glowColor: 'rgba(27, 94, 63, 0.08)',
     iconLeft: false,
     imageSrc: '/budgetvsactual-website.png',
     imageAlt: 'Budget vs actual variance dashboard',
@@ -85,7 +85,7 @@ const showcases = [
 
 const Check = () => (
   <svg
-    className="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0 glow-check"
+    className="w-5 h-5 text-ledger-400 mt-0.5 flex-shrink-0"
     fill="currentColor"
     viewBox="0 0 20 20"
   >
@@ -99,7 +99,7 @@ const Check = () => (
 
 const SmallCheck = () => (
   <svg
-    className="w-4 h-4 text-gold-400 flex-shrink-0 glow-check"
+    className="w-4 h-4 text-ledger-400 flex-shrink-0"
     fill="currentColor"
     viewBox="0 0 20 20"
   >
@@ -116,8 +116,8 @@ const totalFeatures = featureGroups.reduce((sum, g) => sum + g.features.length, 
 export default function FeatureHighlights() {
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-400/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-ledger-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-ledger-400/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
@@ -126,7 +126,7 @@ export default function FeatureHighlights() {
             style={{ letterSpacing: '-0.02em' }}
           >
             Your Books, Done —
-            <span className="text-gradient-gold"> Automatically</span>
+            <span className="text-ledger-600"> Automatically</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             All the power of QuickBooks. None of the complexity.
@@ -152,7 +152,7 @@ export default function FeatureHighlights() {
                 >
                   {item.imageSrc ? (
                     <GlowCard
-                      className="rounded-2xl bg-slate-900 border border-violet-500/20 w-full max-w-xs overflow-hidden"
+                      className="rounded-2xl bg-slate-900 border border-ledger-500/20 w-full max-w-xs overflow-hidden"
                       glowColor={item.glowColor}
                     >
                       <Image
@@ -215,7 +215,7 @@ export default function FeatureHighlights() {
             {featureGroups.map((category, ci) => (
               <AnimateOnScroll key={ci} animation="fade-up" delay={100 + ci * 80}>
                 <div>
-                  <h4 className="text-sm font-semibold text-gold-400 tracking-widest uppercase mb-4">
+                  <h4 className="text-sm font-semibold text-ledger-400 tracking-widest uppercase mb-4">
                     {category.name}
                   </h4>
                   <ul className="space-y-2.5">
@@ -237,7 +237,7 @@ export default function FeatureHighlights() {
           <AnimateOnScroll animation="fade-up" delay={200} className="text-center mt-12">
             <Link
               href="/features"
-              className="inline-flex items-center text-gold-500 hover:text-gold-400 font-semibold text-lg transition-colors duration-200"
+              className="inline-flex items-center text-ledger-600 hover:text-ledger-400 font-semibold text-lg transition-colors duration-200"
             >
               See all {totalFeatures} features
               <svg
@@ -257,7 +257,7 @@ export default function FeatureHighlights() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="scale-up" delay={300} className="text-center mt-8">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gold-500/10 text-gold-400 text-sm font-medium border border-gold-500/30">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-ledger-500/10 text-ledger-400 text-sm font-medium border border-ledger-500/30">
               <svg
                 className="w-4 h-4 mr-2"
                 fill="none"

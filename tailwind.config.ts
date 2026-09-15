@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
 
+// Ledger-green system (rebrand 2026-09-15). Source of truth for values:
+// the app's apps/poof-web/src/theme/shared-theme.ts, mirrored here.
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,53 +11,63 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
+        // the accent scale: 100-300 paper/tint/rule, 400 light green (on ink), 500 press, 600 ledger, 700 pressed, 800 ink
+        ledger: {
+          50: '#F5F7F2',
+          100: '#EEF2EA',
+          200: '#DCEBDF',
+          300: '#C9D3C6',
+          400: '#A9D8B8',
+          500: '#1F7A4F',
+          600: '#1B5E3F',
+          700: '#174F35',
+          800: '#12211A',
+          900: '#0D1A14',
+        },
+        paper: { DEFAULT: '#EEF2EA', 2: '#F5F7F2' },
+        ink: '#12211A',
+        muted: '#5B6660',
+        rule: '#C9D3C6',
+        audit: { DEFAULT: '#B3261E', 100: '#F6E3E0' },
+        // the neutrals, green-biased, so every existing slate-* class lands on the new system
+        slate: {
+          50: '#F5F7F2',
+          100: '#EEF2EA',
+          200: '#C9D3C6',
+          300: '#B6C1B9',
+          400: '#96A39B',
+          500: '#6E7A73',
+          600: '#5B6660',
+          700: '#3E4A43',
+          800: '#253029',
+          900: '#12211A',
+          950: '#0D1A14',
         },
         midnight: {
-          950: '#020617',
-          900: '#0f172a',
-          800: '#1e293b',
-          700: '#334155',
-          600: '#475569',
-          500: '#64748b',
-          400: '#94a3b8',
+          950: '#0D1A14',
+          900: '#12211A',
+          800: '#1A2C23',
+          700: '#2A3D33',
+          600: '#5B6660',
+          500: '#6E7A73',
+          400: '#96A39B',
         },
-        teal: {
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-        },
-      },
-      backgroundImage: {
-        'gradient-hero': 'linear-gradient(160deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%)',
-        'gradient-accent': 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%)',
-        'gradient-cta': 'linear-gradient(160deg, #0f172a 0%, #1e293b 100%)',
-        'gradient-glass-dark': 'linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.01) 100%)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['var(--font-cabinet)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-jetbrains)', 'monospace'],
+        sans: ['var(--font-plex)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-bricolage)', 'var(--font-plex)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-plex-mono)', 'ui-monospace', 'monospace'],
       },
       borderRadius: {
-        'magical': '12px',
+        lg: '6px',
+        xl: '8px',
+        '2xl': '10px',
+        '3xl': '12px',
       },
       boxShadow: {
-        'gold': '0 0 20px rgba(139, 92, 246, 0.2), 0 0 40px rgba(139, 92, 246, 0.1)',
-        'gold-lg': '0 0 30px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.15)',
-        'card-dark': '0 4px 24px rgba(0, 0, 0, 0.08)',
-        'card-light': '0 4px 12px rgba(0, 0, 0, 0.06)',
-        'hover': '0 8px 32px rgba(0, 0, 0, 0.12)',
+        'card-dark': '0 4px 24px rgba(18, 33, 26, 0.08)',
+        'card-light': '0 4px 12px rgba(18, 33, 26, 0.06)',
+        'hover': '0 8px 32px rgba(18, 33, 26, 0.10)',
       },
     },
   },

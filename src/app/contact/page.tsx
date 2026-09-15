@@ -58,11 +58,11 @@ export default function ContactPage() {
     return (
       <main id="main-content" className="min-h-screen">
         <Header />
-        <section className="pt-24 pb-16 min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-50 to-white">
+        <section className="pt-24 pb-16 min-h-screen flex items-center justify-center bg-slate-50">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <AnimateOnScroll animation="scale-up">
               <div className="mb-8">
-                <div className="w-16 h-16 bg-teal-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-ledger-400 rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 <h2 className="text-xl font-bold font-display text-slate-900 mb-4">What happens next?</h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 bg-gold-100 text-gold-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                    <div className="flex-shrink-0 w-6 h-6 bg-ledger-200 text-ledger-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                       1
                     </div>
                     <div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 bg-gold-100 text-gold-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                    <div className="flex-shrink-0 w-6 h-6 bg-ledger-200 text-ledger-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                       2
                     </div>
                     <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 bg-gold-100 text-gold-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                    <div className="flex-shrink-0 w-6 h-6 bg-ledger-200 text-ledger-600 rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                       3
                     </div>
                     <div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
               <div className="mt-8 text-center">
                 <Link
                   href="/"
-                  className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg px-8 py-4 inline-block"
+                  className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg px-8 py-4 inline-block"
                 >
                   Back to Home →
                 </Link>
@@ -127,7 +127,7 @@ export default function ContactPage() {
   const contactCards = [
     {
       icon: (
-        <svg className="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
@@ -137,7 +137,7 @@ export default function ContactPage() {
     },
     {
       icon: (
-        <svg className="w-6 h-6 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-6 h-6 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
@@ -152,7 +152,7 @@ export default function ContactPage() {
       <Header />
 
       <PageHero
-        title={<>Get in <span className="text-gradient-gold">Touch</span></>}
+        title={<>Get in <span className="text-ledger-600">Touch</span></>}
         subtitle="Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
       />
 
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:border-ledger-500 focus:ring-1 focus:ring-ledger-500/20 transition-all"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:border-ledger-500 focus:ring-1 focus:ring-ledger-500/20 transition-all"
                     placeholder="your.email@company.com"
                   />
                 </div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={6}
-                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:border-gold-500 focus:ring-1 focus:ring-gold-500/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:border-ledger-500 focus:ring-1 focus:ring-ledger-500/20 transition-all resize-none"
                     placeholder="How can we help you?"
                   />
                 </div>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg py-4 ${
+                  className={`w-full bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg py-4 ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                   }`}
                 >
@@ -258,11 +258,11 @@ export default function ContactPage() {
             {contactCards.map((card, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 100}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-6">
-                  <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-ledger-200 rounded-full flex items-center justify-center mx-auto mb-4">
                     {card.icon}
                   </div>
                   <h3 className="font-semibold font-display text-slate-900 mb-2">{card.title}</h3>
-                  <Link href={card.href} className="text-gold-600 hover:text-gold-700">
+                  <Link href={card.href} className="text-ledger-600 hover:text-ledger-700">
                     {card.linkText}
                   </Link>
                 </div>
@@ -275,11 +275,11 @@ export default function ContactPage() {
               <h3 className="font-semibold font-display text-slate-900 mb-3">Prefer email?</h3>
               <p className="text-slate-600 leading-relaxed">
                 Write to{' '}
-                <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700 font-medium">
+                <a href="mailto:support@poofai.com" className="text-ledger-600 underline hover:text-ledger-700 font-medium">
                   support@poofai.com
                 </a>{' '}
                 and we&apos;ll respond within 2 business days. For account, billing, or data requests, see our{' '}
-                <Link href="/support" className="text-gold-600 underline hover:text-gold-700">support page</Link>.
+                <Link href="/support" className="text-ledger-600 underline hover:text-ledger-700">support page</Link>.
               </p>
               <p className="text-slate-500 text-sm mt-4">
                 Poof is a product of <span className="font-medium text-slate-700">Semple Labs LLC</span>.

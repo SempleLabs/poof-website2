@@ -57,7 +57,7 @@ const supportFaqs = [
   {
     question: 'Do you help with moving my books over from QuickBooks or Xero?',
     answer:
-      'Yes. Poof Managed for Trades includes a one-time onboarding that covers historical cleanup and migration from QuickBooks Online or Xero. Email support@poofai.com or book a call to talk through what moving your books would involve.',
+      'Yes. The Augmented Operator includes a one-time onboarding that covers historical cleanup and migration from QuickBooks Online or Xero. Email support@poofai.com or book a call to talk through what moving your books would involve.',
   },
 ]
 
@@ -82,7 +82,7 @@ export default function SupportPage() {
       <Header />
 
       <PageHero
-        title={<>Poof <span className="text-gradient-gold">Support</span></>}
+        title={<>Poof <span className="text-ledger-600">Support</span></>}
         subtitle="Questions, billing changes, account access, or anything that isn't working — email us and a real person will get back to you."
       />
 
@@ -91,8 +91,8 @@ export default function SupportPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up">
             <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 text-center">
-              <div className="w-14 h-14 bg-gold-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 bg-ledger-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -101,7 +101,7 @@ export default function SupportPage() {
 
               <a
                 href="mailto:support@poofai.com"
-                className="inline-block text-2xl sm:text-3xl font-semibold text-gold-600 hover:text-gold-700 underline decoration-gold-300 underline-offset-4 break-all"
+                className="inline-block text-2xl sm:text-3xl font-semibold text-ledger-600 hover:text-ledger-700 underline decoration-ledger-400 underline-offset-4 break-all"
               >
                 support@poofai.com
               </a>
@@ -126,16 +126,16 @@ export default function SupportPage() {
                 Poof is a product of <span className="font-semibold text-slate-900">Semple Labs LLC</span>, a United
                 States limited liability company. Support, billing, and privacy requests for Poof are all handled by
                 Semple Labs LLC at{' '}
-                <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700">
+                <a href="mailto:support@poofai.com" className="text-ledger-600 underline hover:text-ledger-700">
                   support@poofai.com
                 </a>
                 .
               </p>
               <p className="text-slate-600 leading-relaxed mt-4">
                 See our{' '}
-                <Link href="/privacy" className="text-gold-600 underline hover:text-gold-700">Privacy Policy</Link>
+                <Link href="/privacy" className="text-ledger-600 underline hover:text-ledger-700">Privacy Policy</Link>
                 {' '}and{' '}
-                <Link href="/terms" className="text-gold-600 underline hover:text-gold-700">Terms of Service</Link>
+                <Link href="/terms" className="text-ledger-600 underline hover:text-ledger-700">Terms of Service</Link>
                 {' '}for the full legal terms that govern the Service.
               </p>
             </div>
@@ -182,14 +182,14 @@ export default function SupportPage() {
             ].map((card, index) => (
               <AnimateOnScroll key={card.title} animation="fade-up" delay={100 + index * 100}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-6 h-full flex flex-col">
-                  <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-ledger-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {card.icon}
                     </svg>
                   </div>
                   <h3 className="font-semibold font-display text-slate-900 mb-2">{card.title}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">{card.description}</p>
-                  <Link href={card.href} className="text-gold-600 hover:text-gold-700 font-medium text-sm">
+                  <Link href={card.href} className="text-ledger-600 hover:text-ledger-700 font-medium text-sm">
                     {card.linkText}
                   </Link>
                 </div>
@@ -220,7 +220,7 @@ export default function SupportPage() {
           <AnimateOnScroll animation="fade-up" delay={200}>
             <p className="text-center text-slate-600 mt-10">
               Still stuck? Email{' '}
-              <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700 font-medium">
+              <a href="mailto:support@poofai.com" className="text-ledger-600 underline hover:text-ledger-700 font-medium">
                 support@poofai.com
               </a>{' '}
               and we&apos;ll take it from there.

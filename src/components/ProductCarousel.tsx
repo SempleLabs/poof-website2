@@ -54,7 +54,7 @@ export default function ProductCarousel({ slides }: ProductCarouselProps) {
           <>
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border border-slate-200 hover:border-gold-500 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border border-slate-200 hover:border-ledger-500 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
               aria-label="Previous slide"
             >
               <svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,7 +63,7 @@ export default function ProductCarousel({ slides }: ProductCarouselProps) {
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border border-slate-200 hover:border-gold-500 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border border-slate-200 hover:border-ledger-500 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
               aria-label="Next slide"
             >
               <svg className="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,7 +97,7 @@ export default function ProductCarousel({ slides }: ProductCarouselProps) {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
                 index === currentSlide
-                  ? 'bg-gold-500 w-8'
+                  ? 'bg-ledger-500 w-8'
                   : 'bg-slate-300 hover:bg-slate-400'
               }`}
               aria-label={`Go to slide ${index + 1}`}

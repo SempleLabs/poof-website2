@@ -100,40 +100,40 @@ export async function POST(request: NextRequest) {
           <!DOCTYPE html>
           <html>
           <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-          <body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
-            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8fafc; padding: 40px 20px;">
+          <body style="margin: 0; padding: 0; background-color: #F5F7F2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #F5F7F2; padding: 40px 20px;">
               <tr>
                 <td align="center">
                   <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
                     <tr>
-                      <td style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%); padding: 40px 30px; text-align: center;">
+                      <td style="background: linear-gradient(135deg, #1F7A4F 0%, #1B5E3F 50%, #1B5E3F 100%); padding: 40px 30px; text-align: center;">
                         <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">Application Received</h1>
                       </td>
                     </tr>
                     <tr>
                       <td style="padding: 40px 30px;">
-                        <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
+                        <p style="margin: 0 0 20px; color: #2A3D33; font-size: 16px; line-height: 1.6;">
                           Hi ${escapeHtml(name)},
                         </p>
-                        <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
+                        <p style="margin: 0 0 20px; color: #2A3D33; font-size: 16px; line-height: 1.6;">
                           Thanks for applying for a Poof Ecommerce Profit & Cash Flow Analysis. We've received your submission for <strong>${escapeHtml(business_name)}</strong>.
                         </p>
-                        <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
+                        <p style="margin: 0 0 20px; color: #2A3D33; font-size: 16px; line-height: 1.6;">
                           Here's what happens next:
                         </p>
-                        <ol style="margin: 0 0 20px; padding-left: 20px; color: #334155; font-size: 16px; line-height: 1.8;">
+                        <ol style="margin: 0 0 20px; padding-left: 20px; color: #2A3D33; font-size: 16px; line-height: 1.8;">
                           <li>We'll review your application within 1-2 business days</li>
                           <li>If accepted, we'll send you secure instructions to share your financial data</li>
                           <li>You'll receive your analysis within 5-7 business days of sharing data</li>
                         </ol>
-                        <p style="margin: 0; color: #334155; font-size: 16px; line-height: 1.6;">
+                        <p style="margin: 0; color: #2A3D33; font-size: 16px; line-height: 1.6;">
                           If you have any questions in the meantime, just reply to this email.
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 30px; background-color: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0;">
-                        <p style="margin: 0; color: #64748b; font-size: 14px;">Poof - AI-Powered Financial Analysis for Ecommerce</p>
+                      <td style="padding: 30px; background-color: #F5F7F2; text-align: center; border-top: 1px solid #C9D3C6;">
+                        <p style="margin: 0; color: #6E7A73; font-size: 14px;">Poof - AI-Powered Financial Analysis for Ecommerce</p>
                       </td>
                     </tr>
                   </table>

@@ -18,7 +18,7 @@ export default function NotFound() {
           </p>
           <Link
             href="/resources"
-            className="inline-block bg-poof-primary-600 text-white font-semibold px-8 py-3 rounded-magical hover:bg-poof-primary-700 transition-colors"
+            className="inline-block bg-poof-primary-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-poof-primary-700 transition-colors"
           >
             Browse All Resources
           </Link>

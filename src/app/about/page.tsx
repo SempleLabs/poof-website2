@@ -102,7 +102,7 @@ export default function AboutPage() {
       <Header />
 
       <PageHero
-        title={<>Bookkeeping That Actually <span className="text-gradient-gold">Makes Sense</span></>}
+        title={<>Bookkeeping That Actually <span className="text-ledger-600">Makes Sense</span></>}
         subtitle="Small business owners shouldn't need an accounting degree to understand their finances. Poof brings clarity to bookkeeping with AI that works the way you think."
       />
 
@@ -123,11 +123,11 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+      <section className="py-20 bg-slate-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gold-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-teal-500 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-ledger-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-ledger-500 rounded-full blur-2xl"></div>
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -144,7 +144,7 @@ export default function AboutPage() {
             {/* Vertical timeline with connecting line */}
             <div className="relative">
               {/* Connecting line */}
-              <div className="absolute left-14 top-14 bottom-14 w-0.5 bg-gradient-to-b from-gold-300 via-gold-400 to-gold-500"></div>
+              <div className="absolute left-14 top-14 bottom-14 w-0.5 bg-ledger-300"></div>
 
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
@@ -152,24 +152,24 @@ export default function AboutPage() {
                     <div className="relative flex gap-8 items-start">
                       {/* Timeline circle with pulse animation for last item */}
                       <div className="flex-shrink-0 relative">
-                        <div className={`w-28 h-28 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight shadow-xl border-4 border-white relative z-10 ${
+                        <div className={`w-28 h-28 bg-ledger-400 rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight shadow-xl border-4 border-white relative z-10 ${
                           index === milestones.length - 1 ? 'animate-pulse' : ''
                         }`}>
                           <span className="px-2">{milestone.year}</span>
                         </div>
                         {/* Glow effect for current year */}
                         {index === milestones.length - 1 && (
-                          <div className="absolute inset-0 bg-gold-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                          <div className="absolute inset-0 bg-ledger-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
                         )}
                       </div>
 
                       {/* Content card */}
                       <div className="flex-1 pt-2">
-                        <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border-l-4 border-gold-400">
+                        <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border-l-4 border-ledger-400">
                           <h3 className="text-2xl font-bold font-display text-slate-900 mb-4 flex items-center">
                             {milestone.title}
                             {index === milestones.length - 1 && (
-                              <svg className="w-6 h-6 ml-3 text-gold-500" fill="currentColor" viewBox="0 0 24 24">
+                              <svg className="w-6 h-6 ml-3 text-ledger-600" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
                               </svg>
                             )}
@@ -202,7 +202,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg">
+                  <div className="w-16 h-16 bg-ledger-400 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg">
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-bold font-display text-slate-900 mb-3">{value.title}</h3>
@@ -230,7 +230,7 @@ export default function AboutPage() {
             <div className="bg-slate-800 border border-slate-700 rounded-2xl p-10">
               <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
                 <div className="flex-shrink-0 mx-auto md:mx-0">
-                  <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-gold-500/30 shadow-lg">
+                  <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-ledger-500/30 shadow-lg">
                     <Image
                       src="/team/austin-semple.jpg"
                       alt="Austin Semple"
@@ -241,7 +241,7 @@ export default function AboutPage() {
                   </div>
                   <div className="text-center mt-4">
                     <h3 className="text-xl font-bold font-display text-white">Austin Semple</h3>
-                    <div className="text-gold-500 font-medium">CEO &amp; Founder</div>
+                    <div className="text-ledger-600 font-medium">CEO &amp; Founder</div>
                   </div>
                 </div>
 
@@ -266,11 +266,11 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="bg-gold-500/10 p-6 rounded-lg border-l-4 border-gold-500 text-center">
-                <p className="text-lg font-medium text-gold-300 mb-2">
+              <div className="bg-ledger-500/10 p-6 rounded-lg border-l-4 border-ledger-500 text-center">
+                <p className="text-lg font-medium text-ledger-400 mb-2">
                   &ldquo;Poof isn&apos;t just another software company.&rdquo;
                 </p>
-                <p className="text-gold-400">
+                <p className="text-ledger-400">
                   It&apos;s my personal mission to give small business owners their time back,
                   so they can focus on what truly matters &mdash; growing their dreams.
                 </p>
@@ -293,13 +293,13 @@ export default function AboutPage() {
               </p>
               <p className="text-slate-600 leading-relaxed mt-4">
                 For support, billing, or privacy questions, email{' '}
-                <a href="mailto:support@poofai.com" className="text-gold-600 underline hover:text-gold-700">
+                <a href="mailto:support@poofai.com" className="text-ledger-600 underline hover:text-ledger-700">
                   support@poofai.com
                 </a>
                 . We respond within 2 business days. You can also visit our{' '}
-                <Link href="/support" className="text-gold-600 underline hover:text-gold-700">support page</Link>
+                <Link href="/support" className="text-ledger-600 underline hover:text-ledger-700">support page</Link>
                 {' '}or{' '}
-                <Link href="/contact" className="text-gold-600 underline hover:text-gold-700">contact page</Link>.
+                <Link href="/contact" className="text-ledger-600 underline hover:text-ledger-700">contact page</Link>.
               </p>
             </div>
           </AnimateOnScroll>
@@ -309,23 +309,9 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-900 relative overflow-hidden">
         {/* Sparkle stars */}
-        {[...Array(6)].map((_, i) => (
-          <span
-            key={i}
-            className={`absolute text-white/20 animate-sparkle-drift`}
-            style={{
-              top: `${15 + Math.random() * 70}%`,
-              left: `${5 + Math.random() * 90}%`,
-              fontSize: `${10 + Math.random() * 14}px`,
-              animationDelay: `${i * 0.7}s`,
-            }}
-          >
-            ✦
-          </span>
-        ))}
         {/* Floating orbs */}
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
 
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -337,7 +323,7 @@ export default function AboutPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
               Start Free Trial →
             </Link>

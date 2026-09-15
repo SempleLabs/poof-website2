@@ -40,17 +40,17 @@ export default function ReceptionistSection() {
   return (
     <section id="receptionist" className="py-20 bg-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-violet-500/15 border border-violet-400/30 text-violet-200 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of Poof Managed for Trades
+            <div className="inline-flex items-center gap-2 bg-ledger-500/15 border border-ledger-400/30 text-ledger-300 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+              Part of The Augmented Operator
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
-              Every call answered. <span className="text-gradient-gold">Every job on the board.</span>
+              Every call answered. <span className="text-ledger-600">Every job on the board.</span>
             </h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Managed customers can have Poof answer the shop&apos;s line. An AI receptionist picks up, works out
@@ -73,7 +73,7 @@ export default function ReceptionistSection() {
         </div>
 
         <AnimateOnScroll animation="fade-up">
-          <div className="rounded-xl border border-violet-400/30 bg-violet-500/10 p-6 mb-5">
+          <div className="rounded-xl border border-ledger-400/30 bg-ledger-500/10 p-6 mb-5">
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
               Versus an answering service
             </h3>

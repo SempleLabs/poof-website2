@@ -122,12 +122,12 @@ export default function FeaturesPage() {
       <Header />
 
       <PageHero
-        title={<>Everything You Need. <span className="text-gradient-gold">Nothing You Don&apos;t.</span></>}
+        title={<>Everything You Need. <span className="text-ledger-600">Nothing You Don&apos;t.</span></>}
         subtitle="128 features, one flat price — $79/mo. One plan, every feature, nothing you have to grow into. AI-powered categorization, budgeting, forecasting, invoicing, job costing, and 13 reports — all included."
       >
         <Link
           href="https://app.poofai.com/register"
-          className="bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 shadow-gold text-lg mt-8 inline-block px-8 py-4"
+          className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg mt-8 inline-block px-8 py-4"
         >
           Start Free Trial →
         </Link>
@@ -150,7 +150,7 @@ export default function FeaturesPage() {
                 }}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
                   activeTab === index
-                    ? 'bg-gold-600 text-white shadow-md'
+                    ? 'bg-ledger-500 text-white shadow-md'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-800'
                 }`}
               >
@@ -178,7 +178,7 @@ export default function FeaturesPage() {
           <div>
             <AnimateOnScroll animation="fade-up" key={activeTab}>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-14 bg-gradient-to-br from-gold-500 to-gold-400 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                <div className="w-14 h-14 bg-ledger-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
                   <span className="scale-[1.6]">
                     {groupIcons[activeGroup.icon] || groupIcons.sparkles}
                   </span>
@@ -189,8 +189,8 @@ export default function FeaturesPage() {
                 </div>
               </div>
               {activeGroup.note && (
-                <div className="mb-8 rounded-xl border border-violet-200 bg-violet-50 px-5 py-4">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-violet-700 mb-1">
+                <div className="mb-8 rounded-xl border border-ledger-300 bg-ledger-100 px-5 py-4">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-ledger-700 mb-1">
                     Availability
                   </div>
                   <p className="text-sm text-slate-700 leading-relaxed">{activeGroup.note}</p>
@@ -201,7 +201,7 @@ export default function FeaturesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {activeGroup.features.map((feature, featureIndex) => (
                 <AnimateOnScroll key={`${activeTab}-${featureIndex}`} animation="fade-up" delay={80 + featureIndex * 60} className="h-full">
-                  <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm h-full hover:border-gold-200 hover:shadow-md transition-all duration-300">
+                  <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm h-full hover:border-ledger-300 hover:shadow-md transition-all duration-300">
                     <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
                       {feature.title}
                     </h3>
@@ -219,7 +219,7 @@ export default function FeaturesPage() {
                 onClick={() => setActiveTab(prev => Math.max(0, prev - 1))}
                 disabled={activeTab === 0}
                 className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                  activeTab === 0 ? 'text-slate-300 cursor-default' : 'text-slate-500 hover:text-gold-500'
+                  activeTab === 0 ? 'text-slate-300 cursor-default' : 'text-slate-500 hover:text-ledger-700'
                 }`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -232,7 +232,7 @@ export default function FeaturesPage() {
                 onClick={() => setActiveTab(prev => Math.min(featureGroups.length - 1, prev + 1))}
                 disabled={activeTab === featureGroups.length - 1}
                 className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                  activeTab === featureGroups.length - 1 ? 'text-slate-300 cursor-default' : 'text-slate-500 hover:text-gold-500'
+                  activeTab === featureGroups.length - 1 ? 'text-slate-300 cursor-default' : 'text-slate-500 hover:text-ledger-700'
                 }`}
               >
                 {activeTab < featureGroups.length - 1 ? tabLabels[featureGroups[activeTab + 1].name] || featureGroups[activeTab + 1].name : 'Next'}
@@ -279,8 +279,8 @@ export default function FeaturesPage() {
               ].map((item, index) => (
                 <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-gold-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-16 h-16 bg-ledger-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-ledger-600" fill="currentColor" viewBox="0 0 24 24">
                         {item.icon}
                       </svg>
                     </div>
@@ -298,9 +298,9 @@ export default function FeaturesPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-200 rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
-              <div className="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-ledger-100 border border-ledger-300 rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
+              <div className="w-16 h-16 bg-ledger-200 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg className="w-8 h-8 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
@@ -310,7 +310,7 @@ export default function FeaturesPage() {
               </div>
               <Link
                 href="/spend-score"
-                className="bg-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-500 transition-all whitespace-nowrap flex-shrink-0"
+                className="bg-ledger-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-ledger-500 transition-all whitespace-nowrap flex-shrink-0"
               >
                 Get Your Spend Score →
               </Link>
@@ -321,8 +321,8 @@ export default function FeaturesPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
@@ -334,7 +334,7 @@ export default function FeaturesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transition-all duration-300 text-lg"
+                className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transition-all duration-300 text-lg"
               >
                 Start Free Trial →
               </Link>

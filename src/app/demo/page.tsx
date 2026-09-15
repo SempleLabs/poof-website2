@@ -43,13 +43,13 @@ export default function DemoPage() {
       <Header />
 
       <PageHero
-        title={<>See <span className="text-gradient-gold">Poof</span> in Action</>}
+        title={<>See <span className="text-ledger-600">Poof</span> in Action</>}
         subtitle="Pick a time below for a personalized demo and see how Poof can transform your bookkeeping."
       >
         <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-slate-600 mt-6">
           {['30-minute demo', 'Personalized for your business', 'No pressure'].map((item) => (
             <div key={item} className="flex items-center">
-              <svg className="w-5 h-5 text-gold-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 text-ledger-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               {item}
@@ -81,7 +81,7 @@ export default function DemoPage() {
             {whatToExpect.map((item, i) => (
               <AnimateOnScroll key={item.title} animation="fade-up" delay={i * 100}>
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 h-full text-center">
-                  <div className="w-8 h-8 bg-gold-100 text-gold-600 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                  <div className="w-8 h-8 bg-ledger-200 text-ledger-600 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-4">
                     {i + 1}
                   </div>
                   <div className="font-semibold text-slate-900 mb-1">{item.title}</div>

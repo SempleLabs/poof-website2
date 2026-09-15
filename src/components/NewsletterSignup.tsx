@@ -60,20 +60,20 @@ export default function NewsletterSignup() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               disabled={status === 'loading' || status === 'success'}
-              className="flex-1 px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-3 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-ledger-500/20 focus:border-ledger-500 disabled:opacity-50 disabled:cursor-not-allowed"
               required
             />
             <button
               type="submit"
               disabled={status === 'loading' || status === 'success'}
-              className="bg-gold-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gold-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-ledger-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-ledger-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
             </button>
           </div>
 
           {message && (
-            <p className={`text-sm mt-4 ${status === 'error' ? 'text-rose-400' : 'text-teal-400'}`}>
+            <p className={`text-sm mt-4 ${status === 'error' ? 'text-rose-400' : 'text-ledger-400'}`}>
               {message}
             </p>
           )}

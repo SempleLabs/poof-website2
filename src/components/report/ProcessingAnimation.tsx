@@ -17,9 +17,9 @@ export default function ProcessingAnimation({ currentPhase }: ProcessingAnimatio
       <div className="flex justify-center mb-8">
         <div className="relative w-16 h-16">
           <div className="absolute inset-0 rounded-full border-4 border-slate-200" />
-          <div className="absolute inset-0 rounded-full border-4 border-violet-500 border-t-transparent animate-spin" />
-          <div className="absolute inset-3 rounded-full bg-violet-100 flex items-center justify-center">
-            <svg className="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="absolute inset-0 rounded-full border-4 border-ledger-500 border-t-transparent animate-spin" />
+          <div className="absolute inset-3 rounded-full bg-ledger-200 flex items-center justify-center">
+            <svg className="w-5 h-5 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={phases[currentPhase]?.icon || phases[0].icon} />
             </svg>
           </div>
@@ -40,26 +40,26 @@ export default function ProcessingAnimation({ currentPhase }: ProcessingAnimatio
           >
             <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
               i < currentPhase
-                ? 'bg-teal-100'
+                ? 'bg-ledger-200'
                 : i === currentPhase
-                  ? 'bg-violet-100'
+                  ? 'bg-ledger-200'
                   : 'bg-slate-100'
             }`}>
               {i < currentPhase ? (
-                <svg className="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               ) : i === currentPhase ? (
-                <div className="w-2.5 h-2.5 bg-violet-500 rounded-full animate-pulse" />
+                <div className="w-2.5 h-2.5 bg-ledger-500 rounded-full animate-pulse" />
               ) : (
                 <div className="w-2 h-2 bg-slate-300 rounded-full" />
               )}
             </div>
             <span className={`text-sm font-medium ${
               i < currentPhase
-                ? 'text-teal-700'
+                ? 'text-ledger-700'
                 : i === currentPhase
-                  ? 'text-violet-700'
+                  ? 'text-ledger-700'
                   : 'text-slate-400'
             }`}>
               {phase.label}

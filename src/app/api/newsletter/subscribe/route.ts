@@ -132,14 +132,14 @@ export async function POST(request: NextRequest) {
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-        <body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
-          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8fafc; padding: 40px 20px;">
+        <body style="margin: 0; padding: 0; background-color: #F5F7F2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #F5F7F2; padding: 40px 20px;">
             <tr>
               <td align="center">
                 <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
                   <!-- Header -->
                   <tr>
-                    <td style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%); padding: 40px 30px; text-align: center;">
+                    <td style="background: linear-gradient(135deg, #1F7A4F 0%, #1B5E3F 50%, #1B5E3F 100%); padding: 40px 30px; text-align: center;">
                       <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 700;">Welcome to Poof!</h1>
                     </td>
                   </tr>
@@ -147,23 +147,23 @@ export async function POST(request: NextRequest) {
                   <!-- Content -->
                   <tr>
                     <td style="padding: 40px 30px;">
-                      <p style="margin: 0 0 20px; color: #334155; font-size: 16px; line-height: 1.6;">
+                      <p style="margin: 0 0 20px; color: #2A3D33; font-size: 16px; line-height: 1.6;">
                         Thanks for subscribing to the Poof newsletter! You're now on the list to receive:
                       </p>
 
-                      <ul style="margin: 0 0 20px; padding-left: 20px; color: #334155; font-size: 16px; line-height: 1.8;">
+                      <ul style="margin: 0 0 20px; padding-left: 20px; color: #2A3D33; font-size: 16px; line-height: 1.8;">
                         <li>Bookkeeping tips that save you hours every month</li>
                         <li>Product updates — new ways Poof automates your books</li>
                         <li>Insights to help small business owners stay on top of their finances</li>
                       </ul>
 
-                      <p style="margin: 0 0 30px; color: #334155; font-size: 16px; line-height: 1.6;">
+                      <p style="margin: 0 0 30px; color: #2A3D33; font-size: 16px; line-height: 1.6;">
                         Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 128 features, one flat price.
                       </p>
 
                       <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">
                         <tr>
-                          <td style="background-color: #8b5cf6; border-radius: 8px;">
+                          <td style="background-color: #1F7A4F; border-radius: 8px;">
                             <a href="https://www.poofai.com" style="display: inline-block; padding: 14px 28px; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px;">
                               Learn More About Poof
                             </a>
@@ -175,15 +175,15 @@ export async function POST(request: NextRequest) {
 
                   <!-- Footer -->
                   <tr>
-                    <td style="padding: 30px; background-color: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0;">
-                      <p style="margin: 0 0 10px; color: #64748b; font-size: 14px;">
+                    <td style="padding: 30px; background-color: #F5F7F2; text-align: center; border-top: 1px solid #C9D3C6;">
+                      <p style="margin: 0 0 10px; color: #6E7A73; font-size: 14px;">
                         Poof — Bookkeeping That Does Itself
                       </p>
-                      <p style="margin: 0 0 8px; color: #94a3b8; font-size: 12px;">
+                      <p style="margin: 0 0 8px; color: #96A39B; font-size: 12px;">
                         You received this email because you subscribed at poofai.com.
-                        <a href="${unsubscribeUrl}" style="color: #7c3aed; text-decoration: underline;">Unsubscribe</a>
+                        <a href="${unsubscribeUrl}" style="color: #1B5E3F; text-decoration: underline;">Unsubscribe</a>
                       </p>
-                      <p style="margin: 0; color: #94a3b8; font-size: 12px;">
+                      <p style="margin: 0; color: #96A39B; font-size: 12px;">
                         ${MAILING_ADDRESS}
                       </p>
                     </td>

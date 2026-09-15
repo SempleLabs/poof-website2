@@ -13,9 +13,9 @@ interface EmailPayload {
 }
 
 function getScoreColor(score: number): string {
-  if (score >= 70) return '#10b981'
+  if (score >= 70) return '#1F7A4F'
   if (score >= 50) return '#f59e0b'
-  return '#ef4444'
+  return '#B3261E'
 }
 
 function getScoreLabel(score: number): string {
@@ -41,21 +41,21 @@ function buildReportEmail(payload: EmailPayload): string {
     const barWidth = Math.round((cat.total / maxCatTotal) * 100)
     return `
       <tr>
-        <td style="padding: 6px 0; font-size: 14px; color: #334155;">${cat.name}</td>
+        <td style="padding: 6px 0; font-size: 14px; color: #2A3D33;">${cat.name}</td>
         <td style="padding: 6px 12px; width: 40%;">
           <div style="background: #f1f5f9; border-radius: 4px; height: 8px; width: 100%;">
-            <div style="background: #8b5cf6; border-radius: 4px; height: 8px; width: ${barWidth}%;"></div>
+            <div style="background: #1F7A4F; border-radius: 4px; height: 8px; width: ${barWidth}%;"></div>
           </div>
         </td>
-        <td style="padding: 6px 0; font-size: 14px; color: #0f172a; font-weight: 600; text-align: right;">$${cat.total.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</td>
-        <td style="padding: 6px 0; font-size: 12px; color: #94a3b8; text-align: right; padding-left: 8px;">${cat.percentage.toFixed(0)}%</td>
+        <td style="padding: 6px 0; font-size: 14px; color: #12211A; font-weight: 600; text-align: right;">$${cat.total.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</td>
+        <td style="padding: 6px 0; font-size: 12px; color: #96A39B; text-align: right; padding-left: 8px;">${cat.percentage.toFixed(0)}%</td>
       </tr>`
   }).join('')
 
   const insightRows = (payload.insights || []).map(insight =>
     `<tr><td style="padding: 10px 0; border-bottom: 1px solid #f1f5f9;">
-      <div style="font-size: 14px;"><span style="margin-right: 8px;">${insight.emoji}</span><strong style="color: #0f172a;">${insight.title}</strong></div>
-      <div style="font-size: 13px; color: #64748b; margin-top: 4px;">${insight.detail}</div>
+      <div style="font-size: 14px;"><span style="margin-right: 8px;">${insight.emoji}</span><strong style="color: #12211A;">${insight.title}</strong></div>
+      <div style="font-size: 13px; color: #6E7A73; margin-top: 4px;">${insight.detail}</div>
     </td></tr>`
   ).join('')
 
@@ -69,11 +69,11 @@ function buildReportEmail(payload: EmailPayload): string {
   const subScoreRows = subScores.map(s => `
     <tr>
       <td style="padding: 8px 0;">
-        <div style="font-size: 13px; font-weight: 600; color: #334155;">${s.name}: ${s.score}/100</div>
+        <div style="font-size: 13px; font-weight: 600; color: #2A3D33;">${s.name}: ${s.score}/100</div>
         <div style="background: #f1f5f9; border-radius: 4px; height: 6px; width: 100%; margin-top: 4px;">
           <div style="background: ${getScoreColor(s.score)}; border-radius: 4px; height: 6px; width: ${s.score}%;"></div>
         </div>
-        <div style="font-size: 12px; color: #64748b; margin-top: 4px;">${s.detail}</div>
+        <div style="font-size: 12px; color: #6E7A73; margin-top: 4px;">${s.detail}</div>
       </td>
     </tr>`
   ).join('')
@@ -95,30 +95,30 @@ function buildReportEmail(payload: EmailPayload): string {
       .email-text-secondary { color: #a0a0a0 !important; }
       .email-text-muted { color: #888888 !important; }
       .email-bar-bg { background-color: #404040 !important; }
-      .email-cta-section { background: #7c3aed !important; }
+      .email-cta-section { background: #1B5E3F !important; }
       .email-cta-text { color: #ffffff !important; }
       .email-cta-subtext { color: #e0d5ff !important; }
     }
   </style>
 </head>
-<body class="email-body" style="margin: 0; padding: 0; background: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+<body class="email-body" style="margin: 0; padding: 0; background: #F5F7F2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   <div style="max-width: 600px; margin: 0 auto; padding: 32px 16px;">
 
     <!-- Header with Logo -->
     <div style="text-align: center; padding: 24px 0;">
-      <img src="https://www.poofai.com/poof-logo.png" alt="Poof" width="72" height="72" style="display: block; margin: 0 auto 4px;" />
+      <img src="https://www.poofai.com/favicon-192x192.png" alt="Poof" width="40" height="40" style="display: block; margin: 0 auto 4px;" />
       <!--[if mso]><![endif]-->
-      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
-      <span style="font-family: 'Righteous', 'Inter', sans-serif; font-size: 32px; color: #8b5cf6;">Poof</span>
-      <div class="email-text-muted" style="font-size: 13px; color: #94a3b8; margin-top: 6px;">Your Spend Score Report</div>
+      <link href="https://fonts.googleapis.com/css2?family=IBM Plex Sans&display=swap" rel="stylesheet" />
+      <span style="font-family: 'IBM Plex Sans', system-ui, sans-serif'Inter', sans-serif; font-size: 32px; color: #1F7A4F;">Poof</span>
+      <div class="email-text-muted" style="font-size: 13px; color: #96A39B; margin-top: 6px;">Your Spend Score Report</div>
     </div>
 
     <!-- Score Card -->
-    <div class="email-card" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #e2e8f0;">
-      <div class="email-text-muted" style="font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 12px;">Spend Score</div>
+    <div class="email-card" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #C9D3C6;">
+      <div class="email-text-muted" style="font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #96A39B; margin-bottom: 12px;">Spend Score</div>
       <div style="font-size: 64px; font-weight: 800; color: ${scoreColor}; line-height: 1;">${spendScore.overall}</div>
-      <div class="email-text-primary" style="font-size: 18px; font-weight: 600; color: #0f172a; margin-top: 8px;">${scoreLabel}</div>
-      <div class="email-text-muted" style="font-size: 13px; color: #94a3b8;">out of 100</div>
+      <div class="email-text-primary" style="font-size: 18px; font-weight: 600; color: #12211A; margin-top: 8px;">${scoreLabel}</div>
+      <div class="email-text-muted" style="font-size: 13px; color: #96A39B;">out of 100</div>
 
       <!-- Sub-scores -->
       <div style="margin-top: 24px; text-align: left;">
@@ -130,65 +130,65 @@ function buildReportEmail(payload: EmailPayload): string {
     <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 16px;">
       <tr>
         <td width="33%" style="padding: 4px;">
-          <div class="email-card" style="background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #e2e8f0;">
-            <div class="email-text-muted" style="font-size: 12px; color: #94a3b8;">Income</div>
-            <div style="font-size: 20px; font-weight: 700; color: #10b981; margin-top: 4px;">$${summary.totalIncome.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</div>
+          <div class="email-card" style="background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #C9D3C6;">
+            <div class="email-text-muted" style="font-size: 12px; color: #96A39B;">Income</div>
+            <div style="font-size: 20px; font-weight: 700; color: #1F7A4F; margin-top: 4px;">$${summary.totalIncome.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</div>
           </div>
         </td>
         <td width="33%" style="padding: 4px;">
-          <div class="email-card" style="background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #e2e8f0;">
-            <div class="email-text-muted" style="font-size: 12px; color: #94a3b8;">Expenses</div>
-            <div style="font-size: 20px; font-weight: 700; color: #ef4444; margin-top: 4px;">$${summary.totalExpenses.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</div>
+          <div class="email-card" style="background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #C9D3C6;">
+            <div class="email-text-muted" style="font-size: 12px; color: #96A39B;">Expenses</div>
+            <div style="font-size: 20px; font-weight: 700; color: #B3261E; margin-top: 4px;">$${summary.totalExpenses.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</div>
           </div>
         </td>
         <td width="33%" style="padding: 4px;">
-          <div class="email-card" style="background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #e2e8f0;">
-            <div class="email-text-muted" style="font-size: 12px; color: #94a3b8;">Net</div>
-            <div style="font-size: 20px; font-weight: 700; color: ${summary.net >= 0 ? '#10b981' : '#ef4444'}; margin-top: 4px;">${summary.net >= 0 ? '+' : '-'}$${Math.abs(summary.net).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</div>
+          <div class="email-card" style="background: white; border-radius: 12px; padding: 16px; text-align: center; border: 1px solid #C9D3C6;">
+            <div class="email-text-muted" style="font-size: 12px; color: #96A39B;">Net</div>
+            <div style="font-size: 20px; font-weight: 700; color: ${summary.net >= 0 ? '#1F7A4F' : '#B3261E'}; margin-top: 4px;">${summary.net >= 0 ? '+' : '-'}$${Math.abs(summary.net).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</div>
           </div>
         </td>
       </tr>
     </table>
 
     <!-- Key Insights -->
-    <div class="email-card" style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #e2e8f0;">
-      <div class="email-text-primary" style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Key Insights</div>
+    <div class="email-card" style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #C9D3C6;">
+      <div class="email-text-primary" style="font-size: 16px; font-weight: 700; color: #12211A; margin-bottom: 16px;">Key Insights</div>
       <table width="100%" cellpadding="0" cellspacing="0">${insightRows}</table>
     </div>
 
     <!-- Category Breakdown -->
-    <div class="email-card" style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #e2e8f0;">
-      <div class="email-text-primary" style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Spending Breakdown</div>
+    <div class="email-card" style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #C9D3C6;">
+      <div class="email-text-primary" style="font-size: 16px; font-weight: 700; color: #12211A; margin-bottom: 16px;">Spending Breakdown</div>
       <table width="100%" cellpadding="0" cellspacing="0">${categoryRows}</table>
     </div>
 
     <!-- Quick Stats -->
-    <div class="email-card" style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #e2e8f0;">
+    <div class="email-card" style="background: white; border-radius: 16px; padding: 24px; margin-top: 16px; border: 1px solid #C9D3C6;">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
           <td width="50%" style="padding-right: 12px; vertical-align: top;">
-            <div class="email-text-muted" style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Transactions Analyzed</div>
-            <div class="email-text-primary" style="font-size: 18px; font-weight: 700; color: #0f172a;">${summary.transactionCount}</div>
+            <div class="email-text-muted" style="font-size: 12px; color: #96A39B; margin-bottom: 4px;">Transactions Analyzed</div>
+            <div class="email-text-primary" style="font-size: 18px; font-weight: 700; color: #12211A;">${summary.transactionCount}</div>
           </td>
           <td width="50%" style="padding-left: 12px; vertical-align: top;">
-            <div class="email-text-muted" style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Statement Period</div>
-            <div class="email-text-primary" style="font-size: 14px; font-weight: 700; color: #0f172a;">${summary.dateRange.start} to ${summary.dateRange.end}</div>
+            <div class="email-text-muted" style="font-size: 12px; color: #96A39B; margin-bottom: 4px;">Statement Period</div>
+            <div class="email-text-primary" style="font-size: 14px; font-weight: 700; color: #12211A;">${summary.dateRange.start} to ${summary.dateRange.end}</div>
           </td>
         </tr>
       </table>
     </div>
 
     <!-- CTA -->
-    <div class="email-cta-section" style="background: #7c3aed; border-radius: 16px; padding: 32px; margin-top: 24px; text-align: center;">
+    <div class="email-cta-section" style="background: #1B5E3F; border-radius: 16px; padding: 32px; margin-top: 24px; text-align: center;">
       <div class="email-cta-text" style="font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Want to improve your Spend Score?</div>
       <div class="email-cta-subtext" style="font-size: 14px; color: #e0d5ff; margin-bottom: 20px;">Poof does this automatically, every day. AI categorization, reconciliation, invoicing, budgeting, forecasting, and 13 financial reports — 128 features, $79/mo.</div>
-      <a href="https://app.poofai.com/register" style="display: inline-block; background: white; color: #7c3aed; font-weight: 600; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 15px;">Start Free Trial</a>
+      <a href="https://app.poofai.com/register" style="display: inline-block; background: white; color: #1B5E3F; font-weight: 600; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-size: 15px;">Start Free Trial</a>
     </div>
 
     <!-- Footer -->
     <div style="text-align: center; padding: 24px 0;">
-      <a href="https://www.poofai.com" style="font-size: 12px; color: #8b5cf6; text-decoration: none;">www.poofai.com</a>
-      <div class="email-text-muted" style="font-size: 11px; color: #94a3b8; margin-top: 4px;">Bookkeeping That Does Itself</div>
+      <a href="https://www.poofai.com" style="font-size: 12px; color: #1F7A4F; text-decoration: none;">www.poofai.com</a>
+      <div class="email-text-muted" style="font-size: 11px; color: #96A39B; margin-top: 4px;">Bookkeeping That Does Itself</div>
     </div>
 
   </div>

@@ -118,7 +118,7 @@ const comparisonData = [
 ]
 
 const PoofCheck = () => (
-  <svg className="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+  <svg className="w-5 h-5 text-ledger-400" fill="currentColor" viewBox="0 0 20 20">
     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
   </svg>
 )
@@ -141,7 +141,7 @@ export default function PoofVsQuickbooksPage() {
       <Header />
 
       <PageHero
-        title={<><span className="text-gradient-gold">Poof</span> vs QuickBooks</>}
+        title={<><span className="text-ledger-600">Poof</span> vs QuickBooks</>}
         subtitle="Both platforms handle core bookkeeping. Poof is one plan at $79/mo — 44% less than the $140/mo QuickBooks Plus tier that carries job costing and budgets — with AI automation QuickBooks doesn't offer at any tier."
       />
 
@@ -150,11 +150,11 @@ export default function PoofVsQuickbooksPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <AnimateOnScroll animation="fade-up" delay={0}>
-              <div className="bg-slate-900 border border-gold-500/30 rounded-2xl p-8 h-full">
+              <div className="bg-slate-900 border border-ledger-500/30 rounded-2xl p-8 h-full">
                 <h3 className="text-2xl font-bold font-display text-white mb-2">Poof</h3>
                 <div className="mb-1">
                   <span className="text-2xl font-bold text-slate-500 line-through mr-2">$79</span>
-                  <span className="text-4xl font-bold text-gold-400">$39.50</span>
+                  <span className="text-4xl font-bold text-ledger-400">$39.50</span>
                   <span className="text-lg text-slate-400">/mo</span>
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
@@ -207,22 +207,22 @@ export default function PoofVsQuickbooksPage() {
               </p>
               <ul className="space-y-2 text-slate-700 text-sm mb-4">
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>A dollar ceiling, separate from the match.</strong> A rule that writes to the ledger
                   must carry a limit. One without does not run.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>A daily cap</strong> &mdash; and the overflow goes to your inbox for review rather
                   than being silently dropped.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>A requirement that prior human decisions agreed.</strong> A rule cannot be granted
                   over work your own history contradicts.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>It stops itself.</strong> Correct anything the rule is about &mdash; not only the
                   rows it happened to touch &mdash; and it pauses, tells you which correction stopped it, and waits
                   for you to resume or revoke it.</span>
@@ -251,18 +251,18 @@ export default function PoofVsQuickbooksPage() {
               </p>
               <ul className="space-y-2 text-slate-700 text-sm">
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>$79 flat vs $140.</strong> Poof is 44% cheaper &mdash; and adds the AI assistant, budgeting,
                   forecasting, and per-job labor allocation that Plus doesn&apos;t have at any price.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>Roles and audit logging are Advanced-tier at QuickBooks.</strong> Poof&apos;s 5 roles,
                   26 granular permissions, and SOC 2 audit logging with PII masking are included &mdash; QuickBooks puts
                   that class of capability on its $340/mo plan.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>Intuit raised prices on August 1, 2026.</strong> Plus went from $115 to $140 (+22%) and
                   Advanced from $275 to $340 (+24%), with no new capability attached. Poof is $79, flat, everything
                   included.</span>
@@ -281,8 +281,8 @@ export default function PoofVsQuickbooksPage() {
                 <thead>
                   <tr className="border-b border-slate-200">
                     <th className="text-left px-6 py-5 text-sm font-semibold text-slate-600 w-1/2">Feature</th>
-                    <th className="px-4 py-5 text-center bg-gold-500/10">
-                      <div className="text-sm font-bold text-gold-600">Poof</div>
+                    <th className="px-4 py-5 text-center bg-ledger-500/10">
+                      <div className="text-sm font-bold text-ledger-600">Poof</div>
                     </th>
                     <th className="px-4 py-5 text-center">
                       <div className="text-sm font-bold text-slate-700">QuickBooks</div>
@@ -300,7 +300,7 @@ export default function PoofVsQuickbooksPage() {
                       {section.features.map((feature, featureIndex) => (
                         <tr key={`${sectionIndex}-${featureIndex}`} className="border-b border-slate-200">
                           <td className="px-6 py-4 text-sm text-slate-700">{feature.name}</td>
-                          <td className="px-4 py-4 text-center bg-gold-500/5">
+                          <td className="px-4 py-4 text-center bg-ledger-500/5">
                             <div className="flex justify-center">{feature.poof ? <PoofCheck /> : <Cross />}</div>
                           </td>
                           <td className="px-4 py-4 text-center">
@@ -323,12 +323,12 @@ export default function PoofVsQuickbooksPage() {
 
       {/* CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
+              Try <span className="text-ledger-600">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
               See the difference AI bookkeeping makes. One plan, 128 features, no tier to grow into.
@@ -336,7 +336,7 @@ export default function PoofVsQuickbooksPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="https://app.poofai.com/register"
-                className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 Start Free Trial →
               </Link>

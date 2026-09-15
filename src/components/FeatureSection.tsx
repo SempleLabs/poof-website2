@@ -57,14 +57,14 @@ export default function FeatureSection() {
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background glowing orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-400/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-ledger-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-ledger-400/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
             Stop Doing Your Own
-            <span className="text-gradient-gold"> Bookkeeping</span>
+            <span className="text-ledger-600"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             128 features across 13 categories — all included in one plan.
@@ -77,10 +77,10 @@ export default function FeatureSection() {
             <div key={groupIndex}>
               <AnimateOnScroll animation="fade-up" delay={100}>
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-gold-400 bg-white border border-slate-200 shadow-sm flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-ledger-400 bg-white border border-slate-200 shadow-sm flex-shrink-0">
                     {groupIcons[group.icon]}
                   </div>
-                  <h3 className="text-gold-400 text-base font-semibold tracking-widest uppercase">
+                  <h3 className="text-ledger-400 text-base font-semibold tracking-widest uppercase">
                     {group.name}
                   </h3>
                 </div>
@@ -96,7 +96,7 @@ export default function FeatureSection() {
                   >
                     <GlowCard
                       className="rounded-xl bg-white border border-slate-200 shadow-sm h-full card-hover-lift"
-                      glowColor="rgba(139, 92, 246, 0.08)"
+                      glowColor="rgba(27, 94, 63, 0.08)"
                     >
                       <div className="p-6 h-full border-t-2 border-transparent">
                         <h4 className="text-lg font-semibold text-slate-900 mb-2">
@@ -115,7 +115,7 @@ export default function FeatureSection() {
         </div>
 
         <AnimateOnScroll animation="scale-up" delay={200} className="text-center mt-16">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gold-500/10 text-gold-400 text-sm font-medium border border-gold-500/30">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-ledger-500/10 text-ledger-400 text-sm font-medium border border-ledger-500/30">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>

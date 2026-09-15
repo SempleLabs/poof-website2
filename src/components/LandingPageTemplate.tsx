@@ -45,9 +45,9 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80dvh] flex items-center justify-center hero-bg overflow-hidden pt-16">
+      <section className="relative min-h-[80dvh] flex items-center justify-center bg-paper overflow-hidden pt-16">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gold-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
@@ -59,7 +59,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
               {config.hero.highlightedWord ? (
                 <>
                   {config.hero.headline.split(config.hero.highlightedWord)[0]}
-                  <span className="text-gradient-gold">{config.hero.highlightedWord}</span>
+                  <span className="text-ledger-600">{config.hero.highlightedWord}</span>
                   {config.hero.headline.split(config.hero.highlightedWord)[1]}
                 </>
               ) : (
@@ -77,7 +77,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
           <AnimateOnScroll animation="scale-up" delay={200}>
             <Link
               href={config.hero.ctaHref}
-              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02]"
+              className="inline-block bg-ledger-500 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-ledger-600 transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02]"
             >
               {config.hero.ctaText}
             </Link>
@@ -92,7 +92,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
           )}
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" />
       </section>
 
       {/* Pain Points Section */}
@@ -139,7 +139,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
                 <AnimateOnScroll key={i} animation="fade-up" delay={i * 80}>
                   <GlowCard className="bg-white border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
                     <div className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gold-50 text-gold-500 flex items-center justify-center">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-ledger-100 text-ledger-600 flex items-center justify-center">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -173,9 +173,9 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
                   <div className="flex gap-6 items-start relative">
                     {/* Connector line */}
                     {i < config.howItWorks!.steps.length - 1 && (
-                      <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-gradient-to-b from-gold-300 to-slate-200" />
+                      <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-ledger-300" />
                     )}
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-600 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-ledger-500 text-white flex items-center justify-center font-bold text-lg relative z-10">
                       {step.number}
                     </div>
                     <div className="pb-10">
@@ -236,7 +236,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
                   <details className="group bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 [&_summary::-webkit-details-marker]:hidden">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
                       {faq.question}
-                      <svg className="w-5 h-5 flex-shrink-0 text-gold-500 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 flex-shrink-0 text-ledger-600 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
@@ -254,7 +254,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
         <VaporField particleCount={20} />
 
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gold-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-ledger-500/10 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -271,7 +271,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
           <AnimateOnScroll animation="scale-up" delay={200}>
             <Link
               href={config.cta.buttonHref}
-              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200"
+              className="inline-block bg-ledger-500 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-ledger-600 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200"
             >
               {config.cta.buttonText}
             </Link>
@@ -285,7 +285,7 @@ export default function LandingPageTemplate({ config }: { config: LandingPageCon
                 { label: '100% Confidential', icon: '✓' },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col items-center">
-                  <span className="text-teal-400 text-xl mb-2">{item.icon}</span>
+                  <span className="text-ledger-400 text-xl mb-2">{item.icon}</span>
                   <div className="text-sm">{item.label}</div>
                 </div>
               ))}

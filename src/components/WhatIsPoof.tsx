@@ -10,7 +10,7 @@ export default function WhatIsPoof() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll animation="fade-up">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-800 mb-6" style={{ letterSpacing: '-0.02em' }}>
-            What is <span className="text-gradient-gold">Poof</span>?
+            What is <span className="text-ledger-600">Poof</span>?
           </h2>
         </AnimateOnScroll>
         <AnimateOnScroll animation="fade-up" delay={100}>
@@ -30,7 +30,7 @@ export default function WhatIsPoof() {
             <AnimateOnScroll key={i} animation="scale-up" delay={200 + i * 100}>
               <GlowCard className="rounded-2xl bg-white border border-slate-200 shadow-card-light">
                 <div className="text-center p-6">
-                  <div className="font-mono text-3xl font-bold text-gold-500">
+                  <div className="font-mono text-3xl font-bold text-ledger-600">
                     <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </div>
                   <div className="text-sm text-slate-600 mt-1">{stat.label}</div>

@@ -29,12 +29,12 @@ export default function UnearnedRevenueSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-200 text-violet-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of Poof Managed for Trades
+            <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+              Part of The Augmented Operator
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
               A down payment isn&apos;t revenue until the job is done.{' '}
-              <span className="text-gradient-gold">A plan isn&apos;t revenue until the visit happens.</span>
+              <span className="text-ledger-600">A plan isn&apos;t revenue until the visit happens.</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Your bank feed says the money arrived. A controller says it isn&apos;t yours yet. Poof books it the
@@ -53,14 +53,14 @@ export default function UnearnedRevenueSection() {
                     <div
                       key={row.when}
                       className={`flex items-start justify-between gap-3 px-4 py-2.5 border-b border-slate-100 last:border-b-0 ${
-                        row.earned ? 'bg-emerald-50/60' : 'bg-slate-50'
+                        row.earned ? 'bg-ledger-100/60' : 'bg-slate-50'
                       }`}
                     >
                       <div className="min-w-0">
                         <div className="font-medium text-slate-900">{row.when}</div>
-                        <div className={`text-xs ${row.earned ? 'text-emerald-700' : 'text-slate-500'}`}>{row.account}</div>
+                        <div className={`text-xs ${row.earned ? 'text-ledger-700' : 'text-slate-500'}`}>{row.account}</div>
                       </div>
-                      <div className={`font-semibold whitespace-nowrap ${row.earned ? 'text-emerald-700' : 'text-slate-500'}`}>
+                      <div className={`font-semibold whitespace-nowrap ${row.earned ? 'text-ledger-700' : 'text-slate-500'}`}>
                         {row.amount}
                       </div>
                     </div>

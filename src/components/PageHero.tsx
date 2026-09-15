@@ -22,7 +22,7 @@ export default function PageHero({ title, subtitle, children }: PageHeroProps) {
   }, [])
 
   return (
-    <section className="relative pt-32 pb-20 hero-bg overflow-hidden">
+    <section className="relative pt-32 pb-20 bg-paper overflow-hidden">
       <VaporField particleCount={20} />
 
       <div

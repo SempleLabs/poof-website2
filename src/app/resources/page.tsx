@@ -133,7 +133,7 @@ export default async function ResourcesPage() {
       <Header />
 
       <PageHero
-        title={<>Bookkeeping <span className="text-gradient-gold">Resources</span></>}
+        title={<>Bookkeeping <span className="text-ledger-600">Resources</span></>}
         subtitle="Free guides and templates to help you master small business bookkeeping."
       />
 
@@ -151,7 +151,7 @@ export default async function ResourcesPage() {
             {guides.map((guide, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
                 <div className="bg-white border border-slate-200 rounded-xl p-8 flex gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gold-50 rounded-xl flex items-center justify-center text-gold-500">
+                  <div className="flex-shrink-0 w-16 h-16 bg-ledger-100 rounded-xl flex items-center justify-center text-ledger-600">
                     {guide.icon}
                   </div>
                   <div className="flex-1">
@@ -164,7 +164,7 @@ export default async function ResourcesPage() {
                       href={guide.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 rounded-lg bg-gold-600 text-white text-sm font-semibold hover:bg-gold-700 shadow-gold transition-colors"
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-ledger-500 text-white text-sm font-semibold hover:bg-ledger-600 transition-colors"
                     >
                       View Guide →
                     </a>
@@ -189,16 +189,16 @@ export default async function ResourcesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <AnimateOnScroll key={post.slug} animation="fade-up" delay={100 + index * 80}>
-                <Link href={`/blog/${post.slug}`} className="block bg-white border border-slate-200 rounded-xl p-8 h-full hover:border-gold-300 transition-colors">
+                <Link href={`/blog/${post.slug}`} className="block bg-white border border-slate-200 rounded-xl p-8 h-full hover:border-ledger-300 transition-colors">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gold-50 text-gold-600">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-ledger-100 text-ledger-600">
                       {post.category}
                     </span>
                     <span className="text-sm text-slate-500">{post.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold font-display text-slate-900 mb-2">{post.title}</h3>
                   <p className="text-slate-600 mb-4">{post.excerpt}</p>
-                  <span className="text-gold-600 font-medium text-sm">Read article →</span>
+                  <span className="text-ledger-600 font-medium text-sm">Read article →</span>
                 </Link>
               </AnimateOnScroll>
             ))}
@@ -222,7 +222,7 @@ export default async function ResourcesPage() {
                 <Link href={link.href} className="block bg-white border border-slate-200 rounded-xl p-6 h-full">
                   <h3 className="text-lg font-bold font-display text-slate-900 mb-2">{link.title}</h3>
                   <p className="text-slate-600 text-sm mb-4">{link.description}</p>
-                  <span className="text-gold-600 font-medium text-sm">{link.linkText}</span>
+                  <span className="text-ledger-600 font-medium text-sm">{link.linkText}</span>
                 </Link>
               </AnimateOnScroll>
             ))}
@@ -232,8 +232,8 @@ export default async function ResourcesPage() {
 
       {/* CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
@@ -244,7 +244,7 @@ export default async function ResourcesPage() {
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
               Start Free Trial →
             </Link>

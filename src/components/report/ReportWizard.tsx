@@ -165,10 +165,10 @@ export default function ReportWizard() {
             <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-3">Your Spend Score</p>
             <div className="relative w-36 h-36 mx-auto mb-4">
               <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="52" fill="none" stroke="#e2e8f0" strokeWidth="10" />
+                <circle cx="60" cy="60" r="52" fill="none" stroke="#C9D3C6" strokeWidth="10" />
                 <circle
                   cx="60" cy="60" r="52" fill="none"
-                  stroke={report.spendScore.overall >= 70 ? '#10b981' : report.spendScore.overall >= 50 ? '#f59e0b' : '#ef4444'}
+                  stroke={report.spendScore.overall >= 70 ? '#1F7A4F' : report.spendScore.overall >= 50 ? '#f59e0b' : '#B3261E'}
                   strokeWidth="10"
                   strokeLinecap="round"
                   strokeDasharray={`${(report.spendScore.overall / 100) * 2 * Math.PI * 52} ${2 * Math.PI * 52}`}
@@ -201,7 +201,7 @@ export default function ReportWizard() {
           <div className="text-center pt-4">
             <button
               onClick={handleStartOver}
-              className="text-violet-600 hover:text-violet-500 font-medium text-sm transition-colors"
+              className="text-ledger-600 hover:text-ledger-700 font-medium text-sm transition-colors"
             >
               Analyze another statement
             </button>

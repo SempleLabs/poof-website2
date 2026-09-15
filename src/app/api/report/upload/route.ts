@@ -140,11 +140,7 @@ function parseCSV(text: string): ParsedTransaction[] {
 
 const EXTRACTION_PROMPT = `Extract ALL transactions from this bank statement. Return a JSON object with:
 {
-  "transactions": [
-    { "date": "YYYY-MM-DD", "description": "merchant/payee name", "amount": 123.45, "type": "debit" }
-  ],
-  "totalDeposits": 1234.56,
-  "totalWithdrawals": 5678.90
+  "transactions": [    { "date": "YYYY-MM-DD", "description": "merchant/payee name", "amount": 123.45, "type": "debit" }  ],  "totalDeposits": 1234.56,  "totalWithdrawals": 5678.90
 }
 
 Rules:
@@ -166,8 +162,7 @@ interface ParseResult {
 
 function parseTransactionJson(content: string): ParseResult {
   let cleaned = content.trim()
-    .replace(/^```(?:json)?\s*/i, '')
-    .replace(/\s*```$/i, '')
+    .replace(/^```(?:json)?\s*/i, '')    .replace(/\s*```$/i, '')
 
   // Fix comma-formatted numbers in JSON (e.g., "amount": 7,000.00 → 7000.00)
   cleaned = cleaned.replace(/"amount"\s*:\s*(\d{1,3}(,\d{3})+(\.\d+)?)/g, (match) => {

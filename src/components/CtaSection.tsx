@@ -11,7 +11,7 @@ export default function CtaSection() {
       <VaporField particleCount={20} />
 
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gold-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-ledger-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -29,13 +29,13 @@ export default function CtaSection() {
         <AnimateOnScroll animation="scale-up" delay={200}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <BookCallButton
-              className="glow-border shimmer-hover bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 text-lg"
+              className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-200 text-lg"
             >
               Book a 20-minute call
             </BookCallButton>
             <Link
               href="https://app.poofai.com/register"
-              className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:border-gold-500/50 hover:text-gold-400 transition-all duration-200 text-lg"
+              className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg hover:border-ledger-500/50 hover:text-ledger-400 transition-all duration-200 text-lg"
             >
               Start the Free Trial
             </Link>
@@ -50,7 +50,7 @@ export default function CtaSection() {
               { label: 'Cancel Anytime', icon: '✓' },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center">
-                <span className="text-teal-400 text-xl mb-2">{item.icon}</span>
+                <span className="text-ledger-400 text-xl mb-2">{item.icon}</span>
                 <div className="text-sm">{item.label}</div>
               </div>
             ))}
