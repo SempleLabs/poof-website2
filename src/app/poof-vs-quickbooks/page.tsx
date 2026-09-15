@@ -8,7 +8,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Poof vs QuickBooks — AI Bookkeeping Comparison | Poof',
-  description: 'Compare Poof and QuickBooks side by side. Poof is $79/mo flat vs $140/mo for QuickBooks Plus — with AI budgeting, cash flow forecasting, job costing, and auto-reconciliation QuickBooks doesn\'t offer at any tier.',
+  description: 'Compare Poof and QuickBooks side by side. Poof is $79/mo flat vs $140/mo for QuickBooks Plus — and every AI change waits for your approval, unlike a QuickBooks bank rule that keeps auto-posting until somebody notices it is wrong.',
   keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping, AI budgeting, cash flow forecasting',
   alternates: {
     canonical: 'https://www.poofai.com/poof-vs-quickbooks',
@@ -24,6 +24,18 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
+  { category: 'Approvals & AI Autonomy', features: [
+    { name: 'Every AI Write Staged for Approval Before It Posts', poof: true, quickbooks: false },
+    { name: 'The Evidence Shown on the Card (What It Looked Up, Not Just What It Decided)', poof: true, quickbooks: false },
+    { name: 'Approve Part of a Batch, Leave the Rest Waiting', poof: true, quickbooks: false },
+    { name: 'Rejection Reason Recorded and Fed Back Into the Rules', poof: true, quickbooks: false },
+    { name: 'Automated Rules (Bank Rules)', poof: true, quickbooks: true },
+    { name: 'Rules Derived From Work You Just Reviewed, Not a Blank Form', poof: true, quickbooks: false },
+    { name: 'Mandatory Dollar Ceiling on Any Rule That Writes to the Ledger', poof: true, quickbooks: false },
+    { name: 'Daily Cap, With the Overflow Sent to Review Rather Than Dropped', poof: true, quickbooks: false },
+    { name: 'A Rule That Pauses Itself the First Time You Correct It', poof: true, quickbooks: false },
+    { name: '\u201cWhat AI Changed This Month, and Who Allowed It\u201d on One Page', poof: true, quickbooks: false },
+  ]},
   { category: 'AI & Automation', features: [
     { name: 'AI Transaction Categorization', poof: true, quickbooks: true },
     { name: 'Built-in AI Assistant (Poof)', poof: true, quickbooks: false },
@@ -53,7 +65,6 @@ const comparisonData = [
     { name: 'Auto-Reconciliation', poof: true, quickbooks: false },
     { name: 'Accrual & Cash Basis Toggle', poof: true, quickbooks: true },
     { name: 'Recurring Journal Entry Templates', poof: true, quickbooks: false },
-    { name: 'Transaction Approval Workflows', poof: true, quickbooks: false },
   ]},
   { category: 'Banking & Reports', features: [
     { name: 'Bank Connection (Plaid)', poof: true, quickbooks: true },
@@ -63,6 +74,8 @@ const comparisonData = [
     { name: 'Report Drill-Down (Click to See Journal Entries)', poof: true, quickbooks: false },
     { name: 'Shareable Report URLs', poof: true, quickbooks: false },
     { name: 'Scheduled Report Delivery (Email, PDF/CSV)', poof: true, quickbooks: false },
+    { name: 'Reconciliation Carries Outstanding Items Forward (a July check clears in August)', poof: true, quickbooks: true },
+    { name: 'Uncertain Auto-Matches Become Approval Cards', poof: true, quickbooks: false },
   ]},
   { category: 'Security & Team', features: [
     { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false },
@@ -81,6 +94,9 @@ const comparisonData = [
     { name: 'Financing Gross-Up (Dealer Fees Costed to the Job)', poof: true, quickbooks: false },
     { name: 'Peer Benchmarks on the Per-Job P&L', poof: true, quickbooks: false },
     { name: 'Period Close & Locking with Tie-Out Checks', poof: true, quickbooks: false },
+    { name: 'Close Checklist With Due Dates, Ticked by the Books', poof: true, quickbooks: false },
+    { name: 'The Close as a Record (who, when, what it took)', poof: true, quickbooks: false },
+    { name: 'Late Close Tasks Nudge You (Telegram, SMS, Slack, Email)', poof: true, quickbooks: false },
     { name: 'AI Close Narrative', poof: true, quickbooks: false },
     { name: 'Customer Deposits Held as a Liability, Released to the Job on Completion', poof: true, quickbooks: false },
     { name: 'Prepaid Maintenance Plans Earned Per Completed Visit', poof: true, quickbooks: false },
@@ -143,7 +159,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 110 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 128 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -165,6 +181,61 @@ export default function PoofVsQuickbooksPage() {
               </div>
             </AnimateOnScroll>
           </div>
+
+          {/* Bank rules: the difference that isn't about price */}
+          <AnimateOnScroll animation="fade-up">
+            <div className="mb-16 rounded-2xl border border-slate-200 bg-white p-8">
+              <h3 className="text-xl font-bold font-display text-slate-900 mb-3">
+                The difference isn&apos;t that Poof has rules. It&apos;s what happens when one is wrong.
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                QuickBooks has bank rules, and they auto-post. That is the whole design: you write a rule from a
+                blank form, guess at the conditions, and QuickBooks applies it from then on.{' '}
+                <strong className="text-slate-900">
+                  A QuickBooks bank rule that is wrong keeps being wrong until somebody notices
+                </strong>{' '}
+                &mdash; often at year-end, in a category that has been quietly collecting the wrong transactions
+                for eight months.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Poof works the other way round. Nothing an AI proposes reaches your books until a person approves
+                it, and each proposal shows the evidence behind it &mdash; the merchant, the prior transactions,
+                whether they were all categorized the same way. A standing rule is then{' '}
+                <strong className="text-slate-900">derived from work you just reviewed</strong>, not authored from
+                scratch, and shown to you in plain sentences with your own 30-day record before you grant it. Four
+                things then apply that no bank rule has:
+              </p>
+              <ul className="space-y-2 text-slate-700 text-sm mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>A dollar ceiling, separate from the match.</strong> A rule that writes to the ledger
+                  must carry a limit. One without does not run.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>A daily cap</strong> &mdash; and the overflow goes to your inbox for review rather
+                  than being silently dropped.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>A requirement that prior human decisions agreed.</strong> A rule cannot be granted
+                  over work your own history contradicts.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-gold-500 font-bold">&bull;</span>
+                  <span><strong>It stops itself.</strong> Correct anything the rule is about &mdash; not only the
+                  rows it happened to touch &mdash; and it pauses, tells you which correction stopped it, and waits
+                  for you to resume or revoke it.</span>
+                </li>
+              </ul>
+              <p className="text-slate-600 leading-relaxed">
+                Autonomy is off until you grant it, one rule at a time &mdash; there is no global switch, and no
+                rule can ever send anything to a customer. Invoices and credit notes stay a human&apos;s decision
+                whatever a rule says. And &ldquo;what did AI change this month, and who allowed it&rdquo; is a
+                single page, which is the question your accountant will ask.
+              </p>
+            </div>
+          </AnimateOnScroll>
 
           {/* Why Plus, not Simple Start */}
           <AnimateOnScroll animation="fade-up">
@@ -245,7 +316,7 @@ export default function PoofVsQuickbooksPage() {
           </AnimateOnScroll>
 
           <p className="text-sm text-slate-500 text-center mt-6">
-            Compared against QuickBooks Online Plus at $140/mo &mdash; the plan that matches Poof&apos;s capability set. QuickBooks list prices as of August 2026, following Intuit&apos;s August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340. Features and pricing may vary; re-check before relying on these figures. A cross in the QuickBooks column means the capability is not built in: deposit release and per-visit plan revenue, for example, are manual journal entries there.
+            Compared against QuickBooks Online Plus at $140/mo &mdash; the plan that matches Poof&apos;s capability set. QuickBooks list prices as of August 2026, following Intuit&apos;s August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340. Features and pricing may vary; re-check before relying on these figures. A cross in the QuickBooks column means the capability is not built in: deposit release and per-visit plan revenue, for example, are manual journal entries there, and a QuickBooks bank rule has no dollar ceiling, no daily cap, and no way to pause itself when it gets something wrong.
           </p>
         </div>
       </section>
@@ -260,7 +331,7 @@ export default function PoofVsQuickbooksPage() {
               Try <span className="text-gradient-gold">Poof</span> Free for 30 Days
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              See the difference AI bookkeeping makes. One plan, 110 features, no tier to grow into.
+              See the difference AI bookkeeping makes. One plan, 128 features, no tier to grow into.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

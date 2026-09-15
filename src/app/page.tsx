@@ -8,6 +8,7 @@ import SpendScoreBar from '@/components/SpendScoreBar'
 import WhoPoofIsFor from '@/components/WhoPoofIsFor'
 import WhatIsPoof from '@/components/WhatIsPoof'
 import MagicWorkflowSection from '@/components/MagicWorkflowSection'
+import ApprovalsSection from '@/components/ApprovalsSection'
 import FeatureHighlights from '@/components/FeatureHighlights'
 import ComparisonSection from '@/components/ComparisonSection'
 import DemoVideoSection from '@/components/DemoVideoSection'
@@ -55,6 +56,7 @@ export default function Home() {
       <SpendScoreBar />
       <WhatIsPoof />
       <MagicWorkflowSection />
+      <ApprovalsSection />
       <FeatureHighlights />
       <DemoVideoSection />
       <ComparisonSection />

@@ -1,54 +1,69 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: September 1, 2026
+> **Living document** — Last updated: September 15, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
-> **⭐ PRIMARY GO-TO-MARKET FOCUS (as of August 2026): TRADE CONTRACTORS.**
-> Poof's primary audience is now HVAC, plumbing, and electrical service contractors, sold as a **managed bookkeeping service** ("Poof Managed for Trades"). **Lead the main website with the trades positioning in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical)** — job costing, per-job profitability, and done-for-you monthly close. The horizontal, self-serve "any small business" product (the QuickBooks-alternative framing throughout the rest of this doc) is the **underlying engine and a secondary self-serve option** — not the headline. Restaurants/multi-unit were deprioritized (features remain in the code but are not marketed).
+> **⭐ TWO BUSINESSES (decided 2026-09-12; charter in `TWO_BUSINESSES.md`, which sits above this file).**
+> **Poof is the software.** Its customer is the bookkeeper, controller, or firm — and the businesses they keep books for, who are Poof's tenants. Poof speaks as a product: "AI is a tool, never a persona."
+> **The Augmented Operator is the managed service and the persona.** It runs the trades bookkeeping practice — HVAC, plumbing, electrical shops at $1,200 / $1,500 / Pro $2,400 — *on Poof*, and it speaks as Austin, first person, building in public. It is Poof's distribution: bookkeepers learn the practice model; Poof is what the practice runs on.
+> **What this means for copy:** the trades positioning in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical) is still right and still live — it is The Augmented Operator's, delivered on Poof. Until `theaugmentedoperator.com` exists (domain not yet registered as of 2026-09-15), the offer stays on poofai.com/trades and the homepage keeps leading with it, because it is the only offer generating calls. When the AO site is up, `/trades` moves there and poofai.com becomes the product site with firm pricing (an open decision: per client-org, or per firm with a cap). Do not put first-person copy on the Poof site; do not put a product changelog on the persona. How each refers to the other: Poof — *"Built by a practitioner. Runs The Augmented Operator."* AO — *"Runs on Poof."*
+> Restaurants/multi-unit were deprioritized (features remain in the code but are not marketed).
 
 ---
 
-## ⚠️ Outstanding website corrections (verified against the live site 2026-08-27)
+## ⚠️ Outstanding website corrections (verified against the site repo 2026-09-15)
 
 **Read this before writing any copy.** These are live pages that contradict this document.
-**Re-check the page before acting on a line here.** On 2026-08-27 three of the four rows in this
-table had already been fixed on the site and simply never deleted, and the stale list was repeated
-back as though it were current. A correction list nobody prunes becomes a source of false urgency.
+**Re-check the page before acting on a line here.** This table has twice carried rows that were
+already fixed on the site and simply never deleted, and the stale list got repeated back as though
+it were current. A correction list nobody prunes becomes a source of false urgency.
 
 | Page | What's wrong now | Should be |
 |---|---|---|
-| **poofai.com/poof-vs-quickbooks** | States **108 features** (verified 2026-09-01 — the earlier 105 row was already fixed and has been pruned) | **110 features** — Group 10 gained customer-deposit release and maintenance-plan deferred revenue |
-| Anywhere quoting the managed tiers | Two tiers only | Fine as-is. The new **$2,400 Pro tier is deliberately not a third column** — see [pricing](#vertical-pricing-tier--poof-managed-for-trades) |
+| *(none open as of 2026-09-15 — the 2026-09-08 site update, which had sat uncommitted in the site repo for a week, was committed and deployed with the 2026-09-15 update; the narrow "correct something the rule did" wording it still carried in three places was widened in the same push)* | | |
+
+**On the count.** The site states **128 features across 13 groups** as of 2026-09-15; `featureData.ts`
+sums to 128. Verify the number by summing the groups, not by reading this table — this table has
+been wrong about the site twice.
 
 **Verified correct on 2026-08-27, do not re-raise:** `/trades` advertises the **$750 Job Margin &
 Recovery Audit** (the $250 pilot is gone), and the tiers read $1,200 / $1,500 with $1,500 onboarding
 and Pro from $2,400. `/poof-vs-quickbooks` compares against **QuickBooks Online Plus at $140/mo**
 and footnotes **"as of August 2026, following Intuit's August 1, 2026 increase"**.
 
-**New as of 2026-08-27 — the field-service loop shipped.** These are additions, not corrections;
-nothing on the site contradicts them yet, but the site does not say them either:
-
-| Where | What to add |
-|---|---|
-| **poofai.com/trades** | The strongest new proof point: **"Your tech closes the job from a text. The invoice writes itself."** No account, no app install for the techs — which is the answer to the objection every owner raises about field software. See [Group 12](#12-field-service--job-handoff-10-features) |
-| **poofai.com/trades** | The headline promise now actually closes. "Know which jobs make money" used to depend on somebody tagging the work; a completed service call now **becomes a job on its own** and carries its revenue, parts, and labor onto the Per-Job P&L |
-| **poofai.com/poof-vs-quickbooks** | ~~Feature count 105 → 108~~ (done by 2026-09-01) — now **108 → 110**, and QuickBooks has no equivalent of any of Group 12 |
-| Anywhere describing the receptionist | It now books **and** dispatches: the assigned tech is texted their job automatically, and a shop can turn either the auto-assignment or the auto-text off |
-
 **Already correct, do not "fix":** the comparison page's Poof pricing ($79, $39.50 launch) is
-current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are current.
-
-**New as of 2026-09-01 — money that isn't earned yet stays unearned.** Additions again; the site
-does not contradict them, it just doesn't say them (verified: `/trades` has no mention of deposits
-or maintenance plans).
-
-| Where | What to add |
-|---|---|
-| **poofai.com/trades** | The controller-grade proof point: **"A down payment isn't revenue until the job is done. A plan isn't revenue until the visit happens."** A customer deposit on an install sits as a liability and is released to that job's revenue when the job completes; a prepaid maintenance plan earns its share per visit, **automatically when the tech taps Complete**. This is the difference between books that read the way a bank feed suggests and books a controller would sign |
-| **poofai.com/trades** | Cancellation is a recorded decision, not a silent write-off: when a plan customer leaves, the office chooses refund or forfeit and the books show which. Say this — it is what an owner who has been burned by "where did that prepaid money go" wants to hear |
-| **poofai.com/poof-vs-quickbooks** | Feature count **108 → 110**. QuickBooks Online has no per-visit plan release and no deposit-release workflow — both are manual journal entries there |
+current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are current. The
+**$2,400 Pro tier is deliberately not a third column** — see
+[pricing](#vertical-pricing-tier--poof-managed-for-trades).
 
 ---
+
+### Shipped to the site — do not re-raise as "to add"
+
+| Shipped | What the site now says |
+|---|---|
+| 2026-08-27 · field service | `/trades`, `/hvac`, `/plumbing`, `/electrical` carry **"Your tech closes the job from a text. The invoice writes itself."** via the shared `FieldServiceSection`, including a completed service call becoming a job on its own |
+| 2026-09-01 · unearned revenue | The same four pages carry **"A down payment isn't revenue until the job is done. A plan isn't revenue until the visit happens."** via `UnearnedRevenueSection`, with cancellation framed as a recorded refund-or-forfeit decision |
+| 2026-09-08 · approvals & autonomy | The same four pages **plus the homepage** carry **"Nothing reaches your books without you seeing it first."** via `ApprovalsSection` — the evidence on the card, partial batch approval, rejection reasons, rules derived from reviewed work, and the self-pausing rule. `/poof-vs-quickbooks` gained an **Approvals & AI Autonomy** comparison category and a prose block on the bank-rule contrast; three FAQs were added to `featureData`; the three QuickBooks blog posts carry the bank-rule caution |
+| 2026-09-15 · the close is a record; the reconciliation ties | The same four pages carry **"The close is a checklist with due dates, and the books tick it off themselves."** via `CloseRunSection` — the close as one record, the evidence-bound checklist, the nudge, and a reconciliation that carries outstanding items forward and shows one figure. `featureData` gained 10 features (118 → 128) across four groups; `/poof-vs-quickbooks` gained the close-checklist and carry-forward rows |
+| Receptionist wording | Described as booking **and** dispatching, with both switches (auto-assignment, auto-text) independently disableable. Since 2026-09-14 the same booking, move and cancel are available from the assistant drawer, where they stage as cards |
+
+> **What is proven, and what is still not.** As of 2026-09-08 the loop runs end to end against a
+> real Postgres in CI: a sweep stages, a rule executes the rows it covers and leaves the rest, a
+> correction pauses it, a paused rule covers nothing, a resumed one covers again, and a revoked one
+> is inert while its earlier work stands. Everything in Group 13 may be described as working.
+>
+> **Still hold "handles it overnight on its own."** No nightly sweep has yet been watched doing
+> this on live books. The mechanism is proven; the habit is not. Say what a rule *does*, not what a
+> morning *feels like*, until one has been seen.
+>
+> **Proven 2026-09-14, and how.** The month-end close as a record, the checklist, and the rebuilt
+> reconciliation were walked end to end on a real August close from a phone — the founder's own
+> books, not a demo — and every defect that walk found was fixed the same day (ten PRs). Both are
+> also covered by DB-backed integration tests (a July→August→September carry-forward; a close from
+> start to signature to reopen). The nudge's mechanism is proven in the same suite; a live message
+> has not yet been watched arriving. Say "a late task shows up in Approvals and on your phone";
+> hold "it nagged me at 3am" until it has.
 
 ## Table of Contents
 
@@ -73,14 +88,15 @@ or maintenance plans).
 
 ## What is Poof?
 
-**Poof is a managed bookkeeping service for trade contractors — HVAC, plumbing, and electrical shops.** AI agents handle categorization, reconciliation, and job costing; a former controller reviews the calls that matter. Shop owners get **per-job profitability with every monthly close** and **books closed by the 15th business day, every month** — using their existing Jobber/Housecall Pro exports and bank data, without touching the software themselves. Managed customers can also have Poof **answer the shop's phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-12-features)). (Full trades positioning, pricing, and landing-page spec: [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical).)
+**Poof is AI bookkeeping software built for the person who signs the close.** It does the work — categorization, reconciliation, job costing, the month-end close — and puts every write in front of a person before it reaches the books. A bookkeeper, controller, or firm runs their clients on it; a shop owner can run their own. The close is a record with a checklist that the books tick off themselves, the reconciliation carries last month's outstanding items forward and shows one figure, and nothing an AI proposes lands without someone seeing it first ([Group 13](#13-approvals--ai-autonomy-9-features)). It can also **answer the phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, dispatches the tech, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-12-features)) — and the same booking works from the assistant drawer.
 
-Under the hood, Poof is a complete AI-powered bookkeeping platform — categorization, reconciliation, invoicing, receipt scanning, reports, budgeting, and forecasting. That same platform is also available as **self-serve software for any small business** (the QuickBooks-alternative product described throughout this doc), but the trades managed service is the primary go-to-market.
+**The managed service is a separate business.** *The Augmented Operator* runs a trades bookkeeping practice — HVAC, plumbing, and electrical shops doing $750K–$3M — on Poof, with a former controller signing every monthly close. Its positioning, pricing, and landing-page spec are in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). It lives on poofai.com/trades until its own site is up. See `TWO_BUSINESSES.md` for which business a piece of copy belongs to.
 
-**One-liner (trades):** "Know which jobs make money — every month, from a real controller."
-**One-liner (self-serve):** "Bookkeeping that does itself."
+**One-liner (Poof):** "Bookkeeping that does itself — and shows its work before it lands."
+**One-liner (self-serve, still in use):** "Bookkeeping that does itself."
+**One-liner (The Augmented Operator, trades):** "Know which jobs make money — every month, from a real controller."
 
-**Website:** poofai.com
+**Website:** poofai.com (product). theaugmentedoperator.com (the practice — not yet registered as of 2026-09-15).
 
 ---
 
@@ -88,13 +104,18 @@ Under the hood, Poof is a complete AI-powered bookkeeping platform — categoriz
 
 ### Who Poof Is For
 
-**Primary — trade contractors (managed service):**
+**Primary — the person who signs the close (Poof, the software):**
+- Bookkeepers and controllers who run several clients' books and want one place where the AI's work waits for their approval
+- Firms adopting an AI practice model: the queue, the evidence, the rules they grant, and the record of who allowed what
+- (Firm mode — one console over N client orgs — is the product shape Poof is growing into. Firm pricing is an open decision. Do not describe a firm console on the site until it exists.)
+
+**Through The Augmented Operator — trade contractors (the managed service):**
 - HVAC, plumbing, and electrical shop owners doing $750K–$3M who wait 2–3 weeks for last month's P&L
 - Owner-operators who have no idea which jobs actually made money
 - Shops paying a part-time bookkeeper $500–$1,500/mo and frustrated with slow, generic reports
-- (Full profile in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical).)
+- (Full profile in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). They are Poof tenants like any firm's clients.)
 
-**Secondary — self-serve software (any small business):**
+**Self-serve software (any small business):**
 - Solo founders and freelancers tired of spreadsheet bookkeeping
 - Small business owners who dread reconciling their books each month
 - Service businesses that want invoicing + bookkeeping in one place
@@ -314,7 +335,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "110 features, one flat price — $79/mo" (self-serve tier)
+- "118 features, one flat price — $79/mo" (self-serve tier)
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -336,7 +357,7 @@ The logo that appears in the top-left corner of the app at all times uses the **
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 110 Features in 12 Groups
+### 128 Features in 13 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
@@ -366,13 +387,15 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 4. Vendor management
 5. Transaction matching
 
-#### 4. Banking & Reconciliation (6 features)
+#### 4. Banking & Reconciliation (8 features)
 1. Bank connection via Plaid (12,000+ banks, syncs last 30 days, optional liability accounts for broader institution support)
 2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing with GPT-4o Vision for PDFs, intelligent column mapping, bank name auto-detection, duplicate prevention) — also importable via AI chat by uploading a PDF
-3. Reconciliation (multi-step wizard, reconciliation reports, history)
-4. Auto-reconciliation (opt-in, weekly or monthly, with notifications)
-5. Deposits
-6. Multi-account support
+3. Reconciliation (multi-step wizard, auto-match, hand match and unmatch, completion report, export and email, history with reopen and delete) — works on a phone
+4. Auto-reconciliation (opt-in, weekly or monthly, with notifications). It signs a period only when the difference is under a penny; anything else becomes cards in Approvals, one per uncertain match. It takes the period **after the last one completed**, so a month it missed is caught up
+5. **Outstanding items carry forward** — a check written in July that clears in August is on August's book side, and a first reconciliation lists what was still open from before it (never the opening balance, which both sides already agree on). Cleared rows stay cleared when someone later fixes the entry's memo or date
+6. **One figure, on the screen and in the record** — the unexplained difference is statement ending, less the books at period end, plus what is booked but not on the statement, less what is on the statement but not booked. The screen reads it from the server; completion stores the same number; the close's bank-reconciliation check reads that. A row added during the reconciliation counts even though auto-match never saw it. A reconciliation on which a later one rests cannot be reopened first
+7. Deposits
+8. Multi-account support
 
 #### 5. Accounting & Reporting (8 features)
 1. Double-entry accounting
@@ -410,7 +433,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. Command bar (Cmd+K) — natural language navigation
 6. AI chat folders — organize conversations into folders (create, rename, delete, move), with drag-and-drop on desktop and move menu on mobile, collapsible sections, and persistent state
 
-#### 9. Poof AI Capabilities (15 features)
+#### 9. Poof AI Capabilities (19 features)
 1. Business-context-aware chat (knows your company, industry, timezone) with concise, action-oriented responses, multi-session support, and folder organization
 2. Books health check & month-end close guidance
 3. Invoice, estimate, and credit note creation — AI creates, edits, and sends via email
@@ -426,8 +449,12 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 13. Bank statement PDF import via chat — upload a PDF, AI extracts transactions with GPT-4o Vision, presents summary, and imports to selected bank account with BRAID auto-categorization
 14. Guided onboarding walkthrough — AI navigates the UI, highlights elements, and walks new users through setup step by step
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
+16. **Approve without leaving the conversation** — ask Poof to invoice someone and the same approval card appears in the chat, with the same evidence and the same buttons as the inbox. One card, defined once, wherever it turns up. No browser alert asking whether you are sure about a sentence you already read
+17. **It shows its work while it works** — "Looking up invoices — August 2026", "Preparing an invoice — Smith Residential", arriving as each step runs rather than a silent pause followed by an answer. The steps say *preparing*, never *created*, because nothing has been written yet
+18. **Ask where things stand** — "Is August ready to close?", "what's open on the cash plan?", "which bills are due this week?", "what do we owe Ferguson?", "show me the accrual schedules", "how did July go?" — the close's status and checklist, transaction search, A/P aging, open bills, the 13-week cash plan, accrual schedules, and a month's summary are answered from the books, with the model told to narrate the numbers and never compute new ones. The same reads are what an outside agent gets over MCP
+19. **Book, move, or cancel a visit from the chat** — "book Smith Tuesday 2pm", "can we do Thursday afternoon?", "move the Rivera visit to Friday". Open slots and the appointment list answer at once; the booking itself becomes a card, and approving it runs the same handler the phone line runs — the tech gets the same text, the board updates the same way. No rule can ever approve a visit
 
-#### 10. Job Costing, Month-End Close & Payments (17 features)
+#### 10. Job Costing, Month-End Close & Payments (20 features)
 1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-10-features))
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
@@ -440,11 +467,14 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 10. Per-job labor allocation — spread technician labor cost across the jobs it was spent on, so a job's margin includes the hours, not just the materials
 11. Financing gross-up — when a job is sold through dealer financing, the dealer fee is recognized as a cost of that job instead of quietly inflating its margin
 12. Peer benchmarks on the Per-Job P&L — see how a job's margin compares to similar jobs, with the outliers called out
-13. Period tie-out engine — a standing check dashboard that proves the period actually ties before it is closed, not after
+13. Period tie-out engine — a standing check dashboard that proves the period actually ties before it is closed, not after. A clean run proves the books *as they stood*: a transaction reviewed or an entry posted after it turns the step to "run the checks again" rather than reading "tied" off a stale result
 14. Accrual roll-forward subledger — deposits, deferrals, and accrued items carried forward period to period with their own schedule
 15. Document playbooks — forwarded files learn per-sender handling, so the second invoice from a supply house files itself the way the first one was corrected
 16. Customer deposits released on completion — a down payment on an install is held as a liability, not booked as revenue on the day it lands, and released to that job's revenue when the job is done. The release previews first, refuses a deposit that isn't categorised as a deposit, and warns if the job was also invoiced
 17. Maintenance plans earn as visits are performed — a prepaid plan sale is deferred and each performed visit earns its share to the penny, **automatically when the tech completes a maintenance visit** (a repair call on a plan customer does not count; two open plans on one customer is left for the office to pick). Cancelling is a recorded decision — refund or forfeit — never a silent write-off, and a visit that was both released and invoiced is flagged at month-end close
+18. **The close is a record** — each month's close is one object: who started it and when, where it stands (not started / in progress / ready / signed / reopened — derived from the books, never typed), and what it took. Locking the period is the signature; at that moment the close captures its activity — transactions reviewed, entries posted, decisions made by a person and by a rule, corrections, hours from start to signature — and a price and tier per close, so a practice can say "August: signed Sep 5, $1,500, 60 hours" instead of guessing. Reopening keeps the signature on record
+19. **A checklist with due dates that the books tick off themselves** — a template per organization (the trades default is 17 tasks: feeds reviewed by day 2, bank reconciled and draft entries posted by day 3, staged materials relieved and deposits released by day 3, accruals, A/R, A/P, plan visits, job costs and categories tied by day 4, vendor bills cut off and the tie-out clean by day 5, narrative reviewed day 6, signed day 7, package sent day 8 — business days after month end). Twelve of the tasks are **evidence-bound**: they complete themselves when the books prove them and cannot be ticked by hand; each open one says why in a sentence ("2 completed jobs still hold $1,500 of customer deposits") and links to the screen that fixes it. Manual tasks are a person's tick, recorded with who and when. Every close stamps its own copy of the list, so a later template edit does not rewrite history
+20. **The nudge** — a task past its due date on an open close is an insight, a card in Approvals (with a one-tap "mark done" for a manual task), and **one message per close per day** on the channels the shop subscribed to — Telegram, SMS, Slack, email — naming every task late on it. The sweep re-reads the books before it decides what is late, so it never nags about a bank account reconciled that afternoon
 
 #### 11. AI Receptionist & Dispatch (12 features)
 
@@ -484,14 +514,34 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 ---
 
+#### 13. Approvals & AI Autonomy (9 features)
+
+> **Availability note:** the approvals inbox is on for everyone — it is how every AI write reaches
+> the books. Autonomy is **off until a person grants it**, one rule at a time. There is no default
+> and no global "let the AI do it" switch.
+
+1. **The approvals inbox** — every write an AI proposes, from any surface, stages as a card and waits. The nightly categorization sweep, a request typed into Ask Poof, a detector that noticed a job losing money: all of them land in the same place, and nothing reaches the books until a person approves it. **Approving runs exactly what is on the card** — the stored request, never a fresh interpretation of it
+2. **The evidence, not the assertion** — each card shows what Poof looked up to justify itself: the customer it resolved and their email, the prior transactions for that merchant and whether they were all categorized the same way, the amount, the account. Gathered by code, never judged by the model. A card that says "no history for this merchant" is telling you why it is asking
+3. **Approve part of a batch** — a forty-row card is not all-or-nothing. Untick the three you want to look at and approve the rest in one tap; the unticked ones stay waiting. The ones you approved run, the ones you did not are still there tomorrow
+4. **Reject with a reason** — and the reason is recorded, not discarded. It is the signal that stops a rule covering that kind of work, and the record of why
+5. **Standing rules, granted from a card you already read** — not a form you fill in from scratch. Poof derives the rule from the work in front of you: the merchant these share, the agreement in their history, a limit above the largest one. It shows the rule in plain sentences, tells you how much of the card it covers, and shows your own record with that kind of change over the last 30 days before you commit
+6. **A rule that is wrong stops itself** — correct anything a rule is about — not only the rows it happened to touch — or reject the kind of work it covers, and it pauses, tells you which correction stopped it, and waits for you to resume or revoke. Every rule lives on one page with what it has handled and who granted it, and revoking is instant
+7. **Five queues, one inbox** — the app used to have five separate approve-or-dismiss screens. Now an inbox playbook run, a reconciliation match the scheduled job was unsure of, a POS deposit that came in short, a bill the cash planner put on hold, and a late close task are all cards in the same Approvals inbox, each with the evidence that produced it. The original pages still work; deciding there is the same decision
+8. **The page settles the card** — a card raised by a pipeline, a detector, or the scheduled job is about a record that is still there, so it waits thirty days (a chat draft waits one). Confirm the match on the Reconcile page, match the deposit, decide the bill, tick the task, review the transaction — the card closes with what you did. Do something *different* from what the card proposed and it is recorded as a correction, the same as a Reject: the learning loop sees it, and any rule that would have approved it pauses
+9. **A playbook graduates as a rule** — "Approve all like this" on an inbox-run card makes a standing rule pinned to that playbook, only while the forwarded file keeps the columns it had, and under a ceiling from the run's total. A drifted file, a bigger total, or another playbook still waits for a person. The playbook's confirmation counter stays as a label; the grant is the rule
+
+**What it does not do (do not imply otherwise):** no rule can ever send anything to a customer — invoices and credit notes are always a human's decision, whatever a rule says. A rule that writes to the ledger **must** carry a dollar limit; one without does not run. Rules cannot be created from a settings screen, only from work someone reviewed. And autonomy is never on by default: a new account asks about everything until its owner decides otherwise.
+
+---
+
 ## Key Numbers & Claims
 
 | Claim | Value |
 |---|---|
-| Total features | 110 (all included in every plan) |
+| Total features | 128 (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
-| AI assistant tools | 30+ (create, update, search, send, generate, import) |
+| AI assistant tools | 62 offered to the chat, from one registry of 100 shared with the phone line and MCP (create, update, search, send, generate, import, ask where things stand, book a visit) |
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
 | Manual entry reduction | 90% |
@@ -501,6 +551,8 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 | Free trial | 30 days |
 | Cash flow forecast horizon | 12 months with confidence bands |
 | Receptionist notification channels | 6 (SMS, email, push, Slack, Telegram, webhook) |
+| Close checklist (trades default) | 17 tasks, 12 evidence-bound, signed on business day 7 |
+| Producer cards wait | 30 days (a chat draft: 24 hours) |
 | Managed close SLA | Books closed by the 15th business day |
 | Managed job-costing SLA | Every completed job costed within 5 business days |
 | Managed response SLA | Controller responds within 1 business day |
@@ -515,7 +567,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 110 features included (self-serve tier) |
+| Monthly | **$79/mo** | All 118 features included (self-serve tier) |
 | Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
@@ -667,7 +719,7 @@ All files located in `apps/poof-web/public/`:
 
 ## Vertical Positioning: Trade Contractors (HVAC, Plumbing, Electrical)
 
-> **⭐ THIS IS NOW POOF'S PRIMARY POSITIONING (as of July 2026).** The main website should lead with this — HVAC, plumbing, and electrical service contractors, sold as the managed service "Poof Managed for Trades." The horizontal self-serve product elsewhere in this doc is the underlying engine and a secondary offering, not the headline. (Earlier guidance in this doc treated trades as a parallel `/hvac` page alongside a horizontal homepage; that is superseded — trades leads.)
+> **⭐ THIS SECTION IS THE AUGMENTED OPERATOR'S (as of 2026-09-12).** The managed service for HVAC, plumbing, and electrical contractors — the tiers, the $750 audit, the controller who signs — is a separate business that runs on Poof. Everything below is still right; it just belongs to that business, and when its own site exists this section moves there with `/trades`. Until then it stays on poofai.com, and the homepage keeps leading with it because it is the offer that generates calls. Where the copy says "Poof Managed for Trades", the service's name is now **The Augmented Operator**; use "Poof Managed for Trades" only where the live site still does, and change both together. (July 2026 guidance that "trades is Poof's primary positioning" is superseded by `TWO_BUSINESSES.md`: Poof's primary customer is the person who signs the close; trades shops reach Poof through the operator.)
 
 ### Why This Vertical
 Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins so they can afford a $1,200/mo managed service, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's 10+ years of audit and controller experience translate directly — these owners trust accounting credentials over "AI startup" pitches.
@@ -858,6 +910,13 @@ feature it ships. Poof treats agents as a client class it serves. The bet is tha
 to financial data stops being a dashboard and becomes an agent, and the software that survives
 is the software an agent can safely call.
 
+**What an agent can read, as of 2026-09-14:** the same reads the chat has — the close's status and
+checklist, transaction search, A/P aging, open bills, the cash plan, accrual schedules, a month's
+summary, P&L, job profitability, A/R aging, open invoices — plus the approvals inbox: an agent can
+list and read proposals and request a link the human taps to approve. **An agent can never approve
+anything.** Every tool comes from one registry shared with the chat and the phone line, and a test
+proves the MCP surface is read-only.
+
 **The honest limits — state these, do not skip them:**
 - **It is provisioned by Poof, not self-serve.** There is no screen in the app where a customer
   creates an agent credential; there are zero MCP references in the frontend. Access is granted
@@ -890,6 +949,29 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 
 ## Changelog
 
+### September 15, 2026 — two businesses; the close is a record; the reconciliation ties
+- **Positioning.** The header, §1 and "Who Poof Is For" now follow `TWO_BUSINESSES.md` (decided
+  2026-09-12): Poof is the software, its customer is the person who signs the close; the trades
+  managed service is The Augmented Operator, which runs on Poof. Section 14 is unchanged in
+  content and relabeled as AO's. The site keeps leading with the trades offer until AO's site
+  exists — that is a sequencing fact, not a positioning one.
+- **Added 10 features: 118 → 128.** Group 4 +2 (outstanding items carry forward; one figure on
+  the screen and in the record). Group 9 +2 (ask where things stand; book, move or cancel a visit
+  from the chat). Group 10 +3 (the close is a record; a checklist with due dates the books tick
+  off; the nudge). Group 13 +3 (five queues, one inbox; the page settles the card; a playbook
+  graduates as a rule). Group 4's auto-reconciliation and Group 10's tie-out engine reworded for
+  what they now do. Group 13 item 6 carries the wider "anything the rule is about" claim.
+- **Key numbers:** AI assistant tools 30+ → 62 (one registry of 100). Two rows added.
+- **What was proven, and how** (top of the file): the close and the reconciliation were walked
+  on the founder's real August books from a phone, and both are under DB-backed integration
+  tests. Hold "it nagged me" until a live nudge has been seen.
+- **Not marketed, for the record:** a security re-audit of everything shipped since the close
+  run landed (2026-09-14) closed a set of pre-existing cross-tenant joins and permission grades,
+  and the reconciliation rebuild fixed three money bugs a first-month shop would have hit. None
+  of it is a feature; all of it is why the claims above can be made.
+- **Site repo:** the 2026-09-08 update (118 features, the Approvals group) was found uncommitted
+  in the site repo a week later. Committed and deployed with this update.
+
 ### September 1, 2026 — money that isn't earned yet stays unearned
 
 - **Added 2 features to Group 10: 108 → 110.** Customer deposits are held as a liability and
@@ -908,6 +990,62 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
   visit review shows the plan visit a tune-up earned.
 - **Pruned a stale correction row:** the comparison page has said 108 since before 2026-09-01;
   the open gap is now 108 → 110.
+
+### September 8, 2026 (later) — the loop is proven, and proving it found three defects
+
+- **Phase 4's own acceptance test now runs in CI against a real Postgres**, and Group 13 can be
+  described as working rather than built. Seven cases: nothing runs without a rule; a rule takes
+  the covered row and leaves the one over its ceiling and the one from another merchant; the daily
+  cap counts the run in progress and the overflow waits; a correction pauses it with the reason in
+  the human's words; a paused rule covers nothing; a resumed one covers again; a revoked one is
+  inert while its earlier work stands.
+- **It found three defects in two runs, all invisible to 1,399 unit tests.** Worth knowing when
+  weighing how much to trust a green suite:
+  - A correction only paused a rule if the rule had personally touched the corrected record.
+    Correct a *different* Ferguson transaction and the Ferguson rule carried on. The claim "a rule
+    stops itself the first time you correct it" was, for about six hours, half true.
+  - A categorization rule could never execute anything at all: the ceiling was read from the top
+    of the evidence while an update keeps its amount on the `before` row, so every item failed
+    closed. A rule would have sat in Settings looking active and done nothing.
+  - A failed write told the person "Please try again" instead of "Bank account not linked to chart
+    of accounts" — on the card, where the reason was the only useful thing it could have said.
+- **Why they were invisible:** every unit test of those paths handed the code evidence it had
+  written itself. None let the service build the evidence the way a sweep does.
+
+### September 8, 2026 — the books stop being something the AI can write to unasked
+
+- **Added feature Group 13 — Approvals & AI Autonomy (6 features).** Every AI write, from any
+  surface, now stages as a card and waits for a person: the nightly categorization sweep, a
+  request typed into Ask Poof, a detector that spotted a job losing money. Approving runs the
+  stored request, not a fresh interpretation of it. **Live 2026-09-08.**
+  - **The sales line is the default, not the feature.** "Nothing reaches your books without you
+    seeing it first" is now literally true of every AI path in the product, and it is the thing
+    an owner who has been burned by software actually wants to hear.
+  - **The evidence is the part that earns trust.** A card does not say "categorize this as Job
+    Materials"; it says what it looked up — five prior Ferguson transactions, all categorized the
+    same way — or admits it found nothing, which is why it is asking. Gathered by code, never
+    judged by the model.
+  - **Against QuickBooks, the difference is not that we have rules.** QBO has bank rules and they
+    auto-post. The difference is that a QBO rule which is wrong keeps being wrong until somebody
+    notices, and a Poof rule **stops itself the first time you contradict it**, says which
+    correction stopped it, and waits to be resumed or revoked. Also: a mandatory dollar ceiling
+    separate from the match, a daily cap with the overflow going to the inbox rather than being
+    dropped, a requirement that prior human decisions agreed, and a rule that stops working if its
+    author loses the permission. None of that exists in a bank rule.
+  - **Rules are derived, not authored.** A QBO rule is a form you guess at. Poof builds the rule
+    from work you just reviewed — the merchant those rows share, the agreement in their history, a
+    limit above the largest one — shows it in plain sentences, says how much of the card it covers,
+    and puts your own 30-day approve/reject record on the button before you commit.
+- **Added 2 features to Group 9:** the approval card appears inside the assistant conversation with
+  the same evidence and buttons as the inbox, and the assistant shows its steps as it works
+  ("Looking up invoices — August 2026") instead of going silent and then answering. The steps say
+  *preparing*, never *created* — nothing is written until someone approves.
+- **Feature count 110 → 118.** The open website correction is now a single edit, 108 → 118, rather
+  than the 108 → 110 it was this morning.
+- **One claim deliberately withheld.** The rules, the pausing and the notifications are live, but a
+  nightly sweep has not yet been watched executing items under a rule end to end. "Handles it
+  overnight on its own" does not go on the site until it has been seen happening once. The kit has
+  been wrong before by describing a path that was built rather than one that had run.
 
 ### August 27, 2026 — the field-service loop: a tech closes the job, the invoice writes itself
 

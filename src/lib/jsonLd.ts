@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 110 features, 13 reports, $79/mo.',
+    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 128 features, 13 reports, $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,7 +35,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 110 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 128 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
     url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
@@ -129,7 +129,13 @@ export function getSoftwareApplicationSchema() {
       'Rule-Based Human Escalation',
       'Multi-Channel Notifications (SMS, Email, Push, Slack, Telegram, Webhook)',
       'Dispatch Board, Call Log & Technician Management',
-      'Receptionist Settings'
+      'Receptionist Settings',
+      'Approvals Inbox — Every AI Write Staged for Human Approval',
+      'Evidence Shown on Every Approval Card',
+      'Partial Approval of a Batch',
+      'Reject with a Recorded Reason',
+      'Standing Rules Derived from Reviewed Work',
+      'Self-Pausing Rules with Mandatory Dollar Limits'
     ]
   }
 }

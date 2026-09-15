@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.poof.listen-weekly</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-lc</string>
+    <string>cd "$HOME/Documents/Austin/Semple Labs LLC/AutoM8 Bookkeeping/Poof_app/poof-website2" &amp;&amp; node scripts/listen/listen.mjs --window week</string>
+  </array>
+
+  <!-- Mondays at 8:22am. Offset from the GSC job at 8:07 so both reports land before you sit down. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>1</integer>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>22</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/poof-listen.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/poof-listen.err</string>
+</dict>
+</plist>

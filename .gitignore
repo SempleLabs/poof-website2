@@ -12,3 +12,6 @@ build/
 # GSC automation
 .gsc-reports/
 *service-account*.json
+
+# Complaint listening
+.listen-reports/

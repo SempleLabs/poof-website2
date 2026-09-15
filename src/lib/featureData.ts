@@ -66,7 +66,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Period Tie-Out Engine",
-        description: "A standing check dashboard that proves the period actually ties before it's closed — not after"
+        description: "A standing check dashboard that proves the period actually ties before it's closed — not after. A clean run proves the books as they stood: a transaction reviewed or an entry posted after it turns the step to \u201crun the checks again\u201d rather than reading \u201ctied\u201d off a stale result"
       },
       {
         title: "Accrual Roll-Forward Subledger",
@@ -83,6 +83,18 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Maintenance Plans Earn as Visits Are Performed",
         description: "A prepaid plan sale is deferred, and each performed visit earns its share to the penny — automatically when the tech completes a maintenance visit. A repair call on a plan customer doesn't count, and two open plans on one customer is left for the office to pick. Cancelling is a recorded decision — refund or forfeit — never a silent write-off, and a visit that was both released and invoiced is flagged at month-end close"
+      },
+      {
+        title: "The Close Is a Record",
+        description: "Each month\u2019s close is one object: who started it and when, where it stands \u2014 not started, in progress, ready, signed, reopened \u2014 derived from the books, and what it took. Locking the period is the signature; at that moment the close captures its activity (transactions reviewed, entries posted, decisions by a person and by a rule, corrections, hours from start to signature) and a price and tier per close. Reopening keeps the signature on record"
+      },
+      {
+        title: "A Checklist With Due Dates That Ticks Itself",
+        description: "A template per organization \u2014 the trades default is 17 tasks dated in business days after month end, signed on day 7. Twelve are evidence-bound: they complete when the books prove them and cannot be ticked by hand, and each open one says why in a sentence and links to the screen that fixes it. Manual tasks are a person\u2019s tick, with who and when. Every close stamps its own copy of the list"
+      },
+      {
+        title: "The Nudge",
+        description: "A task past its due date on an open close is an insight, a card in Approvals with a one-tap mark-done for a manual task, and one message per close per day on the channels the shop subscribed to \u2014 Telegram, SMS, Slack, email \u2014 naming every task late on it. The sweep re-reads the books before it decides what is late"
       }
     ]
   },
@@ -191,6 +203,22 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "File Attachment Handling",
         description: "Receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record Poof creates"
+      },
+      {
+        title: "Approve Without Leaving the Conversation",
+        description: "Ask Poof to invoice someone and the approval card appears in the chat itself \u2014 the same evidence and the same buttons as the inbox. One card, defined once, wherever it turns up. No browser alert asking whether you are sure about a sentence you just read"
+      },
+      {
+        title: "It Shows Its Work While It Works",
+        description: "\u201cLooking up invoices \u2014 August 2026.\u201d \u201cPreparing an invoice \u2014 Smith Residential.\u201d Each step arrives as it runs, instead of a silent pause followed by an answer. The steps say preparing, never created, because nothing has been written yet"
+      },
+      {
+        title: "Ask Where Things Stand",
+        description: "\u201cIs August ready to close?\u201d \u201cWhich bills are due this week?\u201d \u201cWhat do we owe Ferguson?\u201d \u201cHow did July go?\u201d The close\u2019s status and checklist, transaction search, A/P aging, open bills, the 13-week cash plan, accrual schedules, and a month\u2019s summary are answered from the books \u2014 the model narrates the numbers and never computes new ones"
+      },
+      {
+        title: "Book, Move, or Cancel a Visit From the Chat",
+        description: "\u201cBook Smith Tuesday 2pm.\u201d \u201cCan we do Thursday afternoon?\u201d \u201cMove the Rivera visit to Friday.\u201d Open slots and the appointment list answer at once; the booking itself becomes a card, and approving it runs the same handler the phone line runs \u2014 the tech gets the same text, the board updates the same way. No rule can ever approve a visit"
       }
     ]
   },
@@ -272,11 +300,19 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Bank Reconciliation",
-        description: "Multi-step reconciliation wizard with deposit tracking, reconciliation reports, and complete history"
+        description: "Multi-step wizard with auto-match, hand match and unmatch, a completion report you can export or email, and a history with reopen and delete \u2014 and it works on a phone"
       },
       {
         title: "Auto-Reconciliation",
-        description: "Opt-in automatic reconciliation on a weekly or monthly schedule with notifications — your books stay balanced without lifting a finger"
+        description: "Opt-in, weekly or monthly, with notifications. It signs a period only when the difference is under a penny; anything else becomes cards in Approvals, one per uncertain match. It takes the period after the last one completed, so a month it missed is caught up"
+      },
+      {
+        title: "Outstanding Items Carry Forward",
+        description: "A check written in July that clears in August is on August\u2019s book side, and a first reconciliation lists what was still open from before it \u2014 never the opening balance, which both sides already agree on. Cleared rows stay cleared when someone later fixes the entry\u2019s memo or date"
+      },
+      {
+        title: "One Figure, On the Screen and In the Record",
+        description: "The unexplained difference is statement ending, less the books at period end, plus what is booked but not on the statement, less what is on the statement but not booked. The screen reads it from the server; completion stores the same number; the close\u2019s bank-reconciliation check reads that. A row added mid-reconciliation counts even though auto-match never saw it"
       },
       {
         title: "Deposits",
@@ -526,6 +562,49 @@ export const featureGroups: FeatureGroup[] = [
       }
     ]
   },
+  {
+    name: "Approvals & AI Autonomy",
+    icon: "approvals",
+    note: "The approvals inbox is on for everyone \u2014 it is how every AI write reaches the books. Autonomy is off until a person grants it, one rule at a time: there is no default, and no global \u201clet the AI do it\u201d switch. No rule can ever send anything to a customer, and a rule that writes to the ledger must carry a dollar limit or it does not run.",
+    features: [
+      {
+        title: "The Approvals Inbox",
+        description: "Every write an AI proposes, from any surface, stages as a card and waits. The nightly categorization sweep, a request typed into Ask Poof, a detector that noticed a job losing money \u2014 all of them land in the same place, and nothing reaches the books until a person approves it. Approving runs exactly what is on the card: the stored request, never a fresh interpretation of it"
+      },
+      {
+        title: "The Evidence, Not the Assertion",
+        description: "Each card shows what Poof looked up to justify itself \u2014 the customer it resolved and their email, the prior transactions for that merchant and whether they were all categorized the same way, the amount, the account. Gathered by code, never judged by the model. A card that says \u201cno history for this merchant\u201d is telling you why it is asking"
+      },
+      {
+        title: "Approve Part of a Batch",
+        description: "A forty-row card is not all-or-nothing. Untick the three you want to look at and approve the rest in one tap. The ones you approved run; the ones you unticked are still waiting tomorrow"
+      },
+      {
+        title: "Reject With a Reason",
+        description: "And the reason is recorded, not discarded. It is the signal that stops a rule covering that kind of work, and the record of why"
+      },
+      {
+        title: "Standing Rules, Granted From a Card You Already Read",
+        description: "Not a form you fill in from scratch. Poof derives the rule from the work in front of you \u2014 the merchant those rows share, the agreement in their history, a limit above the largest one \u2014 shows it in plain sentences, tells you how much of the card it covers, and puts your own record with that kind of change over the last 30 days in front of you before you commit"
+      },
+      {
+        title: "A Rule That Is Wrong Stops Itself",
+        description: "Correct anything a rule is about \u2014 not only the rows it happened to touch \u2014 or reject the kind of work it covers, and the rule pauses, tells you which correction stopped it, and waits for you to resume or revoke it. Every rule lives on one page with what it has handled and who granted it, and revoking is instant"
+      },
+      {
+        title: "Five Queues, One Inbox",
+        description: "An inbox playbook run, a reconciliation match the scheduled job was unsure of, a POS deposit that came in short, a bill the cash planner put on hold, and a late close task are all cards in the same Approvals inbox, each with the evidence that produced it. The original pages still work; deciding there is the same decision"
+      },
+      {
+        title: "The Page Settles the Card",
+        description: "A card raised by a pipeline, a detector, or the scheduled job is about a record that is still there, so it waits thirty days (a chat draft waits one). Confirm the match, match the deposit, decide the bill, tick the task, review the transaction on its own page \u2014 the card closes with what you did. Do something different from what the card proposed and it is recorded as a correction, the same as a Reject"
+      },
+      {
+        title: "A Playbook Graduates as a Rule",
+        description: "\u201cApprove all like this\u201d on an inbox-run card makes a standing rule pinned to that playbook, only while the forwarded file keeps the columns it had, and under a ceiling from the run\u2019s total. A drifted file, a bigger total, or another playbook still waits for a person"
+      }
+    ]
+  },
 ]
 
 export interface FaqItem {
@@ -549,6 +628,21 @@ export const faqData: FaqItem[] = [
     question: "Do I have to use bookkeeping software myself on the managed service?",
     answer: "No. On Poof Managed for Trades, Poof does the books for you — your team keeps using Jobber or Housecall Pro exactly as they do today, and the monthly close lands ready to read, with per-job P&L included. You can log in anytime to look around, but nothing about your month requires it. If you'd rather run your own books, the self-serve Poof Professional plan is $79/mo.",
     category: "General"
+  },
+  {
+    question: "Can the AI change my books without asking me?",
+    answer: "No. Every write an AI proposes stages as a card in your approvals inbox and waits \u2014 the nightly categorization sweep, a request you typed into chat, a detector that noticed a job losing money. Nothing reaches your books until a person approves it, and approving runs exactly what is on the card rather than a fresh interpretation of it. Each card also shows the evidence behind it: the customer it resolved, the prior transactions for that merchant and whether they were all categorized the same way, the amount, the account. That evidence is gathered by code, never judged by the model \u2014 a card that says \u201cno history for this merchant\u201d is telling you why it is asking.",
+    category: "AI & Automation"
+  },
+  {
+    question: "How are Poof's rules different from QuickBooks bank rules?",
+    answer: "QuickBooks bank rules auto-post: you write one from a blank form, guess at the conditions, and it applies from then on \u2014 so a QuickBooks rule that is wrong keeps being wrong until somebody notices. Poof derives a rule from work you just reviewed instead of a form, shows it to you in plain sentences with your own 30-day record before you grant it, and then adds four things a bank rule does not have: a mandatory dollar ceiling separate from the match (a rule without one does not run), a daily cap whose overflow goes to your inbox rather than being dropped, a requirement that prior human decisions agreed, and self-pausing \u2014 correct anything the rule is about \u2014 not only the rows it touched \u2014 and it stops, tells you which correction stopped it, and waits for you to resume or revoke it.",
+    category: "AI & Automation"
+  },
+  {
+    question: "Is AI autonomy on by default?",
+    answer: "No. Autonomy is off until you grant it, one rule at a time. There is no default and no global \u201clet the AI run\u201d switch \u2014 a new account asks about everything until its owner decides otherwise. No rule can ever send anything to a customer: invoices and credit notes are always a human's decision, whatever a rule says. Rules cannot be created from a settings screen either, only from work someone actually reviewed. Every rule lives on one page showing what it has handled and who granted it, revoking is instant, and \u201cwhat did AI change this month, and who allowed it\u201d is a single page for your accountant.",
+    category: "AI & Automation"
   },
   {
     question: "How does Poof's AI categorization work?",
@@ -582,7 +676,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 110 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 128 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -642,7 +736,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 110 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 128 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
     category: "Pricing & Plans"
   },
   {
@@ -677,7 +771,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 110 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 128 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {
