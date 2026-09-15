@@ -45,7 +45,7 @@ export default function TermsPage() {
         </Section>
 
         <Section title="Free trial &amp; billing">
-          <p>Paid plans and any free trial are described on our <Link href="/pricing" className="text-gold-600 underline hover:text-gold-700">pricing page</Link>. Unless stated otherwise, subscriptions renew automatically until cancelled, and fees are billed in advance and are non-refundable except where required by law. We may change pricing on prospective notice.</p>
+          <p>Paid plans and any free trial are described on our <Link href="/pricing" className="text-ledger-600 underline hover:text-ledger-700">pricing page</Link>. Unless stated otherwise, subscriptions renew automatically until cancelled, and fees are billed in advance and are non-refundable except where required by law. We may change pricing on prospective notice.</p>
         </Section>
 
         <Section title="The Spend Score tool and not financial advice">
@@ -79,8 +79,8 @@ export default function TermsPage() {
         <Section title="Contact us">
           <p>
             Questions about these Terms? Email{' '}
-            <a href="mailto:semplelabs@gmail.com" className="text-gold-600 underline hover:text-gold-700">semplelabs@gmail.com</a>{' '}
-            or use our <Link href="/contact" className="text-gold-600 underline hover:text-gold-700">contact page</Link>.
+            <a href="mailto:semplelabs@gmail.com" className="text-ledger-600 underline hover:text-ledger-700">semplelabs@gmail.com</a>{' '}
+            or use our <Link href="/contact" className="text-ledger-600 underline hover:text-ledger-700">contact page</Link>.
           </p>
         </Section>
       </article>

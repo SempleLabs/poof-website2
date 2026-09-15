@@ -1,46 +1,47 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, JetBrains_Mono, Righteous } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Bricolage_Grotesque, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { getOrganizationSchema } from '@/lib/jsonLd'
 import ConsentBanner from '@/components/ConsentBanner'
 
-const inter = Inter({ subsets: ['latin'] })
-const jetbrains = JetBrains_Mono({
+const plex = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-jetbrains',
-})
-const righteous = Righteous({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-righteous',
+  weight: ['400', '500', '600'],
+  variable: '--font-plex',
   display: 'swap',
 })
-const cabinet = localFont({
-  src: [
-    { path: '../fonts/CabinetGrotesk-Bold.woff2', weight: '700', style: 'normal' },
-    { path: '../fonts/CabinetGrotesk-Extrabold.woff2', weight: '800', style: 'normal' },
-    { path: '../fonts/CabinetGrotesk-Black.woff2', weight: '900', style: 'normal' },
-  ],
-  variable: '--font-cabinet',
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-plex-mono',
+  display: 'swap',
+})
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['800'],
+  variable: '--font-bricolage',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-  description: 'Managed bookkeeping for HVAC, plumbing, and electrical shops. AI does the books, a former controller reviews every close. Per-job profit from $1,200/mo.',
+  title: 'Poof — Bookkeeping that does itself, and shows its work',
+  description: 'AI bookkeeping for the person who signs the close. Every write waits on a card with its evidence, the close is a record, the reconciliation ties to one figure. Managed books for HVAC, plumbing, and electrical shops through The Augmented Operator.',
   keywords: 'hvac bookkeeping, plumbing bookkeeping, electrical contractor bookkeeping, bookkeeping for trades, job costing, per-job profitability, managed bookkeeping service, AI bookkeeping, small business bookkeeping, QuickBooks alternative, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   metadataBase: new URL('https://www.poofai.com'),
   manifest: '/manifest.webmanifest',
   icons: {
-    icon: '/favicon.ico',
-    apple: '/favicon-192x192.png',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/poof-mark.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $79/mo.',
+    title: 'Poof — The work disappears. The evidence doesn\'t.',
+    description: 'AI bookkeeping for the person who signs the close: every write waits on a card with its evidence, the close is a record, the reconciliation ties. $79/mo, every feature. Managed books for trade shops through The Augmented Operator.',
     url: 'https://www.poofai.com',
     siteName: 'Poof',
     type: 'website',
@@ -49,20 +50,20 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Poof — managed bookkeeping for trade contractors',
+        alt: 'poof. The work disappears. The evidence doesn\'t.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Poof — Managed Bookkeeping for HVAC, Plumbing & Electrical Shops',
-    description: 'AI agents do the books, a former controller reviews every monthly close. Per-job profit for shops doing $750K–$3M, from $1,200/mo. Self-serve AI bookkeeping at $79/mo.',
+    title: 'Poof — The work disappears. The evidence doesn\'t.',
+    description: 'AI bookkeeping for the person who signs the close. Every write waits on a card with its evidence. $79/mo, every feature.',
     images: ['/og-image.png'],
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#7c3aed',
+  themeColor: '#EEF2EA',
 }
 
 export default function RootLayout({
@@ -80,30 +81,18 @@ export default function RootLayout({
         {/* Google Consent Mode v2 — deny tracking storage until the visitor opts in */}
         <Script id="consent-default" strategy="beforeInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('consent', 'default', {
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              analytics_storage: 'denied',
-              wait_for_update: 500
-            });
-          `}
+            window.dataLayer = window.dataLayer || [];            function gtag(){dataLayer.push(arguments);}            window.gtag = gtag;            gtag('consent', 'default', {              ad_storage: 'denied',              ad_user_data: 'denied',              ad_personalization: 'denied',              analytics_storage: 'denied',              wait_for_update: 500            });          `}
         </Script>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-RBYZR71LFN" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            gtag('js', new Date());
-            gtag('config', 'G-RBYZR71LFN', { anonymize_ip: true });
-          `}
+            gtag('js', new Date());            gtag('config', 'G-RBYZR71LFN', { anonymize_ip: true });          `}
         </Script>
       </head>
-      <body className={`${inter.className} ${cabinet.variable} ${jetbrains.variable} ${righteous.variable}`}>
+      <body className={`${plex.className} ${plex.variable} ${plexMono.variable} ${bricolage.variable}`}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-gold-700 focus:shadow-lg focus:ring-2 focus:ring-gold-600"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-ledger-600 focus:shadow-lg focus:ring-2 focus:ring-ledger-500"
         >
           Skip to content
         </a>

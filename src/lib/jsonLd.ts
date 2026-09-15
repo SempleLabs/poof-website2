@@ -5,7 +5,7 @@ export function getOrganizationSchema() {
     name: 'Poof',
     legalName: 'Semple Labs LLC',
     url: 'https://www.poofai.com',
-    logo: 'https://www.poofai.com/poof-logo.png',
+    logo: 'https://www.poofai.com/favicon-512x512.png',
     email: 'support@poofai.com',
     contactPoint: {
       '@type': 'ContactPoint',

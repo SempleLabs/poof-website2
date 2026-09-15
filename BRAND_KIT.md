@@ -92,6 +92,7 @@ current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are c
 
 **The managed service is a separate business.** *The Augmented Operator* runs a trades bookkeeping practice — HVAC, plumbing, and electrical shops doing $750K–$3M — on Poof, with a former controller signing every monthly close. Its positioning, pricing, and landing-page spec are in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). It lives on poofai.com/trades until its own site is up. See `TWO_BUSINESSES.md` for which business a piece of copy belongs to.
 
+**One-liner (brand):** "The work disappears. The evidence doesn't."
 **One-liner (Poof):** "Bookkeeping that does itself — and shows its work before it lands."
 **One-liner (self-serve, still in use):** "Bookkeeping that does itself."
 **One-liner (The Augmented Operator, trades):** "Know which jobs make money — every month, from a real controller."
@@ -159,20 +160,28 @@ Always lead with what changes in the customer's life, not what the product does.
 
 ## Brand Identity
 
+**The idea in one sentence: "The work disappears. The evidence doesn't."** Poof is a magic trick that shows its method: the work vanishes, the record stays. The name is the vanish; the period is the record. Everything below — the wordmark, the mark, the palette, the type, the voice — is that sentence set down in a different material.
+
 ### Personality
-- **Magical but professional** — We use "magic" as a metaphor (things just happen, like *poof*), but the product is serious, accurate, and trustworthy
-- **Clean and modern** — White backgrounds, violet accents, generous spacing. Not cluttered or flashy
-- **Approachable** — We're built for small business owners who aren't accountants. The language is friendly and jargon-free
-- **Confident** — "Poof. It's done." We don't hedge; the product delivers
+- **On the record** — Poof speaks the way a controller writes: short, declarative, dollar-specific sentences. The evidence, not the assertion. "Five prior transactions, all Job Materials" beats "smart categorization."
+- **Direct** — Says what the product does, in the order it does it, with the figure attached. No warm-up sentence; no adjective doing the work a number should.
+- **Specific** — Names the account, the amount, the date, the source. A claim without a figure is not finished.
+- **Confident without hedging** — "The close is a record." "The reconciliation ties." Not "we aim to make closing easier." The product delivers; the copy states it.
+
+**The ground is a ledger pad, not a stage.** Pale green paper under everything, white working surfaces on top of it, ink for text, one green for the accent, and red only for corrections. Nothing glows, nothing shimmers, nothing is a gradient. Poof is a set of books, and the brand looks like the page they are kept on.
 
 ### Brand Values
-1. **Effortless** — Bookkeeping should feel easy
+1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule was derived from work someone reviewed ([Group 13](#13-approvals--ai-autonomy-9-features))
 2. **Small Business First** — Every decision optimized for 1–50 employee businesses
 3. **Trust & Security** — Bank-grade security, SOC 2 audit logging, 2FA, RBAC
-4. **Continuous Learning** — The AI gets smarter over time
+4. **One figure** — The reconciliation ties; the close is a record. When the number on the screen and the number in the record are the same number, the month is done
 
-### AI Assistant — Poof
-Poof's AI assistant is the product itself — there is no separate character or persona name. The AI lives in a right-hand sidebar (with a branded purple-to-teal gradient header), is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. Poof gives concise, action-oriented responses (2–4 sentences) and can perform 30+ actions: creating invoices, estimates, expenses, bills, credit notes, deposits, customers, vendors, and products; setting up chart of accounts; recording journal entries; configuring recurring depreciation schedules; building budgets and forecasts; generating all 13 financial reports; sending invoices and credit notes via email; importing bank statement PDFs; and guiding users through onboarding and month-end close. Uploaded receipts and invoices are automatically scanned and attached to the records Poof creates. It features a signature sparkle animation icon. When creating content, the AI can be referenced as "your AI bookkeeper" or simply "Poof."
+### AI Assistant — Ask Poof
+The assistant is a tool, not a persona. There is no separate character and no name other than the product's. It has no icon of its own — **the mark is its icon** — no sparkle, and no animation. Its header is flat paper with a rule and the mark.
+
+It lives in a right-hand sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. It gives concise, action-oriented responses (2–4 sentences) and can carry out the assistant's full set of actions (the count is in [Key Numbers & Claims](#key-numbers--claims)): preparing invoices, estimates, expenses, bills, credit notes, deposits, customers, vendors, and products; setting up the chart of accounts; recording journal entries; configuring recurring depreciation schedules; building budgets and forecasts; generating all 13 financial reports; sending invoices and credit notes via email; importing bank statement PDFs; booking, moving, or cancelling a visit; answering where things stand; and guiding users through onboarding and the month-end close. Uploaded receipts and invoices are automatically scanned and attached to the records it prepares.
+
+**It shows its steps and says "preparing," never "created."** Nothing is written until a person approves it. What the assistant produces is a card in Approvals with the evidence on it, and the page that approves the card is the page that settles it ([Group 13](#13-approvals--ai-autonomy-9-features)). Copy about the assistant follows the same rule — "Poof prepared the invoice," "the entry is staged," never "Poof created" — and never gives it feelings, a face, or a first person. When creating content, refer to it as "the assistant," "Ask Poof," or simply "Poof."
 
 The assistant supports **multi-session conversations** — users can create, rename, switch between, and delete multiple chat sessions. Sessions display relative timestamps (time of day for today, "Yesterday", "Xd ago") in the user's company timezone. Conversations can be organized into **folders** (similar to ChatGPT Projects) with full CRUD: create, rename, expand/collapse, and delete. Sessions are moved between folders via **drag-and-drop** (desktop expanded mode) or a **"Move to" menu** (all views). Deleting a folder prompts a warning and removes all conversations inside it. Collapsed folder state persists across sessions via localStorage.
 
@@ -181,146 +190,202 @@ The assistant has three view modes:
 - **Full-screen expanded mode** (desktop) — full-page layout with a persistent left panel showing folders and conversations with drag-and-drop support
 - **Mobile** — full-width drawer below the app bar with a dedicated full-screen session list for managing conversations and folders
 
-Navigating to another page (via sidebar nav, logo, or browser) automatically collapses expanded mode back to the sidebar on desktop, or fully closes the assistant on mobile.
+Navigating to another page (via sidebar nav, wordmark, or browser) automatically collapses expanded mode back to the sidebar on desktop, or fully closes the assistant on mobile.
+
+### Retired — do not reintroduce
+The violet → indigo → teal gradient, gradient text, the sparkle icon and its animation, glow, shimmer, vapor, the swirl mark, the gold cloud, Righteous, Cabinet Grotesk, Inter, teal, indigo, violet, and the words "magic" and "magical" in copy. If a design or a sentence has any of these in it, it is the old brand.
 
 ---
 
 ## Logo Usage
 
-### Primary Logo (In-App Header)
-The logo that appears in the top-left corner of the app at all times uses the **imageText** variant: the Poof logo icon followed by the word "Poof."
+Poof has two marks: the **wordmark** (the word, set in type, with a drawn period) and the **mark** (a full stop, boxed). Neither is a picture of the word. The wordmark is a component, not an image file.
+
+### The Wordmark
+Lowercase **poof** in Bricolage Grotesque 800, ink on paper. The period is the only colored element, and it is drawn, not typed.
 
 | Property | Value |
 |---|---|
-| **Logo font** | "Righteous" (primary), "Inter" / "Roboto" (fallbacks) |
-| **Font weight** | 700 (bold) |
-| **Font size (desktop)** | 3rem (48px) |
-| **Font size (mobile)** | 1.5rem (24px) |
-| **Text color** | `#8b5cf6` (solid violet — not a gradient) |
-| **Letter spacing** | -0.01em |
+| **Word** | `poof` — lowercase, always |
+| **Font** | Bricolage Grotesque, weight 800 |
+| **Tracking** | -0.05em |
+| **Line-height** | 0.9 |
+| **Color** | Ink `#12211A` on paper; paper `#EEF2EA` when on ink |
+| **The period** | Drawn: a circle 0.2em wide, sitting on the baseline, 0.07em after the *f*, filled ledger green `#1B5E3F` (light green `#A9D8B8` when the wordmark is on ink) |
+| **Desktop header** | 28px |
+| **Phone header** | 22px |
+| **Auth pages** | 44px |
+| **Footer** | 26px |
 
-### Logo + Icon Spacing
-- The logo icon and "Poof" text sit with **zero gap** between them
-- The logo image actually has a **negative right margin** (-8px on desktop, -4px on mobile) so the icon and text nestle closely together
-- This tight pairing is intentional — the icon and wordmark should feel like one unit, not two separate elements
+- **Bricolage's own full stop is an oval and must not be used.** Never type `poof.`; the component draws the dot.
+- The period is the story — *Poof. It's done.* The work vanishes and the dot is what stays. That is why it is green, and why it is the only color in the word.
+- In running text, **Poof** is capitalized as a word ("Poof prepares the invoice"). The wordmark is not.
 
-### Logo Variants Available
+### The Mark
+A full stop, boxed. A hard-cornered square outline in ink with a centered ledger-green dot. Two shapes, so it reads at 16px.
 
-| Variant | Description | When to Use |
-|---|---|---|
-| **imageText** | Logo icon + "Poof" text | Primary usage: app header, website header, marketing materials |
-| **image** | Logo icon only | Favicons, app icons, small spaces, social media profile pictures |
-| **text** | Just "Poof" in gradient text | Mobile app header, tight layouts |
-| **icon** | Sparkle icon in violet circle | Loading states, small UI elements |
-| **full** | Sparkle icon + gradient "Poof" text | Alternative marketing usage |
+| Property | Value |
+|---|---|
+| **viewBox** | `0 0 64 64` |
+| **Box** | `rect` from 2 to 62 (60 × 60), stroke 4, square corners. On paper: ink `#12211A` stroke, white fill. On ink: paper `#EEF2EA` stroke, ink fill |
+| **Dot** | Circle at the center, `r` 12.16 — about 38% of the box. Ledger green `#1B5E3F` on paper; light green `#A9D8B8` on ink |
+| **App icon** | The same mark. Platform rounding produces the rounded version; do not draw one. The maskable icon has the mark inset 14% on paper |
+| **Stamp** | A rubber-stamp impression of the mark is a motif for "Signed." states and print only. It is never the primary mark |
+
+### Clear Space and Pairing
+- Minimum clear space around either mark: **the height of the o.**
+- The wordmark and the mark are not locked up into one unit. They appear together only when one is the icon and the other is the name — a favicon beside a header, the OG image.
+- The mark is also the assistant's icon. There is no other icon for Poof.
 
 ### Do's and Don'ts
-- **Do** use the violet logo on white/light backgrounds
-- **Do** use `poof-logo-purple.png` or `poof-logo-with-purple-background.png` when you need the logo on dark backgrounds
-- **Don't** stretch or distort the logo
-- **Don't** place the logo on busy backgrounds without sufficient contrast
-- **Don't** change the color of the wordmark — it should always be `#8b5cf6` or white (on dark backgrounds)
+- **Do** set the wordmark ink on paper or paper on ink. Those are the only two.
+- **Do** let the period be the only colored element. The word itself is never green.
+- **Do** use the component (`PoofWordmark`) or the SVG (`poof-mark.svg`) — never a screenshot, never a re-typed version.
+- **Don't** put either mark on a photograph, a gradient, or a busy background.
+- **Don't** type the period. Bricolage's full stop is an oval.
+- **Don't** pair the wordmark with the old swirl or sparkle, or with any icon other than the mark.
+- **Don't** stretch, outline, shadow, tint, or animate either mark.
+
+### Where the Components Live
+
+| Surface | Wordmark | Mark | Notes |
+|---|---|---|---|
+| Website (`poof-website2`) | `src/components/PoofWordmark.tsx` | `src/components/PoofMark.tsx` | The CSS class `.poof-wm` in `src/app/globals.css` sets the face, tracking, and draws the period; `.on-ink` flips it |
+| App (`apps/poof-web`) | `PoofWordmark` | `PoofMark` | Same geometry; colors come from `src/theme/shared-theme.ts` |
 
 ---
 
 ## Color Palette
 
-### Primary Colors
+Two colors carry meaning. Everything else is paper, ink, and the lines between them.
+
+### The Palette
 
 | Name | Hex | Usage |
 |---|---|---|
-| **Violet 500 (Brand Primary)** | `#8b5cf6` | Primary brand color, buttons, logo text, key accents |
-| Violet 400 (Light) | `#a78bfa` | Hover states, lighter accents |
-| Violet 600 (Dark) | `#7c3aed` | Pressed states, darker accents |
-| Violet 100 | `#ede9fe` | Very light backgrounds, tags |
-| Violet 50 | `#f5f3ff` | Subtle tinted backgrounds |
+| **Ledger paper** | `#EEF2EA` | Page ground (site); app shell ground |
+| **Paper 2** | `#F5F7F2` | Alternate surfaces, hover rows |
+| **White** | `#FFFFFF` | Cards, working surfaces, the app's tables and forms |
+| **Ink** | `#12211A` | All primary text; dark surfaces |
+| **Muted** | `#5B6660` | Secondary text and labels |
+| **Rule** | `#C9D3C6` | Every hairline and border |
+| **Ledger green** | `#1B5E3F` | Accent text, links, active nav, the wordmark's period, icons in the on state |
+| **Press green** | `#1F7A4F` | The primary button — one per view — with white text on it |
+| **Green tint** | `#DCEBDF` | Evidence and approved surfaces, selected states |
+| **Audit red** | `#B3261E` | Corrections, rejections, emergencies, destructive actions, the double red margin rule on records |
+| **Red tint** | `#F6E3E0` | Rejection surfaces |
+| **Light green** | `#A9D8B8` | Accent on ink only — the period and links when the ground is ink |
 
-### Secondary Colors
-
-| Name | Hex | Usage |
-|---|---|---|
-| **Indigo 500** | `#6366f1` | Secondary accents, complementary to violet |
-| Indigo 400 | `#818cf8` | Lighter secondary |
-| Indigo 600 | `#4f46e5` | Darker secondary |
-
-### Accent
-
-| Name | Hex | Usage |
-|---|---|---|
-| **Teal 500** | `#14b8a6` | Accent color, used in the brand gradient endpoint |
-
-### Semantic / Status Colors
+### App Only
 
 | Name | Hex | Usage |
 |---|---|---|
-| **Success** | `#10b981` | Positive states, confirmations, revenue |
-| **Error** | `#ef4444` | Errors, destructive actions, expenses |
-| **Warning** | `#f59e0b` | Warnings, pending states |
+| **Warning** | `#9A6B1F` on `#F5ECD9` | Pending states in the app. Never on marketing surfaces |
+| **Chart series** | `#3E6B8A` · `#9A6B1F` · `#5B6660` · `#7A5C8A` · `#8C6E4E` · `#4E7F8C` · `#B08968` · `#6E8B5B` | Chart series, in this order. Green and red are never a generic series — they keep their meaning |
 
-### Neutral / Text Colors
+### Rules
+1. **Only two colors carry meaning.** Green = signed, tied, approved, covered. Red = corrected, rejected, escalated. Anything that is not one of those is ink, muted, or a rule.
+2. **Two neutrals, not three.** Muted for text and labels; Rule for lines. There is no third gray.
+3. **One pressable thing per view** gets press green. Every other action is ink text, an outlined button, or a ledger-green link.
+4. **No gradients anywhere.** Not on buttons, not on text, not on backgrounds, not at 5% opacity.
+5. **Not QuickBooks' green.** QuickBooks is a bright kelly green (`#2CA01C`) on white. Poof's green stays deep ink-green on pale ruled paper. Never use a bright green.
 
-| Name | Hex | Usage |
+### Contrast (WCAG 2.1)
+
+| Pair | Ratio | AA |
 |---|---|---|
-| **Slate 900** | `#0f172a` | Primary text color |
-| **Slate 600** | `#475569` | Secondary/muted text |
-| **Slate 200** | `#e2e8f0` | Borders, dividers |
-| **Slate 50** | `#f8fafc` | Alternate backgrounds |
-| **White** | `#ffffff` | Primary background |
+| Ink on paper | 14.7:1 | Pass |
+| Ledger green text on paper | 6.8:1 | Pass |
+| White on press green | 5.3:1 | Pass |
+| Muted on paper | 5.3:1 | Pass |
+| Audit red on paper | 5.8:1 | Pass |
+| Light green on ink | 10.5:1 | Pass |
 
-### Gradients
+### In Code
 
-| Name | CSS Value | Usage |
-|---|---|---|
-| **Primary** | `linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)` | Buttons, icon backgrounds, CTA elements |
-| **Brand / Magical** | `linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #14b8a6 100%)` | Special decorative elements, hero sections, gradient text |
-| **AI Assistant Header** | `linear-gradient(135deg, rgba(139,92,246,0.25) 0%, rgba(99,102,241,0.18) 50%, rgba(20,184,166,0.25) 100%)` | AI assistant sidebar header — soft brand gradient at ~25% opacity |
-| **CTA** | `linear-gradient(160deg, #0f172a 0%, #1e293b 100%)` | Dark call-to-action sections |
-| **Glass** | `linear-gradient(135deg, rgba(139,92,246,0.05) 0%, rgba(99,102,241,0.05) 100%)` | Subtle glass-effect backgrounds |
+**Site (Tailwind).** The `ledger` scale plus named tokens. The `slate` scale is overridden to green-biased neutrals so every existing `slate-*` class lands on the system without a rewrite.
+
+| Token | Hex |
+|---|---|
+| `ledger-50` | `#F5F7F2` |
+| `ledger-100` | `#EEF2EA` |
+| `ledger-200` | `#DCEBDF` |
+| `ledger-300` | `#C9D3C6` |
+| `ledger-400` | `#A9D8B8` |
+| `ledger-500` | `#1F7A4F` |
+| `ledger-600` | `#1B5E3F` |
+| `ledger-700` | `#174F35` |
+| `ledger-800` | `#12211A` |
+| `ledger-900` | `#0D1A14` |
+| `paper` / `paper-2` | `#EEF2EA` / `#F5F7F2` |
+| `ink` / `muted` / `rule` | `#12211A` / `#5B6660` / `#C9D3C6` |
+| `audit` / `audit-100` | `#B3261E` / `#F6E3E0` |
+
+**App.** `apps/poof-web/src/theme/shared-theme.ts` is the source of truth, mirrored in `poof-variables.css` and `poof-design-tokens.json`. Change the TypeScript file; the other two follow.
+
+**Retired.** Every color that is not on these tables is the old brand. The list is under [Brand Identity](#brand-identity).
 
 ---
 
 ## Typography
 
+Three families, each with one job. Display is Bricolage Grotesque; text is IBM Plex Sans; every figure is IBM Plex Mono. All three are open source on Google Fonts.
+
 ### Font Families
 
-| Use | Font | Fallbacks |
-|---|---|---|
-| **Body text** | Inter | system-ui, sans-serif |
-| **Headings** | Cabinet Grotesk | system-ui, sans-serif |
-| **Logo wordmark** | Righteous | Inter, Roboto, sans-serif |
-| **Code / Monospace** | JetBrains Mono | monospace |
+| Use | Font | Weights | Rules |
+|---|---|---|---|
+| **Display** | Bricolage Grotesque | 800 | The wordmark, H1, H2, and the few words stamped large ("Ties.", "Signed."). Never below 22px. Never running text |
+| **Text and UI** | IBM Plex Sans | 400 / 500 / 600 | Body, UI, and headings below 22px. Semibold for the one emphasized phrase in a paragraph |
+| **Figures** | IBM Plex Mono | 400 / 500 | Every number, date, amount, hex, eyebrow, and label — always with `tabular-nums`. Right-aligned table cells are always mono |
+
+- **Eyebrows** are IBM Plex Mono, 11.5–12px, caps, 0.08em tracking.
+- **Fallbacks:** `system-ui, sans-serif` behind both sans faces; `monospace` behind Plex Mono.
+- **Retired:** Righteous, Cabinet Grotesk, Inter, JetBrains Mono.
 
 ### Font Weights
 
 | Weight | Value | Usage |
 |---|---|---|
-| Light | 300 | Rarely used |
-| Regular | 400 | Body text |
-| Medium | 500 | Subtitles, emphasized body |
-| Semibold | 600 | Headings, buttons |
-| Bold | 700 | Logo, primary headings |
+| Regular | 400 | Body (Plex Sans); figures (Plex Mono) |
+| Medium | 500 | Labels and emphasis in mono |
+| Semibold | 600 | UI and headings below 22px (Plex Sans) |
+| Extra bold | 800 | Display only (Bricolage Grotesque) |
+
+There is no 300 and no 700. Bold inside body copy is 600.
 
 ### Font Sizes
 
-| Name | Size | Pixels |
+| Step | Face | Where |
 |---|---|---|
-| xs | 0.75rem | 12px |
-| sm | 0.875rem | 14px |
-| base | 1rem | 16px |
-| lg | 1.125rem | 18px |
-| xl | 1.25rem | 20px |
-| 2xl | 1.5rem | 24px |
-| 3xl | 1.875rem | 30px |
-| 4xl | 2.25rem | 36px |
-| 5xl | 3rem | 48px |
+| 12px | Plex Mono / Plex Sans | Eyebrows (11.5–12px), table labels, footnotes |
+| 14px | Plex Sans / Plex Mono | UI text, table cells, secondary copy |
+| 16px | Plex Sans | Body |
+| 18px | Plex Sans | Lead paragraphs, larger UI |
+| 22px | Bricolage 800 or Plex Sans 600 | The floor for display; the app's H3 is Plex Sans 600 at this size |
+| 28px | Bricolage 800 | The app's H2; the desktop header wordmark |
+| 36px | Bricolage 800 | The app's H1 |
+| 44px | Bricolage 800 | The auth-page wordmark; large display |
+| `clamp()` | Bricolage 800 | The site's H1, scaling with the viewport |
+
+**App:** h1 36 / h2 28 in Bricolage Grotesque; h3 22 and below in IBM Plex Sans 600.
+
+### Loading
+
+| Surface | How |
+|---|---|
+| Site | `next/font`: `Bricolage_Grotesque` 800, `IBM_Plex_Sans` 400/500/600, `IBM_Plex_Mono` 400/500 |
+| App | `@fontsource`, self-hosted — no runtime requests to Google |
+| Graphics, video, print | Download from Google Fonts: [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque), [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans), [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) |
 
 ---
 
 ## Key Messaging & Taglines
 
 ### Primary
-- **"Bookkeeping That Does Itself"** — Main hero headline
-- **"Poof. It's done."** — Primary tagline
+- **"The work disappears. The evidence doesn't."** — The brand sentence and the primary line. Use it wherever Poof is introduced in one line: the OG image, a deck cover, the closing line of a post. Poof is a magic trick that shows its method — the work vanishes, the record stays
+- **"Bookkeeping That Does Itself"** — The self-serve hero line; still the headline on the product hero
+- **"Poof. It's done."** — Not a headline. It is the story behind the wordmark's period: the work vanishes and the dot is what stays. A caption or a closing line, never a hero
 - **"AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again."** — Hero subhead
 
 ### Supporting Headlines (use on feature sections, ads, social)
@@ -342,10 +407,11 @@ The logo that appears in the top-left corner of the app at all times uses the **
 - Conversational, not corporate
 - Confident, not arrogant
 - Simple, not dumbed-down
-- Magical, not gimmicky
+- On the record, not gimmicky
 
 ### Messaging Don'ts
-- Don't lead with "magical" in headlines — let the product *feel* magical through the experience. Use outcome-oriented headlines instead.
+- Don't use "magical" or "magic" anywhere in copy; the magic is one animation on the homepage and one sentence.
+- Don't lead with a mood in a headline — use an outcome-oriented headline instead.
 - Don't list features without tying them to a customer outcome
 - Don't mention tiers, plans, or "Basic/Pro" — Poof has one plan with everything included
 - Don't use accounting jargon without explaining it
@@ -361,7 +427,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
-2. Poof AI assistant (sidebar-based, context-aware, 30+ tools, branded gradient header with sparkle icon, multi-session conversations with folder organization)
+2. Poof AI assistant (sidebar-based, context-aware, 62 tools, the mark as its icon, flat paper header, multi-session conversations with folder organization)
 3. AI chart of accounts generation
 4. Automated daily bookkeeping
 5. AI-powered recurring charge detection (frequency analysis, confidence scoring, next payment prediction)
@@ -687,14 +753,40 @@ difference between a comparison and a claim.
 
 ## Content Guidelines
 
+### Voice
+- **Controller's sentences.** Short, declarative, dollar-specific. "Five prior transactions, all Job Materials" beats "smart categorization."
+- **The evidence, not the assertion.** Say what was found, where, and how much. If a sentence has no number, account, or date in it, ask what it is for.
+- **No exclamation points.** Anywhere.
+- **No "magical," no "magic."** The magic is one animation on the homepage and one sentence. The copy is the method.
+- **Claims carry a date and a source.** "As of August 2026, following Intuit's August 1, 2026 increase." The claims we will not make yet are listed with the rest — in [Key Numbers & Claims](#key-numbers--claims) and the "what is proven" notes at the top of this file — and they are held until they are proven.
+
+### Imagery
+Three kinds only.
+
+| Kind | What it is | Rules |
+|---|---|---|
+| **Real screenshots** | The product, taken from real books | Light mode, on white. Never a mockup, never generated UI |
+| **Real photographs** | Real people — Austin, at a shop or by a window | Never at a laptop |
+| **Props** | Paper on the ledger pad, a truck at dusk, a hand with a phone | Photographed or generated. Generated props are graded to the palette afterwards |
+
+**Never:** generated people, generated UI, stock handshakes, sparkles, glowing orbs, robots, anything purple, text inside an image. Wordmarks are typeset in the font, never drawn by a model.
+
+**Prop look:** top-down or three-quarter; soft window light, with one pool of warmer light on the subject; ledger paper or a worn workbench as the ground; shallow depth of field.
+
+### Motifs
+- **The ledger ground** — pale green paper under everything.
+- **The period** — the green dot from the wordmark. The only place the brand is a shape.
+- **The double red margin rule** — two thin audit-red lines down the left of anything that *is a record*: a close, a job's P&L, a signed reconciliation. Nothing else gets it.
+- **Figures in mono** — every number on the page is IBM Plex Mono, tabular.
+- **One spotlight, once per page,** in the hero. The rest of the page is flat paper.
+- **The evidence card** — a white card with a green left rule: the shape of a proposal and what it rests on.
+
 ### When Creating Social Media / Video Content
-- Use `#8b5cf6` (violet) as the primary brand color in overlays, text, and graphics
-- The app UI is **light mode** — white backgrounds with violet accents. Screenshots will look clean on both light and dark social media feeds
-- Use the **Righteous** font for any "Poof" wordmark in graphics (Google Fonts: [Righteous](https://fonts.google.com/specimen/Righteous))
-- Use **Inter** for body text in graphics (Google Fonts: [Inter](https://fonts.google.com/specimen/Inter))
-- Use **Cabinet Grotesk** for headlines if available (Fontshare: [Cabinet Grotesk](https://www.fontshare.com/fonts/cabinet-grotesk))
-- The brand gradient (violet → indigo → teal) works great for backgrounds and decorative elements
-- When showing the app, the overall aesthetic is: clean, airy, modern, with subtle violet glow effects on hover/interaction
+- Ground: ledger paper `#EEF2EA`. Text: ink `#12211A`. Accent: ledger green `#1B5E3F`, sparingly.
+- Wordmark: typeset in Bricolage Grotesque 800, lowercase, with the drawn period — never typed with a full stop, never an image of an old logo.
+- Body text in IBM Plex Sans; every figure in IBM Plex Mono.
+- No gradients, no sparkle overlays, no glow.
+- The app UI is **light mode** — white working surfaces on the paper ground. App screenshots are light mode on white and sit well on the green paper; frame them on it, and they read clean on both light and dark feeds.
 
 ### Hashtags & Keywords
 - #Poof #PoofBookkeeping #AIBookkeeping #SmallBusinessBookkeeping
@@ -705,15 +797,37 @@ difference between a comparison and a claim.
 
 ## Available Logo Files
 
-All files located in `apps/poof-web/public/`:
+**The wordmark is not an image file anywhere. It is a component** (`PoofWordmark`) — see [Logo Usage](#logo-usage). The files below are the mark and the icons derived from it.
 
-| File | Description |
+### Site repo — `public/`
+
+| File | What it is |
 |---|---|
-| `poof-logo.png` | **Primary logo** — used in app header and throughout the product |
-| `poof-logo2.png` | Alternative logo version |
-| `poof-logo-purple.png` | Purple-tinted variant |
-| `poof-logo-gold.png` | Gold variant |
-| `poof-logo-with-purple-background.png` | Logo on a purple background (good for dark contexts) |
+| `poof-mark.svg` | The mark. Source for everything below |
+| `favicon.ico` | 16 + 32 PNG-in-ICO |
+| `favicon-16x16.png` | 16px |
+| `favicon-32x32.png` | 32px |
+| `apple-touch-icon.png` | 180px |
+| `favicon-192x192.png` | 192px |
+| `favicon-512x512.png` | 512px |
+| `icon-512-maskable.png` | 512px, the mark inset 14% on paper, for maskable icons |
+| `og-image.png` | 1200 × 630 — wordmark + the brand sentence + the mark, typeset on the ledger texture |
+| `ledger-texture.jpg` | The generated ledger paper used under the OG image |
+
+**Removed — do not reference:** `poof-logo.png`, `poof-logo2.png`, `poof-logo-cloud.png`, `poof-logo-gold.png`, `poof-logo-purple-to-blue.png`, `poof-logo-with-purple-background.png`.
+
+### App repo — `apps/poof-web/public/`
+
+| File | What it is |
+|---|---|
+| `poof-mark.svg` | The mark |
+| `favicon.ico` | 16 + 32 PNG-in-ICO |
+| `favicon-16.png`, `favicon-32.png` | Favicons |
+| `icon-180.png`, `icon-192.png`, `icon-512.png` | App icons — platform rounding does the rounded version |
+| `icon-512-maskable.png` | The mark inset 14% on paper |
+| `og-image.png` | OG image |
+
+If you need the wordmark as an image — a slide, a print piece — render it from the component, or typeset it in Bricolage Grotesque 800 with the drawn period per [Logo Usage](#logo-usage). Do not screenshot the header.
 
 ---
 
@@ -831,7 +945,7 @@ technician, so a flat monthly figure understates them at shop scale — always c
 prospect's actual headcount before quoting a contrast. Re-verify before any campaign.*
 
 ### Tone & Language Shifts for This Vertical
-The horizontal Poof brand voice ("magical but professional") still applies, but on HVAC landing pages and outreach, lean into these shifts:
+The Poof brand voice ("on the record": direct, specific, the evidence not the assertion) still applies, but on HVAC landing pages and outreach, lean into these shifts:
 
 - **Use trade vocabulary:** "shops" instead of "businesses," "techs" instead of "employees," "trucks" as a sizing proxy, "service calls" instead of "appointments"
 - **Talk in specific dollars:** "$1,200 a month for a bookkeeper" beats "high bookkeeping costs"
@@ -839,7 +953,7 @@ The horizontal Poof brand voice ("magical but professional") still applies, but 
 - **Reference their daily reality:** "between service calls," "the 4pm rush," "shoulder season," "supply house run," "the Henderson install"
 - **Skip startup language:** Avoid "founders," "entrepreneurs," "creators," "side hustle" — these readers built a real business from the ground up and don't identify with that vocabulary
 - **Use "owner-operator" or "shop owner"** — not "small business owner" (too generic), not "executive" (too formal)
-- **Direct, not magical:** The "poof, it's done" line still works but pair it with concrete outcomes. ("Poof. Per-job profit on every job, every month.")
+- **Direct:** The "poof, it's done" line still works but pair it with concrete outcomes. ("Poof. Per-job profit on every job, every month.")
 - **No exclamation points in marketing copy.** Trades audience reads them as inauthentic.
 
 ### Key Differentiators for the Trades Vertical
@@ -948,6 +1062,50 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### September 15, 2026 (later) — the ledger-green rebrand
+- **Identity.** The violet "magical" brand is retired. The idea is now one sentence — *"The work
+  disappears. The evidence doesn't."* — a magic trick that shows its method: the work vanishes,
+  the record stays. Personality is a controller's: on the record, direct, specific, confident
+  without hedging. The ground is a ledger pad, not a stage. "Effortless" became **Shows its
+  work**; "Continuous Learning" became **One figure**. §2 Brand Identity, §3 Logo Usage, §4 Color
+  Palette, §5 Typography, §12 Content Guidelines and §13 Available Logo Files were rewritten. §1
+  gained the brand one-liner. §6's Primary block now leads with the sentence, keeps "Bookkeeping
+  That Does Itself" as the self-serve hero line, and demotes "Poof. It's done." to the story
+  behind the wordmark's period. "Magical, not gimmicky" in Tone of Voice became "On the record,
+  not gimmicky"; a new Messaging Don't bans "magic"/"magical" in copy.
+- **Wordmark.** Lowercase `poof` in Bricolage Grotesque 800, tracking -0.05em, line-height 0.9,
+  ink on paper. The period is drawn — a 0.2em circle on the baseline, 0.07em after the *f*, in
+  ledger green — never typed, because Bricolage's full stop is an oval. It is a component
+  (`PoofWordmark`), not an image file. 28px desktop header, 22px phone, 44px auth, 26px footer.
+- **Mark.** A full stop, boxed: a hard-cornered ink square (viewBox 64, rect 2..62, stroke 4)
+  with a centered green dot (r 12.16, about 38% of the box). Two shapes, so it reads at 16px. It
+  is the favicon, the app icon, and the assistant's icon; a rubber-stamp impression of it is a
+  motif for "Signed." states and print only.
+- **Palette.** Ledger paper `#EEF2EA`, paper 2 `#F5F7F2`, white working surfaces, ink `#12211A`,
+  muted `#5B6660`, rule `#C9D3C6`; ledger green `#1B5E3F` for accent and the period, press green
+  `#1F7A4F` for the one button per view, green tint `#DCEBDF` for evidence; audit red `#B3261E`
+  and red tint `#F6E3E0` for corrections only; light green `#A9D8B8` on ink only. App-only
+  warning and an eight-color chart series that never uses green or red. Two colors carry
+  meaning, two neutrals, no gradients; every pair passes WCAG AA. Site: a `ledger` Tailwind
+  scale, with `slate` overridden to green-biased neutrals. App: `shared-theme.ts` is the source
+  of truth, mirrored in `poof-variables.css` and `poof-design-tokens.json`.
+- **Type.** Bricolage Grotesque 800 for display (wordmark, H1, H2, the words stamped large; never
+  below 22px), IBM Plex Sans 400/500/600 for text and UI, IBM Plex Mono 400/500 for every figure,
+  tabular. Loaded via `next/font` on the site and `@fontsource` in the app.
+- **AI assistant.** A tool, not a persona: no sparkle, no animation, no gradient header — flat
+  paper with a rule and the mark. It shows its steps and says "preparing," never "created,"
+  because nothing is written until a person approves it.
+- **Retired, do not reintroduce:** the violet → indigo → teal gradient, gradient text, the
+  sparkle icon and animation, glow, shimmer, vapor, the swirl mark, the gold cloud, Righteous,
+  Cabinet Grotesk, Inter, JetBrains Mono, teal, indigo, violet, and "magic"/"magical" in copy.
+  The old PNG logos (`poof-logo*.png`) were deleted from the site repo.
+- **Where it stands.** The app is re-themed on an open PR. The website is re-themed on the
+  `rebrand/ledger-green` branch: wordmark and mark components, tokens, fonts, favicons, OG image.
+  Older changelog entries below still describe the violet system as it was — that is history,
+  not guidance.
+- **Not changed:** feature counts, prices, dates, claims, competitive positioning, the trades
+  section, the technical section, and the outstanding-corrections table.
 
 ### September 15, 2026 — two businesses; the close is a record; the reconciliation ties
 - **Positioning.** The header, §1 and "Who Poof Is For" now follow `TWO_BUSINESSES.md` (decided

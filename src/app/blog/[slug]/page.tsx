@@ -135,7 +135,7 @@ function getBlogPostingSchema(post: BlogPost, slug: string) {
       name: 'Poof',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.poofai.com/poof-logo.png',
+        url: 'https://www.poofai.com/favicon-512x512.png',
       },
     },
     datePublished: post.date,
@@ -194,20 +194,20 @@ function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
               key={key}
               href={internalPath}
               {...(asset[1].toLowerCase() !== 'html' && { download: '' })}
-              className="text-gold-600 underline hover:text-gold-700"
+              className="text-ledger-600 underline hover:text-ledger-700"
             >
               {label}
             </a>
           )
         }
         return (
-          <Link key={key} href={internalPath} className="text-gold-600 underline hover:text-gold-700">
+          <Link key={key} href={internalPath} className="text-ledger-600 underline hover:text-ledger-700">
             {label}
           </Link>
         )
       }
       return (
-        <a key={key} href={href} target="_blank" rel="noopener noreferrer" className="text-gold-600 underline hover:text-gold-700">
+        <a key={key} href={href} target="_blank" rel="noopener noreferrer" className="text-ledger-600 underline hover:text-ledger-700">
           {label}
         </a>
       )
@@ -305,7 +305,7 @@ function formatContent(content: string): JSX.Element[] {
     if (nonEmpty.every((l) => l.startsWith('>'))) {
       const quote = nonEmpty.map((l) => l.replace(/^>\s?/, '')).join(' ')
       elements.push(
-        <blockquote key={key++} className="border-l-4 border-gold-300 pl-4 italic text-slate-600 my-4">
+        <blockquote key={key++} className="border-l-4 border-ledger-300 pl-4 italic text-slate-600 my-4">
           {renderInline(quote, `bq-${key}`)}
         </blockquote>
       )
@@ -370,13 +370,13 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <Link
             href="/blog"
-            className="text-gold-600 hover:text-gold-700 font-medium mb-6 inline-block"
+            className="text-ledger-600 hover:text-ledger-700 font-medium mb-6 inline-block"
           >
             ← Back to Blog
           </Link>
 
           <div className="mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gold-50 text-gold-700">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-ledger-100 text-ledger-700">
               {post.category}
             </span>
           </div>
@@ -438,7 +438,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </p>
             <Link
               href="https://app.poofai.com/register"
-              className="inline-block bg-gold-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gold-700 shadow-gold transition-colors"
+              className="inline-block bg-ledger-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-ledger-600  transition-colors"
             >
               Start Your Free Trial
             </Link>
@@ -454,12 +454,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="block rounded-xl border border-slate-200 p-5 hover:border-gold-400 hover:shadow-md transition-all"
+                  className="block rounded-xl border border-slate-200 p-5 hover:border-ledger-400 hover:shadow-md transition-all"
                 >
-                  <span className="text-xs font-medium text-gold-700">{p.category}</span>
+                  <span className="text-xs font-medium text-ledger-700">{p.category}</span>
                   <h3 className="mt-2 font-semibold text-slate-900 leading-snug">{p.title}</h3>
                   <p className="mt-2 text-sm text-slate-600 line-clamp-3">{p.excerpt}</p>
-                  <span className="mt-3 inline-block text-sm font-medium text-gold-600">Read more →</span>
+                  <span className="mt-3 inline-block text-sm font-medium text-ledger-600">Read more →</span>
                 </Link>
               ))}
             </div>

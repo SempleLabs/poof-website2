@@ -33,7 +33,7 @@ export default function HomeFaqSection() {
             <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
               <div
                 className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'border-gold-200 shadow-md glow-accent-left' : 'border-slate-200'
+                  openIndex === index ? 'border-ledger-300 shadow-md ' : 'border-slate-200'
                 }`}
               >
                 <button
@@ -44,16 +44,16 @@ export default function HomeFaqSection() {
                   className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl"
                 >
                   <h3 className={`text-lg font-semibold pr-4 transition-colors ${
-                    openIndex === index ? 'text-gold-600' : 'text-slate-800 hover:text-gold-600'
+                    openIndex === index ? 'text-ledger-600' : 'text-slate-800 hover:text-ledger-700'
                   }`}>
                     {faq.question}
                   </h3>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                    openIndex === index ? 'bg-gold-100 rotate-180' : 'bg-slate-100'
+                    openIndex === index ? 'bg-ledger-200 rotate-180' : 'bg-slate-100'
                   }`}>
                     <svg
                       className={`w-4 h-4 transition-colors duration-300 ${
-                        openIndex === index ? 'text-gold-500' : 'text-slate-500'
+                        openIndex === index ? 'text-ledger-600' : 'text-slate-500'
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -85,7 +85,7 @@ export default function HomeFaqSection() {
         <div className="text-center mt-12">
           <a
             href="/faq"
-            className="text-gold-600 hover:text-gold-700 font-semibold transition-colors"
+            className="text-ledger-600 hover:text-ledger-700 font-semibold transition-colors"
           >
             View all frequently asked questions →
           </a>

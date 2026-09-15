@@ -89,7 +89,7 @@ export default function TaxSeasonPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:flex sm:items-center sm:justify-between gap-6">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-gold-600 mb-2">Prefer to do it yourself?</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-2">Prefer to do it yourself?</div>
               <h2 className="font-display text-xl font-bold text-slate-900 mb-1">
                 The 9-step bookkeeping cleanup checklist
               </h2>

@@ -6,18 +6,18 @@ export default function TradesHero() {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
       </div>
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll animation="fade-up">
-          <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-200 text-violet-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-            Poof Managed for Trades — HVAC · Plumbing · Electrical
+          <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+            The Augmented Operator — HVAC · Plumbing · Electrical
           </div>
           <h1
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
             style={{ letterSpacing: '-0.03em' }}
           >
-            Know which jobs make money — <span className="text-gradient-gold">every month, from a real controller.</span>
+            Know which jobs make money — <span className="text-ledger-600">every month, from a real controller.</span>
           </h1>
         </AnimateOnScroll>
 
@@ -30,7 +30,7 @@ export default function TradesHero() {
         <AnimateOnScroll animation="scale-up" delay={200}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <BookCallButton
-              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
+              className="inline-block bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-ledger-600 transition-all duration-200 hover:-translate-y-0.5"
             >
               Book a 20-minute call
             </BookCallButton>
@@ -55,7 +55,7 @@ export default function TradesHero() {
             <div className="rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
               <div className="px-6 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
                 <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-job P&amp;L · Henderson install</div>
-                <div className="text-xs text-violet-600 font-semibold">From your monthly profit report</div>
+                <div className="text-xs text-ledger-600 font-semibold">From your monthly profit report</div>
               </div>
               <div className="px-6 py-5">
                 <div className="grid grid-cols-3 gap-4 mb-5">
@@ -69,7 +69,7 @@ export default function TradesHero() {
                   </div>
                   <div>
                     <div className="text-xs text-slate-500 mb-1">Margin</div>
-                    <div className="text-xl font-bold text-emerald-600">$5,510 · 29.9%</div>
+                    <div className="text-xl font-bold text-ledger-600">$5,510 · 29.9%</div>
                   </div>
                 </div>
                 <div className="space-y-1.5 text-sm">
@@ -95,7 +95,7 @@ export default function TradesHero() {
         <AnimateOnScroll animation="fade-in" delay={500}>
           <p className="text-sm text-slate-500 mt-10">
             Not a trade shop?{' '}
-            <a href="#software" className="text-gold-600 font-semibold hover:text-gold-700 transition-colors">
+            <a href="#software" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
               Poof Professional — self-serve AI bookkeeping for any small business, $79/mo ↓
             </a>
           </p>

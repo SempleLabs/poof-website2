@@ -10,7 +10,7 @@ interface ReportResultsProps {
 }
 
 function ScoreBar({ score, label }: { score: number; label: string }) {
-  const color = score >= 70 ? 'bg-emerald-500' : score >= 50 ? 'bg-amber-500' : 'bg-red-500'
+  const color = score >= 70 ? 'bg-ledger-500' : score >= 50 ? 'bg-amber-500' : 'bg-red-500'
   return (
     <div>
       <div className="flex items-center justify-between mb-1">
@@ -57,7 +57,7 @@ function TransactionsByCategory({ transactions }: { transactions: CategorizedTra
                 <span className="text-xs text-slate-400">{txs.length} transaction{txs.length !== 1 ? 's' : ''}</span>
               </div>
               <div className="flex items-center space-x-3">
-                <span className={`text-sm font-bold ${isIncome ? 'text-emerald-600' : 'text-slate-900'}`}>
+                <span className={`text-sm font-bold ${isIncome ? 'text-ledger-600' : 'text-slate-900'}`}>
                   ${total.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                 </span>
                 <svg
@@ -76,7 +76,7 @@ function TransactionsByCategory({ transactions }: { transactions: CategorizedTra
                       <span className="text-slate-400 text-xs w-20 flex-shrink-0">{tx.date}</span>
                       <span className="text-slate-700 truncate">{tx.description}</span>
                     </div>
-                    <span className={`font-medium flex-shrink-0 ml-3 ${tx.type === 'credit' ? 'text-emerald-600' : 'text-slate-900'}`}>
+                    <span className={`font-medium flex-shrink-0 ml-3 ${tx.type === 'credit' ? 'text-ledger-600' : 'text-slate-900'}`}>
                       {tx.type === 'credit' ? '+' : '-'}${tx.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                     </span>
                   </div>
@@ -92,7 +92,7 @@ function TransactionsByCategory({ transactions }: { transactions: CategorizedTra
 
 export default function ReportResults({ report }: ReportResultsProps) {
   const { summary, spendScore, insights, transactions, imageBase64 } = report
-  const scoreColor = spendScore.overall >= 70 ? '#10b981' : spendScore.overall >= 50 ? '#f59e0b' : '#ef4444'
+  const scoreColor = spendScore.overall >= 70 ? '#1F7A4F' : spendScore.overall >= 50 ? '#f59e0b' : '#B3261E'
   const scoreLabel = spendScore.overall >= 90 ? 'Excellent' : spendScore.overall >= 70 ? 'Good' : spendScore.overall >= 50 ? 'Fair' : 'Needs Attention'
 
   return (
@@ -102,7 +102,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
         <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">Your Spend Score</p>
         <div className="relative w-40 h-40 mx-auto mb-4">
           <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
-            <circle cx="60" cy="60" r="52" fill="none" stroke="#e2e8f0" strokeWidth="10" />
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#C9D3C6" strokeWidth="10" />
             <circle
               cx="60" cy="60" r="52" fill="none"
               stroke={scoreColor}
@@ -143,7 +143,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white border border-slate-200 rounded-xl p-5 text-center">
           <p className="text-sm text-slate-500 mb-1">Total Income</p>
-          <p className="text-2xl font-bold text-emerald-600">
+          <p className="text-2xl font-bold text-ledger-600">
             ${summary.totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2 })}
           </p>
         </div>
@@ -155,7 +155,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
         </div>
         <div className="bg-white border border-slate-200 rounded-xl p-5 text-center">
           <p className="text-sm text-slate-500 mb-1">Net</p>
-          <p className={`text-2xl font-bold ${summary.net >= 0 ? 'text-emerald-600' : 'text-red-500'}`}>
+          <p className={`text-2xl font-bold ${summary.net >= 0 ? 'text-ledger-600' : 'text-red-500'}`}>
             {summary.net >= 0 ? '+' : '-'}${Math.abs(summary.net).toLocaleString('en-US', { minimumFractionDigits: 2 })}
           </p>
         </div>
@@ -234,17 +234,17 @@ export default function ReportResults({ report }: ReportResultsProps) {
       </div>
 
       {/* CTA */}
-      <div className="bg-gradient-to-br from-violet-600 to-indigo-700 rounded-2xl p-8 sm:p-10 text-center text-white">
+      <div className="bg-ledger-500 rounded-2xl p-8 sm:p-10 text-center text-white">
         <h3 className="text-2xl sm:text-3xl font-bold font-display mb-3">
           Want to improve your Spend Score?
         </h3>
-        <p className="text-violet-100 mb-6 max-w-xl mx-auto">
+        <p className="text-ledger-200 mb-6 max-w-xl mx-auto">
           Poof tracks your score automatically — every transaction, every day. AI categorization, reconciliation, invoicing, budgets, forecasts, and 13 financial reports — all for $79/mo.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="https://app.poofai.com/register"
-            className="bg-white text-violet-700 px-8 py-3 rounded-lg font-semibold hover:bg-violet-50 transition-all shadow-lg"
+            className="bg-white text-ledger-700 px-8 py-3 rounded-lg font-semibold hover:bg-ledger-100 transition-all shadow-lg"
           >
             Start Free Trial
           </Link>

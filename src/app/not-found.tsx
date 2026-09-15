@@ -24,11 +24,11 @@ export default function NotFound() {
 
       <section className="relative flex-grow flex items-center justify-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
         </div>
 
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="font-display text-7xl sm:text-8xl font-extrabold text-gradient-gold mb-4 leading-none">
+          <div className="font-display text-7xl sm:text-8xl font-extrabold text-ledger-600 mb-4 leading-none">
             404
           </div>
           <h1
@@ -44,7 +44,7 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
             <Link
               href="/"
-              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
+              className="inline-block bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-ledger-600 transition-all duration-200 hover:-translate-y-0.5"
             >
               Back to home
             </Link>
@@ -65,7 +65,7 @@ export default function NotFound() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="text-slate-600 hover:text-gold-600 font-medium transition-colors"
+                  className="text-slate-600 hover:text-ledger-700 font-medium transition-colors"
                 >
                   {l.label}
                 </Link>

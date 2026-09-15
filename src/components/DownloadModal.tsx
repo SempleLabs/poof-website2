@@ -68,8 +68,8 @@ export default function DownloadModal({
 
         {!isSuccess ? (
           <>
-            <div className="w-16 h-16 bg-gold-50 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-ledger-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
@@ -93,14 +93,14 @@ export default function DownloadModal({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-1 focus:ring-ledger-500/20 focus:border-ledger-500 transition-all"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gold-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gold-400 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
+                className="w-full bg-ledger-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-ledger-400 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Processing...' : 'Download Free Guide'}
               </button>
@@ -112,8 +112,8 @@ export default function DownloadModal({
           </>
         ) : (
           <div className="text-center py-8">
-            <div className="w-16 h-16 bg-teal-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-ledger-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>

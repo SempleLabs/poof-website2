@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import PoofWordmark from './PoofWordmark'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -50,8 +50,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
-              <Image src="/poof-logo.png" alt="Poof logo" width={72} height={72} className="-mr-1" />
-              <span className="poof-brand">Poof</span>
+              <PoofWordmark size={26} href={null} />
             </div>
             <p className="text-slate-500 mb-6">
               AI-powered bookkeeping for small businesses. Automate your finances with AI.
@@ -61,51 +60,51 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Product</h3>
             <ul className="space-y-3">
-              <li><Link href="/features" className="text-slate-500 hover:text-gold-600 transition-colors">Features</Link></li>
-              <li><Link href="/pricing" className="text-slate-500 hover:text-gold-600 transition-colors">Pricing</Link></li>
-              <li><Link href="/how-it-works" className="text-slate-500 hover:text-gold-600 transition-colors">How it Works</Link></li>
-              <li><Link href="/demo" className="text-slate-500 hover:text-gold-600 transition-colors">Request Demo</Link></li>
+              <li><Link href="/features" className="text-slate-500 hover:text-ledger-700 transition-colors">Features</Link></li>
+              <li><Link href="/pricing" className="text-slate-500 hover:text-ledger-700 transition-colors">Pricing</Link></li>
+              <li><Link href="/how-it-works" className="text-slate-500 hover:text-ledger-700 transition-colors">How it Works</Link></li>
+              <li><Link href="/demo" className="text-slate-500 hover:text-ledger-700 transition-colors">Request Demo</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">For Trades</h3>
             <ul className="space-y-3">
-              <li><Link href="/trades" className="text-slate-500 hover:text-gold-600 transition-colors">All trades</Link></li>
-              <li><Link href="/hvac" className="text-slate-500 hover:text-gold-600 transition-colors">HVAC</Link></li>
-              <li><Link href="/plumbing" className="text-slate-500 hover:text-gold-600 transition-colors">Plumbing</Link></li>
-              <li><Link href="/electrical" className="text-slate-500 hover:text-gold-600 transition-colors">Electrical</Link></li>
+              <li><Link href="/trades" className="text-slate-500 hover:text-ledger-700 transition-colors">All trades</Link></li>
+              <li><Link href="/hvac" className="text-slate-500 hover:text-ledger-700 transition-colors">HVAC</Link></li>
+              <li><Link href="/plumbing" className="text-slate-500 hover:text-ledger-700 transition-colors">Plumbing</Link></li>
+              <li><Link href="/electrical" className="text-slate-500 hover:text-ledger-700 transition-colors">Electrical</Link></li>
             </ul>
 
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4 mt-8">Online &amp; Solo</h3>
             <ul className="space-y-3">
-              <li><Link href="/ecommerce" className="text-slate-500 hover:text-gold-600 transition-colors">Ecommerce</Link></li>
-              <li><Link href="/freelancers" className="text-slate-500 hover:text-gold-600 transition-colors">Freelancers</Link></li>
-              <li><Link href="/creators" className="text-slate-500 hover:text-gold-600 transition-colors">Creators</Link></li>
-              <li><Link href="/service-businesses" className="text-slate-500 hover:text-gold-600 transition-colors">Service Businesses</Link></li>
-              <li><Link href="/new-llc" className="text-slate-500 hover:text-gold-600 transition-colors">New LLCs</Link></li>
+              <li><Link href="/ecommerce" className="text-slate-500 hover:text-ledger-700 transition-colors">Ecommerce</Link></li>
+              <li><Link href="/freelancers" className="text-slate-500 hover:text-ledger-700 transition-colors">Freelancers</Link></li>
+              <li><Link href="/creators" className="text-slate-500 hover:text-ledger-700 transition-colors">Creators</Link></li>
+              <li><Link href="/service-businesses" className="text-slate-500 hover:text-ledger-700 transition-colors">Service Businesses</Link></li>
+              <li><Link href="/new-llc" className="text-slate-500 hover:text-ledger-700 transition-colors">New LLCs</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><Link href="/blog" className="text-slate-500 hover:text-gold-600 transition-colors">Blog</Link></li>
-              <li><Link href="/resources" className="text-slate-500 hover:text-gold-600 transition-colors">Guides &amp; Templates</Link></li>
-              <li><Link href="/poof-vs-quickbooks" className="text-slate-500 hover:text-gold-600 transition-colors">Poof vs QuickBooks</Link></li>
-              <li><Link href="/faq" className="text-slate-500 hover:text-gold-600 transition-colors">FAQ</Link></li>
-              <li><Link href="/security" className="text-slate-500 hover:text-gold-600 transition-colors">Security</Link></li>
+              <li><Link href="/blog" className="text-slate-500 hover:text-ledger-700 transition-colors">Blog</Link></li>
+              <li><Link href="/resources" className="text-slate-500 hover:text-ledger-700 transition-colors">Guides &amp; Templates</Link></li>
+              <li><Link href="/poof-vs-quickbooks" className="text-slate-500 hover:text-ledger-700 transition-colors">Poof vs QuickBooks</Link></li>
+              <li><Link href="/faq" className="text-slate-500 hover:text-ledger-700 transition-colors">FAQ</Link></li>
+              <li><Link href="/security" className="text-slate-500 hover:text-ledger-700 transition-colors">Security</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-slate-500 hover:text-gold-600 transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-slate-500 hover:text-gold-600 transition-colors">Contact</Link></li>
-              <li><Link href="/support" className="text-slate-500 hover:text-gold-600 transition-colors">Support</Link></li>
-              <li><Link href="/privacy" className="text-slate-500 hover:text-gold-600 transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-slate-500 hover:text-gold-600 transition-colors">Terms of Service</Link></li>
+              <li><Link href="/about" className="text-slate-500 hover:text-ledger-700 transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-slate-500 hover:text-ledger-700 transition-colors">Contact</Link></li>
+              <li><Link href="/support" className="text-slate-500 hover:text-ledger-700 transition-colors">Support</Link></li>
+              <li><Link href="/privacy" className="text-slate-500 hover:text-ledger-700 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-slate-500 hover:text-ledger-700 transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
@@ -123,19 +122,19 @@ export default function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 disabled={status === 'loading' || status === 'success'}
-                className="flex-1 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold-500/20 focus:border-gold-500 disabled:opacity-50 transition-colors"
+                className="flex-1 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-ledger-500/20 focus:border-ledger-500 disabled:opacity-50 transition-colors"
               />
               <button
                 type="submit"
                 disabled={status === 'loading' || status === 'success'}
-                className="px-6 py-2 bg-gold-600 text-white font-semibold rounded-lg hover:bg-gold-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2 bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
               </button>
             </form>
 
             {message && (
-              <p className={`text-sm mt-2 ${status === 'error' ? 'text-rose-400' : 'text-teal-400'}`}>
+              <p className={`text-sm mt-2 ${status === 'error' ? 'text-rose-400' : 'text-ledger-400'}`}>
                 {message}
               </p>
             )}
@@ -152,7 +151,7 @@ export default function Footer() {
               <p>
                 <a
                   href="mailto:support@poofai.com"
-                  className="text-slate-600 hover:text-gold-600 transition-colors"
+                  className="text-slate-600 hover:text-ledger-700 transition-colors"
                 >
                   support@poofai.com
                 </a>

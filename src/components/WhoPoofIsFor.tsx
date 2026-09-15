@@ -51,7 +51,7 @@ export default function WhoPoofIsFor() {
             style={{ letterSpacing: '-0.02em' }}
           >
             Built for People Who&apos;d Rather
-            <span className="text-gradient-gold"> Run Their Business</span>
+            <span className="text-ledger-600"> Run Their Business</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             If any of these sound like you, Poof was built for you.
@@ -62,7 +62,7 @@ export default function WhoPoofIsFor() {
           {personas.map((persona, i) => (
             <AnimateOnScroll key={i} animation="fade-up" delay={100 + i * 80}>
               <div className="flex gap-4 p-6 rounded-2xl border border-slate-200 bg-slate-50/50 h-full">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-500">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-ledger-500/10 flex items-center justify-center text-ledger-600">
                   {persona.icon}
                 </div>
                 <div>

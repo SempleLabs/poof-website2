@@ -114,8 +114,8 @@ export default function PrivacyPolicyPage() {
         <Section title="Contact us">
           <p>
             Questions about this policy or your data? Email{' '}
-            <a href="mailto:semplelabs@gmail.com" className="text-gold-600 underline hover:text-gold-700">semplelabs@gmail.com</a>{' '}
-            or reach us through our <Link href="/contact" className="text-gold-600 underline hover:text-gold-700">contact page</Link>.
+            <a href="mailto:semplelabs@gmail.com" className="text-ledger-600 underline hover:text-ledger-700">semplelabs@gmail.com</a>{' '}
+            or reach us through our <Link href="/contact" className="text-ledger-600 underline hover:text-ledger-700">contact page</Link>.
             Poof is operated by Semple Labs LLC.
           </p>
         </Section>

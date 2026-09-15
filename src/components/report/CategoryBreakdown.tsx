@@ -6,16 +6,16 @@ interface CategoryBreakdownProps {
 }
 
 const COLORS = [
-  '#8b5cf6', // violet
-  '#6366f1', // indigo
-  '#14b8a6', // teal
+  '#1F7A4F', // violet
+  '#1B5E3F', // indigo
+  '#1B5E3F', // teal
   '#f59e0b', // amber
-  '#ef4444', // red
+  '#B3261E', // red
   '#3b82f6', // blue
-  '#10b981', // emerald
+  '#1F7A4F', // emerald
   '#f97316', // orange
   '#ec4899', // pink
-  '#64748b', // slate
+  '#6E7A73', // slate
 ]
 
 export default function CategoryBreakdown({ categories, blurred }: CategoryBreakdownProps) {

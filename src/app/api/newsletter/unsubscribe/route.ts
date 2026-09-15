@@ -25,17 +25,17 @@ function resultPage(message: string, ok: boolean): string {
   <meta name="robots" content="noindex">
   <title>${ok ? 'Unsubscribed' : 'Unsubscribe'} — Poof</title>
 </head>
-<body style="margin:0;background:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<body style="margin:0;background:#F5F7F2;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="padding:48px 20px;">
     <tr><td align="center">
       <table width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#fff;border-radius:16px;box-shadow:0 4px 6px rgba(0,0,0,0.05);overflow:hidden;">
-        <tr><td style="background:linear-gradient(135deg,#7c3aed 0%,#6366f1 50%,#14b8a6 100%);padding:32px;text-align:center;">
+        <tr><td style="background:linear-gradient(135deg,#1B5E3F 0%,#1B5E3F 50%,#1B5E3F 100%);padding:32px;text-align:center;">
           <span style="font-size:26px;font-weight:700;color:#fff;">Poof</span>
         </td></tr>
         <tr><td style="padding:36px 32px;text-align:center;">
           <div style="font-size:40px;margin-bottom:8px;">${ok ? '✓' : '⚠️'}</div>
-          <p style="margin:0 0 24px;color:#334155;font-size:16px;line-height:1.6;">${message}</p>
-          <a href="https://www.poofai.com" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 28px;border-radius:8px;">Back to Poof</a>
+          <p style="margin:0 0 24px;color:#2A3D33;font-size:16px;line-height:1.6;">${message}</p>
+          <a href="https://www.poofai.com" style="display:inline-block;background:#1B5E3F;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:12px 28px;border-radius:8px;">Back to Poof</a>
         </td></tr>
       </table>
     </td></tr>

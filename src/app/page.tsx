@@ -1,21 +1,9 @@
 import Header from '@/components/Header'
-import TradesHero from '@/components/TradesHero'
-import HomeTradesSection from '@/components/HomeTradesSection'
-import ReceptionistSection from '@/components/ReceptionistSection'
-import FieldServiceSection from '@/components/FieldServiceSection'
-import Hero from '@/components/Hero'
-import SpendScoreBar from '@/components/SpendScoreBar'
-import WhoPoofIsFor from '@/components/WhoPoofIsFor'
-import WhatIsPoof from '@/components/WhatIsPoof'
-import MagicWorkflowSection from '@/components/MagicWorkflowSection'
-import ApprovalsSection from '@/components/ApprovalsSection'
-import FeatureHighlights from '@/components/FeatureHighlights'
-import ComparisonSection from '@/components/ComparisonSection'
-import DemoVideoSection from '@/components/DemoVideoSection'
-import HomeFaqSection from '@/components/HomeFaqSection'
-import ProfitAnalysisCta from '@/components/ProfitAnalysisCta'
+import HomeShow from '@/components/HomeShow'
+import HomeFaqShort from '@/components/HomeFaqShort'
 import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 import { getSoftwareApplicationSchema, getServiceSchema } from '@/lib/jsonLd'
 import type { Metadata } from 'next'
 
@@ -27,13 +15,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main id="main-content" className="min-h-screen bg-white">
+    <main id="main-content" className="min-h-screen bg-paper">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getServiceSchema({
-              name: 'Poof Managed for Trades',
+              name: 'The Augmented Operator, on Poof',
               description:
                 'Managed bookkeeping for HVAC, plumbing, and electrical contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
               price: '1200',
@@ -47,21 +35,36 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getSoftwareApplicationSchema()) }}
       />
       <Header />
-      <TradesHero />
-      <HomeTradesSection />
-      <ReceptionistSection />
-      <FieldServiceSection />
-      <Hero />
-      <WhoPoofIsFor />
-      <SpendScoreBar />
-      <WhatIsPoof />
-      <MagicWorkflowSection />
-      <ApprovalsSection />
-      <FeatureHighlights />
-      <DemoVideoSection />
-      <ComparisonSection />
-      <HomeFaqSection />
-      <ProfitAnalysisCta />
+
+      {/* Our own books: the close record is public */}
+      <div className="pt-16">
+        <div className="bg-ink text-paper text-[13.5px] px-5 py-2 text-center">
+          Our own books, closed on Poof: <b className="font-semibold">August 2026</b>{' '}
+          <span className="font-mono text-ledger-400">started Sep 1 · signed Sep 5 · 60 h · 17 tasks, 12 ticked themselves</span>
+        </div>
+      </div>
+
+      <HomeShow />
+
+      {/* What Poof is, in plain words, for people and for answer engines */}
+      <section className="max-w-[780px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="what-is-poof">
+        <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">What Poof is</p>
+        <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Bookkeeping that does itself, and shows its work before it lands.</h2>
+        <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
+          Poof is AI bookkeeping software built for the person who signs the close. It categorizes, reconciles, job-costs, and closes the books, and puts every write in front of a person before it reaches the ledger. Bookkeepers, controllers, and firms run their clients on it; a shop owner can run their own. One plan, every feature, $79 a month.
+        </p>
+        <p className="text-lg text-muted max-w-[62ch] leading-[1.45] mt-3">
+          The managed bookkeeping service for HVAC, plumbing, and electrical shops is <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">The Augmented Operator</Link>, a practice that runs on Poof with a former controller signing every close.
+        </p>
+        <div className="flex flex-wrap gap-2.5 mt-6">
+          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 128 features</Link>
+          <Link href="/pricing" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Pricing</Link>
+          <Link href="/poof-vs-quickbooks" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Poof vs QuickBooks</Link>
+          <Link href="/how-it-works" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">How it works</Link>
+        </div>
+      </section>
+
+      <HomeFaqShort />
       <CtaSection />
       <Footer />
     </main>

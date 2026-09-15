@@ -49,7 +49,7 @@ export default function ProductHuntPage() {
       {/* PH welcome hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
@@ -60,7 +60,7 @@ export default function ProductHuntPage() {
               className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
               style={{ letterSpacing: '-0.03em' }}
             >
-              Bookkeeping that <span className="text-gradient-gold">does itself.</span>
+              Bookkeeping that <span className="text-ledger-600">does itself.</span>
             </h1>
           </AnimateOnScroll>
 
@@ -79,7 +79,7 @@ export default function ProductHuntPage() {
               </p>
               <Link
                 href="https://app.poofai.com/register"
-                className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
+                className="inline-block bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-ledger-600 transition-all duration-200 hover:-translate-y-0.5"
               >
                 Claim 90 days free
               </Link>
@@ -89,7 +89,7 @@ export default function ProductHuntPage() {
           <AnimateOnScroll animation="fade-in" delay={300}>
             <p className="text-sm text-slate-500">
               Just browsing?{' '}
-              <Link href="/spend-score" className="text-gold-600 font-semibold hover:text-gold-700 transition-colors">
+              <Link href="/spend-score" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
                 Try the free Spend Score
               </Link>{' '}
               — upload a bank statement, get an AI read on your spending in 60 seconds. No signup.
@@ -123,7 +123,7 @@ export default function ProductHuntPage() {
 
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="text-center mt-10">
-              <Link href="/features" className="text-gold-600 font-semibold hover:text-gold-700 transition-colors">
+              <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
                 See all 128 features →
               </Link>
             </div>
@@ -140,8 +140,8 @@ export default function ProductHuntPage() {
             </p>
             <p className="text-sm text-slate-500">
               Run an HVAC, plumbing, or electrical shop?{' '}
-              <Link href="/trades" className="text-gold-600 font-semibold hover:text-gold-700 transition-colors">
-                See Poof Managed for Trades
+              <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
+                See The Augmented Operator
               </Link>{' '}
               — done-for-you books with per-job profitability.
             </p>

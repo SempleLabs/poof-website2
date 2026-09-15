@@ -121,7 +121,7 @@ export default function SecurityPage() {
       <Header />
 
       <PageHero
-        title={<>Security at <span className="text-gradient-gold">Poof</span></>}
+        title={<>Security at <span className="text-ledger-600">Poof</span></>}
         subtitle="Your financial data is sensitive. Poof uses industry-standard security practices including encryption, two-factor authentication, audit logging, secure bank connections, and a single privacy chokepoint that redacts personal information out of every AI call."
       />
 
@@ -132,7 +132,7 @@ export default function SecurityPage() {
             {securityFeatures.map((feature, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 80}>
                 <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow h-full">
-                  <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-6">
+                  <div className="w-14 h-14 bg-ledger-100 rounded-2xl flex items-center justify-center text-ledger-600 mb-6">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold font-display text-slate-900 mb-3">{feature.title}</h3>
@@ -156,15 +156,15 @@ export default function SecurityPage() {
           <AnimateOnScroll animation="scale-up" delay={200}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <div className="text-3xl font-bold text-gold-500 mb-1">12,000+</div>
+                <div className="text-3xl font-bold text-ledger-600 mb-1">12,000+</div>
                 <div className="text-sm text-slate-600">Banks supported</div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <div className="text-3xl font-bold text-gold-500 mb-1">HTTPS</div>
+                <div className="text-3xl font-bold text-ledger-600 mb-1">HTTPS</div>
                 <div className="text-sm text-slate-600">TLS encryption</div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-slate-200">
-                <div className="text-3xl font-bold text-gold-500 mb-1">Read-only</div>
+                <div className="text-3xl font-bold text-ledger-600 mb-1">Read-only</div>
                 <div className="text-sm text-slate-600">Bank access</div>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function SecurityPage() {
                 'Bcrypt password hashing',
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3 bg-slate-50 rounded-lg p-4">
-                  <svg className="w-5 h-5 text-teal-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-ledger-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="text-slate-700 text-sm font-medium">{item}</span>
@@ -202,8 +202,8 @@ export default function SecurityPage() {
 
       {/* CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
@@ -215,7 +215,7 @@ export default function SecurityPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 Contact Us
               </Link>

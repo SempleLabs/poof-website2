@@ -73,7 +73,7 @@ export default function FaqPage() {
       />
 
       <PageHero
-        title={<>Frequently Asked <span className="text-gradient-gold">Questions</span></>}
+        title={<>Frequently Asked <span className="text-ledger-600">Questions</span></>}
         subtitle="Everything you need to know about Poof's AI-powered bookkeeping platform. Can't find your answer? Reach out to our team."
       />
 
@@ -85,7 +85,7 @@ export default function FaqPage() {
               onClick={() => setActiveCategory(null)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === null
-                  ? 'bg-gold-600 text-white shadow-gold'
+                  ? 'bg-ledger-500 text-white '
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -97,7 +97,7 @@ export default function FaqPage() {
                 onClick={() => setActiveCategory(activeCategory === category ? null : category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === category
-                    ? 'bg-gold-600 text-white shadow-gold'
+                    ? 'bg-ledger-500 text-white '
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
@@ -121,7 +121,7 @@ export default function FaqPage() {
                 <div key={category}>
                   <AnimateOnScroll animation="fade-up">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                      <div className="w-10 h-10 bg-ledger-400 rounded-xl flex items-center justify-center text-white shadow-lg">
                         {categoryIcons[category]}
                       </div>
                       <h2 className="text-2xl font-bold font-display text-slate-900">
@@ -137,7 +137,7 @@ export default function FaqPage() {
                         <AnimateOnScroll key={key} animation="fade-up" delay={100 + index * 60}>
                           <div
                             className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${
-                              openIndex === key ? 'border-gold-200 shadow-md glow-accent-left' : 'border-slate-200'
+                              openIndex === key ? 'border-ledger-300 shadow-md ' : 'border-slate-200'
                             }`}
                           >
                             <button
@@ -148,16 +148,16 @@ export default function FaqPage() {
                               className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl"
                             >
                               <h3 className={`text-lg font-semibold pr-4 transition-colors ${
-                                openIndex === key ? 'text-gold-600' : 'text-slate-800 hover:text-gold-600'
+                                openIndex === key ? 'text-ledger-600' : 'text-slate-800 hover:text-ledger-700'
                               }`}>
                                 {faq.question}
                               </h3>
                               <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                                openIndex === key ? 'bg-gold-100 rotate-180' : 'bg-slate-100'
+                                openIndex === key ? 'bg-ledger-200 rotate-180' : 'bg-slate-100'
                               }`}>
                                 <svg
                                   className={`w-4 h-4 transition-colors duration-300 ${
-                                    openIndex === key ? 'text-gold-500' : 'text-slate-500'
+                                    openIndex === key ? 'text-ledger-600' : 'text-slate-500'
                                   }`}
                                   fill="none"
                                   stroke="currentColor"
@@ -196,23 +196,9 @@ export default function FaqPage() {
       {/* CTA Section */}
       <section className="py-16 bg-slate-900 relative overflow-hidden">
         {/* Sparkle stars */}
-        {[...Array(6)].map((_, i) => (
-          <span
-            key={i}
-            className="absolute text-white/20 animate-sparkle-drift"
-            style={{
-              top: `${15 + Math.random() * 70}%`,
-              left: `${5 + Math.random() * 90}%`,
-              fontSize: `${10 + Math.random() * 14}px`,
-              animationDelay: `${i * 0.7}s`,
-            }}
-          >
-            &#x2726;
-          </span>
-        ))}
         {/* Floating orbs */}
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
 
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -231,7 +217,7 @@ export default function FaqPage() {
               </Link>
               <Link
                 href="/demo"
-                className="bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-gold-700 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
                 Watch Demo
               </Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import TradesShow from '@/components/TradesShow'
 import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
@@ -13,14 +14,14 @@ import CloseRunSection from '@/components/CloseRunSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Bookkeeping for Trade Contractors | Poof Managed for Trades',
+  title: 'Bookkeeping for Trade Contractors | The Augmented Operator',
   description:
     'Bookkeeping for HVAC, plumbing, and electrical shops doing $750K–$3M. Per-job profit on every monthly close, reviewed by a former controller. From $1,200/mo.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
-    title: 'Poof Managed for Trades — Bookkeeping for Trade Contractors',
+    title: 'The Augmented Operator — Bookkeeping for Trade Contractors',
     description:
       'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for HVAC, plumbing, and electrical shops.',
     url: 'https://www.poofai.com/trades',
@@ -87,7 +88,7 @@ const howItWorks = [
 
 const plans = [
   {
-    name: 'Poof Managed for Trades',
+    name: 'The Augmented Operator',
     price: '$1,200',
     cadence: '/mo',
     bestFor: '2–4 truck shops, $750K–$1.5M revenue',
@@ -103,7 +104,7 @@ const plans = [
     highlight: true,
   },
   {
-    name: 'Poof Managed for Trades Plus',
+    name: 'The Augmented Operator Plus',
     price: '$1,500',
     cadence: '/mo',
     bestFor: '5+ truck shops, $1.5M–$3M revenue',
@@ -179,7 +180,7 @@ const faqs = [
 
 export default function TradesPage() {
   return (
-    <main id="main-content" className="min-h-screen bg-white">
+    <main id="main-content" className="min-h-screen bg-paper">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(faqs.map((f) => ({ question: f.q, answer: f.a })))) }}
@@ -189,7 +190,7 @@ export default function TradesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getServiceSchema({
-              name: 'Poof Managed for Trades — Bookkeeping for Trade Contractors',
+              name: 'The Augmented Operator — Bookkeeping for Trade Contractors',
               description:
                 'Managed bookkeeping for HVAC, plumbing, and electrical contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
               price: '1200',
@@ -211,53 +212,8 @@ export default function TradesPage() {
       />
       <Header />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-violet-500/5 rounded-full blur-3xl" />
-        </div>
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AnimateOnScroll animation="fade-up">
-            <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-200 text-violet-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              For HVAC, plumbing, and electrical shops
-            </div>
-            <h1
-              className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
-              style={{ letterSpacing: '-0.03em' }}
-            >
-              Bookkeeping for trade contractors. <span className="text-gradient-gold">Finally know which jobs actually made money.</span>
-            </h1>
-          </AnimateOnScroll>
-
-          <AnimateOnScroll animation="fade-up" delay={100}>
-            <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              A managed bookkeeping service for shops doing $750K–$3M with 2–6 trucks. Powered by AI agents, reviewed by a former controller. Works with your existing Jobber or Housecall Pro.
-            </p>
-          </AnimateOnScroll>
-
-          <AnimateOnScroll animation="scale-up" delay={200}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <BookCallButton
-                className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-gold-700 shadow-gold-lg transition-all duration-200 hover:-translate-y-0.5"
-              >
-                Book a 20-minute call
-              </BookCallButton>
-              <Link
-                href="#trades"
-                className="inline-block border-2 border-slate-300 text-slate-700 font-semibold px-8 py-4 rounded-lg text-base hover:border-slate-900 hover:text-slate-900 transition-all duration-200"
-              >
-                Find your trade
-              </Link>
-            </div>
-          </AnimateOnScroll>
-
-          <AnimateOnScroll animation="fade-in" delay={300}>
-            <p className="text-sm text-slate-500 mt-6">
-              Books closed by the 15th business day · Founder-led onboarding · No long-term contract
-            </p>
-          </AnimateOnScroll>
-        </div>
-      </section>
+      <div className="pt-16" />
+      <TradesShow />
 
       {/* Trade cards */}
       <section id="trades" className="py-20 bg-slate-50">
@@ -278,7 +234,7 @@ export default function TradesPage() {
                   <GlowCard className="bg-white border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
                     <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">{t.name}</h3>
                     <p className="text-sm text-slate-600 leading-relaxed mb-4">{t.body}</p>
-                    <span className="text-sm font-semibold text-violet-600">View details →</span>
+                    <span className="text-sm font-semibold text-ledger-600">View details →</span>
                   </GlowCard>
                 </Link>
               </AnimateOnScroll>
@@ -332,9 +288,9 @@ export default function TradesPage() {
               <AnimateOnScroll key={step.number} animation="fade-up" delay={i * 100}>
                 <div className="flex gap-5 items-start relative">
                   {i < howItWorks.length - 1 && (
-                    <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-gradient-to-b from-violet-300 to-slate-200" />
+                    <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-ledger-300" />
                   )}
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-600 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-ledger-500 text-white flex items-center justify-center font-bold text-lg relative z-10">
                     {step.number}
                   </div>
                   <div className="pb-10">
@@ -371,10 +327,10 @@ export default function TradesPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
-            <div className="mb-10 rounded-2xl border-2 border-gold-400 bg-gradient-to-br from-gold-50 to-white p-8">
+            <div className="mb-10 rounded-2xl border-2 border-ledger-400 bg-ledger-100 p-8">
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                 <div className="flex-1">
-                  <div className="inline-block bg-gold-600 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                  <div className="inline-block bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
                     Start here
                   </div>
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3">{audit.name}</h3>
@@ -382,7 +338,7 @@ export default function TradesPage() {
                   <ul className="space-y-2">
                     {audit.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2 text-sm">
-                        <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         <span className="text-slate-700">{b}</span>
@@ -390,10 +346,10 @@ export default function TradesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="lg:w-64 flex-shrink-0 lg:border-l lg:border-gold-200 lg:pl-8">
+                <div className="lg:w-64 flex-shrink-0 lg:border-l lg:border-ledger-300 lg:pl-8">
                   <div className="text-5xl font-bold text-slate-900 mb-1">{audit.price}</div>
                   <p className="text-sm text-slate-500 mb-5">{audit.cadence}</p>
-                  <BookCallButton className="block w-full text-center bg-gold-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gold-700 shadow-gold transition-all duration-200">
+                  <BookCallButton className="block w-full text-center bg-ledger-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-ledger-600 transition-all duration-200">
                     Start the audit
                   </BookCallButton>
                   <p className="text-xs text-slate-500 mt-3 leading-relaxed">
@@ -410,12 +366,12 @@ export default function TradesPage() {
                 <div
                   className={`rounded-2xl p-8 h-full flex flex-col ${
                     plan.highlight
-                      ? 'bg-slate-900 text-white border-2 border-violet-400 shadow-xl'
+                      ? 'bg-slate-900 text-white border-2 border-ledger-400 shadow-xl'
                       : 'bg-white text-slate-900 border border-slate-200'
                   }`}
                 >
                   {plan.highlight && (
-                    <div className="inline-block self-start bg-violet-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                    <div className="inline-block self-start bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
                       Most shops start here
                     </div>
                   )}
@@ -430,7 +386,7 @@ export default function TradesPage() {
                   <ul className="space-y-2 mb-8 flex-grow">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm">
-                        <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plan.highlight ? 'text-violet-300' : 'text-emerald-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plan.highlight ? 'text-ledger-400' : 'text-ledger-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         <span className={plan.highlight ? 'text-slate-100' : 'text-slate-700'}>{f}</span>
@@ -440,7 +396,7 @@ export default function TradesPage() {
                   <BookCallButton
                     className={`block w-full text-center font-semibold px-6 py-3 rounded-lg transition-all duration-200 ${
                       plan.highlight
-                        ? 'bg-gold-600 text-white hover:bg-gold-700'
+                        ? 'bg-ledger-500 text-white hover:bg-ledger-600'
                         : 'bg-slate-900 text-white hover:bg-slate-800'
                     }`}
                   >
@@ -457,7 +413,7 @@ export default function TradesPage() {
                 <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 h-full">
                   <div className="flex items-baseline justify-between mb-2">
                     <h4 className="font-semibold text-slate-900">{extra.name}</h4>
-                    <div className="text-2xl font-bold text-violet-600">{extra.price}</div>
+                    <div className="text-2xl font-bold text-ledger-600">{extra.price}</div>
                   </div>
                   <p className="text-sm text-slate-600 leading-relaxed">{extra.body}</p>
                 </div>
@@ -471,7 +427,7 @@ export default function TradesPage() {
                 <ul className="space-y-2">
                   {slas.map((s) => (
                     <li key={s} className="flex items-start gap-2 text-sm text-slate-200">
-                      <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-ledger-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span>{s}</span>
@@ -483,7 +439,7 @@ export default function TradesPage() {
           </div>
 
           <p className="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
-            Above $3M in revenue? <span className="font-semibold text-slate-700">Poof Managed for Trades Pro</span> starts
+            Above $3M in revenue? <span className="font-semibold text-slate-700">The Augmented Operator Pro</span> starts
             at $2,400/mo, scoped per shop. Book a call and we&apos;ll size it with you.
           </p>
 
@@ -498,7 +454,7 @@ export default function TradesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10">
-              <div className="text-xs font-semibold uppercase tracking-wider text-violet-600 mb-3">Built by a controller, not a startup</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">Built by a controller, not a startup</div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
                 Austin Semple — 10+ years of audit and controller work
               </h2>
@@ -507,7 +463,7 @@ export default function TradesPage() {
                   Before Poof, Austin spent a decade auditing and running the books for small service businesses. The pattern was always the same: an owner who built a real business from a service truck, paying $800–$1,500/mo for a bookkeeper who delivered a PDF three weeks late and couldn&apos;t answer the one question that mattered — &ldquo;which jobs made money?&rdquo;
                 </p>
                 <p>
-                  Poof Managed for Trades is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
+                  The Augmented Operator is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
                 </p>
                 <p className="text-slate-900 font-medium">
                   Austin personally onboards the first 50 shops. If that&apos;s you, you&apos;re working directly with the founder.
@@ -530,7 +486,7 @@ export default function TradesPage() {
           <div className="space-y-4">
             {faqs.map((f, i) => (
               <AnimateOnScroll key={f.q} animation="fade-up" delay={i * 50}>
-                <details className="group bg-slate-50 border border-slate-200 rounded-xl p-6 open:bg-white open:border-violet-200 transition-colors">
+                <details className="group bg-slate-50 border border-slate-200 rounded-xl p-6 open:bg-white open:border-ledger-300 transition-colors">
                   <summary className="cursor-pointer list-none flex items-start justify-between gap-4">
                     <h3 className="font-semibold text-slate-900 leading-snug">{f.q}</h3>
                     <svg className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -548,7 +504,7 @@ export default function TradesPage() {
       {/* Bottom CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-ledger-500/15 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -564,7 +520,7 @@ export default function TradesPage() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-up" delay={200}>
             <BookCallButton
-              className="glow-border shimmer-hover inline-block bg-gold-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-gold-lg hover:bg-gold-700 hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-block bg-ledger-500 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-ledger-600 hover:-translate-y-0.5 transition-all duration-200"
             >
               Book a 20-minute call
             </BookCallButton>
@@ -578,7 +534,7 @@ export default function TradesPage() {
                 { label: 'Closed by the 15th business day', icon: '↻' },
               ].map((item) => (
                 <div key={item.label} className="flex flex-col items-center">
-                  <span className="text-violet-300 text-xl mb-2">{item.icon}</span>
+                  <span className="text-ledger-400 text-xl mb-2">{item.icon}</span>
                   <div className="text-sm">{item.label}</div>
                 </div>
               ))}

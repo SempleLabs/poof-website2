@@ -53,7 +53,7 @@ export default function HomeTradesSection() {
 
         <AnimateOnScroll animation="fade-up">
           <div className="bg-slate-900 rounded-2xl p-8 sm:p-10 text-center mb-14">
-            <p className="text-violet-300 text-xs font-semibold uppercase tracking-wider mb-3">Poof Managed for Trades</p>
+            <p className="text-ledger-400 text-xs font-semibold uppercase tracking-wider mb-3">The Augmented Operator</p>
             <p className="font-display text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
               Per-job profit on every monthly close. From $1,200/mo.
             </p>
@@ -61,15 +61,15 @@ export default function HomeTradesSection() {
               AI does the work. A controller you can text reviews every close. Books closed by the 15th business day, every completed job costed within 5 business days, and an unbilled-work report every Friday.
             </p>
             <p className="text-slate-400 text-sm mb-6 max-w-2xl mx-auto">
-              Most shops start with the <span className="text-violet-300 font-semibold">$750 Job Margin &amp; Recovery Audit</span> — one week, and you get a dollar figure for the margin you&apos;re leaving on the table. It credits against onboarding if you sign.
+              Most shops start with the <span className="text-ledger-400 font-semibold">$750 Job Margin &amp; Recovery Audit</span> — one week, and you get a dollar figure for the margin you&apos;re leaving on the table. It credits against onboarding if you sign.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <BookCallButton className="inline-block bg-gold-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-gold-700 shadow-gold transition-all duration-200">
+              <BookCallButton className="inline-block bg-ledger-500 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-ledger-600 transition-all duration-200">
                 Book a 20-minute call
               </BookCallButton>
               <Link
                 href="/trades"
-                className="inline-block border-2 border-slate-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:border-violet-400 hover:text-violet-200 transition-all duration-200"
+                className="inline-block border-2 border-slate-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:border-ledger-400 hover:text-ledger-300 transition-all duration-200"
               >
                 How the managed service works
               </Link>
@@ -82,11 +82,11 @@ export default function HomeTradesSection() {
             <AnimateOnScroll key={t.href} animation="fade-up" delay={i * 80}>
               <Link
                 href={t.href}
-                className="block bg-white border border-slate-200 rounded-xl p-6 h-full hover:border-violet-300 hover:shadow-md transition-all"
+                className="block bg-white border border-slate-200 rounded-xl p-6 h-full hover:border-ledger-300 hover:shadow-md transition-all"
               >
                 <h3 className="font-semibold text-slate-900 mb-1">Bookkeeping for {t.label}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed mb-3">{t.blurb}</p>
-                <span className="text-sm font-medium text-gold-600">Learn more →</span>
+                <span className="text-sm font-medium text-ledger-600">Learn more →</span>
               </Link>
             </AnimateOnScroll>
           ))}

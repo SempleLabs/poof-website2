@@ -37,7 +37,7 @@ const features = [
 ]
 
 const Check = () => (
-  <svg className="w-5 h-5 text-gold-400 glow-check" fill="currentColor" viewBox="0 0 20 20">
+  <svg className="w-5 h-5 text-ledger-400" fill="currentColor" viewBox="0 0 20 20">
     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
   </svg>
 )
@@ -61,7 +61,7 @@ export default function ComparisonSection() {
         <AnimateOnScroll animation="fade-up" className="text-center mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
             Everything You Need.
-            <span className="text-gradient-gold"> Nothing You Don&apos;t.</span>
+            <span className="text-ledger-600"> Nothing You Don&apos;t.</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             One price, every feature — $79/mo flat, versus $140/mo for the QuickBooks Plus tier that carries job costing and budgets. And Poof's AI does the work, instead of handing you more tools.
@@ -76,10 +76,10 @@ export default function ComparisonSection() {
                   <th className="text-left px-6 py-5 text-sm font-semibold text-slate-700 w-1/3">
                     Feature
                   </th>
-                  <th className="px-4 py-5 text-center bg-gold-500/10">
-                    <div className="text-sm font-bold text-gold-400">Poof</div>
+                  <th className="px-4 py-5 text-center bg-ledger-500/10">
+                    <div className="text-sm font-bold text-ledger-400">Poof</div>
                     <div className="text-xs text-slate-500">$79/mo</div>
-                    <div className="mt-1 inline-block bg-gold-600 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
+                    <div className="mt-1 inline-block bg-ledger-500 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
                   </th>
                   <th className="px-4 py-5 text-center">
                     <div className="text-sm font-semibold text-slate-700">QuickBooks</div>
@@ -101,7 +101,7 @@ export default function ComparisonSection() {
                     <td className="px-6 py-4 text-sm text-slate-700 font-medium">
                       {feature.name}
                     </td>
-                    <td className="px-4 py-4 text-center bg-gold-500/5">
+                    <td className="px-4 py-4 text-center bg-ledger-500/5">
                       <div className="flex justify-center">{feature.poof ? <Check /> : <Cross />}</div>
                     </td>
                     <td className="px-4 py-4 text-center">

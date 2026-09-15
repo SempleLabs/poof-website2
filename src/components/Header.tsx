@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { trackEvent } from '@/lib/analytics'
+import PoofWordmark from './PoofWordmark'
+import BookCallButton from './BookCallButton'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,16 +30,13 @@ export default function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200'
+          ? 'bg-paper/95 backdrop-blur-md border-b border-rule'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center">
-            <Image src="/poof-logo.png" alt="Poof logo" width={72} height={72} className="-mr-2" />
-            <span className="poof-brand">Poof</span>
-          </Link>
+          <PoofWordmark size={28} />
 
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
@@ -46,7 +44,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`nav-link-underline font-medium transition-colors ${
-                  scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
+                  scrolled ? 'text-slate-700 hover:text-ledger-700' : 'text-slate-700 hover:text-ledger-700'
                 }`}
               >
                 {link.label}
@@ -58,23 +56,20 @@ export default function Header() {
             <Link
               href="https://app.poofai.com/login"
               className={`font-semibold text-sm transition-colors ${
-                scrolled ? 'text-slate-700 hover:text-gold-600' : 'text-slate-700 hover:text-gold-500'
+                scrolled ? 'text-slate-700 hover:text-ledger-700' : 'text-slate-700 hover:text-ledger-700'
               }`}
             >
               Log in
             </Link>
-            <Link
-              href="/demo"
-              className="border-2 border-slate-800 text-slate-800 px-5 py-2 rounded-lg font-semibold text-sm hover:border-gold-500 hover:text-gold-500 transition-all duration-200"
-            >
-              Request Demo
-            </Link>
+            <BookCallButton className="border-[1.5px] border-ink text-ink px-4 py-2 rounded-lg font-semibold text-sm hover:bg-paper-2 transition-colors duration-200">
+              Book a call
+            </BookCallButton>
             <Link
               href="https://app.poofai.com/register"
               onClick={() => trackEvent('start_trial_click', { location: 'header' })}
-              className="bg-slate-900 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-slate-800 transition-all duration-200"
+              className="bg-ledger-500 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-ledger-600 transition-colors duration-200"
             >
-              Start Free Trial
+              Start free trial
             </Link>
           </div>
 
@@ -103,7 +98,7 @@ export default function Header() {
           scrolled header's backdrop-blur doesn't become its containing block
           and collapse the fixed overlay to the header's height) */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-slate-900 z-[100] flex flex-col items-center justify-center">
+        <div className="md:hidden fixed inset-0 bg-ink z-[100] flex flex-col items-center justify-center">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-5 right-5 text-white"
@@ -118,7 +113,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-white text-2xl font-semibold hover:text-gold-400 transition-colors"
+                className="text-white text-2xl font-semibold hover:text-ledger-400 transition-colors"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
                 {link.label}
@@ -128,15 +123,15 @@ export default function Header() {
               <Link href="https://app.poofai.com/login" onClick={() => setIsMenuOpen(false)} className="text-slate-300 text-xl font-semibold hover:text-white transition-colors">
                 Log in
               </Link>
-              <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
-                Request Demo
+              <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="border-[1.5px] border-paper text-paper px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
+                Book a call
               </Link>
               <Link
                 href="https://app.poofai.com/register"
                 onClick={() => { trackEvent('start_trial_click', { location: 'header_mobile' }); setIsMenuOpen(false) }}
                 className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold text-lg"
               >
-                Start Free Trial
+                Start free trial
               </Link>
             </div>
           </div>

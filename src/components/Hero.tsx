@@ -95,7 +95,7 @@ export default function Hero() {
   return (
     <section id="software" className="relative flex flex-col items-center justify-center overflow-hidden bg-white py-16 scroll-mt-20">
       <div className="text-center px-4 mb-4">
-        <p className="text-violet-600 text-xs font-semibold uppercase tracking-wider mb-3">
+        <p className="text-ledger-600 text-xs font-semibold uppercase tracking-wider mb-3">
           Prefer to run your own books?
         </p>
         <h2
@@ -168,14 +168,14 @@ export default function Hero() {
               <div className="h-[4.5rem] sm:h-[5rem] lg:h-[5.5rem] flex items-start">
                 <span className="text-2xl sm:text-3xl lg:text-[2.5rem] font-display font-bold text-slate-900 leading-tight">
                   {typedText}
-                  <span className="inline-block w-[2px] h-[1em] bg-gold-500 ml-0.5 align-middle animate-pulse" />
+                  <span className="inline-block w-[2px] h-[1em] bg-ledger-500 ml-0.5 align-middle animate-pulse" />
                 </span>
               </div>
               <div className="mt-5 flex justify-end">
                 <Link
                   href="https://app.poofai.com/register"
                   onClick={() => trackEvent('start_trial_click', { location: 'hero' })}
-                  className="bg-gold-600 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-gold-700 transition-all duration-200"
+                  className="bg-ledger-500 text-white font-semibold px-7 py-3 rounded-lg text-base hover:bg-ledger-600 transition-all duration-200"
                 >
                   Start Free Trial
                 </Link>
@@ -184,8 +184,8 @@ export default function Hero() {
           </div>
 
           {/* Edge fades */}
-          <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-[15] pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-[15] pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-16 sm:w-24 bg-white z-[15] pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-white z-[15] pointer-events-none" />
         </div>
 
         {/* Navigation controls */}

@@ -92,14 +92,14 @@ export default function FileUploadZone({ onFileSelected, disabled }: FileUploadZ
         tabIndex={disabled ? -1 : 0}
         aria-disabled={disabled}
         aria-label="Upload your bank statement. Accepts CSV, PDF, PNG, or JPG up to 5 megabytes."
-        className={`relative border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 ${
+        className={`relative border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ledger-500 focus-visible:ring-offset-2 ${
           disabled
             ? 'opacity-50 cursor-not-allowed border-slate-200 bg-slate-50'
             : isDragging
-              ? 'border-violet-500 bg-violet-50/50'
+              ? 'border-ledger-500 bg-ledger-100/50'
               : fileName
-                ? 'border-teal-400 bg-teal-50/30'
-                : 'border-slate-300 hover:border-violet-400 hover:bg-violet-50/30'
+                ? 'border-ledger-400 bg-ledger-100/30'
+                : 'border-slate-300 hover:border-ledger-400 hover:bg-ledger-100/30'
         }`}
       >
         <input
@@ -113,8 +113,8 @@ export default function FileUploadZone({ onFileSelected, disabled }: FileUploadZ
 
         {fileName ? (
           <div className="space-y-2">
-            <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto">
-              <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-ledger-200 rounded-full flex items-center justify-center mx-auto">
+              <svg className="w-6 h-6 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -123,8 +123,8 @@ export default function FileUploadZone({ onFileSelected, disabled }: FileUploadZ
           </div>
         ) : (
           <div className="space-y-3">
-            <div className="w-14 h-14 bg-violet-100 rounded-full flex items-center justify-center mx-auto">
-              <svg className="w-7 h-7 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-14 h-14 bg-ledger-200 rounded-full flex items-center justify-center mx-auto">
+              <svg className="w-7 h-7 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
               </svg>
             </div>
@@ -133,7 +133,7 @@ export default function FileUploadZone({ onFileSelected, disabled }: FileUploadZ
                 Drop your bank statement here
               </p>
               <p className="text-slate-500 mt-1">
-                or <span className="text-violet-600 font-medium">click to browse</span>
+                or <span className="text-ledger-600 font-medium">click to browse</span>
               </p>
             </div>
             <div className="flex items-center justify-center space-x-4 text-xs text-slate-400">

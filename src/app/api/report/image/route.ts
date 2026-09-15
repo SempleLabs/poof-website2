@@ -29,15 +29,12 @@ export async function POST(request: NextRequest) {
 Layout (top to bottom):
 1. HEADER: "Your Spend Score" in a bold, modern sans-serif font. Below it, a subtle tagline: "Powered by Poof AI"
 2. SPEND SCORE: A large circular gauge/ring showing the score "${spendScore?.overall || 75}/100" prominently in the center. The ring should be colored based on the score (green for 70+, amber for 50-69, red for below 50). Label it "${spendScore?.overall >= 90 ? 'Excellent' : spendScore?.overall >= 70 ? 'Good' : spendScore?.overall >= 50 ? 'Fair' : 'Needs Attention'}"
-3. THREE KEY METRICS in large bold numbers side by side:
-   - Total Income: $${summary.totalIncome.toLocaleString()} (in green)
-   - Total Expenses: $${summary.totalExpenses.toLocaleString()} (in red/coral)
-   - ${netStatus} (in ${summary.net >= 0 ? 'green' : 'red/coral'})
+3. THREE KEY METRICS in large bold numbers side by side:   - Total Income: $${summary.totalIncome.toLocaleString()} (in green)   - Total Expenses: $${summary.totalExpenses.toLocaleString()} (in red/coral)   - ${netStatus} (in ${summary.net >= 0 ? 'green' : 'red/coral'})
 4. SPENDING BREAKDOWN: A stylized horizontal bar chart or donut chart showing the top spending categories: ${categoryList}
 5. QUICK STATS: "${summary.transactionCount} transactions analyzed | ${summary.dateRange.start} — ${summary.dateRange.end}"
 6. FOOTER: Small text "poofai.com — Bookkeeping That Does Itself" with a subtle violet accent
 
-Color palette: Primary violet (#8b5cf6), indigo (#6366f1), teal (#14b8a6) as accents on a clean white/light gray background. Use the violet and teal for chart colors.
+Color palette: Primary violet (#1F7A4F), indigo (#1B5E3F), teal (#1B5E3F) as accents on a clean white/light gray background. Use the violet and teal for chart colors.
 Typography: Clean, modern sans-serif. Large bold numbers for the metrics.
 Overall feel: Polished and trustworthy, like a premium fintech product.`
 

@@ -35,12 +35,12 @@ export default function FieldServiceSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-violet-50 border border-violet-200 text-violet-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of Poof Managed for Trades
+            <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
+              Part of The Augmented Operator
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
               Your tech closes the job from a text.{' '}
-              <span className="text-gradient-gold">The invoice writes itself.</span>
+              <span className="text-ledger-600">The invoice writes itself.</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               The gap between the work getting done and the work getting billed is where trade shops lose money
@@ -54,9 +54,9 @@ export default function FieldServiceSection() {
             <AnimateOnScroll key={step.number} animation="fade-up" delay={i * 100}>
               <div className="flex gap-5 items-start relative">
                 {i < steps.length - 1 && (
-                  <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-gradient-to-b from-violet-300 to-slate-200" />
+                  <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-ledger-300" />
                 )}
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold-600 text-white flex items-center justify-center font-bold text-lg shadow-gold relative z-10">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-ledger-500 text-white flex items-center justify-center font-bold text-lg relative z-10">
                   {step.number}
                 </div>
                 <div className="pb-10">
