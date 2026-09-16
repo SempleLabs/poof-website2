@@ -297,6 +297,17 @@ export default function HomeShow() {
               )}
             </div>
           </div>
+
+          {/* The real thing, from a phone */}
+          <figure className="mt-8 grid grid-cols-1 sm:grid-cols-[minmax(0,260px)_1fr] gap-6 items-center">
+            <div className="relative mx-auto sm:mx-0 w-[240px] rounded-[28px] border-[6px] border-ink bg-ink overflow-hidden shadow-[0_18px_40px_rgba(18,33,26,0.18)]">
+              <Image src="/images/approvals-phone.jpg" alt="The Approvals inbox on a phone: a Categorize 2 transactions card from the nightly pipeline with 29 days left, and a Create invoice card proposed by the assistant with 23 hours left, each with Approve, Reject, and Approve all like this" width={788} height={1600} sizes="240px" className="block w-full h-auto" />
+            </div>
+            <figcaption className="text-sm text-muted max-w-[44ch]">
+              <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-2">Real screenshot · the founder&apos;s books · September 2026</span>
+              The cards above are a demo. This is the inbox itself, on a phone: one card the nightly pipeline raised, one the assistant drafted, both waiting. The line under the first one says <b className="text-ink font-semibold">computed by Poof, no model involved</b>, because the evidence is gathered by code.
+            </figcaption>
+          </figure>
         </section>
 
         {/* ACT 3 */}
