@@ -17,7 +17,7 @@ export default function ImagePlaceholder({
 }: ImagePlaceholderProps) {
   return (
     <div
-      className={`${ratioClasses[aspectRatio]} bg-slate-100 border-2 border-dashed border-slate-300 rounded-2xl flex items-center justify-center ${className}`}
+      className={`${ratioClasses[aspectRatio]} bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl flex items-center justify-center ${className}`}
     >
       <div className="text-center text-slate-400">
         <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

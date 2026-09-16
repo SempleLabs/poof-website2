@@ -92,7 +92,7 @@ export default function FileUploadZone({ onFileSelected, disabled }: FileUploadZ
         tabIndex={disabled ? -1 : 0}
         aria-disabled={disabled}
         aria-label="Upload your bank statement. Accepts CSV, PDF, PNG, or JPG up to 5 megabytes."
-        className={`relative border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ledger-500 focus-visible:ring-offset-2 ${
+        className={`relative border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ledger-500 focus-visible:ring-offset-2 ${
           disabled
             ? 'opacity-50 cursor-not-allowed border-slate-200 bg-slate-50'
             : isDragging

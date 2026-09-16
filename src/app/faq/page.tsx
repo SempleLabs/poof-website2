@@ -136,7 +136,7 @@ export default function FaqPage() {
                       return (
                         <AnimateOnScroll key={key} animation="fade-up" delay={100 + index * 60}>
                           <div
-                            className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${
+                            className={`bg-white border rounded-xl overflow-hidden transition-all duration-300 ${
                               openIndex === key ? 'border-ledger-300 shadow-md ' : 'border-slate-200'
                             }`}
                           >
@@ -145,7 +145,7 @@ export default function FaqPage() {
                               onClick={() => toggle(key)}
                               aria-expanded={openIndex === key}
                               aria-controls={`faq-panel-${key.replace(/\W+/g, '-')}`}
-                              className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl"
+                              className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-xl"
                             >
                               <h3 className={`text-lg font-semibold pr-4 transition-colors ${
                                 openIndex === key ? 'text-ledger-600' : 'text-slate-800 hover:text-ledger-700'
@@ -197,8 +197,6 @@ export default function FaqPage() {
       <section className="py-16 bg-slate-900 relative overflow-hidden">
         {/* Sparkle stars */}
         {/* Floating orbs */}
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
 
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

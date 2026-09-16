@@ -5,9 +5,6 @@ import BookCallButton from './BookCallButton'
 export default function TradesHero() {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden bg-white">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-ledger-500/5 rounded-full blur-3xl" />
-      </div>
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll animation="fade-up">
           <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
@@ -52,7 +49,7 @@ export default function TradesHero() {
         {/* Per-job P&L mockup */}
         <AnimateOnScroll animation="fade-up" delay={400}>
           <div className="mt-16 max-w-3xl mx-auto">
-            <div className="rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
+            <div className="rounded-xl bg-white border border-slate-200 shadow-xl overflow-hidden text-left">
               <div className="px-6 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
                 <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Per-job P&amp;L · Henderson install</div>
                 <div className="text-xs text-ledger-600 font-semibold">From your monthly profit report</div>

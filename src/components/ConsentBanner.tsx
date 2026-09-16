@@ -71,7 +71,7 @@ export default function ConsentBanner() {
       aria-label="Cookie consent"
       className="fixed bottom-0 inset-x-0 z-[70] px-4 pb-4 sm:px-6"
     >
-      <div className="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-white shadow-2xl p-5 sm:flex sm:items-center sm:gap-6">
+      <div className="mx-auto max-w-3xl rounded-xl border border-slate-200 bg-white shadow-2xl p-5 sm:flex sm:items-center sm:gap-6">
         <p className="text-sm text-slate-600 leading-relaxed">
           We use cookies for analytics and to measure ad performance. You can accept or decline
           non-essential tracking. See our{' '}

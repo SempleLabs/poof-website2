@@ -131,8 +131,8 @@ export default function SecurityPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 80}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow h-full">
-                  <div className="w-14 h-14 bg-ledger-100 rounded-2xl flex items-center justify-center text-ledger-600 mb-6">
+                <div className="bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow h-full">
+                  <div className="w-14 h-14 bg-ledger-100 rounded-xl flex items-center justify-center text-ledger-600 mb-6">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold font-display text-slate-900 mb-3">{feature.title}</h3>
@@ -202,8 +202,6 @@ export default function SecurityPage() {
 
       {/* CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-bold font-display text-white mb-6">

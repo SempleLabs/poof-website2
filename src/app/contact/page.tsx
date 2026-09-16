@@ -75,7 +75,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="bg-white border border-slate-200 rounded-2xl p-8 text-left">
+              <div className="bg-white border border-slate-200 rounded-xl p-8 text-left">
                 <h2 className="text-xl font-bold font-display text-slate-900 mb-4">What happens next?</h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -160,7 +160,7 @@ export default function ContactPage() {
       <section className="py-8 bg-slate-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up" delay={200}>
-            <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-2xl p-8">
+            <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-xl p-8">
               <input
                 type="text"
                 name="_gotcha"
@@ -257,7 +257,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
             {contactCards.map((card, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={index * 100}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6">
+                <div className="bg-white border border-slate-200 rounded-xl p-6">
                   <div className="w-12 h-12 bg-ledger-200 rounded-full flex items-center justify-center mx-auto mb-4">
                     {card.icon}
                   </div>
@@ -271,7 +271,7 @@ export default function ContactPage() {
           </div>
 
           <AnimateOnScroll animation="fade-up" delay={200}>
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 mt-8 max-w-2xl mx-auto text-center">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 mt-8 max-w-2xl mx-auto text-center">
               <h3 className="font-semibold font-display text-slate-900 mb-3">Prefer email?</h3>
               <p className="text-slate-600 leading-relaxed">
                 Write to{' '}

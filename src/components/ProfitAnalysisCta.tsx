@@ -9,7 +9,7 @@ export default function ProfitAnalysisCta() {
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll animation="fade-up">
-          <GlowCard className="bg-slate-900 rounded-2xl p-10 sm:p-14 text-center">
+          <GlowCard className="bg-slate-900 rounded-xl p-10 sm:p-14 text-center">
             <p className="text-ledger-400 font-semibold text-sm uppercase tracking-wider mb-4">
               Beyond Software
             </p>

@@ -39,7 +39,7 @@ export default function ProductCarousel({ slides }: ProductCarouselProps) {
 
   return (
     <div className="relative">
-      <div className="relative rounded-2xl overflow-hidden shadow-hover border border-slate-200">
+      <div className="relative rounded-xl overflow-hidden shadow-hover border border-slate-200">
         <div className="relative aspect-video bg-slate-100">
           <Image
             src={slides[currentSlide].image}

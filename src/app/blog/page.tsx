@@ -99,7 +99,7 @@ export default function BlogIndexPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-2xl border border-slate-200 p-6 hover:border-ledger-400 hover:shadow-lg transition-all"
+                  className="group flex flex-col rounded-xl border border-slate-200 p-6 hover:border-ledger-400 hover:shadow-lg transition-all"
                 >
                   <span className="inline-flex self-start items-center px-3 py-1 rounded-full text-xs font-medium bg-ledger-100 text-ledger-700 mb-4">
                     {post.category}

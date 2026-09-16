@@ -429,7 +429,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 text-center">
+          <div className="bg-slate-900 border border-slate-700 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold font-display text-white mb-4">
               Ready to Automate Your Bookkeeping?
             </h2>

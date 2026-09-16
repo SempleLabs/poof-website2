@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const values = [
     {
-      title: "Make it Effortless",
-      description: "Complex tasks should feel effortless. We turn bookkeeping from a chore into something that just happens.",
+      title: "Shows its work",
+      description: "Nothing reaches your books without a person seeing it first. Every proposal carries the evidence behind it, and every close is a record of who decided what.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
@@ -37,7 +37,7 @@ export default function AboutPage() {
     },
     {
       title: "Small Business First",
-      description: "Every feature is designed for small businesses. We understand your challenges because we've been there.",
+      description: "Built for the businesses a controller actually meets: one to fifty people, a few thousand transactions a month, and no time for software.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -46,7 +46,7 @@ export default function AboutPage() {
     },
     {
       title: "Trust & Security",
-      description: "Your financial data is sacred. We protect it with encryption in transit, read-only bank access, 2FA, and transparent practices.",
+      description: "Read-only bank access, encryption in transit, two-factor sign-in, five roles with 26 permissions, and SOC 2 audit logging with PII masking.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -54,8 +54,8 @@ export default function AboutPage() {
       )
     },
     {
-      title: "Continuous Learning",
-      description: "Our AI gets smarter every day, learning from millions of transactions to serve you better.",
+      title: "One figure",
+      description: "The reconciliation ties to one number or it doesn't. The close is a checklist the books tick off themselves. We would rather show a figure than claim one.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -102,20 +102,18 @@ export default function AboutPage() {
       <Header />
 
       <PageHero
-        title={<>Bookkeeping That Actually <span className="text-ledger-600">Makes Sense</span></>}
-        subtitle="Small business owners shouldn't need an accounting degree to understand their finances. Poof brings clarity to bookkeeping with AI that works the way you think."
+        title={<>Built by the person who <span className="text-ledger-600">signs the close.</span></>}
+        subtitle="Ten years of audit and controller work for small businesses, then Poof: AI that does the books and puts every entry in front of a person before it lands."
       />
 
       {/* Mission Statement */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up">
-            <div className="bg-white border border-slate-200 rounded-2xl p-12 text-center">
+            <div className="bg-white border border-slate-200 rounded-xl p-12 text-center">
               <h2 className="text-3xl font-bold font-display text-slate-900 mb-6">Our Mission</h2>
               <p className="text-xl text-slate-600 leading-relaxed">
-                &ldquo;Every small business owner deserves financial clarity without the complexity.
-                We&apos;re building AI-powered bookkeeping that automates the tedious work
-                and delivers clear insights into your business&mdash;so you can focus on growth.&rdquo;
+                &ldquo;Bookkeeping that does itself, and shows its work before it lands. The AI does the categorizing, the matching, the reconciling, and the closing; a person sees every entry before it reaches the books. Built by a controller, for the person who signs the close.&rdquo;
               </p>
             </div>
           </AnimateOnScroll>
@@ -124,12 +122,6 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="py-20 bg-slate-50 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-ledger-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-ledger-500 rounded-full blur-2xl"></div>
-        </div>
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-20">
@@ -152,20 +144,14 @@ export default function AboutPage() {
                     <div className="relative flex gap-8 items-start">
                       {/* Timeline circle with pulse animation for last item */}
                       <div className="flex-shrink-0 relative">
-                        <div className={`w-28 h-28 bg-ledger-400 rounded-full flex items-center justify-center text-white font-bold text-sm text-center leading-tight shadow-xl border-4 border-white relative z-10 ${
-                          index === milestones.length - 1 ? 'animate-pulse' : ''
-                        }`}>
+                        <div className="w-28 h-28 bg-white border-2 border-ink rounded-full flex items-center justify-center text-ink font-mono font-medium text-sm text-center leading-tight relative z-10">
                           <span className="px-2">{milestone.year}</span>
                         </div>
-                        {/* Glow effect for current year */}
-                        {index === milestones.length - 1 && (
-                          <div className="absolute inset-0 bg-ledger-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
-                        )}
                       </div>
 
                       {/* Content card */}
                       <div className="flex-1 pt-2">
-                        <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border-l-4 border-ledger-400">
+                        <div className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300 border-l-4 border-ledger-400">
                           <h3 className="text-2xl font-bold font-display text-slate-900 mb-4 flex items-center">
                             {milestone.title}
                             {index === milestones.length - 1 && (
@@ -201,8 +187,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="w-16 h-16 bg-ledger-400 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg">
+                <div className="bg-white border border-slate-200 rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="w-16 h-16 bg-ledger-400 rounded-xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg">
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-bold font-display text-slate-900 mb-3">{value.title}</h3>
@@ -227,7 +213,7 @@ export default function AboutPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="bg-slate-800 border border-slate-700 rounded-2xl p-10">
+            <div className="bg-slate-800 border border-slate-700 rounded-xl p-10">
               <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
                 <div className="flex-shrink-0 mx-auto md:mx-0">
                   <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-ledger-500/30 shadow-lg">
@@ -284,7 +270,7 @@ export default function AboutPage() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-white border border-slate-200 rounded-2xl p-8">
+            <div className="bg-white border border-slate-200 rounded-xl p-8">
               <h2 className="text-2xl font-bold font-display text-slate-900 mb-4">Company Information</h2>
               <p className="text-slate-600 leading-relaxed">
                 Poof is a product of <span className="font-semibold text-slate-900">Semple Labs LLC</span>, a United
@@ -310,8 +296,6 @@ export default function AboutPage() {
       <section className="py-16 bg-slate-900 relative overflow-hidden">
         {/* Sparkle stars */}
         {/* Floating orbs */}
-        <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
 
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

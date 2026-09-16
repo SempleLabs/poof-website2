@@ -52,7 +52,7 @@ export default function HomeTradesSection() {
         </div>
 
         <AnimateOnScroll animation="fade-up">
-          <div className="bg-slate-900 rounded-2xl p-8 sm:p-10 text-center mb-14">
+          <div className="bg-slate-900 rounded-xl p-8 sm:p-10 text-center mb-14">
             <p className="text-ledger-400 text-xs font-semibold uppercase tracking-wider mb-3">The Augmented Operator</p>
             <p className="font-display text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
               Per-job profit on every monthly close. From $1,200/mo.

@@ -32,7 +32,7 @@ export default function HomeFaqSection() {
           {faqData.map((faq, index) => (
             <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 60}>
               <div
-                className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 ${
+                className={`bg-white border rounded-xl overflow-hidden transition-all duration-300 ${
                   openIndex === index ? 'border-ledger-300 shadow-md ' : 'border-slate-200'
                 }`}
               >
@@ -41,7 +41,7 @@ export default function HomeFaqSection() {
                   onClick={() => toggle(index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`home-faq-panel-${index}`}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-2xl"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between transition-colors rounded-xl"
                 >
                   <h3 className={`text-lg font-semibold pr-4 transition-colors ${
                     openIndex === index ? 'text-ledger-600' : 'text-slate-800 hover:text-ledger-700'

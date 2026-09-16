@@ -70,7 +70,7 @@ export default function ComparisonSection() {
 
         <AnimateOnScroll animation="fade-up" delay={200}>
           <div className="overflow-x-auto">
-            <table className="w-full bg-slate-50 rounded-2xl overflow-hidden border border-slate-200">
+            <table className="w-full bg-slate-50 rounded-xl overflow-hidden border border-slate-200">
               <thead>
                 <tr className="border-b-2 border-slate-200">
                   <th className="text-left px-6 py-5 text-sm font-semibold text-slate-700 w-1/3">

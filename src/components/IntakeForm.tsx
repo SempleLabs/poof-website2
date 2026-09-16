@@ -109,7 +109,7 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
       <section id="apply" className="py-20 bg-slate-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="scale-up">
-            <div className="bg-white border border-slate-200 rounded-2xl p-12">
+            <div className="bg-white border border-slate-200 rounded-xl p-12">
               <div className="w-16 h-16 rounded-full bg-ledger-100 text-ledger-600 flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -139,7 +139,7 @@ export default function IntakeForm({ source = 'profit-analysis' }: IntakeFormPro
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-up" delay={100}>
-          <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-2xl p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-xl p-8 space-y-6">
             {/* Honeypot - hidden from real users */}
             <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
               <label htmlFor="company_url">Company URL</label>

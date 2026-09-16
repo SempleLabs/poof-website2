@@ -98,7 +98,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
   return (
     <div className="space-y-10">
       {/* Spend Score Hero */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-8 text-center">
+      <div className="bg-white border border-slate-200 rounded-xl p-8 text-center">
         <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">Your Spend Score</p>
         <div className="relative w-40 h-40 mx-auto mb-4">
           <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
@@ -163,7 +163,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
 
       {/* Key Insights */}
       {insights && insights.length > 0 && (
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+        <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
           <h3 className="text-xl font-bold font-display text-slate-900 mb-5">Key Insights</h3>
           <div className="space-y-4">
             {insights.map((insight, i) => (
@@ -180,13 +180,13 @@ export default function ReportResults({ report }: ReportResultsProps) {
       )}
 
       {/* Category Breakdown */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+      <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
         <h3 className="text-xl font-bold font-display text-slate-900 mb-6">Spending Breakdown</h3>
         <CategoryBreakdown categories={summary.topCategories} />
       </div>
 
       {/* Transaction Details */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+      <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
         <h3 className="text-xl font-bold font-display text-slate-900 mb-2">Transaction Details</h3>
         <p className="text-sm text-slate-500 mb-5">Tap a category to see which transactions are inside.</p>
         <TransactionsByCategory transactions={transactions} />
@@ -194,7 +194,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
 
       {/* AI-Generated Infographic */}
       {imageBase64 && (
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+        <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
           <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Your Spend Score Infographic</h3>
           <div className="rounded-xl overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -209,7 +209,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
       )}
 
       {/* Quick Stats */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+      <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
         <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Quick Stats</h3>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -234,7 +234,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
       </div>
 
       {/* CTA */}
-      <div className="bg-ledger-500 rounded-2xl p-8 sm:p-10 text-center text-white">
+      <div className="bg-ledger-500 rounded-xl p-8 sm:p-10 text-center text-white">
         <h3 className="text-2xl sm:text-3xl font-bold font-display mb-3">
           Want to improve your Spend Score?
         </h3>

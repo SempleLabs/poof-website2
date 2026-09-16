@@ -28,7 +28,7 @@ export default function WhatIsPoof() {
             { value: 95, label: 'Accuracy Rate', prefix: '', suffix: '%' },
           ].map((stat, i) => (
             <AnimateOnScroll key={i} animation="scale-up" delay={200 + i * 100}>
-              <GlowCard className="rounded-2xl bg-white border border-slate-200 shadow-card-light">
+              <GlowCard className="rounded-xl bg-white border border-slate-200 shadow-card-light">
                 <div className="text-center p-6">
                   <div className="font-mono text-3xl font-bold text-ledger-600">
                     <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />

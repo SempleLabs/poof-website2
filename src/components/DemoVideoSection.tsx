@@ -50,8 +50,6 @@ export default function DemoVideoSection() {
 
   return (
     <section className="py-24 bg-slate-900 relative overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-60 h-60 bg-ledger-500/5 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-ledger-500/5 rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimateOnScroll animation="fade-up" className="text-center mb-12">
@@ -71,7 +69,7 @@ export default function DemoVideoSection() {
         <AnimateOnScroll animation="scale-up" delay={200}>
           {hasImages ? (
             <div
-              className="relative aspect-video rounded-2xl bg-slate-800 border border-slate-700 overflow-hidden group"
+              className="relative aspect-video rounded-xl bg-slate-800 border border-slate-700 overflow-hidden group"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
@@ -136,7 +134,7 @@ export default function DemoVideoSection() {
               )}
             </div>
           ) : (
-            <div className="aspect-video rounded-2xl bg-slate-800 border border-slate-700 flex flex-col items-center justify-center">
+            <div className="aspect-video rounded-xl bg-slate-800 border border-slate-700 flex flex-col items-center justify-center">
               <div className="w-20 h-20 rounded-full bg-ledger-500/20 border-2 border-ledger-500/40 flex items-center justify-center mb-6">
                 <svg
                   className="w-8 h-8 text-ledger-400 ml-1"

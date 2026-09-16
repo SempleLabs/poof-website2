@@ -62,7 +62,7 @@ export default function DemoPage() {
       <section className="py-8 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up" delay={200}>
-            <div className="bg-white border border-slate-200 rounded-2xl p-2 sm:p-4 h-[680px] md:h-[760px] overflow-hidden">
+            <div className="bg-white border border-slate-200 rounded-xl p-2 sm:p-4 h-[680px] md:h-[760px] overflow-hidden">
               <DemoBookingEmbed />
             </div>
           </AnimateOnScroll>
@@ -80,7 +80,7 @@ export default function DemoPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {whatToExpect.map((item, i) => (
               <AnimateOnScroll key={item.title} animation="fade-up" delay={i * 100}>
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 h-full text-center">
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 h-full text-center">
                   <div className="w-8 h-8 bg-ledger-200 text-ledger-600 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-4">
                     {i + 1}
                   </div>
