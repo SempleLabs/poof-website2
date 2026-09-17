@@ -15,7 +15,7 @@ type RuleState = 'none' | 'active' | 'paused' | 'revoked'
 type Who = 'own' | 'clients' | 'shop' | 'qbo' | null
 
 const WHO: { id: Exclude<Who, null>; label: string; sub: string; lead: string; cta: [string, string] }[] = [
-  { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank, and the AI proposes every entry. You approve in minutes a day, and the month closes as a record.', cta: ['Start free trial', 'https://app.poofai.com/register'] },
+  { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank, and the AI proposes every entry. You approve in minutes a day, and the month closes as a record.', cta: ['See Autopilot with limits', '/autopilot'] },
   { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend.', cta: ['Book a 20-minute call', '/demo'] },
   { id: 'shop', label: 'I run a shop', sub: 'HVAC, plumbing, electrical', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month.', cta: ['See Poof for shops', '/trades'] },
   { id: 'qbo', label: "I'm on QuickBooks", sub: 'And a bank rule burned me once', lead: 'A QuickBooks rule keeps being wrong until you notice. A Poof rule stops itself the first time you contradict it, and nothing posts without a person seeing it.', cta: ['Poof vs QuickBooks', '/poof-vs-quickbooks'] },
