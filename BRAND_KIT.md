@@ -204,57 +204,67 @@ The violet → indigo → teal gradient, gradient text, the sparkle icon and its
 
 ## Logo Usage
 
-Poof has two marks: the **wordmark** (the word, set in type, with a drawn period) and the **mark** (a full stop, boxed). Neither is a picture of the word. The wordmark is a component, not an image file.
+> **Decided 2026-09-17.** The boxed full stop and the drawn period are retired. Poof's mark is **the dispersing disc**: a solid half disc whose right side breaks into particles, and one green particle that stayed. The wordmark is the word alone, with no period; the mark carries the sentence.
 
-### The Wordmark
-Lowercase **poof** in Bricolage Grotesque 800, ink on paper. The period is the only colored element, and it is drawn, not typed.
-
-| Property | Value |
-|---|---|
-| **Word** | `poof` — lowercase, always |
-| **Font** | Bricolage Grotesque, weight 800 |
-| **Tracking** | -0.05em |
-| **Line-height** | 0.9 |
-| **Color** | Ink `#12211A` on paper; paper `#EEF2EA` when on ink |
-| **The period** | Drawn: a circle 0.2em wide, sitting on the baseline, 0.07em after the *f*, filled ledger green `#1B5E3F` (light green `#A9D8B8` when the wordmark is on ink) |
-| **Desktop header** | 28px |
-| **Phone header** | 22px |
-| **Auth pages** | 44px |
-| **Footer** | 26px |
-
-- **Bricolage's own full stop is an oval and must not be used.** Never type `poof.`; the component draws the dot.
-- The period is the story — *Poof. It's done.* The work vanishes and the dot is what stays. That is why it is green, and why it is the only color in the word.
-- In running text, **Poof** is capitalized as a word ("Poof prepares the invoice"). The wordmark is not.
+Poof has a **mark** (the dispersing disc) and a **wordmark** (the word, set in type). The lockup is the mark beside the word. The wordmark is a component, not an image file; the mark is an SVG.
 
 ### The Mark
-A full stop, boxed. A hard-cornered square outline in ink with a centered ledger-green dot. Two shapes, so it reads at 16px.
+A disc dispersing into particles. *The work disappears. The evidence doesn't.* The solid half is the work; the particles are it leaving; the single green particle at the far edge is what stayed.
 
 | Property | Value |
 |---|---|
 | **viewBox** | `0 0 64 64` |
-| **Box** | `rect` from 2 to 62 (60 × 60), stroke 4, square corners. On paper: ink `#12211A` stroke, white fill. On ink: paper `#EEF2EA` stroke, ink fill |
-| **Dot** | Circle at the center, `r` 12.16 — about 38% of the box. Ledger green `#1B5E3F` on paper; light green `#A9D8B8` on ink |
-| **App icon** | The same mark. Platform rounding produces the rounded version; do not draw one. The maskable icon has the mark inset 14% on paper |
-| **Stamp** | A rubber-stamp impression of the mark is a motif for "Signed." states and print only. It is never the primary mark |
+| **Disc** | Half disc, center (30, 32), radius 22, flat edge at x = 30, filled ink `#12211A` (paper `#E8EFE9` when on ink) |
+| **Main particles** | Five, on an arc of radius 19 about the disc center at −75°, −38°, 0°, 38°, 75°; radii 3.6 / 3.4 / 3.2 / 3.4 / 3.6 |
+| **Trailers** | Two, on an arc of radius 26 at ±52°, radius 2.0 |
+| **The survivor** | One particle at (59, 32), radius 2.8, ledger green `#1B5E3F` (light green `#A9D8B8` on ink). It is the only colored element and it never touches another particle |
+| **Spacing rule** | No particle overlaps another; every gap is at least 1 unit. The survivor stands alone past everything |
+| **Mono** | When one color is available, the survivor is ink like the rest |
+| **App icon** | The mark on an ink tile, inset 6 units. The maskable icon is inset 9 units |
+| **Favicon** | The mark alone on transparent; 16 and 32 px PNGs, and `favicon.ico` carrying both |
+
+### The Wordmark
+Lowercase **poof** in Bricolage Grotesque 800, ink on paper. **No period.** The mark is the period.
+
+| Property | Value |
+|---|---|
+| **Word** | `poof` — lowercase, always, no punctuation |
+| **Font** | Bricolage Grotesque, weight 800 |
+| **Tracking** | -0.05em |
+| **Line-height** | 0.9 |
+| **Color** | Ink `#12211A` on paper; paper `#EEF2EA` when on ink |
+| **Lockup** | The mark, at 1.15× the type size, then a gap of 0.32em, then the word. Mark and word share a vertical center |
+| **Desktop header** | 28px type (mark 32px) |
+| **Phone header** | 22px type (mark 25px) |
+| **Auth pages** | 44px type |
+| **Footer** | 26px type |
+
+- In running text, **Poof** is capitalized as a word ("Poof prepares the invoice"). The wordmark is not.
+- The word alone, without the mark, is allowed where the mark already appears nearby (a favicon beside a header title, a stamp).
 
 ### Clear Space and Pairing
-- Minimum clear space around either mark: **the height of the o.**
-- The wordmark and the mark are not locked up into one unit. They appear together only when one is the icon and the other is the name — a favicon beside a header, the OG image.
-- The mark is also the assistant's icon. There is no other icon for Poof.
+- Minimum clear space around the lockup or the mark alone: **the height of the o.**
+- The mark is also the assistant's icon and the only icon for Poof.
+- On social banners and the OG image the mark sits at the right edge, the wordmark and sentence at the left; they are not joined.
 
 ### Do's and Don'ts
-- **Do** set the wordmark ink on paper or paper on ink. Those are the only two.
-- **Do** let the period be the only colored element. The word itself is never green.
-- **Do** use the component (`PoofWordmark`) or the SVG (`poof-mark.svg`) — never a screenshot, never a re-typed version.
-- **Don't** put either mark on a photograph, a gradient, or a busy background.
-- **Don't** type the period. Bricolage's full stop is an oval.
-- **Don't** pair the wordmark with the old swirl or sparkle, or with any icon other than the mark.
-- **Don't** stretch, outline, shadow, tint, or animate either mark.
+- **Do** set the lockup ink on paper or paper on ink. Those are the only two.
+- **Do** keep the survivor the only colored element. The disc and the other particles are never green.
+- **Do** use the component (`PoofWordmark`, `PoofMark`) or the SVG (`poof-mark.svg`) — never a screenshot, never a re-drawn version.
+- **Don't** type a period after poof.
+- **Don't** put the mark on a photograph, a gradient, or a busy background.
+- **Don't** pair the wordmark with the old swirl, the sparkle, or the boxed dot.
+- **Don't** stretch, outline, shadow, tint, rotate, or add particles to the mark. The particle count and positions are fixed.
+- **Don't** animate the mark on the site. The vanish on the homepage is the one animation; the mark stays still.
 
 ### Where the Components Live
 
-| Surface | Wordmark | Mark | Notes |
+| Surface | Lockup | Mark | Notes |
 |---|---|---|---|
+| Website (`poof-website2`) | `src/components/PoofWordmark.tsx` | `src/components/PoofMark.tsx`, `public/poof-mark.svg`, `public/poof-mark-on-ink.svg` | Favicons, app icons, and `og-image.png` are generated from the SVG |
+| App (`apps/poof-web`) | `PoofWordmark` | `PoofMark`, `public/poof-mark.svg` | Same geometry; colors from `src/theme/shared-theme.ts` |
+
+---|---|---|---|
 | Website (`poof-website2`) | `src/components/PoofWordmark.tsx` | `src/components/PoofMark.tsx` | The CSS class `.poof-wm` in `src/app/globals.css` sets the face, tracking, and draws the period; `.on-ink` flips it |
 | App (`apps/poof-web`) | `PoofWordmark` | `PoofMark` | Same geometry; colors come from `src/theme/shared-theme.ts` |
 
@@ -1067,6 +1077,12 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### September 17, 2026 — the mark is the dispersing disc
+- **The boxed full stop and the drawn period are retired.** Austin rejected the dot-in-a-box ("just a dot, not creative at all") and two further rounds of period-shaped and pictorial marks, then wrote his own brief: abstract, geometric, the vanish built into the form. Of six geometric directions and six iterations on the disc, he chose **D1, the dispersing disc**: a half disc whose right side breaks into seven particles on clean spokes, and one green particle standing alone at the far edge.
+- **The wordmark loses its period.** `poof`, no punctuation; the mark carries the sentence. The lockup is mark, gap, word.
+- Assets regenerated from the master SVG: favicon (16/32, ico), Apple touch icon, 192/512, maskable, the OG image, and the six social banners. The app receives the same SVG and geometry.
+- Logo Usage section rewritten with the exact geometry so no one redraws it by eye.
 
 ### September 15, 2026 (later) — the ledger-green rebrand
 - **Identity.** The violet "magical" brand is retired. The idea is now one sentence — *"The work
