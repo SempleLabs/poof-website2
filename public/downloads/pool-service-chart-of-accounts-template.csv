@@ -1,0 +1,54 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,What customers owe you; route customers are usually billed monthly
+1200,Inventory - chemicals,Asset,Other Current Asset,Chlorine acid and balancers on the trucks and in the shop; counted so cost per pool is real
+1210,Inventory - parts & equipment,Asset,Other Current Asset,Pumps filters motors and parts in stock
+1300,Vehicles,Asset,Fixed Asset,Route trucks
+1310,Equipment & tools,Asset,Fixed Asset,Vacuums test kits and shop equipment above your threshold
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles and equipment
+2010,Accounts payable,Liability,Accounts Payable,Distributor bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Vehicle notes,Liability,Long Term Liability,Financed route trucks
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax on chemicals and parts where your state taxes them
+2400,Customer deposits,Liability,Other Current Liability,Deposits on equipment installs and renovations; not revenue until done
+2410,Deferred revenue - prepaid service,Liability,Other Current Liability,Service paid ahead; earned per visit
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Route service revenue - residential,Income,Income,Weekly and bi-weekly cleaning and chemical service; your baseline
+4020,Route service revenue - commercial,Income,Income,HOA apartment and hotel pools on contract
+4030,Repair revenue,Income,Income,Pump motor filter and heater repairs; the line that turns a route into a business
+4040,Equipment install revenue,Income,Income,New pumps filters heaters and automation; high ticket separate margin
+4050,Renovation & resurfacing revenue,Income,Income,Plaster tile and deck work if you offer it
+4060,Chemical sales revenue,Income,Income,Chemicals sold over the counter or billed separately from service
+4070,Opening & closing revenue,Income,Income,Seasonal openings and winterizations in cold markets
+4900,Other income,Income,Other Income,Rebates referral fees and equipment resale
+5010,Chemicals - routine,COGS,Cost of Goods Sold,Chlorine acid and balancers used on routes; drawn from inventory
+5020,Chemicals - treatments,COGS,Cost of Goods Sold,Algae treatments phosphate removers and shock billed per job
+5030,Parts & equipment,COGS,Cost of Goods Sold,Pumps motors filters and parts installed on jobs
+5040,Direct labor - route techs,COGS,Cost of Goods Sold,Burdened cost of route techs; the number that makes stops per day matter
+5050,Direct labor - repair & install,COGS,Cost of Goods Sold,Burdened cost on repairs and installs; apart from route labor so both margins are real
+5060,Subcontractors,COGS,Cost of Goods Sold,Electricians plasterers and specialty subs
+5070,Permits & inspections,COGS,Cost of Goods Sold,Permits on heater and electrical work
+5080,Warranty & callback cost,COGS,Cost of Goods Sold,Return visits and warranty parts; the quality signal per tech
+5090,Merchant & financing fees on jobs,COGS,Cost of Goods Sold,Card and financing fees costed to the job that carried them
+6010,Vehicles - fuel,Expense,Expense,Route truck fuel; the second-largest cost after labor
+6020,Vehicles - maintenance & repairs,Expense,Expense,Truck upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6110,Insurance - workers' compensation,Expense,Expense,Workers' comp
+6200,Shop & office rent & utilities,Expense,Expense,Shop and chemical storage
+6210,Office & dispatch salaries,Expense,Expense,Office staff and dispatch
+6220,Sales commissions,Expense,Expense,Commission on installs and new accounts; apart from salaries
+6230,Office supplies,Expense,Expense,Consumables
+6300,Software & route management,Expense,Expense,Routing service and accounting software
+6400,Marketing & advertising,Expense,Expense,Lead generation and door hangers
+6410,Lead fees & referral programs,Expense,Expense,Paid leads and referral payouts; separate so cost per new account is visible
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & certifications,Expense,Expense,Contractor license CPO and manufacturer certifications
+6610,Uniforms & safety equipment,Expense,Expense,Uniforms and PPE for chemical handling
+6700,Bank fees,Expense,Expense,Bank charges
+6800,Depreciation,Expense,Expense,Periodic depreciation
