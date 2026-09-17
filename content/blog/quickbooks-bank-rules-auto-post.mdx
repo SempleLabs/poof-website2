@@ -1,0 +1,78 @@
+---
+title: "QuickBooks Bank Rules Post Without Asking. Here Is What That Costs You."
+excerpt: "A QuickBooks bank rule that is wrong stays wrong until somebody notices, and it posts every matching transaction in the meantime. Here is how the damage compounds, how to audit your rules this week, and what a rule that stops itself looks like."
+category: "Bookkeeping"
+readTime: "10 min read"
+date: "2026-09-17"
+author: "Austin Semple"
+faqs:
+  - question: "What do QuickBooks bank rules actually do?"
+    answer: "A bank rule tells QuickBooks Online that when a downloaded transaction matches a condition, usually a description containing certain text and sometimes an amount range, it should assign a category, payee, or class. With auto-add turned on, the transaction posts to the books without appearing in the review queue. With it off, the rule pre-fills the categorization and a person still clicks to accept."
+  - question: "Why are auto-add bank rules risky?"
+    answer: "Because a rule matches text, not meaning. A rule that files everything containing HOME DEPOT to Job Materials will also file the office refrigerator, the personal purchase on the company card, and the return. With auto-add on, all of those post silently and identically, and nothing in QuickBooks flags that the rule has been wrong for months."
+  - question: "How do I audit my QuickBooks bank rules?"
+    answer: "Open Banking, then Rules. For each rule with auto-add on, run a transaction report filtered to that category for the last 90 days and read the descriptions. Anything that does not belong is a misfire. Turn auto-add off on any rule with a misfire, fix the posted entries, and narrow the condition before turning it back on. Do the rules with the largest dollar totals first."
+  - question: "Should I turn off auto-add on all my bank rules?"
+    answer: "For any rule that touches a cost of goods, job, or balance sheet account, yes, at least until you have audited it. Auto-add is defensible for low-dollar, single-vendor, single-purpose charges like a monthly software subscription. It is not defensible for a supply house, a fuel card, or a big-box store, because those merchants sell you many different kinds of things."
+  - question: "What is a rule that stops itself?"
+    answer: "A rule that pauses the moment a person corrects anything it is about, tells you which correction stopped it, and waits to be resumed or revoked. It also carries a dollar ceiling, sends anything over the ceiling to a review queue instead of dropping it, and is derived from work a person already approved rather than typed into a form. That is how Poof's standing rules work, and it is the opposite of a rule that keeps posting until you notice."
+---
+
+Bank rules are the most used and least examined feature in QuickBooks Online. Most businesses set a few up in the first month, turn on auto-add because the review queue is tedious, and never open the Rules page again. That is the problem, and this post is about the cost of it and what to do this week.
+
+## What a bank rule is
+
+A rule is a text match. When a downloaded transaction's description contains certain words, and optionally lands in an amount range, QuickBooks assigns the category, payee, or class you chose. There are two modes.
+
+With auto-add off, the rule pre-fills the categorization and the transaction still waits in the review queue for a person to click Add. With auto-add on, the transaction posts to the books with no click and no queue. It is the second mode this post is about.
+
+## Why text matching goes wrong
+
+A merchant sells you more than one kind of thing. That is the whole issue.
+
+- **HOME DEPOT** is job materials on Tuesday, a shop refrigerator on Thursday, and a return on Friday that arrives as a negative amount and gets filed as negative materials.
+- **FERGUSON** is parts for a job that should be costed to it, parts for stock that should sit in inventory, and a warranty part that costs nothing and should not touch cost of goods at all.
+- **SHELL** is fuel for the trucks and, once a quarter, a windshield wiper and a case of water.
+- **AMAZON** is anything.
+
+A rule cannot tell these apart. It matches the description and posts. With auto-add on, every one of those transactions lands in the same account, identically, silently. Nothing in QuickBooks reports that a rule has been misfiring. There is no confidence score, no history check, no "this merchant has been categorized three different ways before." The rule is either on or off.
+
+## How the damage compounds
+
+The first misfire costs a few dollars of miscategorization. The hundredth costs you a quarter's cost-of-goods figure. Three places it shows up:
+
+**Gross margin.** If a fuel card rule files everything to Fuel and a supply house rule files everything to Materials, your job margins are wrong in both directions, and you priced next month's bids on them.
+
+**Tax.** Personal purchases on the company card posted as business expenses through a merchant rule are the single most common finding in a small business audit, and they were posted by a rule, not by a person, which does not help you.
+
+**Trust.** Once you find one bad rule, you do not know how long it has been wrong. Every report since the rule was created is suspect, and cleaning that up is a project with a bill attached.
+
+## Audit your rules this week
+
+This takes about an hour for a typical small business, and it is the highest-value hour in bookkeeping.
+
+1. Open **Banking**, then **Rules**. Sort by whether auto-add is on. Those are the only ones that can post without you.
+2. For each auto-add rule, run a **Transaction Detail by Account** report for the category it posts to, last 90 days. Read the descriptions, not the totals.
+3. Anything that does not belong is a misfire. Count them. One misfire means the condition is too broad. Five means the rule should not exist in that form.
+4. Turn auto-add **off** on any rule with a misfire. Fix the posted entries. Narrow the condition, usually by adding an amount range or a second text condition, before you consider turning it back on.
+5. Do the rules with the largest 90-day dollar totals first. A wrong rule on a $40 subscription is a nuisance. A wrong rule on your supply house is a margin problem.
+
+A reasonable standard afterward: auto-add stays on only for low-dollar, single-vendor, single-purpose charges, like a monthly software subscription that is always the same amount from the same payee. It stays off for any merchant that sells you more than one kind of thing, and for anything that touches cost of goods, a job, or the balance sheet.
+
+## What a rule should do instead
+
+The problem is not that rules exist. It is that a QuickBooks rule has no way to know it is wrong, and no way to stop. A rule worth trusting needs four things a bank rule does not have.
+
+**It is derived, not authored.** You should not type a rule into a form and guess at the condition. The rule should be built from work you already reviewed: the merchant these five transactions share, the category you approved every time, a dollar limit set above the largest one. You read the rule in plain sentences before you grant it.
+
+**It carries a ceiling.** Anything over the dollar limit goes to a review queue instead of posting. A rule without a ceiling should not be allowed to write to the ledger at all.
+
+**It shows its evidence.** Before a rule posts a transaction, the system should have checked that this merchant has been categorized the same way before, at least a few times, with no disagreement. "No history for this merchant" is a reason to ask a person, not a reason to guess.
+
+**It stops itself.** The moment a person corrects anything the rule is about, not just a row it touched, the rule pauses, says which correction stopped it, and waits to be resumed or revoked. A wrong rule should be wrong once.
+
+That is how Poof's standing rules work, and it is the reason the approvals inbox exists: every entry the AI proposes waits on a card with its evidence until a person approves it or a rule that person granted covers it. Nothing posts silently. If you want to see a rule pause itself, [the homepage is a working demo](/) and the second step is exactly that.
+
+For what QuickBooks now costs after the August increase, see [the August 2026 price change](/blog/quickbooks-price-increase-2026). For the field of alternatives, [the best QuickBooks alternatives for small business](/blog/best-quickbooks-alternatives-small-business).
+
+*Written by Austin Semple, a former controller: three years in audit, seven running the books for small businesses, and the founder of Poof. Poof is one plan at $79/mo with every feature included, and a close within five business days or the next month is free. [Start a 30-day trial](https://app.poofai.com/register), no card required.*

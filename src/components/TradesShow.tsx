@@ -874,7 +874,7 @@ export default function TradesShow() {
             <div>
               <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, former controller</h3>
               <p className="m-0 max-w-[52ch] text-[15px] text-muted">
-                Three years as an auditor, then seven as a controller for small businesses. He reviews every managed close
+                Three years as an auditor, then seven as a controller for small businesses. He reviews every monthly close
                 himself. Books closed by the 15th business day, every completed job costed within 5, a controller
                 who answers within 1.
               </p>

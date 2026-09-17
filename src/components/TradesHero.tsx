@@ -8,7 +8,7 @@ export default function TradesHero() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll animation="fade-up">
           <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-            Poof Managed Bookkeeping — HVAC · Plumbing · Electrical
+            Poof for shops — HVAC · Plumbing · Electrical
           </div>
           <h1
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"
@@ -20,7 +20,7 @@ export default function TradesHero() {
 
         <AnimateOnScroll animation="fade-up" delay={100}>
           <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Managed bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents categorize, reconcile, and job-cost your books; a former controller reviews every monthly close. Built from the Jobber or Housecall Pro data you already have — and Poof can answer your phone and book the job too.
+            Bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents categorize, reconcile, and job-cost your books; a former controller reviews every monthly close. Built from the Jobber or Housecall Pro data you already have — and Poof can answer your phone and book the job too.
           </p>
         </AnimateOnScroll>
 

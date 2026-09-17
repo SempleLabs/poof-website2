@@ -60,6 +60,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Product</h3>
             <ul className="space-y-3">
+              <li><Link href="/autopilot" className="text-slate-500 hover:text-ledger-700 transition-colors">Autopilot</Link></li>
               <li><Link href="/features" className="text-slate-500 hover:text-ledger-700 transition-colors">Features</Link></li>
               <li><Link href="/pricing" className="text-slate-500 hover:text-ledger-700 transition-colors">Pricing</Link></li>
               <li><Link href="/how-it-works" className="text-slate-500 hover:text-ledger-700 transition-colors">How it Works</Link></li>

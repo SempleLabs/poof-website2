@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'FAQ — Frequently Asked Questions | Poof AI Bookkeeping',
-  description: 'Common questions about Poof bookkeeping — pricing, features, security, QuickBooks migration, and how the managed service works for trade shops.',
+  description: 'Common questions about Poof bookkeeping — pricing, features, security, QuickBooks migration, and how Poof for shops works for trade shops.',
   keywords: 'Poof FAQ, AI bookkeeping questions, bookkeeping software FAQ, QuickBooks alternative FAQ, small business bookkeeping help, AI accounting questions',
   alternates: {
     canonical: 'https://www.poofai.com/faq',

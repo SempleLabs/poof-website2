@@ -463,7 +463,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "Installed by Poof as part of Poof Managed Bookkeeping \u2014 our team provisions the number and the voice agent. It is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
+    note: "Installed by Poof for shops \u2014 our team provisions the number and the voice agent. It is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -518,7 +518,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "Field Service & Job Handoff",
     icon: "field",
-    note: "Part of the trades managed service, alongside the AI receptionist. The technician's page needs no account and no app install \u2014 that is the point. It does not do GPS tracking, does not take payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal: it does not work offline.",
+    note: "Part of Poof for shops, alongside the AI receptionist. The technician's page needs no account and no app install \u2014 that is the point. It does not do GPS tracking, does not take payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal: it does not work offline.",
     features: [
       {
         title: "Technician Field Link",
@@ -611,23 +611,37 @@ export interface FaqItem {
   question: string
   answer: string
   category: string
+  /** Who the question is for. Omitted = everyone. 'trades' items render only on the trade pages. */
+  audience?: 'trades'
 }
 
 export const faqData: FaqItem[] = [
   {
     question: "What is Poof?",
-    answer: "Poof is AI-powered bookkeeping, offered two ways. Poof Managed Bookkeeping is a done-for-you bookkeeping service for HVAC, plumbing, and electrical shops — AI agents categorize, reconcile, and job-cost the books, and a former controller reviews every monthly close, so owners see per-job profitability every month. Poof Professional is the same platform as self-serve software for any small business: it automates transaction categorization, invoicing, expense tracking, bank reconciliation, budgeting, cash flow forecasting, and financial reporting at a flat $79/mo.",
+    answer: "Poof is a platform to run a small business, with the books at the center. Connect your bank and card accounts and the AI reads the feeds, matches invoices to deposits and bills to payments, categorizes, and drafts the month-end close. Every entry it proposes waits on a card with the evidence it found, and nothing reaches the books until a person approves it or a rule that person granted covers it. It also invoices, takes payments, budgets, forecasts cash, and for trade shops answers the phone and lets a technician close a job from a text. One plan, every feature, $79 a month, and a close within five business days or the next month is free.",
     category: "General"
   },
   {
-    question: "What is Poof Managed Bookkeeping?",
-    answer: "Poof Managed Bookkeeping is a managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M in revenue. We build your books from the Jobber or Housecall Pro data you already have plus your bank feeds — AI agents do the categorization, reconciliation, and job costing, and a former controller reviews every monthly close. You get per-job profit with every close and a controller you can text or email. Plans start at $1,200/mo. Most shops start with the $750 Job Margin & Recovery Audit — a paid one-week diagnostic that hands you a dollar number in five days and credits against onboarding if you sign within 30 days.",
-    category: "General"
+    question: "How is Poof different from Mercury Books?",
+    answer: "Mercury Books is bookkeeping built into a Mercury bank account, free for Mercury customers through the end of 2026 and $35 a month after. Poof works with any bank and card through Plaid, and it is built around one thing Mercury does not do: every entry the AI proposes waits on a card with its evidence, and nothing posts until a person approves it or a rule that person granted covers it. If you bank with Mercury and want your books to stay inside the bank, Mercury is the simpler choice. If you want books you can defend, with a close that ticks itself off a checklist and a rule that stops itself when it is wrong, that is Poof.",
+    category: "Pricing & Plans"
   },
   {
-    question: "Do I have to use bookkeeping software myself on the managed service?",
-    answer: "No. On Poof Managed Bookkeeping, Poof does the books for you — your team keeps using Jobber or Housecall Pro exactly as they do today, and the monthly close lands ready to read, with per-job P&L included. You can log in anytime to look around, but nothing about your month requires it. If you'd rather run your own books, the self-serve Poof Professional plan is $79/mo.",
-    category: "General"
+    question: "What does the five-day close guarantee cover?",
+    answer: "Your books closed within five business days of month end, or the next month is free. It starts with your first close after a complete calendar month with your feeds connected; the partial month you joined in is not covered, and historical cleanup or a migration is scoped separately. A close is ready when feeds are reviewed, the bank reconciles to one figure, and every card in Approvals is decided. Cards left waiting past day five pause the clock. The remedy is the next month free on your subscription.",
+    category: "Pricing & Plans"
+  },
+  {
+    question: "What is Poof for shops?",
+    answer: "The same Poof, set up for HVAC, plumbing, and electrical shops doing $750K–$3M: the AI receptionist that books the job, the technician's field link that writes the invoice, per-job profitability on every close, and an optional monthly review by a former controller. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist.",
+    category: "General",
+    audience: "trades"
+  },
+  {
+    question: "Do I have to run the software myself?",
+    answer: "Not if you add the controller review. Your team keeps using Jobber or Housecall Pro as they do today, the AI proposes every entry, and a former controller decides the cards and signs the close each month. Without the review, you or your bookkeeper approve the cards; it takes minutes a day.",
+    category: "General",
+    audience: "trades"
   },
   {
     question: "Can the AI change my books without asking me?",

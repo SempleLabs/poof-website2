@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { faqData } from '@/lib/featureData'
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
-const PICK = ['General', 'AI & Automation', 'Pricing & Plans', 'Security & Data', 'Getting Started']
+const PICK = ['What is Poof?', 'Can the AI change my books without asking me?', 'What does the five-day close guarantee cover?', 'How is Poof different from Mercury Books?', 'How does Poof compare to QuickBooks?', 'Is Poof secure?']
 
 /** Six questions, not thirty-six. The full list lives at /faq with the same schema. */
 export default function HomeFaqShort() {
-  const items = PICK.flatMap((cat) => faqData.filter((f) => f.category === cat).slice(0, cat === 'General' ? 2 : 1)).slice(0, 6)
+  const items = PICK.map((q) => faqData.find((f) => f.question === q && !f.audience)).filter((f): f is NonNullable<typeof f> => !!f)
   const [open, setOpen] = useState<number | null>(null)
   return (
     <section className="max-w-[780px] mx-auto px-4 sm:px-6 pt-16 pb-6" id="faq">

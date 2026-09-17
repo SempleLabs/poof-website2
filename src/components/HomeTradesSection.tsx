@@ -53,7 +53,7 @@ export default function HomeTradesSection() {
 
         <AnimateOnScroll animation="fade-up">
           <div className="bg-slate-900 rounded-xl p-8 sm:p-10 text-center mb-14">
-            <p className="text-ledger-400 text-xs font-semibold uppercase tracking-wider mb-3">Poof Managed Bookkeeping</p>
+            <p className="text-ledger-400 text-xs font-semibold uppercase tracking-wider mb-3">Poof for shops</p>
             <p className="font-display text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
               Per-job profit on every monthly close. From $1,200/mo.
             </p>
@@ -71,7 +71,7 @@ export default function HomeTradesSection() {
                 href="/trades"
                 className="inline-block border-2 border-slate-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:border-ledger-400 hover:text-ledger-300 transition-all duration-200"
               >
-                How the managed service works
+                How Poof for shops works
               </Link>
             </div>
           </div>
