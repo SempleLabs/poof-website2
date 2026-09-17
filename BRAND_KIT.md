@@ -3,6 +3,9 @@
 > **Living document** — Last updated: September 15, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
+> **⚠️ 2026-09-16 — The Augmented Operator is NOT launched and is not currently planned.** Austin: "I have not set up The Augmented Operator and don't think I plan to." The site no longer names it anywhere; the managed service is called **Poof Managed Bookkeeping** on /trades and the trade pages, and no page says Austin "runs" a practice. Keep the two-business framing below as history and as an option, not as a fact about today. Do not reintroduce the name on the site, in llms.txt, or in outreach without a decision.
+> **Also corrected 2026-09-16:** Austin's background is **ten years as an auditor and then a controller** (roughly 2–3 years in audit). Never write "ten years of audit" or "10+ years of audit experience."
+
 > **⭐ TWO BUSINESSES (decided 2026-09-12; charter in `TWO_BUSINESSES.md`, which sits above this file).**
 > **Poof is the software.** Its customer is the bookkeeper, controller, or firm — and the businesses they keep books for, who are Poof's tenants. Poof speaks as a product: "AI is a tool, never a persona."
 > **The Augmented Operator is the managed service and the persona.** It runs the trades bookkeeping practice — HVAC, plumbing, electrical shops at $1,200 / $1,500 / Pro $2,400 — *on Poof*, and it speaks as Austin, first person, building in public. It is Poof's distribution: bookkeepers learn the practice model; Poof is what the practice runs on.

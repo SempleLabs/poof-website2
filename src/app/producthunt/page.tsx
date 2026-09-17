@@ -133,12 +133,12 @@ export default function ProductHuntPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <p className="text-slate-600 leading-relaxed mb-6">
-              Poof is built by Austin Semple, a former controller with 10+ years of audit and controller experience. The same engine powers our managed bookkeeping service for trade contractors, where a controller reviews every monthly close — so the AI underneath is held to audit-grade standards, not demo-grade ones.
+              Poof is built by Austin Semple, a former controller with ten years as an auditor and controller. The same engine powers our managed bookkeeping service for trade contractors, where a controller reviews every monthly close — so the AI underneath is held to audit-grade standards, not demo-grade ones.
             </p>
             <p className="text-sm text-slate-500">
               Run an HVAC, plumbing, or electrical shop?{' '}
               <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
-                See The Augmented Operator
+                See Poof Managed Bookkeeping
               </Link>{' '}
               — done-for-you books with per-job profitability.
             </p>

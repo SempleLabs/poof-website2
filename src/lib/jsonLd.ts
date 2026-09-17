@@ -180,7 +180,7 @@ export function getPersonSchema() {
     name: 'Austin Semple',
     jobTitle: 'CEO & Founder',
     description:
-      'Founder of Poof. Former controller with 10+ years of audit and controller experience building and running the books for small service businesses.',
+      'Founder of Poof. Former controller with ten years as an auditor and controller building and running the books for small service businesses.',
     url: 'https://www.poofai.com/about',
     worksFor: {
       '@type': 'Organization',

@@ -21,7 +21,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getServiceSchema({
-              name: 'The Augmented Operator, on Poof',
+              name: 'Poof Managed Bookkeeping',
               description:
                 'Managed bookkeeping for HVAC, plumbing, and electrical contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
               price: '1200',
@@ -39,8 +39,7 @@ export default function Home() {
       {/* Our own books: the close record is public */}
       <div className="pt-16">
         <div className="bg-ink text-paper text-[13.5px] px-5 py-2 text-center">
-          Our own books, closed on Poof: <b className="font-semibold">August 2026</b>{' '}
-          <span className="font-mono text-ledger-400">started Sep 1 · signed Sep 5 · 60 h · 17 tasks, 12 ticked themselves</span>
+          We close our own books on Poof. <b className="font-semibold">August took four days and a phone.</b>
         </div>
       </div>
 
@@ -54,7 +53,7 @@ export default function Home() {
           Poof is AI bookkeeping software built for the person who signs the close. It categorizes, reconciles, job-costs, and closes the books, and puts every write in front of a person before it reaches the ledger. Bookkeepers, controllers, and firms run their clients on it; a shop owner can run their own. One plan, every feature, $79 a month.
         </p>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45] mt-3">
-          The managed bookkeeping service for HVAC, plumbing, and electrical shops is <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">The Augmented Operator</Link>, a practice that runs on Poof with a former controller signing every close.
+          Run an HVAC, plumbing, or electrical shop and would rather not run the software? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Managed bookkeeping</Link> puts a former controller on your close every month.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-6">
           <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 128 features</Link>

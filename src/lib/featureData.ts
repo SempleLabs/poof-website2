@@ -463,7 +463,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "Installed by Poof as part of The Augmented Operator \u2014 our team provisions the number and the voice agent. It is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
+    note: "Installed by Poof as part of Poof Managed Bookkeeping \u2014 our team provisions the number and the voice agent. It is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -616,17 +616,17 @@ export interface FaqItem {
 export const faqData: FaqItem[] = [
   {
     question: "What is Poof?",
-    answer: "Poof is AI-powered bookkeeping, offered two ways. The Augmented Operator is a done-for-you bookkeeping service for HVAC, plumbing, and electrical shops — AI agents categorize, reconcile, and job-cost the books, and a former controller reviews every monthly close, so owners see per-job profitability every month. Poof Professional is the same platform as self-serve software for any small business: it automates transaction categorization, invoicing, expense tracking, bank reconciliation, budgeting, cash flow forecasting, and financial reporting at a flat $79/mo.",
+    answer: "Poof is AI-powered bookkeeping, offered two ways. Poof Managed Bookkeeping is a done-for-you bookkeeping service for HVAC, plumbing, and electrical shops — AI agents categorize, reconcile, and job-cost the books, and a former controller reviews every monthly close, so owners see per-job profitability every month. Poof Professional is the same platform as self-serve software for any small business: it automates transaction categorization, invoicing, expense tracking, bank reconciliation, budgeting, cash flow forecasting, and financial reporting at a flat $79/mo.",
     category: "General"
   },
   {
-    question: "What is The Augmented Operator?",
-    answer: "The Augmented Operator is a managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M in revenue. We build your books from the Jobber or Housecall Pro data you already have plus your bank feeds — AI agents do the categorization, reconciliation, and job costing, and a former controller reviews every monthly close. You get per-job profit with every close and a controller you can text or email. Plans start at $1,200/mo. Most shops start with the $750 Job Margin & Recovery Audit — a paid one-week diagnostic that hands you a dollar number in five days and credits against onboarding if you sign within 30 days.",
+    question: "What is Poof Managed Bookkeeping?",
+    answer: "Poof Managed Bookkeeping is a managed bookkeeping service for HVAC, plumbing, and electrical service contractors doing $750K–$3M in revenue. We build your books from the Jobber or Housecall Pro data you already have plus your bank feeds — AI agents do the categorization, reconciliation, and job costing, and a former controller reviews every monthly close. You get per-job profit with every close and a controller you can text or email. Plans start at $1,200/mo. Most shops start with the $750 Job Margin & Recovery Audit — a paid one-week diagnostic that hands you a dollar number in five days and credits against onboarding if you sign within 30 days.",
     category: "General"
   },
   {
     question: "Do I have to use bookkeeping software myself on the managed service?",
-    answer: "No. On The Augmented Operator, Poof does the books for you — your team keeps using Jobber or Housecall Pro exactly as they do today, and the monthly close lands ready to read, with per-job P&L included. You can log in anytime to look around, but nothing about your month requires it. If you'd rather run your own books, the self-serve Poof Professional plan is $79/mo.",
+    answer: "No. On Poof Managed Bookkeeping, Poof does the books for you — your team keeps using Jobber or Housecall Pro exactly as they do today, and the monthly close lands ready to read, with per-job P&L included. You can log in anytime to look around, but nothing about your month requires it. If you'd rather run your own books, the self-serve Poof Professional plan is $79/mo.",
     category: "General"
   },
   {

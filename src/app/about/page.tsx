@@ -9,7 +9,7 @@ import { getPersonSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
   title: 'About Poof - AI Bookkeeping for Small Business',
-  description: 'Learn about Poof and our mission to automate bookkeeping for small businesses — built by Austin Semple, a former controller with 10+ years of audit experience.',
+  description: 'Learn about Poof and our mission to automate bookkeeping for small businesses — built by Austin Semple, a former auditor and controller.',
   keywords: 'about Poof, company story, bookkeeping automation team, AI accounting mission',
   alternates: {
     canonical: 'https://www.poofai.com/about',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Poof — Built by a Former Controller',
     description:
-      'Poof automates bookkeeping for small businesses. Built by Austin Semple, a former controller with 10+ years of audit and controller experience.',
+      'Poof automates bookkeeping for small businesses. Built by Austin Semple, a former controller with ten years as an auditor and controller.',
     url: 'https://www.poofai.com/about',
     siteName: 'Poof',
     type: 'website',
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
       <PageHero
         title={<>Built by the person who <span className="text-ledger-600">signs the close.</span></>}
-        subtitle="Ten years of audit and controller work for small businesses, then Poof: AI that does the books and puts every entry in front of a person before it lands."
+        subtitle="Ten years as an auditor and then a controller for small businesses, then Poof: AI that does the books and puts every entry in front of a person before it lands."
       />
 
       {/* Mission Statement */}
@@ -207,7 +207,7 @@ export default function AboutPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold font-display text-white mb-6">Meet the Founder</h2>
               <p className="text-xl text-slate-300">
-                A personal mission born from 10+ years of bookkeeping frustration
+                A personal mission born from ten years of closing other people's books
               </p>
             </div>
           </AnimateOnScroll>
