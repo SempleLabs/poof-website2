@@ -456,7 +456,7 @@ export default function TradesPage() {
             <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10">
               <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">Built by a controller, not a startup</div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
-                Austin Semple — ten years as an auditor and controller
+                Austin Semple — three years as an auditor, seven as a controller
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>

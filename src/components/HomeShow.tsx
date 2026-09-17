@@ -378,7 +378,7 @@ export default function HomeShow() {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1.5">Austin Semple, former controller</h3>
-              <p className="text-[15px] text-muted max-w-[52ch]">Ten years as an auditor and then a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
+              <p className="text-[15px] text-muted max-w-[52ch]">Three years as an auditor, then seven as a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
               <p className="mt-3 text-sm"><Link href="/about" className="text-ledger-600 font-semibold hover:text-ledger-700">More about Austin</Link></p>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
 > Poof is AI bookkeeping software for the person who signs the close. It categorizes, reconciles, job-costs, and closes the books, and puts every write in front of a person before it reaches the ledger: each proposal waits on a card with the evidence it found, the close is a record with a checklist the books tick off themselves, and the reconciliation ties to one figure. One plan, every feature, $79/mo. The brand sentence: "The work disappears. The evidence doesn't."
 
-Poof is built by Austin Semple, a former controller with ten years as an auditor and controller working with small service businesses. It is a product of Semple Labs LLC.
+Poof is built by Austin Semple, a former controller: three years in audit, then seven running the books for small service businesses. It is a product of Semple Labs LLC.
 
 Poof has two distinct offerings:
 
@@ -134,7 +134,7 @@ Poof Professional (self-serve software):
 
 ## Founder
 
-Austin Semple — CEO and Founder. ten years as an auditor and controller working with small service businesses before founding Poof in June 2025. In 2026, Poof focused its go-to-market on managed bookkeeping for trade contractors — the audience Austin knows best from his controller career.
+Austin Semple — CEO and Founder. Three years as an auditor, then seven as a controller, working with small service businesses before founding Poof in June 2025. In 2026, Poof focused its go-to-market on managed bookkeeping for trade contractors — the audience Austin knows best from his controller career.
 
 ## Optional
 

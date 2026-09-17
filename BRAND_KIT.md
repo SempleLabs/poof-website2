@@ -4,7 +4,7 @@
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 > **⚠️ 2026-09-16 — The Augmented Operator is NOT launched and is not currently planned.** Austin: "I have not set up The Augmented Operator and don't think I plan to." The site no longer names it anywhere; the managed service is called **Poof Managed Bookkeeping** on /trades and the trade pages, and no page says Austin "runs" a practice. Keep the two-business framing below as history and as an option, not as a fact about today. Do not reintroduce the name on the site, in llms.txt, or in outreach without a decision.
-> **Also corrected 2026-09-16:** Austin's background is **ten years as an auditor and then a controller** (roughly 2–3 years in audit). Never write "ten years of audit" or "10+ years of audit experience."
+> **Also corrected 2026-09-16:** Austin's background is **three years as an auditor, then seven as a controller** (ten in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
 
 > **⭐ TWO BUSINESSES (decided 2026-09-12; charter in `TWO_BUSINESSES.md`, which sits above this file).**
 > **Poof is the software.** Its customer is the bookkeeper, controller, or firm — and the businesses they keep books for, who are Poof's tenants. Poof speaks as a product: "AI is a tool, never a persona."
@@ -744,7 +744,7 @@ difference between a comparison and a claim.
 ## Founder
 
 **Austin Semple** — CEO & Founder
-- 10+ years of auditing and controller experience
+- Three years as an auditor, then seven as a controller (ten in total; always state the split)
 - Built Poof to solve the bookkeeping pain points he witnessed firsthand working with small businesses
 
 ### Company Timeline
@@ -839,7 +839,7 @@ If you need the wordmark as an image — a slide, a print piece — render it fr
 > **⭐ THIS SECTION IS THE AUGMENTED OPERATOR'S (as of 2026-09-12).** The managed service for HVAC, plumbing, and electrical contractors — the tiers, the $750 audit, the controller who signs — is a separate business that runs on Poof. Everything below is still right; it just belongs to that business, and when its own site exists this section moves there with `/trades`. Until then it stays on poofai.com, and the homepage keeps leading with it because it is the offer that generates calls. Where the copy says "Poof Managed for Trades", the service's name is now **The Augmented Operator**; use "Poof Managed for Trades" only where the live site still does, and change both together. (July 2026 guidance that "trades is Poof's primary positioning" is superseded by `TWO_BUSINESSES.md`: Poof's primary customer is the person who signs the close; trades shops reach Poof through the operator.)
 
 ### Why This Vertical
-Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins so they can afford a $1,200/mo managed service, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's 10+ years of audit and controller experience translate directly — these owners trust accounting credentials over "AI startup" pitches.
+Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins so they can afford a $1,200/mo managed service, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's three years in audit and seven as a controller translate directly — these owners trust accounting credentials over "AI startup" pitches.
 
 ### Target Customer
 - **Business type:** Residential HVAC service contractors (primary), plumbing service contractors, electrical service contractors
@@ -975,7 +975,7 @@ What HVAC owners get with Poof that no alternative offers all together:
 11. **Financing fees are costed to the job** — a financed install stops looking more profitable than it was
 
 ### Trust & Social Proof Elements (for HVAC Landing Page)
-- **Lead with Austin's credentials:** "Built by Austin Semple, a former controller with 10+ years of audit and controller experience working with small service businesses."
+- **Lead with Austin's credentials:** "Built by Austin Semple, a former controller: three years in audit, then seven running the books for small service businesses, working with small service businesses."
 - **Anchor on accounting rigor:** "Real double-entry bookkeeping with reversal entries — not just AI guessing categories"
 - **Emphasize the human layer:** "AI does the work. A credentialed human signs off on every customer-facing decision."
 - **30-day money-back guarantee** on the managed-service trial — reduces perceived risk
