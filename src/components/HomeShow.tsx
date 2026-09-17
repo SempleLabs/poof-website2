@@ -16,7 +16,7 @@ type Who = 'own' | 'clients' | 'shop' | 'qbo' | null
 
 const WHO: { id: Exclude<Who, null>; label: string; sub: string; lead: string; cta: [string, string] }[] = [
   { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank, and the AI proposes every entry. You approve in minutes a day, and the month closes as a record.', cta: ['See Autopilot with limits', '/autopilot'] },
-  { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend.', cta: ['Book a 20-minute call', '/demo'] },
+  { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend.', cta: ['See the close', '/close'] },
   { id: 'shop', label: 'I run a shop', sub: 'HVAC, plumbing, electrical', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month.', cta: ['See Poof for shops', '/trades'] },
   { id: 'qbo', label: "I'm on QuickBooks", sub: 'And a bank rule burned me once', lead: 'A QuickBooks rule keeps being wrong until you notice. A Poof rule stops itself the first time you contradict it, and nothing posts without a person seeing it.', cta: ['Poof vs QuickBooks', '/poof-vs-quickbooks'] },
 ]
@@ -353,7 +353,7 @@ export default function HomeShow() {
         <section className="pt-16 pb-6 border-t border-rule" id="act4">
           <p className={eyebrow}>Step 4 · The close</p>
           <h2 className={h2}>The close is a record, and you are the signature.</h2>
-          <p className={sub}>Seventeen tasks with due dates. <b className="text-ink font-semibold">Twelve tick themselves</b> when the books prove them and cannot be ticked by hand; each open one says why in a sentence. The rest are a person&apos;s tick, recorded with who and when. This page has been keeping score since you arrived.</p>
+          <p className={sub}>Seventeen tasks with due dates. <b className="text-ink font-semibold">Thirteen tick themselves</b> when the books prove them and cannot be ticked by hand; each open one says why in a sentence. The rest are a person&apos;s tick, recorded with who and when. This page has been keeping score since you arrived.</p>
           <ul className="border-t border-ink">
             {tasks.map((t) => (
               <li key={t.id} className="grid grid-cols-[24px_1fr_auto] gap-3 py-[9px] border-b border-rule text-[14.5px] items-start">

@@ -48,6 +48,13 @@ export const metadata: Metadata = {
 
 export default async function ResourcesPage() {
   const blogPosts = getBlogPosts()
+  const templates = [
+    { trade: 'HVAC', accounts: 49, href: '/downloads/hvac-chart-of-accounts-template.csv', guide: '/blog/hvac-chart-of-accounts' },
+    { trade: 'Plumbing', accounts: 58, href: '/downloads/plumbing-chart-of-accounts-template.csv', guide: '/blog/plumbing-chart-of-accounts' },
+    { trade: 'Electrical', accounts: 57, href: '/downloads/electrical-chart-of-accounts-template.csv', guide: '/blog/electrical-chart-of-accounts' },
+    { trade: 'Roofing', accounts: 57, href: '/downloads/roofing-chart-of-accounts-template.csv', guide: '/blog/roofing-chart-of-accounts' },
+  ]
+
   const guides = [
     {
       title: 'Small Business Bookkeeping Setup Guide',
@@ -103,10 +110,22 @@ export default async function ResourcesPage() {
       linkText: 'Try it free →',
     },
     {
-      title: 'How Poof Works',
-      description: 'See how Poof automates your bookkeeping in 3 simple steps.',
+      title: 'The close',
+      description: 'Seventeen tasks with due dates, thirteen ticked by the books themselves, and a five-day guarantee.',
+      href: '/close',
+      linkText: 'See the close →',
+    },
+    {
+      title: 'Autopilot with limits',
+      description: 'AI that posts to your books on its own, inside a ceiling and a history check, and stops itself when it is wrong.',
+      href: '/autopilot',
+      linkText: 'See the gates →',
+    },
+    {
+      title: 'How Poof works',
+      description: 'Connect, the AI proposes, you approve, the month closes as a record.',
       href: '/how-it-works',
-      linkText: 'Learn more →',
+      linkText: 'Four steps →',
     },
     {
       title: 'All 128 Features',
@@ -116,7 +135,7 @@ export default async function ResourcesPage() {
     },
     {
       title: 'Poof vs QuickBooks',
-      description: 'See how Poof compares to QuickBooks for small businesses.',
+      description: 'Against QuickBooks Plus at $140, and what a bank rule costs you.',
       href: '/poof-vs-quickbooks',
       linkText: 'Compare →',
     },
@@ -133,9 +152,30 @@ export default async function ResourcesPage() {
       <Header />
 
       <PageHero
-        title={<>Bookkeeping <span className="text-ledger-600">Resources</span></>}
-        subtitle="Free guides and templates to help you master small business bookkeeping."
+        title={<>Resources, <span className="text-ledger-600">no email required.</span></>}
+        subtitle="Chart of accounts templates by trade, guides written by a controller, and the posts people actually find us by. Download, read, import."
       />
+
+      {/* Chart of accounts templates */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">Chart of accounts templates</p>
+          <h2 className="font-display text-3xl sm:text-4xl leading-[1.05] tracking-[-0.035em] text-ink mb-3 text-balance">A chart of accounts built for your trade, ready to import.</h2>
+          <p className="text-[17px] text-muted max-w-[62ch] leading-relaxed mb-7">Numbered accounts with types and subtypes in the columns QuickBooks Online and Xero expect, and a one-line reason each account exists. Each comes with a guide that walks the structure.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-ink">
+            {templates.map((t) => (
+              <div key={t.trade} className="py-5 pr-6 border-b border-rule">
+                <h3 className="font-semibold text-ink text-[17px]">{t.trade}</h3>
+                <p className="font-mono tabular text-xs text-muted mt-1">{t.accounts} accounts · CSV</p>
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  <a href={t.href} download className="text-ledger-600 font-semibold hover:text-ledger-700">Download</a>
+                  <Link href={t.guide} className="text-ink font-semibold hover:text-ledger-700">Read the guide</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Downloadable Guides */}
       <section className="py-24 bg-white">

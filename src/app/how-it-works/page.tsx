@@ -50,7 +50,7 @@ const steps = [
     n: '04',
     title: 'The month closes as a record',
     when: 'Business days one to seven',
-    body: 'The close is a checklist with due dates. Twelve of the seventeen tasks tick themselves when the books prove them: feeds reviewed, bank reconciled to one figure, deposits released on completed jobs, job costs tied to payroll. The rest are a person’s tick, recorded with who and when. Locking the period is the signature, and the package goes out after it.',
+    body: 'The close is a checklist with due dates. Thirteen of the seventeen tasks tick themselves when the books prove them: feeds reviewed, bank reconciled to one figure, deposits released on completed jobs, job costs tied to payroll. The rest are a person’s tick, recorded with who and when. Locking the period is the signature, and the package goes out after it.',
     detail: 'The reconciliation carries last month’s outstanding items forward and shows one unexplained difference. It ties or it doesn’t.',
   },
 ]

@@ -1,0 +1,61 @@
+---
+title: "Should AI Post to Your Books Without Asking? Four Gates Before You Say Yes"
+excerpt: "Every bookkeeping tool now offers to categorize and post on its own. Whether you should let it depends on four things the software has to check by code, not by the model's own confidence. Here they are, and what a rule that stops itself looks like."
+category: "AI & Automation"
+readTime: "9 min read"
+date: "2026-09-17"
+author: "Austin Semple"
+faqs:
+  - question: "Is it safe to let AI categorize and post transactions automatically?"
+    answer: "It can be, inside limits the software enforces by code: the category exists in your chart, the amount is under a ceiling you set, the merchant has been categorized the same way unanimously enough times before, and the model's confidence clears a bar. Without those checks, an auto-post setting is really 'trust all of it,' and any bookkeeper who cares about the books picks 'review all of it' instead."
+  - question: "Why isn't the AI's confidence score enough?"
+    answer: "Because it is the model describing itself. A confidence parsed out of the model's own response is weakly calibrated, and a 0.1 fallback can look identical to a 0.95 in the ledger. Confidence should be the last check, backed by something deterministic: the merchant's own history in your books."
+  - question: "What is merchant unanimity and why does it matter?"
+    answer: "Unanimity means every prior reviewed transaction for that merchant carries the same category. A merchant seen twenty times, categorized three different ways, is exactly the one a person should look at, even though a naive 'seen 3+ times' count would wave it through. Checking unanimity is a database query, not a model judgment."
+  - question: "What should happen when the AI posts one wrong?"
+    answer: "The rule that posted it should pause the moment a person corrects anything it is about, say which correction stopped it, and wait to be resumed or revoked. Its earlier work should stand, with the rule's name on each entry, so you can review what it touched. A rule that keeps posting after it has been contradicted is not automation; it is a liability."
+  - question: "Should AI ever send an invoice or email to a customer on its own?"
+    answer: "No. Anything that reaches a customer is a person's decision, whatever a rule says. Ledger writes can be automated inside limits; customer-facing sends should not be."
+---
+
+Every bookkeeping tool now offers to categorize your transactions and post them without asking. The pitch is the same everywhere: less review, fewer clicks, books that do themselves. The pitch is right about the goal and silent about the one question that matters, which is what the software checks before it writes, and what it does when it is wrong.
+
+Here are the four gates I would want in place before letting any AI post to a ledger I sign, and the reason each one has to be code rather than the model's opinion.
+
+## Gate one: the account exists
+
+If the AI suggests a category your chart of accounts does not have, the transaction should wait. A model that invents "Vehicle Telematics" as a category because a merchant name suggested it has just created an account nobody chose. Whether the chart should grow is a person's call.
+
+## Gate two: it is under a ceiling
+
+You set a dollar limit. Anything over it goes to a review queue with the reason, and nothing is dropped. This is the gate that keeps a $2,300 supply-house order from posting on the same footing as a $40 fuel stop, and it is the one most auto-post settings do not have at all.
+
+## Gate three: the merchant agrees with itself
+
+This is the load-bearing check, and it is the one you will not find in a bank rule. Before posting, the software should look at every prior reviewed transaction for this merchant in your books and ask two questions. Are there enough of them, at least three? And do they all carry the same category?
+
+That second question is the whole point. A merchant categorized three different ways is exactly the one a person should look at, even though a naive "seen 3+ times" count would wave it through. Checking it is a deterministic query against your own history. It does not depend on the model at all.
+
+## Gate four: confidence, last
+
+The model reports a confidence with every categorization. It should clear a bar you set, ninety percent is a reasonable default, but it should be the last gate, not the first, because it is the model describing itself. Self-reported confidence is weakly calibrated. Without the history check behind it, a fallback guess and a certain match can look identical in the ledger.
+
+There is one exception worth having. If a person already corrected this exact merchant once, replaying that answer is deterministic and carries a human's explicit decision. That path can be trusted on its own.
+
+## What happens when it is wrong
+
+A gate can pass and the entry can still be wrong. What the software does next is the difference between automation and a liability.
+
+The rule that posted it should pause the moment a person corrects anything the rule is about, not only a row it happened to touch. It should say which correction stopped it, in the person's own words, and wait to be resumed or revoked. Its earlier work should stand, with the rule's name on each entry, so you can review what it touched in one place.
+
+Compare that to a bank rule in QuickBooks Online, which matches text and posts, and keeps posting every matching transaction until somebody opens the Rules page and notices. [What that costs you](/blog/quickbooks-bank-rules-auto-post) is a post of its own.
+
+## Two things that should never be automated
+
+Anything that reaches a customer. An invoice, a credit note, a message: a person's decision, whatever a rule says. And any ledger rule without a dollar limit. A rule that can write without a ceiling should not be allowed to run.
+
+## The honest position
+
+Automation with a brake is the version worth buying. Off by default, gates enforced by code, a ceiling always, and a rule that stops itself the first time you contradict it. That is how [Autopilot with limits](/autopilot) works in Poof, and the six gates on that page are the product's own, in the words it puts on a held card.
+
+*Written by Austin Semple, a former controller: three years in audit, seven running the books for small businesses, and the founder of Poof. Poof is one plan at $79/mo with every feature included, and a close within five business days or the next month is free. [Start a 30-day trial](https://app.poofai.com/register), no card required.*

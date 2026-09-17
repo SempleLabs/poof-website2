@@ -42,7 +42,7 @@ export default function CloseRunSection() {
               <span className="text-ledger-600">and the books tick it off themselves.</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Seventeen tasks, dated in business days after month end. Twelve of them complete on their own when
+              Seventeen tasks, dated in business days after month end. Thirteen of them complete on their own when
               the books prove them &mdash; and cannot be ticked by hand. Each open one says why in a sentence, and
               links to the screen that fixes it.
             </p>
