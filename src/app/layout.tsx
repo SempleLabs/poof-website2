@@ -26,8 +26,8 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: 'Poof — Bookkeeping that does itself, and shows its work',
-  description: 'AI bookkeeping for the person who signs the close. Every write waits on a card with its evidence, the close is a record, the reconciliation ties to one figure. Managed books for HVAC, plumbing, and electrical shops through Poof Managed Bookkeeping.',
-  keywords: 'hvac bookkeeping, plumbing bookkeeping, electrical contractor bookkeeping, bookkeeping for trades, job costing, per-job profitability, managed bookkeeping service, AI bookkeeping, small business bookkeeping, QuickBooks alternative, bookkeeping that does itself',
+  description: 'AI bookkeeping for the person who signs the close. Every write waits on a card with its evidence, the close is a record, the reconciliation ties to one figure. Managed books for HVAC, plumbing, and electrical shops through Poof for shops.',
+  keywords: 'hvac bookkeeping, plumbing bookkeeping, electrical contractor bookkeeping, bookkeeping for trades, job costing, per-job profitability, bookkeeping for trade shops, AI bookkeeping, small business bookkeeping, QuickBooks alternative, bookkeeping that does itself',
   authors: [{ name: 'Poof' }],
   metadataBase: new URL('https://www.poofai.com'),
   manifest: '/manifest.webmanifest',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Poof — The work disappears. The evidence doesn\'t.',
-    description: 'AI bookkeeping for the person who signs the close: every write waits on a card with its evidence, the close is a record, the reconciliation ties. $79/mo, every feature. Managed books for trade shops through Poof Managed Bookkeeping.',
+    description: 'AI bookkeeping for the person who signs the close: every write waits on a card with its evidence, the close is a record, the reconciliation ties. $79/mo, every feature. Managed books for trade shops through Poof for shops.',
     url: 'https://www.poofai.com',
     siteName: 'Poof',
     type: 'website',

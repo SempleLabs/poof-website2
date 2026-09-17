@@ -30,7 +30,7 @@ export default function UnearnedRevenueSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of Poof Managed Bookkeeping
+              Part of Poof for shops
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
               A down payment isn&apos;t revenue until the job is done.{' '}

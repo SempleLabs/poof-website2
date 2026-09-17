@@ -75,6 +75,14 @@
   }
 }
 
+/* The one button that starts the show: a single pulse on first view */
+@keyframes poof-pulse {
+  0%   { box-shadow: 0 14px 40px rgba(18,33,26,0.35), 0 0 0 0 rgba(31,122,79,0.55); }
+  100% { box-shadow: 0 14px 40px rgba(18,33,26,0.35), 0 0 0 18px rgba(31,122,79,0); }
+}
+.poof-btn { animation: poof-pulse 1.4s ease-out 0.8s 3; }
+@media (prefers-reduced-motion: reduce) { .poof-btn { animation: none; } }
+
 /* Accordion transition */
 .accordion-content {
   display: grid;

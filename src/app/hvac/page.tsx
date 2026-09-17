@@ -78,7 +78,7 @@ const replaces = {
   poof: [
     'Poof handles categorization and reconciliation, with controller review on every decision',
     'Your Jobber and Housecall Pro job data flows into the ledger — no manual rekeying',
-    'Managed-service tier at $1,200/mo — a controller-grade service, not a part-time login',
+    'The controller review at $1,200/mo: a former controller signs your close, not a part-time login',
     'Monthly close with per-job P&L, closed by the 15th business day — you finally see which jobs made money, and which lost it',
     '1099-ready every January — contractors tracked all year, not the week before the deadline',
   ],
@@ -86,7 +86,7 @@ const replaces = {
 
 const plans = [
   {
-    name: 'Poof Managed Bookkeeping',
+    name: 'Poof for shops',
     price: '$1,200',
     cadence: '/mo',
     bestFor: '2–4 truck shops, $750K–$1.5M revenue',
@@ -102,12 +102,12 @@ const plans = [
     highlight: true,
   },
   {
-    name: 'Poof Managed Bookkeeping Plus',
+    name: 'Poof for shops, Plus',
     price: '$1,500',
     cadence: '/mo',
     bestFor: '5+ truck shops, $1.5M–$3M revenue',
     features: [
-      'Everything in Managed for Trades',
+      'Everything in Poof for shops',
       'Multi-location reporting',
       'Quarterly review call',
       'Priority response',
@@ -200,9 +200,9 @@ export default function HvacPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getServiceSchema({
-              name: 'Poof Managed Bookkeeping — HVAC Bookkeeping',
+              name: 'Poof for shops — HVAC Bookkeeping',
               description:
-                'Managed bookkeeping for HVAC contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
+                'Bookkeeping for HVAC contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
               price: '1200',
               url: 'https://www.poofai.com/hvac',
             })
@@ -240,7 +240,7 @@ export default function HvacPage() {
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Managed HVAC bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents do the books, a former controller reviews every close, and your Jobber or Housecall Pro data comes in without you rekeying it.
+              HVAC bookkeeping for shops doing $750K–$3M with 2–6 trucks. AI agents do the books, a former controller reviews every close, and your Jobber or Housecall Pro data comes in without you rekeying it.
             </p>
           </AnimateOnScroll>
 
@@ -419,7 +419,7 @@ export default function HvacPage() {
 
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="bg-white border-2 border-ledger-300 rounded-xl p-7 h-full shadow-lg">
-                <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">With Poof Managed Bookkeeping</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">With Poof for shops</div>
                 <h3 className="font-semibold text-xl text-slate-900 mb-5">Your new setup</h3>
                 <ul className="space-y-3">
                   {replaces.poof.map((item) => (
@@ -556,7 +556,7 @@ export default function HvacPage() {
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="bg-slate-900 rounded-xl p-6 h-full">
                 <h4 className="font-semibold text-white mb-1">What we commit to</h4>
-                <p className="text-xs text-slate-400 mb-4">On every managed plan. Not aspirations — the deal.</p>
+                <p className="text-xs text-slate-400 mb-4">On every plan with the controller review. Not aspirations, the deal.</p>
                 <ul className="space-y-2">
                   {slas.map((s) => (
                     <li key={s} className="flex items-start gap-2 text-sm text-slate-200">
@@ -572,7 +572,7 @@ export default function HvacPage() {
           </div>
 
           <p className="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
-            Above $3M in revenue? <span className="font-semibold text-slate-700">Poof Managed Bookkeeping Pro</span> starts
+            Above $3M in revenue? <span className="font-semibold text-slate-700">Poof for shops, Pro</span> starts
             at $2,400/mo, scoped per shop. Book a call and we&apos;ll size it with you.
           </p>
 
@@ -596,7 +596,7 @@ export default function HvacPage() {
                   Before Poof, Austin spent a decade auditing and running the books for small service businesses. The pattern was always the same: an owner who built a real business from a service truck, paying $800–$1,500/mo for a bookkeeper who delivered a PDF three weeks late and couldn&apos;t answer the one question that mattered — &ldquo;which jobs made money?&rdquo;
                 </p>
                 <p>
-                  Poof Managed Bookkeeping is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
+                  Poof for shops is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
                 </p>
                 <p className="text-slate-900 font-medium">
                   Austin personally onboards the first 50 shops. If that&apos;s you, you&apos;re working directly with the founder.

@@ -12,6 +12,14 @@ import Link from 'next/link'
  */
 
 type RuleState = 'none' | 'active' | 'paused' | 'revoked'
+type Who = 'own' | 'clients' | 'shop' | 'qbo' | null
+
+const WHO: { id: Exclude<Who, null>; label: string; sub: string; lead: string; cta: [string, string] }[] = [
+  { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank, and the AI proposes every entry. You approve in minutes a day, and the month closes as a record.', cta: ['Start free trial', 'https://app.poofai.com/register'] },
+  { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend.', cta: ['Book a 20-minute call', '/demo'] },
+  { id: 'shop', label: 'I run a shop', sub: 'HVAC, plumbing, electrical', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month.', cta: ['See Poof for shops', '/trades'] },
+  { id: 'qbo', label: "I'm on QuickBooks", sub: 'And a bank rule burned me once', lead: 'A QuickBooks rule keeps being wrong until you notice. A Poof rule stops itself the first time you contradict it, and nothing posts without a person seeing it.', cta: ['Poof vs QuickBooks', '/poof-vs-quickbooks'] },
+]
 
 const fmtTime = (d: Date) => d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
 const money = (n: number) => n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
@@ -75,6 +83,10 @@ export default function HomeShow() {
   const [corr, setCorr] = useState(0)
   const start = useRef<Date | null>(null)
   const touch = () => { if (!start.current) start.current = new Date() }
+
+  // who is here
+  const [who, setWho] = useState<Who>(null)
+  const picked = WHO.find((w) => w.id === who) || null
 
   // act 1
   const [gone, setGone] = useState(false)
@@ -144,34 +156,29 @@ export default function HomeShow() {
   const personDone = tasks.filter((t) => t.kind === 'person' && t.done).length
 
   return (
-    <div className="max-w-[1180px] mx-auto px-4 sm:px-6 pb-24 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_220px] gap-0 lg:gap-12">
-      {/* running order */}
-      <aside className="lg:order-2 lg:sticky lg:top-24 lg:self-start pt-2 lg:pt-9" aria-label="Running order">
-        <h4 className="font-mono text-[11.5px] tracking-[0.08em] uppercase text-muted mb-2.5">Running order · this visit</h4>
-        <ol className="grid grid-cols-2 lg:grid-cols-1 gap-x-3.5 border-t border-ink">
-          {[['The desk', o1], ['The inbox', o2], ['The reconciliation', o3], ['The close', o4]].map(([label, done]) => (
-            <li key={label as string} className={`grid grid-cols-[22px_1fr] gap-2.5 py-2 lg:py-2.5 border-b border-rule text-sm ${done ? 'text-ink' : 'text-muted'}`}>
-              <span className={`relative w-4 h-4 mt-[3px] rounded-[3px] border-[1.5px] ${done ? 'bg-ledger-600 border-ledger-600' : 'border-muted'}`}>
-                {done && <span className="absolute left-[4px] top-[1px] w-[5px] h-[9px] border-white border-r-2 border-b-2 rotate-45" />}
-              </span>
-              <span>{label as string}</span>
-            </li>
+    <div className="max-w-[820px] mx-auto px-4 sm:px-6 pb-24">
+      {/* progress line */}
+      <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-rule flex items-center justify-between gap-3 text-[12.5px] font-mono tracking-[0.06em] uppercase text-muted" aria-label="Progress">
+        <span className="flex items-center gap-2 min-w-0 overflow-x-auto scrollbar-hide">
+          {[['The desk', o1], ['The inbox', o2], ['The reconciliation', o3], ['The close', o4]].map(([label, done], i) => (
+            <span key={label as string} className="flex items-center gap-2 whitespace-nowrap">
+              {i > 0 && <span className="text-rule">·</span>}
+              <span className={`w-2 h-2 rounded-full ${done ? 'bg-ledger-600' : 'border border-muted'}`} aria-hidden="true" />
+              <span className={done ? 'text-ink' : ''}>{label as string}</span>
+            </span>
           ))}
-        </ol>
-        <div className="mt-3 text-[13.5px] text-muted">
-          Decisions by you: <b className="text-ink">{you}</b> · by a rule: <b className="text-ink">{byRule}</b> · corrections: <b className="text-ink">{corr}</b>
-          {signed && <><br /><b className="text-ink">Signed.</b></>}
-        </div>
-      </aside>
+        </span>
+        <span className="hidden sm:inline whitespace-nowrap">You <b className="text-ink">{you}</b> · rule <b className="text-ink">{byRule}</b> · fixes <b className="text-ink">{corr}</b></span>
+      </div>
 
-      <div className="lg:order-1 min-w-0 max-w-[780px]">
+      <div className="min-w-0">
         {/* ACT 1 */}
-        <section className="pt-9 pb-6" id="act1">
-          <p className={eyebrow}>Step 1 · The desk</p>
+        <section className="pt-8 pb-6" id="act1">
+          <p className={eyebrow}>AI bookkeeping · a person on every entry</p>
           {!vanished ? (
             <>
               <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The work disappears.</h1>
-              <p className={sub}>Receipts, the bank feed, the Jobber export, the supply-house ticket in the truck. Press the button.</p>
+              <p className={sub}>Poof runs the books for your business: it reads the feeds, matches, categorizes, and drafts the close, and every entry waits for a person before it lands. {picked ? picked.lead : 'Tell it who you are, or just press the button.'}</p>
             </>
           ) : (
             <>
@@ -179,6 +186,22 @@ export default function HomeShow() {
               <p className={sub}>Nothing reached the books. Six things are waiting for you, each with <b className="text-ink font-semibold">what it found</b>. That is the whole idea: the work moves, the record does not, until you say so.</p>
             </>
           )}
+
+          {/* who are you here as */}
+          {!vanished && (
+            <div className="mb-4" role="group" aria-label="Who are you here as">
+              <div className="grid grid-cols-2 gap-2 max-w-[560px]">
+                {WHO.map((w) => (
+                  <button key={w.id} type="button" onClick={() => setWho(who === w.id ? null : w.id)} aria-pressed={who === w.id}
+                    className={`text-left rounded-lg border px-3 py-2 transition-colors ${who === w.id ? 'border-ledger-600 bg-ledger-200 text-ink' : 'border-rule bg-white text-ink hover:border-ledger-600'}`}>
+                    <span className="block text-sm font-semibold">{w.label}</span>
+                    <span className="block text-[12px] text-muted">{w.sub}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className={`relative aspect-[1024/687] my-2 mb-5 border border-rule overflow-hidden bg-paper-2 ${gone ? 'is-gone' : ''}`}>
             <Image src="/images/ledger-pad.jpg" alt="An empty pale-green ledger pad under a pool of warm light, one tick mark in the corner" fill sizes="(max-width: 780px) 100vw, 780px" className="object-cover" />
             <Image
@@ -187,12 +210,17 @@ export default function HomeShow() {
               fill sizes="(max-width: 780px) 100vw, 780px" priority
               className={`object-cover transition-[opacity,transform] duration-[900ms] ease-out ${gone ? 'opacity-0 scale-[1.03]' : 'opacity-100'}`}
             />
+            {!vanished && (
+              <div className="absolute inset-0 flex items-end justify-center pb-7 sm:pb-9 pointer-events-none">
+                <button type="button" onClick={poof} className="poof-btn pointer-events-auto font-display text-[28px] sm:text-[34px] tracking-[-0.04em] bg-ledger-500 text-white px-10 sm:px-12 py-4 sm:py-[18px] rounded-[10px] shadow-[0_14px_40px_rgba(18,33,26,0.35)] hover:bg-ledger-600 hover:-translate-y-px transition">
+                  Poof.
+                </button>
+              </div>
+            )}
             <div className={`absolute left-4 bottom-3.5 font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink bg-paper-2/90 px-2.5 py-1 transition-opacity duration-[400ms] delay-[600ms] ${gone ? 'opacity-100' : 'opacity-0'}`}>Gone from the desk. Nothing touched the books yet.</div>
           </div>
           {!vanished && (
-            <div className="text-center mt-1">
-              <button type="button" onClick={poof} className="font-display text-[28px] sm:text-[34px] tracking-[-0.04em] bg-ledger-500 text-white px-10 sm:px-12 py-4 sm:py-[18px] rounded-[10px] shadow-[0_10px_30px_rgba(27,94,63,0.22)] hover:bg-ledger-600 hover:-translate-y-px transition">Poof.</button>
-            </div>
+            <p className="text-center text-[13px] text-muted -mt-2 mb-2">Press the button. Nothing gets written; that is the point.</p>
           )}
           {vanished && (
             <>
@@ -204,7 +232,10 @@ export default function HomeShow() {
                   </div>
                 ))}
               </div>
-              <div className="mt-6"><a className={btn} href="#act2">See what is waiting</a></div>
+              <div className="mt-6 flex flex-wrap gap-2.5 items-center">
+                <a className={btn} href="#act2">See what is waiting</a>
+                {picked && <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>}
+              </div>
             </>
           )}
         </section>

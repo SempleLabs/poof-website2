@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Managed bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 128 features, 13 reports, $79/mo.',
+    description: 'Bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 128 features, 13 reports, $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -123,7 +123,7 @@ export function getSoftwareApplicationSchema() {
       'Document Playbooks',
       'Bot-Abuse Gate on Registration (Cloudflare Turnstile)',
       'AI Privacy Chokepoint (PII Redaction on Every Model Call)',
-      'AI Phone Receptionist (Managed Service)',
+      'AI Phone Receptionist (Poof for shops)',
       'Deterministic Safety Triage',
       'Real-Calendar Booking with Double-Booking Prevention',
       'Rule-Based Human Escalation',

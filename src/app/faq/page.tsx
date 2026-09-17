@@ -6,7 +6,8 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
-import { faqData } from '@/lib/featureData'
+import { faqData as allFaqs } from '@/lib/featureData'
+const faqData = allFaqs.filter((f) => !f.audience)
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
 const faqCategories = [

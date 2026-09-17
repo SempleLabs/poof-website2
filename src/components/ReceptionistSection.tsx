@@ -44,13 +44,13 @@ export default function ReceptionistSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-ledger-500/15 border border-ledger-400/30 text-ledger-300 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of Poof Managed Bookkeeping
+              Part of Poof for shops
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
               Every call answered. <span className="text-ledger-600">Every job on the board.</span>
             </h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Managed customers can have Poof answer the shop&apos;s line. An AI receptionist picks up, works out
+              Shops on Poof can have Poof answer the shop&apos;s line. An AI receptionist picks up, works out
               what the caller needs, books a real slot on a real tech&apos;s calendar, dispatches the tech, and
               escalates anything unsafe to a person. The revenue that used to go to voicemail lands on the board
               instead &mdash; and the job it creates gets costed like every other job on your P&amp;L.
@@ -89,7 +89,7 @@ export default function ReceptionistSection() {
               What it does not do
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              We install it for you as part of the managed service &mdash; we provision the number and the voice
+              We install it for you as part of Poof for shops &mdash; we provision the number and the voice
               agent. It is not a switch you flip yourself. <strong className="text-slate-100">Customer-facing
               texts are not built yet</strong>: no booking confirmation, no reminder, no &ldquo;your tech is on
               the way.&rdquo; Your technician does get texted their job &mdash; your customer does not. It does not
