@@ -174,11 +174,11 @@ export default function HomeShow() {
       <div className="min-w-0">
         {/* ACT 1 */}
         <section className="pt-8 pb-6" id="act1">
-          <p className={eyebrow}>AI bookkeeping · a person on every entry</p>
+          <p className={eyebrow}>The back office, run by AI · signed by you</p>
           {!vanished ? (
             <>
               <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The work disappears.</h1>
-              <p className={sub}>Poof runs the books for your business: it reads the feeds, matches, categorizes, and drafts the close, and every entry waits for a person before it lands. {picked ? picked.lead : 'Tell it who you are, or just press the button.'}</p>
+              <p className={sub}>Poof runs the back office: the books, the invoices, the cash plan, the month-end close, and for shops the phone and the field. The AI does all of it up to one line: nothing lands until a person has seen it. {picked ? picked.lead : 'Tell it who you are, or just press the button.'}</p>
             </>
           ) : (
             <>
