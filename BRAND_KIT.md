@@ -215,10 +215,10 @@ A disc dispersing into particles. *The work disappears. The evidence doesn't.* T
 |---|---|
 | **viewBox** | `0 0 64 64` |
 | **Disc** | Half disc, center (30, 32), radius 22, flat edge at x = 30, filled ink `#12211A` (paper `#E8EFE9` when on ink) |
-| **Main particles** | Five, on an arc of radius 19 about the disc center at −75°, −38°, 0°, 38°, 75°; radii 3.6 / 3.4 / 3.2 / 3.4 / 3.6 |
-| **Trailers** | Two, on an arc of radius 26 at ±52°, radius 2.0 |
-| **The survivor** | One particle at (59, 32), radius 2.8, ledger green `#1B5E3F` (light green `#A9D8B8` on ink). It is the only colored element and it never touches another particle |
-| **Spacing rule** | No particle overlaps another; every gap is at least 1 unit. The survivor stands alone past everything |
+| **Main particles** | Five, same fill as the disc: (38, 12) r 3.6 · (45.5, 20) r 3.4 · (49, 32) r 3.2 · (45.5, 44) r 3.4 · (38, 52) r 3.6 |
+| **Trailers** | Two, same fill: (53, 16) r 2 · (53, 48) r 2 |
+| **The survivor** | One particle at (58.5, 32), radius 2.6, ledger green `#1B5E3F` (light green `#A9D8B8` on ink). It is the only colored element and it never touches another particle |
+| **Spacing rule** | These coordinates are the design, approved 2026-09-17 as "D1". **Do not re-derive them from an arc formula**; a re-derivation shipped once and was reverted the same day. Minimum gap between any two particles is 3.1 units |
 | **Mono** | When one color is available, the survivor is ink like the rest |
 | **App icon** | The mark on an ink tile, inset 6 units. The maskable icon is inset 9 units |
 | **Favicon** | The mark alone on transparent; 16 and 32 px PNGs, and `favicon.ico` carrying both |
