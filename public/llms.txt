@@ -17,6 +17,7 @@ Poof has two distinct offerings:
 - [HVAC Bookkeeping](https://www.poofai.com/hvac): Bookkeeping for HVAC shops
 - [Plumbing Bookkeeping](https://www.poofai.com/plumbing): Bookkeeping for plumbing shops
 - [Electrical Bookkeeping](https://www.poofai.com/electrical): Bookkeeping for electrical shops
+- [The close](https://www.poofai.com/close): month-end close as a record: 17 tasks with business-day due dates, 13 evidence-bound and ticked by the books themselves, a reconciliation that ties to one figure with outstanding items carried forward, a signature that locks the period and captures what the month took; closed within five business days or the next month is free
 - [Autopilot with limits](https://www.poofai.com/autopilot): AI that posts categorizations on its own inside limits you set (not a new account, under a dollar ceiling, merchant history unanimous and at least N deep, confidence over your bar), off by default, with standing rules that carry a ceiling and a daily cap and pause themselves on the first correction; never sends anything to a customer
 - [Features](https://www.poofai.com/features): All 128 features across 13 categories
 - [Pricing](https://www.poofai.com/pricing): $79/mo Poof Professional plan, FAQs, launch special

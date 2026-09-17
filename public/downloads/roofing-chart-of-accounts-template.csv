@@ -1,0 +1,59 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,What customers and insurers owe you
+1110,Insurance claims receivable,Asset,Accounts Receivable,Approved claim amounts not yet paid by the carrier; kept apart from homeowner A/R because it collects on a different clock
+1120,Retainage receivable,Asset,Other Current Asset,Held-back portion of commercial contracts; not due until completion
+1200,Inventory - roofing stock,Asset,Other Current Asset,Shingles underlayment and fasteners on hand at the yard
+1300,Vehicles,Asset,Fixed Asset,Trucks and trailers
+1310,Equipment - dump trailers & lifts,Asset,Fixed Asset,Trailers hoists and conveyors
+1320,Tools,Asset,Fixed Asset,Nail guns compressors and ladders above your capitalization threshold
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles equipment and tools
+2010,Accounts payable,Liability,Accounts Payable,Supplier bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Equipment & vehicle notes,Liability,Long Term Liability,Financed trucks and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax collected on materials where your state requires it
+2400,Customer deposits,Liability,Other Current Liability,Money collected before the job starts; not revenue until the roof is on
+2410,Retainage payable,Liability,Other Current Liability,Held-back amounts you owe subs until their work is accepted
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Replacement revenue - residential,Income,Income,Full residential re-roofs; your largest line
+4020,Replacement revenue - commercial,Income,Income,Commercial re-roofs and low-slope work
+4030,Repair revenue,Income,Income,Leak repairs flashing and storm patches
+4040,Insurance claim revenue,Income,Income,Jobs paid by a carrier; track separately so you can see your claims mix and supplement rate
+4050,Supplement revenue,Income,Income,Approved supplements above the original claim; the number that decides whether storm work paid
+4060,Gutters siding & accessories,Income,Income,Add-on trades sold with the roof
+4070,Storm & emergency tarping,Income,Income,Emergency dry-in work; often billed separately from the replacement
+4900,Other income,Income,Other Income,Rebates referral fees and scrap metal
+5010,Roofing materials - shingles & tile,COGS,Cost of Goods Sold,Primary roofing material by the square
+5020,Roofing materials - underlayment & accessories,COGS,Cost of Goods Sold,Underlayment ice-and-water flashing vents ridge and drip edge
+5030,Lumber & decking,COGS,Cost of Goods Sold,Sheathing replacement; separate because it is a change-order driver
+5040,Direct labor - crews,COGS,Cost of Goods Sold,Burdened cost of employed roofers on jobs
+5050,Subcontract labor,COGS,Cost of Goods Sold,Sub crews paid per square; usually the biggest COGS line in roofing
+5060,Dumpsters & haul-off,COGS,Cost of Goods Sold,Tear-off disposal; a real per-job cost most shops bury in expenses
+5070,Permits & inspections,COGS,Cost of Goods Sold,Municipal permits per job
+5080,Equipment rental,COGS,Cost of Goods Sold,Lifts and conveyors rented for a specific job
+5090,Warranty & callback cost,COGS,Cost of Goods Sold,Leak callbacks on completed roofs; the quality signal
+5100,Financing & dealer fees,COGS,Cost of Goods Sold,Fees on financed jobs costed to the job that carried them
+5110,Freight & delivery,COGS,Cost of Goods Sold,Rooftop delivery and supply-house freight
+6010,Vehicles - fuel,Expense,Expense,Fuel for trucks
+6020,Vehicles - maintenance & repairs,Expense,Expense,Truck and trailer upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6110,Insurance - workers' compensation,Expense,Expense,Workers' comp; a large fixed cost in roofing
+6120,Insurance - umbrella,Expense,Expense,Excess liability
+6200,Office & yard rent & utilities,Expense,Expense,Office and material yard
+6210,Office & sales salaries,Expense,Expense,Office staff and salaried sales reps
+6220,Sales commissions,Expense,Expense,Commission paid per closed job; keep apart from salaries to see cost per sale
+6230,Office supplies,Expense,Expense,Consumables
+6300,Software & technology,Expense,Expense,CRM estimating and accounting software
+6400,Marketing & advertising,Expense,Expense,Lead generation door-knocking materials and yard signs
+6410,Canvassing & lead fees,Expense,Expense,Paid leads and canvassing crews; separate so you can see cost per lead
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & continuing education,Expense,Expense,Contractor license and training
+6700,Bank fees,Expense,Expense,Bank charges
+6710,Merchant & card fees,Expense,Expense,Card processing on customer payments
+6800,Depreciation,Expense,Expense,Periodic depreciation
