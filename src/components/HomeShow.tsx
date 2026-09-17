@@ -36,7 +36,7 @@ const BATCH = [
 type Task = { id: string; label: string; kind: 'auto' | 'person' | 'lock'; due: string; done: boolean; ev: string; open?: boolean }
 const INITIAL_TASKS: Task[] = [
   { id: 'feeds', label: 'Feeds reviewed', kind: 'auto', due: 'day 2', done: true, ev: '128 rows in, 128 seen by a person or a rule' },
-  { id: 'bank', label: 'Bank reconciled', kind: 'auto', due: 'day 3', done: false, open: true, ev: 'Operating account: 2,140.00 unexplained. Act 3 fixes this.' },
+  { id: 'bank', label: 'Bank reconciled', kind: 'auto', due: 'day 3', done: false, open: true, ev: 'Operating account: 2,140.00 unexplained. Step 3 fixes this.' },
   { id: 'drafts', label: 'Draft entries posted', kind: 'auto', due: 'day 3', done: true, ev: '0 drafts remain' },
   { id: 'staged', label: 'Staged materials relieved to jobs', kind: 'auto', due: 'day 3', done: true, ev: '$0 left on the staging account' },
   { id: 'deposits', label: 'Customer deposits released on completed jobs', kind: 'auto', due: 'day 3', done: true, ev: 'Rivera install not complete; $3,000 correctly still held' },
@@ -45,7 +45,7 @@ const INITIAL_TASKS: Task[] = [
   { id: 'ap', label: 'A/P reviewed', kind: 'auto', due: 'day 4', done: true, ev: 'Cash plan covers every bill due through Sep 15' },
   { id: 'plans', label: 'Plan visits earned', kind: 'auto', due: 'day 4', done: true, ev: '6 maintenance visits completed, 6 earned' },
   { id: 'jobs', label: 'Job costs tied', kind: 'auto', due: 'day 4', done: true, ev: '41 jobs, labor reconciles to payroll within $0.00' },
-  { id: 'cat', label: 'Categories tied', kind: 'auto', due: 'day 4', done: false, open: true, ev: '3 cards waiting in Approvals. Act 2 is where they are.' },
+  { id: 'cat', label: 'Categories tied', kind: 'auto', due: 'day 4', done: false, open: true, ev: '3 cards waiting in Approvals. Step 2 is where they are.' },
   { id: 'inbox', label: 'Approvals inbox empty', kind: 'auto', due: 'day 4', done: false, open: true, ev: 'Anything still waiting is a decision nobody made.' },
   { id: 'vendor', label: 'Vendor bills cut off', kind: 'person', due: 'day 5', done: false, ev: 'Waiting for a person' },
   { id: 'tieout', label: 'Tie-out clean', kind: 'auto', due: 'day 5', done: true, ev: 'Ran clean at the state the books are in now; re-runs if anything moves' },

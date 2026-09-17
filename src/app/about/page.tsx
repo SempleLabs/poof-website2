@@ -68,7 +68,7 @@ export default function AboutPage() {
     {
       year: "2015-2025",
       title: "The Journey",
-      description: "A decade of experience in auditing and financial controllership for small businesses revealed a critical gap: traditional bookkeeping tools weren't built for the way modern businesses operate."
+      description: "Three years auditing, then seven as a controller for small businesses, showed the same gap every month: the tools were built for accountants, and the people using them were not."
     },
     {
       year: "June 2025",

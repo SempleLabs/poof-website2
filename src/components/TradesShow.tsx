@@ -523,7 +523,7 @@ export default function TradesShow() {
           <p className={noteCls}>
             {landed
               ? 'The job landed under Marcus: fewest jobs today. Marcus was texted at 9:43 PM. Flip the switches and watch what moves and what does not.'
-              : 'Answer the call in Act 1 and the job lands here.'}
+              : 'Answer the call in Step 1 and the job lands here.'}
           </p>
           <div className={guardCls}>
             <b className={strong}>What it does not do.</b> No route optimization.{' '}
@@ -898,7 +898,7 @@ export default function TradesShow() {
             </div>
             {!complete ? (
               <div className="px-4 py-[18px] text-[14.5px] text-muted">
-                Complete the visit in Act 3. The job does not exist until the tech taps Complete. That is the point.
+                Complete the visit in Step 3. The job does not exist until the tech taps Complete. That is the point.
               </div>
             ) : (
               <div>
