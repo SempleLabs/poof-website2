@@ -53,6 +53,8 @@ export default async function ResourcesPage() {
     { trade: 'Plumbing', accounts: 58, href: '/downloads/plumbing-chart-of-accounts-template.csv', guide: '/blog/plumbing-chart-of-accounts' },
     { trade: 'Electrical', accounts: 57, href: '/downloads/electrical-chart-of-accounts-template.csv', guide: '/blog/electrical-chart-of-accounts' },
     { trade: 'Roofing', accounts: 57, href: '/downloads/roofing-chart-of-accounts-template.csv', guide: '/blog/roofing-chart-of-accounts' },
+    { trade: 'Pest control', accounts: 54, href: '/downloads/pest-control-chart-of-accounts-template.csv', guide: '/blog/pest-control-chart-of-accounts' },
+    { trade: 'Landscaping', accounts: 61, href: '/downloads/landscaping-chart-of-accounts-template.csv', guide: '/blog/landscaping-chart-of-accounts' },
   ]
 
   const guides = [
@@ -162,7 +164,7 @@ export default async function ResourcesPage() {
           <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">Chart of accounts templates</p>
           <h2 className="font-display text-3xl sm:text-4xl leading-[1.05] tracking-[-0.035em] text-ink mb-3 text-balance">A chart of accounts built for your trade, ready to import.</h2>
           <p className="text-[17px] text-muted max-w-[62ch] leading-relaxed mb-7">Numbered accounts with types and subtypes in the columns QuickBooks Online and Xero expect, and a one-line reason each account exists. Each comes with a guide that walks the structure.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-ink">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-ink">
             {templates.map((t) => (
               <div key={t.trade} className="py-5 pr-6 border-b border-rule">
                 <h3 className="font-semibold text-ink text-[17px]">{t.trade}</h3>

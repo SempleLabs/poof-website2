@@ -1,0 +1,62 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,What customers owe you; commercial maintenance often runs net 30
+1120,Retainage receivable,Asset,Other Current Asset,Held-back portion of larger install and hardscape contracts
+1200,Inventory - nursery stock & materials,Asset,Other Current Asset,Plants mulch stone and irrigation parts on hand
+1300,Vehicles & trailers,Asset,Fixed Asset,Trucks dump trailers and enclosed trailers
+1310,Equipment - mowers & machines,Asset,Fixed Asset,Mowers skid steers mini excavators and blowers above your threshold
+1320,Small tools,Asset,Fixed Asset,Hand tools above your capitalization threshold
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles and equipment
+2010,Accounts payable,Liability,Accounts Payable,Supplier and nursery bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Equipment & vehicle notes,Liability,Long Term Liability,Financed trucks mowers and machines
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax on materials and taxable services
+2400,Customer deposits,Liability,Other Current Liability,Deposits on install and hardscape projects; not revenue until the work is done
+2410,Deferred revenue - prepaid maintenance,Liability,Other Current Liability,Season paid up front; earned per visit across the season
+2420,Deferred revenue - snow contracts,Liability,Other Current Liability,Seasonal snow contracts paid ahead; earned over the season or per event
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Maintenance revenue - residential,Income,Income,Recurring mowing and bed maintenance for homeowners; your baseline
+4020,Maintenance revenue - commercial,Income,Income,HOA and commercial maintenance contracts
+4030,Install revenue - softscape,Income,Income,Planting sod and bed installs
+4040,Install revenue - hardscape,Income,Income,Patios walls and walkways; the highest-ticket line with its own cost profile
+4050,Irrigation revenue,Income,Income,Irrigation installs repairs and spring/fall service
+4060,Lawn treatment revenue,Income,Income,Fertilization weed control and aeration programs
+4070,Enhancement revenue,Income,Income,Seasonal color mulch refresh and one-off upgrades sold to maintenance customers
+4080,Snow & ice revenue,Income,Income,Plowing salting and seasonal snow contracts
+4900,Other income,Income,Other Income,Rebates referral fees and equipment sales
+5010,Plants & nursery stock,COGS,Cost of Goods Sold,Trees shrubs perennials and sod
+5020,Hardscape materials,COGS,Cost of Goods Sold,Pavers stone base and wall block
+5030,Mulch soil & aggregates,COGS,Cost of Goods Sold,Bulk materials by the yard
+5040,Irrigation parts,COGS,Cost of Goods Sold,Heads pipe valves and controllers
+5050,Fertilizer & chemicals,COGS,Cost of Goods Sold,Lawn program products
+5060,Direct labor - maintenance crews,COGS,Cost of Goods Sold,Burdened crew cost on recurring routes
+5070,Direct labor - install crews,COGS,Cost of Goods Sold,Burdened crew cost on projects; kept apart so route margin and project margin are separate
+5080,Subcontractors,COGS,Cost of Goods Sold,Tree work excavation and specialty subs
+5090,Equipment rental,COGS,Cost of Goods Sold,Machines rented for a specific project
+5100,Dump & disposal fees,COGS,Cost of Goods Sold,Green waste and debris disposal per job
+5110,Plant warranty & replacement,COGS,Cost of Goods Sold,Replacing plants that died under warranty; the quality signal on installs
+5120,Snow materials,COGS,Cost of Goods Sold,Salt and de-icer
+6010,Vehicles - fuel,Expense,Expense,Truck fuel
+6015,Equipment - fuel,Expense,Expense,Mower and machine fuel; apart from truck fuel because it tracks hours not miles
+6020,Vehicles - maintenance & repairs,Expense,Expense,Truck and trailer upkeep
+6025,Equipment - maintenance & repairs,Expense,Expense,Mower blades belts and machine service
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6110,Insurance - workers' compensation,Expense,Expense,Workers' comp
+6200,Yard & shop rent & utilities,Expense,Expense,Yard shop and material storage
+6210,Office & sales salaries,Expense,Expense,Office staff and salaried estimators
+6220,Sales commissions,Expense,Expense,Commission on closed projects; apart from salaries to see cost per sale
+6230,Office supplies,Expense,Expense,Consumables
+6300,Software & technology,Expense,Expense,Routing estimating and accounting software
+6400,Marketing & advertising,Expense,Expense,Lead generation and yard signs
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & certifications,Expense,Expense,Applicator licenses and certifications
+6610,Uniforms & safety equipment,Expense,Expense,Uniforms and PPE
+6700,Bank fees,Expense,Expense,Bank charges
+6710,Merchant & card fees,Expense,Expense,Card processing on customer payments
+6800,Depreciation,Expense,Expense,Periodic depreciation

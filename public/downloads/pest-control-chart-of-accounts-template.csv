@@ -1,0 +1,55 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,What customers owe you on invoiced work
+1200,Inventory - chemicals & bait,Asset,Other Current Asset,Product on the shelf and on the trucks; counted so cost per route is real
+1300,Vehicles,Asset,Fixed Asset,Route trucks; the largest fixed asset in pest control
+1310,Equipment - sprayers & termite rigs,Asset,Fixed Asset,Power sprayers foamers and trenching equipment
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles and equipment
+2010,Accounts payable,Liability,Accounts Payable,Supplier bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Vehicle notes,Liability,Long Term Liability,Financed route trucks
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax on services where your state taxes them
+2400,Deferred revenue - prepaid plans,Liability,Other Current Liability,Annual and semi-annual plans paid up front; earned per visit not on the day the check lands
+2410,Deferred revenue - termite warranties,Liability,Other Current Liability,Annual termite bond and warranty renewals earned over the coverage period
+2500,Termite retreatment reserve,Liability,Other Current Liability,Estimated cost of retreatments you are contractually on the hook for
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Recurring service revenue - residential,Income,Income,Monthly quarterly and bi-monthly general pest routes; your baseline
+4020,Recurring service revenue - commercial,Income,Income,Restaurants property managers and facilities on contract
+4030,One-time service revenue,Income,Income,Initial treatments call-backs outside a plan and one-off jobs
+4040,Termite treatment revenue,Income,Income,Liquid and bait termite treatments; high ticket separate margin
+4050,Termite warranty & renewal revenue,Income,Income,Annual bond renewals earned as the coverage period runs
+4060,Wildlife & exclusion revenue,Income,Income,Trapping exclusion and repair work if you offer it
+4070,Bed bug & specialty revenue,Income,Income,Heat treatments and specialty jobs priced per job
+4080,WDI inspection revenue,Income,Income,Real-estate inspection reports; volume work with its own cost profile
+4900,Other income,Income,Other Income,Rebates referral fees and equipment sales
+5010,Chemicals & products,COGS,Cost of Goods Sold,Insecticides baits and dusts used on jobs; drawn from inventory
+5020,Termite materials,COGS,Cost of Goods Sold,Termiticide and bait stations; kept apart because termite margin is its own business
+5030,Direct labor - technicians,COGS,Cost of Goods Sold,Burdened cost of route and treatment techs; the cost that makes route density matter
+5040,Subcontractors,COGS,Cost of Goods Sold,Fumigation partners exclusion carpenters and specialty subs
+5050,Equipment & supplies per job,COGS,Cost of Goods Sold,Traps monitors stations and consumables placed at the customer's site
+5060,Warranty & retreatment cost,COGS,Cost of Goods Sold,Free retreatments under warranty; the quality signal per route
+5070,Disposal & regulatory fees,COGS,Cost of Goods Sold,Chemical disposal and per-job regulatory charges
+5080,Merchant & financing fees on jobs,COGS,Cost of Goods Sold,Card and financing fees costed to the job that carried them
+6010,Vehicles - fuel,Expense,Expense,Fuel; in pest control the second-largest cost after labor
+6020,Vehicles - maintenance & repairs,Expense,Expense,Route truck upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6110,Insurance - workers' compensation,Expense,Expense,Workers' comp
+6120,Insurance - pollution & professional,Expense,Expense,Pollution liability many states require of applicators
+6200,Office rent & utilities,Expense,Expense,Office and chemical storage
+6210,Office & dispatch salaries,Expense,Expense,Office staff and dispatchers
+6220,Sales commissions,Expense,Expense,Commission per new account; apart from salaries to see cost per sale
+6230,Office supplies,Expense,Expense,Consumables
+6300,Software & route management,Expense,Expense,Routing scheduling and accounting software
+6400,Marketing & advertising,Expense,Expense,Lead generation and door hangers
+6410,Lead fees & referral programs,Expense,Expense,Paid leads and referral payouts; separate so you can see cost per new account
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & continuing education,Expense,Expense,Applicator licenses and CEUs
+6610,Uniforms & safety equipment,Expense,Expense,Uniforms respirators and PPE
+6700,Bank fees,Expense,Expense,Bank charges
+6800,Depreciation,Expense,Expense,Periodic depreciation
