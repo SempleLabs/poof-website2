@@ -1,0 +1,55 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable,Asset,Accounts Receivable,What customers and builders owe you
+1200,Inventory - doors & openers,Asset,Other Current Asset,Doors and openers in stock; large ticket items that should not hit COGS until installed
+1210,Inventory - springs rollers & parts,Asset,Other Current Asset,Truck stock and shop parts counted so cost per service call is real
+1300,Vehicles,Asset,Fixed Asset,Service trucks and install trailers
+1310,Equipment & tools,Asset,Fixed Asset,Winding bars lifts and shop equipment above your threshold
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles and equipment
+2010,Accounts payable,Liability,Accounts Payable,Distributor bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Vehicle & equipment notes,Liability,Long Term Liability,Financed trucks and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax on doors openers and parts
+2400,Customer deposits,Liability,Other Current Liability,Deposits on ordered doors; not revenue until installed
+2410,Deferred revenue - maintenance plans,Liability,Other Current Liability,Prepaid annual tune-up plans earned per visit
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Door install revenue - residential,Income,Income,New and replacement residential doors; your highest ticket
+4020,Door install revenue - commercial,Income,Income,Commercial sectional and rolling doors
+4030,Opener install revenue,Income,Income,Opener sales and installs; often sold with a door and worth seeing alone
+4040,Service & repair revenue,Income,Income,Springs cables rollers openers off-track calls; your volume line
+4050,New construction revenue,Income,Income,Builder and contractor work; lower margin higher volume net 30
+4060,Maintenance plan revenue,Income,Income,Annual tune-up plans earned per visit
+4070,Parts & accessories revenue,Income,Income,Remotes keypads weather seal and over-the-counter parts
+4900,Other income,Income,Other Income,Rebates referral fees and scrap
+5010,Doors,COGS,Cost of Goods Sold,Door sections and hardware from inventory when installed
+5020,Openers,COGS,Cost of Goods Sold,Opener units from inventory when installed
+5030,Springs & repair parts,COGS,Cost of Goods Sold,Springs cables rollers hinges and drums used on service calls
+5040,Direct labor - install,COGS,Cost of Goods Sold,Burdened tech cost on installs
+5050,Direct labor - service,COGS,Cost of Goods Sold,Burdened tech cost on service calls; kept apart so service margin is its own number
+5060,Subcontractors,COGS,Cost of Goods Sold,Framing electrical and specialty subs on installs
+5070,Permits & inspections,COGS,Cost of Goods Sold,Permits where required especially commercial
+5080,Warranty & callback cost,COGS,Cost of Goods Sold,Free return visits and warranty parts; the quality signal per tech
+5090,Freight & delivery,COGS,Cost of Goods Sold,Distributor freight on door orders
+5100,Financing & dealer fees,COGS,Cost of Goods Sold,Fees on financed installs costed to the job that carried them
+6010,Vehicles - fuel,Expense,Expense,Fuel for service trucks
+6020,Vehicles - maintenance & repairs,Expense,Expense,Truck and trailer upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6110,Insurance - workers' compensation,Expense,Expense,Workers' comp; a real cost with torsion springs in the work
+6200,Shop & office rent & utilities,Expense,Expense,Shop and door storage
+6210,Office & dispatch salaries,Expense,Expense,Office staff and dispatch
+6220,Sales commissions,Expense,Expense,Commission on door sales; apart from salaries to see cost per sale
+6230,Office supplies,Expense,Expense,Consumables
+6300,Software & technology,Expense,Expense,Dispatch estimating and accounting software
+6400,Marketing & advertising,Expense,Expense,Lead generation
+6410,Lead fees,Expense,Expense,Paid leads; garage door is one of the most expensive lead markets in home services so it needs its own line
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & training,Expense,Expense,Contractor license and manufacturer training
+6700,Bank fees,Expense,Expense,Bank charges
+6710,Merchant & card fees,Expense,Expense,Card processing on customer payments
+6800,Depreciation,Expense,Expense,Periodic depreciation
