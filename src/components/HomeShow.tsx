@@ -386,7 +386,7 @@ export default function HomeShow() {
 
         {/* SOURCES */}
         <section className="pt-12 pb-6 border-t border-rule" id="sources">
-          <p className="text-sm text-muted max-w-[62ch]">Every figure on this page is either a demo, marked as one, or a screenshot of the founder&apos;s own books. Prices were checked against QuickBooks on 23 Aug 2026. The two claims we have not earned yet, that it runs overnight on its own and that it will nag you at 3am, are not on this page.</p>
+          <p className="text-sm text-muted max-w-[62ch]">Every figure on this page is either a demo, marked as one, or a screenshot of the founder&apos;s own books. Prices were checked against QuickBooks on 23 Aug 2026.</p>
           <p className="text-sm text-muted mt-3 max-w-[60ch]">Run a shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">See a service call go from the phone to the P&amp;L →</Link></p>
         </section>
       </div>

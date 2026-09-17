@@ -58,7 +58,9 @@ current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are c
 >
 > **Still hold "handles it overnight on its own."** No nightly sweep has yet been watched doing
 > this on live books. The mechanism is proven; the habit is not. Say what a rule *does*, not what a
-> morning *feels like*, until one has been seen.
+> morning *feels like*, until one has been seen. **This is a rule for writers, not a sentence for
+> the site: the site never lists what it does not claim** (decided 2026-09-16; a homepage line that
+> named the two withheld claims read as a confession and was removed).
 >
 > **Proven 2026-09-14, and how.** The month-end close as a record, the checklist, and the rebuilt
 > reconciliation were walked end to end on a real August close from a phone — the founder's own
