@@ -44,7 +44,7 @@ export default function ReceptionistSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-ledger-500/15 border border-ledger-400/30 text-ledger-300 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of The Augmented Operator
+              Part of Poof Managed Bookkeeping
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
               Every call answered. <span className="text-ledger-600">Every job on the board.</span>

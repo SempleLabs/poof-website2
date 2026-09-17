@@ -341,7 +341,7 @@ export default function TradesShow() {
       <div className="min-w-0 max-w-[780px]">
         {/* ------------------------------------------------------------ ACT 1 */}
         <section className={actCls} id="act1">
-          <p className={eyebrow}>Act 1 · The call</p>
+          <p className={eyebrow}>Step 1 · The call</p>
           <h1 className={`${display} mb-4 text-[clamp(42px,6.6vw,80px)]`}>The phone rings at 9:40pm.</h1>
           <p className={subCls}>
             Answer it, then follow the job to the P&amp;L. Count how many times somebody types it in.{' '}
@@ -431,7 +431,7 @@ export default function TradesShow() {
 
         {/* ------------------------------------------------------------ ACT 2 */}
         <section className={actCls} id="act2">
-          <p className={eyebrow}>Act 2 · The board</p>
+          <p className={eyebrow}>Step 2 · The board</p>
           <h2 className={h2Cls}>The job lands. You decide who goes, or you let it.</h2>
           <p className={subCls}>
             Two switches: whether the AI picks <b className={strong}>who</b> goes, and whether it{' '}
@@ -523,7 +523,7 @@ export default function TradesShow() {
           <p className={noteCls}>
             {landed
               ? 'The job landed under Marcus: fewest jobs today. Marcus was texted at 9:43 PM. Flip the switches and watch what moves and what does not.'
-              : 'Answer the call in Act 1 and the job lands here.'}
+              : 'Answer the call in Step 1 and the job lands here.'}
           </p>
           <div className={guardCls}>
             <b className={strong}>What it does not do.</b> No route optimization.{' '}
@@ -534,7 +534,7 @@ export default function TradesShow() {
 
         {/* ------------------------------------------------------------ ACT 3 */}
         <section className={actCls} id="act3">
-          <p className={eyebrow}>Act 3 · The truck</p>
+          <p className={eyebrow}>Step 3 · The truck</p>
           <h2 className={h2Cls}>Your tech closes the job from a text.</h2>
           <p className={subCls}>
             No account, no password, no app. The link opens one job and dies on reschedule.{' '}
@@ -761,7 +761,7 @@ export default function TradesShow() {
 
         {/* ------------------------------------------------------------ ACT 4 */}
         <section className={actCls} id="act4">
-          <p className={eyebrow}>Act 4 · The office</p>
+          <p className={eyebrow}>Step 4 · The office</p>
           <h2 className={h2Cls}>Nothing reaches the customer until a person sends it.</h2>
           <p className={subCls}>
             The dispatcher opens the field report: the tech&apos;s words, the photos, the parts, the sign-off, and
@@ -872,11 +872,11 @@ export default function TradesShow() {
               <span className="text-sm text-muted">At a shop, not a desk.</span>
             </div>
             <div>
-              <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, The Augmented Operator</h3>
+              <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, former controller</h3>
               <p className="m-0 max-w-[52ch] text-[15px] text-muted">
-                Ten years as an auditor and controller for small businesses. The practice runs HVAC, plumbing, and
-                electrical shops&apos; books on Poof. Books closed by the 15th business day, every completed job
-                costed within 5, a controller who answers within 1.
+                Three years as an auditor, then seven as a controller for small businesses. He reviews every managed close
+                himself. Books closed by the 15th business day, every completed job costed within 5, a controller
+                who answers within 1.
               </p>
             </div>
           </div>
@@ -884,7 +884,7 @@ export default function TradesShow() {
 
         {/* ------------------------------------------------------------ ACT 5 */}
         <section className={actCls} id="act5">
-          <p className={eyebrow}>Act 5 · The job</p>
+          <p className={eyebrow}>Step 5 · The job</p>
           <h2 className={h2Cls}>A service call became a job on its own.</h2>
           <p className={subCls}>
             Completing the visit created the job, linked the customer, and tagged the invoice. Part cost from the
@@ -898,7 +898,7 @@ export default function TradesShow() {
             </div>
             {!complete ? (
               <div className="px-4 py-[18px] text-[14.5px] text-muted">
-                Complete the visit in Act 3. The job does not exist until the tech taps Complete. That is the point.
+                Complete the visit in Step 3. The job does not exist until the tech taps Complete. That is the point.
               </div>
             ) : (
               <div>

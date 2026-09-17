@@ -14,14 +14,14 @@ import CloseRunSection from '@/components/CloseRunSection'
 import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Bookkeeping for Trade Contractors | The Augmented Operator',
+  title: 'Bookkeeping for Trade Contractors | Poof Managed Bookkeeping',
   description:
     'Bookkeeping for HVAC, plumbing, and electrical shops doing $750K–$3M. Per-job profit on every monthly close, reviewed by a former controller. From $1,200/mo.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
-    title: 'The Augmented Operator — Bookkeeping for Trade Contractors',
+    title: 'Poof Managed Bookkeeping — Bookkeeping for Trade Contractors',
     description:
       'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for HVAC, plumbing, and electrical shops.',
     url: 'https://www.poofai.com/trades',
@@ -88,7 +88,7 @@ const howItWorks = [
 
 const plans = [
   {
-    name: 'The Augmented Operator',
+    name: 'Poof Managed Bookkeeping',
     price: '$1,200',
     cadence: '/mo',
     bestFor: '2–4 truck shops, $750K–$1.5M revenue',
@@ -104,7 +104,7 @@ const plans = [
     highlight: true,
   },
   {
-    name: 'The Augmented Operator Plus',
+    name: 'Poof Managed Bookkeeping Plus',
     price: '$1,500',
     cadence: '/mo',
     bestFor: '5+ truck shops, $1.5M–$3M revenue',
@@ -190,7 +190,7 @@ export default function TradesPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getServiceSchema({
-              name: 'The Augmented Operator — Bookkeeping for Trade Contractors',
+              name: 'Poof Managed Bookkeeping — Bookkeeping for Trade Contractors',
               description:
                 'Managed bookkeeping for HVAC, plumbing, and electrical contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
               price: '1200',
@@ -439,7 +439,7 @@ export default function TradesPage() {
           </div>
 
           <p className="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
-            Above $3M in revenue? <span className="font-semibold text-slate-700">The Augmented Operator Pro</span> starts
+            Above $3M in revenue? <span className="font-semibold text-slate-700">Poof Managed Bookkeeping Pro</span> starts
             at $2,400/mo, scoped per shop. Book a call and we&apos;ll size it with you.
           </p>
 
@@ -456,14 +456,14 @@ export default function TradesPage() {
             <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10">
               <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">Built by a controller, not a startup</div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
-                Austin Semple — 10+ years of audit and controller work
+                Austin Semple — three years as an auditor, seven as a controller
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
                   Before Poof, Austin spent a decade auditing and running the books for small service businesses. The pattern was always the same: an owner who built a real business from a service truck, paying $800–$1,500/mo for a bookkeeper who delivered a PDF three weeks late and couldn&apos;t answer the one question that mattered — &ldquo;which jobs made money?&rdquo;
                 </p>
                 <p>
-                  The Augmented Operator is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
+                  Poof Managed Bookkeeping is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
                 </p>
                 <p className="text-slate-900 font-medium">
                   Austin personally onboards the first 50 shops. If that&apos;s you, you&apos;re working directly with the founder.

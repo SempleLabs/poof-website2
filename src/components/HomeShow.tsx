@@ -33,22 +33,10 @@ const BATCH = [
   ['08/28 · FERGUSON ENT · no job yet', '$412.00'],
 ] as const
 
-const CLAIMS: [string, string, 'proven' | 'counted' | 'verified' | 'commitment' | 'held', string][] = [
-  ['Nothing reaches your books without you seeing it first', 'Every AI write path stages as a card: the nightly sweep, Ask Poof, the detectors. Live 8 Sep 2026; integration-tested against a real database.', 'proven', 'Proven'],
-  ['A rule that is wrong stops itself', 'Seven-case acceptance test in CI, 8 Sep 2026. Proving it found three defects the 1,399 unit tests had missed, and they were fixed the same day.', 'proven', 'Proven'],
-  ['The reconciliation ties to one figure, and outstanding items carry forward', "Walked end to end on the founder's own August books, from a phone, 14 Sep 2026. Covered by a July → August → September carry-forward test.", 'proven', 'Proven'],
-  ['The close is a record with a 17-task checklist, 12 evidence-bound', 'Same walk, same day: start to signature to reopen on real books. Every close stamps its own copy of the list.', 'proven', 'Proven'],
-  ['128 features', 'The sum of 13 groups in the feature data, checked 15 Sep 2026. Verify by summing the groups, not by reading a table.', 'counted', 'Counted'],
-  ['44% cheaper than QuickBooks Plus', "$79 flat against Plus at $140, verified 23 Aug 2026 after Intuit's 1 Aug increase. Compared to Plus, not Simple Start, because Simple Start cannot do the job.", 'verified', 'Verified'],
-  ['Books closed by the 15th business day', 'A commitment in the managed service, not a statistic. It is the SLA, stated as a promise.', 'commitment', 'Commitment'],
-  ['"Handles it overnight on its own"', 'The mechanism is proven. No nightly sweep has yet been watched executing under a rule on live books. Until one has, this stays off the site.', 'held', 'Not claimed'],
-  ['"It nagged me at 3am"', 'The nudge is under test. A live message has not been watched arriving. We say "a late task shows up in Approvals and on your phone" and stop there.', 'held', 'Not claimed'],
-]
-
 type Task = { id: string; label: string; kind: 'auto' | 'person' | 'lock'; due: string; done: boolean; ev: string; open?: boolean }
 const INITIAL_TASKS: Task[] = [
   { id: 'feeds', label: 'Feeds reviewed', kind: 'auto', due: 'day 2', done: true, ev: '128 rows in, 128 seen by a person or a rule' },
-  { id: 'bank', label: 'Bank reconciled', kind: 'auto', due: 'day 3', done: false, open: true, ev: 'Operating account: 2,140.00 unexplained. Act 3 fixes this.' },
+  { id: 'bank', label: 'Bank reconciled', kind: 'auto', due: 'day 3', done: false, open: true, ev: 'Operating account: 2,140.00 unexplained. Step 3 fixes this.' },
   { id: 'drafts', label: 'Draft entries posted', kind: 'auto', due: 'day 3', done: true, ev: '0 drafts remain' },
   { id: 'staged', label: 'Staged materials relieved to jobs', kind: 'auto', due: 'day 3', done: true, ev: '$0 left on the staging account' },
   { id: 'deposits', label: 'Customer deposits released on completed jobs', kind: 'auto', due: 'day 3', done: true, ev: 'Rivera install not complete; $3,000 correctly still held' },
@@ -57,7 +45,7 @@ const INITIAL_TASKS: Task[] = [
   { id: 'ap', label: 'A/P reviewed', kind: 'auto', due: 'day 4', done: true, ev: 'Cash plan covers every bill due through Sep 15' },
   { id: 'plans', label: 'Plan visits earned', kind: 'auto', due: 'day 4', done: true, ev: '6 maintenance visits completed, 6 earned' },
   { id: 'jobs', label: 'Job costs tied', kind: 'auto', due: 'day 4', done: true, ev: '41 jobs, labor reconciles to payroll within $0.00' },
-  { id: 'cat', label: 'Categories tied', kind: 'auto', due: 'day 4', done: false, open: true, ev: '3 cards waiting in Approvals. Act 2 is where they are.' },
+  { id: 'cat', label: 'Categories tied', kind: 'auto', due: 'day 4', done: false, open: true, ev: '3 cards waiting in Approvals. Step 2 is where they are.' },
   { id: 'inbox', label: 'Approvals inbox empty', kind: 'auto', due: 'day 4', done: false, open: true, ev: 'Anything still waiting is a decision nobody made.' },
   { id: 'vendor', label: 'Vendor bills cut off', kind: 'person', due: 'day 5', done: false, ev: 'Waiting for a person' },
   { id: 'tieout', label: 'Tie-out clean', kind: 'auto', due: 'day 5', done: true, ev: 'Ran clean at the state the books are in now; re-runs if anything moves' },
@@ -161,7 +149,7 @@ export default function HomeShow() {
       <aside className="lg:order-2 lg:sticky lg:top-24 lg:self-start pt-2 lg:pt-9" aria-label="Running order">
         <h4 className="font-mono text-[11.5px] tracking-[0.08em] uppercase text-muted mb-2.5">Running order · this visit</h4>
         <ol className="grid grid-cols-2 lg:grid-cols-1 gap-x-3.5 border-t border-ink">
-          {[['The vanish', o1], ['The method', o2], ['The tie', o3], ['The record', o4]].map(([label, done]) => (
+          {[['The desk', o1], ['The inbox', o2], ['The reconciliation', o3], ['The close', o4]].map(([label, done]) => (
             <li key={label as string} className={`grid grid-cols-[22px_1fr] gap-2.5 py-2 lg:py-2.5 border-b border-rule text-sm ${done ? 'text-ink' : 'text-muted'}`}>
               <span className={`relative w-4 h-4 mt-[3px] rounded-[3px] border-[1.5px] ${done ? 'bg-ledger-600 border-ledger-600' : 'border-muted'}`}>
                 {done && <span className="absolute left-[4px] top-[1px] w-[5px] h-[9px] border-white border-r-2 border-b-2 rotate-45" />}
@@ -179,7 +167,7 @@ export default function HomeShow() {
       <div className="lg:order-1 min-w-0 max-w-[780px]">
         {/* ACT 1 */}
         <section className="pt-9 pb-6" id="act1">
-          <p className={eyebrow}>Act 1 · The vanish</p>
+          <p className={eyebrow}>Step 1 · The desk</p>
           {!vanished ? (
             <>
               <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The work disappears.</h1>
@@ -188,7 +176,7 @@ export default function HomeShow() {
           ) : (
             <>
               <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The evidence doesn&apos;t.</h1>
-              <p className={sub}>Nothing reached the books. Six things are waiting for you, each with <b className="text-ink font-semibold">what it found</b>. That is the whole trick, and it is the only one we do.</p>
+              <p className={sub}>Nothing reached the books. Six things are waiting for you, each with <b className="text-ink font-semibold">what it found</b>. That is the whole idea: the work moves, the record does not, until you say so.</p>
             </>
           )}
           <div className={`relative aspect-[1024/687] my-2 mb-5 border border-rule overflow-hidden bg-paper-2 ${gone ? 'is-gone' : ''}`}>
@@ -199,7 +187,7 @@ export default function HomeShow() {
               fill sizes="(max-width: 780px) 100vw, 780px" priority
               className={`object-cover transition-[opacity,transform] duration-[900ms] ease-out ${gone ? 'opacity-0 scale-[1.03]' : 'opacity-100'}`}
             />
-            <div className={`absolute left-4 bottom-3.5 font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink bg-paper-2/90 px-2.5 py-1 transition-opacity duration-[400ms] delay-[600ms] ${gone ? 'opacity-100' : 'opacity-0'}`}>Empty. Nothing was written.</div>
+            <div className={`absolute left-4 bottom-3.5 font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink bg-paper-2/90 px-2.5 py-1 transition-opacity duration-[400ms] delay-[600ms] ${gone ? 'opacity-100' : 'opacity-0'}`}>Gone from the desk. Nothing touched the books yet.</div>
           </div>
           {!vanished && (
             <div className="text-center mt-1">
@@ -216,15 +204,15 @@ export default function HomeShow() {
                   </div>
                 ))}
               </div>
-              <div className="mt-6"><a className={btn} href="#act2">Show me the method</a></div>
+              <div className="mt-6"><a className={btn} href="#act2">See what is waiting</a></div>
             </>
           )}
         </section>
 
         {/* ACT 2 */}
         <section className="pt-16 pb-6 border-t border-rule" id="act2">
-          <p className={eyebrow}>Act 2 · The method</p>
-          <h2 className={h2}>Every trick has a method. Ours is on the card.</h2>
+          <p className={eyebrow}>Step 2 · The inbox</p>
+          <h2 className={h2}>Every entry waits for you, with its reasons.</h2>
           <p className={sub}>Approve it, approve part of it, or say why not. Then grant a rule from work you just read, and watch it <b className="text-ink font-semibold">stop itself</b> the first time you contradict it.</p>
           <div className="grid gap-3.5">
             {/* card 1 */}
@@ -312,7 +300,7 @@ export default function HomeShow() {
 
         {/* ACT 3 */}
         <section className="pt-16 pb-6 border-t border-rule" id="act3">
-          <p className={eyebrow}>Act 3 · The tie</p>
+          <p className={eyebrow}>Step 3 · The reconciliation</p>
           <h2 className={h2}>One figure. It ties or it doesn&apos;t.</h2>
           <p className={sub}>Statement ending, less the books at period end, less what is still outstanding. The screen reads it from the server; completion stores the same number; the close reads that. <b className="text-ink font-semibold">There is no second figure.</b></p>
           <div className="bg-white border border-rule px-[18px] pt-1.5 pb-4 max-w-[560px]">
@@ -332,7 +320,7 @@ export default function HomeShow() {
 
         {/* ACT 4 */}
         <section className="pt-16 pb-6 border-t border-rule" id="act4">
-          <p className={eyebrow}>Act 4 · The record</p>
+          <p className={eyebrow}>Step 4 · The close</p>
           <h2 className={h2}>The close is a record, and you are the signature.</h2>
           <p className={sub}>Seventeen tasks with due dates. <b className="text-ink font-semibold">Twelve tick themselves</b> when the books prove them and cannot be ticked by hand; each open one says why in a sentence. The rest are a person&apos;s tick, recorded with who and when. This page has been keeping score since you arrived.</p>
           <ul className="border-t border-ink">
@@ -381,8 +369,8 @@ export default function HomeShow() {
 
         {/* PRACTITIONER */}
         <section className="pt-16 pb-6 border-t border-rule" id="practitioner">
-          <p className={eyebrow}>Built by a practitioner</p>
-          <h2 className={h2}>The person who wrote this signed closes for ten years first.</h2>
+          <p className={eyebrow}>Built by a former controller</p>
+          <h2 className={h2}>The person who wrote this signed closes for a living first.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-[22px] items-center mt-7 px-6 py-[22px] bg-white border border-rule">
             <div className="aspect-square max-w-[220px] border border-rule bg-paper-2 flex flex-col justify-end p-3.5 gap-1.5">
               <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600">Real photograph · Austin Semple</span>
@@ -390,32 +378,16 @@ export default function HomeShow() {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1.5">Austin Semple, former controller</h3>
-              <p className="text-[15px] text-muted max-w-[52ch]">Ten years of audit and controller work for small businesses, then Poof. His own August close ran on it, from a phone, and every defect that walk found was fixed the same day. He runs The Augmented Operator, the practice that keeps trade shops&apos; books on Poof.</p>
+              <p className="text-[15px] text-muted max-w-[52ch]">Three years as an auditor, then seven as a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
               <p className="mt-3 text-sm"><Link href="/about" className="text-ledger-600 font-semibold hover:text-ledger-700">More about Austin</Link></p>
             </div>
           </div>
         </section>
 
-        {/* ACT 5 */}
-        <section className="pt-16 pb-6 border-t border-rule" id="act5">
-          <p className={eyebrow}>Act 5 · The claims</p>
-          <h2 className={h2}>Every claim on this page, with its evidence.</h2>
-          <p className={sub}>The product puts the evidence on the card. The website does the same for itself, <b className="text-ink font-semibold">including the claims we will not make yet</b>. A bookkeeper is professionally suspicious of marketing. This is the page that earns it.</p>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-[14.5px]">
-              <thead><tr>{['Claim', 'Evidence', 'Status'].map((h) => <th key={h} className="text-left font-mono text-[11.5px] tracking-[0.08em] uppercase text-muted font-medium pb-2.5 pr-3 border-b border-ink">{h}</th>)}</tr></thead>
-              <tbody>
-                {CLAIMS.map(([c, e, st, label]) => (
-                  <tr key={c}>
-                    <td className="py-2.5 pr-3 border-b border-rule align-top font-semibold">{c}</td>
-                    <td className="py-2.5 pr-3 border-b border-rule align-top">{e}</td>
-                    <td className="py-2.5 pr-3 border-b border-rule align-top"><span className={`inline-block font-mono text-[11px] tracking-[0.06em] uppercase px-[7px] py-[3px] rounded-[3px] whitespace-nowrap ${st === 'held' ? 'bg-audit-100 text-audit' : st === 'commitment' ? 'bg-paper text-ink' : 'bg-ledger-200 text-ledger-600'}`}>{label}</span></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-sm text-muted mt-4 max-w-[60ch]">Run a shop? There is a second trick. <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">The phone rings at 9:40pm →</Link></p>
+        {/* SOURCES */}
+        <section className="pt-12 pb-6 border-t border-rule" id="sources">
+          <p className="text-sm text-muted max-w-[62ch]">Every figure on this page is either a demo, marked as one, or a screenshot of the founder&apos;s own books. Prices were checked against QuickBooks on 23 Aug 2026. The two claims we have not earned yet, that it runs overnight on its own and that it will nag you at 3am, are not on this page.</p>
+          <p className="text-sm text-muted mt-3 max-w-[60ch]">Run a shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">See a service call go from the phone to the P&amp;L →</Link></p>
         </section>
       </div>
     </div>

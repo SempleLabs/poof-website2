@@ -8,7 +8,7 @@ export default function TradesHero() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimateOnScroll animation="fade-up">
           <div className="inline-flex items-center gap-2 bg-ledger-100 border border-ledger-300 text-ledger-700 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-            The Augmented Operator — HVAC · Plumbing · Electrical
+            Poof Managed Bookkeeping — HVAC · Plumbing · Electrical
           </div>
           <h1
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.05] tracking-tight"

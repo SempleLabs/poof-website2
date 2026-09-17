@@ -57,7 +57,7 @@ const supportFaqs = [
   {
     question: 'Do you help with moving my books over from QuickBooks or Xero?',
     answer:
-      'Yes. The Augmented Operator includes a one-time onboarding that covers historical cleanup and migration from QuickBooks Online or Xero. Email support@poofai.com or book a call to talk through what moving your books would involve.',
+      'Yes. Poof Managed Bookkeeping includes a one-time onboarding that covers historical cleanup and migration from QuickBooks Online or Xero. Email support@poofai.com or book a call to talk through what moving your books would involve.',
   },
 ]
 
