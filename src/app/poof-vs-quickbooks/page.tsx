@@ -231,7 +231,7 @@ export default function PoofVsQuickbooksPage() {
               </ul>
               <p className="text-slate-600 leading-relaxed">
                 Autonomy is off until you grant it, one rule at a time &mdash; there is no global switch, and no
-                rule can ever send anything to a customer. Invoices and credit notes stay a human&apos;s decision
+                ledger rule can ever send anything to a customer. Invoices and credit notes stay a human&apos;s decision
                 whatever a rule says. And &ldquo;what did AI change this month, and who allowed it&rdquo; is a
                 single page, which is the question your accountant will ask.
               </p>

@@ -854,8 +854,9 @@ export default function TradesShow() {
           </div>
 
           <div className={guardCls}>
-            <b className={strong}>Rules can never do this.</b> No rule can send anything to a customer. Invoices are
-            always a person&apos;s decision.
+            <b className={strong}>Rules can never do this.</b> No ledger rule can send anything to a customer. Invoices are
+            always a person&apos;s decision. The phone is a different channel: the receptionist talks to callers and
+            books jobs inside rules written in code, and nothing granted in the books can reach it.
           </div>
         </section>
 

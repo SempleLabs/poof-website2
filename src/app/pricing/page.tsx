@@ -52,7 +52,7 @@ export default function PricingPage() {
     },
     {
       question: 'What if I need to cancel?',
-      answer: 'You can cancel anytime with one click. No contracts, no cancellation fees. You\'ll have access until the end of your billing period, and can export all your data.'
+      answer: 'You can cancel anytime. No contracts, no cancellation fees. Email support@poofai.com with the change you want and we will take care of it; you keep access until the end of your billing period, and you can export all your data.'
     },
     {
       question: 'How does Poof compare to QuickBooks?',
