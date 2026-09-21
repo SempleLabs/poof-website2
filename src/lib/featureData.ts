@@ -565,7 +565,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "Approvals & AI Autonomy",
     icon: "approvals",
-    note: "The approvals inbox is on for everyone \u2014 it is how every AI write reaches the books. Autonomy is off until a person grants it, one rule at a time: there is no default, and no global \u201clet the AI do it\u201d switch. No rule can ever send anything to a customer, and a rule that writes to the ledger must carry a dollar limit or it does not run.",
+    note: "The approvals inbox is on for everyone \u2014 it is how every AI write reaches the books. Autonomy is off until a person grants it, one rule at a time: there is no default, and no global \u201clet the AI do it\u201d switch. No ledger rule can ever send anything to a customer, and a rule that writes to the ledger must carry a dollar limit or it does not run. The phone is a separate channel a shop opts into, and nothing granted here can reach it.",
     features: [
       {
         title: "The Approvals Inbox",
@@ -655,7 +655,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Is AI autonomy on by default?",
-    answer: "No. Autonomy is off until you grant it, one rule at a time. There is no default and no global \u201clet the AI run\u201d switch \u2014 a new account asks about everything until its owner decides otherwise. No rule can ever send anything to a customer: invoices and credit notes are always a human's decision, whatever a rule says. Rules cannot be created from a settings screen either, only from work someone actually reviewed. Every rule lives on one page showing what it has handled and who granted it, revoking is instant, and \u201cwhat did AI change this month, and who allowed it\u201d is a single page for your accountant.",
+    answer: "No. Autonomy is off until you grant it, one rule at a time. There is no default and no global \u201clet the AI run\u201d switch \u2014 a new account asks about everything until its owner decides otherwise. No ledger rule can ever send anything to a customer: invoices and credit notes are always a human's decision, whatever a rule says. The phone is a separate channel a shop opts into: the receptionist talks to callers and books jobs inside rules written in code, and nothing granted in the books can reach it. Rules cannot be created from a settings screen either, only from work someone actually reviewed. Every rule lives on one page showing what it has handled and who granted it, revoking is instant, and \u201cwhat did AI change this month, and who allowed it\u201d is a single page for your accountant.",
     category: "AI & Automation"
   },
   {

@@ -44,7 +44,7 @@ const steps = [
     title: 'You approve',
     when: 'A few minutes a day',
     body: 'Approve a card, approve part of a batch, or reject it with a reason that gets recorded. When you have approved the same kind of work a few times, grant a standing rule from the card in front of you. Poof writes the rule in plain sentences, tells you how much of the card it covers, and stops the rule itself the first time you contradict it.',
-    detail: 'Nothing reaches your books without a person seeing it first. A rule can never send anything to a customer, and a rule that writes to the ledger must carry a dollar limit.',
+    detail: 'Nothing reaches your books without a person seeing it first. No ledger rule can send anything to a customer, and a rule that writes to the ledger must carry a dollar limit.',
   },
   {
     n: '04',

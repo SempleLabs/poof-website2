@@ -101,8 +101,10 @@ export default function ApprovalsSection() {
             </p>
             <p className="text-slate-300 leading-relaxed">
               Autonomy is off until you grant it, one rule at a time. There is no global &ldquo;let the AI
-              run&rdquo; switch, no rule can ever send anything to a customer, and a rule that writes to your
-              ledger must carry a dollar limit or it does not run.{' '}
+              run&rdquo; switch, no ledger rule can ever send anything to a customer, and a rule that writes to your
+              ledger must carry a dollar limit or it does not run. The phone is a separate channel a shop opts
+              into: the receptionist talks to callers and books jobs inside rules written in code, and nothing
+              granted in the books can reach it.{' '}
               <span className="text-white font-medium">
                 What did AI change this month, and who allowed it
               </span>{' '}
