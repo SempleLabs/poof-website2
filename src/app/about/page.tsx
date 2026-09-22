@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Poof — Built by a Former Controller',
     description:
-      'Poof automates bookkeeping for small businesses. Built by Austin Semple, a former controller: three years in audit, then seven running the books for small businesses.',
+      'Poof runs the small-business back office. Built by Austin Semple, a former controller: three years in audit, then seven running the books for small businesses.',
     url: 'https://www.poofai.com/about',
     siteName: 'Poof',
     type: 'website',
@@ -78,7 +78,7 @@ export default function AboutPage() {
     {
       year: "2026",
       title: "Reimagining Bookkeeping",
-      description: "Today, Poof includes 128 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 13 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself. And we found our focus: bookkeeping for HVAC, plumbing, and electrical shops — AI agents do the work, and a former controller reviews every monthly close."
+      description: "Today, Poof includes 128 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 13 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself. And we found our focus: running the whole back office, with a person on every entry — the books at the center, the phone and the field for the shops that need them."
     }
   ]
 
@@ -309,7 +309,7 @@ export default function AboutPage() {
               href="https://app.poofai.com/register"
               className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
-              Start Free Trial →
+              Start free trial →
             </Link>
             <p className="text-white/80 text-sm mt-4">
               30-day free trial • Cancel anytime

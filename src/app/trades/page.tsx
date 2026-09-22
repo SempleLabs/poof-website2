@@ -5,176 +5,103 @@ import TradesShow from '@/components/TradesShow'
 import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
-import BookCallButton from '@/components/BookCallButton'
 import ReceptionistSection from '@/components/ReceptionistSection'
 import FieldServiceSection from '@/components/FieldServiceSection'
 import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
 import ApprovalsSection from '@/components/ApprovalsSection'
 import CloseRunSection from '@/components/CloseRunSection'
-import { getFaqPageSchema, getServiceSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
+import CtaSection from '@/components/CtaSection'
+import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'Bookkeeping for Trade Contractors | Poof for shops',
+  title: 'Poof for shops — the back office for HVAC, plumbing, and electrical | Poof',
   description:
-    'Bookkeeping for HVAC, plumbing, and electrical shops doing $750K–$3M. Per-job profit on every monthly close, reviewed by a former controller. From $1,200/mo.',
+    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. One plan, $79 a month, every feature. 30-day free trial.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
-    title: 'Poof for shops — Bookkeeping for Trade Contractors',
+    title: 'Poof for shops — the back office for HVAC, plumbing, and electrical',
     description:
-      'Per-job profit on every monthly close. AI-powered, controller-reviewed bookkeeping for HVAC, plumbing, and electrical shops.',
+      'From the 9:40pm call to the per-job P&L, with a person on every entry. $79 a month, every feature.',
     url: 'https://www.poofai.com/trades',
     siteName: 'Poof',
     type: 'website',
   },
 }
 
-const trades = [
-  {
-    name: 'HVAC',
-    href: '/hvac',
-    body: 'Per-job P&L on every install and replacement — so the next bid is priced on real margin, not last month\'s guess.',
-  },
-  {
-    name: 'Plumbing',
-    href: '/plumbing',
-    body: 'Know which repipes, service calls, and remodels actually made money before you bid two more like them.',
-  },
-  {
-    name: 'Electrical',
-    href: '/electrical',
-    body: 'Job-level profit on panel upgrades and service work, with subs tracked all year for a clean 1099 January.',
-  },
-]
-
-const pains = [
-  {
-    title: 'Your monthly P&L lands weeks after the month ends',
-    body: 'You\'re bidding this week\'s jobs on numbers that are three weeks stale. Bookkeeper turnaround is the bottleneck.',
-  },
-  {
-    title: 'You can\'t tell which jobs actually made money',
-    body: 'The big commercial install might have been a loss. By the time the P&L lands, the next quote is already out the door.',
-  },
-  {
-    title: 'Field data gets rekeyed into QBO by hand',
-    body: 'A part-time bookkeeper at $800–$1,500/mo manually moves Jobber or Housecall Pro data into QuickBooks. Slow, error-prone, expensive.',
-  },
-]
-
-const howItWorks = [
+const loop = [
   {
     number: '1',
-    title: 'Connect your bank, cards, and field-service tool',
-    body: 'Plaid links your bank and cards. We bring your Jobber or Housecall Pro data into your books — so job revenue and costs land in the ledger without you rekeying them.',
+    title: 'The phone gets answered',
+    body: 'Poof answers your line when nobody can, works out what the caller needs, and books the job against real availability — your techs, their windows, their time off, minus what is already booked. Gas smell, smoke, sparking, an active alarm: those are rules in code, not a prompt, and they escalate instead of booking.',
   },
   {
     number: '2',
-    title: 'AI agents categorize and reconcile your books',
-    body: 'Transactions are categorized against a chart of accounts built for your trade, and supply-house costs get matched to the right job.',
+    title: 'The tech closes the job from a text',
+    body: 'The assigned tech gets their job as a link. No account, no app to install. On my way, arrived, parts used, photos, a typed name at the end. The office reviews it before anything reaches the customer.',
   },
   {
     number: '3',
-    title: 'A controller reviews every customer-facing decision',
-    body: 'Austin and team review categorizations, journal entries, and month-end close before anything is final. AI does the work. A human signs off.',
+    title: 'The invoice writes itself',
+    body: 'Parts come from your price list at catalogue cost, labor from the tech\'s own timestamps. The draft invoice lands in the office in the tech\'s words, and a person sends it.',
   },
   {
     number: '4',
-    title: 'Per-job P&L with every monthly close',
-    body: 'Want to know if a specific job made money? Ask Poof\'s assistant, or text your controller — and get a straight answer instead of a P&L that\'s three weeks late.',
+    title: 'The job lands on a per-job P&L',
+    body: 'Revenue, parts, labor, and the supply-house receipt tie to the job that earned them. Nobody types it in twice. At month end the close runs on a checklist with evidence on each task.',
   },
 ]
 
-const plans = [
+const builtFor = [
   {
-    name: 'Poof for shops',
-    price: '$1,200',
-    cadence: '/mo',
-    bestFor: '2–4 truck shops, $750K–$1.5M revenue',
-    features: [
-      'All Poof Professional features included',
-      'Per-job P&L with every monthly close',
-      'Monthly close + controller review',
-      'Jobber / Housecall Pro data brought into your books',
-      'A controller you can text or email',
-      'Monthly variance review',
-    ],
-    cta: 'Book a 20-minute call',
-    highlight: true,
+    title: 'A chart of accounts tuned to your trade',
+    body: 'Templates for HVAC, plumbing, electrical, roofing, pest control, landscaping, garage door, and pool service — free to download, or the starting point when you set up your books in Poof.',
+    href: '/resources',
+    cta: 'Get the templates',
   },
   {
-    name: 'Poof for shops, Plus',
-    price: '$1,500',
-    cadence: '/mo',
-    bestFor: '5+ truck shops, $1.5M–$3M revenue',
-    features: [
-      'Everything in Poof for shops',
-      'Multi-location reporting',
-      'Quarterly review call',
-      'Priority response',
-    ],
-    cta: 'Book a 20-minute call',
-    highlight: false,
+    title: 'Deposits and plans that stay unearned',
+    body: 'A deposit on an install is held as a liability from the day it lands and released to that job\'s revenue when the job is done. Prepaid maintenance plans are deferred at the sale and earned per completed visit.',
+    href: '/features#unearned',
+    cta: 'See how it works',
   },
-]
-
-const audit = {
-  name: 'Job Margin & Recovery Audit',
-  price: '$750',
-  cadence: 'one week, paid',
-  body: 'Before you commit to anything monthly, we go through your last 12 months of jobs and bank activity and hand you a number: the margin you are leaving on the table, and where it is going. Five days from the day we get your data.',
-  bullets: [
-    'Per-job margin on your last 12 months of completed jobs',
-    'Where the leaks are — underbilled work, uncosted labor, financing fees eating installs',
-    'A dollar figure for what it is costing you a year',
-    'Credits in full against the $1,500 onboarding if you sign within 30 days',
-  ],
-}
-
-const slas = [
-  'Books closed by the 15th business day, every month',
-  'Every completed job costed within 5 business days',
-  'An unbilled-work report every Friday',
-  'Your controller responds within 1 business day',
-]
-
-const extras = [
   {
-    name: 'Onboarding (one-time)',
-    price: '$1,500',
-    body: 'Historical cleanup up to 18 months, QBO or Xero migration, Jobber / Housecall Pro setup, chart of accounts aligned to your trade. Your $750 audit credits against this in full if you sign within 30 days.',
+    title: 'A close you can sign in five days',
+    body: 'Seventeen tasks, thirteen of them tied to evidence in the ledger, four that need a person. Closed within five business days of month end, or the next month is free.',
+    href: '/close',
+    cta: 'See the close',
   },
 ]
 
 const faqs = [
   {
-    q: 'What is the $750 Job Margin & Recovery Audit?',
-    a: 'A paid, one-week diagnostic — the way most shops start with us. We take your last 12 months of jobs and bank activity and hand you a dollar number in five days: what your real per-job margins are, where money is leaking (underbilled work, labor that never got costed to a job, financing fees quietly eating installs), and what it adds up to over a year. It is $750, it is not refundable, and it credits in full against the $1,500 onboarding if you sign within 30 days. We do not do a free version — a free audit attracts people who were never going to buy, and you would get a worse look at your own numbers.',
+    q: 'What does Poof for shops cost?',
+    a: 'The same as every other Poof account: $79 a month, all 128 features, with a 30-day free trial. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
   },
   {
-    q: 'What do you actually commit to once I am a client?',
-    a: 'Four things, in writing. Your books are closed by the 15th business day, every month. Every completed job is costed within 5 business days. You get an unbilled-work report every Friday. And your controller responds within 1 business day. If we miss, you will hear it from us first.',
+    q: 'Is the AI receptionist something I turn on myself?',
+    a: 'Not yet. The phone number and the voice agent are provisioned for you as part of setting up Poof for shops; there is no button in the app for a shop owner to flip. If that matters to your timeline, say so when you start a trial and we will tell you where it stands.',
+  },
+  {
+    q: 'Does the AI text my customers?',
+    a: 'No. Customer-facing texts — booking confirmations, reminders, "your tech is on the way" — are not built. The dispatched technician is texted their job link; that part is built and running. Those two are different things and we do not blur them. On the books side, no ledger rule can send anything to a customer either: invoices and credit notes are always a person\'s decision.',
+  },
+  {
+    q: 'Do I have to switch off Jobber or Housecall Pro?',
+    a: 'No. Keep using what your techs use today. You bring your Jobber or Housecall Pro export and your bank feeds into Poof; your dispatcher and techs see no change. What Poof replaces is the handoff into the books, not the tool your crew already knows.',
   },
   {
     q: 'What happens to a customer\'s deposit, or a prepaid maintenance plan, in my books?',
-    a: 'It stays unearned until you have earned it. A deposit on an install is held as a liability from the day it lands and released to that job\'s revenue when the job is done — previewed first, with a warning if the job was also invoiced. A prepaid maintenance plan is deferred when it is sold and earns its share per visit, automatically when the tech taps Complete on a maintenance visit. If a plan customer cancels, your office records refund or forfeit and the books show which; Poof never makes that call for you. It is the difference between books that read the way the bank feed suggests and books a controller would sign.',
+    a: 'It stays unearned until you have earned it. A deposit on an install is held as a liability from the day it lands and released to that job\'s revenue when the job is done — previewed first, with a warning if the job was also invoiced, and it refuses to release money that was never categorized as a deposit. A prepaid plan is deferred at the sale and earned per completed visit, automatically when the tech taps Complete. Cancellation is a refund-or-forfeit decision someone records, never automatic.',
   },
   {
-    q: 'Which trades do you work with?',
-    a: 'HVAC, plumbing, and electrical service shops doing roughly $750K–$3M with 2–6 trucks. Other field-service trades on the same Jobber or Housecall Pro setup are usually a fit too — book a call and we\'ll be straight about it.',
+    q: 'Does the technician need an account or an app?',
+    a: 'Neither, and that is the point — it is the answer to "my guys will not use another app." The tech taps a link in a text. It does no GPS tracking, takes no payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal; there is no offline mode. Jobsite photos are opted into the customer invoice one photo at a time, and the supply-house receipt showing your cost defaults to not printing.',
   },
   {
-    q: 'Do I need to switch from Jobber or Housecall Pro?',
-    a: 'No. Keep using exactly what your techs use today. We bring your Jobber or Housecall Pro data into your books for you — your dispatcher and techs see no change. The handoff into your books is what we replace, not the field tool.',
-  },
-  {
-    q: 'Is this real bookkeeping or just AI guessing?',
-    a: 'Real bookkeeping. Every customer-facing decision is reviewed by a credentialed human — Austin or someone on his team, with audit and controller experience. The AI does the volume work. The human signs off on the calls that matter. The ledger is real double-entry, built to survive any IRS or insurance audit.',
-  },
-  {
-    q: 'How is this different from my current bookkeeper?',
-    a: 'Granularity: per-job P&L on every close, which most part-time bookkeepers can\'t deliver at any price. Accountability: a former controller reviewing the work, with an audit-grade ledger underneath. Responsiveness: a real person you can text about a specific job, not someone who logs in once a month.',
+    q: 'Who is this actually for?',
+    a: 'Service shops that run on inbound calls and want the job, the invoice, and the books to be one chain instead of three. Most of the shops we built this with run 2 to 10 trucks. Nothing stops a one-truck shop or a larger one from using it — it is the same $79 plan either way.',
   },
 ]
 
@@ -189,23 +116,9 @@ export default function TradesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            getServiceSchema({
-              name: 'Poof for shops — Bookkeeping for Trade Contractors',
-              description:
-                'Bookkeeping for HVAC, plumbing, and electrical contractors doing $750K–$3M. Per-job profit on every monthly close, AI-powered and reviewed by a former controller. From $1,200/mo.',
-              price: '1200',
-              url: 'https://www.poofai.com/trades',
-            })
-          ),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
             getBreadcrumbSchema([
               { name: 'Home', url: 'https://www.poofai.com' },
-              { name: 'For Trades', url: 'https://www.poofai.com/trades' },
+              { name: 'For shops', url: 'https://www.poofai.com/trades' },
             ])
           ),
         }}
@@ -215,79 +128,33 @@ export default function TradesPage() {
       <div className="pt-16" />
       <TradesShow />
 
-      {/* Trade cards */}
-      <section id="trades" className="py-20 bg-slate-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">
-              Built for your trade
-            </h2>
-            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              Same Poof for shops, a chart of accounts and job costing tuned to how your work actually gets billed.
-            </p>
-          </AnimateOnScroll>
+      <ReceptionistSection />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {trades.map((t, i) => (
-              <AnimateOnScroll key={t.name} animation="fade-up" delay={i * 100}>
-                <Link href={t.href} className="block h-full">
-                  <GlowCard className="bg-white border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
-                    <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">{t.name}</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-4">{t.body}</p>
-                    <span className="text-sm font-semibold text-ledger-600">View details →</span>
-                  </GlowCard>
-                </Link>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FieldServiceSection />
 
-      {/* Pain points */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-4">
-              The pain you have today
-            </h2>
-            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              You didn&apos;t get into this trade to chase down a part-time bookkeeper for last month&apos;s P&amp;L.
-            </p>
-          </AnimateOnScroll>
+      <UnearnedRevenueSection />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {pains.map((p, i) => (
-              <AnimateOnScroll key={p.title} animation="fade-up" delay={i * 100}>
-                <GlowCard className="bg-slate-50 border border-slate-200 rounded-xl p-6 card-hover-lift h-full">
-                  <div className="w-10 h-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center font-bold mb-4">
-                    !
-                  </div>
-                  <h3 className="font-semibold text-slate-900 mb-2 leading-snug">{p.title}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{p.body}</p>
-                </GlowCard>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ApprovalsSection />
 
-      {/* How it works */}
-      <section className="py-20 bg-slate-50">
+      <CloseRunSection />
+
+      {/* The loop, stated plainly for anyone who skipped the demo */}
+      <section id="loop" className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-3">
-              How it works in 60 seconds
+              One chain, from the call to the P&amp;L
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              Connect, sync, review, deliver. The handoff into your books is the part we replace.
+              Count how many times somebody types the job in. Zero.
             </p>
           </AnimateOnScroll>
 
           <div className="space-y-0">
-            {howItWorks.map((step, i) => (
+            {loop.map((step, i) => (
               <AnimateOnScroll key={step.number} animation="fade-up" delay={i * 100}>
                 <div className="flex gap-5 items-start relative">
-                  {i < howItWorks.length - 1 && (
+                  {i < loop.length - 1 && (
                     <div className="absolute left-6 top-14 w-px h-[calc(100%-2rem)] bg-ledger-300" />
                   )}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-ledger-500 text-white flex items-center justify-center font-bold text-lg relative z-10">
@@ -304,171 +171,58 @@ export default function TradesPage() {
         </div>
       </section>
 
-      <ReceptionistSection />
-
-      <FieldServiceSection />
-
-      <UnearnedRevenueSection />
-
-      <ApprovalsSection />
-
-      <CloseRunSection />
-
-      {/* Pricing */}
-      <section id="pricing" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* What a shop gets that a general ledger doesn't give you */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-3">
-              Pricing built for trade shops
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 text-center mb-12">
+              Built for how shop work actually gets billed
             </h2>
-            <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              Replaces a part-time bookkeeper, and delivers detail they can&apos;t. No long-term contract.
-            </p>
           </AnimateOnScroll>
 
-          <AnimateOnScroll animation="fade-up">
-            <div className="mb-10 rounded-xl border-2 border-ledger-400 bg-ledger-100 p-8">
-              <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-                <div className="flex-1">
-                  <div className="inline-block bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                    Start here
-                  </div>
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-3">{audit.name}</h3>
-                  <p className="text-slate-600 leading-relaxed mb-5">{audit.body}</p>
-                  <ul className="space-y-2">
-                    {audit.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-sm">
-                        <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-slate-700">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="lg:w-64 flex-shrink-0 lg:border-l lg:border-ledger-300 lg:pl-8">
-                  <div className="text-5xl font-bold text-slate-900 mb-1">{audit.price}</div>
-                  <p className="text-sm text-slate-500 mb-5">{audit.cadence}</p>
-                  <BookCallButton className="block w-full text-center bg-ledger-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-ledger-600 transition-all duration-200">
-                    Start the audit
-                  </BookCallButton>
-                  <p className="text-xs text-slate-500 mt-3 leading-relaxed">
-                    Book a 20-minute call to kick it off. No monthly commitment to find out.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {plans.map((plan, i) => (
-              <AnimateOnScroll key={plan.name} animation="fade-up" delay={i * 100}>
-                <div
-                  className={`rounded-xl p-8 h-full flex flex-col ${
-                    plan.highlight
-                      ? 'bg-slate-900 text-white border-2 border-ledger-400 shadow-xl'
-                      : 'bg-white text-slate-900 border border-slate-200'
-                  }`}
-                >
-                  {plan.highlight && (
-                    <div className="inline-block self-start bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-                      Most shops start here
-                    </div>
-                  )}
-                  <h3 className={`font-semibold text-xl mb-1 ${plan.highlight ? 'text-white' : 'text-slate-900'}`}>
-                    {plan.name}
-                  </h3>
-                  <p className={`text-sm mb-5 ${plan.highlight ? 'text-slate-300' : 'text-slate-500'}`}>{plan.bestFor}</p>
-                  <div className="flex items-baseline gap-1 mb-6">
-                    <span className={`text-5xl font-bold ${plan.highlight ? 'text-white' : 'text-slate-900'}`}>{plan.price}</span>
-                    <span className={`text-lg ${plan.highlight ? 'text-slate-300' : 'text-slate-500'}`}>{plan.cadence}</span>
-                  </div>
-                  <ul className="space-y-2 mb-8 flex-grow">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm">
-                        <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plan.highlight ? 'text-ledger-400' : 'text-ledger-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className={plan.highlight ? 'text-slate-100' : 'text-slate-700'}>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <BookCallButton
-                    className={`block w-full text-center font-semibold px-6 py-3 rounded-lg transition-all duration-200 ${
-                      plan.highlight
-                        ? 'bg-ledger-500 text-white hover:bg-ledger-600'
-                        : 'bg-slate-900 text-white hover:bg-slate-800'
-                    }`}
-                  >
-                    {plan.cta}
-                  </BookCallButton>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {builtFor.map((b, i) => (
+              <AnimateOnScroll key={b.title} animation="fade-up" delay={i * 100}>
+                <GlowCard className="bg-slate-50 border border-slate-200 rounded-xl p-6 card-hover-lift h-full flex flex-col">
+                  <h3 className="font-semibold text-slate-900 mb-2 leading-snug">{b.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1">{b.body}</p>
+                  <Link href={b.href} className="text-sm font-semibold text-ledger-600 hover:text-ledger-700">
+                    {b.cta} →
+                  </Link>
+                </GlowCard>
               </AnimateOnScroll>
             ))}
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {extras.map((extra, i) => (
-              <AnimateOnScroll key={extra.name} animation="fade-up" delay={i * 100}>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 h-full">
-                  <div className="flex items-baseline justify-between mb-2">
-                    <h4 className="font-semibold text-slate-900">{extra.name}</h4>
-                    <div className="text-2xl font-bold text-ledger-600">{extra.price}</div>
-                  </div>
-                  <p className="text-sm text-slate-600 leading-relaxed">{extra.body}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
-
-            <AnimateOnScroll animation="fade-up" delay={100}>
-              <div className="bg-slate-900 rounded-xl p-6 h-full">
-                <h4 className="font-semibold text-white mb-1">What we commit to</h4>
-                <p className="text-xs text-slate-400 mb-4">On every plan with the controller review. Not aspirations, the deal.</p>
-                <ul className="space-y-2">
-                  {slas.map((s) => (
-                    <li key={s} className="flex items-start gap-2 text-sm text-slate-200">
-                      <svg className="w-4 h-4 flex-shrink-0 mt-0.5 text-ledger-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>{s}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimateOnScroll>
-          </div>
-
-          <p className="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
-            Above $3M in revenue? <span className="font-semibold text-slate-700">Poof for shops, Pro</span> starts
-            at $2,400/mo, scoped per shop. Book a call and we&apos;ll size it with you.
-          </p>
-
-          <p className="text-center text-sm text-slate-500 mt-3 max-w-xl mx-auto">
-            Not sure which tier fits? Book a 20-minute call. We&apos;ll be straight about whether Poof makes sense for your shop.
-          </p>
         </div>
       </section>
 
-      {/* Founder bio */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Pricing: the same one plan as everywhere else */}
+      <section id="pricing" className="py-20 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
-            <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10">
-              <div className="text-xs font-semibold uppercase tracking-wider text-ledger-600 mb-3">Built by a controller, not a startup</div>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
-                Austin Semple — three years as an auditor, seven as a controller
-              </h2>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
-                <p>
-                  Before Poof, Austin spent a decade auditing and running the books for small service businesses. The pattern was always the same: an owner who built a real business from a service truck, paying $800–$1,500/mo for a bookkeeper who delivered a PDF three weeks late and couldn&apos;t answer the one question that mattered — &ldquo;which jobs made money?&rdquo;
-                </p>
-                <p>
-                  Poof for shops is built on that experience. AI agents do the volume work. A credentialed human signs off on every customer-facing decision. The ledger underneath is real double-entry bookkeeping with reversal entries — built to survive any IRS or insurance audit.
-                </p>
-                <p className="text-slate-900 font-medium">
-                  Austin personally onboards the first 50 shops. If that&apos;s you, you&apos;re working directly with the founder.
-                </p>
-              </div>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+              One plan. $79 a month.
+            </h2>
+            <p className="text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Every feature, including the receptionist, the field loop, and per-job profitability. It does not
+              go up when you add a truck or a tech — the field-service tools shops compare us to are priced per
+              technician per month. Thirty days free to start.
+            </p>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-up" delay={100}>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link
+                href="https://app.poofai.com/register"
+                className="bg-ledger-500 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-ledger-600 transition-colors"
+              >
+                Start free trial
+              </Link>
+              <Link
+                href="/pricing"
+                className="border-[1.5px] border-slate-900 text-slate-900 font-semibold px-8 py-3.5 rounded-lg hover:bg-white transition-colors"
+              >
+                See pricing
+              </Link>
             </div>
           </AnimateOnScroll>
         </div>
@@ -501,45 +255,7 @@ export default function TradesPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight" style={{ letterSpacing: '-0.02em' }}>
-              Per-job profit on every monthly close. Starts at $1,200/mo.
-            </h2>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-up" delay={100}>
-            <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-              Book a 20-minute call with Austin. We&apos;ll look at your current setup and give you a straight answer on whether Poof fits.
-            </p>
-          </AnimateOnScroll>
-          <AnimateOnScroll animation="scale-up" delay={200}>
-            <BookCallButton
-              className="inline-block bg-ledger-500 text-white font-semibold px-10 py-4 rounded-lg text-lg hover:bg-ledger-600 hover:-translate-y-0.5 transition-all duration-200"
-            >
-              Book a 20-minute call
-            </BookCallButton>
-          </AnimateOnScroll>
-
-          <AnimateOnScroll animation="fade-up" delay={300}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-slate-300 mt-12 max-w-2xl mx-auto">
-              {[
-                { label: 'Controller-reviewed', icon: '✓' },
-                { label: 'Founder-led onboarding', icon: '✦' },
-                { label: 'Closed by the 15th business day', icon: '↻' },
-              ].map((item) => (
-                <div key={item.label} className="flex flex-col items-center">
-                  <span className="text-ledger-400 text-xl mb-2">{item.icon}</span>
-                  <div className="text-sm">{item.label}</div>
-                </div>
-              ))}
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
+      <CtaSection />
       <Footer />
     </main>
   )

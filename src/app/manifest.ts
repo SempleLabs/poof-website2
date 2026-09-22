@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Poof',
     short_name: 'Poof',
-    description: 'Bookkeeping that does itself, and shows its work before it lands.',
+    description: 'The back office, run by AI. Nothing lands until a person has seen it.',
     start_url: '/',
     display: 'standalone',
     background_color: '#EEF2EA',

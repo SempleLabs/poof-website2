@@ -76,30 +76,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Spend Score CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="bg-ledger-100 border border-ledger-300 rounded-xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
-              <div className="w-16 h-16 bg-ledger-200 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-8 h-8 text-ledger-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-xl font-bold font-display text-slate-900 mb-1">Get your free Spend Score — see what AI finds in your transactions</h3>
-                <p className="text-slate-600">Upload a bank statement and get your AI-powered spending score in 60 seconds. No sign-up required.</p>
-              </div>
-              <Link
-                href="/spend-score"
-                className="bg-ledger-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-ledger-500 transition-all whitespace-nowrap flex-shrink-0"
-              >
-                Get Your Spend Score →
-              </Link>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
 
       <CtaSection />
 

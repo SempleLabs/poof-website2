@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import BookCallButton from './BookCallButton'
 
 /** The site's closing panel. One sentence, two doors. */
 export default function CtaSection() {
@@ -10,7 +9,7 @@ export default function CtaSection() {
           The work disappears. The evidence doesn&apos;t.
         </h2>
         <p className="text-lg text-ledger-400 mb-8 max-w-2xl mx-auto">
-          Thirty days free, no card, every feature. Or book twenty minutes and bring your books.
+          Thirty days free, every feature. Or book a demo and bring your books.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <Link
@@ -19,9 +18,12 @@ export default function CtaSection() {
           >
             Start free trial
           </Link>
-          <BookCallButton className="border-[1.5px] border-paper text-paper font-semibold px-7 py-3.5 rounded-lg hover:bg-paper/10 transition-colors text-base">
-            Book a call
-          </BookCallButton>
+          <Link
+            href="/demo"
+            className="border-[1.5px] border-paper text-paper font-semibold px-7 py-3.5 rounded-lg hover:bg-paper/10 transition-colors text-base"
+          >
+            Book a demo
+          </Link>
         </div>
       </div>
     </section>

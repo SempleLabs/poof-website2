@@ -207,7 +207,7 @@ export default function PricingPage() {
                 href="https://app.poofai.com/register"
                 className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-all text-lg w-full block text-center py-4 mb-4"
               >
-                Start Free Trial →
+                Start free trial →
               </Link>
 
               <p className="text-sm text-slate-500">
@@ -338,7 +338,7 @@ export default function PricingPage() {
               href="https://app.poofai.com/register"
               className="bg-ledger-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-ledger-600 hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
-              Start Free Trial →
+              Start free trial →
             </Link>
             <p className="text-slate-500 text-sm mt-4">
               30-day free trial • Cancel anytime

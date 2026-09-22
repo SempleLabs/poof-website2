@@ -221,7 +221,7 @@ export default function SecurityPage() {
                 href="https://app.poofai.com/register"
                 className="border-2 border-slate-600 text-white font-semibold px-8 py-4 rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg"
               >
-                Start Free Trial →
+                Start free trial →
               </Link>
             </div>
           </AnimateOnScroll>

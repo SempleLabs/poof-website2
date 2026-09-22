@@ -86,10 +86,10 @@ export default function ProductHuntPage() {
           <AnimateOnScroll animation="fade-in" delay={300}>
             <p className="text-sm text-slate-500">
               Just browsing?{' '}
-              <Link href="/spend-score" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
-                Try the free Spend Score
+              <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
+                See all 128 features
               </Link>{' '}
-              — upload a bank statement, get an AI read on your spending in 60 seconds. No signup.
+              — every one on a single page, with what it does and what it will not do.
             </p>
           </AnimateOnScroll>
         </div>
@@ -133,14 +133,14 @@ export default function ProductHuntPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <p className="text-slate-600 leading-relaxed mb-6">
-              Poof is built by Austin Semple, a former controller: three years in audit, seven running the books for small businesses. The same engine powers our bookkeeping for trade shops for trade contractors, where a controller reviews every monthly close — so the AI underneath is held to audit-grade standards, not demo-grade ones.
+              Poof is built by Austin Semple, a former controller: three years in audit, seven running the books for small businesses. The AI underneath is held to the standard that work was held to — every write staged with its evidence, nothing landing in the ledger unseen.
             </p>
             <p className="text-sm text-slate-500">
-              Run an HVAC, plumbing, or electrical shop?{' '}
+              Run a service shop?{' '}
               <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
                 See Poof for shops
               </Link>{' '}
-              — done-for-you books with per-job profitability.
+              — the phone, the field link, and per-job profitability, on the same plan.
             </p>
           </AnimateOnScroll>
         </div>
