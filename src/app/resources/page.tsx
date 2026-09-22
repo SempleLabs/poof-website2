@@ -108,10 +108,10 @@ export default async function ResourcesPage() {
 
   const quickLinks = [
     {
-      title: 'Free Spend Score',
-      description: 'Upload a bank statement and get your free AI-powered Spend Score in 60 seconds.',
-      href: '/spend-score',
-      linkText: 'Try it free →',
+      title: 'Poof for shops',
+      description: 'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L.',
+      href: '/trades',
+      linkText: 'See Poof for shops →',
     },
     {
       title: 'The close',
@@ -282,13 +282,13 @@ export default async function ResourcesPage() {
               Ready to Try Poof?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Start your 30-day free trial. 50% off your first 3 months — only $39.50/mo.
+              Start your 30-day free trial. $79 a month after, every feature included.
             </p>
             <Link
               href="https://app.poofai.com/register"
               className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
-              Start Free Trial →
+              Start free trial →
             </Link>
             <p className="text-white/80 text-sm mt-4">
               30-day free trial &bull; Cancel anytime

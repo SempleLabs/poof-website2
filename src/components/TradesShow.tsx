@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import BookCallButton from '@/components/BookCallButton'
 
 /**
  * The trades-page show: five acts that follow one after-hours call all the
@@ -854,15 +853,16 @@ export default function TradesShow() {
           </div>
 
           <div className={guardCls}>
-            <b className={strong}>Rules can never do this.</b> No rule can send anything to a customer. Invoices are
-            always a person&apos;s decision.
+            <b className={strong}>Rules can never do this.</b> No ledger rule can send anything to a customer. Invoices are
+            always a person&apos;s decision. The phone is a different channel: the receptionist talks to callers and
+            books jobs inside rules written in code, and nothing granted in the books can reach it.
           </div>
         </section>
 
         {/* ------------------------------------------------------- CONTROLLER */}
         <section className={actCls} id="controller">
           <p className={eyebrow}>Who signs the close</p>
-          <h2 className={h2Cls}>A former controller reviews every month before you see it.</h2>
+          <h2 className={h2Cls}>Built by someone who closed books for a living first.</h2>
           <div className="mt-7 grid grid-cols-1 items-center gap-[22px] border border-rule bg-white px-6 py-[22px] sm:grid-cols-[180px_1fr]">
             {/* Photo slot: the real photograph does not exist yet. */}
             <div className="flex aspect-square w-full max-w-[220px] flex-col justify-end gap-1.5 border border-rule bg-paper-2 p-3.5 sm:max-w-none">
@@ -874,9 +874,10 @@ export default function TradesShow() {
             <div>
               <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, former controller</h3>
               <p className="m-0 max-w-[52ch] text-[15px] text-muted">
-                Three years as an auditor, then seven as a controller for small businesses. He reviews every monthly close
-                himself. Books closed by the 15th business day, every completed job costed within 5, a controller
-                who answers within 1.
+                Three years as an auditor, then seven as a controller for small businesses, then Poof. The
+                receptionist escalates on rules rather than a prompt, the close runs on evidence rather than
+                checkboxes, and nothing reaches your books unseen — because that is how the work is supposed to
+                go.
               </p>
             </div>
           </div>
@@ -988,14 +989,14 @@ export default function TradesShow() {
             <span className="w-full text-[13.5px] text-muted">
               This is the other show&apos;s headline: know which jobs make money. The two meet here.
             </span>
-            <BookCallButton className={`${btn} ${press}`}>Book a 20-minute call</BookCallButton>
+            <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free trial</a>
             <a href="#pricing" className={`${btn} ${ghost}`}>
-              Start the $750 Job Margin &amp; Recovery Audit
+              $79 a month, every feature
             </a>
           </div>
           <p className={noteCls}>
-            Books closed by the 15th business day. Every completed job costed within 5. An unbilled-work report
-            every Friday. A controller answers within 1.
+            Thirty days free. Your books closed within five business days of month end, or the next month is
+            free.
           </p>
         </section>
       </div>

@@ -7,7 +7,7 @@ export interface FeatureGroup {
   name: string
   icon: string
   features: Feature[]
-  /** Optional availability caveat rendered with the group (e.g. managed-service-only features) */
+  /** Optional availability caveat rendered with the group (e.g. setup we do for you) */
   note?: string
 }
 
@@ -463,7 +463,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "Installed by Poof for shops \u2014 our team provisions the number and the voice agent. It is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
+    note: "We provision the number and the voice agent for you \u2014 it is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -518,7 +518,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "Field Service & Job Handoff",
     icon: "field",
-    note: "Part of Poof for shops, alongside the AI receptionist. The technician's page needs no account and no app install \u2014 that is the point. It does not do GPS tracking, does not take payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal: it does not work offline.",
+    note: "Part of Poof for shops, alongside the AI receptionist \u2014 the same $79 plan. The technician's page needs no account and no app install \u2014 that is the point. It does not do GPS tracking, does not take payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal: it does not work offline.",
     features: [
       {
         title: "Technician Field Link",
@@ -565,7 +565,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "Approvals & AI Autonomy",
     icon: "approvals",
-    note: "The approvals inbox is on for everyone \u2014 it is how every AI write reaches the books. Autonomy is off until a person grants it, one rule at a time: there is no default, and no global \u201clet the AI do it\u201d switch. No rule can ever send anything to a customer, and a rule that writes to the ledger must carry a dollar limit or it does not run.",
+    note: "The approvals inbox is on for everyone \u2014 it is how every AI write reaches the books. Autonomy is off until a person grants it, one rule at a time: there is no default, and no global \u201clet the AI do it\u201d switch. No ledger rule can ever send anything to a customer, and a rule that writes to the ledger must carry a dollar limit or it does not run. The phone is a separate channel a shop opts into, and nothing granted here can reach it.",
     features: [
       {
         title: "The Approvals Inbox",
@@ -633,13 +633,13 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What is Poof for shops?",
-    answer: "The same Poof, set up for HVAC, plumbing, and electrical shops doing $750K–$3M: the AI receptionist that books the job, the technician's field link that writes the invoice, per-job profitability on every close, and an optional monthly review by a former controller. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist.",
+    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist. It is the same one plan at $79 a month \u2014 there is no shop tier and no per-truck pricing.",
     category: "General",
     audience: "trades"
   },
   {
     question: "Do I have to run the software myself?",
-    answer: "Not if you add the controller review. Your team keeps using Jobber or Housecall Pro as they do today, the AI proposes every entry, and a former controller decides the cards and signs the close each month. Without the review, you or your bookkeeper approve the cards; it takes minutes a day.",
+    answer: "Somebody has to, but it is minutes a day rather than a job. The AI proposes every entry and stages it on a card with its evidence; you, your office manager, or your bookkeeper decide the cards and sign the close. Your team keeps using Jobber or Housecall Pro exactly as they do today.",
     category: "General",
     audience: "trades"
   },
@@ -655,7 +655,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Is AI autonomy on by default?",
-    answer: "No. Autonomy is off until you grant it, one rule at a time. There is no default and no global \u201clet the AI run\u201d switch \u2014 a new account asks about everything until its owner decides otherwise. No rule can ever send anything to a customer: invoices and credit notes are always a human's decision, whatever a rule says. Rules cannot be created from a settings screen either, only from work someone actually reviewed. Every rule lives on one page showing what it has handled and who granted it, revoking is instant, and \u201cwhat did AI change this month, and who allowed it\u201d is a single page for your accountant.",
+    answer: "No. Autonomy is off until you grant it, one rule at a time. There is no default and no global \u201clet the AI run\u201d switch \u2014 a new account asks about everything until its owner decides otherwise. No ledger rule can ever send anything to a customer: invoices and credit notes are always a human's decision, whatever a rule says. The phone is a separate channel a shop opts into: the receptionist talks to callers and books jobs inside rules written in code, and nothing granted in the books can reach it. Rules cannot be created from a settings screen either, only from work someone actually reviewed. Every rule lives on one page showing what it has handled and who granted it, revoking is instant, and \u201cwhat did AI change this month, and who allowed it\u201d is a single page for your accountant.",
     category: "AI & Automation"
   },
   {
@@ -803,24 +803,4 @@ export const faqData: FaqItem[] = [
     answer: "Yes. Poof takes data security seriously. All data is encrypted in transit via HTTPS/TLS, and bank connections go through Plaid with read-only access — Poof never sees or stores your bank login credentials and cannot move money. Poof includes two-factor authentication, role-based access controls with 26 granular permissions, audit logging with PII masking, and session management. Your financial data is never shared with third parties or used to train AI models. You can manage active sessions, revoke access, and export your data at any time.",
     category: "Security & Data"
   },
-  {
-    question: "What is the Free Spend Score tool?",
-    answer: "The Spend Score tool is a free AI-powered feature on poofai.com that lets you upload a bank statement (CSV, PDF, or image) and get an instant financial analysis. AI categorizes every transaction into spending buckets like Groceries, Dining Out, Subscriptions, and more — then writes a personalized narrative about your spending patterns and generates a shareable infographic. It takes under 60 seconds, and your statement isn't retained after your report is generated.",
-    category: "AI & Automation"
-  },
-  {
-    question: "Is the Spend Score tool really free?",
-    answer: "Yes, completely free. You can upload a bank statement and get your full AI-powered Spend Score report — including categorized transactions, a spending breakdown chart, a written narrative, and an AI-generated infographic — at no cost. You can generate up to 3 reports per hour. The tool is powered by Poof's AI to give you a taste of what automated bookkeeping looks like.",
-    category: "Pricing & Plans"
-  },
-  {
-    question: "Is my data safe when I use the Spend Score tool?",
-    answer: "Your statement is sent to our AI provider (OpenAI) to generate your report and is not retained by Poof afterward or used to train AI models. The only information we store is your email address — and only if you choose to enter it to unlock or receive the full report. We don't sell your data.",
-    category: "Security & Data"
-  },
-  {
-    question: "How do I analyze my bank statement with AI?",
-    answer: "Visit poofai.com/spend-score and upload your bank statement as a CSV file, PDF, or even a photo/screenshot. Poof's AI will automatically extract and categorize every transaction into spending categories like Income, Groceries, Dining Out, Transportation, Subscriptions, and more. You'll get a written financial narrative analyzing your spending patterns, a visual spending breakdown chart, and an AI-generated infographic you can share — all in under 60 seconds.",
-    category: "Getting Started"
-  }
 ]

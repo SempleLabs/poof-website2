@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing — Everything You Need, One Price | Poof AI Bookkeeping',
+  title: 'Pricing — one plan, every feature, $79/mo | Poof',
   description: 'One price, every feature — $79/mo flat vs $140/mo for QuickBooks Plus. 128 features, 13 reports, AI budgeting & forecasting. 30-day free trial, then $39.50/mo launch price.',
   keywords: 'bookkeeping software pricing, AI bookkeeping cost, small business bookkeeping price, Poof pricing, AI budgeting software cost',
   alternates: {

@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { trackEvent } from '@/lib/analytics'
 import PoofWordmark from './PoofWordmark'
-import BookCallButton from './BookCallButton'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +16,7 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { href: '/trades', label: 'For Trades' },
+    { href: '/trades', label: 'For shops' },
     { href: '/features', label: 'Features' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/how-it-works', label: 'How it Works' },
@@ -61,9 +60,6 @@ export default function Header() {
             >
               Log in
             </Link>
-            <BookCallButton className="border-[1.5px] border-ink text-ink px-4 py-2 rounded-lg font-semibold text-sm hover:bg-paper-2 transition-colors duration-200">
-              Book a call
-            </BookCallButton>
             <Link
               href="https://app.poofai.com/register"
               onClick={() => trackEvent('start_trial_click', { location: 'header' })}
@@ -124,7 +120,7 @@ export default function Header() {
                 Log in
               </Link>
               <Link href="/demo" onClick={() => setIsMenuOpen(false)} className="border-[1.5px] border-paper text-paper px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
-                Book a call
+                Book a demo
               </Link>
               <Link
                 href="https://app.poofai.com/register"

@@ -1,51 +1,28 @@
 # Poof
 
-> Poof is AI bookkeeping software for the person who signs the close. It categorizes, reconciles, job-costs, and closes the books, and puts every write in front of a person before it reaches the ledger: each proposal waits on a card with the evidence it found, the close is a record with a checklist the books tick off themselves, and the reconciliation ties to one figure. One plan, every feature, $79/mo. The brand sentence: "The work disappears. The evidence doesn't."
+> Poof is software that runs the back office for a small business. It categorizes, reconciles, job-costs, and closes the books, and puts every write in front of a person before it reaches the ledger: each proposal waits on a card with the evidence it found, the close is a record with a checklist the books tick off themselves, and the reconciliation ties to one figure. One plan, every feature, $79/mo. The brand sentence: "The work disappears. The evidence doesn't."
 
 Poof is built by Austin Semple, a former controller: three years in audit, then seven running the books for small service businesses. It is a product of Semple Labs LLC.
 
-Poof has two distinct offerings:
-
-1. **Poof** (the software) — Self-serve AI bookkeeping at $79/mo ($39.50/mo launch special for the first 3 months, $790/yr annual), every feature included, 30-day free trial with no credit card. Its primary customer is the bookkeeper, controller, or firm who signs the close; a shop owner can run their own books on it.
-
-2. **Poof for shops** (Poof for shops) — Bookkeeping for HVAC, plumbing, and electrical service contractors doing $750K–$3M revenue with 2–6 trucks, on Poof, with a former controller reviewing every monthly close. $1,200/mo (2–4 trucks) or $1,500/mo Plus (5+ trucks), $1,500 one-time onboarding, a $750 Job Margin & Recovery Audit as the front door. Books closed by the 15th business day; every completed job costed within 5 business days; unbilled-work report every Friday; controller responds within 1 business day. It lives at poofai.com/trades.
+Poof is one product on one plan. $79/mo (or $790/yr), every feature included, 30-day free trial, no credit card. A shop owner, a bookkeeper, a controller, or a firm runs the same software; service shops additionally get the AI receptionist, the dispatch board, and the technician's field link, at the same price. Poof does not sell a done-for-you bookkeeping service.
 
 ## Core Pages
 
 - [Home](https://www.poofai.com): A five-act interactive walkthrough (the vanish, the approvals inbox, the reconciliation that ties, the close as a record, every claim with its evidence), a plain definition of Poof, six FAQs
-- [For Trades](https://www.poofai.com/trades): Poof for shops — an interactive walkthrough of an after-hours call to the Per-Job P&L, then the offer, pricing, SLAs, and FAQs for all service contractor shops
-- [HVAC Bookkeeping](https://www.poofai.com/hvac): Bookkeeping for HVAC shops
-- [Plumbing Bookkeeping](https://www.poofai.com/plumbing): Bookkeeping for plumbing shops
-- [Electrical Bookkeeping](https://www.poofai.com/electrical): Bookkeeping for electrical shops
+- [Poof for shops](https://www.poofai.com/trades): the product page for service shops — an interactive walkthrough from an after-hours call to the Per-Job P&L, the receptionist, the technician's field link, deposits and prepaid plans, and FAQs. Same $79 plan.
 - [The close](https://www.poofai.com/close): month-end close as a record: 17 tasks with business-day due dates, 13 evidence-bound and ticked by the books themselves, a reconciliation that ties to one figure with outstanding items carried forward, a signature that locks the period and captures what the month took; closed within five business days or the next month is free
-- [Autopilot with limits](https://www.poofai.com/autopilot): AI that posts categorizations on its own inside limits you set (not a new account, under a dollar ceiling, merchant history unanimous and at least N deep, confidence over your bar), off by default, with standing rules that carry a ceiling and a daily cap and pause themselves on the first correction; never sends anything to a customer
+- [Autopilot with limits](https://www.poofai.com/autopilot): AI that posts categorizations on its own inside limits you set (not a new account, under a dollar ceiling, merchant history unanimous and at least N deep, confidence over your bar), off by default, with standing rules that carry a ceiling and a daily cap and pause themselves on the first correction; no ledger rule can send anything to a customer
 - [Features](https://www.poofai.com/features): All 128 features across 13 categories
-- [Pricing](https://www.poofai.com/pricing): $79/mo Poof Professional plan, FAQs, launch special
+- [Pricing](https://www.poofai.com/pricing): $79/mo, one plan, every feature, FAQs
 - [How It Works](https://www.poofai.com/how-it-works): Three-step setup and automation overview
 - [Poof vs QuickBooks](https://www.poofai.com/poof-vs-quickbooks): Side-by-side feature comparison with QuickBooks
 - [About](https://www.poofai.com/about): Founder story, mission, company timeline
 - [Security](https://www.poofai.com/security): Bank-grade security, SOC 2 audit logging, encryption, 2FA, RBAC
-- [FAQ](https://www.poofai.com/faq): Full FAQ on Poof for shops, features, pricing, security, AI capabilities
+- [FAQ](https://www.poofai.com/faq): Full FAQ on features, pricing, security, AI capabilities, and Poof for shops
 - [Support](https://www.poofai.com/support): Customer support — email support@poofai.com, response within 2 business days
 - [Contact](https://www.poofai.com/contact): Contact form and email
 
 Poof is a product of Semple Labs LLC, a United States limited liability company. Support and billing: support@poofai.com.
-
-## Free Tools
-
-- [Spend Score Generator](https://www.poofai.com/spend-score): Upload a bank statement (CSV, PDF, image) for a free AI-powered spending analysis in under 60 seconds
-- [Profit Analysis](https://www.poofai.com/profit-analysis): Apply for a free operational financial analysis
-
-## Vertical Landing Pages
-
-- [Service Businesses](https://www.poofai.com/service-businesses): Agencies, consultants, and professional service businesses
-- [Freelancers](https://www.poofai.com/freelancers): Solo founders and freelancers
-- [Creators](https://www.poofai.com/creators): Content creators, YouTubers, podcasters
-- [Ecommerce](https://www.poofai.com/ecommerce): Online retailers, Stripe/Shopify shops
-- [New LLC](https://www.poofai.com/new-llc): New LLC owners setting up bookkeeping from day one
-- [QuickBooks Alternative](https://www.poofai.com/quickbooks-alternative): For users frustrated with QuickBooks
-- [Spreadsheet Bookkeeping](https://www.poofai.com/spreadsheet-bookkeeping): For owners moving off spreadsheets
-- [Tax Season](https://www.poofai.com/tax-season): Catch-up bookkeeping and tax-season prep
 
 ## Blog
 
@@ -61,7 +38,6 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 - [Best QuickBooks Alternatives for Small Business in 2026](https://www.poofai.com/blog/best-quickbooks-alternatives-small-business)
 - [QuickBooks Too Expensive? 5 Things You Can Do Right Now](https://www.poofai.com/blog/quickbooks-too-expensive-alternatives)
 - [Ecommerce Bookkeeping: How to Handle Stripe, Shopify, and Marketplace Fees](https://www.poofai.com/blog/ecommerce-bookkeeping-stripe-shopify-fees)
-- [Free AI Bank Statement Analyzer: Get Your Spend Score in 60 Seconds](https://www.poofai.com/blog/free-ai-bank-statement-analyzer)
 - [Plumbing Chart of Accounts: A Complete Template for Shop Owners](https://www.poofai.com/blog/plumbing-chart-of-accounts)
 - [Electrical Contractor Bookkeeping: The Complete Guide for Shop Owners](https://www.poofai.com/blog/electrical-contractor-bookkeeping-guide)
 - [Electrical Chart of Accounts: A Complete Template for Contractors](https://www.poofai.com/blog/electrical-chart-of-accounts)
@@ -93,9 +69,9 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 
 **Productivity & Workflow (6):** Personalized dashboard with AI daily briefing, global search, notification center, transaction approval workflows, command bar (Cmd+K), AI chat folders with drag-and-drop organization.
 
-**Poof AI Capabilities (19):** Business-context-aware chat, books health check and month-end close guidance, invoice/estimate/credit note creation via AI, record creation via natural language, record updates, budgeting and forecasting guidance, recurring charge analysis, chart of accounts setup, account search and creation, journal entry creation with account validation, recurring journal entry setup (depreciation, amortization, rent, insurance), financial report generation, bank statement PDF import via chat, guided onboarding walkthrough, file attachment handling, approval inside the conversation (ask Poof to invoice someone and the same approval card appears in the chat with the same evidence and buttons as the inbox), and visible working steps (“Looking up invoices — August 2026”, “Preparing an invoice — Smith Residential” arriving as each step runs; the steps say preparing, never created, because nothing has been written yet). Ask where things stand ("Is August ready to close?", "which bills are due this week?", "what do we owe Ferguson?", "how did July go?" — the close's status and checklist, transaction search, A/P aging, open bills, the 13-week cash plan, accrual schedules, and a month's summary answered from the books; the model narrates the numbers and never computes new ones; the same reads are what an outside agent gets over MCP), and book, move, or cancel a visit from the chat (open slots and the appointment list answer at once; the booking becomes a card, and approving it runs the same handler the phone line runs; no rule can ever approve a visit).
+**Poof AI Capabilities (19):** Business-context-aware chat, books health check and month-end close guidance, invoice/estimate/credit note creation via AI, record creation via natural language, record updates, budgeting and forecasting guidance, recurring charge analysis, chart of accounts setup, account search and creation, journal entry creation with account validation, recurring journal entry setup (depreciation, amortization, rent, insurance), financial report generation, bank statement PDF import via chat, guided onboarding walkthrough, file attachment handling, approval inside the conversation (ask Poof to invoice someone and the same approval card appears in the chat with the same evidence and buttons as the inbox), and visible working steps (“Looking up invoices — August 2026”, “Preparing an invoice — Smith Residential” arriving as each step runs; the steps say preparing, never created, because nothing has been written yet). Ask where things stand ("Is August ready to close?", "which bills are due this week?", "what do we owe Ferguson?", "how did July go?" — the close's status and checklist, transaction search, A/P aging, open bills, the 13-week cash plan, accrual schedules, and a month's summary answered from the books; the model narrates the numbers and never computes new ones), and book, move, or cancel a visit from the chat (open slots and the appointment list answer at once; the booking becomes a card, and approving it runs the same handler the phone line runs; no rule can ever approve a visit).
 
-**Approvals & AI Autonomy (9):** The approvals inbox (every write an AI proposes, from any surface — the nightly categorization sweep, a request typed into Ask Poof, a detector that noticed a job losing money — stages as a card and waits; nothing reaches the books until a person approves it, and approving runs exactly what is on the card, the stored request rather than a fresh interpretation of it), the evidence rather than the assertion (each card shows what Poof looked up to justify itself — the customer it resolved and their email, the prior transactions for that merchant and whether they were categorized the same way, the amount, the account — gathered by code, never judged by the model; a card saying “no history for this merchant” is telling you why it is asking), partial approval of a batch (untick three rows of forty, approve the rest in one tap, and the unticked ones are still waiting tomorrow), reject with a reason (the reason is recorded, not discarded — it is the signal that stops a rule covering that kind of work), standing rules granted from a card someone already read (derived from the work in front of you — the merchant those rows share, the agreement in their history, a limit above the largest one — shown in plain sentences with how much of the card it covers and the owner's own 30-day record with that kind of change, not a blank form), a rule that stops itself (correct anything a rule is about — not only the rows it happened to touch — or reject the kind of work it covers, and it pauses, says which correction stopped it, and waits to be resumed or revoked; every rule lives on one page with what it has handled and who granted it, and revoking is instant), five queues in one inbox (an inbox playbook run, a reconciliation match the scheduled job was unsure of, a POS deposit that came in short, a bill the cash planner put on hold, and a late close task are all cards in the same Approvals inbox; the original pages still work and deciding there is the same decision), the page settles the card (a card from a pipeline, a detector, or the scheduled job waits thirty days — a chat draft waits one — and closes when the record is decided on its own page; a decision different from what the card proposed is recorded as a correction, like a Reject), and a playbook that graduates as a rule ("Approve all like this" on an inbox-run card pins a rule to that playbook, only while the file keeps its columns, under a ceiling from the run's total). The approvals inbox is on for everyone. AUTONOMY IS OFF UNTIL A PERSON GRANTS IT, one rule at a time — there is no default and no global “let the AI do it” switch. No rule can ever send anything to a customer: invoices and credit notes are always a human's decision. A rule that writes to the ledger MUST carry a dollar limit or it does not run; there is also a daily cap whose overflow goes to the inbox rather than being dropped, and a requirement that prior human decisions agreed. Rules cannot be created from a settings screen, only from work someone reviewed. Against QuickBooks: QBO has bank rules and they auto-post — a QBO rule that is wrong keeps being wrong until somebody notices; none of the ceiling, cap, agreement requirement, or self-pausing exists in a bank rule.
+**Approvals & AI Autonomy (9):** The approvals inbox (every write an AI proposes, from any surface — the nightly categorization sweep, a request typed into Ask Poof, a detector that noticed a job losing money — stages as a card and waits; nothing reaches the books until a person approves it, and approving runs exactly what is on the card, the stored request rather than a fresh interpretation of it), the evidence rather than the assertion (each card shows what Poof looked up to justify itself — the customer it resolved and their email, the prior transactions for that merchant and whether they were categorized the same way, the amount, the account — gathered by code, never judged by the model; a card saying “no history for this merchant” is telling you why it is asking), partial approval of a batch (untick three rows of forty, approve the rest in one tap, and the unticked ones are still waiting tomorrow), reject with a reason (the reason is recorded, not discarded — it is the signal that stops a rule covering that kind of work), standing rules granted from a card someone already read (derived from the work in front of you — the merchant those rows share, the agreement in their history, a limit above the largest one — shown in plain sentences with how much of the card it covers and the owner's own 30-day record with that kind of change, not a blank form), a rule that stops itself (correct anything a rule is about — not only the rows it happened to touch — or reject the kind of work it covers, and it pauses, says which correction stopped it, and waits to be resumed or revoked; every rule lives on one page with what it has handled and who granted it, and revoking is instant), five queues in one inbox (an inbox playbook run, a reconciliation match the scheduled job was unsure of, a POS deposit that came in short, a bill the cash planner put on hold, and a late close task are all cards in the same Approvals inbox; the original pages still work and deciding there is the same decision), the page settles the card (a card from a pipeline, a detector, or the scheduled job waits thirty days — a chat draft waits one — and closes when the record is decided on its own page; a decision different from what the card proposed is recorded as a correction, like a Reject), and a playbook that graduates as a rule ("Approve all like this" on an inbox-run card pins a rule to that playbook, only while the file keeps its columns, under a ceiling from the run's total). The approvals inbox is on for everyone. AUTONOMY IS OFF UNTIL A PERSON GRANTS IT, one rule at a time — there is no default and no global “let the AI do it” switch. No ledger rule can ever send anything to a customer: invoices and credit notes are always a human's decision. The phone is a separate channel a shop opts into: the AI receptionist talks to callers and books jobs inside rules written in code, and nothing granted in the books can reach it. A rule that writes to the ledger MUST carry a dollar limit or it does not run; there is also a daily cap whose overflow goes to the inbox rather than being dropped, and a requirement that prior human decisions agreed. Rules cannot be created from a settings screen, only from work someone reviewed. Against QuickBooks: QBO has bank rules and they auto-post — a QBO rule that is wrong keeps being wrong until somebody notices; none of the ceiling, cap, agreement requirement, or self-pausing exists in a bank rule.
 
 ## Key Numbers & Claims
 
@@ -104,7 +80,7 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 - Customer deposits are held as a liability and released to the job's revenue on completion; prepaid maintenance plans are deferred and earn per completed visit — "A down payment isn't revenue until the job is done. A plan isn't revenue until the visit happens."
 - 6 receptionist notification channels (SMS, email, push, Slack, Telegram, webhook)
 - Technician field link requires no account and no app install
-- Shop SLAs (with the controller review): books closed by the 15th business day, every completed job costed within 5 business days, unbilled-work report every Friday, controller responds within 1 business day
+- The five-day close guarantee: books closed within five business days of month end, or the next month is free
 - 12,000+ bank connections via Plaid
 - 13 financial reports
 - 30+ AI assistant tools (create, update, search, send, generate, import)
@@ -117,22 +93,13 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 
 ## Pricing
 
-Poof for shops (HVAC, plumbing, electrical — primary offering):
-
-- **Poof for shops:** $1,200/mo (2–4 truck shops, $750K–$1.5M revenue) — monthly close with per-job P&L, controller review, a controller you can text or email, monthly variance review
-- **Poof for shops, Plus:** $1,500/mo (5+ truck shops, $1.5M–$3M revenue) — everything above plus multi-location reporting, quarterly review call, priority response
-- **Managed for Trades Pro:** $2,400/mo, for shops above $3M revenue — above the core target range, scoped per shop, sold on exception
-- **Onboarding (one-time):** $1,500 (historical cleanup up to 18 months, QBO/Xero migration, Jobber/Housecall Pro setup)
-- **Job Margin & Recovery Audit:** $750, paid, one week — the usual entry point. A diagnostic that returns a dollar figure in five days and credits in full against onboarding if the shop signs within 30 days. Not refundable and not discounted.
-
-Poof Professional (self-serve software):
-
-- **Monthly:** $79/mo, all 128 features included
-- **Monthly (launch special):** $39.50/mo (50% off first 3 months)
+- **Monthly:** $79/mo, all 128 features included, one plan, no tiers
 - **Annual:** $790/year ($65.83/mo, save $158)
-- Comparison anchor: the fair QuickBooks Online comparison is Plus at $140/mo — the tier carrying job costing, budgets, and full reporting — not Simple Start at $38/mo, which is single-user. Against Plus, Poof is 44% cheaper. QuickBooks list prices verified August 2026 after Intuit's August 1, 2026 increase: Simple Start $38, Essentials $85, Plus $140, Advanced $340.
+- The price does not change with the number of technicians, trucks, or organizations on the plan.
+- Comparison anchor: the fair QuickBooks Online comparison is Plus at $140/mo — the tier carrying job costing, budgets, and full reporting — not Simple Start at $38/mo, which is single-user. QuickBooks pricing verified August 2026.
 - **Free trial:** 30 days, no credit card required
 - **Money-back guarantee:** 30 days
+- Poof is software. There is no done-for-you bookkeeping service, no managed monthly fee, and no paid diagnostic audit.
 
 ## Founder
 

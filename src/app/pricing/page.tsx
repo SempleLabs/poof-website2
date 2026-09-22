@@ -52,7 +52,7 @@ export default function PricingPage() {
     },
     {
       question: 'What if I need to cancel?',
-      answer: 'You can cancel anytime with one click. No contracts, no cancellation fees. You\'ll have access until the end of your billing period, and can export all your data.'
+      answer: 'You can cancel anytime. No contracts, no cancellation fees. Email support@poofai.com with the change you want and we will take care of it; you keep access until the end of your billing period, and you can export all your data.'
     },
     {
       question: 'How does Poof compare to QuickBooks?',
@@ -207,7 +207,7 @@ export default function PricingPage() {
                 href="https://app.poofai.com/register"
                 className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-all text-lg w-full block text-center py-4 mb-4"
               >
-                Start Free Trial →
+                Start free trial →
               </Link>
 
               <p className="text-sm text-slate-500">
@@ -338,7 +338,7 @@ export default function PricingPage() {
               href="https://app.poofai.com/register"
               className="bg-ledger-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-ledger-600 hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
-              Start Free Trial →
+              Start free trial →
             </Link>
             <p className="text-slate-500 text-sm mt-4">
               30-day free trial • Cancel anytime

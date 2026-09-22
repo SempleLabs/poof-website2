@@ -44,7 +44,7 @@ export default function ReceptionistSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-ledger-500/15 border border-ledger-400/30 text-ledger-300 font-semibold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">
-              Part of Poof for shops
+              Poof for shops
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
               Every call answered. <span className="text-ledger-600">Every job on the board.</span>
@@ -89,7 +89,7 @@ export default function ReceptionistSection() {
               What it does not do
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              We install it for you as part of Poof for shops &mdash; we provision the number and the voice
+              We set it up for you &mdash; we provision the number and the voice
               agent. It is not a switch you flip yourself. <strong className="text-slate-100">Customer-facing
               texts are not built yet</strong>: no booking confirmation, no reminder, no &ldquo;your tech is on
               the way.&rdquo; Your technician does get texted their job &mdash; your customer does not. It does not
