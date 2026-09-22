@@ -15,9 +15,9 @@ type RuleState = 'none' | 'active' | 'paused' | 'revoked'
 type Who = 'own' | 'clients' | 'shop' | 'qbo' | null
 
 const WHO: { id: Exclude<Who, null>; label: string; sub: string; lead: string; cta: [string, string] }[] = [
-  { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank, and the AI proposes every entry. You approve in minutes a day, and the month closes as a record.', cta: ['See Autopilot with limits', '/autopilot'] },
-  { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend.', cta: ['See the close', '/close'] },
-  { id: 'shop', label: 'I run a shop', sub: 'HVAC, plumbing, electrical', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month.', cta: ['See Poof for shops', '/trades'] },
+  { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank and the AI proposes every entry, with the evidence it found. You approve in minutes a day, nothing lands until you have seen it, and the month closes as a record.', cta: ['See Autopilot with limits', '/autopilot'] },
+  { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend. Nothing reaches a client\'s books until a person has seen it.', cta: ['See the close', '/close'] },
+  { id: 'shop', label: 'I run a shop', sub: 'HVAC, plumbing, electrical', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month. The AI runs the books, the phone, and the field up to one line: nothing lands until a person has seen it.', cta: ['See Poof for shops', '/trades'] },
   { id: 'qbo', label: "I'm on QuickBooks", sub: 'And a bank rule burned me once', lead: 'A QuickBooks rule keeps being wrong until you notice. A Poof rule stops itself the first time you contradict it, and nothing posts without a person seeing it.', cta: ['Poof vs QuickBooks', '/poof-vs-quickbooks'] },
 ]
 
@@ -158,13 +158,14 @@ export default function HomeShow() {
   return (
     <div className="max-w-[820px] mx-auto px-4 sm:px-6 pb-24">
       {/* progress line */}
-      <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-rule flex items-center justify-between gap-3 text-[12.5px] font-mono tracking-[0.06em] uppercase text-muted" aria-label="Progress">
+      <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-rule flex items-center justify-between gap-3 text-[11px] sm:text-[12.5px] font-mono tracking-[0.06em] uppercase text-muted" aria-label="Progress">
+        {/* all four steps fit a 375px phone: no "The", no separators, smaller dots below sm */}
         <span className="flex items-center gap-2 min-w-0 overflow-x-auto scrollbar-hide">
-          {[['The desk', o1], ['The inbox', o2], ['The reconciliation', o3], ['The close', o4]].map(([label, done], i) => (
-            <span key={label as string} className="flex items-center gap-2 whitespace-nowrap">
-              {i > 0 && <span className="text-rule">·</span>}
-              <span className={`w-2 h-2 rounded-full ${done ? 'bg-ledger-600' : 'border border-muted'}`} aria-hidden="true" />
-              <span className={done ? 'text-ink' : ''}>{label as string}</span>
+          {[['desk', o1], ['inbox', o2], ['reconciliation', o3], ['close', o4]].map(([label, done], i) => (
+            <span key={label as string} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
+              {i > 0 && <span className="text-rule hidden sm:inline">·</span>}
+              <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${done ? 'bg-ledger-600' : 'border border-muted'}`} aria-hidden="true" />
+              <span className={done ? 'text-ink' : ''}><span className="hidden sm:inline">The&nbsp;</span>{label as string}</span>
             </span>
           ))}
         </span>
@@ -178,28 +179,33 @@ export default function HomeShow() {
           {!vanished ? (
             <>
               <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The work disappears.</h1>
-              <p className={sub}>Poof runs the back office: the books, the invoices, the cash plan, the month-end close, and for shops the phone and the field. The AI does all of it up to one line: nothing lands until a person has seen it. {picked ? picked.lead : 'Tell it who you are, or just press the button.'}</p>
+
+              {/* who are you here as: asked before the paragraph, so the paragraph is written for the answer */}
+              <div className="mb-5" role="group" aria-labelledby="who-label">
+                <p id="who-label" className="text-[13px] text-muted mb-2">Who are you here as?</p>
+                <div className="grid grid-cols-2 gap-2 max-w-[560px]">
+                  {WHO.map((w) => (
+                    <button key={w.id} type="button" onClick={() => setWho(who === w.id ? null : w.id)} aria-pressed={who === w.id}
+                      className={`text-left rounded-lg border px-3 py-2 transition-colors ${who === w.id ? 'border-ledger-600 bg-ledger-200 text-ink' : 'border-rule bg-white text-ink hover:border-ledger-600'}`}>
+                      <span className="block text-sm font-semibold">{w.label}</span>
+                      <span className="block text-[12px] text-muted">{w.sub}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <p className={sub}>{picked ? picked.lead : 'Poof runs the back office: the books, the invoices, the cash plan, the month-end close, and for shops the phone and the field. The AI does all of it up to one line: nothing lands until a person has seen it.'}</p>
+              {picked && (
+                <div className="-mt-2 mb-6">
+                  <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>
+                </div>
+              )}
             </>
           ) : (
             <>
               <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The evidence doesn&apos;t.</h1>
               <p className={sub}>Nothing reached the books. Six things are waiting for you, each with <b className="text-ink font-semibold">what it found</b>. That is the whole idea: the work moves, the record does not, until you say so.</p>
             </>
-          )}
-
-          {/* who are you here as */}
-          {!vanished && (
-            <div className="mb-4" role="group" aria-label="Who are you here as">
-              <div className="grid grid-cols-2 gap-2 max-w-[560px]">
-                {WHO.map((w) => (
-                  <button key={w.id} type="button" onClick={() => setWho(who === w.id ? null : w.id)} aria-pressed={who === w.id}
-                    className={`text-left rounded-lg border px-3 py-2 transition-colors ${who === w.id ? 'border-ledger-600 bg-ledger-200 text-ink' : 'border-rule bg-white text-ink hover:border-ledger-600'}`}>
-                    <span className="block text-sm font-semibold">{w.label}</span>
-                    <span className="block text-[12px] text-muted">{w.sub}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
           )}
 
           <div className={`relative aspect-[1024/687] my-2 mb-5 border border-rule overflow-hidden bg-paper-2 ${gone ? 'is-gone' : ''}`}>
