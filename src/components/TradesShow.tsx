@@ -995,7 +995,7 @@ export default function TradesShow() {
             </a>
           </div>
           <p className={noteCls}>
-            Thirty days free. Your books closed within five business days of month end, or the next month is
+            Thirty days free, then half price for three months. Your books closed within five business days of month end, or the next month is
             free.
           </p>
         </section>

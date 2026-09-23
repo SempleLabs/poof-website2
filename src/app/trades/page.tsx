@@ -16,7 +16,7 @@ import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Poof for shops — the back office for HVAC, plumbing, and electrical | Poof',
   description:
-    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. One plan, $79 a month, every feature. 30-day free trial.',
+    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. One plan, every feature: 30 days free, then $39.50/mo for three months, then $79/mo.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
@@ -77,7 +77,7 @@ const builtFor = [
 const faqs = [
   {
     q: 'What does Poof for shops cost?',
-    a: 'The same as every other Poof account: $79 a month, all 128 features, with a 30-day free trial. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
+    a: 'The same as every other Poof account: $79 a month, all 128 features. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
   },
   {
     q: 'Is the AI receptionist something I turn on myself?',
@@ -206,7 +206,7 @@ export default function TradesPage() {
             <p className="text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Every feature, including the receptionist, the field loop, and per-job profitability. It does not
               go up when you add a truck or a tech — the field-service tools shops compare us to are priced per
-              technician per month. Thirty days free to start.
+              technician per month. Thirty days free, then $39.50 a month for your first three paid months.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>

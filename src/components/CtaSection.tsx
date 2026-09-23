@@ -9,7 +9,7 @@ export default function CtaSection() {
           The work disappears. The evidence doesn&apos;t.
         </h2>
         <p className="text-lg text-ledger-400 mb-8 max-w-2xl mx-auto">
-          Thirty days free, every feature. Or book a demo and bring your books.
+          Thirty days free, then half price for three months. Every feature. Or book a demo and bring your books.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <Link

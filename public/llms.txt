@@ -4,7 +4,7 @@
 
 Poof is built by Austin Semple, a former controller: three years in audit, then seven running the books for small service businesses. It is a product of Semple Labs LLC.
 
-Poof is one product on one plan. $79/mo (or $790/yr), every feature included, 30-day free trial, no credit card. A shop owner, a bookkeeper, a controller, or a firm runs the same software; service shops additionally get the AI receptionist, the dispatch board, and the technician's field link, at the same price. Poof does not sell a done-for-you bookkeeping service.
+Poof is one product on one plan. $79/mo (or $790/yr), every feature included. 30-day free trial with no credit card, then 50% off the first three paid months ($39.50/mo), then $79/mo. A shop owner, a bookkeeper, a controller, or a firm runs the same software; service shops additionally get the AI receptionist, the dispatch board, and the technician's field link, at the same price. Poof does not sell a done-for-you bookkeeping service.
 
 ## Core Pages
 
@@ -94,6 +94,7 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 ## Pricing
 
 - **Monthly:** $79/mo, all 128 features included, one plan, no tiers
+- **Launch special:** 50% off the first three paid months ($39.50/mo), starting after the 30-day free trial; $79/mo after that. Monthly billing.
 - **Annual:** $790/year ($65.83/mo, save $158)
 - The price does not change with the number of technicians, trucks, or organizations on the plan.
 - Comparison anchor: the fair QuickBooks Online comparison is Plus at $140/mo — the tier carrying job costing, budgets, and full reporting — not Simple Start at $38/mo, which is single-user. QuickBooks pricing verified August 2026.

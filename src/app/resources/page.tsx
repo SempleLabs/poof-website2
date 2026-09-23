@@ -282,7 +282,7 @@ export default async function ResourcesPage() {
               Ready to Try Poof?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Start your 30-day free trial. $79 a month after, every feature included.
+              Start your 30-day free trial. Then $39.50 a month for your first three paid months, and $79 after — every feature included.
             </p>
             <Link
               href="https://app.poofai.com/register"

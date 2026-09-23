@@ -690,7 +690,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 128 features included ($39.50/month for your first 3 months). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 128 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -750,7 +750,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 128 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 50% launch discount ($39.50/mo for the first 3 months) and a 30-day free trial with no credit card required.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 128 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 30-day free trial with no credit card required, and then a 50% launch discount: $39.50/mo for the first 3 paid months.",
     category: "Pricing & Plans"
   },
   {
@@ -785,7 +785,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 128 features — no credit card required to start. When your trial ends, you can subscribe at $79/month (or $39.50/month with the 50% launch discount for the first 3 months). If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 128 features — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

@@ -13,7 +13,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Every feature. <span className="text-ledger-600">One price.</span></>}
-        subtitle="128 features in 13 groups, all on this page, nothing you have to grow into. $79/mo, every feature, 30-day trial with no card."
+        subtitle="128 features in 13 groups, all on this page, nothing you have to grow into. $79/mo, every feature. 30-day trial with no card, then half price for your first three paid months."
       >
         <Link
           href="https://app.poofai.com/register"

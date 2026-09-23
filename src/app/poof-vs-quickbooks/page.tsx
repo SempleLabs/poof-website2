@@ -158,7 +158,7 @@ export default function PoofVsQuickbooksPage() {
                   <span className="text-4xl font-bold text-ledger-400">$39.50</span>
                   <span className="text-lg text-slate-400">/mo</span>
                 </div>
-                <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
+                <p className="text-slate-400 mb-6">After a 30-day free trial: 50% off your first 3 paid months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-center gap-2"><PoofCheck /> 128 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>

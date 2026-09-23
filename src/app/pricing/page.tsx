@@ -40,7 +40,7 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'What happens during the free trial?',
-      answer: 'You get full access to all features for 30 days. Connect your bank accounts, process receipts, and see how Poof transforms your bookkeeping. You can cancel anytime during the trial period.'
+      answer: 'You get full access to every feature for 30 days. Connect your bank accounts, process receipts, and see how Poof runs your back office. When the 30 days are up, your first three paid months are 50% off at $39.50/mo, then $79/mo. You can cancel anytime, including during the trial.'
     },
     {
       question: 'Is my financial data secure?',
@@ -155,7 +155,7 @@ export default function PricingPage() {
               {!isAnnual ? (
                 <div className="bg-ledger-500 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
                   <span className="animate-pulse">✦</span>
-                  <span className="uppercase">Launch Special — 50% off your first 3 months</span>
+                  <span className="uppercase">Launch Special — 50% off your first 3 paid months</span>
                   <span className="animate-pulse">✦</span>
                 </div>
               ) : (
@@ -184,7 +184,7 @@ export default function PricingPage() {
                   <p className="text-sm text-slate-500">
                     {isAnnual
                       ? 'Billed $790/year — your lowest rate, locked in (2 months free)'
-                      : '50% off for your first 3 months, then $79/mo'
+                      : 'After your free month: $39.50/mo for 3 months, then $79/mo'
                     }
                   </p>
                 </div>
@@ -332,7 +332,7 @@ export default function PricingPage() {
               Ready to Automate Your Bookkeeping?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              Start your 30-day free trial, then get 50% off your first 3 months.
+              Start your 30-day free trial, then get 50% off your first 3 paid months.
             </p>
             <Link
               href="https://app.poofai.com/register"
