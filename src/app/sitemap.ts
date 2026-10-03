@@ -124,6 +124,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/shop-math`,
+      lastModified: BUILD_DATE,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/freelancers`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Shop Math Calculator</title>
+<link rel="canonical" href="https://www.poofai.com/shop-math" />
+<meta property="og:title" content="Shop Math: run your numbers" />
+<meta property="og:description" content="Price raises, sales, labor rate, callbacks, late payers and drive time, worked out with your own shop's numbers." />
+<meta property="og:url" content="https://www.poofai.com/shop-math" />
+<meta property="og:type" content="website" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBYZR71LFN"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-RBYZR71LFN',{anonymize_ip:true});</script>
+<meta name="description" content="Run your own shop's numbers through the Shop Math questions: price raises, sales, labor rate, callbacks, late payers and drive time." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@500;600&display=swap" />
+<style>
+  /* Shop Math is one look, a blueprint: it commits to its dark navy in both themes. */
+  :root {
+    color-scheme: dark;
+    --bg: #0d2640;
+    --grid-minor: #12304f;
+    --grid-major: #1a3d63;
+    --panel: #10304f;
+    --edge: #2a5584;
+    --ink: #f3f6fa;
+    --muted: #9db2ca;
+    --orange: #ff7a1a;
+    --kept: #58d68d;
+    --cost: #4f6d8f;
+    --lost: #ff5a4e;
+    --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+    --text: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  }
+  body {
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid-major) 2px, transparent 2px),
+      linear-gradient(90deg, var(--grid-major) 2px, transparent 2px),
+      linear-gradient(var(--grid-minor) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 30px 30px, 30px 30px;
+    color: var(--ink);
+    font: 500 16px/1.5 var(--text);
+    overflow-x: clip;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 18px; padding-block: 22px 40px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  a { color: var(--orange); }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+  header { display: flex; align-items: center; gap: 14px; }
+  header svg { width: 46px; height: 46px; flex: none; }
+  .wordmark { font: 800 34px/1 var(--display); letter-spacing: 0.02em; text-transform: uppercase; margin: 0; }
+  .wordmark span { color: var(--orange); }
+  .tagline { margin: 2px 0 0; color: var(--muted); font: 700 14px/1.2 var(--display); letter-spacing: 0.14em; text-transform: uppercase; }
+
+  nav { overflow-x: auto; margin-inline: -18px; padding-inline: 18px; scrollbar-width: none; }
+  #chips { display: flex; gap: 8px; width: max-content; }
+  .chip { display: block; padding: 9px 16px; border: 2px solid var(--edge); border-radius: 999px; background: var(--panel); color: var(--ink); text-decoration: none; font: 700 17px/1 var(--display); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .chip[aria-current="page"] { background: var(--orange); border-color: var(--orange); color: var(--bg); }
+
+  main { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+  @media (min-width: 860px) { main { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); } }
+
+  .ticket, .answer { background: var(--panel); border: 2px solid var(--edge); border-radius: 12px; padding: 22px 20px; }
+  .eyebrow { margin: 0 0 8px; color: var(--orange); font: 700 14px/1 var(--display); letter-spacing: 0.16em; text-transform: uppercase; }
+  #ask { margin: 0 0 18px; font: 800 clamp(30px, 6vw, 40px)/1.02 var(--display); text-transform: uppercase; text-wrap: balance; }
+  #fields { display: grid; gap: 0; }
+  .field { display: grid; gap: 4px; padding-block: 14px; border-top: 2px dashed var(--edge); }
+  .field label { color: var(--muted); font-weight: 600; font-size: 15px; }
+  .input { display: flex; align-items: center; gap: 6px; background: var(--bg); border: 2px solid var(--edge); border-radius: 8px; padding: 4px 14px; }
+  .input:focus-within { border-color: var(--orange); }
+  .input input { flex: 1; min-width: 0; background: none; border: 0; color: var(--ink); font: 700 30px/1.3 var(--display); font-variant-numeric: tabular-nums; }
+  .input input:focus { outline: none; }
+  .affix { color: var(--orange); font: 700 26px/1 var(--display); }
+  .hint { margin: 0; color: var(--muted); font-size: 13px; }
+
+  .figure { margin: 0; color: var(--orange); font: 800 clamp(64px, 16vw, 112px)/0.95 var(--display); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .figure-label { margin: 6px 0 18px; font: 700 22px/1.15 var(--display); text-transform: uppercase; text-wrap: balance; }
+  .chart { margin-bottom: 18px; }
+  .chart svg { display: block; width: 100%; height: auto; }
+  .chart .axis { stroke: var(--edge); stroke-width: 3; }
+  .chart .tick { fill: var(--muted); font: 600 17px var(--display); }
+  .chart .base { stroke: var(--ink); stroke-width: 2.5; stroke-dasharray: 10 8; opacity: 0.75; }
+  .chart .base-label { fill: var(--ink); font: 700 18px var(--display); }
+  .chart .kept { fill: none; stroke: var(--kept); stroke-width: 6; stroke-linecap: round; }
+  .chart .lost { fill: none; stroke: var(--lost); stroke-width: 6; stroke-linecap: round; }
+  .chart .cross-line { stroke: var(--orange); stroke-width: 3; stroke-dasharray: 6 6; }
+  .chart .cross { fill: var(--panel); stroke: var(--orange); stroke-width: 4; }
+  .chart .cross-label { fill: var(--orange); font: 800 20px var(--display); text-transform: uppercase; }
+  .chart .bar { fill: var(--cost); }
+  .chart .bar.kept { fill: var(--kept); stroke: none; }
+  .chart .bar.hot { fill: var(--orange); }
+  .chart .bar-top { fill: var(--ink); font: 800 20px var(--display); }
+  .steps { margin: 0 0 16px; padding-left: 22px; display: grid; gap: 8px; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .steps li::marker { color: var(--orange); font: 800 16px var(--display); }
+  .rule { margin: 0; padding: 12px 14px; border: 2px solid var(--edge); border-radius: 8px; background: var(--bg); color: var(--orange); font: 700 19px/1.3 var(--display); }
+  .problem { margin: 0; color: var(--lost); font-weight: 600; }
+
+  .offer { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 860px) { .offer { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+  #leads { display: grid; gap: 10px; align-content: start; }
+  #leads h2, .poof h2 { margin: 0; font: 800 26px/1.05 var(--display); text-transform: uppercase; }
+  #leads p, .poof p { margin: 0; color: var(--muted); max-width: 60ch; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .row input { flex: 1 1 220px; min-width: 0; background: var(--bg); border: 2px solid var(--edge); border-radius: 8px; padding: 12px 14px; color: var(--ink); font: 600 17px var(--text); }
+  button { background: var(--orange); color: var(--bg); border: 0; border-radius: 8px; padding: 12px 20px; font: 800 19px/1 var(--display); letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+  button:disabled { opacity: 0.45; cursor: not-allowed; }
+  #lead-status { min-height: 1.5em; font-size: 14px; }
+  #leads.off { border-style: dashed; }
+  .poof { display: grid; gap: 10px; align-content: start; }
+  .poof .price { color: var(--ink); font-weight: 600; }
+  footer { color: var(--muted); font-size: 13px; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+</head>
+<body style="margin:0">
+<div class="wrap">
+  <header>
+    <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="93.3,75 50,100 6.7,75 6.7,25 50,0 93.3,25" transform="translate(5 5) scale(0.9)" fill="none" stroke="#ff7a1a" stroke-width="9" stroke-linejoin="round" /><text x="50" y="51" text-anchor="middle" dominant-baseline="central" fill="#f3f6fa" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="54">$</text></svg>
+    <div>
+      <p class="wordmark">Shop <span>Math</span></p>
+      <p class="tagline">Run your numbers</p>
+    </div>
+  </header>
+
+  <nav aria-label="Questions"><div id="chips"></div></nav>
+
+  <main>
+    <section class="ticket" aria-labelledby="ask">
+      <p class="eyebrow" id="episode">Your shop's numbers</p>
+      <h1 id="ask"></h1>
+      <div id="fields"></div>
+    </section>
+    <section class="answer" id="answer" aria-live="polite"></section>
+  </main>
+
+  <section class="offer">
+    <form id="leads" class="ticket" novalidate>
+      <h2>Email me these numbers</h2>
+      <p>The answer and the working, with your figures, in your inbox.</p>
+      <!-- A field people never see; bots fill it in. -->
+      <input id="lead-website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px" />
+      <div class="row">
+        <input id="lead-email" type="email" autocomplete="email" placeholder="you@yourshop.com" aria-label="Your email" />
+        <button id="lead-submit" type="submit">Send it</button>
+      </div>
+      <p id="lead-status" role="status"></p>
+    </form>
+    <div class="poof ticket">
+      <h2>Who makes this</h2>
+      <p>Shop Math is made by Austin Semple, who builds Poof: AI bookkeeping for trades shops that tracks the margin on every real job, so these numbers come from your books instead of a guess.</p>
+      <p class="price">One plan, $79 a month. Free for 30 days, no credit card.</p>
+      <p><a href="https://poofai.com" rel="noopener">See Poof at poofai.com</a></p>
+    </div>
+  </section>
+
+  <footer>Illustrative math, not financial or tax advice. It's the same math as the Shop Math videos, and every assumption is yours to change.</footer>
+</div>
+<script>window.SHOP_MATH={"leads":"/api/shop-math","episodes":{"discount":{"number":2,"title":"A 10% off sale: how many more jobs to break even?"},"drive-time":{"number":7,"title":"15 extra minutes of driving per job. What's it cost a year?"},"callbacks":{"number":5,"title":"One free callback a week. What's it cost a year?"},"paid-late":{"number":6,"title":"Customers pay in 60 days, not 30. How much cash is stuck?"},"price-vs-volume":{"number":3,"title":"10% more jobs, or 10% higher prices?"},"price-raise":{"number":1,"title":"Raise prices 10%. How many customers can you lose?"},"labor-rate":{"number":4,"title":"You pay a tech $30/hr. What do you charge to cover him?"}},"latest":"drive-time"};</script>
+<script>(()=>{var s=e=>`${e<0?"-":""}$${Math.round(Math.abs(e)).toLocaleString("en-US")}`,u=e=>{let t=e*100;return`${Number.isInteger(Math.round(t*10)/10)?Math.round(t):Number(t.toFixed(1))}%`};function Y(e){let t=1/e;return Math.abs(t-Math.round(t))<1e-9&&t>=2?`1 in ${Math.round(t)}`:null}function C(e,t){return{price:e,cost:e*(1-t),profit:e*t}}function L(e,t){if(!e)throw new Error(t)}function G({price:e,margin:t,raise:a,jobs:n}){var i;L(t>0&&t<1&&a>0,"margin in (0,1), raise > 0");let r=C(e,t),o={price:e*(1+a),cost:r.cost,profit:e*(1+a)-r.cost},c=n*r.profit,l=a/(t+a),p=Math.min(.9,Math.ceil(l*2/.1)*.1),h=Array.from({length:101},(x,m)=>{let y=p*m/100;return{x:y,y:n*(1-y)*o.profit}});return{model:"price-raise",assumptions:[{label:"Average job",value:s(e)},{label:"Job margin",value:u(t)},{label:"Jobs a month",value:String(n)}],values:{price:s(e),newPrice:s(o.price),cost:s(r.cost),profit:s(r.profit),newProfit:s(o.profit),profitUp:u(o.profit/r.profit-1),margin:u(t),raise:u(a),jobs:String(n),monthly:s(c),lose:u(l),loseOneIn:(i=Y(l))!=null?i:u(l),jobsKept:String(Math.round(n*(1-l)))},job:{before:r,after:o,beforeLabel:"today",afterLabel:`+${u(a)} price`},sweep:{xLabel:"customers lost",xMax:p,baseline:c,baselineLabel:"today",points:h,cross:l,worseAfterCross:!0},answer:{value:u(l),label:"of customers you can lose and still make the same"}}}function K({price:e,margin:t,discount:a,jobs:n}){L(a>0&&a<t,"a discount at or above the margin can never break even");let r=C(e,t),o={price:e*(1-a),cost:r.cost,profit:e*(1-a)-r.cost},c=n*r.profit,l=a/(t-a),p=Math.min(3,Math.ceil(l*2/.1)*.1),h=Array.from({length:101},(i,x)=>{let m=p*x/100;return{x:m,y:n*(1+m)*o.profit}});return{model:"discount",assumptions:[{label:"Average job",value:s(e)},{label:"Job margin",value:u(t)},{label:"Jobs a month",value:String(n)}],values:{price:s(e),newPrice:s(o.price),cost:s(r.cost),profit:s(r.profit),newProfit:s(o.profit),profitDown:u(1-o.profit/r.profit),margin:u(t),discount:u(a),jobs:String(n),monthly:s(c),more:u(l),jobsNeeded:String(Math.round(n*(1+l)))},job:{before:r,after:o,beforeLabel:"full price",afterLabel:`${u(a)} off`},sweep:{xLabel:"extra jobs",xMax:p,baseline:c,baselineLabel:"full price",points:h,cross:l,worseAfterCross:!1},answer:{value:u(l),label:"more jobs just to make the same"}}}function q({price:e,margin:t,change:a,jobs:n}){L(t>0&&t<1&&a>0,"margin in (0,1), change > 0");let r=C(e,t),o=n*r.profit,c=n*(r.profit+e*a),l=n*(1+a)*r.profit,p=(c-o)/(l-o);return{model:"price-vs-volume",assumptions:[{label:"Average job",value:s(e)},{label:"Job margin",value:u(t)},{label:"Jobs a month",value:String(n)}],values:{price:s(e),margin:u(t),change:u(a),jobs:String(n),monthly:s(o),byPrice:s(c),byVolume:s(l),priceGain:s(c-o),volumeGain:s(l-o),priceUp:u(c/o-1),volumeUp:u(l/o-1),ratio:`${Number(p.toFixed(1))}\xD7`,moreJobs:String(Math.round(n*a))},compare:{bars:[{label:"today",value:o},{label:`+${u(a)} jobs`,value:l},{label:`+${u(a)} price`,value:c}]},answer:{value:`${Number(p.toFixed(1))}\xD7`,label:"the profit from the same 10% on price"}}}function z({wage:e,burden:t,billable:a}){L(e>0&&t>=0&&a>0&&a<=1,"wage > 0, burden >= 0, billable in (0,1]");let n=e*(1+t),r=n/a,o=40;return{model:"labor-rate",assumptions:[{label:"Tech's wage",value:`${s(e)}/hr`},{label:"Taxes, insurance, PTO",value:`+${u(t)}`},{label:"Hours you can bill",value:`${Math.round(o*a)} of ${o}`}],values:{wage:s(e),burden:u(t),loaded:s(n),billable:u(a),billedHours:String(Math.round(o*a)),paidHours:String(o),breakEven:s(r),times:`${Number((r/e).toFixed(1))}\xD7`},compare:{title:"what one billable hour costs you",plain:!0,bars:[{label:"his wage",value:e},{label:"+ taxes & ins.",value:n},{label:"per billed hour",value:r}]},answer:{value:s(r),label:"an hour, just to cover what he costs you"}}}function X({perWeek:e,hours:t,loadedRate:a,truck:n,price:r,margin:o}){L(e>0&&t>0&&o>0&&o<1,"perWeek > 0, hours > 0, margin in (0,1)");let c=t*a,l=r*o,p=c+n+l,h=p*e*52;return{model:"callbacks",assumptions:[{label:"Callback, drive included",value:`${t} hrs`},{label:"Tech hour (taxes, ins.)",value:s(a)},{label:"Truck, one trip",value:s(n)},{label:"Full schedule: job it bumps",value:s(r)},{label:"Margin on that job",value:u(o)}],values:{perWeek:String(e),hours:String(t),loadedRate:s(a),time:s(c),truck:s(n),trip:s(c+n),bumped:s(l),price:s(r),margin:u(o),each:s(p),year:s(h),share:u(l/p)},compare:{title:"what one free callback costs you",plain:!0,bars:[{label:"his time",value:c},{label:"the truck",value:n},{label:"the job it bumped",value:l}]},answer:{value:s(h),label:`a year, for ${e===1?"one free callback":`${e} free callbacks`} a week`}}}function Z({monthly:e,usualDays:t,lateDays:a,rate:n}){L(e>0&&a>t&&t>0&&n>=0,"monthly > 0, lateDays > usualDays > 0");let r=e/30,o=r*t,c=r*a,l=c-o;return{model:"paid-late",assumptions:[{label:"You bill a month",value:s(e)},{label:"Customers paid in",value:`${t} days`},{label:"Now they pay in",value:`${a} days`},{label:"Credit line, a year",value:u(n)}],values:{monthly:s(e),usualDays:String(t),lateDays:String(a),extraDays:String(a-t),owedUsual:s(o),owedLate:s(c),stuck:s(l),rate:u(n),interest:s(l*n)},compare:{title:"owed to you at any moment",plain:!0,bars:[{label:`paid in ${t} days`,value:o},{label:`paid in ${a} days`,value:c}]},answer:{value:s(l),label:"of your cash, sitting in your customers' accounts"}}}function ee({minutes:e,jobsPerDay:t,techs:a,workdays:n,loadedRate:r,truckPerHour:o}){L(e>0&&t>0&&a>0&&n>0,"positive minutes, jobs, techs, workdays");let c=e/60*t*a*n,l=c*r,p=c*o,h=l+p;return{model:"drive-time",assumptions:[{label:"Extra drive per job",value:`${e} min`},{label:"Techs \xD7 jobs a day",value:`${a} \xD7 ${t}`},{label:"Work days a year",value:String(n)},{label:"Tech hour (taxes, ins.)",value:s(r)},{label:"Truck, per hour driven",value:s(o)}],values:{minutes:String(e),jobsPerDay:String(t),techs:String(a),workdays:String(n),loadedRate:s(r),truckPerHour:s(o),hours:Math.round(c).toLocaleString("en-US"),labor:s(l),truck:s(p),total:s(h),perMinute:s(h/e)},compare:{title:"what the extra driving costs a year",plain:!0,bars:[{label:"the techs' time",value:l},{label:"the trucks",value:p}]},answer:{value:s(h),label:`a year, for ${e} extra minutes a job`}}}var D={"price-raise":e=>G(e),discount:e=>K(e),"price-vs-volume":e=>q(e),"labor-rate":e=>z(e),callbacks:e=>X(e),"paid-late":e=>Z(e),"drive-time":e=>ee(e)};var j={key:"price",label:"Average job",unit:"money",value:400,step:25},H={key:"margin",label:"Job margin",unit:"percent",value:40,hint:"What's left of the price after parts, labor and the truck."},A={key:"jobs",label:"Jobs a month",unit:"count",value:100,step:5},F={key:"loadedRate",label:"Tech hour, taxes and insurance in",unit:"money",value:39},S=[{id:"price-raise",short:"Raise prices",ask:"Raise your prices. How many customers can you lose before you make less?",fields:[j,H,A,{key:"raise",label:"Price raise",unit:"percent",value:10}],steps:["A {price} job leaves {profit} after costs.","Raise it {raise} to {newPrice} and it leaves {newProfit}, {profitUp} more.","Today: {jobs} jobs \xD7 {profit} = {monthly} a month.","After: {jobsKept} jobs \xD7 {newProfit} = the same {monthly}."],rule:"Customers you can lose = raise \xF7 (margin + raise) = {raise} \xF7 ({margin} + {raise}) = {lose}"},{id:"discount",short:"Run a sale",ask:"Run a sale. How many more jobs do you need just to break even?",fields:[j,H,A,{key:"discount",label:"Discount",unit:"percent",value:10}],steps:["A {price} job leaves {profit} after costs.","{discount} off makes it {newPrice}, and it leaves {newProfit}: {profitDown} less.","Every dollar of the discount comes out of profit. The costs don't move.","To make {monthly} a month again you need {jobsNeeded} jobs instead of {jobs}."],rule:"Extra jobs you need = discount \xF7 (margin \u2212 discount) = {discount} \xF7 ({margin} \u2212 {discount}) = {more}"},{id:"price-vs-volume",short:"Price or jobs",ask:"10% more jobs, or 10% higher prices. Which makes you more?",fields:[j,H,A,{key:"change",label:"The same increase on each",unit:"percent",value:10}],steps:["Today: {monthly} a month.","+{change} jobs ({moreJobs} more trips): {byVolume} a month, up {volumeGain}.","+{change} price: {byPrice} a month, up {priceGain}.","The price raise earns {ratio} as much, with no extra trips."],rule:"A price raise is all profit. Extra jobs bring their parts, labor and truck with them."},{id:"labor-rate",short:"Labor rate",ask:"What does one billable hour of a tech really cost you?",fields:[{key:"wage",label:"Tech's wage, an hour",unit:"money",value:30},{key:"burden",label:"Payroll taxes, insurance, time off",unit:"percent",value:30,hint:"As a share of wages."},{key:"billable",label:"Hours you can bill, of 40 paid",unit:"count",value:24,hint:"Drive time, shop time and callbacks aren't billable.",toParam:e=>e/40}],steps:["{wage} an hour plus {burden} for taxes, insurance and time off = {loaded}.","You pay for {paidHours} hours and bill {billedHours}.","{loaded} \xF7 {billable} billable = {breakEven} per billed hour.","That's {times} his wage before you've made a dollar."]},{id:"callbacks",short:"Callbacks",ask:"One free callback a week. What does it cost you in a year?",fields:[{key:"perWeek",label:"Free callbacks a week",unit:"count",value:1},{key:"hours",label:"Hours each, drive included",unit:"count",value:2,step:.5},F,{key:"truck",label:"Truck, one trip",unit:"money",value:35},{...j,label:"The paid job it bumps"},H],steps:["{hours} hrs \xD7 {loadedRate} = {time} of tech time.","Plus {truck} for the truck: {trip} a trip.","On a full schedule it pushes off a {price} job: {bumped} of profit gone.","{each} each \xD7 {perWeek} a week \xD7 52 weeks = {year}."]},{id:"paid-late",short:"Paid late",ask:"Customers pay in 60 days instead of 30. How much of your cash is stuck?",fields:[{key:"monthly",label:"You bill a month",unit:"money",value:8e4,step:1e3},{key:"usualDays",label:"Customers used to pay in (days)",unit:"count",value:30},{key:"lateDays",label:"Now they pay in (days)",unit:"count",value:60},{key:"rate",label:"Credit line rate, a year",unit:"percent",value:9}],steps:["Owed to you at any moment \u2248 a day's billing \xD7 the days customers take.","At {usualDays} days that's {owedUsual}. At {lateDays} days, {owedLate}.","{stuck} more of your cash sits in customers' accounts.","Borrowing that gap at {rate} costs about {interest} a year."]},{id:"drive-time",short:"Drive time",ask:"15 extra minutes of driving per job. What does it cost a year?",fields:[{key:"minutes",label:"Extra minutes per job",unit:"count",value:15},{key:"jobsPerDay",label:"Jobs a day, per tech",unit:"count",value:4},{key:"techs",label:"Techs",unit:"count",value:3},{key:"workdays",label:"Work days a year",unit:"count",value:250,step:5},F,{key:"truckPerHour",label:"Truck, per hour driven",unit:"money",value:12}],steps:["{minutes} min \xD7 {jobsPerDay} jobs \xD7 {techs} techs \xD7 {workdays} days = {hours} hours a year.","Techs' time: {hours} hrs \xD7 {loadedRate} = {labor}.","Trucks: {hours} hrs \xD7 {truckPerHour} = {truck}.","Every extra minute per job costs about {perMinute} a year."]}];function O(e,t){var n;let a={};for(let r of e.fields){let o=(n=t[r.key])!=null?n:r.value;a[r.key]=r.toParam?r.toParam(o):r.unit==="percent"?o/100:o}return D[e.id](a)}function M(e,t){return e.replace(/\{(\w+)\}/g,(a,n)=>{var r;return(r=t[n])!=null?r:`{${n}}`})}var g=e=>document.querySelector(e),w={};for(let e of S)for(let t of e.fields)t.key in w||(w[t.key]=t.value);try{new URLSearchParams(location.search).forEach((e,t)=>{t in w&&Number.isFinite(Number(e))&&(w[t]=Number(e))})}catch{}var N,J,T=(J=(N=window.SHOP_MATH)==null?void 0:N.episodes)!=null?J:{},_=[...S].sort((e,t)=>{var a,n,r,o;return((n=(a=T[t.id])==null?void 0:a.number)!=null?n:0)-((o=(r=T[e.id])==null?void 0:r.number)!=null?o:0)}),te=e=>T[e.id]?`#${T[e.id].number} ${e.short}`:e.short,I,U,d=(U=(I=S.find(e=>`#${e.id}`===location.hash))!=null?I:S.find(e=>{var t;return e.id===((t=window.SHOP_MATH)==null?void 0:t.latest)}))!=null?U:_[0],W=(e,t={})=>{var a;try{(a=window.gtag)==null||a.call(window,"event",e,t)}catch{}},f=e=>e.replace(/[&<>"]/g,t=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[t]);function ae(){g("#chips").innerHTML=_.map(e=>{var t,a;return`<a class="chip" href="#${e.id}" title="${f((a=(t=T[e.id])==null?void 0:t.title)!=null?a:e.ask)}" aria-current="${e.id===d.id?"page":"false"}">${f(te(e))}</a>`}).join("")}function se(e){var r;let t=`f-${e.key}`,a=e.unit==="money"?'<span class="affix">$</span>':"",n=e.unit==="percent"?'<span class="affix">%</span>':"";return`<div class="field">
+    <label for="${t}">${f(e.label)}</label>
+    <div class="input">${a}<input id="${t}" data-key="${e.key}" type="number" inputmode="decimal" step="${(r=e.step)!=null?r:1}" min="0" value="${w[e.key]}" />${n}</div>
+    ${e.hint?`<p class="hint">${f(e.hint)}</p>`:""}
+  </div>`}function re(){let e=T[d.id];g("#episode").textContent=e?`Shop Math #${e.number}`:"Your shop's numbers",g("#ask").textContent=d.ask,g("#fields").innerHTML=d.fields.map(se).join(""),g("#fields").querySelectorAll("input").forEach(t=>t.addEventListener("input",()=>{let a=Number(t.value);t.value!==""&&Number.isFinite(a)&&(w[t.dataset.key]=a,V())}))}function ne(e){var h;if(e.sweep){let i=e.sweep,x=Math.max(i.baseline,...i.points.map(b=>b.y))*1.15,m=b=>64+b/i.xMax*516,y=b=>24+232*(1-b/x),v=b=>b.map((P,E)=>`${E?"L":"M"}${m(P.x).toFixed(1)},${y(P.y).toFixed(1)}`).join(" "),R=i.points.filter(b=>b.y>=i.baseline-1e-6),k=i.points.filter(b=>b.y<=i.baseline+1e-6),$=[0,.25,.5,.75,1].map(b=>b*i.xMax);return`<svg viewBox="0 0 600 300" role="img" aria-label="Monthly gross profit as ${f(i.xLabel)} change, against ${f(i.baselineLabel)}">
+      <line x1="64" x2="64" y1="24" y2="256" class="axis" />
+      <line x1="64" x2="580" y1="256" y2="256" class="axis" />
+      <text x="54" y="261" text-anchor="end" class="tick">$0</text>
+      ${$.map(b=>`<text x="${m(b)}" y="282" text-anchor="middle" class="tick">${u(b)}</text>`).join("")}
+      <text x="580" y="298" text-anchor="end" class="tick">${f(i.xLabel)} \u2192</text>
+      <line x1="64" x2="580" y1="${y(i.baseline)}" y2="${y(i.baseline)}" class="base" />
+      <text x="72" y="${y(i.baseline)-9}" class="base-label">${f(i.baselineLabel)}: ${s(i.baseline)}</text>
+      ${R.length>1?`<path d="${v(R)}" class="kept" />`:""}
+      ${k.length>1?`<path d="${v(k)}" class="lost" />`:""}
+      <line x1="${m(i.cross)}" x2="${m(i.cross)}" y1="${y(i.baseline)}" y2="256" class="cross-line" />
+      <circle cx="${m(i.cross)}" cy="${y(i.baseline)}" r="8" class="cross" />
+      <text x="${m(i.cross)>64+516*.7?m(i.cross)-10:m(i.cross)+10}" y="244" text-anchor="${m(i.cross)>64+516*.7?"end":"start"}" class="cross-label">break-even ${u(i.cross)}</text>
+    </svg>`}if(e.compare){let i=e.compare,x=Math.max(...i.bars.map(k=>k.value))*1.12,m=i.bars.length,y=28,v=(516-y*(m-1))/m,R=i.bars.reduce((k,$,b)=>$.value>i.bars[k].value?b:k,0);return`<svg viewBox="0 0 600 300" role="img" aria-label="${f((h=i.title)!=null?h:"Comparison")}">
+      <line x1="44" x2="580" y1="256" y2="256" class="axis" />
+      ${i.bars.map((k,$)=>{let b=44+$*(v+y),P=k.value/x*232,E=i.plain?$===m-1?"bar hot":"bar":$===0?"bar":$===R?"bar hot":"bar kept",Q=i.plain||$===0?s(k.value):`+${s(k.value-i.bars[0].value)}`;return`<rect x="${b}" y="${256-P}" width="${v}" height="${P}" class="${E}" />
+            <text x="${b+v/2}" y="${256-P-9}" text-anchor="middle" class="bar-top">${Q}</text>
+            <text x="${b+v/2}" y="282" text-anchor="middle" class="tick">${f(k.label)}</text>`}).join("")}
+    </svg>`}return""}function V(){let e;try{e=O(d,w)}catch{let t=d.id==="discount"&&w.discount>=w.margin;g("#answer").innerHTML=`<p class="problem">${t?"A discount as big as your margin never breaks even: every job would make nothing. Try a smaller discount.":"Those numbers can't be worked out. Keep the margin between 1% and 99%, and the other numbers above zero."}</p>`;return}g("#answer").innerHTML=`
+    <p class="eyebrow">The answer</p>
+    <p class="figure">${f(e.answer.value)}</p>
+    <p class="figure-label">${f(e.answer.label)}</p>
+    <div class="chart">${ne(e)}</div>
+    <p class="eyebrow">How it's worked out</p>
+    <ol class="steps">${d.steps.map(t=>`<li>${f(M(t,e.values))}</li>`).join("")}</ol>
+    ${d.rule?`<p class="rule">${f(M(d.rule,e.values))}</p>`:""}`}function oe(){var n,r;let e=(r=(n=window.SHOP_MATH)==null?void 0:n.leads)!=null?r:null,t=g("#leads"),a=g("#lead-status");e||(t.classList.add("off"),g("#lead-submit").disabled=!0,a.textContent="Preview: sending isn't connected yet."),t.addEventListener("submit",async o=>{var h,i;if(o.preventDefault(),!e)return;let c=g("#lead-email").value.trim(),l=g("#lead-website").value;if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c)){a.textContent="That email address doesn't look right. Check it and try again.";return}let p=g("#lead-submit");p.disabled=!0,a.textContent="Sending\u2026";try{let x=O(d,w),m="";try{m=location.search}catch{}let y=await fetch(e,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:c,website:l,question:d.id,ask:d.ask,episode:(i=(h=T[d.id])==null?void 0:h.number)!=null?i:null,numbers:d.fields.map(v=>({label:v.label,value:w[v.key],unit:v.unit})),answer:x.answer.value,answerLabel:x.answer.label,steps:d.steps.map(v=>M(v,x.values)),rule:d.rule?M(d.rule,x.values):null,referrer:document.referrer||null,link:m||null})});if(!y.ok)throw new Error(String(y.status));a.textContent=`Sent to ${c}.`,W("shop_math_email",{question:d.id}),t.reset()}catch{a.textContent="That didn't go through. Try again in a minute."}finally{p.disabled=!1}})}function B(){ae(),re(),V(),W("shop_math_question",{question:d.id})}window.addEventListener("hashchange",()=>{let e=S.find(t=>`#${t.id}`===location.hash);e&&e.id!==d.id&&(d=e,B())});B();oe();})();
+</script>
+
+</body>
+</html>
