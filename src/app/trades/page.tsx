@@ -327,7 +327,7 @@ export default function TradesPage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up">
-            <div className="mb-10 rounded-xl border-2 border-ledger-400 bg-ledger-100 p-8">
+            <div id="audit" className="mb-10 scroll-mt-24 rounded-xl border-2 border-ledger-400 bg-ledger-100 p-8">
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-block bg-ledger-500 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
