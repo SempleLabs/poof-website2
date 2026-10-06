@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
+import { SOURCE_COOKIE, cleanSource } from '@/lib/source'
 
 // Escape user-provided values before interpolating into email HTML to prevent HTML/content injection.
 function escapeHtml(value: unknown): string {
@@ -16,6 +17,8 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { name, email, business_name, website, revenue_range, pain_point, accounting_software, business_type, platforms, source, company_url } = body
+    // Which account the visitor came from (/go/<source>), stored next to the form's own source.
+    const referral = cleanSource(request.cookies.get(SOURCE_COOKIE)?.value)
 
     // Honeypot: if this hidden field is filled, it's a bot
     if (company_url) {
@@ -57,7 +60,7 @@ export async function POST(request: NextRequest) {
           accounting_software: accounting_software || null,
           business_type: business_type || null,
           platforms: platforms || [],
-          source: source || 'profit-analysis',
+          source: referral ? `${source || 'profit-analysis'}:${referral}` : source || 'profit-analysis',
           submitted_at: new Date().toISOString(),
         })
 
