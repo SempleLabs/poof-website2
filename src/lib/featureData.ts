@@ -623,7 +623,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How is Poof different from Mercury Books?",
-    answer: "Mercury Books is bookkeeping built into a Mercury bank account, free for Mercury customers through the end of 2026 and $35 a month after. Poof works with any bank and card through Plaid, and it is built around one thing Mercury does not do: every entry the AI proposes waits on a card with its evidence, and nothing posts until a person approves it or a rule that person granted covers it. If you bank with Mercury and want your books to stay inside the bank, Mercury is the simpler choice. If you want books you can defend, with a close that ticks itself off a checklist and a rule that stops itself when it is wrong, that is Poof.",
+    answer: "Mercury Books is bookkeeping built into a Mercury bank account, free for Mercury customers through the end of 2026 and $35 a month after. Poof works with any bank and card through Plaid, without moving your banking, and it is built around review: every entry the AI proposes waits on a card with its evidence, and nothing posts until a person approves it or a rule that person granted covers it. If you bank with Mercury and want your books to stay inside the bank, Mercury is the simpler choice. If you want books you can defend, with a close that ticks itself off a checklist and a rule that stops itself when it is wrong, that is Poof.",
     category: "Pricing & Plans"
   },
   {
