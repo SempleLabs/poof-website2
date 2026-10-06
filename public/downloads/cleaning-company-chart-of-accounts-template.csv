@@ -1,0 +1,63 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable - commercial,Asset,Accounts Receivable,Monthly contract invoices due from commercial clients
+1110,Accounts receivable - residential,Asset,Accounts Receivable,Invoiced residential clients and declined cards to chase
+1120,Card processor clearing,Asset,Other Current Asset,Card payments between the charge and the deposit; where tips and fees get separated
+1200,Client supplies inventory,Asset,Inventory,Paper products and liners bought in bulk for commercial clients and not yet delivered
+1300,Prepaid insurance,Asset,Other Current Asset,GL bond and workers' comp premiums paid up front and expensed monthly
+1400,Vehicles,Asset,Fixed Asset,Company cars and vans
+1410,Equipment,Asset,Fixed Asset,Floor machines carpet extractors and vacuums above your capitalization threshold
+1490,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles and equipment
+2010,Accounts payable,Liability,Accounts Payable,Supplier bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Line of credit,Liability,Other Current Liability,Working capital for payroll ahead of commercial collections
+2110,Vehicle & equipment notes,Liability,Long Term Liability,Financed vehicles and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2210,Accrued payroll,Liability,Other Current Liability,Wages cleaners earned by month end and not yet paid
+2300,Sales tax payable,Liability,Other Current Liability,Only where your state taxes cleaning services; some tax commercial work and not residential
+2400,Prepaid packages & gift cards,Liability,Other Current Liability,Packages and gift cards sold and not yet cleaned; revenue only when the visit happens
+2410,Tips payable,Liability,Other Current Liability,Tips collected on cards and owed to cleaners; never your revenue
+2420,Customer deposits,Liability,Other Current Liability,Deposits on move-out and post-construction cleans not yet done
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Recurring residential cleaning,Income,Income,Weekly biweekly and monthly home cleaning
+4020,One-time & deep cleaning,Income,Income,First cleans deep cleans and one-off visits
+4030,Move-in & move-out cleaning,Income,Income,Vacancy cleans for tenants landlords and agents
+4040,Commercial contract cleaning,Income,Income,Recurring janitorial contracts billed monthly
+4050,Post-construction cleaning,Income,Income,Rough and final cleans for builders
+4060,Specialty services,Income,Income,Carpet windows and floor care
+4070,Supplies billed to clients,Income,Income,Paper products and liners resold to commercial clients; matched to 5060
+4900,Other income,Income,Other Income,Referral fees and equipment sold
+5010,Direct labor - cleaners,COGS,Cost of Goods Sold,Wages of cleaners for time on site; usually the largest cost by far
+5020,Direct labor - drive time,COGS,Cost of Goods Sold,Paid travel between client sites; separate so you can see what routing costs
+5030,Labor burden - cleaners,COGS,Cost of Goods Sold,Payroll taxes workers' comp and benefits on cleaner wages
+5040,Subcontracted cleaners,COGS,Cost of Goods Sold,1099 crews and contract cleaners; separate from wages
+5050,Cleaning supplies & chemicals,COGS,Cost of Goods Sold,Chemicals cloths and consumables used on cleans
+5060,Client supplies for resale,COGS,Cost of Goods Sold,Paper products and liners delivered to commercial clients
+5070,Mileage reimbursement,COGS,Cost of Goods Sold,Per-mile reimbursement for cleaners driving their own cars between clients
+5080,Equipment rental,COGS,Cost of Goods Sold,Floor machines and lifts rented for a specific job
+5090,Damage & breakage claims,COGS,Cost of Goods Sold,Items broken in clients' homes or buildings; the quality signal
+6010,Vehicles - fuel,Expense,Expense,Fuel for company vehicles
+6020,Vehicles - maintenance & repairs,Expense,Expense,Vehicle upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6110,Janitorial bond,Expense,Expense,Bond protecting clients against theft; many commercial contracts require it
+6200,Office rent & utilities,Expense,Expense,Office and supply storage
+6210,Office salaries,Expense,Expense,Office and scheduling staff
+6220,Supervisor & inspector salaries,Expense,Expense,Staff who inspect and train but do not clean; separate from cleaner wages
+6230,Recruiting & hiring,Expense,Expense,Job ads background checks and onboarding; turnover makes this a real line
+6240,Training,Expense,Expense,Paid training hours and materials for new cleaners
+6250,Uniforms,Expense,Expense,Shirts and branded gear
+6300,Software & technology,Expense,Expense,Scheduling booking and accounting software
+6400,Marketing & advertising,Expense,Expense,Website ads and mailers
+6410,Lead fees & referral credits,Expense,Expense,Booking platform fees and referral discounts; separate so you can see cost per new client
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licenses & permits,Expense,Expense,Business licenses
+6700,Bank fees,Expense,Expense,Bank charges
+6710,Merchant & card fees,Expense,Expense,Card processing on client payments
+6720,Interest expense,Expense,Expense,Interest on the line of credit and notes; separate from bank fees
+6800,Depreciation,Expense,Expense,Periodic depreciation
+6810,Small equipment,Expense,Expense,Vacuums and tools under your capitalization threshold

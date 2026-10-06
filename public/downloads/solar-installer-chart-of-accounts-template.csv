@@ -1,0 +1,69 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable - customers,Asset,Accounts Receivable,Billed amounts due from cash-sale customers
+1110,Financing partner receivable,Asset,Other Current Asset,Milestone payments a loan provider owes you once the milestone is met
+1120,Lease & PPA fund receivable,Asset,Other Current Asset,Payments a third-party owner owes you for systems you built for it
+1130,Milestone holdback receivable,Asset,Other Current Asset,The final payment held back until inspection or permission to operate
+1140,Rebates & incentives receivable,Asset,Other Current Asset,Utility or state rebates the customer assigned to you
+1150,Commission advances,Asset,Other Current Asset,Draws paid to reps ahead of earned commissions; recovered from later commissions or clawed back
+1200,Inventory - modules,Asset,Inventory,Panels on the shelf; moved to job cost at install
+1210,Inventory - inverters & batteries,Asset,Inventory,The highest-dollar items in the warehouse; counted on their own
+1220,Inventory - racking & balance of system,Asset,Inventory,Rails attachments wire conduit and breakers
+1300,Prepaid insurance,Asset,Other Current Asset,Annual GL and workers' comp premiums paid up front and expensed monthly
+1400,Vehicles,Asset,Fixed Asset,Trucks and trailers
+1410,Equipment & tools,Asset,Fixed Asset,Lifts trailers and tools above your capitalization threshold
+1490,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles equipment and tools
+2010,Accounts payable,Liability,Accounts Payable,Supplier and sub bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Line of credit,Liability,Other Current Liability,Working capital between install and milestone funding
+2110,Vehicle & equipment notes,Liability,Long Term Liability,Financed trucks and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Only where your state taxes solar equipment; several exempt it
+2400,Customer deposits,Liability,Other Current Liability,Money collected before install; not revenue until the system is installed
+2410,Commissions payable,Liability,Other Current Liability,Commissions earned by reps and not yet paid
+2420,Workmanship warranty reserve,Liability,Other Current Liability,Estimated cost of honoring the workmanship warranty on systems already installed
+2430,Accrued job costs,Liability,Other Current Liability,Sub and supplier costs for installs completed at month end not yet billed to you
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,System sales - cash,Income,Income,Systems the customer paid for directly
+4020,System sales - loan financed,Income,Income,Full contract price on loan-financed systems; the dealer fee goes to COGS
+4030,System sales - lease & PPA,Income,Income,The price a third-party owner pays you to build its system
+4040,Battery retrofit revenue,Income,Income,Batteries added to systems already in place
+4050,Removal & reinstall revenue,Income,Income,Detach and reset for reroofs and repairs
+4060,Service & monitoring revenue,Income,Income,Repairs troubleshooting and paid monitoring
+4900,Other income,Income,Other Income,Referral fees and equipment sold
+5010,Modules,COGS,Cost of Goods Sold,Panels installed on a job; moved from inventory at install
+5020,Inverters & batteries,COGS,Cost of Goods Sold,Inverters optimizers and storage installed on a job
+5030,Racking & balance of system,COGS,Cost of Goods Sold,Rails attachments wire conduit and breakers used on a job
+5040,Direct labor - install crews,COGS,Cost of Goods Sold,Wages of your own installers and electricians on jobs
+5050,Labor burden - install,COGS,Cost of Goods Sold,Payroll taxes workers' comp and benefits on install wages; roof work comp rates are high
+5060,Subcontractors,COGS,Cost of Goods Sold,Electrical roofing and trenching subs on a job
+5070,Permits & interconnection fees,COGS,Cost of Goods Sold,Building permits and utility interconnection fees per job
+5080,Design & engineering,COGS,Cost of Goods Sold,Site surveys plan sets and structural letters per job
+5090,Dealer fees,COGS,Cost of Goods Sold,The financing partner's fee withheld from a loan-financed sale
+5100,Sales commissions,COGS,Cost of Goods Sold,Rep commissions on installed deals; often the second-largest cost after equipment
+5110,Equipment rental & freight,COGS,Cost of Goods Sold,Lifts cranes and delivery for a specific job
+5120,Warranty expense,COGS,Cost of Goods Sold,Additions to the workmanship warranty reserve as systems are installed
+6010,Vehicles - fuel,Expense,Expense,Fuel for trucks
+6020,Vehicles - maintenance & repairs,Expense,Expense,Truck and trailer upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums
+6200,Warehouse & office rent & utilities,Expense,Expense,Office and equipment storage
+6210,Office salaries,Expense,Expense,Office and administrative staff
+6220,Sales management & design salaries,Expense,Expense,Salaried sales managers and system designers; separate from office salaries
+6300,Software & technology,Expense,Expense,Proposal design CRM and accounting software
+6400,Marketing & advertising,Expense,Expense,Website ads and events
+6410,Lead purchases & canvassing,Expense,Expense,Bought leads and door-to-door costs; separate so you can see cost per signed deal
+6420,Cancelled project costs,Expense,Expense,Design permit and survey costs on deals that cancel before install
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & certification,Expense,Expense,Contractor and electrical licenses and installer certification
+6700,Bank fees,Expense,Expense,Bank charges
+6710,Merchant & card fees,Expense,Expense,Card processing on customer payments
+6720,Interest expense,Expense,Expense,Interest on the line of credit and notes; separate from bank fees
+6730,Inventory shrink & damage,Expense,Expense,Broken panels and count differences; separate so you can see what the warehouse costs
+6800,Depreciation,Expense,Expense,Periodic depreciation
+6810,Small tools & consumables,Expense,Expense,Tools under your capitalization threshold
+6820,Safety equipment & training,Expense,Expense,Fall protection PPE and safety training

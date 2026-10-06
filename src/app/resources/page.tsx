@@ -59,6 +59,8 @@ export default async function ResourcesPage() {
     { trade: 'Pool service', accounts: 53, href: '/downloads/pool-service-chart-of-accounts-template.csv', guide: '/blog/pool-service-chart-of-accounts' },
     { trade: 'General contractor', accounts: 64, href: '/downloads/general-contractor-chart-of-accounts-template.csv', guide: '/blog/general-contractor-chart-of-accounts' },
     { trade: 'Restoration', accounts: 60, href: '/downloads/restoration-chart-of-accounts-template.csv', guide: '/blog/restoration-chart-of-accounts' },
+    { trade: 'Solar installer', accounts: 68, href: '/downloads/solar-installer-chart-of-accounts-template.csv', guide: '/blog/solar-installer-chart-of-accounts' },
+    { trade: 'Cleaning', accounts: 62, href: '/downloads/cleaning-company-chart-of-accounts-template.csv', guide: '/blog/cleaning-company-chart-of-accounts' },
   ]
 
   const guides = [
