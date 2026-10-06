@@ -29,7 +29,7 @@ const whatToExpect = [
   },
   {
     title: 'Live AI demonstration',
-    body: 'Watch our AI categorize real transactions in real-time.',
+    body: 'Watch Poof categorize a month of transactions and stage each one for approval before it posts.',
   },
   {
     title: 'Q&A session',

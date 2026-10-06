@@ -1,0 +1,65 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Accounts receivable - contracts,Asset,Accounts Receivable,Billed amounts currently due from owners and customers
+1110,Retainage receivable,Asset,Other Current Asset,Retainage the owner holds on billed work; not due until completion or acceptance
+1120,Costs & estimated earnings in excess of billings,Asset,Other Current Asset,Underbillings: work earned but not yet billed; set monthly from the WIP schedule
+1200,Prepaid insurance,Asset,Other Current Asset,Annual GL and workers' comp premiums paid up front and expensed monthly
+1300,Vehicles,Asset,Fixed Asset,Trucks and trailers
+1310,Equipment,Asset,Fixed Asset,Owned lifts skid steers and heavy equipment
+1320,Tools,Asset,Fixed Asset,Tools above your capitalization threshold
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles equipment and tools
+2010,Accounts payable,Liability,Accounts Payable,Sub and supplier bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Line of credit,Liability,Other Current Liability,Working capital line used between draws
+2110,Equipment & vehicle notes,Liability,Long Term Liability,Financed trucks and equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax on materials where your state requires it
+2400,Customer deposits,Liability,Other Current Liability,Money collected before work starts; not revenue until the work is done
+2410,Billings in excess of costs & estimated earnings,Liability,Other Current Liability,Overbillings: billed ahead of the work; set monthly from the WIP schedule
+2420,Retainage payable,Liability,Other Current Liability,Retainage you hold from subs until their work is accepted
+2430,Accrued job costs,Liability,Other Current Liability,Sub and supplier costs for work in place at month end not yet billed to you
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Contract revenue - residential remodel,Income,Income,Remodels additions and renovations under contract
+4020,Contract revenue - new construction,Income,Income,Ground-up residential or light commercial work
+4030,Contract revenue - commercial,Income,Income,Tenant improvements and commercial contracts
+4040,Change order revenue,Income,Income,Approved change orders; separate so you can see whether scope changes make money
+4050,Time & materials revenue,Income,Income,Small jobs and punch work billed on T&M
+4060,Design & preconstruction fees,Income,Income,Design-build fees and paid estimates
+4900,Other income,Income,Other Income,Rebates referral fees and equipment sold
+5010,Materials,COGS,Cost of Goods Sold,Lumber drywall fixtures and finish materials bought for a job
+5020,Subcontractors,COGS,Cost of Goods Sold,Trade subs on the job; usually the largest COGS line
+5030,Direct labor - field,COGS,Cost of Goods Sold,Wages of your own carpenters and laborers on jobs
+5040,Labor burden - field,COGS,Cost of Goods Sold,Payroll taxes workers' comp and benefits on field wages so labor cost per hour is honest
+5050,Equipment rental,COGS,Cost of Goods Sold,Lifts excavators and scaffolding rented for a specific job
+5060,Permits & fees,COGS,Cost of Goods Sold,Building permits plan review and impact fees per job
+5070,Dumpsters & site cleanup,COGS,Cost of Goods Sold,Roll-offs debris removal and final clean
+5080,Job site overhead,COGS,Cost of Goods Sold,Portable toilets temporary power fencing and protection
+5090,Job-specific insurance & bonds,COGS,Cost of Goods Sold,Builder's risk and performance or payment bond premiums for a contract
+5100,Design & engineering,COGS,Cost of Goods Sold,Architects engineers and surveyors hired for a job
+5110,Warranty & callback cost,COGS,Cost of Goods Sold,Work on completed jobs; the quality signal
+6010,Vehicles - fuel,Expense,Expense,Fuel for trucks
+6020,Vehicles - maintenance & repairs,Expense,Expense,Truck and trailer upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability,Expense,Expense,GL premiums; often rated on payroll or revenue so worth watching alone
+6110,Insurance - umbrella,Expense,Expense,Excess liability
+6200,Office & shop rent & utilities,Expense,Expense,Office shop and material storage
+6210,Office salaries,Expense,Expense,Office and administrative staff
+6220,Project manager & estimator salaries,Expense,Expense,The cost to win and run jobs; separate from office salaries
+6230,Office supplies,Expense,Expense,Consumables
+6300,Software & technology,Expense,Expense,Estimating project management and accounting software
+6400,Marketing & advertising,Expense,Expense,Website ads and yard signs
+6410,Lead fees & referrals,Expense,Expense,Paid leads and referral fees; separate so you can see cost per lead
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting and legal
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & continuing education,Expense,Expense,Contractor license and training
+6610,Bonding line fees,Expense,Expense,Surety fees not tied to a specific contract
+6700,Bank fees,Expense,Expense,Bank charges
+6710,Merchant & card fees,Expense,Expense,Card processing on customer payments
+6720,Interest expense,Expense,Expense,Interest on the line of credit and notes; separate from bank fees
+6800,Depreciation,Expense,Expense,Periodic depreciation
+6810,Small tools & consumables,Expense,Expense,Blades bits and tools under your capitalization threshold
+6820,Safety equipment & training,Expense,Expense,PPE fall protection and safety training
+6830,Meals & travel,Expense,Expense,Out-of-town job travel not billed to a customer

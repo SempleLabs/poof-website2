@@ -9,7 +9,7 @@ import { getFaqPageSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Autopilot with limits — AI that posts to your books, with a brake | Poof',
   description:
-    'Let Poof post categorizations to your ledger on its own, inside limits you set: a confidence bar, a minimum history, a dollar ceiling, and a rule that pauses itself the first time you correct it. Off by default. Never sends anything to a customer.',
+    'Let Poof post categorizations to your ledger on its own, inside limits you set: a confidence bar, a minimum history, a dollar ceiling, and a rule that pauses itself the first time you correct it. Off by default. Autopilot never sends anything to a customer.',
   alternates: { canonical: 'https://www.poofai.com/autopilot' },
   openGraph: {
     title: 'Autopilot with limits',
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     question: 'Can Autopilot send an invoice or an email to a customer?',
-    answer: 'No. No rule, however it was granted, can send anything to a customer. Invoices and credit notes are always a person\'s decision. A rule that writes to the ledger must carry a dollar limit, and anything over the limit goes to the inbox rather than being dropped.',
+    answer: 'No. No ledger rule, however it was granted, can send anything to a customer. Invoices and credit notes are always a person\'s decision. A rule that writes to the ledger must carry a dollar limit, and anything over the limit goes to the inbox rather than being dropped. The phone is a separate channel a shop opts into: where a shop has the receptionist, it talks to callers and books jobs inside rules written in code, and nothing granted here can reach it.',
   },
   {
     question: 'How is this different from a QuickBooks bank rule?',
@@ -120,7 +120,7 @@ export default function AutopilotPage() {
               ['A ceiling, always', 'A rule that writes to the ledger must carry a dollar limit. One without a limit does not run. Anything over goes to the inbox.'],
               ['A daily cap', 'A rule has a daily count. The overflow waits for the next day or for you; it is never dropped.'],
               ['It stops itself', 'Correct anything the rule is about, not only a row it touched, and it pauses, names the correction that stopped it, and waits. Revoking is instant; its earlier work stands with its name on it.'],
-              ['Never a customer', 'No rule can send an invoice, a credit note, or a message to a customer. That is always a person\'s decision.'],
+              ['Never a customer', 'No ledger rule can send an invoice, a credit note, or a message to a customer. That is always a person\'s decision. The phone is a separate channel a shop opts into; nothing granted here reaches it.'],
               ['Tied to a person', 'A rule stops working if the person who granted it loses the permission it needs. Every rule lives on one page with what it has handled and who allowed it.'],
             ].map(([h, t]) => (
               <div key={h} className="py-5 border-b border-rule">

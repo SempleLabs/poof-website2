@@ -42,9 +42,10 @@ function parseJobs(raw: unknown): JobInput[] | null {
   return jobs
 }
 
-const AUDIT_URL = 'https://www.poofai.com/trades#audit'
+const trialUrl = (source: string | null) =>
+  `https://app.poofai.com/register?src=${encodeURIComponent(source ?? 'job-margin-check')}`
 
-function buildEmail(r: MarginReport): string {
+function buildEmail(r: MarginReport, source: string | null): string {
   const rows = r.jobs
     .map((j) => {
       const color = j.flag === 'red' ? '#B3261E' : j.flag === 'amber' ? '#8A5A00' : '#1B5E3F'
@@ -68,8 +69,8 @@ function buildEmail(r: MarginReport): string {
     </td></tr>
     <tr><td style="padding:8px 28px"><table width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>
     <tr><td style="padding:20px 28px 28px">
-      <p style="margin:0 0 14px;font-size:15px;line-height:1.5;color:#12211A">This is ${r.jobs.length} jobs you remembered. The audit runs every job from your real books: one week, a dollar figure in five days. $750, credited in full against onboarding if you sign within 30 days.</p>
-      <a href="${AUDIT_URL}" style="display:inline-block;background:#1F7A4F;color:#FFFFFF;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:8px">Book the audit</a>
+      <p style="margin:0 0 14px;font-size:15px;line-height:1.5;color:#12211A">This is ${r.jobs.length} jobs you remembered. Poof does this for every job from your real books: it tracks profit per job from the bills and invoices tagged to it, on every monthly close. One plan, every feature: 30 days free with no card, then $39.50 a month for three months, then $79.</p>
+      <a href="${trialUrl(source)}" style="display:inline-block;background:#1F7A4F;color:#FFFFFF;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:8px">Start your free trial</a>
     </td></tr>
   </table>
   <p style="font-size:12px;color:#5B6660;margin:16px 0 0">Poof · poofai.com</p>
@@ -108,13 +109,13 @@ export async function POST(request: NextRequest) {
     const notifyEmail = process.env.NOTIFY_EMAIL
     if (resendKey) {
       const resend = new Resend(resendKey)
-      await resend.emails.send({ from: 'Poof <noreply@poofai.com>', to: email, subject: headline(report), html: buildEmail(report) })
+      await resend.emails.send({ from: 'Poof <noreply@poofai.com>', to: email, subject: headline(report), html: buildEmail(report, source) })
       if (notifyEmail) {
         await resend.emails.send({
           from: 'Poof <noreply@poofai.com>',
           to: notifyEmail,
           subject: `New Job Margin Check lead${source ? ` (${source})` : ''}`,
-          html: `<p><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Source:</strong> ${escapeHtml(source ?? 'direct')}</p>${buildEmail(report)}`,
+          html: `<p><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Source:</strong> ${escapeHtml(source ?? 'direct')}</p>${buildEmail(report, source)}`,
         })
       }
     }

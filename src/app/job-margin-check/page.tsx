@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
-import BookCallButton from '@/components/BookCallButton'
 import { MAX_JOBS, MIN_JOBS, analyzeJobs, driverSentence, headline, money, pct, type JobInput } from '@/lib/jobMargin'
 import { readSource } from '@/lib/source'
 import { trackEvent } from '@/lib/analytics'
@@ -171,13 +170,19 @@ export default function JobMarginCheckPage() {
 
               <div className="bg-ink text-white rounded-2xl p-5 sm:p-7 mt-4">
                 <p className="text-lg leading-relaxed">
-                  This is {report.jobs.length} jobs you remembered. The audit runs every job from your real books: one week, a dollar figure in five days. $750, credited in full
-                  against onboarding if you sign within 30 days.
+                  This is {report.jobs.length} jobs you remembered. Poof does this for every job from your real books: it tracks profit per job from the bills and
+                  invoices tagged to it, on every monthly close. One plan, every feature: 30 days free with no card, then $39.50 a month for three months, then $79.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 mt-5" onClick={() => trackEvent('jmc_audit_clicked', { source: source ?? 'direct' })}>
-                  <BookCallButton className="px-5 py-3 rounded-lg bg-ledger-500 text-white font-semibold hover:bg-ledger-600">Book the audit</BookCallButton>
-                  <a href="/trades#audit" className="px-5 py-3 rounded-lg border border-white/30 text-white font-semibold text-center">
-                    How the audit works
+                <div className="flex flex-col sm:flex-row gap-3 mt-5">
+                  <a
+                    href={`https://app.poofai.com/register?src=${encodeURIComponent(source ?? 'job-margin-check')}`}
+                    onClick={() => trackEvent('jmc_trial_clicked', { source: source ?? 'direct' })}
+                    className="px-5 py-3 rounded-lg bg-ledger-500 text-white font-semibold hover:bg-ledger-600 text-center"
+                  >
+                    Start your free trial
+                  </a>
+                  <a href="/trades" className="px-5 py-3 rounded-lg border border-white/30 text-white font-semibold text-center">
+                    How Poof works for shops
                   </a>
                 </div>
               </div>

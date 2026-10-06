@@ -101,7 +101,7 @@ const comparisonData = [
     { name: 'AI Close Narrative', poof: true, quickbooks: false },
     { name: 'Customer Deposits Held as a Liability, Released to the Job on Completion', poof: true, quickbooks: false },
     { name: 'Prepaid Maintenance Plans Earned Per Completed Visit', poof: true, quickbooks: false },
-    { name: 'AI Phone Receptionist + Dispatch (Poof for shops)', poof: true, quickbooks: false },
+    { name: 'AI Phone Receptionist + Dispatch', poof: true, quickbooks: false },
   ]},
   { category: 'Field Service & Job Handoff', features: [
     { name: 'Technician Field Link (no account, no app install)', poof: true, quickbooks: false },
@@ -158,7 +158,7 @@ export default function PoofVsQuickbooksPage() {
                   <span className="text-4xl font-bold text-ledger-400">$39.50</span>
                   <span className="text-lg text-slate-400">/mo</span>
                 </div>
-                <p className="text-slate-400 mb-6">50% off for your first 3 months, then $79/mo. All features included.</p>
+                <p className="text-slate-400 mb-6">After a 30-day free trial: 50% off your first 3 paid months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-center gap-2"><PoofCheck /> 128 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
@@ -231,7 +231,7 @@ export default function PoofVsQuickbooksPage() {
               </ul>
               <p className="text-slate-600 leading-relaxed">
                 Autonomy is off until you grant it, one rule at a time &mdash; there is no global switch, and no
-                rule can ever send anything to a customer. Invoices and credit notes stay a human&apos;s decision
+                ledger rule can ever send anything to a customer. Invoices and credit notes stay a human&apos;s decision
                 whatever a rule says. And &ldquo;what did AI change this month, and who allowed it&rdquo; is a
                 single page, which is the question your accountant will ask.
               </p>

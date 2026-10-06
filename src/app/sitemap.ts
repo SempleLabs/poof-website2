@@ -21,7 +21,7 @@ function getBlogSlugs(): { slug: string; date: string }[] {
 
 // Stable date so the sitemap doesn't report every page as "modified" on every deploy.
 // Bump manually on deploys that meaningfully change page content.
-const BUILD_DATE = new Date('2026-09-17')
+const BUILD_DATE = new Date('2026-09-22')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.poofai.com'
@@ -112,85 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/spend-score`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/profit-analysis`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/freelancers`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/service-businesses`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/quickbooks-alternative`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/ecommerce`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/spreadsheet-bookkeeping`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/new-llc`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/creators`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/tax-season`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/trades`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/hvac`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/plumbing`,
-      lastModified: BUILD_DATE,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/electrical`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',
       priority: 0.9,

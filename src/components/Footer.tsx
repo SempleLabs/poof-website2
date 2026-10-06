@@ -47,7 +47,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
               <PoofWordmark size={26} href={null} />
@@ -62,29 +62,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/close" className="text-slate-500 hover:text-ledger-700 transition-colors">The close</Link></li>
               <li><Link href="/autopilot" className="text-slate-500 hover:text-ledger-700 transition-colors">Autopilot</Link></li>
+              <li><Link href="/trades" className="text-slate-500 hover:text-ledger-700 transition-colors">Poof for shops</Link></li>
               <li><Link href="/features" className="text-slate-500 hover:text-ledger-700 transition-colors">Features</Link></li>
               <li><Link href="/pricing" className="text-slate-500 hover:text-ledger-700 transition-colors">Pricing</Link></li>
               <li><Link href="/how-it-works" className="text-slate-500 hover:text-ledger-700 transition-colors">How it Works</Link></li>
-              <li><Link href="/demo" className="text-slate-500 hover:text-ledger-700 transition-colors">Request Demo</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">For Trades</h3>
-            <ul className="space-y-3">
-              <li><Link href="/trades" className="text-slate-500 hover:text-ledger-700 transition-colors">All trades</Link></li>
-              <li><Link href="/hvac" className="text-slate-500 hover:text-ledger-700 transition-colors">HVAC</Link></li>
-              <li><Link href="/plumbing" className="text-slate-500 hover:text-ledger-700 transition-colors">Plumbing</Link></li>
-              <li><Link href="/electrical" className="text-slate-500 hover:text-ledger-700 transition-colors">Electrical</Link></li>
-            </ul>
-
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4 mt-8">Online &amp; Solo</h3>
-            <ul className="space-y-3">
-              <li><Link href="/ecommerce" className="text-slate-500 hover:text-ledger-700 transition-colors">Ecommerce</Link></li>
-              <li><Link href="/freelancers" className="text-slate-500 hover:text-ledger-700 transition-colors">Freelancers</Link></li>
-              <li><Link href="/creators" className="text-slate-500 hover:text-ledger-700 transition-colors">Creators</Link></li>
-              <li><Link href="/service-businesses" className="text-slate-500 hover:text-ledger-700 transition-colors">Service Businesses</Link></li>
-              <li><Link href="/new-llc" className="text-slate-500 hover:text-ledger-700 transition-colors">New LLCs</Link></li>
+              <li><Link href="/demo" className="text-slate-500 hover:text-ledger-700 transition-colors">Book a demo</Link></li>
             </ul>
           </div>
 

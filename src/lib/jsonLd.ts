@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Bookkeeping for HVAC, plumbing, and electrical contractors — AI agents do the books, a former controller reviews every monthly close. Also available as self-serve AI bookkeeping software: 128 features, 13 reports, $79/mo.',
+    description: 'Software that runs the small-business back office: books, invoicing, cash planning, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 128 features, 13 reports, $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -123,7 +123,7 @@ export function getSoftwareApplicationSchema() {
       'Document Playbooks',
       'Bot-Abuse Gate on Registration (Cloudflare Turnstile)',
       'AI Privacy Chokepoint (PII Redaction on Every Model Call)',
-      'AI Phone Receptionist (Poof for shops)',
+      'AI Phone Receptionist',
       'Deterministic Safety Triage',
       'Real-Calendar Booking with Double-Booking Prevention',
       'Rule-Based Human Escalation',
@@ -137,39 +137,6 @@ export function getSoftwareApplicationSchema() {
       'Standing Rules Derived from Reviewed Work',
       'Self-Pausing Rules with Mandatory Dollar Limits'
     ]
-  }
-}
-
-export function getSpendScoreToolSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    name: 'Free Spend Score Generator',
-    url: 'https://www.poofai.com/spend-score',
-    description: 'Upload a bank statement (CSV, PDF, or image) and get your free AI-powered Spend Score. AI categorizes your transactions, scores your spending habits, and generates a personalized report with an infographic — in under 60 seconds.',
-    applicationCategory: 'FinanceApplication',
-    operatingSystem: 'Web',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-    },
-    featureList: [
-      'AI transaction categorization into 15 spending categories',
-      'Bank statement parsing (CSV, PDF, image)',
-      'AI-generated spending score and financial narrative',
-      'AI-generated infographic',
-      'Spending breakdown with donut chart',
-      'Income vs expense analysis',
-      'Top spending category identification',
-      'OCR for bank statement images and PDFs',
-    ],
-    creator: {
-      '@type': 'Organization',
-      name: 'Poof',
-      url: 'https://www.poofai.com',
-    },
   }
 }
 
