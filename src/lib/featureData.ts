@@ -108,7 +108,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Poof AI Assistant",
-        description: "Built-in AI assistant with 30+ tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
+        description: "Built-in AI assistant with 85 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -899,7 +899,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 172 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 85 tools: it prepares records, updates invoices, generates all 13 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. Poof is one plan at $79/month with all 172 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {

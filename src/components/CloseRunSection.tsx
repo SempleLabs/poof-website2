@@ -105,8 +105,8 @@ export default function CloseRunSection() {
             <p className="text-slate-300 leading-relaxed">
               The thirteen tie-out checks run before a period is signed, not after. Review a transaction or post
               an entry after they ran and the step says <span className="text-white font-medium">run the checks
-              again</span> instead of reading &ldquo;tied&rdquo; off a stale result. QuickBooks has no close
-              checklist, no evidence-bound tasks, and no idea what a month took.
+              again</span> instead of reading &ldquo;tied&rdquo; off a stale result. QuickBooks Plus has no close
+              checklist that the books tick off themselves, and no record of what a month took.
             </p>
           </div>
         </AnimateOnScroll>

@@ -20,7 +20,7 @@ const highlights = [
     body: 'Connect your bank and cards; the BRAID engine categorizes every transaction and reconciles your accounts to the statement — automatically.',
   },
   {
-    title: 'An AI assistant with 30+ tools',
+    title: 'An AI assistant with 85 tools',
     body: 'Create invoices, record payments, set up depreciation schedules, or ask for any of 13 reports — in plain English, from a sidebar chat.',
   },
   {
