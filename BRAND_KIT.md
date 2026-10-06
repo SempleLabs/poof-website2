@@ -4,7 +4,7 @@
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 > **⭐ WHERE THINGS STAND (2026-10-06) — read this first; it overrides anything older below.**
-> - **poofai.com sells one thing: the software.** One $79 plan, two calls to action everywhere — **Start free trial** and **Book a demo**. The managed tiers, the $750 audit, the per-truck pricing and the trade landing pages (/hvac, /plumbing, /electrical → /trades) come off the site with the "software only" refocus (site branch `refocus-software`, built 2026-09-22 → 10-06, **not yet merged — the live site still shows the managed tiers and the $750 audit until it is**). `/trades` becomes the product page for service shops, at the same $79.
+> - **poofai.com sells one thing: the software.** One $79 plan, two calls to action everywhere — **Start free trial** and **Book a demo**. The managed tiers, the $750 audit, the per-truck pricing and the trade landing pages (/hvac, /plumbing, /electrical → /trades) come off the site with the "software only" refocus (site branch `refocus-software`, built 2026-09-22 → 10-06, **merged and live 2026-10-06 as PR #16**). `/trades` becomes the product page for service shops, at the same $79.
 > - **The managed service still exists, but not on poofai.com and not under a name yet.** Austin sells done-for-you bookkeeping to trade shops directly (outreach), as a separate services company that runs on Poof. Names dropped: *The Augmented Operator* (not launched, 09-16; dead 09-29), *Poof Managed Bookkeeping* (left the site with the refocus), *Setpoint* (10-01). Until it has a name and a site, keep it off every Poof surface. [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical) is reference for that outreach, not website copy.
 > - **The site tagline is "The back office, run by AI. Signed by you."** The brand idea behind it is unchanged: "The work disappears. The evidence doesn't."
 > - **172 features in 18 groups** (was 128 in 13). Five new groups since 09-15 — fixed assets & loans, 1099s & vendors, payroll, sales tax, truck-stock inventory — and "Poof offers the rule" in Approvals. See the [changelog](#changelog).
@@ -20,13 +20,7 @@
 **Read this before writing any copy.** Re-check the page before acting on a line here — this
 table has carried already-fixed rows before, and a stale list repeated back reads as urgency.
 
-| Where | What's wrong now | Should be |
-|---|---|---|
-| **The whole live site** | Still sells the managed service: `/trades` shows the $1,200 / $1,500 tiers and the $750 Job Margin & Recovery Audit; `/hvac`, `/plumbing`, `/electrical` are live | **Merge the site's `refocus-software` branch** (14 commits, 09-22 → 10-06). It removes the managed offer, 301s the retired pages, rewrites `/trades` as the product page at $79, and makes the two CTAs "Start free trial" and "Book a demo" everywhere |
-| `/features` and `featureData.ts` | 128 features in 13 groups | **172 in 18** — add the five new groups and the additions to Groups 2, 3, 5, 9 and 13 ([Product Overview](#product-overview)) |
-| `/pricing`, llms.txt, FAQs | "All 128 features" (or 118 in older copy) | **"All 172 features"** |
-| Homepage / `/trades` / `/features` | No mention of payroll, sales tax, fixed assets & loans, 1099s, truck inventory, or Poof offering rules | One section or row each, outcome-first (see the headlines in [Key Messaging](#key-messaging--taglines)) — and keep each group's limits (below) |
-| `/poof-vs-quickbooks` | Comparison rows predate the new groups | Add rows for 1099 preparation, fixed-asset register & depreciation, payroll ties, sales tax by city, truck-stock counts, and rules Poof offers |
+None outstanding as of 2026-10-06. The five rows that were here shipped the same day and are listed in the table below.
 
 **Limits to keep with every new claim (the site states what it does, and never lists what it withholds):**
 - **1099s:** Poof prepares the year, the contractors' copies and the CPA summary, and walks you through the IRS upload. It does **not** e-file yet (the IRS upload file waits on the IRS template; Poof filing directly is planned for tax year 2027).
@@ -44,6 +38,9 @@ table has carried already-fixed rows before, and a stale list repeated back read
 
 | Shipped | What the site now says |
 |---|---|
+| 2026-10-06 · software only (PR #16) | The managed tiers, the $750 audit and the trade landing pages are off the site; `/hvac`, `/plumbing`, `/electrical` 301 to `/trades`, which is the product page for service shops at $79. Two CTAs everywhere: "Start free trial" and "Book a demo". Job Margin Check ends on the trial |
+| 2026-10-06 · 172 features in 18 groups (PR #21) | `/features` and `featureData.ts` carry all 18 groups; every "128" on the site, in llms.txt and in the FAQs reads 172. A `BackOfficeSection` on the homepage and `/trades` gives the five new groups and "Poof offers the rule" one row each, using the October headlines, each linking to its group on `/features` |
+| 2026-10-06 · `/poof-vs-quickbooks` (PR #21) | A **Payroll, Tax & Assets** category (1099 prep, fixed-asset register, loans and trade-ins, payroll tax forms tied, sales tax by location, exemption certificates, truck stock) and two rules rows. The QuickBooks column was re-checked against **Plus**: Plus is marked yes for its AI assistant (Intuit Assist), estimates, recurring invoices, invoice reminders, bills, budget vs actual, recurring journal entries, CSV statement import, report drill-down, scheduled report emails, the audit log, 1099 prep and sales tax by location |
 | 2026-08-27 · field service | `/trades`, `/hvac`, `/plumbing`, `/electrical` carry **"Your tech closes the job from a text. The invoice writes itself."** via the shared `FieldServiceSection`, including a completed service call becoming a job on its own |
 | 2026-09-01 · unearned revenue | The same four pages carry **"A down payment isn't revenue until the job is done. A plan isn't revenue until the visit happens."** via `UnearnedRevenueSection`, with cancellation framed as a recorded refund-or-forfeit decision |
 | 2026-09-08 · approvals & autonomy | The same four pages **plus the homepage** carry **"Nothing reaches your books without you seeing it first."** via `ApprovalsSection` — the evidence on the card, partial batch approval, rejection reasons, rules derived from reviewed work, and the self-pausing rule. `/poof-vs-quickbooks` gained an **Approvals & AI Autonomy** comparison category and a prose block on the bank-rule contrast; three FAQs were added to `featureData`; the three QuickBooks blog posts carry the bank-rule caution |
@@ -760,10 +757,13 @@ salesperson would choose for us.
 
 Against the plan that actually matches Poof's capability, the story inverts:
 
-- **Poof $79 flat vs QuickBooks Plus $140** — Poof is **44% cheaper** and adds the AI assistant,
-  budgeting, forecasting, and job costing that Plus does not have at any price.
-- Poof's 5 roles and 26 granular permissions, plus SOC 2 audit logging with PII masking, are
-  **Advanced-tier ($340) capabilities** at QuickBooks. That contrast is worth making explicitly.
+- **Poof $79 flat vs QuickBooks Plus $140** — Poof is **44% cheaper** and adds what Plus does not
+  have: AI-built budgets, a 12-month cash forecast with confidence bands, the approvals inbox,
+  and a close the books tick off themselves. (Plus does have budgets, project profitability and
+  an AI assistant, Intuit Assist. Checked 2026-10-06.)
+- Poof's 5 roles and 26 granular permissions are **Advanced-tier ($340) capabilities** at
+  QuickBooks (custom roles), and so is fixed-asset depreciation. Every QuickBooks plan has an
+  audit log; what Poof adds is PII masking in it and in every AI call. That contrast is worth making explicitly.
 - **Intuit's own increase is the argument.** Plus users just absorbed +22% and Advanced users
   +24%, with no new capability attached. "Your bookkeeping software raised its price 22% this
   month. Poof is $79, flat, with everything included" is a campaign, not just a table row.
@@ -776,20 +776,20 @@ difference between a comparison and a claim.
 | | Poof | QuickBooks |
 |---|---|---|
 | **Starting price** | $79/mo — all features ($39.50/mo launch special) | $38 Simple Start / $85 Essentials / **$140 Plus** / $340 Advanced (verified 2026-08-23; compare against Plus) |
-| **AI assistant** | Poof (built-in, context-aware, 30+ tools) | No |
-| **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | No |
+| **AI assistant** | Poof (built-in, context-aware, 85 tools; every change staged for approval) | Intuit Assist AI agents |
+| **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | Budgets on Plus, built by hand |
 | **Auto chart of accounts** | Yes | No |
 | **Receipt scanning + OCR** | Yes (with duplicate detection) | Yes (but limited in lower tiers) |
 | **Recurring charge detection** | Yes (AI-powered) | No |
 | **Recurring invoices** | Yes (with automated follow-ups) | Yes (but limited in lower tiers) |
 | **Smart transaction matching** | Yes | Limited |
 | **Cash flow forecasting** | Yes (AI-generated with confidence bands) | Limited (higher tiers only) |
-| **Report drill-down** | Yes (click any account → see journal entries) | No |
-| **Scheduled report delivery** | Yes (daily/weekly/monthly/quarterly, PDF or CSV, email) | No |
+| **Report drill-down** | Yes (click any account → see journal entries) | Yes |
+| **Scheduled report delivery** | Yes (daily/weekly/monthly/quarterly, PDF or CSV, email) | Yes (Essentials and up) |
 | **Bank statement PDF import via AI** | Yes (upload PDF to AI, auto-parsed with GPT-4o Vision) | No |
-| **RBAC** | 5 roles, 26 permissions | Limited |
-| **Audit logs** | Yes (SOC 2, PII masking) | Limited |
-| **Estimates** | Yes (create, send, convert to invoice) | Yes (higher tiers only) |
+| **RBAC** | 5 roles, 26 permissions | Custom roles on Advanced only |
+| **Audit logs** | Yes (SOC 2, PII masking) | Yes (no PII masking) |
+| **Estimates** | Yes (create, send, convert to invoice) | Yes |
 | **AI depreciation & recurring entries** | Yes (AI sets up accounts and schedules) | No |
 | **Personalized dashboard** | Yes (AI briefing, attention alerts, animations, reorderable tiles) | No |
 | **AI chat organization** | Yes (multi-session, folders, drag-and-drop, 3 view modes) | No |
@@ -798,6 +798,7 @@ difference between a comparison and a claim.
 | **Pricing model** | Flat — one plan | Tiered — must upgrade for features |
 
 ### Key Differentiators (What Poof Has That QuickBooks Doesn't)
+> **Checked against QuickBooks Plus 2026-10-06:** items 1, 7, 15, 16 and 17 are *not* differentiators against Plus as worded. Plus has an AI assistant (Intuit Assist), automatic invoice reminders, estimates, report drill-down and scheduled report emails. Use the specific versions instead: 85 tools with every change staged for approval; reminders written from the customer's history; PDF statement import via chat.
 1. AI assistant (Poof) with 30+ tools, business-context awareness, and books health checks
 2. AI-powered budgeting — describe your goal in plain English, AI builds the budget
 3. AI cash flow forecasting with confidence bands and rolling refresh
@@ -1166,6 +1167,7 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 - **Limits written down with the claims** (top of file): 1099s prepared, not e-filed; sales tax
   never filed; payroll posted and tied, not processed; QuickBooks by file; rules offered, never
   self-granted, never above their ceiling; voice opt-in.
+- **Later the same day (site):** `refocus-software` merged (PR #16); the corrections table shipped in PR #21 and was cleared. The QuickBooks comparison here and on `/poof-vs-quickbooks` was re-checked against Plus. Plus has Intuit Assist, budgets, estimates, recurring invoices, invoice reminders, report drill-down, scheduled report emails and an audit log, so those are no longer claimed as differences. Fixed-asset depreciation and custom roles are Advanced-only.
 - **Not marketed, for the record:** a nightly watchdog now checks every company's books and the
   system each morning and messages the operator only when something is wrong — it is why the
   claims above can stay true, not a customer feature.
