@@ -35,6 +35,8 @@ const comparisonData = [
     { name: 'Mandatory Dollar Ceiling on Any Rule That Writes to the Ledger', poof: true, quickbooks: false },
     { name: 'Daily Cap, With the Overflow Sent to Review Rather Than Dropped', poof: true, quickbooks: false },
     { name: 'A Rule That Pauses Itself the First Time You Correct It', poof: true, quickbooks: false },
+    { name: 'Rules Offered From Your Own Approvals, Granted Only When You Say Yes', poof: true, quickbooks: false },
+    { name: 'Everything Your Rules Did, Grouped by Rule, With Undo on Each Change', poof: true, quickbooks: false },
     { name: '\u201cWhat AI Changed This Month, and Who Allowed It\u201d on One Page', poof: true, quickbooks: false },
   ]},
   { category: 'AI & Automation', features: [
@@ -103,6 +105,15 @@ const comparisonData = [
     { name: 'Prepaid Maintenance Plans Earned Per Completed Visit', poof: true, quickbooks: false },
     { name: 'AI Phone Receptionist + Dispatch', poof: true, quickbooks: false },
   ]},
+  { category: 'Payroll, Tax & Assets', features: [
+    { name: '1099s Prepared From the Year\u2019s Payments', poof: true, quickbooks: true },
+    { name: 'Fixed-Asset Register With Monthly Depreciation', poof: true, quickbooks: false },
+    { name: 'Vehicle Loans Split Into Principal and Interest, Trade-Ins in One Entry', poof: true, quickbooks: false },
+    { name: 'Pay Runs From Your Payroll Provider Tied to the 941s, W-2s and State Returns', poof: true, quickbooks: false },
+    { name: 'Sales Tax Rates by Location', poof: true, quickbooks: true },
+    { name: 'Exemption Certificates on File With Expiry Dates', poof: true, quickbooks: false },
+    { name: 'Truck Stock by Van, Counted From a Phone', poof: true, quickbooks: false },
+  ]},
   { category: 'Field Service & Job Handoff', features: [
     { name: 'Technician Field Link (no account, no app install)', poof: true, quickbooks: false },
     { name: 'Arrival Tracking (on-my-way, arrived, completed)', poof: true, quickbooks: false },
@@ -160,7 +171,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">After a 30-day free trial: 50% off your first 3 paid months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 128 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 172 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>

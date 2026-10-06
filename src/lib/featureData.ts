@@ -219,6 +219,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Book, Move, or Cancel a Visit From the Chat",
         description: "\u201cBook Smith Tuesday 2pm.\u201d \u201cCan we do Thursday afternoon?\u201d \u201cMove the Rivera visit to Friday.\u201d Open slots and the appointment list answer at once; the booking itself becomes a card, and approving it runs the same handler the phone line runs \u2014 the tech gets the same text, the board updates the same way. No rule can ever approve a visit"
+      },
+      {
+        title: "Talk to Poof in Telegram and Slack",
+        description: "Ask questions, get answers, and approve or reject cards right in the chat app you already use. Every copy of a card stays in step, wherever you decide it"
+      },
+      {
+        title: "A Morning Summary Where You Work",
+        description: "What needs your OK today, delivered each morning to Telegram, Slack, or email"
       }
     ]
   },
@@ -257,6 +265,22 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Automated Invoice Follow-ups",
         description: "Configurable payment reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment — stop chasing late payments manually"
+      },
+      {
+        title: "Reminders Written From the Customer’s History",
+        description: "Each reminder is drafted from that customer’s own payment history and checked by a code guard before it goes. A daily collections summary arrives by email, Telegram, or Slack"
+      },
+      {
+        title: "Replies Are Read",
+        description: "A customer’s answer to a reminder shows on the invoice. “Says they paid,” “disputes it,” or “has a question” becomes a card, so the reply gets a decision instead of sitting in an inbox"
+      },
+      {
+        title: "A Hold Stops Every Reminder",
+        description: "Put a customer on hold and nothing writes to them: not the sweep, not a follow-up, not Send now"
+      },
+      {
+        title: "Scan a Check",
+        description: "Snap a check on your phone and approve it, and it waits in Undeposited Funds until the deposit clears it. The routing and account numbers are blacked out on the phone before anything is sent"
       }
     ]
   },
@@ -283,6 +307,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Transaction Matching",
         description: "Match bank transactions to expenses, bills, and invoices for accurate reconciliation and clean books"
+      },
+      {
+        title: "One Payment, Several Bills",
+        description: "A check that covers three invoices from the same supplier is matched once, to all three"
+      },
+      {
+        title: "Capture From Anywhere",
+        description: "A “+” button anywhere in the app, and a Receipt and Check bar on the technician’s job link, so the paper gets captured where it is"
       }
     ]
   },
@@ -359,6 +391,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Recurring Journal Entry Templates",
         description: "Set up recurring entries (daily, weekly, monthly, quarterly, annually) with timezone-aware automatic posting and reversing journal entry support"
+      },
+      {
+        title: "Accounts Poof Uses",
+        description: "Every automatic entry (invoices, bills, sales tax, loans, depreciation) posts to an account you can see and change on the Chart of Accounts page. If one is missing, Poof creates it once with the standard name and number, and a category that isn’t in your chart is held for review, never posted somewhere else"
+      },
+      {
+        title: "Switch From QuickBooks by File",
+        description: "Export your trial balance, customers and vendors, and open invoices and unpaid bills from QuickBooks, and they come in as opening balances, tied to the trial balance and never counted twice"
       }
     ]
   },
@@ -602,6 +642,175 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "A Playbook Graduates as a Rule",
         description: "\u201cApprove all like this\u201d on an inbox-run card makes a standing rule pinned to that playbook, only while the forwarded file keeps the columns it had, and under a ceiling from the run\u2019s total. A drifted file, a bigger total, or another playbook still waits for a person"
+      },
+      {
+        title: "Poof Offers the Rule",
+        description: "Approve the same change on several cards (four approvals across two cards in 90 days, none edited or rejected) and Poof offers to do it for you. Nothing is granted until a person says yes"
+      },
+      {
+        title: "Done by Rules",
+        description: "Everything your rules did on their own, grouped by rule, with “Looks right” or Undo on each change. Undo takes the entry off the ledger and puts the row back"
+      },
+      {
+        title: "Change a Rule’s Limits",
+        description: "Set each rule’s ceiling and daily cap in Settings → Automation. A rule never acts above its ceiling"
+      }
+    ]
+  },
+  {
+    name: "Fixed Assets & Loans",
+    icon: "assets",
+    features: [
+      {
+        title: "Asset Register",
+        description: "Vehicles, tools, office equipment, and more, with straight-line depreciation by class and a capitalization threshold you can edit ($2,500 by default)"
+      },
+      {
+        title: "Monthly Depreciation as One Card",
+        description: "The month’s depreciation, by class, approved once. While the register hasn’t changed, it can run on a rule"
+      },
+      {
+        title: "Start From Your CPA’s Schedule",
+        description: "Your CPA’s depreciation schedule, read from a CSV or spreadsheet into one card, with opening pools, a fresh start when there’s no schedule, and the year’s roll-forward ready for the CPA"
+      },
+      {
+        title: "Capital Purchases Spotted",
+        description: "Equipment bought on a bill or a card that looks like an asset becomes a card to put it on the register"
+      },
+      {
+        title: "Sold, Scrapped, Stolen, or Wrecked",
+        description: "Take an asset off the books with the gain or loss worked out, including an insurance payout"
+      },
+      {
+        title: "Vehicle and Equipment Loans",
+        description: "Each payment split into principal and interest. Payments that match the schedule can run on a rule"
+      },
+      {
+        title: "Trade-Ins in One Entry",
+        description: "The old van out, its loan paid off, the new van and its loan in, with the entry shown before it posts"
+      },
+      {
+        title: "The Lender’s Statement",
+        description: "True up a loan to what the lender says it is. For a vendor you pay the same amount every month, Poof asks whether it is a loan or a lease"
+      }
+    ]
+  },
+  {
+    name: "1099s & Vendors",
+    icon: "1099",
+    note: "Poof prepares the 1099s, the contractors’ copies, and the CPA summary, and walks whoever uploads them to the IRS through it.",
+    features: [
+      {
+        title: "Books → 1099s",
+        description: "Every contractor’s year so far, by how they were paid, against the year’s legal threshold ($2,000 for 2026)"
+      },
+      {
+        title: "Every Payment Has a Payee",
+        description: "“Who is this?” cards link unknown bank payees and checks to vendors, so no contractor payment is missing from the year"
+      },
+      {
+        title: "W-9s by Link",
+        description: "Send the vendor a link and they fill in the W-9 online. A filled-in W-9 PDF fills the vendor record, read inside Poof"
+      },
+      {
+        title: "Tax IDs Sealed",
+        description: "Stored encrypted, shown as the last four digits, and never erased by an edit"
+      },
+      {
+        title: "Prepare the Year",
+        description: "Each contractor’s copy, emailed to those who consented and ready to print and mail for the rest, plus a summary PDF for your CPA"
+      },
+      {
+        title: "Mark Filed",
+        description: "Record the IRS receipt ID once the forms are filed. A change after filing is flagged as a correction"
+      },
+      {
+        title: "Who Uploads Your 1099s?",
+        description: "Your bookkeeper, your CPA, or you, with the filer-code checklist for whoever it is and an October reminder while there’s still time to set it up"
+      },
+      {
+        title: "The January Check",
+        description: "A card for checks written in December that cleared in January, and a close task for the filing"
+      }
+    ]
+  },
+  {
+    name: "Payroll",
+    icon: "payroll",
+    note: "Your payroll provider pays your people; Poof puts each pay run on the books and ties the tax forms to it. Payroll posting is off until you turn it on.",
+    features: [
+      {
+        title: "Post a Pay Run From Your Provider’s Reports",
+        description: "Your provider’s payroll register and liability report become one entry, with the accounts mapped once, and Unpost if it’s wrong"
+      },
+      {
+        title: "Payroll Withdrawals Matched",
+        description: "The bank’s payroll and tax debits tie to the pay run that caused them"
+      },
+      {
+        title: "Month-End Wage Accrual",
+        description: "Wages earned but not yet paid land in the month they were earned"
+      },
+      {
+        title: "Tax Forms Tied to the Books",
+        description: "Your 941s, W-2s, 940, and state returns checked against the pay runs, with quarter-end and year-end close tasks"
+      },
+      {
+        title: "Payroll by Email",
+        description: "Forward your provider’s payroll report and it becomes a pay run"
+      },
+      {
+        title: "Labor Onto Jobs",
+        description: "Technicians’ hours from their visits allocated to jobs at what payroll actually cost"
+      }
+    ]
+  },
+  {
+    name: "Sales Tax",
+    icon: "salestax",
+    note: "Poof tracks, reports, and ties your sales tax. You file the return and record it here.",
+    features: [
+      {
+        title: "Rates by City",
+        description: "Sales tax rates on customers, locations, and invoices, with what’s taxable set by the kind of work. Arizona and Texas presets are there for you to confirm"
+      },
+      {
+        title: "Exemptions on File",
+        description: "Exempt customers with their certificates and expiry dates"
+      },
+      {
+        title: "Sales Tax Report",
+        description: "What was charged, by jurisdiction, for the period"
+      },
+      {
+        title: "Record the Return",
+        description: "Enter the return you filed, match its payment from the bank, and the close ties it out"
+      },
+      {
+        title: "Use Tax",
+        description: "Tracked on materials bought without sales tax"
+      }
+    ]
+  },
+  {
+    name: "Inventory: Truck Stock",
+    icon: "inventory",
+    features: [
+      {
+        title: "Vans and Locations",
+        description: "Each truck and the warehouse as its own stock location"
+      },
+      {
+        title: "Count From a Phone",
+        description: "A Count screen for the tech or the office, saved as a draft until it’s posted"
+      },
+      {
+        title: "Post the Count",
+        description: "Parts used on jobs go to those jobs; the rest is shrinkage. A posted count can be reversed"
+      },
+      {
+        title: "The Close Knows",
+        description: "When each van was last counted, the year-end evidence, and an insight when shrinkage climbs"
       }
     ]
   },
@@ -690,7 +899,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 128 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Unlike QuickBooks, Poof includes a built-in AI assistant with 30+ tools that creates records, updates invoices, generates all 13 reports, and imports bank statement PDFs — all through conversation. Poof also offers AI-powered budgeting and cash flow forecasting, recurring invoices with automated follow-ups, estimates, auto-reconciliation, receipt scanning with OCR, recurring charge detection, smart transaction matching, report drill-down, scheduled report delivery, and a personalized dashboard with AI daily briefing. Poof is one plan at $79/month with all 172 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month — the tier that carries job costing, budgets, and full reporting — not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -750,7 +959,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 128 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 30-day free trial with no credit card required, and then a 50% launch discount: $39.50/mo for the first 3 paid months.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 172 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 30-day free trial with no credit card required, and then a 50% launch discount: $39.50/mo for the first 3 paid months.",
     category: "Pricing & Plans"
   },
   {
@@ -785,7 +994,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 128 features — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 172 features — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

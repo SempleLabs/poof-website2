@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import HomeShow from '@/components/HomeShow'
 import HomeFaqShort from '@/components/HomeFaqShort'
+import BackOfficeSection from '@/components/BackOfficeSection'
 import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -43,12 +44,14 @@ export default function Home() {
           Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the phone, the dispatch board, and the technician&apos;s field link to the same account.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-6">
-          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 128 features</Link>
+          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 172 features</Link>
           <Link href="/pricing" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Pricing</Link>
           <Link href="/poof-vs-quickbooks" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Poof vs QuickBooks</Link>
           <Link href="/how-it-works" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">How it works</Link>
         </div>
       </section>
+
+      <BackOfficeSection />
 
       {/* The guarantee, stated as a commitment with its conditions */}
       <section className="max-w-[820px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="guarantee">

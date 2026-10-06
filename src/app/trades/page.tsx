@@ -10,6 +10,7 @@ import FieldServiceSection from '@/components/FieldServiceSection'
 import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
 import ApprovalsSection from '@/components/ApprovalsSection'
 import CloseRunSection from '@/components/CloseRunSection'
+import BackOfficeSection from '@/components/BackOfficeSection'
 import CtaSection from '@/components/CtaSection'
 import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
@@ -77,7 +78,7 @@ const builtFor = [
 const faqs = [
   {
     q: 'What does Poof for shops cost?',
-    a: 'The same as every other Poof account: $79 a month, all 128 features. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
+    a: 'The same as every other Poof account: $79 a month, all 172 features. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
   },
   {
     q: 'Is the AI receptionist something I turn on myself?',
@@ -137,6 +138,8 @@ export default function TradesPage() {
       <ApprovalsSection />
 
       <CloseRunSection />
+
+      <BackOfficeSection />
 
       {/* The loop, stated plainly for anyone who skipped the demo */}
       <section id="loop" className="py-20 bg-slate-50">
