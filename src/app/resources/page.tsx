@@ -136,7 +136,7 @@ export default async function ResourcesPage() {
       linkText: 'Four steps →',
     },
     {
-      title: 'All 128 Features',
+      title: 'All 172 Features',
       description: 'Explore every feature included in your Poof subscription.',
       href: '/features',
       linkText: 'View features →',

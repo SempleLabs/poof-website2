@@ -6,7 +6,7 @@ import { featureGroups } from '@/lib/featureData'
 /**
  * The features page as a ledger: every group on the page, a sticky index that tracks
  * scroll position, a search box that filters the rows, and collapsed groups on phones.
- * Replaces the horizontal tab bar, which hid twelve of thirteen groups behind a swipe.
+ * Replaces the horizontal tab bar, which hid most of the groups behind a swipe.
  */
 
 const SHORT: Record<string, string> = {
@@ -23,6 +23,11 @@ const SHORT: Record<string, string> = {
   'AI Receptionist & Dispatch': 'Receptionist',
   'Field Service & Job Handoff': 'Field Service',
   'Approvals & AI Autonomy': 'Approvals',
+  'Fixed Assets & Loans': 'Assets & Loans',
+  '1099s & Vendors': '1099s',
+  'Payroll': 'Payroll',
+  'Sales Tax': 'Sales Tax',
+  'Inventory: Truck Stock': 'Truck Stock',
 }
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
@@ -124,7 +129,7 @@ export default function FeatureLedger() {
           <div className="flex gap-2">
             <input
               id="feature-search" type="search" value={q} onChange={(e) => setQ(e.target.value)}
-              placeholder="Search 128 features: reconciliation, deposits, 1099, Jobber…"
+              placeholder="Search 172 features: payroll, sales tax, 1099, deposits…"
               className="flex-1 min-w-0 bg-white border border-rule rounded-lg px-3.5 py-2.5 text-[15px] placeholder:text-muted focus:border-ledger-600"
             />
             {q && <button type="button" onClick={() => setQ('')} className="rounded-lg border-[1.5px] border-ink text-ink font-semibold text-sm px-3">Clear</button>}

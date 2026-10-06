@@ -35,59 +35,62 @@ const comparisonData = [
     { name: 'Mandatory Dollar Ceiling on Any Rule That Writes to the Ledger', poof: true, quickbooks: false },
     { name: 'Daily Cap, With the Overflow Sent to Review Rather Than Dropped', poof: true, quickbooks: false },
     { name: 'A Rule That Pauses Itself the First Time You Correct It', poof: true, quickbooks: false },
+    { name: 'Rules Offered From Your Own Approvals, Granted Only When You Say Yes', poof: true, quickbooks: false },
+    { name: 'Everything Your Rules Did, Grouped by Rule, With Undo on Each Change', poof: true, quickbooks: false },
     { name: '\u201cWhat AI Changed This Month, and Who Allowed It\u201d on One Page', poof: true, quickbooks: false },
   ]},
   { category: 'AI & Automation', features: [
     { name: 'AI Transaction Categorization', poof: true, quickbooks: true },
-    { name: 'Built-in AI Assistant (Poof)', poof: true, quickbooks: false },
-    { name: 'Auto Chart of Accounts Generation', poof: true, quickbooks: false },
+    { name: 'Built-in AI Assistant', poof: true, quickbooks: true },
+    { name: 'Chart of Accounts Set Up for Your Business', poof: true, quickbooks: true },
     { name: 'AI Recurring Charge Detection', poof: true, quickbooks: false },
-    { name: 'Receipt Scanning & OCR (with duplicate detection)', poof: true, quickbooks: false },
-    { name: 'Smart Transaction Matching', poof: true, quickbooks: false },
+    { name: 'Receipt Scanning & OCR', poof: true, quickbooks: true },
+    { name: 'Smart Transaction Matching', poof: true, quickbooks: true },
     { name: 'AI Budget & Forecast Generation', poof: true, quickbooks: false },
     { name: 'AI Depreciation & Recurring Entry Setup', poof: true, quickbooks: false },
   ]},
   { category: 'Budgeting & Forecasting', features: [
     { name: 'AI-Powered Budget Creation', poof: true, quickbooks: false },
-    { name: 'Budget Overview & Status Tracking', poof: true, quickbooks: false },
-    { name: 'Budget vs Actual Variance Dashboard', poof: true, quickbooks: false },
+    { name: 'Budget Lifecycle (Draft, Active, Locked, Archived)', poof: true, quickbooks: false },
+    { name: 'Budget vs Actual', poof: true, quickbooks: true },
     { name: 'AI Cash Flow Forecasting (12-month)', poof: true, quickbooks: false },
     { name: 'Budget Alerts', poof: true, quickbooks: false },
   ]},
   { category: 'Core Bookkeeping', features: [
     { name: 'Invoicing & Credit Notes', poof: true, quickbooks: true },
-    { name: 'Estimates with One-Click Invoice Conversion', poof: true, quickbooks: false },
-    { name: 'Recurring Invoices with Auto-Send', poof: true, quickbooks: false },
-    { name: 'Automated Invoice Follow-ups', poof: true, quickbooks: false },
+    { name: 'Estimates with One-Click Invoice Conversion', poof: true, quickbooks: true },
+    { name: 'Recurring Invoices with Auto-Send', poof: true, quickbooks: true },
+    { name: 'Automatic Invoice Reminders', poof: true, quickbooks: true },
     { name: 'Expense Tracking & Receipt Uploads', poof: true, quickbooks: true },
-    { name: 'Bill & Vendor Management', poof: true, quickbooks: false },
+    { name: 'Bill & Vendor Management', poof: true, quickbooks: true },
     { name: 'Double-Entry Accounting', poof: true, quickbooks: true },
     { name: 'Bank Reconciliation', poof: true, quickbooks: true },
-    { name: 'Auto-Reconciliation', poof: true, quickbooks: false },
+    { name: 'Scheduled Auto-Reconciliation That Signs Only When It Ties to the Penny', poof: true, quickbooks: false },
     { name: 'Accrual & Cash Basis Toggle', poof: true, quickbooks: true },
-    { name: 'Recurring Journal Entry Templates', poof: true, quickbooks: false },
+    { name: 'Recurring Journal Entries', poof: true, quickbooks: true },
   ]},
   { category: 'Banking & Reports', features: [
     { name: 'Bank Connection (Plaid)', poof: true, quickbooks: true },
-    { name: 'Bank Statement Import (CSV/PDF)', poof: true, quickbooks: false },
+    { name: 'Bank Statement Import (CSV)', poof: true, quickbooks: true },
     { name: 'Bank Statement PDF Import via AI Chat', poof: true, quickbooks: false },
     { name: '13 Financial Reports', poof: true, quickbooks: true },
-    { name: 'Report Drill-Down (Click to See Journal Entries)', poof: true, quickbooks: false },
+    { name: 'Report Drill-Down', poof: true, quickbooks: true },
     { name: 'Shareable Report URLs', poof: true, quickbooks: false },
-    { name: 'Scheduled Report Delivery (Email, PDF/CSV)', poof: true, quickbooks: false },
+    { name: 'Scheduled Report Emails', poof: true, quickbooks: true },
     { name: 'Reconciliation Carries Outstanding Items Forward (a July check clears in August)', poof: true, quickbooks: true },
     { name: 'Uncertain Auto-Matches Become Approval Cards', poof: true, quickbooks: false },
   ]},
   { category: 'Security & Team', features: [
-    { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false },
-    { name: 'Audit Logs with PII Masking', poof: true, quickbooks: false },
+    { name: 'Custom Roles With 26 Granular Permissions (Advanced-only at QuickBooks)', poof: true, quickbooks: false },
+    { name: 'Audit Log', poof: true, quickbooks: true },
+    { name: 'PII Masked in the Audit Log and in Every AI Call', poof: true, quickbooks: false },
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
   ]},
   { category: 'Productivity & UX', features: [
     { name: 'Personalized Dashboard with AI Daily Briefing', poof: true, quickbooks: false },
     { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false },
     { name: 'AI Chat Folders & Multi-Session Conversations', poof: true, quickbooks: false },
-    { name: 'Simple, Flat Pricing (from $39.50/mo)', poof: true, quickbooks: false },
+    { name: 'One Plan, Every Feature ($79/mo)', poof: true, quickbooks: false },
   ]},
   { category: 'Job Costing & Close', features: [
     { name: 'Job Costing & Per-Job Profitability', poof: true, quickbooks: true },
@@ -102,6 +105,15 @@ const comparisonData = [
     { name: 'Customer Deposits Held as a Liability, Released to the Job on Completion', poof: true, quickbooks: false },
     { name: 'Prepaid Maintenance Plans Earned Per Completed Visit', poof: true, quickbooks: false },
     { name: 'AI Phone Receptionist + Dispatch', poof: true, quickbooks: false },
+  ]},
+  { category: 'Payroll, Tax & Assets', features: [
+    { name: '1099s Prepared From the Year\u2019s Payments', poof: true, quickbooks: true },
+    { name: 'Fixed-Asset Register With Monthly Depreciation', poof: true, quickbooks: false },
+    { name: 'Vehicle Loans Split Into Principal and Interest, Trade-Ins in One Entry', poof: true, quickbooks: false },
+    { name: 'Pay Runs From Your Payroll Provider Tied to the 941s, W-2s and State Returns', poof: true, quickbooks: false },
+    { name: 'Sales Tax Rates by Location', poof: true, quickbooks: true },
+    { name: 'Exemption Certificates on File With Expiry Dates', poof: true, quickbooks: false },
+    { name: 'Truck Stock by Van, Counted From a Phone', poof: true, quickbooks: false },
   ]},
   { category: 'Field Service & Job Handoff', features: [
     { name: 'Technician Field Link (no account, no app install)', poof: true, quickbooks: false },
@@ -143,7 +155,7 @@ export default function PoofVsQuickbooksPage() {
 
       <PageHero
         title={<><span className="text-ledger-600">Poof</span> vs QuickBooks</>}
-        subtitle="Both platforms handle core bookkeeping. Poof is one plan at $79/mo — 44% less than the $140/mo QuickBooks Plus tier that carries job costing and budgets — with AI automation QuickBooks doesn't offer at any tier."
+        subtitle="Both platforms handle core bookkeeping. Poof is one plan at $79/mo — 44% less than the $140/mo QuickBooks Plus tier that carries job costing and budgets — and every change its AI proposes waits for your approval, with the evidence on the card."
       />
 
       {/* Pricing Comparison */}
@@ -160,7 +172,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">After a 30-day free trial: 50% off your first 3 paid months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 128 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 172 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -174,10 +186,10 @@ export default function PoofVsQuickbooksPage() {
                 <div className="text-4xl font-bold text-slate-700 mb-1">$140<span className="text-lg text-slate-500">/mo</span></div>
                 <p className="text-slate-600 mb-6">The tier that carries job costing and budgets. Up 22% on August 1, 2026 &mdash; from $115.</p>
                 <ul className="space-y-3 text-slate-700">
-                  <li className="flex items-center gap-2"><QBCheck /> Core bookkeeping + project tracking</li>
-                  <li className="flex items-center gap-2"><Cross /> No built-in AI assistant</li>
-                  <li className="flex items-center gap-2"><Cross /> No AI budgeting or cash flow forecasting</li>
-                  <li className="flex items-center gap-2"><Cross /> Team roles and audit logs need Advanced ($340/mo)</li>
+                  <li className="flex items-center gap-2"><QBCheck /> Core bookkeeping, budgets, and project tracking</li>
+                  <li className="flex items-center gap-2"><QBCheck /> Intuit Assist AI agents</li>
+                  <li className="flex items-center gap-2"><Cross /> Fixed-asset depreciation needs Advanced ($340/mo)</li>
+                  <li className="flex items-center gap-2"><Cross /> Custom roles and permissions need Advanced ($340/mo)</li>
                 </ul>
               </div>
             </AnimateOnScroll>

@@ -144,7 +144,7 @@ export default function HowItWorksPage() {
             ))}
           </div>
           <p className="text-sm text-muted mt-6">
-            All 128 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
+            All 172 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
           </p>
         </div>
       </section>

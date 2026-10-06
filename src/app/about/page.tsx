@@ -78,7 +78,7 @@ export default function AboutPage() {
     {
       year: "2026",
       title: "Reimagining Bookkeeping",
-      description: "Today, Poof includes 128 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 13 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself. And we found our focus: running the whole back office, with a person on every entry — the books at the center, the phone and the field for the shops that need them."
+      description: "Today, Poof includes 172 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 13 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself, plus payroll, sales tax, 1099s, fixed assets and loans, and truck stock in the same books. And we found our focus: running the whole back office, with a person on every entry — the books at the center, the phone and the field for the shops that need them."
     }
   ]
 
