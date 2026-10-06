@@ -1,0 +1,61 @@
+Account Number,Account Name,Type,Subtype,Why it exists
+1010,Operating bank,Asset,Bank,Day-to-day operating cash
+1020,Payroll & tax reserve,Asset,Bank,Separate account so payroll and sales tax money is not spent by accident
+1100,Insurance receivable,Asset,Accounts Receivable,Amounts owed by carriers on approved or submitted work
+1110,Homeowner receivable,Asset,Accounts Receivable,Deductibles and non-covered work owed by the property owner; the easiest money on the job to lose
+1120,Mortgage company receivable,Asset,Accounts Receivable,Claim funds held by a lender and released in draws
+1130,Unbilled revenue,Asset,Other Current Asset,Work done at month end that has not been invoiced yet
+1200,Inventory - consumables,Asset,Other Current Asset,Chemicals containment supplies and filters on hand
+1300,Vehicles,Asset,Fixed Asset,Trucks vans and trailers
+1310,Drying & remediation equipment,Asset,Fixed Asset,Owned dehumidifiers air movers air scrubbers and extractors
+1320,Tools & other equipment,Asset,Fixed Asset,Moisture meters thermal cameras and tools above your capitalization threshold
+1400,Accumulated depreciation,Asset,Fixed Asset,Contra-asset against vehicles and equipment
+2010,Accounts payable,Liability,Accounts Payable,Sub and supplier bills not yet paid
+2020,Credit cards,Liability,Credit Card,One sub-account per card
+2100,Line of credit,Liability,Other Current Liability,Working capital while carriers pay
+2110,Equipment & vehicle notes,Liability,Long Term Liability,Financed trucks and drying equipment
+2200,Payroll liabilities,Liability,Other Current Liability,Withholding and employer taxes owed
+2300,Sales tax payable,Liability,Other Current Liability,Sales tax where your state taxes restoration or materials
+2400,Customer deposits,Liability,Other Current Liability,Money collected before work starts on self-pay and rebuild jobs; not revenue until the work is done
+2410,Program fees payable,Liability,Other Current Liability,Fees owed to a carrier program or administrator on jobs already billed
+3010,Owner's capital,Equity,Equity,Owner investment
+3020,Owner's draw,Equity,Equity,Owner distributions
+3900,Retained earnings,Equity,Equity,Accumulated profit
+4010,Water mitigation revenue,Income,Income,Extraction drying and demolition on water losses
+4020,Fire & smoke revenue,Income,Income,Cleaning deodorization and soot removal
+4030,Mold remediation revenue,Income,Income,Containment removal and cleaning on mold jobs
+4040,Contents revenue,Income,Income,Pack-out cleaning and storage of contents
+4050,Reconstruction revenue,Income,Income,Rebuild after mitigation; a different margin and often a different crew
+4060,Emergency services revenue,Income,Income,Board-up tarping and after-hours response
+4090,Carrier reductions,Income,Discounts/Refunds Given,Contra-revenue: amounts the carrier cut from what you billed; sits under revenue so the reduction rate is visible
+4900,Other income,Income,Other Income,Referral fees equipment sold and scrap
+5010,Direct labor - technicians,COGS,Cost of Goods Sold,Wages of your techs on jobs
+5020,Labor burden,COGS,Cost of Goods Sold,Payroll taxes workers' comp and benefits on field wages
+5030,Subcontractors,COGS,Cost of Goods Sold,Rebuild trades and specialty subs
+5040,Materials - reconstruction,COGS,Cost of Goods Sold,Drywall flooring cabinets and finish for rebuild
+5050,Consumables & chemicals,COGS,Cost of Goods Sold,Antimicrobials containment plastic filters and cleaning agents used on jobs
+5060,Equipment rental,COGS,Cost of Goods Sold,Drying equipment rented when yours is all out; tells you when you are short
+5070,Disposal & dumpsters,COGS,Cost of Goods Sold,Debris contaminated materials and regulated waste
+5080,Testing & lab fees,COGS,Cost of Goods Sold,Moisture mapping mold sampling and asbestos testing before demolition
+5090,Contents storage,COGS,Cost of Goods Sold,Off-site storage for packed-out contents
+5100,Program & referral fees,COGS,Cost of Goods Sold,Fees to a carrier program or administrator on jobs it sent; a cost of that job not marketing
+5110,Catastrophe travel,COGS,Cost of Goods Sold,Lodging and travel for storm deployments costed to those jobs
+5120,Warranty & callback cost,COGS,Cost of Goods Sold,Return trips on completed jobs; the quality signal
+6010,Vehicles - fuel,Expense,Expense,Fuel for trucks
+6020,Vehicles - maintenance & repairs,Expense,Expense,Vehicle and trailer upkeep
+6030,Vehicles - registration & insurance,Expense,Expense,Fleet registration and auto insurance
+6100,Insurance - general liability & pollution,Expense,Expense,GL and contractor pollution liability premiums
+6110,Insurance - umbrella,Expense,Expense,Excess liability
+6200,Office & warehouse rent & utilities,Expense,Expense,Office warehouse and equipment storage
+6210,Office salaries,Expense,Expense,Office and administrative staff
+6220,Estimator & project manager salaries,Expense,Expense,The cost to write estimates and manage claims
+6230,Office supplies,Expense,Expense,Consumables for the office
+6300,Estimating software,Expense,Expense,Claims estimating software; a large fixed cost worth watching alone
+6310,Software & technology,Expense,Expense,Job management moisture logging and accounting software
+6400,Marketing & advertising,Expense,Expense,Website ads and agent relationship marketing
+6410,Referral & lead fees,Expense,Expense,Paid leads and referral fees outside carrier programs; separate so you can see cost per job won
+6500,Professional fees - CPA & legal,Expense,Expense,Accounting legal and collections
+6510,Professional fees - bookkeeping,Expense,Expense,Bookkeeping service
+6600,Licensing & certification,Expense,Expense,Contractor licenses and technician certifications
+6700,Bank & merchant fees,Expense,Expense,Bank charges and card processing
+6800,Depreciation,Expense,Expense,Periodic depreciation

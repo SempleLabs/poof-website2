@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const url = `https://www.poofai.com/blog/${params.slug}`
 
   return {
-    title: `${post.title} - Poof Blog`,
+    title: `${post.title} | Poof`,
     description: post.excerpt,
     alternates: {
       canonical: url,

@@ -57,7 +57,7 @@ const supportFaqs = [
   {
     question: 'Do you help with moving my books over from QuickBooks or Xero?',
     answer:
-      'Yes. Poof for shops includes a one-time onboarding that covers historical cleanup and migration from QuickBooks Online or Xero. Email support@poofai.com or book a call to talk through what moving your books would involve.',
+      'Yes. Email support@poofai.com and we will walk through what moving your books from QuickBooks Online or Xero involves — what comes over, what gets rebuilt, and how long it takes. You can also book a demo and bring your current books to it.',
   },
 ]
 
@@ -162,7 +162,7 @@ export default function SupportPage() {
                 ),
               },
               {
-                title: 'Book a call',
+                title: 'Book a demo',
                 description: 'Walk through Poof with us, or talk through a migration from your current books.',
                 href: '/demo',
                 linkText: 'Pick a time →',
