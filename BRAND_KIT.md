@@ -1,43 +1,42 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: September 15, 2026
+> **Living document** — Last updated: October 6, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
-> **⚠️ 2026-09-16 — The Augmented Operator is NOT launched and is not currently planned.** Austin: "I have not set up The Augmented Operator and don't think I plan to." The site no longer names it anywhere; the managed service is called **Poof Managed Bookkeeping** on /trades and the trade pages, and no page says Austin "runs" a practice. Keep the two-business framing below as history and as an option, not as a fact about today. Do not reintroduce the name on the site, in llms.txt, or in outreach without a decision.
+> **⭐ WHERE THINGS STAND (2026-10-06) — read this first; it overrides anything older below.**
+> - **poofai.com sells one thing: the software.** One $79 plan, two calls to action everywhere — **Start free trial** and **Book a demo**. The managed tiers, the $750 audit, the per-truck pricing and the trade landing pages (/hvac, /plumbing, /electrical → /trades) come off the site with the "software only" refocus (site branch `refocus-software`, built 2026-09-22 → 10-06, **not yet merged — the live site still shows the managed tiers and the $750 audit until it is**). `/trades` becomes the product page for service shops, at the same $79.
+> - **The managed service still exists, but not on poofai.com and not under a name yet.** Austin sells done-for-you bookkeeping to trade shops directly (outreach), as a separate services company that runs on Poof. Names dropped: *The Augmented Operator* (not launched, 09-16; dead 09-29), *Poof Managed Bookkeeping* (left the site with the refocus), *Setpoint* (10-01). Until it has a name and a site, keep it off every Poof surface. [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical) is reference for that outreach, not website copy.
+> - **The site tagline is "The back office, run by AI. Signed by you."** The brand idea behind it is unchanged: "The work disappears. The evidence doesn't."
+> - **172 features in 18 groups** (was 128 in 13). Five new groups since 09-15 — fixed assets & loans, 1099s & vendors, payroll, sales tax, truck-stock inventory — and "Poof offers the rule" in Approvals. See the [changelog](#changelog).
 > **Also corrected 2026-09-16:** Austin's background is **three years as an auditor, then seven as a controller** (ten in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
 
-> **⭐ TWO BUSINESSES (decided 2026-09-12; charter in `TWO_BUSINESSES.md`, which sits above this file).**
-> **Poof is the software.** Its customer is the bookkeeper, controller, or firm — and the businesses they keep books for, who are Poof's tenants. Poof speaks as a product: "AI is a tool, never a persona."
-> **The Augmented Operator is the managed service and the persona.** It runs the trades bookkeeping practice — HVAC, plumbing, electrical shops at $1,200 / $1,500 / Pro $2,400 — *on Poof*, and it speaks as Austin, first person, building in public. It is Poof's distribution: bookkeepers learn the practice model; Poof is what the practice runs on.
-> **What this means for copy:** the trades positioning in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical) is still right and still live — it is The Augmented Operator's, delivered on Poof. Until `theaugmentedoperator.com` exists (domain not yet registered as of 2026-09-15), the offer stays on poofai.com/trades and the homepage keeps leading with it, because it is the only offer generating calls. When the AO site is up, `/trades` moves there and poofai.com becomes the product site with firm pricing (an open decision: per client-org, or per firm with a cap). Do not put first-person copy on the Poof site; do not put a product changelog on the persona. How each refers to the other: Poof — *"Built by a practitioner. Runs The Augmented Operator."* AO — *"Runs on Poof."*
+> **History, not instruction:** on 2026-09-12 Poof and the managed service were split into two businesses (`TWO_BUSINESSES.md`). The split stands; the managed service's name and site do not exist yet. Older sections below may still say "The Augmented Operator" — read it as "the managed service".
 > Restaurants/multi-unit were deprioritized (features remain in the code but are not marketed).
 
 ---
 
-## ⚠️ Outstanding website corrections (verified against the site repo 2026-09-15)
+## ⚠️ Outstanding website corrections (checked against the live site and the site repo 2026-10-06)
 
-**Read this before writing any copy.** These are live pages that contradict this document.
-**Re-check the page before acting on a line here.** This table has twice carried rows that were
-already fixed on the site and simply never deleted, and the stale list got repeated back as though
-it were current. A correction list nobody prunes becomes a source of false urgency.
+**Read this before writing any copy.** Re-check the page before acting on a line here — this
+table has carried already-fixed rows before, and a stale list repeated back reads as urgency.
 
-| Page | What's wrong now | Should be |
+| Where | What's wrong now | Should be |
 |---|---|---|
-| *(none open as of 2026-09-15 — the 2026-09-08 site update, which had sat uncommitted in the site repo for a week, was committed and deployed with the 2026-09-15 update; the narrow "correct something the rule did" wording it still carried in three places was widened in the same push)* | | |
+| **The whole live site** | Still sells the managed service: `/trades` shows the $1,200 / $1,500 tiers and the $750 Job Margin & Recovery Audit; `/hvac`, `/plumbing`, `/electrical` are live | **Merge the site's `refocus-software` branch** (14 commits, 09-22 → 10-06). It removes the managed offer, 301s the retired pages, rewrites `/trades` as the product page at $79, and makes the two CTAs "Start free trial" and "Book a demo" everywhere |
+| `/features` and `featureData.ts` | 128 features in 13 groups | **172 in 18** — add the five new groups and the additions to Groups 2, 3, 5, 9 and 13 ([Product Overview](#product-overview)) |
+| `/pricing`, llms.txt, FAQs | "All 128 features" (or 118 in older copy) | **"All 172 features"** |
+| Homepage / `/trades` / `/features` | No mention of payroll, sales tax, fixed assets & loans, 1099s, truck inventory, or Poof offering rules | One section or row each, outcome-first (see the headlines in [Key Messaging](#key-messaging--taglines)) — and keep each group's limits (below) |
+| `/poof-vs-quickbooks` | Comparison rows predate the new groups | Add rows for 1099 preparation, fixed-asset register & depreciation, payroll ties, sales tax by city, truck-stock counts, and rules Poof offers |
 
-**On the count.** The site states **128 features across 13 groups** as of 2026-09-15; `featureData.ts`
-sums to 128. Verify the number by summing the groups, not by reading this table — this table has
-been wrong about the site twice.
+**Limits to keep with every new claim (the site states what it does, and never lists what it withholds):**
+- **1099s:** Poof prepares the year, the contractors' copies and the CPA summary, and walks you through the IRS upload. It does **not** e-file yet (the IRS upload file waits on the IRS template; Poof filing directly is planned for tax year 2027).
+- **Sales tax:** Poof tracks, reports and ties it. **Poof never files.**
+- **Payroll:** Poof posts pay runs from your provider's reports and ties the tax forms to them. It is **not a payroll processor** and pays no one; it is off until the owner turns it on.
+- **QuickBooks:** switching is by **file import** (trial balance, customers/vendors, open invoices and bills). There is **no live QuickBooks connection**.
+- **Rules:** Poof *offers* a rule; a person creates it. A rule never acts above its ceiling — "the rule is the rule".
+- **Voice** is opt-in per device, not on by default.
 
-**Verified correct on 2026-08-27, do not re-raise:** `/trades` advertises the **$750 Job Margin &
-Recovery Audit** (the $250 pilot is gone), and the tiers read $1,200 / $1,500 with $1,500 onboarding
-and Pro from $2,400. `/poof-vs-quickbooks` compares against **QuickBooks Online Plus at $140/mo**
-and footnotes **"as of August 2026, following Intuit's August 1, 2026 increase"**.
-
-**Already correct, do not "fix":** the comparison page's Poof pricing ($79, $39.50 launch) is
-current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are current. The
-**$2,400 Pro tier is deliberately not a third column** — see
-[pricing](#vertical-pricing-tier--poof-managed-for-trades).
+**On the count.** Verify by summing the groups, not by reading this table.
 
 ---
 
@@ -95,14 +94,17 @@ current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are c
 
 **Poof is AI bookkeeping software built for the person who signs the close.** It does the work — categorization, reconciliation, job costing, the month-end close — and puts every write in front of a person before it reaches the books. A bookkeeper, controller, or firm runs their clients on it; a shop owner can run their own. The close is a record with a checklist that the books tick off themselves, the reconciliation carries last month's outstanding items forward and shows one figure, and nothing an AI proposes lands without someone seeing it first ([Group 13](#13-approvals--ai-autonomy-9-features)). It can also **answer the phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, dispatches the tech, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-12-features)) — and the same booking works from the assistant drawer.
 
-**The managed service is a separate business.** *The Augmented Operator* runs a trades bookkeeping practice — HVAC, plumbing, and electrical shops doing $750K–$3M — on Poof, with a former controller signing every monthly close. Its positioning, pricing, and landing-page spec are in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). It lives on poofai.com/trades until its own site is up. See `TWO_BUSINESSES.md` for which business a piece of copy belongs to.
+**It now keeps the whole back office, not just the bank feed.** Since mid-September Poof posts **payroll** from your provider's reports and ties the 941s and W-2s to it, tracks **sales tax** by city with exemptions and use tax, runs a **fixed-asset register** with monthly depreciation, **vehicle and equipment loans** and trade-ins, prepares **1099s** from the year's payments with W-9s collected by link, and counts **parts on the trucks** — each one as approval cards, with the close knowing whether it was done. And when you keep approving the same thing, **Poof offers to make it a rule**, then shows you everything the rule did, with Undo.
+
+**The managed service is a separate business** with no name or site yet (see *Where things stand* above). It is not described on poofai.com.
 
 **One-liner (brand):** "The work disappears. The evidence doesn't."
 **One-liner (Poof):** "Bookkeeping that does itself — and shows its work before it lands."
 **One-liner (self-serve, still in use):** "Bookkeeping that does itself."
-**One-liner (The Augmented Operator, trades):** "Know which jobs make money — every month, from a real controller."
+**One-liner (site tagline):** "The back office, run by AI. Signed by you."
+**One-liner (managed service, outreach only — not on poofai.com):** "Know which jobs make money — every month, from a real controller."
 
-**Website:** poofai.com (product). theaugmentedoperator.com (the practice — not yet registered as of 2026-09-15).
+**Website:** poofai.com (the software only). The managed service has no site yet.
 
 ---
 
@@ -115,13 +117,14 @@ current. The /trades tier prices ($1,200 / $1,500) and their revenue bands are c
 - Firms adopting an AI practice model: the queue, the evidence, the rules they grant, and the record of who allowed what
 - (Firm mode — one console over N client orgs — is the product shape Poof is growing into. Firm pricing is an open decision. Do not describe a firm console on the site until it exists.)
 
-**Through The Augmented Operator — trade contractors (the managed service):**
+**Through the managed service — trade contractors (sold directly by Austin; not on poofai.com):**
 - HVAC, plumbing, and electrical shop owners doing $750K–$3M who wait 2–3 weeks for last month's P&L
 - Owner-operators who have no idea which jobs actually made money
 - Shops paying a part-time bookkeeper $500–$1,500/mo and frustrated with slow, generic reports
 - (Full profile in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). They are Poof tenants like any firm's clients.)
 
 **Self-serve software (any small business):**
+- **Service shops buying the software themselves** — HVAC, plumbing, electrical and other trades on the `/trades` product page: the receptionist, the tech's job link, deposits and prepaid plans, the close, payroll and sales tax, truck stock — the same $79 plan
 - Solo founders and freelancers tired of spreadsheet bookkeeping
 - Small business owners who dread reconciling their books each month
 - Service businesses that want invoicing + bookkeeping in one place
@@ -411,6 +414,15 @@ There is no 300 and no 700. Bold inside body copy is 600.
 - "Describe your goal. Get a budget in seconds."
 - "Snap a photo. Never type an expense again."
 
+### Headlines for the October groups (2026-10-06)
+Outcome first, the limit kept in the body copy (see *Limits to keep* at the top).
+- **Approvals:** "Approve it twice, and Poof offers to do it for you." · "See everything your rules did — and undo any of it."
+- **Payroll:** "Your payroll provider pays them. Poof makes the books and the 941 agree."
+- **Sales tax:** "Sales tax by city, exemptions on file, and a return that ties."
+- **Fixed assets & loans:** "The van, its loan and its depreciation — on the books without a spreadsheet." · "Trade in the truck in one entry."
+- **1099s:** "January's 1099s, prepared from the year's payments. W-9s collected by link."
+- **Truck stock:** "Count the van from your phone. Poof knows what went on jobs and what went missing."
+
 ### Supporting Messages
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
@@ -438,7 +450,7 @@ There is no 300 and no 700. Bold inside body copy is 600.
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 128 Features in 13 Groups
+### 172 Features in 18 Groups
 
 #### 1. AI-Powered Automation (9 features)
 1. AI transaction categorization (BRAID engine)
@@ -451,7 +463,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 8. AI-guided onboarding — Poof walks new users through setup with interactive survey and getting-started checklist
 9. AI-powered budget & forecast generation — natural language goal input, AI builds line items and 12-month projections
 
-#### 2. Invoicing & Payments (8 features)
+#### 2. Invoicing & Payments (12 features)
 1. Invoicing (PDF export, email delivery via AI or UI, custom branding/logo, line-item tax & discounts)
 2. Estimates — create, send, and convert estimates to invoices in one click (PDF export, email delivery, custom branding)
 3. Credit notes (create, send via email, AI-assisted)
@@ -460,13 +472,19 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 6. Customer management (full database with contact info, billing/shipping addresses, sales reporting)
 7. Recurring invoices — weekly, monthly, quarterly, or yearly schedules with auto-generation and auto-send
 8. Automated invoice follow-ups — configurable reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment
+9. **Reminders written from the customer's history** — each one drafted by AI and checked by a code guard before it goes; a daily collections summary by email, Telegram or Slack
+10. **Replies are read** — a customer's answer to a reminder shows on the invoice, and "says they paid", "disputes it" or "has a question" becomes a card
+11. **A hold stops every reminder** — put a customer on hold and no sender (sweep, follow-up, Send now) writes to them
+12. **Scan a check** — snap it on the phone, approve it, and it waits in Undeposited Funds until the deposit clears it; the routing and account numbers are blacked out on the phone before anything is sent
 
-#### 3. Expense & Bill Management (5 features)
+#### 3. Expense & Bill Management (7 features)
 1. Expense tracking
 2. Mileage tracking (business travel)
 3. Bill management
 4. Vendor management
 5. Transaction matching
+6. **One bank payment can pay several bills** — a check that covers three invoices from the same supplier is matched once, to all three
+7. **Capture from anywhere** — a "+" button in the app, and a Receipt / Check bar on the tech's job link
 
 #### 4. Banking & Reconciliation (8 features)
 1. Bank connection via Plaid (12,000+ banks, syncs last 30 days, optional liability accounts for broader institution support)
@@ -478,7 +496,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. Deposits
 8. Multi-account support
 
-#### 5. Accounting & Reporting (8 features)
+#### 5. Accounting & Reporting (10 features)
 1. Double-entry accounting
 2. 13 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail Report, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual
 3. Report drill-down — click any account in Balance Sheet, Income Statement, or Trial Balance to see underlying journal entries; click a journal entry to edit it
@@ -487,6 +505,8 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 6. Financial import (bulk chart of accounts, transactions, customers/vendors, invoices)
 7. Accrual & cash basis toggle
 8. Recurring journal entry templates (daily, weekly, monthly, quarterly, annually) with reversing journal entry support
+9. **Accounts Poof uses** — every automatic entry (invoices, bills, sales tax, loans, depreciation…) posts to an account you can see and change on the Chart of Accounts page; if one is missing, Poof creates it once with the standard name and number, and a category that isn't in your chart is held for review, never posted somewhere else
+10. **Switch from QuickBooks by file** — the trial balance, customers and vendors, and open invoices and unpaid bills come in as opening balances, tied to the trial balance and never counted twice
 
 #### 6. Budgeting & Forecasting (5 features)
 1. Budget creation — manual or AI-generated from a natural language goal (e.g., "20% revenue growth")
@@ -514,7 +534,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. Command bar (Cmd+K) — natural language navigation
 6. AI chat folders — organize conversations into folders (create, rename, delete, move), with drag-and-drop on desktop and move menu on mobile, collapsible sections, and persistent state
 
-#### 9. Poof AI Capabilities (19 features)
+#### 9. Poof AI Capabilities (21 features)
 1. Business-context-aware chat (knows your company, industry, timezone) with concise, action-oriented responses, multi-session support, and folder organization
 2. Books health check & month-end close guidance
 3. Invoice, estimate, and credit note creation — AI creates, edits, and sends via email
@@ -534,6 +554,8 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 17. **It shows its work while it works** — "Looking up invoices — August 2026", "Preparing an invoice — Smith Residential", arriving as each step runs rather than a silent pause followed by an answer. The steps say *preparing*, never *created*, because nothing has been written yet
 18. **Ask where things stand** — "Is August ready to close?", "what's open on the cash plan?", "which bills are due this week?", "what do we owe Ferguson?", "show me the accrual schedules", "how did July go?" — the close's status and checklist, transaction search, A/P aging, open bills, the 13-week cash plan, accrual schedules, and a month's summary are answered from the books, with the model told to narrate the numbers and never compute new ones. The same reads are what an outside agent gets over MCP
 19. **Book, move, or cancel a visit from the chat** — "book Smith Tuesday 2pm", "can we do Thursday afternoon?", "move the Rivera visit to Friday". Open slots and the appointment list answer at once; the booking itself becomes a card, and approving it runs the same handler the phone line runs — the tech gets the same text, the board updates the same way. No rule can ever approve a visit
+20. **Talk to Poof in Telegram and Slack** — ask, get answers, and approve or reject cards right in the chat; every copy of a card stays in step
+21. **A morning summary where you work** — what needs your OK today, delivered to the chat app you use
 
 #### 10. Job Costing, Month-End Close & Payments (20 features)
 1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-10-features))
@@ -595,7 +617,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 ---
 
-#### 13. Approvals & AI Autonomy (9 features)
+#### 13. Approvals & AI Autonomy (12 features)
 
 > **Availability note:** the approvals inbox is on for everyone — it is how every AI write reaches
 > the books. Autonomy is **off until a person grants it**, one rule at a time. There is no default
@@ -610,8 +632,53 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. **Five queues, one inbox** — the app used to have five separate approve-or-dismiss screens. Now an inbox playbook run, a reconciliation match the scheduled job was unsure of, a POS deposit that came in short, a bill the cash planner put on hold, and a late close task are all cards in the same Approvals inbox, each with the evidence that produced it. The original pages still work; deciding there is the same decision
 8. **The page settles the card** — a card raised by a pipeline, a detector, or the scheduled job is about a record that is still there, so it waits thirty days (a chat draft waits one). Confirm the match on the Reconcile page, match the deposit, decide the bill, tick the task, review the transaction — the card closes with what you did. Do something *different* from what the card proposed and it is recorded as a correction, the same as a Reject: the learning loop sees it, and any rule that would have approved it pauses
 9. **A playbook graduates as a rule** — "Approve all like this" on an inbox-run card makes a standing rule pinned to that playbook, only while the forwarded file keeps the columns it had, and under a ceiling from the run's total. A drifted file, a bigger total, or another playbook still waits for a person. The playbook's confirmation counter stays as a label; the grant is the rule
+10. **Poof offers the rule** — approve the same change on several cards (four approvals across two cards in 90 days, none edited or rejected) and Poof offers to do it for you; nothing is granted until a person says yes
+11. **Done by rules** — everything your rules did on their own, grouped by rule, with "Looks right" or Undo on each change; Undo takes the entry off the ledger and puts the row back
+12. **Change a rule's limits** — the ceiling and daily cap in Settings → Automation; a rule never acts above its ceiling
 
 **What it does not do (do not imply otherwise):** no rule can ever send anything to a customer — invoices and credit notes are always a human's decision, whatever a rule says. A rule that writes to the ledger **must** carry a dollar limit; one without does not run. Rules cannot be created from a settings screen, only from work someone reviewed. And autonomy is never on by default: a new account asks about everything until its owner decides otherwise.
+
+
+#### 14. Fixed Assets & Loans (8 features)
+1. **Asset register** — vehicles, tools, office equipment and more, with straight-line depreciation by class and an editable capitalization threshold ($2,500 by default)
+2. **Monthly depreciation as one card** — the month's figure, by class, approved once; it can run on a rule while the register hasn't changed
+3. **Start from your CPA's schedule** — read from a CSV or spreadsheet into one card, with opening pools, a fresh start when there's no schedule, and the year's roll-forward for the CPA
+4. **Capital purchases spotted** — equipment bought on a bill or card that looks like an asset becomes a card to put it on the register
+5. **Sold, scrapped, stolen or wrecked** — take an asset off the books with the gain or loss worked out, including insurance payouts
+6. **Vehicle and equipment loans** — each payment split into principal and interest; on-schedule payments can run on a rule
+7. **Trade-ins in one entry** — the old van out, its loan paid off, the new van and its loan in, with the entry shown before it posts
+8. **The lender's statement** — true up a loan to what the lender says, and a "loan or a lease?" question for steady monthly payees
+
+#### 15. 1099s & Vendors (8 features)
+1. **Books → 1099s** — every contractor's year so far, by how they were paid, against the year's legal threshold ($2,000 for 2026)
+2. **Every payment has a payee** — "who is this?" cards link unknown bank payees and checks to vendors
+3. **W-9s by link** — the vendor fills it in online; a filled-in W-9 PDF fills the vendor record, read inside Poof
+4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit
+5. **Prepare the year** — each contractor's copy (emailed to those who consented, print-and-mail for the rest) and a summary PDF for the CPA
+6. **Mark filed** — record the IRS receipt ID; a change after filing is flagged as a correction
+7. **"Who uploads your 1099s?"** — your bookkeeper, your CPA, or you, with the filer-code checklist and an October reminder while there's still time
+8. **The January check** — a card for checks written in December and cleared in January, and a close task for the filing
+
+#### 16. Payroll (6 features)
+1. **Post a pay run from your provider's reports** — the register and liability report become one entry, with accounts mapped once and Unpost if it's wrong
+2. **Payroll withdrawals matched** — the bank's payroll and tax debits tie to the pay run that caused them
+3. **Month-end wage accrual** — wages earned but not yet paid land in the right month
+4. **Tax forms tied to the books** — the 941s, W-2s, 940 and state returns checked against the pay runs, with quarter-end and year-end close tasks
+5. **Payroll by email** — forward your provider's payroll report and it becomes a pay run
+6. **Labor onto jobs** — technicians' hours from their visits allocated to jobs at what payroll actually cost
+
+#### 17. Sales Tax (5 features)
+1. **Rates by city** — on customers, locations and invoices, with what's taxable set by kind of work (Arizona and Texas presets the owner confirms)
+2. **Exemptions on file** — exempt customers with their certificates and expiry dates
+3. **Sales tax report** — what was charged, by jurisdiction, for the period
+4. **Record the return** — enter what was filed, match its payment from the bank, and the close ties it out
+5. **Use tax** — tracked on materials bought without sales tax
+
+#### 18. Inventory: Truck Stock (4 features)
+1. **Vans and locations** — each truck and the warehouse as a stock location
+2. **Count from a phone** — a Count screen for the tech or office, saved as a draft until posted
+3. **Post the count** — parts used on jobs go to those jobs; the rest is shrinkage; a count can be reversed
+4. **The close knows** — when each van was last counted, year-end evidence, and a shrinkage insight when it climbs
 
 ---
 
@@ -619,10 +686,10 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 128 (all included in every plan) |
+| Total features | 172 in 18 groups (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
 | Financial reports | 13 |
-| AI assistant tools | 62 offered to the chat, from one registry of 100 shared with the phone line and MCP (create, update, search, send, generate, import, ask where things stand, book a visit) |
+| AI assistant tools | 85 offered to the chat, from one registry of 115 shared with the phone line and MCP (create, update, search, send, generate, import, ask where things stand, book a visit) |
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
 | Manual entry reduction | 90% |
@@ -648,13 +715,13 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 118 features included (self-serve tier) |
-| Monthly (launch special) | **$39.50/mo** | 50% off first 3 months |
+| Monthly | **$79/mo** | All 172 features included |
+| Monthly (launch special) | **$39.50/mo** | the first 3 paid months, after the 30-day trial |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
 - **No feature tiers** — never reference "Basic," "Pro," or "Enterprise" plans in any customer-facing content
 - 30-day free trial, **no credit card required** — every new organization gets it automatically
-- Launch special: 50% off first 3 months
+- Launch special, always stated in this order: **30 days free, then $39.50/mo for the first three paid months, then $79/mo**
 - Cancel anytime, 30-day money-back guarantee
 
 ### Pricing Messaging
@@ -848,7 +915,7 @@ If you need the wordmark as an image — a slide, a print piece — render it fr
 
 ## Vertical Positioning: Trade Contractors (HVAC, Plumbing, Electrical)
 
-> **⭐ THIS SECTION IS THE AUGMENTED OPERATOR'S (as of 2026-09-12).** The managed service for HVAC, plumbing, and electrical contractors — the tiers, the $750 audit, the controller who signs — is a separate business that runs on Poof. Everything below is still right; it just belongs to that business, and when its own site exists this section moves there with `/trades`. Until then it stays on poofai.com, and the homepage keeps leading with it because it is the offer that generates calls. Where the copy says "Poof Managed for Trades", the service's name is now **The Augmented Operator**; use "Poof Managed for Trades" only where the live site still does, and change both together. (July 2026 guidance that "trades is Poof's primary positioning" is superseded by `TWO_BUSINESSES.md`: Poof's primary customer is the person who signs the close; trades shops reach Poof through the operator.)
+> **⭐ THIS SECTION IS THE MANAGED SERVICE'S — OUTREACH REFERENCE, NOT WEBSITE COPY (2026-10-06).** The tiers, the $750 audit, the controller who signs and the per-truck pricing belong to Austin's separate, not-yet-named services company, sold directly. They come off poofai.com with the software-only refocus; `/trades` there sells the $79 software to service shops. Use this section for outreach and calls, never on a Poof page. (It was The Augmented Operator's from 09-12 to 09-29; that name is dead.)
 
 ### Why This Vertical
 Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins so they can afford a $1,200/mo managed service, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's three years in audit and seven as a controller translate directly — these owners trust accounting credentials over "AI startup" pitches.
@@ -1077,6 +1144,32 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### October 6, 2026 — software only on the site; the whole back office in the product (172 features)
+- **This repo's copy caught up first.** It still described the retired violet identity; it now
+  starts from the site repo's Sept 17 kit (ledger green, the dispersing-disc mark), then adds the
+  below. The two copies should be identical again once the site copies this one.
+- **Positioning.** poofai.com sells the software only — one $79 plan, "Start free trial" and "Book
+  a demo" — once the site's `refocus-software` branch merges (built 09-22 → 10-06; the live site
+  still shows the managed tiers and the $750 audit until then). The managed service continues as
+  Austin's separate, not-yet-named services company, sold directly; Section 14 is its outreach
+  reference. Names dropped: The Augmented Operator, Poof Managed Bookkeeping (site), Setpoint.
+- **Added 44 features: 128 → 172, 13 → 18 groups.** New groups 14 Fixed Assets & Loans (8),
+  15 1099s & Vendors (8), 16 Payroll (6), 17 Sales Tax (5), 18 Inventory: Truck Stock (4).
+  Group 2 +4 (reminders from history, replies read, holds, check scanning), Group 3 +2 (one payment,
+  many bills; capture from anywhere), Group 5 +2 (Accounts Poof uses; QuickBooks by file), Group 9
+  +2 (Telegram and Slack; the morning summary), Group 13 +3 (Poof offers the rule; Done by rules
+  with Undo; rule limits).
+- **Key numbers:** assistant tools 62 → 85 offered to the chat, from one registry of 115.
+- **Pricing:** the "All 118 features" line was stale; it reads 172. The launch special is stated
+  in one order everywhere: 30 days free, then $39.50 for three paid months, then $79.
+- **Limits written down with the claims** (top of file): 1099s prepared, not e-filed; sales tax
+  never filed; payroll posted and tied, not processed; QuickBooks by file; rules offered, never
+  self-granted, never above their ceiling; voice opt-in.
+- **Not marketed, for the record:** a nightly watchdog now checks every company's books and the
+  system each morning and messages the operator only when something is wrong — it is why the
+  claims above can stay true, not a customer feature.
+
 
 ### September 17, 2026 — the mark is the dispersing disc
 - **The boxed full stop and the drawn period are retired.** Austin rejected the dot-in-a-box ("just a dot, not creative at all") and two further rounds of period-shaped and pictorial marks, then wrote his own brief: abstract, geometric, the vanish built into the form. Of six geometric directions and six iterations on the disc, he chose **D1, the dispersing disc**: a half disc whose right side breaks into seven particles on clean spokes, and one green particle standing alone at the far edge.
