@@ -62,11 +62,15 @@ export default function PrivacyPolicyPage() {
             <li><span className="font-medium">OpenAI</span> — processes the contents of your Spend Score upload (and certain in-product AI features) to generate results. It is not used to train their models via our API usage.</li>
             <li><span className="font-medium">Supabase</span> — stores form submissions and account data.</li>
             <li><span className="font-medium">Resend</span> — sends transactional and (where opted in) marketing email.</li>
-            <li><span className="font-medium">Twilio</span> — delivers the text messages described under &ldquo;Text messages&rdquo; below.</li>
             <li><span className="font-medium">Plaid</span> — securely connects bank accounts in the product with read-only access; we never receive your banking credentials.</li>
             <li><span className="font-medium">Google Analytics</span> and <span className="font-medium">X (Twitter) Ads</span> — measure traffic and ad performance, loaded only after you grant consent.</li>
           </ul>
           <p>We may also disclose information if required by law or to protect our rights, and in connection with a merger, acquisition, or sale of assets.</p>
+          <p className="font-medium">
+            No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
+            All of the above categories exclude text messaging originator opt-in data and consent; this information will
+            not be shared with any third parties.
+          </p>
         </Section>
 
         <Section title="Text messages">
@@ -80,9 +84,7 @@ export default function PrivacyPolicyPage() {
             <span className="font-medium">
               Mobile information will not be shared with third parties or affiliates for marketing or promotional purposes.
               Text messaging originator opt-in data and consent will not be shared with any third parties.
-            </span>{' '}
-            The only exception is the service provider that delivers the messages (Twilio), which uses the number solely to
-            deliver them.
+            </span>
           </p>
         </Section>
 
