@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'May 29, 2026'
+const UPDATED = 'October 13, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -50,6 +50,35 @@ export default function TermsPage() {
 
         <Section title="The Spend Score tool and not financial advice">
           <p>The free Spend Score tool and other analyses are provided for informational purposes only. They are not a CPA audit, attestation, tax, accounting, investment, or legal advice. You are responsible for verifying results and for your own financial and tax decisions.</p>
+        </Section>
+
+        <Section title="Text messages (SMS)">
+          <p>
+            <span className="font-medium">Program:</span> Poof job and alert texts. Poof sends operational text messages to
+            the people who work at businesses that use Poof: a technician&apos;s job assignments with the address and a link
+            to the job, a technician&apos;s clock-in and clock-out link, and alerts that an owner or office manager turns on
+            in Poof (for example, an emergency call was booked or an item needs approval). Poof does not send marketing
+            texts.
+          </p>
+          <p>
+            <span className="font-medium">How you opt in:</span> by entering your own mobile number in Poof to receive
+            alerts, or by agreeing to have your employer add your mobile number on Poof&apos;s Technicians page.
+          </p>
+          <p>
+            <span className="font-medium">Frequency and cost:</span> message frequency varies with your jobs and alert
+            settings. Message and data rates may apply.
+          </p>
+          <p>
+            <span className="font-medium">Opt out and help:</span> reply <span className="font-bold">STOP</span> to any
+            message to stop receiving texts from that number; reply <span className="font-bold">START</span> to receive
+            them again. Reply <span className="font-bold">HELP</span> for help, or email{' '}
+            <a href="mailto:semplelabs@gmail.com" className="text-ledger-600 underline hover:text-ledger-700">semplelabs@gmail.com</a>.
+          </p>
+          <p>
+            Carriers are not liable for delayed or undelivered messages. See our{' '}
+            <Link href="/privacy" className="text-ledger-600 underline hover:text-ledger-700">Privacy Policy</Link> for how we
+            handle your mobile number.
+          </p>
         </Section>
 
         <Section title="Intellectual property">
