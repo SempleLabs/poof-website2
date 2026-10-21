@@ -61,7 +61,7 @@ const afterward = [
   { title: 'Invoices, estimates, and payments', body: 'Send invoices and estimates, convert an estimate in one click, follow up automatically, and take card or ACH through Stripe. Payments reconcile to the ledger by themselves.' },
   { title: 'Budgets and the cash plan', body: 'Describe a goal and get a budget. See twelve months of cash with confidence bands, and a forward view of the bills coming due against the cash to cover them.' },
   { title: 'Ask Poof', body: 'Ask where things stand: is August ready to close, what do we owe Ferguson, which bills are due this week. Ask it to invoice someone and the same approval card appears in the chat.' },
-  { title: 'The books, as evidence', body: 'Double-entry with reversing entries, an immutable trial-balance snapshot at each close, SOC 2 audit logging, five roles and 26 permissions. Built to survive an audit, not just a tax return.' },
+  { title: 'The books, as evidence', body: 'Double-entry with reversing entries, an immutable trial-balance snapshot at each close, SOC 2 audit logging, six roles and 46 permissions. Built to survive an audit, not just a tax return.' },
 ]
 
 const howItWorksFaqs = [
@@ -144,7 +144,7 @@ export default function HowItWorksPage() {
             ))}
           </div>
           <p className="text-sm text-muted mt-6">
-            All 172 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
+            All 246 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
           </p>
         </div>
       </section>

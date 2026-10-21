@@ -1,34 +1,46 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: October 6, 2026
+> **Living document** — Last updated: October 21, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
-> **⭐ WHERE THINGS STAND (2026-10-06) — read this first; it overrides anything older below.**
+> **⭐ WHERE THINGS STAND (2026-10-21) — read this first; it overrides anything older below.**
 > - **poofai.com sells one thing: the software.** One $79 plan, two calls to action everywhere — **Start free trial** and **Book a demo**. The managed tiers, the $750 audit, the per-truck pricing and the trade landing pages (/hvac, /plumbing, /electrical → /trades) come off the site with the "software only" refocus (site branch `refocus-software`, built 2026-09-22 → 10-06, **merged and live 2026-10-06 as PR #16**). `/trades` becomes the product page for service shops, at the same $79.
 > - **The managed service still exists, but not on poofai.com and not under a name yet.** Austin sells done-for-you bookkeeping to trade shops directly (outreach), as a separate services company that runs on Poof. Names dropped: *The Augmented Operator* (not launched, 09-16; dead 09-29), *Poof Managed Bookkeeping* (left the site with the refocus), *Setpoint* (10-01). Until it has a name and a site, keep it off every Poof surface. [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical) is reference for that outreach, not website copy.
 > - **The site tagline is "The back office, run by AI. Signed by you."** The brand idea behind it is unchanged: "The work disappears. The evidence doesn't."
-> - **172 features in 18 groups** (was 128 in 13). Five new groups since 09-15 — fixed assets & loans, 1099s & vendors, payroll, sales tax, truck-stock inventory — and "Poof offers the rule" in Approvals. See the [changelog](#changelog).
+> - **246 features in 22 groups** (was 172 in 18 on 10-06). New since 10-06: **Taxes** (the tax calendar, the year on the return's lines, the CPA package, the tax reserve, quarterly estimates, Texas franchise tax and property), **Quotes & Progress Billing**, **Memberships**, **Sales Credit & Commissions**, timesheets (now in **Payroll & Time**), purchase orders and receiving (now **Purchasing & Truck Stock**), and additions to most other groups. Several older claims became false and are corrected below (customer texts, payment on site, signatures, roles, permissions, the Plaid window). See the [changelog](#changelog).
 > **Also corrected 2026-09-16:** Austin's background is **three years as an auditor, then seven as a controller** (ten in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
 
 > **History, not instruction:** on 2026-09-12 Poof and the managed service were split into two businesses (`TWO_BUSINESSES.md`). The split stands; the managed service's name and site do not exist yet. Older sections below may still say "The Augmented Operator" — read it as "the managed service".
-> Restaurants/multi-unit were deprioritized (features remain in the code but are not marketed).
+> Restaurants/multi-unit were deprioritized, and the restaurant reports and tools were **removed from the product** in October 2026 (app PR #350). Do not mention them anywhere.
 
 ---
 
-## ⚠️ Outstanding website corrections (checked against the live site and the site repo 2026-10-06)
+## ⚠️ Outstanding website corrections (checked against the live site and the site repo 2026-10-21)
 
 **Read this before writing any copy.** Re-check the page before acting on a line here — this
 table has carried already-fixed rows before, and a stale list repeated back reads as urgency.
 
-None outstanding as of 2026-10-06. The five rows that were here shipped the same day and are listed in the table below.
+| Where | What's wrong now | Should be |
+|---|---|---|
+| `/features`, `featureData.ts`, llms.txt, FAQs, `/pricing` | 172 features in 18 groups | **246 in 22** — the new groups and additions in [Product Overview](#product-overview). *In site PR `taxes-and-resources`, not merged yet* |
+| Nowhere on the site | No Taxes at all | A Taxes group on `/features`, a `/taxes` product page, a Taxes row in `BackOfficeSection`, and a tax-season section on `/resources` with six new posts (the 1099 threshold, quarterly estimates, what to set aside, what your CPA needs, Texas franchise tax, the Texas property rendition). Keep the Taxes limit below. *In site PR `taxes-and-resources`, not merged yet* |
+| `ReceptionistSection`, `FieldServiceSection`, `/trades`, llms.txt, the after-hours post | "Customer texts are not built"; "the tech page takes no payment"; "a typed name, not a signature"; "5 roles, 26 permissions"; "syncs the last 30 days" | Customer messages exist, off until the owner turns them on, email until the shop's line is registered for business texting; payment on site by QR or link when online payments are on; a finger signature pad; 6 roles and 46 permissions; 90 days on the first connection, refreshed daily. *In site PR `taxes-and-resources`, not merged yet* |
+| `/resources` | Half the page still in the pre-rebrand card style; 31 posts in one grid | Rebuilt in the ledger style: tax-season deadlines first, templates, checklists, posts grouped by what the reader is trying to do. *In site PR `taxes-and-resources`, not merged yet* |
+| **Decision for Austin** — Groups 11 and 12 | The kit calls the receptionist and field link "operator-installed as part of the managed service", but poofai.com is software only and `/trades` sells them in the $79 plan. The self-serve receptionist (app PRs #239, #244) is still a draft | Decide: (a) keep operator-installed and say "we set up your phone line with you" on the site, or (b) finish self-serve first. The Board, Requests inbox, customer messages, checklists and pay-on-site are in-app features either way |
 
 **Limits to keep with every new claim (the site states what it does, and never lists what it withholds):**
-- **1099s:** Poof prepares the year, the contractors' copies and the CPA summary, and walks you through the IRS upload. It does **not** e-file yet (the IRS upload file waits on the IRS template; Poof filing directly is planned for tax year 2027).
+- **1099s:** Poof prepares the year, the contractors' copies and the CPA summary, and walks you through the IRS upload. It does **not** e-file yet (the IRS upload file waits on the IRS template; Poof filing directly is planned for tax year 2027). Until that template exists, whoever files keys the forms into the IRS's IRIS portal from the CPA summary. No TIN matching; the TIN's format is checked.
 - **Sales tax:** Poof tracks, reports and ties it. **Poof never files.**
 - **Payroll:** Poof posts pay runs from your provider's reports and ties the tax forms to them. It is **not a payroll processor** and pays no one; it is off until the owner turns it on.
+- **Taxes:** Poof **prepares and reminds**. It never files a return, never pays the IRS, and never moves money; the CPA prepares the return from Poof's package. Return lines cover **Schedule C and Form 1120-S** (partnerships and C-corps are next). Estimates are **federal only**. **Texas** is the only state covered (franchise tax and business personal property). The tax calendar, reserve and estimates are not in Ask Poof yet; only the 1099 tools are.
+- **Timesheets and commissions:** Poof records hours and calculates, books and exports commissions. It pays no one, and timesheets are off until the owner turns them on. No GPS.
+- **Customer messages:** booking confirmations, reminders and "on my way" are **off until an owner or admin turns them on**, and go by email until the shop's Poof line is registered for business texting (A2P 10DLC, not registered yet). No texts 9pm–8am; STOP works.
+- **Payment on site and refunds:** need Stripe online payments switched on. Cash collected by a tech is a card the office approves, never posted from the tech's link.
+- **Quote deposits** are off by default (a company setting with a per-quote override). Progress-billing schedules are off by default company-wide.
 - **QuickBooks:** switching is by **file import** (trial balance, customers/vendors, open invoices and bills). There is **no live QuickBooks connection**.
-- **Rules:** Poof *offers* a rule; a person creates it. A rule never acts above its ceiling — "the rule is the rule".
+- **Rules:** Poof *offers* a rule, or a person asks for one in a sentence ("always put Lowe's under materials"); either way an owner or admin approves the rule as a card. There is no settings form for writing rules. A rule never acts above its ceiling — "the rule is the rule".
 - **Voice** is opt-in per device, not on by default.
+- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), the firm plan at $29 per client (off until its Stripe price is set), per-company AI cost ceilings and AI cost tracking (internal), and nightly backups (the job isn't installed).
 
 **On the count.** Verify by summing the groups, not by reading this table.
 
@@ -89,9 +101,11 @@ None outstanding as of 2026-10-06. The five rows that were here shipped the same
 
 ## What is Poof?
 
-**Poof is AI bookkeeping software built for the person who signs the close.** It does the work — categorization, reconciliation, job costing, the month-end close — and puts every write in front of a person before it reaches the books. A bookkeeper, controller, or firm runs their clients on it; a shop owner can run their own. The close is a record with a checklist that the books tick off themselves, the reconciliation carries last month's outstanding items forward and shows one figure, and nothing an AI proposes lands without someone seeing it first ([Group 13](#13-approvals--ai-autonomy-9-features)). It can also **answer the phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, dispatches the tech, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-12-features)) — and the same booking works from the assistant drawer.
+**Poof is AI bookkeeping software built for the person who signs the close.** It does the work — categorization, reconciliation, job costing, the month-end close — and puts every write in front of a person before it reaches the books. A bookkeeper, controller, or firm runs their clients on it; a shop owner can run their own. The close is a record with a checklist that the books tick off themselves, the reconciliation carries last month's outstanding items forward and shows one figure, and nothing an AI proposes lands without someone seeing it first ([Group 13](#13-approvals--ai-autonomy-14-features)). It can also **answer the phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, dispatches the tech, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-15-features)) — and the same booking works from the assistant drawer.
 
 **It now keeps the whole back office, not just the bank feed.** Since mid-September Poof posts **payroll** from your provider's reports and ties the 941s and W-2s to it, tracks **sales tax** by city with exemptions and use tax, runs a **fixed-asset register** with monthly depreciation, **vehicle and equipment loans** and trade-ins, prepares **1099s** from the year's payments with W-9s collected by link, and counts **parts on the trucks** — each one as approval cards, with the close knowing whether it was done. And when you keep approving the same thing, **Poof offers to make it a rule**, then shows you everything the rule did, with Undo.
+
+**Since October 6 it also keeps the taxes and the front of the business.** **Books → Taxes** puts every deadline on the day it falls, maps the year onto Schedule C or Form 1120-S, builds one year-end package for the CPA, shows the tax built up against what is set aside, and works out the four quarterly estimates (Poof prepares and reminds; it never files or pays). Quotes are accepted online with good/better/best options, deposits and progress billing; memberships bill and schedule their tune-ups; purchase orders, receiving, timesheets and commissions land on the job and the books.
 
 **The managed service is a separate business** with no name or site yet (see *Where things stand* above). It is not described on poofai.com.
 
@@ -150,7 +164,7 @@ Always lead with what changes in the customer's life, not what the product does.
 | Receipt & invoice scanning | "Snap a photo. Never type an expense again." |
 | Smart transaction matching | "Invoices match to payments while you sleep" |
 | Budgeting & forecasting | "Describe your goal. Get a budget in seconds." |
-| 13 financial reports | "Know exactly where your money went — in 30 seconds" |
+| 14 financial reports | "Know exactly where your money went — in 30 seconds" |
 | Report drill-down | "Click any number. See exactly what's behind it." |
 | Scheduled reports | "Your reports, delivered to your inbox — automatically." |
 | Reconciliation | "Reconciliation that takes minutes, not hours" |
@@ -176,7 +190,7 @@ Always lead with what changes in the customer's life, not what the product does.
 **The ground is a ledger pad, not a stage.** Pale green paper under everything, white working surfaces on top of it, ink for text, one green for the accent, and red only for corrections. Nothing glows, nothing shimmers, nothing is a gradient. Poof is a set of books, and the brand looks like the page they are kept on.
 
 ### Brand Values
-1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule was derived from work someone reviewed ([Group 13](#13-approvals--ai-autonomy-9-features))
+1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule is approved by an owner or admin as a card, whether Poof offered it from reviewed work or someone asked for it in a sentence ([Group 13](#13-approvals--ai-autonomy-14-features))
 2. **Small Business First** — Every decision optimized for 1–50 employee businesses
 3. **Trust & Security** — Bank-grade security, SOC 2 audit logging, 2FA, RBAC
 4. **One figure** — The reconciliation ties; the close is a record. When the number on the screen and the number in the record are the same number, the month is done
@@ -184,9 +198,9 @@ Always lead with what changes in the customer's life, not what the product does.
 ### AI Assistant — Ask Poof
 The assistant is a tool, not a persona. There is no separate character and no name other than the product's. It has no icon of its own — **the mark is its icon** — no sparkle, and no animation. Its header is flat paper with a rule and the mark.
 
-It lives in a right-hand sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. It gives concise, action-oriented responses (2–4 sentences) and can carry out the assistant's full set of actions (the count is in [Key Numbers & Claims](#key-numbers--claims)): preparing invoices, estimates, expenses, bills, credit notes, deposits, customers, vendors, and products; setting up the chart of accounts; recording journal entries; configuring recurring depreciation schedules; building budgets and forecasts; generating all 13 financial reports; sending invoices and credit notes via email; importing bank statement PDFs; booking, moving, or cancelling a visit; answering where things stand; and guiding users through onboarding and the month-end close. Uploaded receipts and invoices are automatically scanned and attached to the records it prepares.
+It lives in a right-hand sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. It gives concise, action-oriented responses (2–4 sentences) and can carry out the assistant's full set of actions (the count is in [Key Numbers & Claims](#key-numbers--claims)): preparing invoices, estimates, expenses, bills, credit notes, deposits, customers, vendors, and products; setting up the chart of accounts; recording journal entries; configuring recurring depreciation schedules; building budgets and forecasts; generating all 14 financial reports; sending invoices and credit notes via email; importing bank statement PDFs; booking, moving, or cancelling a visit; answering where things stand; and guiding users through onboarding and the month-end close. Uploaded receipts and invoices are automatically scanned and attached to the records it prepares.
 
-**It shows its steps and says "preparing," never "created."** Nothing is written until a person approves it. What the assistant produces is a card in Approvals with the evidence on it, and the page that approves the card is the page that settles it ([Group 13](#13-approvals--ai-autonomy-9-features)). Copy about the assistant follows the same rule — "Poof prepared the invoice," "the entry is staged," never "Poof created" — and never gives it feelings, a face, or a first person. When creating content, refer to it as "the assistant," "Ask Poof," or simply "Poof."
+**It shows its steps and says "preparing," never "created."** Nothing is written until a person approves it. What the assistant produces is a card in Approvals with the evidence on it, and the page that approves the card is the page that settles it ([Group 13](#13-approvals--ai-autonomy-14-features)). Copy about the assistant follows the same rule — "Poof prepared the invoice," "the entry is staged," never "Poof created" — and never gives it feelings, a face, or a first person. When creating content, refer to it as "the assistant," "Ask Poof," or simply "Poof."
 
 The assistant supports **multi-session conversations** — users can create, rename, switch between, and delete multiple chat sessions. Sessions display relative timestamps (time of day for today, "Yesterday", "Xd ago") in the user's company timezone. Conversations can be organized into **folders** (similar to ChatGPT Projects) with full CRUD: create, rename, expand/collapse, and delete. Sessions are moved between folders via **drag-and-drop** (desktop expanded mode) or a **"Move to" menu** (all views). Deleting a folder prompts a warning and removes all conversations inside it. Collapsed folder state persists across sessions via localStorage.
 
@@ -420,11 +434,20 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 - **1099s:** "January's 1099s, prepared from the year's payments. W-9s collected by link."
 - **Truck stock:** "Count the van from your phone. Poof knows what went on jobs and what went missing."
 
+### Headlines for the October 21 groups (2026-10-21)
+Same rule: outcome first, the limit in the body.
+- **Taxes:** "Every tax deadline, the reserve, the four estimates, and a January package your CPA can use." · "How much tax you've built up, next to how much you've set aside." · Body limit: Poof prepares and reminds; you and your CPA file and pay.
+- **Quotes:** "The customer picks good, better or best, signs online, and the job is on the board." · "Quoted against actual, on every job."
+- **Progress billing:** "Bill the install in draws. Change orders land on the bills that are left."
+- **Memberships:** "Members billed, tune-ups scheduled, renewals on a card." · Body limit: renewals and cancellations are always a person's decision.
+- **Purchasing:** "Order from the quote, receive at the van, match the bill to the PO." · Body limit: tech screens show no prices.
+- **Commissions:** "Commissions earned when the invoice is paid, on the books before payday." · Body limit: Poof calculates and books; your payroll pays.
+
 ### Supporting Messages
 - "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
 - "5-minute setup, 90% fewer manual entries"
-- "118 features, one flat price — $79/mo" (self-serve tier)
+- "246 features, one flat price — $79/mo"
 - "See where your cash is headed — 12 months out"
 
 ### Tone of Voice
@@ -447,34 +470,38 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 ### What Poof Does
 Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
 
-### 172 Features in 18 Groups
+### 246 Features in 22 Groups
 
-#### 1. AI-Powered Automation (9 features)
+#### 1. AI-Powered Automation (11 features)
 1. AI transaction categorization (BRAID engine)
-2. Poof AI assistant (sidebar-based, context-aware, 62 tools, the mark as its icon, flat paper header, multi-session conversations with folder organization)
+2. Poof AI assistant (sidebar-based, context-aware, the tool count in [Key Numbers](#key-numbers--claims), the mark as its icon, flat paper header, multi-session conversations with folder organization)
 3. AI chart of accounts generation
 4. Automated daily bookkeeping
 5. AI-powered recurring charge detection (frequency analysis, confidence scoring, next payment prediction)
 6. Receipt & invoice scanning (OCR) — photo upload, data extraction, vendor ID, duplicate detection, HEIC/HEIF support
 7. Smart transaction matching — AI matches invoices to deposits, bills to payments, with partial payment support
 8. AI-guided onboarding — Poof walks new users through setup with interactive survey and getting-started checklist
-9. AI-powered budget & forecast generation — natural language goal input, AI builds line items and 12-month projections
+9. AI-powered budget generation — natural language goal input, AI builds the budget's line items; the 12-month cash projection comes from the deterministic cash engine (Group 6)
+10. **The first ten minutes** — a company's first bank connection pulls 90 days of history, and about a minute later Poof sorts up to 250 rows onto one "Categorize N" card (it never auto-posts). For the first two weeks a "first look" in dollars sits at the top of Needs Attention: money in and out, what's waiting for an OK, recurring charges, what's past due
+11. **"A double charge?"** — the same merchant, the same amount over $25, on the same account within 3 days, raised as a question. It stages nothing, and it stays quiet when a third one in the month makes it a habit
 
-#### 2. Invoicing & Payments (12 features)
-1. Invoicing (PDF export, email delivery via AI or UI, custom branding/logo, line-item tax & discounts)
-2. Estimates — create, send, and convert estimates to invoices in one click (PDF export, email delivery, custom branding)
-3. Credit notes (create, send via email, AI-assisted)
-4. Payment tracking & payment receipts
-5. Products & services catalog
-6. Customer management (full database with contact info, billing/shipping addresses, sales reporting)
-7. Recurring invoices — weekly, monthly, quarterly, or yearly schedules with auto-generation and auto-send
-8. Automated invoice follow-ups — configurable reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment
-9. **Reminders written from the customer's history** — each one drafted by AI and checked by a code guard before it goes; a daily collections summary by email, Telegram or Slack
-10. **Replies are read** — a customer's answer to a reminder shows on the invoice, and "says they paid", "disputes it" or "has a question" becomes a card
-11. **A hold stops every reminder** — put a customer on hold and no sender (sweep, follow-up, Send now) writes to them
-12. **Scan a check** — snap it on the phone, approve it, and it waits in Undeposited Funds until the deposit clears it; the routing and account numbers are blacked out on the phone before anything is sent
+#### 2. Invoicing & Payments (14 features)
+1. Invoicing (PDF export, email delivery via AI or UI, custom branding/logo, line-item tax & discounts; preview before Send now; void a sent invoice, delete a draft)
+2. Credit notes (create, send via email, AI-assisted)
+3. Payment tracking & payment receipts — record a check, cash, transfer or part payment from the invoice itself
+4. Products & services catalog — with "your cost" and a margin on each item
+5. Customer management (full database with contact info, billing/shipping addresses, sales reporting; an "Owes" column and one view per customer of invoices, payments and credits)
+6. Recurring invoices — weekly, monthly, quarterly, or yearly schedules. The default is **"make a draft for me to review"**; sending automatically is an option the owner picks
+7. Automated invoice follow-ups — configurable reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment
+8. **Reminders written from the customer's history** — each one drafted by AI and checked by a code guard before it goes; a daily collections summary by email, Telegram or Slack
+9. **Replies are read** — a customer's answer to a reminder shows on the invoice, and "says they paid", "disputes it" or "has a question" becomes a card
+10. **A hold stops every reminder** — put a customer on hold and no sender (sweep, follow-up, Send now) writes to them
+11. **Scan a check** — snap it on the phone, approve it, and it waits in Undeposited Funds until the deposit clears it; the routing and account numbers are blacked out on the phone before anything is sent
+12. **Customer credits** — an overpayment is kept as the customer's credit, to use on an invoice or refund, with Undo; a standalone credit note can be refunded
+13. **Refunds and chargebacks reach the books** — a Stripe refund or dispute updates the invoice and A/R and pauses reminders; refund to card or bank from an approval card (owner or admin only, never a rule; needs online payments)
+14. **Bundles** — several parts sold as one customer line at the bundle's price, with each part's cost still reaching job cost, commissions and inventory. No cost ever reaches the tech or office roles
 
-#### 3. Expense & Bill Management (7 features)
+#### 3. Expense & Bill Management (14 features)
 1. Expense tracking
 2. Mileage tracking (business travel)
 3. Bill management
@@ -482,59 +509,79 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 5. Transaction matching
 6. **One bank payment can pay several bills** — a check that covers three invoices from the same supplier is matched once, to all three
 7. **Capture from anywhere** — a "+" button in the app, and a Receipt / Check bar on the tech's job link
+8. **Pay one bill or several, in full or in part** — from the Bills screen; every bill carries a balance and payments are listed with Undo. Poof records the payment; it does not move the money
+9. **"That withdrawal pays BILL-123 — match it?"** — a card in any channel, raised only for one clear bill, so a bill payment is never booked as a second expense
+10. **One bill across several jobs** — each line with its own account and job, adding up to the cent
+11. **Bills and expenses carry their job** — coded to job costs, overhead, fixed assets or inventory
+12. **Vendor credits and returns** — a restocking fee as its own line; use a credit on a bill, or close the rest
+13. **Supplier refund checks matched to the credit** — an overpaid bill's extra kept as a vendor credit, and the refund nets in the vendor's 1099
+14. **Emailed supplier invoices become bills to approve** — not paid expenses: due date, invoice number, job, a duplicate warning, and the PDF attached
 
-#### 4. Banking & Reconciliation (8 features)
-1. Bank connection via Plaid (12,000+ banks, syncs last 30 days, optional liability accounts for broader institution support)
+#### 4. Banking & Reconciliation (11 features)
+1. Bank connection via Plaid (12,000+ banks; **90 days of history on the first connection, refreshed on its own every day** for every connected bank, reaching back up to 90 days when a feed has stalled — true from 2026-10-20; optional liability accounts for broader institution support)
 2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing with GPT-4o Vision for PDFs, intelligent column mapping, bank name auto-detection, duplicate prevention) — also importable via AI chat by uploading a PDF
-3. Reconciliation (multi-step wizard, auto-match, hand match and unmatch, completion report, export and email, history with reopen and delete) — works on a phone
+3. Reconciliation (multi-step wizard, auto-match, hand match and unmatch, completion report, export and email, history with reopen and delete) — works on a phone; a credit card reconciles to the balance owed
 4. Auto-reconciliation (opt-in, weekly or monthly, with notifications). It signs a period only when the difference is under a penny; anything else becomes cards in Approvals, one per uncertain match. It takes the period **after the last one completed**, so a month it missed is caught up
 5. **Outstanding items carry forward** — a check written in July that clears in August is on August's book side, and a first reconciliation lists what was still open from before it (never the opening balance, which both sides already agree on). Cleared rows stay cleared when someone later fixes the entry's memo or date
 6. **One figure, on the screen and in the record** — the unexplained difference is statement ending, less the books at period end, plus what is booked but not on the statement, less what is on the statement but not booked. The screen reads it from the server; completion stores the same number; the close's bank-reconciliation check reads that. A row added during the reconciliation counts even though auto-match never saw it. A reconciliation on which a later one rests cannot be reopened first
 7. Deposits
 8. Multi-account support
+9. **Reconnect a bank whose login expired** — flagged on Banking and in Needs Attention
+10. **Transfers between your own accounts post once** — card payments, savings and a line of credit, with a "Match both" card; different-day transfers go through Transfers in Transit, and the close warns when that account holds anything stale
+11. **Pending holds wait until they post** — a transaction the bank removes is set aside, and a booked one the bank stops showing raises a card
 
-#### 5. Accounting & Reporting (10 features)
+#### 5. Accounting & Reporting (13 features)
 1. Double-entry accounting
-2. 13 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail Report, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual
+2. 14 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail Report, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, Progress Billing
 3. Report drill-down — click any account in Balance Sheet, Income Statement, or Trial Balance to see underlying journal entries; click a journal entry to edit it
 4. Shareable report URLs — filter state (date range, basis, hide-zero-balances) persists in URL for bookmarking and sharing
 5. Scheduled report delivery — automated email delivery of any report (daily, weekly, monthly, or quarterly) as PDF or CSV to multiple recipients
 6. Financial import (bulk chart of accounts, transactions, customers/vendors, invoices)
-7. Accrual & cash basis toggle
+7. Accrual & cash basis toggle (cash basis follows QuickBooks' rule)
 8. Recurring journal entry templates (daily, weekly, monthly, quarterly, annually) with reversing journal entry support
 9. **Accounts Poof uses** — every automatic entry (invoices, bills, sales tax, loans, depreciation…) posts to an account you can see and change on the Chart of Accounts page; if one is missing, Poof creates it once with the standard name and number, and a category that isn't in your chart is held for review, never posted somewhere else
 10. **Switch from QuickBooks by file** — the trial balance, customers and vendors, and open invoices and unpaid bills come in as opening balances, tied to the trial balance and never counted twice
+11. **Compare the P&L** — to the previous period or the same period last year (gross margin change in points), or split by job type
+12. **Download the company's books** — the whole company in one Excel workbook: ledger lines, chart, bank rows, quotes, jobs, visits, equipment, memberships, price book and time. Pay stays owner-only
+13. **Bring it over from Housecall Pro, Jobber or QuickBooks** — price list, customers and service addresses, equipment, and members, each previewed and then a card to approve; exports can be emailed in or dropped into Ask Poof. File import only
 
-#### 6. Budgeting & Forecasting (5 features)
+#### 6. Budgeting & Forecasting (9 features)
 1. Budget creation — manual or AI-generated from a natural language goal (e.g., "20% revenue growth")
 2. Budget lifecycle management — Draft → Active → Locked → Archived, with clone support
 3. Variance dashboard — budget vs actual comparison with bar charts, percent variance, and status indicators (on track, approaching, over budget, critical)
-4. Cash flow forecasting — AI-generated 12-month projections with confidence bands, seasonal adjustments, and rolling forecast option
+4. Cash flow forecasting — 12-month projections with confidence bands, seasonal adjustments, and a rolling option, computed by a **deterministic cash engine** (the same books give the same forecast every time); AI writes only the insights about it
 5. Budget alerts — proactive spending alerts when approaching or exceeding thresholds
+6. **Plan → Simulations** — seven levers (hire a tech, buy a van cash or financed, lose a customer, change prices, slower collections, slow season, one-time money in or out), showing lowest cash and its week and cash in 12 or 18 months; every default says where it came from
+7. **Save and compare up to 3 scenarios** — a saved scenario re-runs on today's books
+8. **Ask a what-if in a sentence** — "can I afford a second van at $52k, 8%?" answered with its arithmetic in words and a link to Simulations. It never gives a verdict and saves nothing
+9. **"Cash goes below zero the week of …"** — a card for the next 13 weeks, and projected vs actual cash in each month's close narrative
 
-#### 7. Team & Security (9 features)
-1. Team management — 5 roles: Owner / Admin / Accountant / Bookkeeper / Viewer
+#### 7. Team & Security (11 features)
+1. Team management — 6 roles: Owner / Admin / Accountant / Bookkeeper / Office manager / Viewer
 2. Two-factor authentication (TOTP with QR code setup and 8 backup codes)
 3. Audit logs (SOC 2 compliant, PII masking)
 4. Session management (30-minute timeout, active session viewer)
 5. GDPR/CCPA-compliant account deletion
 6. Email verification
-7. Role-based permissions (RBAC) — 26 granular permissions
+7. Role-based permissions (RBAC) — 46 granular permissions
 8. Bot-abuse gate on registration — Cloudflare Turnstile challenge on public sign-up, stopping scraped-address subscription bombing
 9. AI privacy chokepoint ("Gateway") — every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail
+10. **Office manager role** — invoices, quotes, customers, dispatch and hours, but no books; they land on the Board, and Ask Poof, the chat apps and Approvals follow the role
+11. **Add a company from the company menu** — you own it and it gets its own 30-day trial (up to 3 unpaid companies at once)
 
-#### 8. Productivity & Workflow (6 features)
+#### 8. Productivity & Workflow (7 features)
 1. Personalized dashboard — AI-generated daily briefing with "Reply to Poof" action, time-aware greeting, 4 animated KPIs, Y-axis dollar labels on all chart tiles, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
 2. Global search (across transactions, invoices, bills, expenses)
 3. Notification center (in-app and email)
 4. Transaction approval workflows
 5. Command bar (Cmd+K) — natural language navigation
 6. AI chat folders — organize conversations into folders (create, rename, delete, move), with drag-and-drop on desktop and move menu on mobile, collapsible sections, and persistent state
+7. **"This month" on Home** — close rate, average ticket, top 3 techs by revenue, callbacks, active members and renewals due, and backlog; hidden when the company has none of that data
 
-#### 9. Poof AI Capabilities (21 features)
+#### 9. Poof AI Capabilities (22 features)
 1. Business-context-aware chat (knows your company, industry, timezone) with concise, action-oriented responses, multi-session support, and folder organization
 2. Books health check & month-end close guidance
-3. Invoice, estimate, and credit note creation — AI creates, edits, and sends via email
+3. Invoice, quote, and credit note creation — AI prepares, edits, and sends via email, including good/better/best quote drafts from templates
 4. Expense, bill, deposit, customer, vendor, and product creation — AI creates any record via natural language
 5. Record updates — AI can update existing invoices, customers, vendors, expenses, bills, and transactions
 6. Budgeting, variance, and forecasting guidance
@@ -543,7 +590,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 9. Account search & creation — AI can look up and create chart of accounts entries autonomously
 10. Journal entry creation with account validation — AI verifies accounts exist before posting
 11. Recurring journal entry setup — AI handles depreciation, amortization, rent, and insurance schedules (calculates periodic amounts, creates accounts, sets up the recurring template)
-12. Financial report generation — AI generates all 13 reports on request
+12. Financial report generation — AI generates all 14 reports on request
 13. Bank statement PDF import via chat — upload a PDF, AI extracts transactions with GPT-4o Vision, presents summary, and imports to selected bank account with BRAID auto-categorization
 14. Guided onboarding walkthrough — AI navigates the UI, highlights elements, and walks new users through setup step by step
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
@@ -553,17 +600,18 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 19. **Book, move, or cancel a visit from the chat** — "book Smith Tuesday 2pm", "can we do Thursday afternoon?", "move the Rivera visit to Friday". Open slots and the appointment list answer at once; the booking itself becomes a card, and approving it runs the same handler the phone line runs — the tech gets the same text, the board updates the same way. No rule can ever approve a visit
 20. **Talk to Poof in Telegram and Slack** — ask, get answers, and approve or reject cards right in the chat; every copy of a card stays in step
 21. **A morning summary where you work** — what needs your OK today, delivered to the chat app you use
+22. **Ask how the business is doing** — close rate, average ticket, top tech, callbacks, members, utilization, P&L, A/R aging and job profitability; the numbers equal the screens, and tests check that they do. Also "how's the Garcia job vs the quote?", requests, and hours
 
-#### 10. Job Costing, Month-End Close & Payments (20 features)
-1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-10-features))
+#### 10. Job Costing, Month-End Close & Payments (22 features)
+1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-13-features))
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
 4. AI close narrative — plain-English month-end summary of what moved and why, generated automatically
 5. Monthly financial package — one-click close package (P&L, balance sheet, cash flow, variance) ready to review and send
 6. Books-integrity checks — automated general-ledger integrity sweep that flags imbalances and posting errors
 7. Proactive insights engine — auto-detected issues and opportunities (margin dips, unusual spend, cash risks) surfaced without being asked
-8. Accept online payments — customers pay invoices by ACH or card via Stripe; payments reconcile to the ledger automatically
-9. Inbound email capture — forward receipts and bills to a dedicated Poof address; AI extracts the data and files them
+8. Accept online payments — customers pay invoices by bank (ACH) or card via Stripe; payments reconcile to the ledger automatically, and an hourly catch-up records any payment whose Stripe notice never arrived
+9. Inbound email capture — forward receipts and bills to a dedicated Poof address; AI extracts the data. Receipts become expenses; supplier invoices become **bills to approve** in A/P (Group 3)
 10. Per-job labor allocation — spread technician labor cost across the jobs it was spent on, so a job's margin includes the hours, not just the materials
 11. Financing gross-up — when a job is sold through dealer financing, the dealer fee is recognized as a cost of that job instead of quietly inflating its margin
 12. Peer benchmarks on the Per-Job P&L — see how a job's margin compares to similar jobs, with the outliers called out
@@ -575,10 +623,12 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 18. **The close is a record** — each month's close is one object: who started it and when, where it stands (not started / in progress / ready / signed / reopened — derived from the books, never typed), and what it took. Locking the period is the signature; at that moment the close captures its activity — transactions reviewed, entries posted, decisions made by a person and by a rule, corrections, hours from start to signature — and a price and tier per close, so a practice can say "August: signed Sep 5, $1,500, 60 hours" instead of guessing. Reopening keeps the signature on record
 19. **A checklist with due dates that the books tick off themselves** — a template per organization (the trades default is 17 tasks: feeds reviewed by day 2, bank reconciled and draft entries posted by day 3, staged materials relieved and deposits released by day 3, accruals, A/R, A/P, plan visits, job costs and categories tied by day 4, vendor bills cut off and the tie-out clean by day 5, narrative reviewed day 6, signed day 7, package sent day 8 — business days after month end). Thirteen of the tasks are **evidence-bound**: they complete themselves when the books prove them and cannot be ticked by hand; each open one says why in a sentence ("2 completed jobs still hold $1,500 of customer deposits") and links to the screen that fixes it. Manual tasks are a person's tick, recorded with who and when. Every close stamps its own copy of the list, so a later template edit does not rewrite history
 20. **The nudge** — a task past its due date on an open close is an insight, a card in Approvals (with a one-tap "mark done" for a manual task), and **one message per close per day** on the channels the shop subscribed to — Telegram, SMS, Slack, email — naming every task late on it. The sweep re-reads the books before it decides what is late, so it never nags about a bank account reconciled that afternoon
+21. **Quoted vs actual on every job** — revenue, equipment, materials, labor, subs, gross profit and margin, quoted against actual, with an "over quote" card and how much cost isn't tagged to any job
+22. **The books reviewer** — books that balance but look wrong: a merchant filed somewhere unusual, an owner's draw booked as an expense, fuel, rent or insurance booked as office supplies, a monthly bill that stopped. A finding with one clear fix is a one-tap card
 
-#### 11. AI Receptionist & Dispatch (12 features)
+#### 11. AI Receptionist & Dispatch (15 features)
 
-> **Availability note:** operator-installed as part of the managed service — Poof staff provision the number and the voice agent. It is **not self-serve**; a shop owner cannot sign up and switch it on. Market it as part of "Poof Managed for Trades," never as a button in the app. See the caveats at the end of this group.
+> **Availability note:** the phone receptionist is operator-installed — Poof staff provision the number and the voice agent. It is **not self-serve** yet (the self-serve PRs, app #239 and #244, are drafts); a shop owner cannot sign up and switch it on, so never show it as a button in the app. The "Poof Managed for Trades" framing is retired with the software-only site, and how the site should describe setup is an **open decision for Austin** (see the corrections table). The Board, the Requests inbox and customer messages (13–15) are in-app features. See the caveats at the end of this group.
 
 1. AI phone receptionist — answers the shop's line, knows the shop's name, hours, and service area, understands the caller's problem, and books the job
 2. Deterministic safety triage — gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted "leave the building, call 911" response. No-heat below 45°F and no-cool above 95°F are emergencies too. **These are rules in code, not instructions to a language model** — the AI narrates the call, it never decides whether something is an emergency
@@ -592,12 +642,15 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 10. Automatic technician dispatch — the assigned tech is texted their job with a link that opens it, and a reschedule re-sends a fresh one. A dispatcher can re-send it by hand from the board at any time
 11. Work spread evenly across the crew — when several techs are free for the same slot, the job goes to whoever has the fewest jobs that day, then the fewest that week. No one quietly absorbs every call
 12. A job nobody is going to raises the alarm — an appointment approaching its start time with no technician assigned escalates to the shop, whether that is because the shop dispatches by hand or because nobody was free when it was booked. Emergencies are always assigned automatically, no matter how the shop has set the switches
+13. **Messages to your customers** — booking confirmations ("Reply C to confirm"), moved and cancelled notices, a day-before reminder, and "On my way". **Off until an owner or admin turns them on**; they go by email until the shop's Poof line is registered for business texting (A2P 10DLC). No texts 9pm–8am, and STOP works
+14. **Board week view** — load per tech ("2 / 9h"), drag or "Move to another day", and the customer's history while booking
+15. **Requests inbox** — unbooked calls, web-form submissions and texts, with Book, Call back and Close, plus a public booking form with an embed (the form is off until the shop turns it on). The office confirms; nothing books itself
 
-**What it does not do (do not imply otherwise):** **customer-facing** outbound texts — booking confirmations, reminders, and "your tech is on the way" — are **not built yet**. (Outbound texts to the *technician* are; see 10 above and Group 12. Do not blur the two.) It does not take payment on the call, does not optimize routes across a day's board, and does not clone the owner's voice. There are no autonomous outbound sales calls.
+**What it does not do (do not imply otherwise):** **customer-facing** messages are built (13 above) but **off by default** and email-only until 10DLC registration — never say a shop's customers are being texted today. Technician dispatch texts are separate (10 above). It does not take payment on the call, does not optimize routes across a day's board (the week view's map is a placeholder), and does not clone the owner's voice. There are no autonomous outbound sales calls.
 
-#### 12. Field Service & Job Handoff (10 features)
+#### 12. Field Service & Job Handoff (13 features)
 
-> **Availability note:** part of the trades managed service, alongside Group 11. The technician's page needs no account and no app install, which is the point — see the caveat at the end of this group.
+> **Availability note:** in the app for every shop. The technician's page needs no account and no app install, which is the point — see the caveat at the end of this group.
 
 1. Technician field link — the tech opens their job from a text message. **No account, no password, no app install.** The link is signed, opens exactly one job, and can be revoked; rescheduling invalidates it automatically. This is the answer to "my guys won't use another app"
 2. Arrival tracking — on-my-way, arrived, and completed times are **recorded when they happen**, not estimated afterwards. That is the number that gets argued about with a customer six weeks later
@@ -609,12 +662,15 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 8. Trade-format invoice — diagnosis, work performed, recommended follow-up, equipment, and warranty print under real headings, with the opted-in jobsite photos beneath them. Not a one-line "HVAC service call — $458"
 9. **A service call becomes a job** — completing a visit creates the job, links it to the customer, and tags the invoice to it, so the work reaches the Per-Job P&L without anybody remembering to tag anything
 10. Office review before it reaches the customer — the dispatcher opens the field report from the board: what the tech wrote, the photos, the parts and labor, the customer's sign-off, the draft invoice it produced, and — on a maintenance visit — the plan visit it earned, or a one-click way to record one. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it
+11. **Get paid on site** — a QR code or pay link, by card or bank, that flips the job to "Paid" when the money lands (needs Stripe online payments; a texted pay link also needs the shop's line registered). Cash becomes a card the office approves, never posted from the tech's link
+12. **Visit checklists with readings per unit** — out-of-range readings flagged next to the last reading; three starter lists (spring tune-up, fall tune-up, install commissioning). A blank required item asks "Complete anyway?" and never blocks the visit
+13. **A finger signature and a visit report the customer gets** — the customer signs on the tech's phone; the report is on for membership visits and off for others, and nothing is sent while customer messages are off
 
-**What it does not do (do not imply otherwise):** the tech's page does not do GPS tracking, does not take payment on site, does not capture a drawn signature (it records a typed name and the time), and does not work offline — it needs a signal. It does not schedule or re-route; that is the dispatch board's job.
+**What it does not do (do not imply otherwise):** the tech's page does not do GPS tracking and does not work offline — it needs a signal. Payment on site needs Stripe online payments switched on. It does not schedule or re-route; that is the dispatch board's job. Tech screens never show costs or prices from the shop's books.
 
 ---
 
-#### 13. Approvals & AI Autonomy (12 features)
+#### 13. Approvals & AI Autonomy (14 features)
 
 > **Availability note:** the approvals inbox is on for everyone — it is how every AI write reaches
 > the books. Autonomy is **off until a person grants it**, one rule at a time. There is no default
@@ -632,8 +688,10 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 10. **Poof offers the rule** — approve the same change on several cards (four approvals across two cards in 90 days, none edited or rejected) and Poof offers to do it for you; nothing is granted until a person says yes
 11. **Done by rules** — everything your rules did on their own, grouped by rule, with "Looks right" or Undo on each change; Undo takes the entry off the ledger and puts the row back
 12. **Change a rule's limits** — the ceiling and daily cap in Settings → Automation; a rule never acts above its ceiling
+13. **Ask for a rule in a sentence** — in Ask Poof, Telegram or Slack ("always put Lowe's under materials"), or from a decided card or a Transactions row; rules can match description, amount range or bank account, and "also file the N rows waiting now" comes with Undo. An owner or admin approves the rule card
+14. **Everyday decisions as cards in any channel** — a payment received to match, a customer credit to apply, a transfer, a draft invoice to send when a tech completes a visit, an accepted quote to convert, a quiet quote to remind
 
-**What it does not do (do not imply otherwise):** no rule can ever send anything to a customer — invoices and credit notes are always a human's decision, whatever a rule says. A rule that writes to the ledger **must** carry a dollar limit; one without does not run. Rules cannot be created from a settings screen, only from work someone reviewed. And autonomy is never on by default: a new account asks about everything until its owner decides otherwise.
+**What it does not do (do not imply otherwise):** no ledger rule can ever send anything to a customer — invoices and credit notes are always a human's decision, whatever a rule says. (Scheduled messages the shop switches on — invoice reminders, quote follow-ups, booking confirmations — are settings with previews, not rules; on the site say "no ledger rule".) A rule that writes to the ledger **must** carry a dollar limit; one without does not run. Rules cannot be written in a settings form: they come from reviewed work or a sentence asking for one, and an owner or admin approves each as a card. And autonomy is never on by default: a new account asks about everything until its owner decides otherwise.
 
 
 #### 14. Fixed Assets & Loans (8 features)
@@ -652,17 +710,24 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 3. **W-9s by link** — the vendor fills it in online; a filled-in W-9 PDF fills the vendor record, read inside Poof
 4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit
 5. **Prepare the year** — each contractor's copy (emailed to those who consented, print-and-mail for the rest) and a summary PDF for the CPA
-6. **Mark filed** — record the IRS receipt ID; a change after filing is flagged as a correction
-7. **"Who uploads your 1099s?"** — your bookkeeper, your CPA, or you, with the filer-code checklist and an October reminder while there's still time
+6. **Mark filed or rejected** — the IRS receipt ID, or its reason; a change after filing is flagged as a correction
+7. **"Who uploads your 1099s?"** — your bookkeeper, your CPA, or you, with the filer-code checklist, the checks the IRS rejects a file for, and reminders from October to December 15 while there's still time
 8. **The January check** — a card for checks written in December and cleared in January, and a close task for the filing
 
-#### 16. Payroll (6 features)
+#### 16. Payroll & Time (11 features)
+
+> Timesheets (7–11) are **off until an owner or admin turns them on**. Poof records hours; your payroll provider pays.
 1. **Post a pay run from your provider's reports** — the register and liability report become one entry, with accounts mapped once and Unpost if it's wrong
 2. **Payroll withdrawals matched** — the bank's payroll and tax debits tie to the pay run that caused them
 3. **Month-end wage accrual** — wages earned but not yet paid land in the right month
 4. **Tax forms tied to the books** — the 941s, W-2s, 940 and state returns checked against the pay runs, with quarter-end and year-end close tasks
 5. **Payroll by email** — forward your provider's payroll report and it becomes a pay run
-6. **Labor onto jobs** — technicians' hours from their visits allocated to jobs at what payroll actually cost
+6. **Labor onto jobs** — technicians' hours allocated to jobs at what payroll actually cost, by approved hours; officer pay gets its own account (for 1120-S line 7), and a pay run clears accrued commissions
+7. **Clock in from the phone** — a per-tech link with breaks and "Clock in & on my way"; no app, no GPS
+8. **Timesheets screen** — overtime, fixes with a reason, and an append-only trail
+9. **Forgotten clock-outs and weekly approval as cards** — Poof never clocks anyone out on its own
+10. **Export for payroll** — a CSV from approved weeks; nothing posts
+11. **Paid hours vs approved hours** — a close check, with labor accrued by approved hours (hours only, never dollars)
 
 #### 17. Sales Tax (5 features)
 1. **Rates by city** — on customers, locations and invoices, with what's taxable set by kind of work (Arizona and Texas presets the owner confirms)
@@ -671,11 +736,59 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 4. **Record the return** — enter what was filed, match its payment from the bank, and the close ties it out
 5. **Use tax** — tracked on materials bought without sales tax
 
-#### 18. Inventory: Truck Stock (4 features)
+#### 18. Purchasing & Truck Stock (9 features)
 1. **Vans and locations** — each truck and the warehouse as a stock location
 2. **Count from a phone** — a Count screen for the tech or office, saved as a draft until posted
 3. **Post the count** — parts used on jobs go to those jobs; the rest is shrinkage; a count can be reversed
 4. **The close knows** — when each van was last counted, year-end evidence, and a shrinkage insight when it climbs
+5. **Purchase orders** — make one, email the PDF to the supplier or mark it sent; "on order" sits beside cost on every job, and "Order from the quote" fills a draft
+6. **Receiving** — partial receipts and a packing-slip photo, from the office, the tech's link or the clock link; tech screens show no prices
+7. **Bills matched to their PO** — variances become cards to accept or dispute
+8. **Received but not billed at month end** — an accrual card that reverses on the 1st (accrual books only)
+9. **Parts requests and van restock** — techs request parts from their link; a weekly "replace what was used" restock per van, off until turned on
+
+#### 19. Quotes & Progress Billing (12 features)
+1. **Quotes** — create, send and convert to an invoice in one click (PDF, email, custom branding), numbered per company, with an expiry date
+2. **The customer accepts online** — a branded quote page where a typed name and "I agree" make a signed record that cannot change, or Decline with a reason; views are tracked, and acceptance creates a job at the accepted total
+3. **Quote follow-ups on their own** — days 2, 5 and 10 after sending, with a preview and a switch per quote
+4. **Deposit on acceptance** — a percent or a fixed amount, paid online by card or bank or recorded, held as a liability and applied when the quote converts (off by default, with a per-quote override)
+5. **Good, better, best** — up to three options; the customer picks one
+6. **Quote templates and photos** — start from a template; photos added to a quote one at a time, by choice
+7. **Quotes from the tech's phone** — good/better/best with member prices, accepted in person once the visit is Arrived
+8. **"Convert it?" and "Remind them?"** — an accepted quote and a quiet one each become a card
+9. **A payment schedule on the quote** — deposit plus balance, 30/40/30, or 2–6 custom draws, billed as draws on the job; accepting books no revenue (off by default company-wide, on per quote)
+10. **Draw cards when the install starts and finishes** — never approved by a rule
+11. **Change orders** — spread over the bills that are left, billed with the final, or billed now; a tech's "Extra — bill it" becomes one
+12. **Progress billing report** — left to bill, backlog and A/R by job, with three close checks
+
+#### 20. Memberships (4 features)
+1. **Plans and members** — annual prepaid (deferred, earned per visit; Group 10.17) or monthly (earned as billed); "Add member" sends the first invoice, and one card a month sends them all
+2. **Tune-ups as one weekly card** — "Schedule 8 spring tune-ups", with each visit linked and counted x of y
+3. **Renewals, term end and cancellations as cards** — never a rule; a refund is by check
+4. **Member pricing** — a percent off repairs and the included tune-up at $0, on visits, quotes and drafts
+
+#### 21. Sales Credit & Commissions (5 features)
+
+> Owner only. Poof calculates, books and exports commissions; your payroll pays them.
+
+1. **Who sold it** — splits, turnover credit, and comfort advisors who only sell
+2. **Plans** — spiffs, or a percent of revenue or margin, earned only once the invoice is paid in full, with a 90-day take-back
+3. **A pay-period approval card** — and an owner-only file; nobody is paid below $0
+4. **Accrued on the books** — cleared by the pay run, and shown on the job's P&L
+5. **By person** — a report for the owner, techs see their own, and Ask Poof answers the owner in the app
+
+#### 22. Taxes (8 features)
+
+> Poof **prepares and reminds** — it never files a return, never pays the IRS, and never moves money. Return lines: Schedule C and Form 1120-S. Estimates: federal. State: Texas. Shown under Books → Taxes for every role except the office manager.
+
+1. **Books → Taxes calendar** — every deadline the business has (the return and its extension, estimates, 941s, W-2s and the 940, 1099s, sales tax, Texas), on the day it really falls after weekends and holidays, with who files each one and a reminder two weeks ahead; it ticks itself where Poof has the evidence (1099s marked filed, a sales tax return recorded, an estimate paid, the package sent, a Texas certification on file)
+2. **The year on your return's lines** — every account mapped to Schedule C or Form 1120-S (with 1125-A), confirmed once and carried forward, tied to the books' net income, downloadable for the CPA (partnerships and C-corps are next)
+3. **Questions for your CPA, with the numbers** — meals, entertainment, penalties, depreciation, officer pay vs distributions or owner draws, vehicles and 1099s, each with the books' figure; tax judgments (§179 and bonus elections, reasonable compensation, accounting method) stay the CPA's
+4. **The year-end package** — one PDF for the CPA: the mapped year and its tie, the questions, the balance sheet at December 31, the fixed-asset roll-forward, payroll and sales tax for the year; "Mark sent" ticks the calendar and January's close task
+5. **Tax reserve** — "owed so far" from this year's profit times a rate (25% to start, labelled a starting guess) against "set aside" in the bank account you name, on the dashboard, with a monthly nudge when it falls behind; Poof never moves money
+6. **Quarterly estimates** — the safe-harbor amount (the smaller of 90% of this year and 100% of last year's tax, 110% above $150,000 AGI), four payments on their real due dates (a C-corp's fourth is Dec 15), and who pays them: you on a 1040-ES, or the company through EFTPS; the CPA's figure wins when entered
+7. **Estimate payments recognized** — IRS and EFTPS payments in the bank feed offered for the right quarter, a person confirms each, payments from a personal account typed in, and on a pass-through a payment booked as an expense flagged as a draw
+8. **Texas franchise tax and property** — last year's revenue against the no-tax-due threshold and which report to file by May 15; what the business owned on January 1, at cost, against the $125,000 business personal property exemption, with the certification or a Form 50-144 list for the appraisal district
 
 ---
 
@@ -683,17 +796,17 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 | Claim | Value |
 |---|---|
-| Total features | 172 in 18 groups (all included in every plan) |
+| Total features | 246 in 22 groups (all included in every plan) |
 | Bank connections | 12,000+ (via Plaid) |
-| Financial reports | 13 |
-| AI assistant tools | 85 offered to the chat, from one registry of 115 shared with the phone line and MCP (create, update, search, send, generate, import, ask where things stand, book a visit) |
+| Financial reports | 14 |
+| AI assistant tools | 113 offered to the chat, from one registry of 158 shared with the phone line and MCP (19 on MCP) — create, update, search, send, generate, import, ask where things stand, book a visit, 1099s |
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
 | Manual entry reduction | 90% |
-| Plaid sync window | Last 30 days (use bank statement import for older transactions) |
-| Team roles | 5 (Owner, Admin, Accountant, Bookkeeper, Viewer) |
-| Granular permissions | 26 |
-| Free trial | 30 days |
+| Plaid history | 90 days on the first connection, refreshed daily (use bank statement import for older transactions) |
+| Team roles | 6 (Owner, Admin, Accountant, Bookkeeper, Office manager, Viewer) |
+| Granular permissions | 46 |
+| Free trial | 30 days; when it ends the company is read-only (everything visible and downloadable) until it subscribes, and subscribing mid-trial keeps the days left |
 | Cash flow forecast horizon | 12 months with confidence bands |
 | Receptionist notification channels | 6 (SMS, email, push, Slack, Telegram, webhook) |
 | Close checklist (trades default) | 17 tasks, 13 evidence-bound, signed on business day 7 |
@@ -712,7 +825,7 @@ Poof has a single plan called **Poof Professional**. There are no tiers, no "Bas
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 172 features included |
+| Monthly | **$79/mo** | All 246 features included |
 | Monthly (launch special) | **$39.50/mo** | the first 3 paid months, after the 30-day trial |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
@@ -761,7 +874,7 @@ Against the plan that actually matches Poof's capability, the story inverts:
   have: AI-built budgets, a 12-month cash forecast with confidence bands, the approvals inbox,
   and a close the books tick off themselves. (Plus does have budgets, project profitability and
   an AI assistant, Intuit Assist. Checked 2026-10-06.)
-- Poof's 5 roles and 26 granular permissions are **Advanced-tier ($340) capabilities** at
+- Poof's 6 roles and 46 granular permissions are **Advanced-tier ($340) capabilities** at
   QuickBooks (custom roles), and so is fixed-asset depreciation. Every QuickBooks plan has an
   audit log; what Poof adds is PII masking in it and in every AI call. That contrast is worth making explicitly.
 - **Intuit's own increase is the argument.** Plus users just absorbed +22% and Advanced users
@@ -776,7 +889,7 @@ difference between a comparison and a claim.
 | | Poof | QuickBooks |
 |---|---|---|
 | **Starting price** | $79/mo — all features ($39.50/mo launch special) | $38 Simple Start / $85 Essentials / **$140 Plus** / $340 Advanced (verified 2026-08-23; compare against Plus) |
-| **AI assistant** | Poof (built-in, context-aware, 85 tools; every change staged for approval) | Intuit Assist AI agents |
+| **AI assistant** | Poof (built-in, context-aware, 113 tools; every change staged for approval) | Intuit Assist AI agents |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | Budgets on Plus, built by hand |
 | **Auto chart of accounts** | Yes | No |
 | **Receipt scanning + OCR** | Yes (with duplicate detection) | Yes (but limited in lower tiers) |
@@ -787,9 +900,9 @@ difference between a comparison and a claim.
 | **Report drill-down** | Yes (click any account → see journal entries) | Yes |
 | **Scheduled report delivery** | Yes (daily/weekly/monthly/quarterly, PDF or CSV, email) | Yes (Essentials and up) |
 | **Bank statement PDF import via AI** | Yes (upload PDF to AI, auto-parsed with GPT-4o Vision) | No |
-| **RBAC** | 5 roles, 26 permissions | Custom roles on Advanced only |
+| **RBAC** | 6 roles, 46 permissions | Custom roles on Advanced only |
 | **Audit logs** | Yes (SOC 2, PII masking) | Yes (no PII masking) |
-| **Estimates** | Yes (create, send, convert to invoice) | Yes |
+| **Estimates** | Yes (online acceptance with a signed record, good/better/best, deposits, follow-ups, progress billing, quoted vs actual) | Yes (acceptance, deposits and progress invoicing vary by plan; check before claiming a difference) |
 | **AI depreciation & recurring entries** | Yes (AI sets up accounts and schedules) | No |
 | **Personalized dashboard** | Yes (AI briefing, attention alerts, animations, reorderable tiles) | No |
 | **AI chat organization** | Yes (multi-session, folders, drag-and-drop, 3 view modes) | No |
@@ -798,7 +911,7 @@ difference between a comparison and a claim.
 | **Pricing model** | Flat — one plan | Tiered — must upgrade for features |
 
 ### Key Differentiators (What Poof Has That QuickBooks Doesn't)
-> **Checked against QuickBooks Plus 2026-10-06:** items 1, 7, 15, 16 and 17 are *not* differentiators against Plus as worded. Plus has an AI assistant (Intuit Assist), automatic invoice reminders, estimates, report drill-down and scheduled report emails. Use the specific versions instead: 85 tools with every change staged for approval; reminders written from the customer's history; PDF statement import via chat.
+> **Checked against QuickBooks Plus 2026-10-06:** items 1, 7, 15, 16 and 17 are *not* differentiators against Plus as worded. Plus has an AI assistant (Intuit Assist), automatic invoice reminders, estimates, report drill-down and scheduled report emails. Use the specific versions instead: 113 tools with every change staged for approval; reminders written from the customer's history; PDF statement import via chat.
 1. AI assistant (Poof) with 30+ tools, business-context awareness, and books health checks
 2. AI-powered budgeting — describe your goal in plain English, AI builds the budget
 3. AI cash flow forecasting with confidence bands and rolling refresh
@@ -815,7 +928,7 @@ difference between a comparison and a claim.
 14. AI account management — AI creates chart of accounts entries, validates journal entries, and sets up recurring depreciation/amortization schedules autonomously
 15. Estimates with one-click conversion to invoices
 16. Report drill-down — click any account row in key reports to see the underlying journal entries
-17. Scheduled report delivery — automated email delivery of any of the 13 reports on a recurring schedule
+17. Scheduled report delivery — automated email delivery of any of the 14 reports on a recurring schedule
 18. Bank statement PDF import via AI chat — upload a PDF, AI parses and imports transactions automatically
 19. AI chat organization — multi-session conversations with folder management, drag-and-drop, three view modes (sidebar, full-screen, mobile), and navigation-aware auto-collapse
 
@@ -1115,9 +1228,11 @@ anything.** Every tool comes from one registry shared with the chat and the phon
 proves the MCP surface is read-only.
 
 **The honest limits — state these, do not skip them:**
-- **It is provisioned by Poof, not self-serve.** There is no screen in the app where a customer
-  creates an agent credential; there are zero MCP references in the frontend. Access is granted
-  by Poof staff. Same posture as the AI receptionist.
+- **Sign in with Poof (app PR #459, merged 2026-10-21):** a customer can connect Claude or
+  ChatGPT to their own company through an OAuth consent page, with tools scoped by their role,
+  and manage it under Settings → Chat apps → AI assistants. The connector-directory listings are
+  **not done yet**, so do not say Poof is "in the Claude directory" or "in ChatGPT's apps".
+  Still kept off poofai.com, as before.
 - Do not describe it as a published, open, or generally available API. It is a working surface
   with real users, not a developer platform with docs and sign-up.
 
@@ -1145,6 +1260,38 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### October 21, 2026 — Taxes, and the front of the business (246 features)
+
+- **Added 74 features: 172 → 246, 18 → 22 groups.** Taxes is new (8, Group 22): the tax
+  calendar, the year on Schedule C or Form 1120-S lines, questions for the CPA with the numbers,
+  the year-end package, the tax reserve, quarterly estimates, estimate payments found in the bank,
+  and Texas franchise tax and business personal property (app PRs #254–#265, merged 2026-10-08).
+  The other 66 came from app PRs merged 2026-10-06 → 10-21: Quotes & Progress Billing (12, Group
+  19, with the old estimates line moved in), Memberships (4, Group 20), Sales Credit &
+  Commissions (5, Group 21), timesheets folded into **Payroll & Time** (6 → 11), purchase orders
+  and receiving in **Purchasing & Truck Stock** (4 → 9), and additions to Groups 1–13.
+- **Limits added:** Taxes (prepares and reminds; never files, pays or moves money; Schedule C and
+  1120-S; federal estimates; Texas only), timesheets and commissions (pay no one), customer
+  messages (off by default, email until 10DLC), payment on site (needs online payments), quote
+  deposits and progress billing (off by default). The 1099 line now says the forms are keyed into
+  IRIS from the CPA summary until the IRS publishes its upload template.
+- **Claims that became false, corrected:** Plaid "last 30 days" → 90 days on the first
+  connection, refreshed daily (true from 2026-10-20); 5 roles → 6 (Office manager); 26
+  permissions → 46 (it was already 37 on 10-06); 85/115 tools → 113/158 (19 on MCP); 13 reports
+  → 14 (Progress Billing); recurring invoices default to a draft for review, not auto-send; the
+  12-month forecast comes from a deterministic cash engine, with AI writing only the insights;
+  emailed supplier invoices become bills to approve, not paid expenses; customer texts are built
+  (off by default); the tech page takes payment on site and captures a finger signature; rules
+  can be asked for in a sentence, still approved by an owner or admin as a card; restaurant
+  features removed from the product (#350); an ended trial is read-only; MCP has "Sign in with
+  Poof" for Claude and ChatGPT.
+- **Not claimable yet:** assistant domain scopes, the firm plan, AI cost ceilings and tracking,
+  nightly backups.
+- **Open for Austin:** how the site describes receptionist setup now that "Poof Managed for
+  Trades" is retired and self-serve is still a draft.
+- **Site:** all of the above is being built in site PR `taxes-and-resources` (not merged yet),
+  with a `/taxes` page, a rebuilt `/resources` page and six tax posts.
 
 ### October 6, 2026 — software only on the site; the whole back office in the product (172 features)
 - **This repo's copy caught up first.** It still described the retired violet identity; it now

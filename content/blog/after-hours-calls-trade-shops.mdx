@@ -4,7 +4,7 @@ excerpt: "Missed after-hours calls don't show up anywhere in your books — whic
 category: "Trades"
 readTime: "10 min read"
 date: "2026-08-23"
-updated: "2026-08-27"
+updated: "2026-10-21"
 author: "Austin Semple"
 faqs:
   - question: "How much revenue do trade shops lose to missed after-hours calls?"
@@ -120,17 +120,17 @@ This is where you learn the most. Ask directly about outbound texts — and insi
 
 I will be direct about our own position here, because this post would be dishonest otherwise.
 
-Poof includes an AI receptionist for managed trades customers. It answers the shop's line, knows your name, hours, and service area, works out the caller's problem, and books into real availability computed from your technicians, their windows, and their time off, with drive-time buffer respected. Skills are a preference rather than a gate — a tagged tech is preferred, an untagged tech is next — so a shop that has never tagged anyone is still never told it has no availability. The database refuses overlapping bookings outright, so two simultaneous calls cannot double-book a tech. Escalation runs on the fixed rule list above. Notifications fan out to whichever channels you configure — SMS, email, push, Slack, Telegram, or a webhook.
+Poof includes an AI receptionist as part of Poof for shops. It answers the shop's line, knows your name, hours, and service area, works out the caller's problem, and books into real availability computed from your technicians, their windows, and their time off, with drive-time buffer respected. Skills are a preference rather than a gate — a tagged tech is preferred, an untagged tech is next — so a shop that has never tagged anyone is still never told it has no availability. The database refuses overlapping bookings outright, so two simultaneous calls cannot double-book a tech. Escalation runs on the fixed rule list above. Notifications fan out to whichever channels you configure — SMS, email, push, Slack, Telegram, or a webhook.
 
 Two behaviours worth naming because they are the ones that bite shops later. When several techs are free for the same slot, the job goes to whoever has the fewest jobs that day, then that week — so nobody quietly absorbs every call. And an appointment approaching its start time with no tech assigned raises the alarm, whether that is because you dispatch by hand or because nobody was free when it was booked. Emergencies are assigned automatically regardless of how you have set your switches.
 
 The safety triage is deterministic. Gas smell, carbon monoxide, smoke, sparking, and active alarms are rules in the code, along with no-heat below 45°F and no-cool above 95°F. The AI narrates; it does not judge.
 
-What it does not do, stated as plainly as I can:
+Where its lines are, stated as plainly as I can:
 
-- **Customer-facing texts are not built.** No booking confirmation, no reminder, no "your tech is on the way." Not "coming soon" as a sales line — not built today.
-- **Your technician does get texted.** When a job is dispatched, the assigned tech receives a link that opens that job on their phone — no account and no app install. That is a technician-facing text, and I am separating the two deliberately, because most vendors do not.
-- It does not take payment on the call.
+- **Customer messages are off until you turn them on.** A booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way." They go by email until your Poof line is registered for business texting, they stay quiet from 9pm to 8am, and STOP works.
+- **Your technician is always texted.** When a job is dispatched, the assigned tech receives a link that opens that job on their phone — no account and no app install. That is a technician-facing text, and I am separating the two deliberately, because most vendors do not.
+- Payment is taken on the invoice or on site from the tech's phone, never on the call.
 - It does not optimize routes across the day's board.
 - It does not clone anyone's voice, and there are no outbound sales calls.
 - **It is not self-serve.** We provision the number and the voice agent as part of Poof for shops. There is no button in the app for a shop owner to switch it on.

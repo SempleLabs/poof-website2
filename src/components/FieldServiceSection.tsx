@@ -99,14 +99,14 @@ export default function FieldServiceSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="mt-6 rounded-xl border border-slate-200 bg-white p-6">
             <h3 className="font-semibold text-slate-900 mb-3 text-sm uppercase tracking-wider">
-              What the tech&apos;s page does not do
+              How the tech&apos;s page works
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              No GPS tracking &mdash; we are not building a way to watch your crew. It does not take payment on
-              site. It records a typed name and a timestamp rather than a drawn signature. And it needs a
-              signal: there is no offline mode, so a basement with no bars means the tech fills it in when they
-              are back in the truck. Scheduling and re-routing stay on the dispatch board, not the tech&apos;s
-              phone.
+              It records times as they happen, not where your crew is &mdash; we are not building a way to watch
+              them. The customer signs with a finger on the tech&apos;s phone. Once online payments are on, it
+              takes card or bank by QR code or pay link, and cash becomes a card the office approves. It needs a
+              signal, so a basement with no bars means the tech fills it in back in the truck. Scheduling stays
+              on the dispatch board, not the tech&apos;s phone.
             </p>
           </div>
         </AnimateOnScroll>

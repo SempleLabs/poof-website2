@@ -50,7 +50,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Inbound Email Capture",
-        description: "Forward receipts and bills to a dedicated Poof address; AI extracts the data and files them"
+        description: "Forward receipts and supplier invoices to a dedicated Poof address. Receipts become expenses and supplier invoices become bills to approve, with the details read for you"
       },
       {
         title: "Per-Job Labor Allocation",
@@ -90,11 +90,19 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "A Checklist With Due Dates That Ticks Itself",
-        description: "A template per organization \u2014 the trades default is 17 tasks dated in business days after month end, signed on day 7. Twelve are evidence-bound: they complete when the books prove them and cannot be ticked by hand, and each open one says why in a sentence and links to the screen that fixes it. Manual tasks are a person\u2019s tick, with who and when. Every close stamps its own copy of the list"
+        description: "A template per organization \u2014 the trades default is 17 tasks dated in business days after month end, signed on day 7. Thirteen are evidence-bound: they complete when the books prove them and cannot be ticked by hand, and each open one says why in a sentence and links to the screen that fixes it. Manual tasks are a person\u2019s tick, with who and when. Every close stamps its own copy of the list"
       },
       {
         title: "The Nudge",
         description: "A task past its due date on an open close is an insight, a card in Approvals with a one-tap mark-done for a manual task, and one message per close per day on the channels the shop subscribed to \u2014 Telegram, SMS, Slack, email \u2014 naming every task late on it. The sweep re-reads the books before it decides what is late"
+      },
+      {
+        title: "Quoted vs Actual on Every Job",
+        description: "Revenue, equipment, materials, labor, subs, gross profit, and margin, quoted against actual, with a card when a job runs over its quote and a figure for cost not tagged to any job"
+      },
+      {
+        title: "Books That Balance but Look Wrong",
+        description: "A reviewer catches a merchant filed somewhere unusual, an owner’s draw booked as an expense, fuel or rent booked as office supplies, and a monthly bill that stopped. A finding with one clear fix becomes a one-tap card"
       }
     ]
   },
@@ -108,7 +116,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Poof AI Assistant",
-        description: "Built-in AI assistant with 85 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
+        description: "Built-in AI assistant with 113 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -136,7 +144,15 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "AI Budget & Forecast Generation",
-        description: "Describe your goal in plain English (e.g., '20% revenue growth') and AI builds line items, allocations, and 12-month cash flow projections automatically"
+        description: "Describe your goal in plain English (e.g., '20% revenue growth') and AI builds the budget's line items and allocations. The 12-month cash projection beside it comes from Poof's cash engine, which gives the same answer every time"
+      },
+      {
+        title: "The First Ten Minutes",
+        description: "Your first bank connection brings in 90 days of history, and about a minute later up to 250 rows are sorted onto one card for you to approve. For the first two weeks a first look in dollars sits at the top of Needs Attention: money in and out, what is waiting for you, recurring charges, and what is past due"
+      },
+      {
+        title: "A Double Charge, Asked About",
+        description: "The same merchant and the same amount over $25, on the same account within three days, becomes a question for you rather than an entry. A charge that repeats as a habit is left alone"
       }
     ]
   },
@@ -190,7 +206,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Financial Report Generation",
-        description: "Ask Poof to generate any of the 13 financial reports — Income Statement, Balance Sheet, Cash Flow, and more — instantly from conversation"
+        description: "Ask Poof to generate any of the 14 financial reports — Income Statement, Balance Sheet, Cash Flow, and more — instantly from conversation"
       },
       {
         title: "Bank Statement PDF Import via Chat",
@@ -227,6 +243,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "A Morning Summary Where You Work",
         description: "What needs your OK today, delivered each morning to Telegram, Slack, or email"
+      },
+      {
+        title: "Ask How the Business Is Doing",
+        description: "Close rate, average ticket, top tech, callbacks, members, utilization, the P&L, A/R aging, and job profitability, answered with the same numbers the screens show"
       }
     ]
   },
@@ -237,10 +257,6 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Professional Invoicing",
         description: "Create, customize, and send invoices with PDF export, email delivery, custom branding/logo, and line-item tax and discounts"
-      },
-      {
-        title: "Estimates & Quotes",
-        description: "Create professional estimates and quotes, send them to clients for approval, and convert approved estimates to invoices with one click. Track status through Draft, Sent, Approved, Declined, and Converted stages — with PDF export, email delivery, and custom branding"
       },
       {
         title: "Credit Notes",
@@ -260,7 +276,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Recurring Invoices",
-        description: "Set up weekly, monthly, quarterly, or yearly invoice schedules with auto-generation and auto-send — never miss a billing cycle"
+        description: "Set up weekly, monthly, quarterly, or yearly invoice schedules. Each run makes a draft for you to review, or sends on its own if you choose — never miss a billing cycle"
       },
       {
         title: "Automated Invoice Follow-ups",
@@ -281,6 +297,73 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Scan a Check",
         description: "Snap a check on your phone and approve it, and it waits in Undeposited Funds until the deposit clears it. The routing and account numbers are blacked out on the phone before anything is sent"
+      },
+      {
+        title: "Customer Credits",
+        description: "An overpayment is kept as the customer’s credit, to use on an invoice or refund, with Undo. A credit note can be refunded on its own"
+      },
+      {
+        title: "Refunds and Chargebacks Reach the Books",
+        description: "With online payments on, a refund or dispute updates the invoice and A/R and pauses its reminders, and a refund to card or bank goes out from a card an owner or admin approves, never a rule"
+      },
+      {
+        title: "Bundles",
+        description: "Several parts sold as one customer line at the bundle’s price, while each part’s cost still reaches job cost, commissions, and inventory. Cost stays off the tech and office screens"
+      }
+    ]
+  },
+  {
+    name: "Quotes & Progress Billing",
+    icon: "quotes",
+    note: "Deposits and a default payment schedule are off until you set them, and each quote can have its own.",
+    features: [
+      {
+        title: "Estimates & Quotes",
+        description: "Create professional estimates and quotes, send them to clients for approval, and convert approved estimates to invoices with one click. Track status through Draft, Sent, Approved, Declined, and Converted stages — with PDF export, email delivery, and custom branding"
+      },
+      {
+        title: "The Customer Accepts Online",
+        description: "A branded quote page where the customer types their name and agrees, which makes a signed record that cannot change, or declines with a reason. Views are tracked, and acceptance creates the job at the accepted total"
+      },
+      {
+        title: "Quote Follow-Ups",
+        description: "Reminders on days 2, 5, and 10, previewed first, with a switch on each quote"
+      },
+      {
+        title: "Deposit on Acceptance",
+        description: "A percentage or a fixed amount, paid online by card or bank or recorded, held as a liability and applied when the quote converts"
+      },
+      {
+        title: "Good, Better, Best",
+        description: "Up to three options on one quote, and the customer picks one"
+      },
+      {
+        title: "Quote Templates and Photos",
+        description: "Start from a template, and add photos you opt in one at a time"
+      },
+      {
+        title: "Quotes From the Tech’s Phone",
+        description: "Good, better, best with member prices, accepted in person once the tech has arrived"
+      },
+      {
+        title: "Convert and Remind Cards",
+        description: "An accepted quote asks to be converted, and a quiet one asks whether to send a reminder"
+      },
+      {
+        title: "Payment Schedules on the Quote",
+        description: "Deposit and balance, 30/40/30, or two to six custom draws, billed as draws on the job. Accepting the quote books no revenue"
+      },
+      {
+        title: "Draw Cards at Start and Finish",
+        description: "A card to bill the draw when the install starts and when it finishes, always decided by a person"
+      },
+      {
+        title: "Change Orders",
+        description: "Spread over the bills left, billed with the final, or billed now. A tech’s “Extra, bill it” becomes a change order"
+      },
+      {
+        title: "Progress Billing Report",
+        description: "What is left to bill, the backlog, and A/R by job, with three close checks"
       }
     ]
   },
@@ -315,6 +398,34 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Capture From Anywhere",
         description: "A “+” button anywhere in the app, and a Receipt and Check bar on the technician’s job link, so the paper gets captured where it is"
+      },
+      {
+        title: "Pay Bills in Full or in Part",
+        description: "Pay one bill or several from the Bills screen. Every bill carries its balance and each payment is listed with Undo. Poof records the payment; your bank moves the money"
+      },
+      {
+        title: "That Withdrawal Pays a Bill",
+        description: "When a bank withdrawal clearly pays one open bill, a card asks to match it, so a bill payment is never booked as a second expense"
+      },
+      {
+        title: "One Bill Across Several Jobs",
+        description: "Each line carries its own account and job, and the lines add up to the cent"
+      },
+      {
+        title: "Bills and Expenses Carry Their Job",
+        description: "Code a bill or an expense to job costs, overhead, a fixed asset, or inventory, and it lands where it belongs"
+      },
+      {
+        title: "Vendor Credits and Returns",
+        description: "A return becomes a vendor credit, with any restocking fee on its own line. Use it on a bill or close the rest"
+      },
+      {
+        title: "Supplier Refund Checks",
+        description: "A supplier’s refund check is matched to its credit, an overpaid bill’s extra is kept as a vendor credit, and the refund nets in that vendor’s 1099"
+      },
+      {
+        title: "Emailed Supplier Invoices Become Bills",
+        description: "Forward a supplier invoice and it becomes a bill to approve, with the due date, invoice number, job, a duplicate warning, and the PDF attached"
       }
     ]
   },
@@ -324,7 +435,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Bank Connection",
-        description: "Connect to 12,000+ financial institutions via Plaid for automatic syncing of the last 30 days of transactions, with optional liability accounts for broader institution support"
+        description: "Connect to 12,000+ financial institutions via Plaid. The first connection brings in 90 days of history, and every connected bank refreshes on its own daily, reaching back up to 90 days when a feed has stalled. Optional liability accounts give broader institution support"
       },
       {
         title: "Bank Statement Import",
@@ -353,6 +464,18 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Multi-Account Support",
         description: "Manage multiple bank accounts and credit cards from one unified dashboard"
+      },
+      {
+        title: "Reconnect an Expired Bank Login",
+        description: "A bank whose sign-in expired is flagged on Banking and in Needs Attention, with Reconnect right there"
+      },
+      {
+        title: "Transfers Post Once",
+        description: "A transfer between your own accounts (a card payment, savings, a line of credit) posts once, with a Match both card. One that lands on different days waits in Transfers in Transit, and the close warns when anything sits there too long"
+      },
+      {
+        title: "Pending Holds Wait Until They Post",
+        description: "A pending charge waits until the bank posts it. One the bank removes is set aside, and a booked one the bank stops showing raises a card"
       }
     ]
   },
@@ -365,8 +488,8 @@ export const featureGroups: FeatureGroup[] = [
         description: "Full general ledger with manual journal entries and recurring templates for accurate, audit-ready books"
       },
       {
-        title: "13 Financial Reports",
-        description: "Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, and Budget vs Actual"
+        title: "14 Financial Reports",
+        description: "Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing"
       },
       {
         title: "Report Drill-Down",
@@ -378,7 +501,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Scheduled Report Delivery",
-        description: "Automated email delivery of any of the 13 reports on a daily, weekly, monthly, or quarterly schedule as PDF or CSV to multiple recipients"
+        description: "Automated email delivery of the financial reports on a daily, weekly, monthly, or quarterly schedule as PDF or CSV to multiple recipients"
       },
       {
         title: "Financial Import",
@@ -399,6 +522,18 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Switch From QuickBooks by File",
         description: "Export your trial balance, customers and vendors, and open invoices and unpaid bills from QuickBooks, and they come in as opening balances, tied to the trial balance and never counted twice"
+      },
+      {
+        title: "Compare the P&L",
+        description: "Against the previous period or the same period last year, with the change in gross margin in points, or split by job type"
+      },
+      {
+        title: "Download Your Company’s Books",
+        description: "The whole company in one Excel workbook: ledger lines, the chart, bank rows, quotes, jobs, visits, equipment, memberships, the price list, and time. Pay stays owner-only"
+      },
+      {
+        title: "Bring It Over From Housecall Pro, Jobber, or QuickBooks",
+        description: "Your price list, customers and service addresses, equipment, and members, from an export file you email in or drop into Ask Poof. Each shows a preview and becomes a card to approve"
       }
     ]
   },
@@ -420,11 +555,27 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Cash Flow Forecasting",
-        description: "AI-generated 12-month cash flow projections with confidence bands, seasonal adjustments, and rolling forecast refresh"
+        description: "12-month cash flow projections with confidence bands, seasonal adjustments, and rolling refresh, from a cash engine that gives the same numbers every time. AI writes the insights, not the figures"
       },
       {
         title: "Budget Alerts",
         description: "Proactive spending alerts when you're approaching or exceeding budget thresholds — catch overruns before they become problems"
+      },
+      {
+        title: "Simulations",
+        description: "Seven levers (hire a tech, buy a van with cash or a loan, lose a customer, change prices, slower collections, a slow season, one-time money in or out) show your lowest cash and the week it happens, and cash in 12 or 18 months. Every default says where it came from"
+      },
+      {
+        title: "Compare Up to Three Scenarios",
+        description: "Save and name a scenario and compare up to three side by side. A saved scenario re-runs on today’s books"
+      },
+      {
+        title: "Ask a What-If in a Sentence",
+        description: "“Can I afford a second van at $52k, 8%?” The answer shows its arithmetic in words and links to Simulations. The decision stays yours"
+      },
+      {
+        title: "Cash Below Zero, Weeks Ahead",
+        description: "A card when cash is projected to go below zero in the next 13 weeks, and projected against actual cash in each month’s close narrative"
       }
     ]
   },
@@ -434,7 +585,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Team Management",
-        description: "Invite team members with 5 roles: Owner, Admin, Accountant, Bookkeeper, and Viewer"
+        description: "Invite team members with 6 roles: Owner, Admin, Accountant, Bookkeeper, Office manager, and Viewer"
       },
       {
         title: "Two-Factor Authentication",
@@ -458,7 +609,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Role-Based Permissions (RBAC)",
-        description: "26 granular permissions across financial, invoicing, customer management, and admin categories"
+        description: "46 granular permissions across financial, invoicing, customer management, field, and admin categories"
       },
       {
         title: "Bot-Abuse Gate on Registration",
@@ -467,6 +618,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "AI Privacy Chokepoint (Gateway)",
         description: "Every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail. Runs automatically — nothing to configure"
+      },
+      {
+        title: "Office Manager Role",
+        description: "Invoices, quotes, customers, dispatch, and hours, without the books. Ask Poof, the chat apps, and Approvals follow the role"
+      },
+      {
+        title: "Add Another Company",
+        description: "Add a company from the company menu. You own it, and it gets its own 30-day trial, with up to three unpaid companies at once"
       }
     ]
   },
@@ -497,13 +656,17 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "AI Chat Folders",
         description: "Organize AI conversations into folders — create, rename, delete, and move sessions between folders with drag-and-drop on desktop or a move menu on mobile. Collapsible sections with persistent state"
+      },
+      {
+        title: "This Month at a Glance",
+        description: "Close rate, average ticket, top three techs by revenue, callbacks, active members and renewals due, and backlog on Home, shown when the business has that data"
       }
     ]
   },
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "We provision the number and the voice agent for you \u2014 it is not a switch you flip yourself. Customer-facing outbound texts \u2014 booking confirmations, reminders, and \u201cyour tech is on the way\u201d \u2014 are not built yet; the technician does get texted their job. The receptionist does not take payment on the call.",
+    note: "We provision the number and the voice agent for you \u2014 it is not a switch you flip yourself. The receptionist books the job; payment is taken on the invoice or on site. Customer messages are off until an owner turns them on, and go by email until the shop\u2019s Poof line is registered for business texting. The website booking form is off until you turn it on.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -552,13 +715,25 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "A Job Nobody Is Going To Raises the Alarm",
         description: "An appointment approaching its start time with no technician assigned escalates to the shop — whether that is because the shop dispatches by hand or because nobody was free when it was booked. Emergencies are always assigned automatically, no matter how the shop has set the switches"
+      },
+      {
+        title: "Messages to Your Customers",
+        description: "Booking confirmations (“Reply C to confirm”), moved and cancelled notices, a day-before reminder, and “On my way.” Quiet from 9pm to 8am, and STOP works"
+      },
+      {
+        title: "The Board’s Week View",
+        description: "Load per tech (“2 / 9h”), drag a visit or move it to another day, and the customer’s history in front of you while you book"
+      },
+      {
+        title: "The Requests Inbox",
+        description: "Unbooked calls, website requests, and texts in one list with Book, Call back, and Close, plus a booking form for your website. The office confirms every booking"
       }
     ]
   },
   {
     name: "Field Service & Job Handoff",
     icon: "field",
-    note: "Part of Poof for shops, alongside the AI receptionist \u2014 the same $79 plan. The technician's page needs no account and no app install \u2014 that is the point. It does not do GPS tracking, does not take payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal: it does not work offline.",
+    note: "Part of Poof for shops, alongside the AI receptionist \u2014 the same $79 plan. The technician's page needs no account and no app install \u2014 that is the point. It records times as they happen instead of tracking location, and it works wherever the phone has a signal. Payment on site works once online payments are on; the visit report reaches the customer once customer messages are on.",
     features: [
       {
         title: "Technician Field Link",
@@ -599,6 +774,40 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Office Review Before It Reaches the Customer",
         description: "The dispatcher opens the field report from the board — what the tech wrote, the photos, the parts and labor, the customer's sign-off, the draft invoice it produced, and — on a maintenance visit — the plan visit it earned, or a one-click way to record one. The tech's internal notes are shown marked as never reaching the customer. Nothing goes out until a person sends it"
+      },
+      {
+        title: "Get Paid on Site",
+        description: "A QR code or pay link takes card or bank and flips the job to Paid when the money lands. Cash becomes a card the office approves"
+      },
+      {
+        title: "Visit Checklists With Readings",
+        description: "Readings per unit, out-of-range ones flagged beside the last reading, and three starter lists: spring tune-up, fall tune-up, and install commissioning. A blank required item asks before the visit completes"
+      },
+      {
+        title: "Signature and a Visit Report",
+        description: "The customer signs with a finger on the tech’s phone and gets a report of the visit"
+      }
+    ]
+  },
+  {
+    name: "Memberships",
+    icon: "members",
+    features: [
+      {
+        title: "Plans and Members",
+        description: "Annual prepaid plans, deferred and earned per visit, or monthly plans earned as they are billed. Adding a member sends the first invoice, and one card a month sends the rest"
+      },
+      {
+        title: "Tune-Ups as One Weekly Card",
+        description: "“Schedule 8 spring tune-ups,” with each visit linked to the plan and counted against it"
+      },
+      {
+        title: "Renewals and Cancellations as Cards",
+        description: "Term ends, renewals, and cancellations each arrive as a card a person decides. A refund is paid by check"
+      },
+      {
+        title: "Member Pricing",
+        description: "A percentage off repairs and the included tune-up at $0, on visits, quotes, and drafts"
       }
     ]
   },
@@ -654,6 +863,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Change a Rule’s Limits",
         description: "Set each rule’s ceiling and daily cap in Settings → Automation. A rule never acts above its ceiling"
+      },
+      {
+        title: "Make a Rule by Asking",
+        description: "“Always put Lowe’s under materials,” in Ask Poof, Telegram, or Slack, or from a card you are deciding. A rule can match a description, an amount range, or a bank account, and it becomes a card an owner or admin approves. Filing the rows already waiting is offered, with Undo"
+      },
+      {
+        title: "Everyday Decisions as Cards",
+        description: "A payment received to match, a customer’s credit to apply, a transfer, a draft invoice to send when a tech completes a visit, an accepted quote to convert, and a quiet quote to remind, each a card in any channel"
       }
     ]
   },
@@ -698,7 +915,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "1099s & Vendors",
     icon: "1099",
-    note: "Poof prepares the 1099s, the contractors’ copies, and the CPA summary, and walks whoever uploads them to the IRS through it.",
+    note: "Poof prepares the 1099s, the contractors’ copies, and the CPA summary. Whoever files them enters them in the IRS’s free IRIS portal from that summary, with Poof’s checklist beside them.",
     features: [
       {
         title: "Books → 1099s",
@@ -721,12 +938,12 @@ export const featureGroups: FeatureGroup[] = [
         description: "Each contractor’s copy, emailed to those who consented and ready to print and mail for the rest, plus a summary PDF for your CPA"
       },
       {
-        title: "Mark Filed",
-        description: "Record the IRS receipt ID once the forms are filed. A change after filing is flagged as a correction"
+        title: "Mark Filed or Rejected",
+        description: "Record the IRS receipt ID once the forms are filed, or the IRS’s reason if they come back. A change after filing is flagged as a correction"
       },
       {
-        title: "Who Uploads Your 1099s?",
-        description: "Your bookkeeper, your CPA, or you, with the filer-code checklist for whoever it is and an October reminder while there’s still time to set it up"
+        title: "Who Files Your 1099s?",
+        description: "Your bookkeeper, your CPA, or you, with the filer-code checklist for whoever it is, the checks the IRS rejects forms for, and reminders from October to December 15 while there’s still time to set it up"
       },
       {
         title: "The January Check",
@@ -735,9 +952,9 @@ export const featureGroups: FeatureGroup[] = [
     ]
   },
   {
-    name: "Payroll",
+    name: "Payroll & Time",
     icon: "payroll",
-    note: "Your payroll provider pays your people; Poof puts each pay run on the books and ties the tax forms to it. Payroll posting is off until you turn it on.",
+    note: "Your payroll provider pays your people; Poof puts each pay run on the books and ties the tax forms to it. Payroll posting and timesheets are each off until an owner or admin turns them on.",
     features: [
       {
         title: "Post a Pay Run From Your Provider’s Reports",
@@ -761,7 +978,54 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Labor Onto Jobs",
-        description: "Technicians’ hours from their visits allocated to jobs at what payroll actually cost"
+        description: "Technicians’ hours allocated to jobs at what payroll actually cost, by approved hours when timesheets are on. Officer pay gets its own account"
+      },
+      {
+        title: "Clock In From the Phone",
+        description: "A link per tech with breaks and “Clock in & on my way.” No app and no location tracking"
+      },
+      {
+        title: "Timesheets",
+        description: "Overtime, fixes with a reason, and a trail nothing is erased from"
+      },
+      {
+        title: "Forgotten Clock-Outs and Weekly Approval",
+        description: "Both arrive as cards, and a person closes an open shift"
+      },
+      {
+        title: "Export Approved Hours for Payroll",
+        description: "A CSV of approved weeks for your payroll provider"
+      },
+      {
+        title: "Paid Hours Against Approved Hours",
+        description: "A close check that paid hours match approved hours, with labor accrued by approved hours"
+      }
+    ]
+  },
+  {
+    name: "Sales Credit & Commissions",
+    icon: "commissions",
+    note: "Owner only. Poof calculates, books, and exports commissions; your payroll provider pays them.",
+    features: [
+      {
+        title: "Who Sold It",
+        description: "Split credit, turnover credit, and credit for comfort advisors who sell without installing"
+      },
+      {
+        title: "Commission Plans",
+        description: "Spiffs, a percentage of revenue, or a percentage of margin, earned once the invoice is paid in full, with a 90-day take-back"
+      },
+      {
+        title: "Pay-Period Approval",
+        description: "One card per pay period and an owner-only file. Nobody’s total goes below $0"
+      },
+      {
+        title: "On the Books and on the Job",
+        description: "Commissions accrue on the books, clear when the pay run posts, and show on the job’s P&L"
+      },
+      {
+        title: "By-Person Report",
+        description: "Each person’s commissions in one report. Techs see their own, and Ask Poof answers the owner in the app"
       }
     ]
   },
@@ -793,7 +1057,46 @@ export const featureGroups: FeatureGroup[] = [
     ]
   },
   {
-    name: "Inventory: Truck Stock",
+    name: "Taxes",
+    icon: "taxes",
+    note: "Poof prepares and reminds. Your CPA prepares the return from Poof’s package, and you or your CPA file and pay. Return lines cover Schedule C and Form 1120-S; estimates are federal; Texas is the state Poof covers today.",
+    features: [
+      {
+        title: "Books → Taxes Calendar",
+        description: "Every deadline the business has (the return and its extension, estimates, 941s, W-2s, 1099s, sales tax, and Texas) on the day it really falls, with who files each one, a reminder two weeks ahead, and a tick where Poof has the evidence"
+      },
+      {
+        title: "Your Year on the Return’s Lines",
+        description: "Every account mapped to Schedule C or Form 1120-S, confirmed once and carried forward, tied to the books’ net income, and downloadable for your CPA"
+      },
+      {
+        title: "Questions for Your CPA, With the Numbers",
+        description: "Meals, penalties, depreciation, officer pay or owner draws, vehicles, and 1099s, each answered with the books’ figure. The tax judgments stay with your CPA"
+      },
+      {
+        title: "The Year-End Package",
+        description: "One PDF for your CPA in January: the mapped year, the questions, the balance sheet, the asset roll-forward, payroll, and sales tax, with a close task when it’s sent"
+      },
+      {
+        title: "Tax Reserve",
+        description: "How much tax this year’s profit has built up, next to what’s set aside in the account you name, on the dashboard with a monthly nudge. You move the money"
+      },
+      {
+        title: "Quarterly Estimates",
+        description: "The safe-harbor amount from last year’s tax or this year’s books, four payments on their real due dates, and who pays them: you on a 1040-ES, or the company"
+      },
+      {
+        title: "Estimate Payments Found in the Bank",
+        description: "IRS and EFTPS payments in the bank feed offered for the right quarter, and a payment booked as an expense flagged as an owner draw"
+      },
+      {
+        title: "Texas Franchise Tax and Property",
+        description: "Last year’s revenue against the no-tax-due threshold and which report to file by May 15, and what you owned on January 1 against the $125,000 property exemption, with the list for the appraisal district"
+      }
+    ]
+  },
+  {
+    name: "Purchasing & Truck Stock",
     icon: "inventory",
     features: [
       {
@@ -811,6 +1114,26 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "The Close Knows",
         description: "When each van was last counted, the year-end evidence, and an insight when shrinkage climbs"
+      },
+      {
+        title: "Purchase Orders",
+        description: "Make one, email the PDF to the supplier or mark it sent, and see what is on order beside cost on every job. Order from the quote fills a draft"
+      },
+      {
+        title: "Receiving",
+        description: "Partial receipts and a packing-slip photo, from the office, the tech’s link, or the clock link. Tech screens show no prices"
+      },
+      {
+        title: "Bills Matched to Their PO",
+        description: "A difference between the bill and the purchase order becomes a card to accept or dispute"
+      },
+      {
+        title: "Received but Not Billed",
+        description: "At month end, parts received without a bill are accrued from a card, and the entry reverses on the 1st. For accrual books"
+      },
+      {
+        title: "Parts Requests and Van Restock",
+        description: "Techs request parts from their link, and a weekly replace-what-was-used restock can be turned on per van"
       }
     ]
   },
@@ -879,7 +1202,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Does Poof connect to my bank?",
-    answer: "Yes. Poof connects to over 12,000 financial institutions in the US via Plaid, syncing the last 30 days of transactions. For older transactions, you can upload CSV or PDF bank statements. You can manage multiple bank accounts and credit cards from one dashboard.",
+    answer: "Yes. Poof connects to over 12,000 financial institutions in the US via Plaid, bringing in 90 days of history on the first connection and refreshing every connected bank daily. For older transactions, you can upload CSV or PDF bank statements. You can manage multiple bank accounts and credit cards from one dashboard.",
     category: "Getting Started"
   },
   {
@@ -894,12 +1217,12 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Is Poof secure?",
-    answer: "Yes. All data is encrypted in transit via HTTPS/TLS. Poof includes two-factor authentication (TOTP-based MFA with backup codes), role-based access controls with 5 roles and 26 granular permissions, audit logging with PII masking, session management, and email verification. Bank connections are read-only through Plaid — Poof never stores your bank login credentials or has the ability to move money.",
+    answer: "Yes. All data is encrypted in transit via HTTPS/TLS. Poof includes two-factor authentication (TOTP-based MFA with backup codes), role-based access controls with 6 roles and 46 granular permissions, audit logging with PII masking, session management, and email verification. Bank connections are read-only through Plaid — Poof never stores your bank login credentials or has the ability to move money.",
     category: "Security & Data"
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 85 tools: it prepares records, updates invoices, generates all 13 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. Poof is one plan at $79/month with all 172 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 113 tools: it prepares records, updates invoices, generates all 14 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. Poof is one plan at $79/month with all 246 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -939,7 +1262,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the best bookkeeping app for freelancers?",
-    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 13 financial reports including P&L and cash flow statements. It's $79/mo with everything included (no tiers) — while QuickBooks locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
+    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 14 financial reports including P&L and cash flow statements. It's $79/mo with everything included (no tiers) — while QuickBooks locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
     category: "General"
   },
   {
@@ -959,7 +1282,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 172 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus AI-powered budgeting, cash flow forecasting, auto-reconciliation, and a built-in AI assistant that QuickBooks doesn't offer at any tier. There's also a 30-day free trial with no credit card required, and then a 50% launch discount: $39.50/mo for the first 3 paid months.",
+    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 246 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus a 12-month cash forecast with confidence bands, auto-reconciliation, and an approvals inbox where every AI change waits for a person. There's also a 30-day free trial with no credit card required, and then a 50% launch discount: $39.50/mo for the first 3 paid months.",
     category: "Pricing & Plans"
   },
   {
@@ -969,7 +1292,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the difference between bookkeeping software and hiring a bookkeeper?",
-    answer: "A bookkeeper is a person who manually categorizes transactions, reconciles accounts, and prepares financial reports — typically costing $500-$2,000/month. Bookkeeping software automates those same tasks using AI. With Poof, the AI categorizes your transactions, reconciles your bank accounts, scans receipts, generates 13 financial reports, and even creates budgets from plain-English goals. You still review and approve the work, but the manual data entry is eliminated. Most small businesses save 5-10 hours per week by switching from a manual bookkeeper to AI-powered software like Poof.",
+    answer: "A bookkeeper is a person who manually categorizes transactions, reconciles accounts, and prepares financial reports — typically costing $500-$2,000/month. Bookkeeping software automates those same tasks using AI. With Poof, the AI categorizes your transactions, reconciles your bank accounts, scans receipts, generates 14 financial reports, and even creates budgets from plain-English goals. You still review and approve the work, but the manual data entry is eliminated. Most small businesses save 5-10 hours per week by switching from a manual bookkeeper to AI-powered software like Poof.",
     category: "General"
   },
   {
@@ -978,8 +1301,8 @@ export const faqData: FaqItem[] = [
     category: "Getting Started"
   },
   {
-    question: "Does Poof work for restaurants, ecommerce, contractors, and freelancers?",
-    answer: "Yes. Poof is designed for all types of small businesses. The AI generates a customized chart of accounts based on your specific business type and industry — whether you run a restaurant, ecommerce store, contracting business, or freelance practice. Poof's BRAID engine learns your unique transaction patterns over time, so it gets smarter about categorizing expenses specific to your industry. Features like receipt scanning, mileage tracking, recurring invoices, and expense categorization are especially valuable for service-based businesses, while inventory-related categorization and sales tracking help retail and ecommerce owners.",
+    question: "Does Poof work for service shops, ecommerce, contractors, and freelancers?",
+    answer: "Yes. Poof is designed for all types of small businesses. The AI generates a customized chart of accounts based on your specific business type and industry — whether you run a service shop, ecommerce store, contracting business, or freelance practice. Poof's BRAID engine learns your unique transaction patterns over time, so it gets smarter about categorizing expenses specific to your industry. Features like receipt scanning, mileage tracking, recurring invoices, and expense categorization are especially valuable for service-based businesses, while inventory-related categorization and sales tracking help retail and ecommerce owners.",
     category: "General"
   },
   {
@@ -994,7 +1317,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 172 features — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to all 246 features — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {
@@ -1009,7 +1332,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Is my financial data safe with AI bookkeeping?",
-    answer: "Yes. Poof takes data security seriously. All data is encrypted in transit via HTTPS/TLS, and bank connections go through Plaid with read-only access — Poof never sees or stores your bank login credentials and cannot move money. Poof includes two-factor authentication, role-based access controls with 26 granular permissions, audit logging with PII masking, and session management. Your financial data is never shared with third parties or used to train AI models. You can manage active sessions, revoke access, and export your data at any time.",
+    answer: "Yes. Poof takes data security seriously. All data is encrypted in transit via HTTPS/TLS, and bank connections go through Plaid with read-only access — Poof never sees or stores your bank login credentials and cannot move money. Poof includes two-factor authentication, role-based access controls with 46 granular permissions, audit logging with PII masking, and session management. Your financial data is never shared with third parties or used to train AI models. You can manage active sessions, revoke access, and export your data at any time.",
     category: "Security & Data"
   },
 ]

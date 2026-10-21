@@ -1,11 +1,18 @@
 import Link from 'next/link'
 
 /**
- * The October 2026 groups, one row each: outcome first, with the limit kept in the
+ * The October 2026 groups, one row each (Taxes first, as its own page): outcome first, with the limit kept in the
  * body as what Poof does (the site never lists what it withholds). Each row links to
  * its group on /features, whose section ids are the group names slugged.
  */
-const rows: { label: string; href: string; headline: string; body: string }[] = [
+const rows: { label: string; href: string; headline: string; body: string; cta?: string }[] = [
+  {
+    label: 'Taxes',
+    href: '/taxes',
+    headline: 'Every tax deadline, the reserve, the four estimates, and a January package your CPA can use.',
+    body: 'A calendar of every deadline the business has, with who files each one. Tax owed so far next to what you’ve set aside, the safe-harbor estimates on their real due dates, and one PDF for your CPA. Poof prepares and reminds; you and your CPA file and pay.',
+    cta: 'See Taxes',
+  },
   {
     label: 'Rules',
     href: '/features#approvals-and-ai-autonomy',
@@ -14,7 +21,7 @@ const rows: { label: string; href: string; headline: string; body: string }[] = 
   },
   {
     label: 'Payroll',
-    href: '/features#payroll',
+    href: '/features#payroll-and-time',
     headline: 'Your payroll provider pays them. Poof makes the books and the 941 agree.',
     body: 'Forward your provider’s payroll report and it becomes one entry, matched to the bank withdrawals, with wages accrued into the month they were earned and the 941s, W-2s and state returns tied to the pay runs. You turn it on when you’re ready.',
   },
@@ -34,11 +41,11 @@ const rows: { label: string; href: string; headline: string; body: string }[] = 
     label: '1099s',
     href: '/features#1099s-and-vendors',
     headline: 'January’s 1099s, prepared from the year’s payments. W-9s collected by link.',
-    body: 'Every contractor’s year against the $2,000 threshold, W-9s filled in online, each contractor’s copy and a summary for your CPA, and a checklist for whoever uploads them to the IRS.',
+    body: 'Every contractor’s year against the $2,000 threshold, W-9s filled in online, each contractor’s copy, and a summary your filer enters in the IRS’s IRIS portal, with Poof’s checklist beside them.',
   },
   {
     label: 'Truck stock',
-    href: '/features#inventory-truck-stock',
+    href: '/features#purchasing-and-truck-stock',
     headline: 'Count the van from your phone. Poof knows what went on jobs and what went missing.',
     body: 'Each truck is a stock location. Post a count and the parts used on jobs go to those jobs, the rest shows as shrinkage, and the close knows when each van was last counted.',
   },
@@ -49,7 +56,7 @@ export default function BackOfficeSection() {
     <section id="back-office" className="max-w-[820px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule">
       <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">The rest of the back office</p>
       <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">
-        Payroll, sales tax, 1099s, the trucks and what&apos;s on them. In the same books.
+        Taxes, payroll, 1099s, sales tax, the trucks and what&apos;s on them. In the same books.
       </h2>
       <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
         Each one lands as a card with its evidence, like everything else Poof does, and waits for you.
@@ -62,7 +69,7 @@ export default function BackOfficeSection() {
               <h3 className="font-semibold text-ink text-[17px] leading-snug">{row.headline}</h3>
               <p className="text-[15px] text-muted leading-[1.5] mt-1.5 max-w-[60ch]">{row.body}</p>
               <Link href={row.href} className="inline-block text-[14px] text-ledger-600 font-semibold hover:text-ledger-700 mt-2">
-                See the features
+                {row.cta ?? 'See the features'}
               </Link>
             </div>
           </div>

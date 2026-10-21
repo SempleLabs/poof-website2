@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Software that runs the small-business back office: books, invoicing, cash planning, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 172 features, 13 reports, $79/mo.',
+    description: 'Software that runs the small-business back office: books, invoicing, cash planning, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 246 features, 14 reports, $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,7 +35,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 172 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 13 financial reports.',
+    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 246 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
     url: 'https://www.poofai.com',
     offers: {
       '@type': 'Offer',
@@ -84,7 +84,7 @@ export function getSoftwareApplicationSchema() {
       'Budget vs Actual Variance Dashboard',
       'AI Cash Flow Forecasting (12-month projections)',
       'Budget Alerts',
-      'Team Management with RBAC (5 roles, 26 permissions)',
+      'Team Management with RBAC (6 roles, 46 permissions)',
       'Two-Factor Authentication',
       'Audit Logs with PII Masking',
       'Session Management',

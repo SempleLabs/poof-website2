@@ -5,32 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Categorization Cheat Sheet | Poof</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1f2937; line-height: 1.7; background: #fff; }
+    body { font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif; color: #12211A; line-height: 1.7; background: #fff; }
     .page { max-width: 800px; margin: 0 auto; padding: 60px 48px; }
-    .cover { text-align: center; padding: 80px 40px; background: linear-gradient(135deg, #581c87 0%, #7e22ce 100%); color: white; border-radius: 12px; margin-bottom: 48px; }
+    .cover { text-align: center; padding: 80px 40px; background: linear-gradient(135deg, #12211A 0%, #1F7A4F 100%); color: white; border-radius: 12px; margin-bottom: 48px; }
     .cover h1 { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
     .cover p { font-size: 18px; opacity: 0.9; }
     .cover .brand { font-size: 14px; margin-top: 24px; opacity: 0.7; letter-spacing: 1px; text-transform: uppercase; }
-    h2 { font-size: 22px; font-weight: 700; color: #a855f7; margin: 36px 0 14px; padding-bottom: 6px; border-bottom: 2px solid #e5e7eb; }
-    h3 { font-size: 17px; font-weight: 600; color: #1f2937; margin: 20px 0 10px; }
+    h2 { font-size: 22px; font-weight: 700; color: #1B5E3F; margin: 36px 0 14px; padding-bottom: 6px; border-bottom: 2px solid #C9D3C6; }
+    h3 { font-size: 17px; font-weight: 600; color: #12211A; margin: 20px 0 10px; }
     p { margin-bottom: 12px; font-size: 14px; }
-    .callout { background: #faf5ff; border-left: 4px solid #a855f7; padding: 14px 18px; margin: 16px 0; border-radius: 0 8px 8px 0; font-size: 13px; }
-    .callout strong { color: #a855f7; }
+    .callout { background: #EEF2EA; border-left: 4px solid #1B5E3F; padding: 14px 18px; margin: 16px 0; border-radius: 0 8px 8px 0; font-size: 13px; }
+    .callout strong { color: #1B5E3F; }
     table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 13px; }
-    th { background: #a855f7; color: #ffffff; padding: 9px 12px; text-align: left; font-weight: 600; }
-    td { padding: 9px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
-    tr:nth-child(even) { background: #f9fafb; }
-    .category-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin: 12px 0; }
-    .category-card h3 { margin-top: 0; color: #a855f7; }
-    .tag { display: inline-block; background: #e0e7ff; color: #4338ca; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 4px; }
+    th { background: #1B5E3F; color: #ffffff; padding: 9px 12px; text-align: left; font-weight: 600; }
+    td { padding: 9px 12px; border-bottom: 1px solid #C9D3C6; vertical-align: top; }
+    tr:nth-child(even) { background: #F5F7F2; }
+    .category-card { background: #F5F7F2; border: 1px solid #C9D3C6; border-radius: 8px; padding: 16px; margin: 12px 0; }
+    .category-card h3 { margin-top: 0; color: #1B5E3F; }
+    .tag { display: inline-block; background: #DCEBDF; color: #1B5E3F; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 4px; }
     .tag-deductible { background: #dcfce7; color: #166534; }
     .tag-partial { background: #fef9c3; color: #854d0e; }
     ul { margin: 8px 0 14px 20px; font-size: 13px; }
     li { margin-bottom: 4px; }
-    .footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #e5e7eb; color: #9ca3af; font-size: 13px; }
-    .footer a { color: #a855f7; text-decoration: none; }
+    .footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #C9D3C6; color: #6E7A73; font-size: 13px; }
+    .footer a { color: #1B5E3F; text-decoration: none; }
     @media print { .page { padding: 36px 28px; } .cover { page-break-after: always; } h2 { page-break-after: avoid; } .category-card { page-break-inside: avoid; } }
   </style>
 </head>
@@ -165,11 +165,11 @@
       </ul>
     </div>
 
-    <div class="callout"><strong>Poof Tip:</strong> Poof uses AI to automatically categorize your transactions as they're imported from your bank. You can set up custom rules so recurring expenses are always categorized correctly—saving you hours every month.</div>
+    <div class="callout"><strong>Poof Tip:</strong> Poof proposes a category for every transaction as it arrives from your bank, with the evidence it found, and waits for you. Approve the same merchant a few times and Poof offers a rule that stops itself the first time you correct it.</div>
 
     <div class="footer">
-      <p><strong>Poof</strong> — AI-powered bookkeeping for small businesses</p>
-      <p><a href="https://poof.app">poof.app</a></p>
+      <p><strong>Poof</strong> — the back office, run by AI. Signed by you.</p>
+      <p><a href="https://www.poofai.com">poofai.com</a></p>
       <p style="margin-top: 8px;">© 2026 Poof. This guide is provided for informational purposes and does not constitute tax or legal advice. Consult a tax professional for your specific situation.</p>
     </div>
   </div>

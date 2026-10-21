@@ -46,7 +46,7 @@ export default function AboutPage() {
     },
     {
       title: "Trust & Security",
-      description: "Read-only bank access, encryption in transit, two-factor sign-in, five roles with 26 permissions, and SOC 2 audit logging with PII masking.",
+      description: "Read-only bank access, encryption in transit, two-factor sign-in, six roles with 46 permissions, and SOC 2 audit logging with PII masking.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -78,7 +78,7 @@ export default function AboutPage() {
     {
       year: "2026",
       title: "Reimagining Bookkeeping",
-      description: "Today, Poof includes 172 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 13 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself, plus payroll, sales tax, 1099s, fixed assets and loans, and truck stock in the same books. And we found our focus: running the whole back office, with a person on every entry — the books at the center, the phone and the field for the shops that need them."
+      description: "Today, Poof includes 246 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 14 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself, plus payroll, sales tax, 1099s, fixed assets and loans, and truck stock in the same books. And we found our focus: running the whole back office, with a person on every entry — the books at the center, the phone and the field for the shops that need them."
     }
   ]
 

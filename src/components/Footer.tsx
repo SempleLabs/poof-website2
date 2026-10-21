@@ -61,6 +61,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Product</h3>
             <ul className="space-y-3">
               <li><Link href="/close" className="text-slate-500 hover:text-ledger-700 transition-colors">The close</Link></li>
+              <li><Link href="/taxes" className="text-slate-500 hover:text-ledger-700 transition-colors">Taxes</Link></li>
               <li><Link href="/autopilot" className="text-slate-500 hover:text-ledger-700 transition-colors">Autopilot</Link></li>
               <li><Link href="/trades" className="text-slate-500 hover:text-ledger-700 transition-colors">Poof for shops</Link></li>
               <li><Link href="/features" className="text-slate-500 hover:text-ledger-700 transition-colors">Features</Link></li>

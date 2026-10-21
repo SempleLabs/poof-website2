@@ -86,16 +86,17 @@ export default function ReceptionistSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-6">
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
-              What it does not do
+              How it is set up
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed">
               We set it up for you &mdash; we provision the number and the voice
-              agent. It is not a switch you flip yourself. <strong className="text-slate-100">Customer-facing
-              texts are not built yet</strong>: no booking confirmation, no reminder, no &ldquo;your tech is on
-              the way.&rdquo; Your technician does get texted their job &mdash; your customer does not. It does not
-              take payment on the call, does not optimize routes across the day&apos;s board, and does not clone
-              your voice. There are no outbound sales calls. We would rather tell you that now than after you
-              have signed.
+              agent. It is not a switch you flip yourself. <strong className="text-slate-100">Customer messages
+              are off until you turn them on</strong>: a booking confirmation, a day-before reminder, and
+              &ldquo;on my way,&rdquo; by email until your Poof line is registered for business texting. Your
+              technician is always texted their job. The receptionist books the job and payment is taken on the
+              invoice or on site; the board places jobs without optimizing routes; the voice is the agent&apos;s
+              own, and it makes no outbound sales calls. We would rather tell you that now than after you have
+              signed.
             </p>
           </div>
         </AnimateOnScroll>

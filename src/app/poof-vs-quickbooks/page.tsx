@@ -81,7 +81,7 @@ const comparisonData = [
     { name: 'Uncertain Auto-Matches Become Approval Cards', poof: true, quickbooks: false },
   ]},
   { category: 'Security & Team', features: [
-    { name: 'Custom Roles With 26 Granular Permissions (Advanced-only at QuickBooks)', poof: true, quickbooks: false },
+    { name: 'Custom Roles With 46 Granular Permissions (Advanced-only at QuickBooks)', poof: true, quickbooks: false },
     { name: 'Audit Log', poof: true, quickbooks: true },
     { name: 'PII Masked in the Audit Log and in Every AI Call', poof: true, quickbooks: false },
     { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true },
@@ -114,6 +114,10 @@ const comparisonData = [
     { name: 'Sales Tax Rates by Location', poof: true, quickbooks: true },
     { name: 'Exemption Certificates on File With Expiry Dates', poof: true, quickbooks: false },
     { name: 'Truck Stock by Van, Counted From a Phone', poof: true, quickbooks: false },
+    { name: 'Income Tax, Estimate and Filing Calendar by Entity, With Who Files Each Deadline', poof: true, quickbooks: false },
+    { name: 'Tax Reserve: Tax Owed So Far Against What Is Set Aside', poof: true, quickbooks: false },
+    { name: 'Year-End Package for Your CPA, Their Questions Answered From the Books', poof: true, quickbooks: false },
+    { name: 'Texas Franchise Tax and Business Property Checks', poof: true, quickbooks: false },
   ]},
   { category: 'Field Service & Job Handoff', features: [
     { name: 'Technician Field Link (no account, no app install)', poof: true, quickbooks: false },
@@ -172,7 +176,7 @@ export default function PoofVsQuickbooksPage() {
                 </div>
                 <p className="text-slate-400 mb-6">After a 30-day free trial: 50% off your first 3 paid months, then $79/mo. All features included.</p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-2"><PoofCheck /> 172 features included</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> 246 features included</li>
                   <li className="flex items-center gap-2"><PoofCheck /> AI transaction categorization</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Built-in AI assistant</li>
                   <li className="flex items-center gap-2"><PoofCheck /> 30-day free trial</li>
@@ -265,13 +269,13 @@ export default function PoofVsQuickbooksPage() {
               <ul className="space-y-2 text-slate-700 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-ledger-600 font-bold">&bull;</span>
-                  <span><strong>$79 flat vs $140.</strong> Poof is 44% cheaper &mdash; and adds the AI assistant, budgeting,
-                  forecasting, and per-job labor allocation that Plus doesn&apos;t have at any price.</span>
+                  <span><strong>$79 flat vs $140.</strong> Poof is 44% cheaper &mdash; and adds the approvals inbox, a 12-month cash forecast with
+                  confidence bands, per-job labor allocation, and the tax calendar, reserve, and CPA package.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-ledger-600 font-bold">&bull;</span>
-                  <span><strong>Roles and audit logging are Advanced-tier at QuickBooks.</strong> Poof&apos;s 5 roles,
-                  26 granular permissions, and SOC 2 audit logging with PII masking are included &mdash; QuickBooks puts
+                  <span><strong>Roles and audit logging are Advanced-tier at QuickBooks.</strong> Poof&apos;s 6 roles,
+                  46 granular permissions, and SOC 2 audit logging with PII masking are included &mdash; QuickBooks puts
                   that class of capability on its $340/mo plan.</span>
                 </li>
                 <li className="flex items-start gap-2">

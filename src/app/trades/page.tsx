@@ -40,7 +40,7 @@ const loop = [
   {
     number: '2',
     title: 'The tech closes the job from a text',
-    body: 'The assigned tech gets their job as a link. No account, no app to install. On my way, arrived, parts used, photos, a typed name at the end. The office reviews it before anything reaches the customer.',
+    body: 'The assigned tech gets their job as a link. No account, no app to install. On my way, arrived, parts used, photos, the customer’s signature at the end. The office reviews it before anything reaches the customer.',
   },
   {
     number: '3',
@@ -64,7 +64,7 @@ const builtFor = [
   {
     title: 'Deposits and plans that stay unearned',
     body: 'A deposit on an install is held as a liability from the day it lands and released to that job\'s revenue when the job is done. Prepaid maintenance plans are deferred at the sale and earned per completed visit.',
-    href: '/features#unearned',
+    href: '/features#job-costing-month-end-close-and-payments',
     cta: 'See how it works',
   },
   {
@@ -78,7 +78,7 @@ const builtFor = [
 const faqs = [
   {
     q: 'What does Poof for shops cost?',
-    a: 'The same as every other Poof account: $79 a month, all 172 features. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
+    a: 'The same as every other Poof account: $79 a month, all 246 features. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
   },
   {
     q: 'Is the AI receptionist something I turn on myself?',
@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: 'Does the AI text my customers?',
-    a: 'No. Customer-facing texts — booking confirmations, reminders, "your tech is on the way" — are not built. The dispatched technician is texted their job link; that part is built and running. Those two are different things and we do not blur them. On the books side, no ledger rule can send anything to a customer either: invoices and credit notes are always a person\'s decision.',
+    a: 'Only if you turn it on. Customer messages (a booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way") are off until an owner or admin switches them on. They go by email until your Poof line is registered for business texting, they stay quiet from 9pm to 8am, and STOP works. The dispatched technician is always texted their job link. On the books side, no ledger rule can send anything to a customer: invoices and credit notes are always a person\'s decision.',
   },
   {
     q: 'Do I have to switch off Jobber or Housecall Pro?',
@@ -98,7 +98,7 @@ const faqs = [
   },
   {
     q: 'Does the technician need an account or an app?',
-    a: 'Neither, and that is the point — it is the answer to "my guys will not use another app." The tech taps a link in a text. It does no GPS tracking, takes no payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal; there is no offline mode. Jobsite photos are opted into the customer invoice one photo at a time, and the supply-house receipt showing your cost defaults to not printing.',
+    a: 'Neither, and that is the point — it is the answer to "my guys will not use another app." The tech taps a link in a text. It records on my way, arrived, and complete when they happen rather than tracking location, takes the customer\'s signature with a finger, can take card or bank by QR code or pay link once online payments are on (cash becomes a card the office approves), and needs a signal. Jobsite photos are opted into the customer invoice one photo at a time, and the supply-house receipt showing your cost defaults to not printing.',
   },
   {
     q: 'Who is this actually for?',
