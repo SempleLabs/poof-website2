@@ -161,8 +161,8 @@ export default function HomeShow() {
       <div className="min-w-0">
         {/* ACT 1 */}
         <section className="pt-8 pb-6" id="act1">
-          <p className={eyebrow}>The back office, run by AI · signed by you</p>
-          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[80px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Last night, Poof did the back office.</h1>
+          <p className={eyebrow}>AI does the work · you sign it</p>
+          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[80px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Last night, Poof ran the back office.</h1>
           <p className={sub}>{picked ? picked.lead : 'It pulled the bank, matched the bills to jobs, drafted the invoice from the tech\'s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.'}</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free trial</Link>
