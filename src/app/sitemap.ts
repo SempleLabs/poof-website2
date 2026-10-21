@@ -106,6 +106,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/ai`,
+      lastModified: BUILD_DATE,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/security`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',

@@ -47,7 +47,7 @@ export default function Footer() {
   const col = 'font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink mb-4'
   const link = 'text-muted hover:text-ledger-700 transition-colors'
   const columns: { title: string; links: [string, string][] }[] = [
-    { title: 'Product', links: [['/close', 'The close'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/trades', 'Poof for shops'], ['/features', 'Features'], ['/pricing', 'Pricing'], ['/how-it-works', 'How it Works'], ['/demo', 'Book a demo']] },
+    { title: 'Product', links: [['/close', 'The close'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/trades', 'Poof for shops'], ['/features', 'Features'], ['/ai', 'Claude & ChatGPT'], ['/pricing', 'Pricing'], ['/how-it-works', 'How it Works'], ['/demo', 'Book a demo']] },
     { title: 'Resources', links: [['/resources', 'Guides & Templates'], ['/blog', 'Blog'], ['/poof-vs-quickbooks', 'Poof vs QuickBooks'], ['/faq', 'FAQ'], ['/security', 'Security']] },
     { title: 'Company', links: [['/about', 'About'], ['/contact', 'Contact'], ['/support', 'Support'], ['/privacy', 'Privacy Policy'], ['/terms', 'Terms of Service']] },
   ]
