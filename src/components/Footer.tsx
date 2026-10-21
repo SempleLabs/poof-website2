@@ -44,105 +44,65 @@ export default function Footer() {
     }
   }
 
+  const col = 'font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink mb-4'
+  const link = 'text-muted hover:text-ledger-700 transition-colors'
+  const columns: { title: string; links: [string, string][] }[] = [
+    { title: 'Product', links: [['/close', 'The close'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/trades', 'Poof for shops'], ['/features', 'Features'], ['/pricing', 'Pricing'], ['/how-it-works', 'How it Works'], ['/demo', 'Book a demo']] },
+    { title: 'Resources', links: [['/resources', 'Guides & Templates'], ['/blog', 'Blog'], ['/poof-vs-quickbooks', 'Poof vs QuickBooks'], ['/faq', 'FAQ'], ['/security', 'Security']] },
+    { title: 'Company', links: [['/about', 'About'], ['/contact', 'Contact'], ['/support', 'Support'], ['/privacy', 'Privacy Policy'], ['/terms', 'Terms of Service']] },
+  ]
+
   return (
-    <footer className="bg-slate-50 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center mb-4">
-              <PoofWordmark size={26} href={null} />
-            </div>
-            <p className="text-slate-500 mb-6">
-              AI-powered bookkeeping for small businesses. Automate your finances with AI.
-            </p>
-          </div>
+    <footer className="bg-paper-2 border-t border-rule">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-x-8 gap-y-10">
+          {/* brand + newsletter */}
+          <div className="col-span-2 lg:col-span-1 max-w-[380px]">
+            <PoofWordmark size={26} href={null} />
+            <p className="text-muted mt-4">The back office, run by AI. Signed by you.</p>
 
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Product</h3>
-            <ul className="space-y-3">
-              <li><Link href="/close" className="text-slate-500 hover:text-ledger-700 transition-colors">The close</Link></li>
-              <li><Link href="/taxes" className="text-slate-500 hover:text-ledger-700 transition-colors">Taxes</Link></li>
-              <li><Link href="/autopilot" className="text-slate-500 hover:text-ledger-700 transition-colors">Autopilot</Link></li>
-              <li><Link href="/trades" className="text-slate-500 hover:text-ledger-700 transition-colors">Poof for shops</Link></li>
-              <li><Link href="/features" className="text-slate-500 hover:text-ledger-700 transition-colors">Features</Link></li>
-              <li><Link href="/pricing" className="text-slate-500 hover:text-ledger-700 transition-colors">Pricing</Link></li>
-              <li><Link href="/how-it-works" className="text-slate-500 hover:text-ledger-700 transition-colors">How it Works</Link></li>
-              <li><Link href="/demo" className="text-slate-500 hover:text-ledger-700 transition-colors">Book a demo</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Resources</h3>
-            <ul className="space-y-3">
-              <li><Link href="/blog" className="text-slate-500 hover:text-ledger-700 transition-colors">Blog</Link></li>
-              <li><Link href="/resources" className="text-slate-500 hover:text-ledger-700 transition-colors">Guides &amp; Templates</Link></li>
-              <li><Link href="/poof-vs-quickbooks" className="text-slate-500 hover:text-ledger-700 transition-colors">Poof vs QuickBooks</Link></li>
-              <li><Link href="/faq" className="text-slate-500 hover:text-ledger-700 transition-colors">FAQ</Link></li>
-              <li><Link href="/security" className="text-slate-500 hover:text-ledger-700 transition-colors">Security</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-900 mb-4">Company</h3>
-            <ul className="space-y-3">
-              <li><Link href="/about" className="text-slate-500 hover:text-ledger-700 transition-colors">About</Link></li>
-              <li><Link href="/contact" className="text-slate-500 hover:text-ledger-700 transition-colors">Contact</Link></li>
-              <li><Link href="/support" className="text-slate-500 hover:text-ledger-700 transition-colors">Support</Link></li>
-              <li><Link href="/privacy" className="text-slate-500 hover:text-ledger-700 transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-slate-500 hover:text-ledger-700 transition-colors">Terms of Service</Link></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div className="border-t border-slate-200 mt-12 pt-8 pb-8">
-          <div className="max-w-md mx-auto text-center">
-            <h3 className="text-lg font-semibold text-slate-900 mb-2">Stay Updated</h3>
-            <p className="text-slate-500 text-sm mb-4">Get bookkeeping tips and product updates delivered to your inbox.</p>
-
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                disabled={status === 'loading' || status === 'success'}
-                className="flex-1 px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-ledger-500/20 focus:border-ledger-500 disabled:opacity-50 transition-colors"
-              />
-              <button
-                type="submit"
-                disabled={status === 'loading' || status === 'success'}
-                className="px-6 py-2 bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
-              </button>
-            </form>
-
-            {message && (
-              <p className={`text-sm mt-2 ${status === 'error' ? 'text-rose-400' : 'text-ledger-400'}`}>
-                {message}
-              </p>
-            )}
-
-            <p className="text-slate-600 text-xs mt-3">No spam. Unsubscribe anytime.</p>
-          </div>
-        </div>
-
-        <div className="border-t border-slate-200 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-slate-600 text-center md:text-left space-y-1">
-              <p>© 2026 Semple Labs LLC. All rights reserved.</p>
-              <p>Poof is a product of Semple Labs LLC.</p>
-              <p>
-                <a
-                  href="mailto:support@poofai.com"
-                  className="text-slate-600 hover:text-ledger-700 transition-colors"
+            <form onSubmit={handleSubmit} className="mt-6" aria-labelledby="footer-newsletter">
+              <p id="footer-newsletter" className="text-sm font-semibold text-ink mb-2">Bookkeeping and tax notes from a former controller</p>
+              <div className="flex gap-2">
+                <label htmlFor="footer-email" className="sr-only">Email address</label>
+                <input
+                  id="footer-email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@business.com"
+                  disabled={status === 'loading' || status === 'success'}
+                  className="min-w-0 flex-1 px-3 py-2 text-sm rounded-lg bg-white border border-rule text-ink placeholder-slate-400 focus:outline-none focus:border-ledger-500 disabled:opacity-50 transition-colors"
+                />
+                <button
+                  type="submit"
+                  disabled={status === 'loading' || status === 'success'}
+                  className="px-4 py-2 text-sm bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
                 >
-                  support@poofai.com
-                </a>
+                  {status === 'loading' ? 'Subscribing…' : status === 'success' ? 'Subscribed' : 'Subscribe'}
+                </button>
+              </div>
+              <p className={`text-xs mt-2 ${status === 'error' ? 'text-audit' : 'text-muted'}`} aria-live="polite">
+                {message || 'No spam. Unsubscribe anytime.'}
               </p>
-            </div>
+            </form>
           </div>
+
+          {columns.map((c) => (
+            <div key={c.title}>
+              <h3 className={col}>{c.title}</h3>
+              <ul className="space-y-2.5 text-[15px]">
+                {c.links.map(([href, label]) => (
+                  <li key={href}><Link href={href} className={link}>{label}</Link></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-rule mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-sm text-muted">
+          <p>© 2026 Semple Labs LLC. Poof is a product of Semple Labs LLC.</p>
+          <a href="mailto:support@poofai.com" className={link}>support@poofai.com</a>
         </div>
       </div>
     </footer>
