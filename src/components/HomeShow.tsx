@@ -3,12 +3,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import OvernightRun from '@/components/OvernightRun'
 
 /**
- * The homepage show: five acts the visitor performs.
+ * The homepage show: last night's run, then three steps the visitor performs.
  * "The work disappears. The evidence doesn't."
- * Every act is a feature that exists and is tested; the figures in the acts are a demo,
- * the claims table at the end is real.
+ * Every step is a feature that exists and is tested; the figures are a demo.
  */
 
 type RuleState = 'none' | 'active' | 'paused' | 'revoked'
@@ -17,21 +17,12 @@ type Who = 'own' | 'clients' | 'shop' | 'qbo' | null
 const WHO: { id: Exclude<Who, null>; label: string; sub: string; lead: string; cta: [string, string] }[] = [
   { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank and the AI proposes every entry, with the evidence it found. You approve in minutes a day, nothing lands until you have seen it, and the month closes as a record.', cta: ['See Autopilot with limits', '/autopilot'] },
   { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend. Nothing reaches a client\'s books until a person has seen it.', cta: ['See the close', '/close'] },
-  { id: 'shop', label: 'I run a shop', sub: 'Service work, techs, trucks', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month. The AI runs the books, the phone, and the field up to one line: nothing lands until a person has seen it.', cta: ['See Poof for shops', '/trades'] },
+  { id: 'shop', label: 'I run a shop', sub: 'Service work, techs, trucks', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month. The AI runs the books and the field up to one line: nothing lands until a person has seen it. The AI receptionist is an add-on.', cta: ['See Poof for shops', '/trades'] },
   { id: 'qbo', label: "I'm on QuickBooks", sub: 'And a bank rule burned me once', lead: 'A QuickBooks rule keeps being wrong until you notice. A Poof rule stops itself the first time you contradict it, and nothing posts without a person seeing it.', cta: ['Poof vs QuickBooks', '/poof-vs-quickbooks'] },
 ]
 
 const fmtTime = (d: Date) => d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
 const money = (n: number) => n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-
-const EVIDENCE = [
-  ['Ferguson Enterprises', '$1,214.60', '5 prior transactions, all Job Materials. Matched to job #2026-081.'],
-  ['Jobber export', '41 jobs', "39 matched to invoices. 2 are waiting with the reason they didn't."],
-  ['HOME DEPOT #4471', '$86.12', 'No history for this merchant. That is why it will ask you.'],
-  ['Rivera deposit', '$3,000.00', "Held as a liability. Released to the job's revenue when the job is done, not today."],
-  ['Truck 3 fuel', '$212.40', 'Allocated across 3 jobs by the hours the tech logged on them.'],
-  ['Henderson field report', '22 h', "Draft invoice exists in the office, in the tech's own words. Nobody retyped a ticket."],
-] as const
 
 const BATCH = [
   ['08/03 · FERGUSON ENT · job #2026-078', '$612.40'],
@@ -88,13 +79,8 @@ export default function HomeShow() {
   const [who, setWho] = useState<Who>(null)
   const picked = WHO.find((w) => w.id === who) || null
 
-  // act 1
-  const [gone, setGone] = useState(false)
-  const [vanished, setVanished] = useState(false)
-  const poof = () => {
-    touch(); setGone(true)
-    window.setTimeout(() => setVanished(true), reduce.current ? 0 : 750)
-  }
+  // act 1: the overnight run
+  const [ranOvernight, setRanOvernight] = useState(false)
 
   // act 2
   const [c1, setC1] = useState<'open' | 'rejecting' | 'approved' | 'rejected'>('open')
@@ -150,7 +136,7 @@ export default function HomeShow() {
 
   const rejectSend = useCallback(() => { touch(); setC1('rejected'); setYou((v) => v + 1) }, [])
 
-  const o1 = vanished, o2 = cardsDecided >= 2, o3 = tied, o4 = !!signed
+  const o1 = ranOvernight, o2 = cardsDecided >= 2, o3 = tied, o4 = !!signed
   const checkedCount = checks.filter(Boolean).length
   const autoDone = tasks.filter((t) => t.kind !== 'person' && t.done).length
   const personDone = tasks.filter((t) => t.kind === 'person' && t.done).length
@@ -161,7 +147,7 @@ export default function HomeShow() {
       <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-rule flex items-center justify-between gap-3 text-[11px] sm:text-[12.5px] font-mono tracking-[0.06em] uppercase text-muted" aria-label="Progress">
         {/* all four steps fit a 375px phone: no "The", no separators, smaller dots below sm */}
         <span className="flex items-center gap-2 min-w-0 overflow-x-auto scrollbar-hide">
-          {[['desk', o1], ['inbox', o2], ['reconciliation', o3], ['close', o4]].map(([label, done], i) => (
+          {[['night', o1], ['inbox', o2], ['reconciliation', o3], ['close', o4]].map(([label, done], i) => (
             <span key={label as string} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
               {i > 0 && <span className="text-rule hidden sm:inline">·</span>}
               <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${done ? 'bg-ledger-600' : 'border border-muted'}`} aria-hidden="true" />
@@ -176,74 +162,30 @@ export default function HomeShow() {
         {/* ACT 1 */}
         <section className="pt-8 pb-6" id="act1">
           <p className={eyebrow}>The back office, run by AI · signed by you</p>
-          {!vanished ? (
-            <>
-              <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The work disappears.</h1>
-
-              {/* who are you here as: asked before the paragraph, so the paragraph is written for the answer */}
-              <div className="mb-5" role="group" aria-labelledby="who-label">
-                <p id="who-label" className="text-[13px] text-muted mb-2">Who are you here as?</p>
-                <div className="grid grid-cols-2 gap-2 max-w-[560px]">
-                  {WHO.map((w) => (
-                    <button key={w.id} type="button" onClick={() => setWho(who === w.id ? null : w.id)} aria-pressed={who === w.id}
-                      className={`text-left rounded-lg border px-3 py-2 transition-colors ${who === w.id ? 'border-ledger-600 bg-ledger-200 text-ink' : 'border-rule bg-white text-ink hover:border-ledger-600'}`}>
-                      <span className="block text-sm font-semibold">{w.label}</span>
-                      <span className="block text-[12px] text-muted">{w.sub}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <p className={sub}>{picked ? picked.lead : 'Poof runs the back office: the books, the invoices, the cash plan, the month-end close, and for shops the phone and the field. The AI does all of it up to one line: nothing lands until a person has seen it.'}</p>
-              {picked && (
-                <div className="-mt-2 mb-6">
-                  <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>
-                </div>
-              )}
-            </>
-          ) : (
-            <>
-              <h1 className="font-display text-[44px] sm:text-6xl lg:text-[84px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The evidence doesn&apos;t.</h1>
-              <p className={sub}>Nothing reached the books. Six things are waiting for you, each with <b className="text-ink font-semibold">what it found</b>. That is the whole idea: the work moves, the record does not, until you say so.</p>
-            </>
-          )}
-
-          <div className={`relative aspect-[1024/687] my-2 mb-5 border border-rule overflow-hidden bg-paper-2 ${gone ? 'is-gone' : ''}`}>
-            <Image src="/images/ledger-pad.jpg" alt="An empty pale-green ledger pad under a pool of warm light, one tick mark in the corner" fill sizes="(max-width: 780px) 100vw, 780px" className="object-cover" />
-            <Image
-              src="/images/ledger-pile.jpg"
-              alt="Six pieces of paper on a ledger pad: a crumpled supply-house receipt, a spreadsheet export, a bank statement, a deposit slip, a fuel receipt, and a technician's work order"
-              fill sizes="(max-width: 780px) 100vw, 780px" priority
-              className={`object-cover transition-[opacity,transform] duration-[900ms] ease-out ${gone ? 'opacity-0 scale-[1.03]' : 'opacity-100'}`}
-            />
-            {!vanished && (
-              <div className="absolute inset-0 flex items-end justify-center pb-7 sm:pb-9 pointer-events-none">
-                <button type="button" onClick={poof} className="poof-btn pointer-events-auto font-display text-[28px] sm:text-[34px] tracking-[-0.04em] bg-ledger-500 text-white px-10 sm:px-12 py-4 sm:py-[18px] rounded-[10px] shadow-[0_14px_40px_rgba(18,33,26,0.35)] hover:bg-ledger-600 hover:-translate-y-px transition">
-                  Poof.
-                </button>
-              </div>
-            )}
-            <div className={`absolute left-4 bottom-3.5 font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink bg-paper-2/90 px-2.5 py-1 transition-opacity duration-[400ms] delay-[600ms] ${gone ? 'opacity-100' : 'opacity-0'}`}>Gone from the desk. Nothing touched the books yet.</div>
+          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[80px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Last night, Poof did the back office.</h1>
+          <p className={sub}>{picked ? picked.lead : 'It pulled the bank, matched the bills to jobs, drafted the invoice from the tech\'s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.'}</p>
+          <div className="flex flex-wrap gap-2.5 items-center">
+            <Link href="https://app.poofai.com/register" className={btn}>Start free trial</Link>
+            {picked
+              ? <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>
+              : <Link href="/demo" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Book a demo</Link>}
           </div>
-          {!vanished && (
-            <p className="text-center text-[13px] text-muted -mt-2 mb-2">Press the button. Nothing gets written; that is the point.</p>
-          )}
-          {vanished && (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-5">
-                {EVIDENCE.map(([k, v, w]) => (
-                  <div key={k} className="bg-white border border-rule border-l-[3px] border-l-ledger-600 px-3 py-2.5 text-[13.5px]">
-                    <div className="font-semibold flex justify-between gap-2.5"><span>{k}</span><span className="font-mono font-medium tabular">{v}</span></div>
-                    <div className="text-muted mt-[3px]">{w}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 flex flex-wrap gap-2.5 items-center">
-                <a className={btn} href="#act2">See what is waiting</a>
-                {picked && <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>}
-              </div>
-            </>
-          )}
+
+          <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
+
+          {/* who are you here as: rewrites the paragraph above for the answer */}
+          <div className="mt-6" role="group" aria-labelledby="who-label">
+            <p id="who-label" className="text-[13px] text-muted mb-2">Who are you here as?</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {WHO.map((w) => (
+                <button key={w.id} type="button" onClick={() => setWho(who === w.id ? null : w.id)} aria-pressed={who === w.id}
+                  className={`text-left rounded-lg border px-3 py-2 transition-colors ${who === w.id ? 'border-ledger-600 bg-ledger-200 text-ink' : 'border-rule bg-white text-ink hover:border-ledger-600'}`}>
+                  <span className="block text-sm font-semibold">{w.label}</span>
+                  <span className="block text-[12px] text-muted">{w.sub}</span>
+                </button>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* ACT 2 */}

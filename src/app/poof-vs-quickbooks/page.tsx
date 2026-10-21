@@ -90,7 +90,7 @@ const comparisonData = [
     { name: 'Personalized Dashboard with AI Daily Briefing', poof: true, quickbooks: false },
     { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false },
     { name: 'AI Chat Folders & Multi-Session Conversations', poof: true, quickbooks: false },
-    { name: 'One Plan, Every Feature ($79/mo)', poof: true, quickbooks: false },
+    { name: 'One Plan, No Tiers ($79/mo)', poof: true, quickbooks: false },
   ]},
   { category: 'Job Costing & Close', features: [
     { name: 'Job Costing & Per-Job Profitability', poof: true, quickbooks: true },

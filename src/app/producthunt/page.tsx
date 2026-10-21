@@ -140,7 +140,7 @@ export default function ProductHuntPage() {
               <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
                 See Poof for shops
               </Link>{' '}
-              — the phone, the field link, and per-job profitability, on the same plan.
+              — the field link and per-job profitability on the same plan, and the AI receptionist as an add-on.
             </p>
           </AnimateOnScroll>
         </div>

@@ -993,7 +993,7 @@ export default function TradesShow() {
             </span>
             <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free trial</a>
             <a href="#pricing" className={`${btn} ${ghost}`}>
-              $79 a month, every feature
+              $79 a month for the plan
             </a>
           </div>
           <p className={noteCls}>

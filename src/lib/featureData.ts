@@ -666,7 +666,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "We provision the number and the voice agent for you \u2014 it is not a switch you flip yourself. The receptionist books the job; payment is taken on the invoice or on site. Customer messages are off until an owner turns them on, and go by email until the shop\u2019s Poof line is registered for business texting. The website booking form is off until you turn it on.",
+    note: "The AI receptionist (the phone number, the voice agent, triage and booking by phone, the call log) is an add-on to the $79 plan, priced separately, and we provision it for you \u2014 it is not a switch you flip yourself. The dispatch board, the Requests inbox, technician texts, and the booking form are in the plan; customer texts go from the shop\u2019s own Poof line, so without the receptionist they go by email. The receptionist books the job; payment is taken on the invoice or on site. Customer messages are off until an owner turns them on, and go by email until the shop\u2019s Poof line is registered for business texting. The website booking form is off until you turn it on.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -733,7 +733,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "Field Service & Job Handoff",
     icon: "field",
-    note: "Part of Poof for shops, alongside the AI receptionist \u2014 the same $79 plan. The technician's page needs no account and no app install \u2014 that is the point. It records times as they happen instead of tracking location, and it works wherever the phone has a signal. Payment on site works once online payments are on; the visit report reaches the customer once customer messages are on.",
+    note: "Part of Poof for shops, in the same $79 plan. (The AI receptionist is an add-on, priced separately.) The technician's page needs no account and no app install \u2014 that is the point. It records times as they happen instead of tracking location, and it works wherever the phone has a signal. Payment on site works once online payments are on; the visit report reaches the customer once customer messages are on.",
     features: [
       {
         title: "Technician Field Link",
@@ -1165,7 +1165,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What is Poof for shops?",
-    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist. It is the same one plan at $79 a month \u2014 there is no shop tier and no per-truck pricing.",
+    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist. It is the same one plan at $79 a month \u2014 there is no shop tier and no per-truck pricing. The AI receptionist is an add-on, priced separately and set up with you.",
     category: "General",
     audience: "trades"
   },
@@ -1317,7 +1317,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to all 246 features — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    answer: "Poof offers a 30-day free trial with full access to every feature in the plan — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {

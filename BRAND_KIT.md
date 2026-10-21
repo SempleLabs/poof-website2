@@ -26,7 +26,8 @@ table has carried already-fixed rows before, and a stale list repeated back read
 | Nowhere on the site | No Taxes at all | A Taxes group on `/features`, a `/taxes` product page, a Taxes row in `BackOfficeSection`, and a tax-season section on `/resources` with six new posts (the 1099 threshold, quarterly estimates, what to set aside, what your CPA needs, Texas franchise tax, the Texas property rendition). Keep the Taxes limit below. *In site PR `taxes-and-resources`, not merged yet* |
 | `ReceptionistSection`, `FieldServiceSection`, `/trades`, llms.txt, the after-hours post | "Customer texts are not built"; "the tech page takes no payment"; "a typed name, not a signature"; "5 roles, 26 permissions"; "syncs the last 30 days" | Customer messages exist, off until the owner turns them on, email until the shop's line is registered for business texting; payment on site by QR or link when online payments are on; a finger signature pad; 6 roles and 46 permissions; 90 days on the first connection, refreshed daily. *In site PR `taxes-and-resources`, not merged yet* |
 | `/resources` | Half the page still in the pre-rebrand card style; 31 posts in one grid | Rebuilt in the ledger style: tax-season deadlines first, templates, checklists, posts grouped by what the reader is trying to do. *In site PR `taxes-and-resources`, not merged yet* |
-| **Decision for Austin** — Groups 11 and 12 | The kit calls the receptionist and field link "operator-installed as part of the managed service", but poofai.com is software only and `/trades` sells them in the $79 plan. The self-serve receptionist (app PRs #239, #244) is still a draft | Decide: (a) keep operator-installed and say "we set up your phone line with you" on the site, or (b) finish self-serve first. The Board, Requests inbox, customer messages, checklists and pay-on-site are in-app features either way |
+| `/trades`, `/pricing`, featureData, llms.txt, JSON-LD, posts | The AI receptionist sold inside the $79 plan ("every feature, including the receptionist") | **Decided 2026-10-21: the AI receptionist is a separate add-on.** The site says "an add-on, priced separately, set up with you" and points to Book a demo; no price, no self-serve purchase. *In site PR `taxes-and-resources`, not merged yet* |
+| **Price to confirm** — the receptionist add-on | No price on the site | Austin to confirm the add-on price. The draft in app PR #244 (not merged; no live Stripe prices) is **$99/mo with 1,000 minutes included, then 12¢ a minute**. Put a number on the site only after he confirms it and the add-on can be bought |
 
 **Limits to keep with every new claim (the site states what it does, and never lists what it withholds):**
 - **1099s:** Poof prepares the year, the contractors' copies and the CPA summary, and walks you through the IRS upload. It does **not** e-file yet (the IRS upload file waits on the IRS template; Poof filing directly is planned for tax year 2027). Until that template exists, whoever files keys the forms into the IRS's IRIS portal from the CPA summary. No TIN matching; the TIN's format is checked.
@@ -135,7 +136,7 @@ table has carried already-fixed rows before, and a stale list repeated back read
 - (Full profile in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). They are Poof tenants like any firm's clients.)
 
 **Self-serve software (any small business):**
-- **Service shops buying the software themselves** — HVAC, plumbing, electrical and other trades on the `/trades` product page: the receptionist, the tech's job link, deposits and prepaid plans, the close, payroll and sales tax, truck stock — the same $79 plan
+- **Service shops buying the software themselves** — HVAC, plumbing, electrical and other trades on the `/trades` product page: the dispatch board, the tech's job link, deposits and prepaid plans, the close, payroll and sales tax, truck stock — the same $79 plan, with the AI receptionist as a separate add-on
 - Solo founders and freelancers tired of spreadsheet bookkeeping
 - Small business owners who dread reconciling their books each month
 - Service businesses that want invoicing + bookkeeping in one place
@@ -152,7 +153,7 @@ table has carried already-fixed rows before, and a stale list repeated back read
 **QuickBooks** is the default choice for most small businesses. Poof positions directly against QuickBooks on three axes:
 1. **Simplicity** — One flat price, no feature tiers, no accounting jargon
 2. **AI-first automation** — Poof does the work; QuickBooks gives you tools to do the work yourself
-3. **One price, everything included** — no tiers, no add-ons, no per-feature upsell. QuickBooks splits the same capability set across three plans and charges for the ones you grow into
+3. **One price, everything in one plan** — no tiers and no per-feature upsell; the AI receptionist for service shops is the one add-on, priced separately. QuickBooks splits the same capability set across three plans and charges for the ones you grow into
 
 ### Messaging Principle: Outcomes Over Features
 Always lead with what changes in the customer's life, not what the product does. The feature name can appear as a label, but the **headline should be the outcome.**
@@ -628,7 +629,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 #### 11. AI Receptionist & Dispatch (15 features)
 
-> **Availability note:** the phone receptionist is operator-installed — Poof staff provision the number and the voice agent. It is **not self-serve** yet (the self-serve PRs, app #239 and #244, are drafts); a shop owner cannot sign up and switch it on, so never show it as a button in the app. The "Poof Managed for Trades" framing is retired with the software-only site, and how the site should describe setup is an **open decision for Austin** (see the corrections table). The Board, the Requests inbox and customer messages (13–15) are in-app features. See the caveats at the end of this group.
+> **Availability note:** the phone receptionist (1–12: the number, the voice agent, triage, booking by phone, the call log, the receptionist settings) is a **separate add-on to the $79 plan, priced separately** (decided 2026-10-21). It is operator-installed — Poof staff provision the number and the voice agent — and **not self-serve** yet (the self-serve PRs, app #239 and #244, are drafts); never show it as a button in the app or as something a shop can buy online. The price is **not final**: the draft in #244 is $99/mo with 1,000 minutes included, then 12¢ a minute, and the site shows no price until Austin confirms. The Board, the Requests inbox and customer messages (13–15) are in the $79 plan; customer texts go from the shop's own Poof line (app `customer-messages.service.ts`), so a shop without the receptionist gets them by email. Technician texts go from Poof's platform number and are in the plan. See the caveats at the end of this group.
 
 1. AI phone receptionist — answers the shop's line, knows the shop's name, hours, and service area, understands the caller's problem, and books the job
 2. Deterministic safety triage — gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted "leave the building, call 911" response. No-heat below 45°F and no-cool above 95°F are emergencies too. **These are rules in code, not instructions to a language model** — the AI narrates the call, it never decides whether something is an emergency
@@ -821,11 +822,11 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 
 **One plan. Every feature. No surprises.**
 
-Poof has a single plan called **Poof Professional**. There are no tiers, no "Basic" or "Pro" distinctions, and no features locked behind upgrades. Every customer gets every feature.
+Poof has a single plan called **Poof Professional**. There are no tiers, no "Basic" or "Pro" distinctions, and no features locked behind upgrades. Every customer gets every feature in the plan. **The one add-on is the AI receptionist** for service shops, priced separately and set up with the shop (price to confirm; see Group 11). Never say "all 246 features included" or "no add-ons".
 
 | Billing | Price | Notes |
 |---|---|---|
-| Monthly | **$79/mo** | All 246 features included |
+| Monthly | **$79/mo** | Every feature in the plan; the AI receptionist is an add-on |
 | Monthly (launch special) | **$39.50/mo** | the first 3 paid months, after the 30-day trial |
 | Annual | **$790/year ($65.83/mo)** | Save $158 |
 
@@ -1260,6 +1261,15 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### October 21, 2026 — the AI receptionist is a separate add-on
+
+- **Decided by Austin:** the AI receptionist is not in the $79 plan. It is an add-on, priced
+  separately, set up with the shop. The price is to confirm (draft app PR #244: $99/mo, 1,000
+  minutes included, 12¢ a minute after; not live). The site states no price and no self-serve
+  purchase, and says "every feature in the plan" instead of "all 246 features included". The
+  count stays 246, and Group 11 marks which features are the add-on. The open decision on how to
+  describe receptionist setup is closed.
 
 ### October 21, 2026 — Taxes, and the front of the business (246 features)
 

@@ -38,10 +38,10 @@ export default function Home() {
         <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">What Poof is</p>
         <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The back office, run by AI. Signed by you.</h2>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
-          Poof is software that runs the back office for a small business. It keeps the books, sends the invoices, plans the cash, and closes the month — and for service shops it answers the phone, books the job, and carries it out to the truck and back. Every write an AI proposes waits on a card with the evidence it found, and nothing lands until a person has seen it. One plan, every feature, $79 a month.
+          Poof is software that runs the back office for a small business. It keeps the books, sends the invoices, plans the cash, and closes the month — and for service shops it answers the phone, books the job, and carries it out to the truck and back. Every write an AI proposes waits on a card with the evidence it found, and nothing lands until a person has seen it. One plan, every feature, $79 a month. The AI receptionist that answers a shop’s phone is an add-on.
         </p>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45] mt-3">
-          Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the phone, the dispatch board, and the technician&apos;s field link to the same account.
+          Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the dispatch board and the technician&apos;s field link to the same account, and the AI receptionist as an add-on, priced separately.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-6">
           <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 246 features</Link>

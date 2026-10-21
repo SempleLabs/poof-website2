@@ -25,7 +25,7 @@ export default function PricingPage() {
     'Bank statement import (CSV/PDF)',
     'Bank reconciliation',
     'Double-entry accounting',
-    '13 financial reports',
+    '14 financial reports',
     'Report drill-down (click to see journal entries)',
     'Scheduled report delivery (email, PDF/CSV)',
     'Recurring journal entry templates',
@@ -40,7 +40,11 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'What happens during the free trial?',
-      answer: 'You get full access to every feature for 30 days. Connect your bank accounts, process receipts, and see how Poof runs your back office. When the 30 days are up, your first three paid months are 50% off at $39.50/mo, then $79/mo. You can cancel anytime, including during the trial.'
+      answer: 'You get full access to every feature in the plan for 30 days. Connect your bank accounts, process receipts, and see how Poof runs your back office. When the 30 days are up, your first three paid months are 50% off at $39.50/mo, then $79/mo. You can cancel anytime, including during the trial.'
+    },
+    {
+      question: 'Is the AI receptionist included?',
+      answer: 'No. The AI receptionist that answers a service shop\'s phone and books the job is an add-on to the $79 plan, priced separately, and we set it up with you. Everything else is in the plan, including the dispatch board and the technician\'s field link. Book a demo for the receptionist\'s price.'
     },
     {
       question: 'Is my financial data secure?',
@@ -201,6 +205,10 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
+                <p className="text-sm text-slate-400 mt-4">
+                  The AI receptionist for service shops is an add-on, priced separately.{' '}
+                  <Link href="/demo" className="text-ledger-400 font-semibold hover:text-ledger-300">Book a demo</Link> for its price.
+                </p>
               </div>
 
               <Link
