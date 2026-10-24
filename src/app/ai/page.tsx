@@ -8,7 +8,7 @@ import PageHero from '@/components/PageHero'
 const MCP_URL = 'https://mcp.poofai.com/mcp'
 
 export const metadata: Metadata = {
-  title: 'Poof in Claude and ChatGPT — Ask Your AI About Your Books | Poof',
+  title: 'Poof in Claude, ChatGPT and Grok — Ask Your AI About Your Books | Poof',
   description:
     'Connect Poof to Claude or ChatGPT and ask about your books in plain words: last month’s profit, who owes you, what bills are due, which jobs made money. Read-only, follows your role, disconnect any time.',
   keywords: 'Claude connector, ChatGPT app, bookkeeping AI, MCP, ask AI about my books',
@@ -71,7 +71,7 @@ export default function AiPage() {
       <Header />
 
       <PageHero
-        title={<>Ask Claude or ChatGPT about <span className="text-ledger-600">your books</span></>}
+        title={<>Ask Claude, ChatGPT or Grok about <span className="text-ledger-600">your books</span></>}
         subtitle="Poof keeps the numbers. Connect it to the AI you already use, and ask in plain words: profit, who owes you, what’s due, which jobs made money. Read-only, and only what your role can see."
       />
 
@@ -100,7 +100,7 @@ export default function AiPage() {
               You’ll need a Poof account. You sign in to Poof the normal way, pick Allow, and you’re back in your AI.
             </p>
           </AnimateOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimateOnScroll animation="fade-up" delay={100}>
               <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 h-full">
                 <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Claude</h3>
@@ -110,6 +110,19 @@ export default function AiPage() {
                     <>Name it <b>Poof</b> and paste <code className="bg-ledger-100 text-ledger-700 px-1.5 py-0.5 rounded text-sm break-all">{MCP_URL}</code></>,
                     <>Press <b>Connect</b>, sign in to Poof, and choose <b>Allow</b>.</>,
                     <>Ask Claude about your books.</>,
+                  ]}
+                />
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={140}>
+              <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 h-full">
+                <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Grok</h3>
+                <Steps
+                  steps={[
+                    <>In Grok, open <b>Connectors</b> and add a <b>custom</b> connector.</>,
+                    <>Name it <b>Poof</b> and paste <code className="bg-ledger-100 text-ledger-700 px-1.5 py-0.5 rounded text-sm break-all">{MCP_URL}</code></>,
+                    <>If it asks for a client ID, type <b>poof</b> and leave the secret empty.</>,
+                    <>Connect, sign in to Poof, and choose <b>Allow</b>.</>,
                   ]}
                 />
               </div>

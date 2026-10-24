@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'October 13, 2026'
+const UPDATED = 'October 24, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -86,6 +86,37 @@ export default function PrivacyPolicyPage() {
               Text messaging originator opt-in data and consent will not be shared with any third parties.
             </span>
           </p>
+        </Section>
+
+        <Section title="Connecting Poof to an AI assistant (Claude, ChatGPT, Grok)">
+          <p>
+            You can connect Poof to an AI assistant you use, such as Claude, ChatGPT or Grok, so it can answer questions
+            about your books. Nothing is shared until you sign in to Poof and choose <span className="font-medium">Allow</span> for
+            a specific company.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <span className="font-medium">What is shared:</span> only the answers to the questions your assistant asks, such as
+              profit and loss, receivables and payables, open invoices and bills, job profitability, the cash plan, the month-end
+              close status, fixed assets and loans, and approval cards waiting for you. It is limited to what your role in that
+              company can see. Customer and vendor names are replaced with codes, and personal details such as email addresses,
+              phone numbers, street addresses and tax IDs are removed before anything leaves Poof.
+            </li>
+            <li>
+              <span className="font-medium">Who receives it:</span> the AI assistant you connected, which handles it under its own
+              terms and privacy policy. The connection is read-only: the assistant cannot change your books, move money or
+              approve anything.
+            </li>
+            <li>
+              <span className="font-medium">What we keep:</span> a record of each request (which tool, when, how long it took and
+              how many items were redacted), not the content of your conversation. Sign-in tokens are stored only in a hashed
+              form; access tokens last one hour and refresh tokens 60 days.
+            </li>
+            <li>
+              <span className="font-medium">Your controls:</span> disconnect any time in Poof under Settings → Chat apps → AI
+              assistants, or from the assistant itself. Access also ends if you are removed from the company.
+            </li>
+          </ul>
         </Section>
 
         <Section title="Cookies &amp; tracking">
