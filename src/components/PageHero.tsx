@@ -4,7 +4,7 @@ interface PageHeroProps {
   children?: React.ReactNode
 }
 
-/** Page opener: type on paper. No particles, no parallax; the one animation on the site is the homepage vanish. */
+/** Page opener: type on paper. No particles, no parallax; the one animation on the site is the homepage overnight run. */
 export default function PageHero({ title, subtitle, children }: PageHeroProps) {
   return (
     <section className="relative pt-32 pb-16 bg-paper">

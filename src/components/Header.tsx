@@ -18,6 +18,7 @@ export default function Header() {
   const navLinks = [
     { href: '/trades', label: 'For shops' },
     { href: '/features', label: 'Features' },
+    { href: '/taxes', label: 'Taxes' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/how-it-works', label: 'How it Works' },
     { href: '/resources', label: 'Resources' },

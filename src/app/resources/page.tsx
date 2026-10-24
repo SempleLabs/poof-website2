@@ -1,17 +1,18 @@
 import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CtaSection from '@/components/CtaSection'
 import Link from 'next/link'
-import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-function getBlogPosts() {
+type Post = { slug: string; title: string; excerpt: string; category: string; readTime: string; date: string }
+
+function getBlogPosts(): Post[] {
   const blogDir = path.join(process.cwd(), 'content', 'blog')
   if (!fs.existsSync(blogDir)) return []
-
   return fs.readdirSync(blogDir)
     .filter(file => file.endsWith('.mdx'))
     .map(file => {
@@ -30,146 +31,141 @@ function getBlogPosts() {
 }
 
 export const metadata: Metadata = {
-  title: 'Resources - Small Business Bookkeeping Guides | Poof',
-  description: 'Free resources for small business bookkeeping. Guides, templates, and tips to help you manage your finances better.',
-  keywords: 'small business bookkeeping guides, financial templates, accounting resources, bookkeeping tips',
+  title: 'Resources: Tax Season Guides, Chart of Accounts Templates, Checklists | Poof',
+  description: 'Free small business bookkeeping and tax resources: the 2026 tax deadlines, 1099 and estimated tax guides, chart of accounts templates for twelve trades, and checklists written by a controller. No email required.',
+  keywords: 'small business tax deadlines 2027, 1099 threshold 2026, quarterly estimated taxes, chart of accounts template, bookkeeping checklist',
   alternates: {
     canonical: 'https://www.poofai.com/resources',
   },
   openGraph: {
-    title: 'Poof Resources — Small Business Bookkeeping Guides',
+    title: 'Poof Resources: tax season, templates, checklists',
     description:
-      'Free guides and templates on AI bookkeeping, automating your finances, taxes, and keeping clean books for your small business.',
+      'The 2026 tax deadlines, 1099 and estimated tax guides, chart of accounts templates by trade, and checklists written by a controller. No email required.',
     url: 'https://www.poofai.com/resources',
     siteName: 'Poof',
     type: 'website',
   },
 }
 
+const eyebrow = 'font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3'
+const h2 = 'font-display text-3xl sm:text-4xl leading-[1.05] tracking-[-0.035em] text-ink mb-3 text-balance'
+const lede = 'text-[17px] text-muted max-w-[62ch] leading-relaxed mb-7'
+
+// Tax year 2026, filed in 2027. Dates that fall on a weekend are shown on the business day they move to.
+const deadlines = [
+  { date: 'Jan 15', what: 'Fourth-quarter estimated tax for 2026', who: 'Owners of pass-throughs, on a 1040-ES' },
+  { date: 'Feb 1', what: '1099-NEC and W-2s to the IRS and to the people you paid', who: 'Anyone who paid a contractor $2,000 or more in 2026' },
+  { date: 'Mar 15', what: 'S-corp (1120-S) and partnership (1065) returns, or the extension', who: 'S-corps and multi-member LLCs' },
+  { date: 'Apr 15', what: 'Schedule C and C-corp returns, first 2027 estimate, Texas property rendition', who: 'Sole proprietors, single-member LLCs, C-corps' },
+  { date: 'May 17', what: 'Texas franchise tax report (May 15 is a Saturday)', who: 'Texas LLCs and corporations' },
+]
+
+// Articles by what the reader is trying to do. Chart of accounts posts live with their templates above.
+const topics: { title: string; blurb: string; slugs: string[] }[] = [
+  {
+    title: 'Taxes and year end',
+    blurb: 'What to have ready, what changed for 2026, and what to set aside.',
+    slugs: ['1099-threshold-2026', 'quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
+  },
+  {
+    title: 'Leaving QuickBooks',
+    blurb: 'The 2026 prices, the alternatives, and the bank rule that keeps posting.',
+    slugs: ['quickbooks-price-increase-2026', 'quickbooks-too-expensive-alternatives', 'best-quickbooks-alternatives-small-business', 'quickbooks-bank-rules-auto-post', 'mercury-books-vs-poof'],
+  },
+  {
+    title: 'Running a service shop',
+    blurb: 'Job margin, the trade guides, and the calls you miss after hours.',
+    slugs: ['hvac-bookkeeping-guide', 'plumbing-bookkeeping-guide', 'electrical-contractor-bookkeeping-guide', 'hvac-per-job-profitability', 'dealer-financing-job-margin', 'after-hours-calls-trade-shops'],
+  },
+  {
+    title: 'AI and your books',
+    blurb: 'What AI should and should not do to a ledger, and a close in five days.',
+    slugs: ['should-ai-post-to-your-books', 'ai-bookkeeping-small-business', 'do-i-need-bookkeeper-or-ai', 'how-to-automate-small-business-bookkeeping', 'close-your-books-in-five-days'],
+  },
+  {
+    title: 'Getting started',
+    blurb: 'A new LLC, a first chart of accounts, and payouts that never match.',
+    slugs: ['how-to-set-up-bookkeeping-new-llc', 'ecommerce-bookkeeping-stripe-shopify-fees'],
+  },
+]
+
+const templates = [
+  { trade: 'HVAC', accounts: 49, href: '/downloads/hvac-chart-of-accounts-template.csv', guide: '/blog/hvac-chart-of-accounts' },
+  { trade: 'Plumbing', accounts: 58, href: '/downloads/plumbing-chart-of-accounts-template.csv', guide: '/blog/plumbing-chart-of-accounts' },
+  { trade: 'Electrical', accounts: 57, href: '/downloads/electrical-chart-of-accounts-template.csv', guide: '/blog/electrical-chart-of-accounts' },
+  { trade: 'Roofing', accounts: 57, href: '/downloads/roofing-chart-of-accounts-template.csv', guide: '/blog/roofing-chart-of-accounts' },
+  { trade: 'Pest control', accounts: 54, href: '/downloads/pest-control-chart-of-accounts-template.csv', guide: '/blog/pest-control-chart-of-accounts' },
+  { trade: 'Landscaping', accounts: 61, href: '/downloads/landscaping-chart-of-accounts-template.csv', guide: '/blog/landscaping-chart-of-accounts' },
+  { trade: 'Garage door', accounts: 54, href: '/downloads/garage-door-chart-of-accounts-template.csv', guide: '/blog/garage-door-chart-of-accounts' },
+  { trade: 'Pool service', accounts: 53, href: '/downloads/pool-service-chart-of-accounts-template.csv', guide: '/blog/pool-service-chart-of-accounts' },
+  { trade: 'General contractor', accounts: 64, href: '/downloads/general-contractor-chart-of-accounts-template.csv', guide: '/blog/general-contractor-chart-of-accounts' },
+  { trade: 'Restoration', accounts: 60, href: '/downloads/restoration-chart-of-accounts-template.csv', guide: '/blog/restoration-chart-of-accounts' },
+  { trade: 'Solar installer', accounts: 68, href: '/downloads/solar-installer-chart-of-accounts-template.csv', guide: '/blog/solar-installer-chart-of-accounts' },
+  { trade: 'Cleaning', accounts: 62, href: '/downloads/cleaning-company-chart-of-accounts-template.csv', guide: '/blog/cleaning-company-chart-of-accounts' },
+]
+
+const downloads = [
+  { title: 'Year-End Package for Your CPA', type: 'Checklist', description: 'Everything your CPA asks for in January, in the order they ask, with the questions answered from your books.', href: '/guides/year-end-cpa-package-checklist.html' },
+  { title: '1099 Vendor Tracker', type: 'CSV', description: 'One row per contractor: W-9 on file, how you paid them, the year’s total, and whether they cross $2,000.', href: '/downloads/1099-vendor-tracker-2026.csv', download: true },
+  { title: 'Monthly Bookkeeping Checklist', type: 'Checklist', description: 'The tasks that keep a month from getting away from you, in the order they depend on each other.', href: '/guides/monthly-bookkeeping-checklist.html' },
+  { title: 'Year-End Closing Procedures', type: 'Guide', description: 'Closing the fiscal year: the reconciliations, the adjustments, and the lock.', href: '/guides/year-end-closing-procedures.html' },
+  { title: 'Expense Categorization Cheat Sheet', type: 'Cheat sheet', description: 'Common business expenses, the Schedule C line each lands on, and how much is deductible.', href: '/guides/expense-categorization-cheat-sheet.html' },
+  { title: 'Small Business Bookkeeping Setup Guide', type: 'Guide', description: 'Setting up the books for a new business, from the bank account to the first close.', href: '/guides/small-business-bookkeeping-setup-guide.html' },
+]
+
+const productPages = [
+  { title: 'Taxes', description: 'The calendar, the reserve, the four estimates, and a January package for your CPA.', href: '/taxes' },
+  { title: 'Poof for shops', description: 'The phone answered, the job on the board, the tech closing it from a text.', href: '/trades' },
+  { title: 'The close', description: 'Seventeen tasks with due dates, thirteen ticked by the books themselves.', href: '/close' },
+  { title: 'Autopilot with limits', description: 'AI that posts inside a ceiling and a history check, and stops itself when wrong.', href: '/autopilot' },
+  { title: 'Poof vs QuickBooks', description: 'Against QuickBooks Plus at $140, row by row.', href: '/poof-vs-quickbooks' },
+  { title: 'Security', description: 'How Poof protects the books and every AI call.', href: '/security' },
+]
+
 export default async function ResourcesPage() {
-  const blogPosts = getBlogPosts()
-  const templates = [
-    { trade: 'HVAC', accounts: 49, href: '/downloads/hvac-chart-of-accounts-template.csv', guide: '/blog/hvac-chart-of-accounts' },
-    { trade: 'Plumbing', accounts: 58, href: '/downloads/plumbing-chart-of-accounts-template.csv', guide: '/blog/plumbing-chart-of-accounts' },
-    { trade: 'Electrical', accounts: 57, href: '/downloads/electrical-chart-of-accounts-template.csv', guide: '/blog/electrical-chart-of-accounts' },
-    { trade: 'Roofing', accounts: 57, href: '/downloads/roofing-chart-of-accounts-template.csv', guide: '/blog/roofing-chart-of-accounts' },
-    { trade: 'Pest control', accounts: 54, href: '/downloads/pest-control-chart-of-accounts-template.csv', guide: '/blog/pest-control-chart-of-accounts' },
-    { trade: 'Landscaping', accounts: 61, href: '/downloads/landscaping-chart-of-accounts-template.csv', guide: '/blog/landscaping-chart-of-accounts' },
-    { trade: 'Garage door', accounts: 54, href: '/downloads/garage-door-chart-of-accounts-template.csv', guide: '/blog/garage-door-chart-of-accounts' },
-    { trade: 'Pool service', accounts: 53, href: '/downloads/pool-service-chart-of-accounts-template.csv', guide: '/blog/pool-service-chart-of-accounts' },
-    { trade: 'General contractor', accounts: 64, href: '/downloads/general-contractor-chart-of-accounts-template.csv', guide: '/blog/general-contractor-chart-of-accounts' },
-    { trade: 'Restoration', accounts: 60, href: '/downloads/restoration-chart-of-accounts-template.csv', guide: '/blog/restoration-chart-of-accounts' },
-    { trade: 'Solar installer', accounts: 68, href: '/downloads/solar-installer-chart-of-accounts-template.csv', guide: '/blog/solar-installer-chart-of-accounts' },
-    { trade: 'Cleaning', accounts: 62, href: '/downloads/cleaning-company-chart-of-accounts-template.csv', guide: '/blog/cleaning-company-chart-of-accounts' },
-  ]
-
-  const guides = [
-    {
-      title: 'Small Business Bookkeeping Setup Guide',
-      description: 'Step-by-step guide to setting up bookkeeping for your new business.',
-      type: 'Guide',
-      href: '/guides/small-business-bookkeeping-setup-guide.html',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Expense Categorization Cheat Sheet',
-      description: 'Quick reference for properly categorizing common business expenses.',
-      type: 'Cheat Sheet',
-      href: '/guides/expense-categorization-cheat-sheet.html',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Monthly Bookkeeping Checklist',
-      description: 'Never miss important bookkeeping tasks with this monthly checklist.',
-      type: 'Checklist',
-      href: '/guides/monthly-bookkeeping-checklist.html',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Year-End Closing Procedures',
-      description: 'Complete guide to closing your books at the end of the fiscal year.',
-      type: 'Guide',
-      href: '/guides/year-end-closing-procedures.html',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-      ),
-    },
-  ]
-
-  const quickLinks = [
-    {
-      title: 'Poof for shops',
-      description: 'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L.',
-      href: '/trades',
-      linkText: 'See Poof for shops →',
-    },
-    {
-      title: 'The close',
-      description: 'Seventeen tasks with due dates, thirteen ticked by the books themselves, and a five-day guarantee.',
-      href: '/close',
-      linkText: 'See the close →',
-    },
-    {
-      title: 'Autopilot with limits',
-      description: 'AI that posts to your books on its own, inside a ceiling and a history check, and stops itself when it is wrong.',
-      href: '/autopilot',
-      linkText: 'See the gates →',
-    },
-    {
-      title: 'How Poof works',
-      description: 'Connect, the AI proposes, you approve, the month closes as a record.',
-      href: '/how-it-works',
-      linkText: 'Four steps →',
-    },
-    {
-      title: 'All 172 Features',
-      description: 'Explore every feature included in your Poof subscription.',
-      href: '/features',
-      linkText: 'View features →',
-    },
-    {
-      title: 'Poof vs QuickBooks',
-      description: 'Against QuickBooks Plus at $140, and what a bank rule costs you.',
-      href: '/poof-vs-quickbooks',
-      linkText: 'Compare →',
-    },
-    {
-      title: 'Security',
-      description: 'Learn how Poof protects your financial data.',
-      href: '/security',
-      linkText: 'Read more →',
-    },
-  ]
+  const posts = getBlogPosts()
+  const bySlug = new Map(posts.map((p) => [p.slug, p]))
+  const placed = new Set(topics.flatMap((t) => t.slugs))
+  const more = posts.filter((p) => !placed.has(p.slug) && !p.slug.endsWith('chart-of-accounts'))
+  const groups = [
+    ...topics.map((t) => ({ ...t, posts: t.slugs.map((s) => bySlug.get(s)).filter((p): p is Post => !!p) })),
+    ...(more.length ? [{ title: 'More articles', blurb: 'Everything else from the blog.', slugs: [], posts: more }] : []),
+  ].filter((g) => g.posts.length)
 
   return (
-    <main id="main-content" className="min-h-screen">
+    <main id="main-content" className="min-h-screen bg-paper">
       <Header />
 
       <PageHero
         title={<>Resources, <span className="text-ledger-600">no email required.</span></>}
-        subtitle="Chart of accounts templates by trade, guides written by a controller, and the posts people actually find us by. Download, read, import."
+        subtitle="The 2026 tax deadlines and what changed, chart of accounts templates for twelve trades, and checklists written by a controller. Download, read, import."
       />
 
-      {/* Chart of accounts templates */}
-      <section className="py-16">
+      {/* Tax season: dated, so it is the first thing on the page from October to May */}
+      <section className="py-14 border-t border-rule" id="tax-season">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">Chart of accounts templates</p>
-          <h2 className="font-display text-3xl sm:text-4xl leading-[1.05] tracking-[-0.035em] text-ink mb-3 text-balance">A chart of accounts built for your trade, ready to import.</h2>
-          <p className="text-[17px] text-muted max-w-[62ch] leading-relaxed mb-7">Numbered accounts with types and subtypes in the columns QuickBooks Online and Xero expect, and a one-line reason each account exists. Each comes with a guide that walks the structure.</p>
+          <p className={eyebrow}>Tax season · the 2026 tax year, filed in 2027</p>
+          <h2 className={h2}>Five dates between now and May, and what each one needs.</h2>
+          <p className={lede}>The 1099 threshold moved from $600 to $2,000 for payments made in 2026, so January will look different. Here is the calendar for a calendar-year business, and the guides behind each date.</p>
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border-t border-ink">
+            {deadlines.map((d) => (
+              <li key={d.date} className="py-5 pr-5 border-b border-rule lg:border-b-0">
+                <p className="font-display text-[28px] leading-none tracking-[-0.03em] text-ink tabular">{d.date}</p>
+                <p className="font-semibold text-ink text-[15px] mt-2 leading-snug">{d.what}</p>
+                <p className="text-[13.5px] text-muted mt-1">{d.who}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="text-[13px] text-muted mt-4 max-w-[70ch]">General information, not tax advice. Fiscal-year businesses and states other than Texas have their own dates; your CPA has the final word. Poof keeps this calendar for your business, with who files each item. <Link href="/taxes" className="text-ledger-600 font-semibold hover:text-ledger-700">See Taxes in Poof</Link></p>
+        </div>
+      </section>
+
+      {/* Chart of accounts templates */}
+      <section className="py-14 border-t border-rule">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className={eyebrow}>Chart of accounts templates</p>
+          <h2 className={h2}>A chart of accounts built for your trade, ready to import.</h2>
+          <p className={lede}>Numbered accounts with types and subtypes in the columns QuickBooks Online and Xero expect, and a one-line reason each account exists. Each comes with a guide that walks the structure.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-ink">
             {templates.map((t) => (
               <div key={t.trade} className="py-5 pr-6 border-b border-rule">
@@ -185,122 +181,77 @@ export default async function ResourcesPage() {
         </div>
       </section>
 
-      {/* Downloadable Guides */}
-      <section className="py-24 bg-white">
+      {/* Checklists and downloads */}
+      <section className="py-14 border-t border-rule">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-4">Free Guides &amp; Templates</h2>
-              <p className="text-xl text-slate-600">Practical resources to improve your bookkeeping</p>
-            </div>
-          </AnimateOnScroll>
+          <p className={eyebrow}>Checklists and downloads</p>
+          <h2 className={h2}>Print it, fill it in, hand it to your CPA.</h2>
+          <p className={lede}>Written by a former controller, for owners who keep their own books and the bookkeepers who keep them for clients.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-ink">
+            {downloads.map((g) => (
+              <div key={g.title} className="py-5 pr-6 border-b border-rule">
+                <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600">{g.type}</p>
+                <h3 className="font-semibold text-ink text-[17px] mt-1">{g.title}</h3>
+                <p className="text-[15px] text-muted mt-1 leading-[1.5] max-w-[46ch]">{g.description}</p>
+                {g.download ? (
+                  <a href={g.href} download className="inline-block text-sm text-ledger-600 font-semibold hover:text-ledger-700 mt-2">Download</a>
+                ) : (
+                  <a href={g.href} target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-ledger-600 font-semibold hover:text-ledger-700 mt-2">Open</a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {guides.map((guide, index) => (
-              <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
-                <div className="bg-white border border-slate-200 rounded-xl p-8 flex gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-ledger-100 rounded-xl flex items-center justify-center text-ledger-600">
-                    {guide.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold font-display text-slate-900 mb-2">{guide.title}</h3>
-                    <p className="text-slate-600 mb-3">{guide.description}</p>
-                    <div className="text-sm text-slate-500 mb-4">
-                      Free {guide.type}
-                    </div>
-                    <a
-                      href={guide.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 rounded-lg bg-ledger-500 text-white text-sm font-semibold hover:bg-ledger-600 transition-colors"
-                    >
-                      View Guide →
-                    </a>
-                  </div>
+      {/* Articles, by what the reader is trying to do */}
+      <section className="py-14 border-t border-rule" id="articles">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className={eyebrow}>From the blog · {posts.length} articles</p>
+          <h2 className={h2}>Articles, by what you are trying to do.</h2>
+          <div className="mt-8 space-y-12">
+            {groups.map((g) => (
+              <div key={g.title} className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-x-10 gap-y-3">
+                <div>
+                  <h3 className="font-display text-2xl tracking-[-0.02em] text-ink">{g.title}</h3>
+                  <p className="text-[15px] text-muted mt-1 max-w-[34ch]">{g.blurb}</p>
                 </div>
-              </AnimateOnScroll>
+                <ul className="border-t border-ink">
+                  {g.posts.map((p) => (
+                    <li key={p.slug} className="border-b border-rule">
+                      <Link href={`/blog/${p.slug}`} className="group grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-x-6 gap-y-1 py-4">
+                        <span>
+                          <span className="block font-semibold text-ink text-[16.5px] leading-snug group-hover:text-ledger-700">{p.title}</span>
+                          <span className="block text-[14.5px] text-muted mt-1 leading-[1.5] line-clamp-2 max-w-[78ch]">{p.excerpt}</span>
+                        </span>
+                        <span className="font-mono text-xs text-muted whitespace-nowrap sm:pt-1">{p.readTime}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Blog Articles */}
-      <section className="py-24 bg-slate-50">
+      {/* Product pages */}
+      <section className="py-14 border-t border-rule">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-4">From the Blog</h2>
-              <p className="text-xl text-slate-600">Articles on AI bookkeeping, small business finance, and more</p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <AnimateOnScroll key={post.slug} animation="fade-up" delay={100 + index * 80}>
-                <Link href={`/blog/${post.slug}`} className="block bg-white border border-slate-200 rounded-xl p-8 h-full hover:border-ledger-300 transition-colors">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-ledger-100 text-ledger-600">
-                      {post.category}
-                    </span>
-                    <span className="text-sm text-slate-500">{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold font-display text-slate-900 mb-2">{post.title}</h3>
-                  <p className="text-slate-600 mb-4">{post.excerpt}</p>
-                  <span className="text-ledger-600 font-medium text-sm">Read article →</span>
-                </Link>
-              </AnimateOnScroll>
+          <p className={eyebrow}>How Poof does it</p>
+          <h2 className={h2}>The same work, done by the books and signed by you.</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-ink mt-6">
+            {productPages.map((l) => (
+              <Link key={l.href} href={l.href} className="group py-5 pr-6 border-b border-rule">
+                <h3 className="font-semibold text-ink text-[17px] group-hover:text-ledger-700">{l.title}</h3>
+                <p className="text-[15px] text-muted mt-1 leading-[1.5] max-w-[44ch]">{l.description}</p>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Quick Links */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-4">Learn More About Poof</h2>
-              <p className="text-xl text-slate-600">Explore our product pages for detailed information</p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
-              <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 80}>
-                <Link href={link.href} className="block bg-white border border-slate-200 rounded-xl p-6 h-full">
-                  <h3 className="text-lg font-bold font-display text-slate-900 mb-2">{link.title}</h3>
-                  <p className="text-slate-600 text-sm mb-4">{link.description}</p>
-                  <span className="text-ledger-600 font-medium text-sm">{link.linkText}</span>
-                </Link>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <AnimateOnScroll animation="fade-up">
-            <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Try Poof?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Start your 30-day free trial. Then $39.50 a month for your first three paid months, and $79 after — every feature included.
-            </p>
-            <Link
-              href="https://app.poofai.com/register"
-              className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
-            >
-              Start free trial →
-            </Link>
-            <p className="text-white/80 text-sm mt-4">
-              30-day free trial &bull; Cancel anytime
-            </p>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
+      <CtaSection />
       <Footer />
     </main>
   )

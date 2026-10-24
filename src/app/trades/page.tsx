@@ -17,14 +17,14 @@ import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Poof for shops — the back office for HVAC, plumbing, and electrical | Poof',
   description:
-    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. One plan, every feature: 30 days free, then $39.50/mo for three months, then $79/mo.',
+    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. One plan at $79/mo after 30 days free and three half-price months. The AI receptionist is an add-on.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
     title: 'Poof for shops — the back office for HVAC, plumbing, and electrical',
     description:
-      'From the 9:40pm call to the per-job P&L, with a person on every entry. $79 a month, every feature.',
+      'From the 9:40pm call to the per-job P&L, with a person on every entry. $79 a month; the AI receptionist is an add-on.',
     url: 'https://www.poofai.com/trades',
     siteName: 'Poof',
     type: 'website',
@@ -40,7 +40,7 @@ const loop = [
   {
     number: '2',
     title: 'The tech closes the job from a text',
-    body: 'The assigned tech gets their job as a link. No account, no app to install. On my way, arrived, parts used, photos, a typed name at the end. The office reviews it before anything reaches the customer.',
+    body: 'The assigned tech gets their job as a link. No account, no app to install. On my way, arrived, parts used, photos, the customer’s signature at the end. The office reviews it before anything reaches the customer.',
   },
   {
     number: '3',
@@ -64,7 +64,7 @@ const builtFor = [
   {
     title: 'Deposits and plans that stay unearned',
     body: 'A deposit on an install is held as a liability from the day it lands and released to that job\'s revenue when the job is done. Prepaid maintenance plans are deferred at the sale and earned per completed visit.',
-    href: '/features#unearned',
+    href: '/features#job-costing-month-end-close-and-payments',
     cta: 'See how it works',
   },
   {
@@ -78,15 +78,15 @@ const builtFor = [
 const faqs = [
   {
     q: 'What does Poof for shops cost?',
-    a: 'The same as every other Poof account: $79 a month, all 172 features. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. Compare that to the field-service tools quoted per technician per month.',
+    a: 'The same as every other Poof account: $79 a month for every feature in the plan, including the dispatch board, the technician\'s field link, and per-job profitability. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. The AI receptionist that answers your phone is an add-on, priced separately and set up with you; book a demo for its price.',
   },
   {
-    q: 'Is the AI receptionist something I turn on myself?',
-    a: 'Not yet. The phone number and the voice agent are provisioned for you as part of setting up Poof for shops; there is no button in the app for a shop owner to flip. If that matters to your timeline, say so when you start a trial and we will tell you where it stands.',
+    q: 'Is the AI receptionist part of the $79 plan?',
+    a: 'No. The receptionist is an add-on, priced separately, and we set it up with you: the phone number and the voice agent are provisioned for your shop, and there is no button in the app for an owner to flip yet. Book a demo and we will walk you through it and its price.',
   },
   {
     q: 'Does the AI text my customers?',
-    a: 'No. Customer-facing texts — booking confirmations, reminders, "your tech is on the way" — are not built. The dispatched technician is texted their job link; that part is built and running. Those two are different things and we do not blur them. On the books side, no ledger rule can send anything to a customer either: invoices and credit notes are always a person\'s decision.',
+    a: 'Only if you turn it on. Customer messages (a booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way") are off until an owner or admin switches them on. They go by email until your Poof line is registered for business texting, they stay quiet from 9pm to 8am, and STOP works. The dispatched technician is always texted their job link. On the books side, no ledger rule can send anything to a customer: invoices and credit notes are always a person\'s decision.',
   },
   {
     q: 'Do I have to switch off Jobber or Housecall Pro?',
@@ -98,7 +98,7 @@ const faqs = [
   },
   {
     q: 'Does the technician need an account or an app?',
-    a: 'Neither, and that is the point — it is the answer to "my guys will not use another app." The tech taps a link in a text. It does no GPS tracking, takes no payment on site, records a typed name and timestamp rather than a drawn signature, and needs a signal; there is no offline mode. Jobsite photos are opted into the customer invoice one photo at a time, and the supply-house receipt showing your cost defaults to not printing.',
+    a: 'Neither, and that is the point — it is the answer to "my guys will not use another app." The tech taps a link in a text. It records on my way, arrived, and complete when they happen rather than tracking location, takes the customer\'s signature with a finger, can take card or bank by QR code or pay link once online payments are on (cash becomes a card the office approves), and needs a signal. Jobsite photos are opted into the customer invoice one photo at a time, and the supply-house receipt showing your cost defaults to not printing.',
   },
   {
     q: 'Who is this actually for?',
@@ -207,9 +207,10 @@ export default function TradesPage() {
               One plan. $79 a month.
             </h2>
             <p className="text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Every feature, including the receptionist, the field loop, and per-job profitability. It does not
+              Every feature in the plan, including the dispatch board, the field loop, and per-job profitability. It does not
               go up when you add a truck or a tech — the field-service tools shops compare us to are priced per
-              technician per month. Thirty days free, then $39.50 a month for your first three paid months.
+              technician per month. Thirty days free, then $39.50 a month for your first three paid months. The AI
+              receptionist is an add-on, priced separately and set up with you.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>

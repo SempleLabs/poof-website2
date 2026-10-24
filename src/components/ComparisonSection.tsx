@@ -29,7 +29,7 @@ const features = [
   { name: 'AI Depreciation & Recurring Entry Setup', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Personalized Dashboard with AI Daily Briefing', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Command Bar (Cmd+K)', poof: true, quickbooks: false, xero: false, freshbooks: false },
-  { name: 'Team Roles (5 roles, 26 permissions)', poof: true, quickbooks: false, xero: true, freshbooks: true },
+  { name: 'Team Roles (6 roles, 46 permissions)', poof: true, quickbooks: false, xero: true, freshbooks: true },
   { name: 'Audit Logs with PII Masking', poof: true, quickbooks: false, xero: false, freshbooks: false },
   { name: 'Two-Factor Auth (TOTP)', poof: true, quickbooks: true, xero: true, freshbooks: true },
   { name: 'AI Chat Folders & Multi-Session Conversations', poof: true, quickbooks: false, xero: false, freshbooks: false },

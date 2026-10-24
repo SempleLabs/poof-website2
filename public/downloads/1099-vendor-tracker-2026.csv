@@ -1,0 +1,5 @@
+Vendor (as paid),Legal name on W-9,W-9 tax classification,TIN on file (Y/N),W-9 received (date),Consented to electronic 1099 (Y/N),Paid by check / ACH / cash / Zelle in 2026,Paid by card / PayPal / Venmo business in 2026 (on their 1099-K - do not count),Reportable total,Gets a 1099? ($2000+ and not a corporation),Form and box,Notes
+EXAMPLE - Rivera Electric,Rivera Electric LLC,Individual/sole proprietor or single-member LLC,Y,2026-03-02,Y,2450.00,0.00,=G2,"=IF(AND(I2>=2000,ISERROR(SEARCH(""corporation"",C2))),""Yes"",""No"")",1099-NEC box 1,Sub on two installs
+EXAMPLE - Lone Star Drywall,Lone Star Drywall Inc,S corporation,Y,2026-01-15,N,8200.00,0.00,=G3,"=IF(AND(I3>=2000,ISERROR(SEARCH(""corporation"",C3))),""Yes"",""No"")",,Corporation: no 1099 (legal and medical services are the exceptions)
+EXAMPLE - Office cleaning,Maria Lopez,Individual/sole proprietor or single-member LLC,N,,N,1800.00,600.00,=G4,"=IF(AND(I4>=2000,ISERROR(SEARCH(""corporation"",C4))),""Yes"",""No"")",,Under $2000 by check; the card payments are on her 1099-K. Still get the W-9
+,,,,,,,,,,,

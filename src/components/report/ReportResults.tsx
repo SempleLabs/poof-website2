@@ -239,7 +239,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
           Want to improve your Spend Score?
         </h3>
         <p className="text-ledger-200 mb-6 max-w-xl mx-auto">
-          Poof tracks your score automatically — every transaction, every day. AI categorization, reconciliation, invoicing, budgets, forecasts, and 13 financial reports — all for $79/mo.
+          Poof tracks your score automatically — every transaction, every day. AI categorization, reconciliation, invoicing, budgets, forecasts, and 14 financial reports — all for $79/mo.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
@@ -252,7 +252,7 @@ export default function ReportResults({ report }: ReportResultsProps) {
             href="/features"
             className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
           >
-            See All 172 Features
+            See All 246 Features
           </Link>
         </div>
       </div>

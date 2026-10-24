@@ -25,12 +25,12 @@ export default function PricingPage() {
     'Bank statement import (CSV/PDF)',
     'Bank reconciliation',
     'Double-entry accounting',
-    '13 financial reports',
+    '14 financial reports',
     'Report drill-down (click to see journal entries)',
     'Scheduled report delivery (email, PDF/CSV)',
     'Recurring journal entry templates',
     'Accrual & cash basis toggle',
-    'Team roles (5 roles, 26 permissions)',
+    'Team roles (6 roles, 46 permissions)',
     'Two-factor authentication',
     'AI budgeting & cash flow forecasting',
     'Personalized dashboard with AI daily briefing',
@@ -40,7 +40,11 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'What happens during the free trial?',
-      answer: 'You get full access to every feature for 30 days. Connect your bank accounts, process receipts, and see how Poof runs your back office. When the 30 days are up, your first three paid months are 50% off at $39.50/mo, then $79/mo. You can cancel anytime, including during the trial.'
+      answer: 'You get full access to every feature in the plan for 30 days. Connect your bank accounts, process receipts, and see how Poof runs your back office. When the 30 days are up, your first three paid months are 50% off at $39.50/mo, then $79/mo. You can cancel anytime, including during the trial.'
+    },
+    {
+      question: 'Is the AI receptionist included?',
+      answer: 'No. The AI receptionist that answers a service shop\'s phone and books the job is an add-on to the $79 plan, priced separately, and we set it up with you. Everything else is in the plan, including the dispatch board and the technician\'s field link. Book a demo for the receptionist\'s price.'
     },
     {
       question: 'Is my financial data secure?',
@@ -56,11 +60,11 @@ export default function PricingPage() {
     },
     {
       question: 'How does Poof compare to QuickBooks?',
-      answer: 'One price, every feature. The fair comparison is QuickBooks Plus at $140/mo — the tier that carries job costing, budgets, and comprehensive reports — not Simple Start at $38/mo, which is single-user and can\'t do this work. Poof is $79/mo for all of it, 44% less than Plus, plus things QuickBooks doesn\'t offer at any tier: a built-in AI assistant that records payments, creates invoices, and generates reports through conversation, AI budgeting, cash flow forecasting, auto-reconciliation, and recurring charge detection. One plan, no tiers. (QuickBooks pricing verified August 2026.)'
+      answer: 'One price, every feature. The fair comparison is QuickBooks Plus at $140/mo — the tier that carries job costing, budgets, and comprehensive reports — not Simple Start at $38/mo, which is single-user and can\'t do this work. Poof is $79/mo for all of it, 44% less than Plus, plus an approvals inbox where every AI change waits for a person, a 12-month cash forecast with confidence bands, auto-reconciliation, and the tax calendar, reserve, and year-end CPA package. One plan, no tiers. (QuickBooks pricing verified August 2026.)'
     },
     {
       question: 'What reports can I generate?',
-      answer: 'Poof generates 13 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, and Budget vs Actual. Toggle between accrual and cash basis, choose your date range, and export in seconds.'
+      answer: 'Poof generates 14 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. Toggle between accrual and cash basis, choose your date range, and export in seconds.'
     },
     {
       question: 'Do you integrate with my existing tools?',
@@ -68,7 +72,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses typically runs $15–$140/month depending on features and tier. As of August 2026, QuickBooks starts at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140 — and Plus is the tier you need for job costing and budgets. Poof starts at $39.50/month (launch special, then $79/month) with all 172 features included in one plan — no tiers or add-ons.'
+      answer: 'Bookkeeping software for small businesses typically runs $15–$140/month depending on features and tier. As of August 2026, QuickBooks starts at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140 — and Plus is the tier you need for job costing and budgets. Poof starts at $39.50/month (launch special, then $79/month) with all 246 features included in one plan — no tiers or add-ons.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
@@ -201,6 +205,10 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
+                <p className="text-sm text-slate-400 mt-4">
+                  The AI receptionist for service shops is an add-on, priced separately.{' '}
+                  <Link href="/demo" className="text-ledger-400 font-semibold hover:text-ledger-300">Book a demo</Link> for its price.
+                </p>
               </div>
 
               <Link

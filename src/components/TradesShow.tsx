@@ -525,9 +525,10 @@ export default function TradesShow() {
               : 'Answer the call in Step 1 and the job lands here.'}
           </p>
           <div className={guardCls}>
-            <b className={strong}>What it does not do.</b> No route optimization.{' '}
-            <b className={strong}>No customer-facing texts:</b> no confirmation, no reminder, no &quot;on the
-            way.&quot; Only the technician gets texted.
+            <b className={strong}>How it is set.</b> The board places jobs; it does not optimize routes.{' '}
+            <b className={strong}>Customer messages</b> (a confirmation, a day-before reminder, &quot;on my
+            way&quot;) are off until you turn them on, and go by email until your Poof line is registered for
+            business texting. The technician is texted their job.
           </div>
         </section>
 
@@ -721,7 +722,7 @@ export default function TradesShow() {
               </div>
 
               <div className={panelCls}>
-                <h3 className={labelCls}>Customer sign-off · a typed name and the time, not a drawn signature</h3>
+                <h3 className={labelCls}>Customer sign-off · signed on the tech’s phone, with the time</h3>
                 <div className="flex flex-wrap items-center gap-2">
                   <input
                     type="text"
@@ -744,7 +745,7 @@ export default function TradesShow() {
                 </div>
                 {complete && (
                   <div className="mt-2.5 text-sm text-ledger-600">
-                    Signed off by {signedBy}, 10:29 PM, typed. A draft invoice now exists in the office, in Marcus’s
+                    Signed off by {signedBy}, 10:29 PM. A draft invoice now exists in the office, in Marcus’s
                     words. Nobody retyped a paper ticket.
                   </div>
                 )}
@@ -753,8 +754,9 @@ export default function TradesShow() {
           )}
 
           <div className={guardCls}>
-            <b className={strong}>What it does not do.</b> No GPS, no payment on site, no drawn signature, no offline
-            mode. It does not schedule or re-route.
+            <b className={strong}>How it works.</b> Times are recorded as they happen, not tracked by location. It
+            needs a signal. It can take card or bank on site once online payments are on, and cash becomes a card
+            the office approves. Scheduling stays on the board.
           </div>
         </section>
 
@@ -991,7 +993,7 @@ export default function TradesShow() {
             </span>
             <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free trial</a>
             <a href="#pricing" className={`${btn} ${ghost}`}>
-              $79 a month, every feature
+              $79 a month for the plan
             </a>
           </div>
           <p className={noteCls}>

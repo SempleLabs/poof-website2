@@ -25,9 +25,13 @@ const SHORT: Record<string, string> = {
   'Approvals & AI Autonomy': 'Approvals',
   'Fixed Assets & Loans': 'Assets & Loans',
   '1099s & Vendors': '1099s',
-  'Payroll': 'Payroll',
+  'Payroll & Time': 'Payroll & Time',
+  'Sales Credit & Commissions': 'Commissions',
   'Sales Tax': 'Sales Tax',
-  'Inventory: Truck Stock': 'Truck Stock',
+  'Taxes': 'Taxes',
+  'Purchasing & Truck Stock': 'Purchasing',
+  'Quotes & Progress Billing': 'Quotes',
+  'Memberships': 'Memberships',
 }
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
@@ -40,6 +44,17 @@ export default function FeatureLedger() {
   const [expanded, setExpanded] = useState<Record<number, boolean>>({})
   const [indexOpen, setIndexOpen] = useState(false)
   const sectionRefs = useRef<(HTMLElement | null)[]>([])
+  const railRef = useRef<HTMLOListElement | null>(null)
+
+  // Keep the active group visible inside the rail without moving the page
+  useEffect(() => {
+    const rail = railRef.current
+    const item = rail?.children[active] as HTMLElement | undefined
+    if (!rail || !item) return
+    const top = item.offsetTop - rail.offsetTop
+    if (top < rail.scrollTop) rail.scrollTop = top
+    else if (top + item.offsetHeight > rail.scrollTop + rail.clientHeight) rail.scrollTop = top + item.offsetHeight - rail.clientHeight
+  }, [active])
 
   const needle = q.trim().toLowerCase()
   const groups = useMemo(() => featureGroups.map((g, i) => {
@@ -50,16 +65,24 @@ export default function FeatureLedger() {
   }), [needle])
   const matches = needle ? groups.reduce((n, g) => n + g.features.length, 0) : total
 
-  // Track which group is in view for the index
+  // Track which group is in view for the index: the last visible group whose top has passed
+  // the header. Computed from scroll position, so a long group or a jump to the top never
+  // leaves a stale group highlighted.
   useEffect(() => {
-    const els = sectionRefs.current.filter(Boolean) as HTMLElement[]
-    if (!els.length) return
-    const io = new IntersectionObserver((entries) => {
-      const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-      if (visible[0]) setActive(Number((visible[0].target as HTMLElement).dataset.index))
-    }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 })
-    els.forEach((el) => io.observe(el))
-    return () => io.disconnect()
+    let frame = 0
+    const update = () => {
+      frame = 0
+      let current = 0
+      sectionRefs.current.forEach((el, i) => {
+        if (el && el.offsetParent !== null && el.getBoundingClientRect().top <= 140) current = i
+      })
+      setActive(current)
+    }
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update) }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); if (frame) cancelAnimationFrame(frame) }
   }, [needle])
 
   // Deep links (#approvals-and-ai-autonomy) open the group on phones
@@ -106,12 +129,13 @@ export default function FeatureLedger() {
           )}
         </div>
         {/* desktop rail */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex lg:flex-col lg:max-h-[calc(100vh-7rem)]">
           <h2 className="font-mono text-[11.5px] tracking-[0.08em] uppercase text-muted mb-2.5">Contents · {matches} {needle ? 'matching' : 'features'}</h2>
-          <ol className="border-t border-ink">
+          {/* 22 groups outgrow a laptop screen: the rail scrolls on its own and keeps the active group in view */}
+          <ol ref={railRef} className="border-t border-ink overflow-y-auto overscroll-contain min-h-0 pr-3">
             {groups.map((g) => (
               <li key={g.id} className={`border-b border-rule ${g.hidden ? 'opacity-40' : ''}`}>
-                <a href={`#${g.id}`} onClick={(e) => { e.preventDefault(); jump(g.index) }} className={`grid grid-cols-[12px_1fr_auto] items-center gap-2 py-2 text-sm ${g.index === active ? 'font-semibold text-ink' : 'text-muted hover:text-ink'}`}>
+                <a href={`#${g.id}`} onClick={(e) => { e.preventDefault(); jump(g.index) }} className={`grid grid-cols-[12px_1fr_auto] items-center gap-2 py-[7px] text-sm ${g.index === active ? 'font-semibold text-ink' : 'text-muted hover:text-ink'}`}>
                   <span className={`w-1.5 h-1.5 rounded-full ${g.index === active ? 'bg-ledger-600' : 'bg-transparent'}`} aria-hidden="true" />
                   <span className="truncate">{g.short}</span>
                   <span className="font-mono tabular text-xs pl-2">{g.features.length}</span>
@@ -129,7 +153,7 @@ export default function FeatureLedger() {
           <div className="flex gap-2">
             <input
               id="feature-search" type="search" value={q} onChange={(e) => setQ(e.target.value)}
-              placeholder="Search 172 features: payroll, sales tax, 1099, deposits…"
+              placeholder="Search 246 features: taxes, 1099, quotes, payroll, deposits…"
               className="flex-1 min-w-0 bg-white border border-rule rounded-lg px-3.5 py-2.5 text-[15px] placeholder:text-muted focus:border-ledger-600"
             />
             {q && <button type="button" onClick={() => setQ('')} className="rounded-lg border-[1.5px] border-ink text-ink font-semibold text-sm px-3">Clear</button>}
