@@ -106,12 +106,15 @@ export default function AiPage() {
                 <h3 className="text-xl font-bold font-display text-slate-900 mb-4">Claude</h3>
                 <Steps
                   steps={[
-                    <>In Claude, open <b>Settings → Connectors</b> and choose <b>Add custom connector</b>.</>,
-                    <>Name it <b>Poof</b> and paste <code className="bg-ledger-100 text-ledger-700 px-1.5 py-0.5 rounded text-sm break-all">{MCP_URL}</code></>,
-                    <>Press <b>Connect</b>, sign in to Poof, and choose <b>Allow</b>.</>,
+                    <>Open <a href="https://claude.ai/directory/connectors/poof-bookkeeping" className="text-ledger-700 font-semibold hover:underline">Poof Bookkeeping in Claude&rsquo;s directory</a> and press <b>Connect</b>.</>,
+                    <>Sign in to Poof and choose <b>Allow</b>.</>,
                     <>Ask Claude about your books.</>,
                   ]}
                 />
+                <p className="text-slate-500 text-sm leading-relaxed mt-4">
+                  Or add it by hand: <b>Settings → Connectors → Add custom connector</b>, then paste{' '}
+                  <code className="bg-ledger-100 text-ledger-700 px-1.5 py-0.5 rounded text-sm break-all">{MCP_URL}</code>
+                </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={140}>
