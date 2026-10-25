@@ -12,13 +12,13 @@ import OvernightRun from '@/components/OvernightRun'
  */
 
 type RuleState = 'none' | 'active' | 'paused' | 'revoked'
-type Who = 'own' | 'clients' | 'shop' | 'qbo' | null
-
-const WHO: { id: Exclude<Who, null>; label: string; sub: string; lead: string; cta: [string, string] }[] = [
-  { id: 'own', label: 'I do my own books', sub: 'Owner, freelancer, one set of books', lead: 'Connect the bank and the AI proposes every entry, with the evidence it found. You approve in minutes a day, nothing lands until you have seen it, and the month closes as a record.', cta: ['See Autopilot with limits', '/autopilot'] },
-  { id: 'clients', label: 'I keep books for clients', sub: 'Bookkeeper, controller, firm', lead: 'One inbox where every AI proposal waits with its evidence. Approve in batches, grant rules from work you reviewed, and sign closes you can defend. Nothing reaches a client\'s books until a person has seen it.', cta: ['See the close', '/close'] },
-  { id: 'shop', label: 'I run a shop', sub: 'Service work, techs, trucks', lead: 'A service call becomes a job on its own, the invoice writes itself from the tech\'s phone, and you know which jobs made money every month. The AI runs the books and the field up to one line: nothing lands until a person has seen it. The AI receptionist is an add-on.', cta: ['See Poof for shops', '/trades'] },
-  { id: 'qbo', label: "I'm on QuickBooks", sub: 'And a bank rule burned me once', lead: 'A QuickBooks rule keeps being wrong until you notice. A Poof rule stops itself the first time you contradict it, and nothing posts without a person seeing it.', cta: ['Poof vs QuickBooks', '/poof-vs-quickbooks'] },
+// Who Poof is for, each pointing at the page written for them. Plain links: visible at once,
+// readable by search engines, and nothing on the page changes behind the visitor's back.
+const AUDIENCES: [string, string][] = [
+  ['You do your own books', '/autopilot'],
+  ['You keep books for clients', '/close'],
+  ['You run a service shop', '/trades'],
+  ['You are leaving QuickBooks', '/poof-vs-quickbooks'],
 ]
 
 const fmtTime = (d: Date) => d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
@@ -75,9 +75,6 @@ export default function HomeShow() {
   const start = useRef<Date | null>(null)
   const touch = () => { if (!start.current) start.current = new Date() }
 
-  // who is here
-  const [who, setWho] = useState<Who>(null)
-  const picked = WHO.find((w) => w.id === who) || null
 
   // act 1: the overnight run
   const [ranOvernight, setRanOvernight] = useState(false)
@@ -163,29 +160,20 @@ export default function HomeShow() {
         <section className="pt-8 pb-6" id="act1">
           <p className={eyebrow}>AI does the work · you sign it</p>
           <h1 className="font-display text-[44px] sm:text-6xl lg:text-[80px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Last night, Poof ran the back office.</h1>
-          <p className={sub}>{picked ? picked.lead : 'It pulled the bank, matched the bills to jobs, drafted the invoice from the tech\'s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.'}</p>
+          <p className={sub}>It pulled the bank, matched the bills to jobs, drafted the invoice from the tech&apos;s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free trial</Link>
-            {picked
-              ? <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>
-              : <Link href="/demo" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Book a demo</Link>}
+            <Link href="/demo" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Book a demo</Link>
           </div>
+
+          <nav aria-label="Who Poof is for" className="mt-5 flex flex-wrap items-baseline gap-x-5 gap-y-1.5 text-[14px]">
+            {AUDIENCES.map(([label, href]) => (
+              <Link key={href} href={href} className="text-muted hover:text-ledger-700 underline decoration-rule underline-offset-[5px] hover:decoration-ledger-600">{label} →</Link>
+            ))}
+          </nav>
 
           <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
 
-          {/* who are you here as: rewrites the paragraph above for the answer */}
-          <div className="mt-6" role="group" aria-labelledby="who-label">
-            <p id="who-label" className="text-[13px] text-muted mb-2">Who are you here as?</p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {WHO.map((w) => (
-                <button key={w.id} type="button" onClick={() => setWho(who === w.id ? null : w.id)} aria-pressed={who === w.id}
-                  className={`text-left rounded-lg border px-3 py-2 transition-colors ${who === w.id ? 'border-ledger-600 bg-ledger-200 text-ink' : 'border-rule bg-white text-ink hover:border-ledger-600'}`}>
-                  <span className="block text-sm font-semibold">{w.label}</span>
-                  <span className="block text-[12px] text-muted">{w.sub}</span>
-                </button>
-              ))}
-            </div>
-          </div>
         </section>
 
         {/* ACT 2 */}
