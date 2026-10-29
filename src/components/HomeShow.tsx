@@ -165,7 +165,7 @@ export default function HomeShow() {
           <h1 className="font-display text-[44px] sm:text-6xl lg:text-[80px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Last night, Poof ran the back office.</h1>
           <p className={sub}>{picked ? picked.lead : 'It pulled the bank, matched the bills to jobs, drafted the invoice from the tech\'s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.'}</p>
           <div className="flex flex-wrap gap-2.5 items-center">
-            <Link href="https://app.poofai.com/register" className={btn}>Start free trial</Link>
+            <Link href="https://app.poofai.com/register" className={btn}>Start free</Link>
             {picked
               ? <Link href={picked.cta[1]} className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">{picked.cta[0]}</Link>
               : <Link href="/demo" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Book a demo</Link>}

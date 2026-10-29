@@ -309,10 +309,10 @@ export default function AboutPage() {
               href="https://app.poofai.com/register"
               className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
             >
-              Start free trial →
+              Start free →
             </Link>
             <p className="text-white/80 text-sm mt-4">
-              30-day free trial • Cancel anytime
+              Poof Agent free for 30 days • No card
             </p>
           </div>
         </AnimateOnScroll>

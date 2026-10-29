@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Software that runs the small-business back office: books, invoicing, cash planning, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 246 features, 14 reports, $79/mo.',
+    description: 'Software that runs the small-business back office: books, invoicing, cash planning, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 246 features, 14 reports. Poof is free; Poof Agent is $79/mo.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,16 +35,35 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again. 246 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
+    description: 'Bookkeeping that does itself. Poof is free; Poof Agent, the paid plan, categorizes your transactions overnight, reads every receipt, and writes the month-end summary — so you never touch a spreadsheet again. 246 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
     url: 'https://www.poofai.com',
-    offers: {
-      '@type': 'Offer',
-      price: '79',
-      priceCurrency: 'USD',
-      priceValidUntil: '2027-12-31',
-      availability: 'https://schema.org/InStock',
-      url: 'https://www.poofai.com/pricing'
-    },
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Free',
+        description: 'The books, invoices, estimates, bills, purchase orders, every report, the close checklist, payroll and 1099 prep, and sales tax, free for good. Includes 25 Ask Poof questions, 25 receipt or document reads, and 2 connected bank accounts a month.',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: 'https://www.poofai.com/pricing'
+      },
+      {
+        '@type': 'Offer',
+        name: 'Poof Agent',
+        description: 'The AI that does the work: sorts new transactions overnight, reads every receipt, bill and check, unlimited Ask Poof, collection reminders and the month-end summary, unlimited bank feeds, and customer texting. $79 a month or $790 a year; free for the first 30 days.',
+        price: '79',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '79',
+          priceCurrency: 'USD',
+          unitText: 'MONTH'
+        },
+        priceValidUntil: '2027-12-31',
+        availability: 'https://schema.org/InStock',
+        url: 'https://www.poofai.com/pricing'
+      }
+    ],
     featureList: [
       'AI Transaction Categorization',
       'Poof AI Assistant',

@@ -12,14 +12,14 @@ export default function FeaturesPage() {
       <Header />
 
       <PageHero
-        title={<>Every feature. <span className="text-ledger-600">One price.</span></>}
-        subtitle="246 features in 22 groups, all on this page, nothing you have to grow into. $79/mo for everything in the plan; the AI receptionist is an add-on. 30-day trial with no card, then half price for your first three paid months."
+        title={<>Every feature. <span className="text-ledger-600">One page.</span></>}
+        subtitle="246 features in 22 groups, all on this page. Poof is free; Poof Agent, the AI that does the work, is $79/mo, free for 30 days with no card. The AI receptionist is an add-on."
       >
         <Link
           href="https://app.poofai.com/register"
           className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 text-lg mt-8 inline-block px-8 py-4"
         >
-          Start free trial
+          Start free
         </Link>
       </PageHero>
 

@@ -64,7 +64,7 @@ export default function ComparisonSection() {
             <span className="text-ledger-600"> Nothing You Don&apos;t.</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            One price, every feature — $79/mo flat, versus $140/mo for the QuickBooks Plus tier that carries job costing and budgets. And Poof's AI does the work, instead of handing you more tools.
+            Poof is free, and Poof Agent is $79/mo, versus $140/mo for the QuickBooks Plus tier that carries job costing and budgets. And Poof's AI does the work, instead of handing you more tools.
           </p>
         </AnimateOnScroll>
 
@@ -78,7 +78,7 @@ export default function ComparisonSection() {
                   </th>
                   <th className="px-4 py-5 text-center bg-ledger-500/10">
                     <div className="text-sm font-bold text-ledger-400">Poof</div>
-                    <div className="text-xs text-slate-500">$79/mo</div>
+                    <div className="text-xs text-slate-500">Free · Agent $79/mo</div>
                     <div className="mt-1 inline-block bg-ledger-500 text-white text-xs font-bold px-2 py-0.5 rounded">RECOMMENDED</div>
                   </th>
                   <th className="px-4 py-5 text-center">
@@ -121,7 +121,7 @@ export default function ComparisonSection() {
         </AnimateOnScroll>
 
         <p className="text-sm text-slate-500 text-center mt-6">
-          QuickBooks is shown at the Plus tier ($140/mo) — the plan that carries job costing, budgets, and full reporting, and the honest match for Poof&apos;s feature set. Simple Start ($38/mo) is single-user and can&apos;t do this work. Xero and FreshBooks are shown at their entry prices. QuickBooks pricing verified August 2026, after Intuit&apos;s August 1 increase; features and pricing may vary.
+          QuickBooks is shown at the Plus tier ($140/mo) — the plan that carries job costing, budgets, and full reporting, and the honest match for Poof Agent. Simple Start ($38/mo) is single-user and can&apos;t do this work. Xero and FreshBooks are shown at their entry prices. QuickBooks pricing verified August 2026, after Intuit&apos;s August 1 increase; features and pricing may vary.
         </p>
       </div>
     </section>

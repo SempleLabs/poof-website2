@@ -65,8 +65,8 @@ export default function FeatureSection() {
             <span className="text-ledger-600"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            246 features across 22 categories, in one plan. The AI receptionist is an add-on.
-            One price. Every feature. No plan you have to grow into.
+            246 features across 22 categories. The AI receptionist is an add-on.
+            Poof is free. Poof Agent, the AI that does the work, is $79/mo.
           </p>
         </AnimateOnScroll>
 
@@ -117,7 +117,7 @@ export default function FeatureSection() {
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            All features included · $39.50/month · 30-day free trial
+            Free for good · Poof Agent $79/month, free for 30 days
           </div>
         </AnimateOnScroll>
       </div>

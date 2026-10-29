@@ -222,7 +222,7 @@ export default function FaqPage() {
               </Link>
             </div>
             <p className="text-white/80 text-sm mt-6">
-              30-day free trial &bull; No credit card required
+              Free for good &bull; Poof Agent free for 30 days &bull; No card
             </p>
           </div>
         </AnimateOnScroll>

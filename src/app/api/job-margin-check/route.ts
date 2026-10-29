@@ -69,8 +69,8 @@ function buildEmail(r: MarginReport, source: string | null): string {
     </td></tr>
     <tr><td style="padding:8px 28px"><table width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>
     <tr><td style="padding:20px 28px 28px">
-      <p style="margin:0 0 14px;font-size:15px;line-height:1.5;color:#12211A">This is ${r.jobs.length} jobs you remembered. Poof does this for every job from your real books: it tracks profit per job from the bills and invoices tagged to it, on every monthly close. One plan, every feature: 30 days free with no card, then $39.50 a month for three months, then $79.</p>
-      <a href="${trialUrl(source)}" style="display:inline-block;background:#1F7A4F;color:#FFFFFF;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:8px">Start your free trial</a>
+      <p style="margin:0 0 14px;font-size:15px;line-height:1.5;color:#12211A">This is ${r.jobs.length} jobs you remembered. Poof does this for every job from your real books: it tracks profit per job from the bills and invoices tagged to it, on every monthly close. Poof is free; Poof Agent is $79 a month, free for 30 days with no card.</p>
+      <a href="${trialUrl(source)}" style="display:inline-block;background:#1F7A4F;color:#FFFFFF;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:8px">Start free</a>
     </td></tr>
   </table>
   <p style="font-size:12px;color:#5B6660;margin:16px 0 0">Poof · poofai.com</p>

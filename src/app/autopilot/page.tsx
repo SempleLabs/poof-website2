@@ -70,7 +70,7 @@ export default function AutopilotPage() {
             Everyone is shipping AI that writes to your books on its own. Poof does too, with one difference that matters when it is wrong: <b className="text-ink font-semibold">it posts inside limits you set, and it stops itself the first time you correct it.</b>
           </p>
           <div className="flex flex-wrap gap-2.5 mt-6">
-            <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free trial</Link>
+            <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
             <a href="#demo" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Watch a night of it</a>
           </div>
           <p className="text-sm text-muted mt-5 max-w-[60ch]">Off by default. Every new account asks about everything until its owner turns this on.</p>

@@ -17,14 +17,14 @@ import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Poof for shops — the back office for HVAC, plumbing, and electrical | Poof',
   description:
-    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. One plan at $79/mo after 30 days free and three half-price months. The AI receptionist is an add-on.',
+    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. Poof is free; Poof Agent is $79/mo, free for 30 days. The AI receptionist is an add-on.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
     title: 'Poof for shops — the back office for HVAC, plumbing, and electrical',
     description:
-      'From the 9:40pm call to the per-job P&L, with a person on every entry. $79 a month; the AI receptionist is an add-on.',
+      'From the 9:40pm call to the per-job P&L, with a person on every entry. Poof is free; Poof Agent is $79 a month; the AI receptionist is an add-on.',
     url: 'https://www.poofai.com/trades',
     siteName: 'Poof',
     type: 'website',
@@ -78,15 +78,15 @@ const builtFor = [
 const faqs = [
   {
     q: 'What does Poof for shops cost?',
-    a: 'The same as every other Poof account: $79 a month for every feature in the plan, including the dispatch board, the technician\'s field link, and per-job profitability. You start with 30 days free, and your first three paid months are half price at $39.50. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. The AI receptionist that answers your phone is an add-on, priced separately and set up with you; book a demo for its price.',
+    a: 'The same as every other Poof account: Poof is free, including the dispatch board, the technician\'s field link, and per-job profitability. Poof Agent, the AI that sorts transactions overnight and reads every receipt, is $79 a month, and your first 30 days of it are free. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. The AI receptionist that answers your phone is an add-on at $99 a month with 1,000 minutes included, then 12¢ a minute.',
   },
   {
-    q: 'Is the AI receptionist part of the $79 plan?',
-    a: 'No. The receptionist is an add-on, priced separately, and we set it up with you: the phone number and the voice agent are provisioned for your shop, and there is no button in the app for an owner to flip yet. Book a demo and we will walk you through it and its price.',
+    q: 'Is the AI receptionist part of Poof Agent?',
+    a: 'No. The receptionist is an add-on: $99 a month with 1,000 minutes of calls included, then 12¢ a minute. You turn it on and buy it yourself in Settings → Receptionist; no demo needed.',
   },
   {
     q: 'Does the AI text my customers?',
-    a: 'Only if you turn it on. Customer messages (a booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way") are off until an owner or admin switches them on. They go by email until your Poof line is registered for business texting, they stay quiet from 9pm to 8am, and STOP works. The dispatched technician is always texted their job link. On the books side, no ledger rule can send anything to a customer: invoices and credit notes are always a person\'s decision.',
+    a: 'Only if you turn it on. Customer messages (a booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way") are off until an owner or admin switches them on. They go by email until your Poof line is registered for business texting (texting customers comes with Poof Agent), they stay quiet from 9pm to 8am, and STOP works. The dispatched technician is always texted their job link. On the books side, no ledger rule can send anything to a customer: invoices and credit notes are always a person\'s decision.',
   },
   {
     q: 'Do I have to switch off Jobber or Housecall Pro?',
@@ -102,7 +102,7 @@ const faqs = [
   },
   {
     q: 'Who is this actually for?',
-    a: 'Service shops that run on inbound calls and want the job, the invoice, and the books to be one chain instead of three. Most of the shops we built this with run 2 to 10 trucks. Nothing stops a one-truck shop or a larger one from using it — it is the same $79 plan either way.',
+    a: 'Service shops that run on inbound calls and want the job, the invoice, and the books to be one chain instead of three. Most of the shops we built this with run 2 to 10 trucks. Nothing stops a one-truck shop or a larger one from using it — it is the same free plan and the same $79 Poof Agent either way.',
   },
 ]
 
@@ -199,18 +199,18 @@ export default function TradesPage() {
         </div>
       </section>
 
-      {/* Pricing: the same one plan as everywhere else */}
+      {/* Pricing: the same two plans as everywhere else */}
       <section id="pricing" className="py-20 bg-slate-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
-              One plan. $79 a month.
+              Poof is free. Poof Agent is $79 a month.
             </h2>
             <p className="text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Every feature in the plan, including the dispatch board, the field loop, and per-job profitability. It does not
-              go up when you add a truck or a tech — the field-service tools shops compare us to are priced per
-              technician per month. Thirty days free, then $39.50 a month for your first three paid months. The AI
-              receptionist is an add-on, priced separately and set up with you.
+              The dispatch board, the field loop, and per-job profitability are free. Poof Agent, the AI that does the
+              work, does not go up when you add a truck or a tech — the field-service tools shops compare us to are priced per
+              technician per month. Poof Agent is free for your first 30 days. The AI receptionist is an add-on at $99 a
+              month with 1,000 minutes included.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>
@@ -219,7 +219,7 @@ export default function TradesPage() {
                 href="https://app.poofai.com/register"
                 className="bg-ledger-500 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-ledger-600 transition-colors"
               >
-                Start free trial
+                Start free
               </Link>
               <Link
                 href="/pricing"

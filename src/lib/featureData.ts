@@ -625,7 +625,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Add Another Company",
-        description: "Add a company from the company menu. You own it, and it gets its own 30-day trial, with up to three unpaid companies at once"
+        description: "Add a company from the company menu. You own it, and it starts on Free, with up to three free companies at once"
       }
     ]
   },
@@ -666,7 +666,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "AI Receptionist & Dispatch",
     icon: "phone",
-    note: "The AI receptionist (the phone number, the voice agent, triage and booking by phone, the call log) is an add-on to the $79 plan, priced separately, and we provision it for you \u2014 it is not a switch you flip yourself. The dispatch board, the Requests inbox, technician texts, and the booking form are in the plan; customer texts go from the shop\u2019s own Poof line, so without the receptionist they go by email. The receptionist books the job; payment is taken on the invoice or on site. Customer messages are off until an owner turns them on, and go by email until the shop\u2019s Poof line is registered for business texting. The website booking form is off until you turn it on.",
+    note: "The AI receptionist (the phone number, the voice agent, triage and booking by phone, the call log) is an add-on at $99 a month with 1,000 minutes of calls included, then 12\u00a2 a minute, and a shop turns it on and buys it in Settings \u2192 Receptionist. The dispatch board, the Requests inbox, technician texts, and the booking form are free; customer texts go from the shop\u2019s own Poof line, so without the receptionist they go by email. The receptionist books the job; payment is taken on the invoice or on site. Customer messages are off until an owner turns them on, and go by email until the shop\u2019s Poof line is registered for business texting. The website booking form is off until you turn it on.",
     features: [
       {
         title: "AI Phone Receptionist",
@@ -733,7 +733,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "Field Service & Job Handoff",
     icon: "field",
-    note: "Part of Poof for shops, in the same $79 plan. (The AI receptionist is an add-on, priced separately.) The technician's page needs no account and no app install \u2014 that is the point. It records times as they happen instead of tracking location, and it works wherever the phone has a signal. Payment on site works once online payments are on; the visit report reaches the customer once customer messages are on.",
+    note: "Part of Poof for shops, and free. (The AI receptionist is an add-on at $99 a month.) The technician's page needs no account and no app install \u2014 that is the point. It records times as they happen instead of tracking location, and it works wherever the phone has a signal. Payment on site works once online payments are on; the visit report reaches the customer once customer messages are on.",
     features: [
       {
         title: "Technician Field Link",
@@ -1150,7 +1150,7 @@ export interface FaqItem {
 export const faqData: FaqItem[] = [
   {
     question: "What is Poof?",
-    answer: "Poof is a platform to run a small business, with the books at the center. Connect your bank and card accounts and the AI reads the feeds, matches invoices to deposits and bills to payments, categorizes, and drafts the month-end close. Every entry it proposes waits on a card with the evidence it found, and nothing reaches the books until a person approves it or a rule that person granted covers it. It also invoices, takes payments, budgets, forecasts cash, and for trade shops answers the phone and lets a technician close a job from a text. One plan, every feature, $79 a month, and a close within five business days or the next month is free.",
+    answer: "Poof is a platform to run a small business, with the books at the center. Connect your bank and card accounts and the AI reads the feeds, matches invoices to deposits and bills to payments, categorizes, and drafts the month-end close. Every entry it proposes waits on a card with the evidence it found, and nothing reaches the books until a person approves it or a rule that person granted covers it. It also invoices, takes payments, budgets, forecasts cash, and for trade shops answers the phone and lets a technician close a job from a text. Poof is free; Poof Agent, the AI that does the work, is $79 a month, and a close within five business days or the next month is free.",
     category: "General"
   },
   {
@@ -1165,7 +1165,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What is Poof for shops?",
-    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist. It is the same one plan at $79 a month \u2014 there is no shop tier and no per-truck pricing. The AI receptionist is an add-on, priced separately and set up with you.",
+    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist. It is the same free plan and the same $79-a-month Poof Agent \u2014 there is no shop tier and no per-truck pricing. The AI receptionist is an add-on at $99 a month with 1,000 minutes included.",
     category: "General",
     audience: "trades"
   },
@@ -1222,7 +1222,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 113 tools: it prepares records, updates invoices, generates all 14 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. Poof is one plan at $79/month with all 246 features included ($39.50/month for your first 3 paid months, after a 30-day free trial). The fair QuickBooks comparison is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 113 tools: it prepares records, updates invoices, generates all 14 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. QuickBooks has no free plan; Poof is free, and Poof Agent, the AI that does the work, is $79/month, free for the first 30 days. The fair QuickBooks comparison for Poof Agent is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
@@ -1262,12 +1262,12 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the best bookkeeping app for freelancers?",
-    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 14 financial reports including P&L and cash flow statements. It's $79/mo with everything included (no tiers) — while QuickBooks locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
+    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 14 financial reports including P&L and cash flow statements. Poof is free, and Poof Agent, the AI that does the work, is $79/mo — while QuickBooks has no free plan and locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
     category: "General"
   },
   {
     question: "Do I need QuickBooks for my small business?",
-    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks starts at $38/mo with tiered pricing that locks features behind its $85/mo Essentials and $140/mo Plus plans (Intuit raised prices on August 1, 2026). Alternatives like Poof offer AI-powered automation (transaction categorization, receipt scanning, recurring charge detection, budgeting) at $79/mo with every feature included in one plan. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler.",
+    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks starts at $38/mo with tiered pricing that locks features behind its $85/mo Essentials and $140/mo Plus plans (Intuit raised prices on August 1, 2026). Alternatives like Poof are free, with AI-powered automation (transaction categorization, receipt scanning, recurring charge detection) in Poof Agent at $79/mo. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler.",
     category: "Pricing & Plans"
   },
   {
@@ -1282,12 +1282,12 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Wave has a free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is $79/mo for all 246 features in one plan — 44% less than Plus — including what QuickBooks reserves for its upper tiers, plus a 12-month cash forecast with confidence bands, auto-reconciliation, and an approvals inbox where every AI change waits for a person. There's also a 30-day free trial with no credit card required, and then a 50% launch discount: $39.50/mo for the first 3 paid months.",
+    answer: "If price alone is the criterion, Poof is free, and QuickBooks has no free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is free, every report included, and Poof Agent, the AI that does the work, is $79/mo — 44% less than Plus — with an approvals inbox where every AI change waits for a person. Poof Agent is free for the first 30 days, with no credit card required.",
     category: "Pricing & Plans"
   },
   {
     question: "How much does bookkeeping cost for a small business?",
-    answer: "Traditional bookkeeping costs vary widely: hiring a part-time bookkeeper typically runs $500-$2,000/month, while a full-time in-house bookkeeper can cost $3,000-$5,000/month plus benefits. Outsourced bookkeeping firms charge $200-$500/month for basic services. AI-powered bookkeeping software like Poof costs $79/month (or $39.50/month with the launch discount) and handles most of the work automatically — transaction categorization, bank reconciliation, invoicing, receipt scanning, and financial reporting. For most small businesses, Poof replaces the need for a dedicated bookkeeper at a fraction of the cost.",
+    answer: "Traditional bookkeeping costs vary widely: hiring a part-time bookkeeper typically runs $500-$2,000/month, while a full-time in-house bookkeeper can cost $3,000-$5,000/month plus benefits. Outsourced bookkeeping firms charge $200-$500/month for basic services. AI-powered bookkeeping software like Poof is free, and Poof Agent ($79/month) handles most of the work automatically — transaction categorization, receipt scanning, collection reminders, and the month-end summary. For most small businesses, Poof replaces the need for a dedicated bookkeeper at a fraction of the cost.",
     category: "Pricing & Plans"
   },
   {
@@ -1316,8 +1316,8 @@ export const faqData: FaqItem[] = [
     category: "Getting Started"
   },
   {
-    question: "What happens after the free trial?",
-    answer: "Poof offers a 30-day free trial with full access to every feature in the plan — no credit card required to start. When your trial ends, your first three paid months are 50% off at $39.50/month, then $79/month. If you choose not to subscribe, your data remains accessible in read-only mode so you can export your records. There are no long-term contracts — you can cancel anytime and your data stays yours.",
+    question: "What happens after the first 30 days?",
+    answer: "Poof is free for good, and a new company gets Poof Agent free for its first 30 days — no credit card required. After that, the company stays on Free unless you add Poof Agent at $79/month. Nothing is locked or read-only: new transactions wait for a person instead of being sorted overnight, and your rules keep running. There are no long-term contracts — you can cancel anytime and your data stays yours.",
     category: "Pricing & Plans"
   },
   {
@@ -1327,7 +1327,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does AI bookkeeping save money?",
-    answer: "AI bookkeeping saves money in three ways: it eliminates the cost of a dedicated bookkeeper ($500-$2,000/month), it reduces errors that lead to costly tax mistakes or missed deductions, and it frees up your time to focus on revenue-generating activities. Poof automates transaction categorization, bank reconciliation, receipt scanning, invoice follow-ups, and report generation — tasks that would take a bookkeeper hours each week. At $79/month, Poof replaces thousands of dollars in annual bookkeeping costs while delivering faster, more consistent results.",
+    answer: "AI bookkeeping saves money in three ways: it eliminates the cost of a dedicated bookkeeper ($500-$2,000/month), it reduces errors that lead to costly tax mistakes or missed deductions, and it frees up your time to focus on revenue-generating activities. Poof automates transaction categorization, bank reconciliation, receipt scanning, invoice follow-ups, and report generation — tasks that would take a bookkeeper hours each week. Poof is free, and at $79/month, Poof Agent replaces thousands of dollars in annual bookkeeping costs while delivering faster, more consistent results.",
     category: "Pricing & Plans"
   },
   {

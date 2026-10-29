@@ -66,7 +66,7 @@ export default function Header() {
               onClick={() => trackEvent('start_trial_click', { location: 'header' })}
               className="bg-ledger-500 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-ledger-600 transition-colors duration-200"
             >
-              Start free trial
+              Start free
             </Link>
           </div>
 
@@ -128,7 +128,7 @@ export default function Header() {
                 onClick={() => { trackEvent('start_trial_click', { location: 'header_mobile' }); setIsMenuOpen(false) }}
                 className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold text-lg"
               >
-                Start free trial
+                Start free
               </Link>
             </div>
           </div>

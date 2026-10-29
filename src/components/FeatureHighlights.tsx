@@ -129,7 +129,7 @@ export default function FeatureHighlights() {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             All the power of QuickBooks. None of the complexity.
             <br className="hidden sm:block" />
-            $79/mo flat — one plan, every feature, nothing you have to grow into.
+            Free for good — and Poof Agent, the AI that does the work, at $79/mo.
           </p>
         </AnimateOnScroll>
 
@@ -269,7 +269,7 @@ export default function FeatureHighlights() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              All features included · $79/mo · 30-day free trial
+              Free for good · Poof Agent $79/mo, free for 30 days
             </div>
           </AnimateOnScroll>
         </div>

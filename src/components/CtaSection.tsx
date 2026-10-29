@@ -9,14 +9,14 @@ export default function CtaSection() {
           The work disappears. The evidence doesn&apos;t.
         </h2>
         <p className="text-lg text-ledger-400 mb-8 max-w-2xl mx-auto">
-          Thirty days free, then half price for three months. Every feature. Or book a demo and bring your books.
+          Free for good, with Poof Agent free for 30 days. Or book a demo and bring your books.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <Link
             href="https://app.poofai.com/register"
             className="bg-ledger-500 text-paper font-semibold px-7 py-3.5 rounded-lg hover:bg-ledger-400 hover:text-ink transition-colors text-base"
           >
-            Start free trial
+            Start free
           </Link>
           <Link
             href="/demo"

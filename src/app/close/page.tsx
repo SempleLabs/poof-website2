@@ -64,7 +64,7 @@ export default function ClosePage() {
             Seventeen tasks with due dates. <b className="text-ink font-semibold">{auto} of them complete when the books prove them</b> and cannot be ticked by hand. The rest are a person&apos;s tick, recorded with who and when. Locking the period is the signature.
           </p>
           <div className="flex flex-wrap gap-2.5 mt-6">
-            <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free trial</Link>
+            <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
             <Link href="/#act3" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Try the reconciliation</Link>
           </div>
           <p className="text-sm text-ink mt-5 max-w-[60ch] border-l-[3px] border-ledger-600 pl-3">Closed within five business days of month end, or the next month is free. <a href="/#guarantee" className="text-ledger-600 font-semibold">The fine print</a></p>
