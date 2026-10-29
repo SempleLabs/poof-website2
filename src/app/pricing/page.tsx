@@ -43,7 +43,7 @@ export default function PricingPage() {
     'Ask Poof with no limit, in the app, Telegram, Slack & by voice',
     'Writes your collection reminders & your month-end summary',
     'Unlimited bank feeds',
-    'Text your customers'
+    'Texts to your customers, from your own registered Poof number'
   ]
 
   const faqs = [
@@ -53,7 +53,7 @@ export default function PricingPage() {
     },
     {
       question: 'What does Poof Agent add?',
-      answer: 'Poof Agent is the AI that does the work while you\'re not looking. It sorts new transactions overnight and posts the ones it\'s sure of, reads every receipt, bill and check, answers Ask Poof with no limit in the app, Telegram, Slack and by voice, writes your collection reminders and month-end summary, connects every bank account, and lets you text your customers. It is $79/mo, or $790/yr.'
+      answer: 'Poof Agent is the AI that does the work while you\'re not looking. It sorts new transactions overnight and posts the ones it\'s sure of, reads every receipt, bill and check, answers Ask Poof with no limit in the app, Telegram, Slack and by voice, writes your collection reminders and month-end summary, connects every bank account, and texts your customers from your own registered Poof number. It is $79/mo, or $790/yr.'
     },
     {
       question: 'What happens after the 30 days?',
@@ -61,7 +61,7 @@ export default function PricingPage() {
     },
     {
       question: 'What counts as a question or a read, and what happens when they run out?',
-      answer: 'A question is one Ask Poof message, in the app, Telegram, Slack or by voice. A read is one receipt, bill, check, PDF statement or forwarded email that Poof\'s AI reads for you. Free includes 25 of each a month. When they run out, they come back on the 1st; everything else keeps working, approval cards included, and a scanned photo is still saved on the expense. File imports (CSV, QuickBooks, Jobber, Housecall Pro) have no limit.'
+      answer: 'A question is one Ask Poof message, in the app, Telegram, Slack or by voice. A read is one receipt, bill, check, PDF statement or forwarded email that Poof\'s AI reads for you. Free includes 25 of each a month. When they run out, they come back on the 1st; everything else keeps working, approval cards included, and a receipt you forward or a technician photographs is still kept for you to enter. File imports (CSV, QuickBooks, Jobber, Housecall Pro) have no limit.'
     },
     {
       question: 'Is the AI receptionist included?',
