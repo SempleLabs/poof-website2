@@ -89,8 +89,8 @@ export default function ReceptionistSection() {
               How it is set up
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              The receptionist is an add-on to the $79 plan, priced separately, and we set it up with
-              you &mdash; we provision the number and the voice agent. It is not a switch you flip yourself. <strong className="text-slate-100">Customer messages
+              The receptionist is an add-on: $99 a month with 1,000 minutes of calls included, then 12&cent; a
+              minute. You turn it on and buy it yourself in Settings &rarr; Receptionist. <strong className="text-slate-100">Customer messages
               are off until you turn them on</strong>: a booking confirmation, a day-before reminder, and
               &ldquo;on my way,&rdquo; by email until your Poof line is registered for business texting. Your
               technician is always texted their job. The receptionist books the job and payment is taken on the

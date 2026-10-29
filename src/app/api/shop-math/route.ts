@@ -138,7 +138,7 @@ export async function POST(request: NextRequest) {
                 <p style="margin:0 0 24px"><a href="${back}" style="color:#FF7A1A;font-weight:700">Change the numbers and run it again</a></p>
               </td></tr>
               <tr><td style="padding:18px 28px 26px;border-top:2px dashed #2A5584;color:#9DB2CA;font-size:14px;line-height:1.5">
-                Shop Math is made by Austin Semple, who builds <a href="https://www.poofai.com" style="color:#F3F6FA">Poof</a>: AI bookkeeping for trades shops that tracks the margin on every real job. One plan, $79 a month, free for 30 days with no credit card.<br /><br />
+                Shop Math is made by Austin Semple, who builds <a href="https://www.poofai.com" style="color:#F3F6FA">Poof</a>: AI bookkeeping for trades shops that tracks the margin on every real job. Poof is free; Poof Agent is $79 a month, free for 30 days with no credit card.<br /><br />
                 Illustrative math, not financial or tax advice. You're getting this because you asked for your numbers at poofai.com/shop-math. Reply with any question and it reaches Austin.<br />${escapeHtml(MAILING_ADDRESS)}
               </td></tr>
             </table>

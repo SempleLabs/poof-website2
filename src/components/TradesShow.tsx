@@ -991,13 +991,13 @@ export default function TradesShow() {
             <span className="w-full text-[13.5px] text-muted">
               This is the other show&apos;s headline: know which jobs make money. The two meet here.
             </span>
-            <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free trial</a>
+            <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free</a>
             <a href="#pricing" className={`${btn} ${ghost}`}>
-              $79 a month for the plan
+              Free; Poof Agent $79 a month
             </a>
           </div>
           <p className={noteCls}>
-            Thirty days free, then half price for three months. Your books closed within five business days of month end, or the next month is
+            Poof Agent free for 30 days, no card. Your books closed within five business days of month end, or the next month is
             free.
           </p>
         </section>

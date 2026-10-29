@@ -440,7 +440,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               href="https://app.poofai.com/register"
               className="inline-block bg-ledger-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-ledger-600  transition-colors"
             >
-              Start Your Free Trial
+              Get Started Free
             </Link>
           </div>
         </div>

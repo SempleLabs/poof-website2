@@ -181,7 +181,7 @@ export default function AiPage() {
                 href="https://app.poofai.com/register"
                 className="bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-ledger-600 transform hover:-translate-y-0.5 transition-all duration-300 text-lg"
               >
-                Start free trial →
+                Start free →
               </Link>
               <Link
                 href="/security"

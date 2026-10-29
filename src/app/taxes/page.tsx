@@ -78,7 +78,7 @@ export default function TaxesPage() {
             Every deadline on the day it really falls. How much tax you have built up, next to what you have set aside. Your four estimates, your 1099s, and <b className="text-ink font-semibold">one package your CPA can use in January</b>. Poof prepares and reminds; you and your CPA file and pay.
           </p>
           <div className="flex flex-wrap gap-2.5 mt-6">
-            <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free trial</Link>
+            <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
             <Link href="/demo" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Book a demo</Link>
           </div>
         </div>

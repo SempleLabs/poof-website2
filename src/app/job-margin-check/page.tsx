@@ -171,7 +171,7 @@ export default function JobMarginCheckPage() {
               <div className="bg-ink text-white rounded-2xl p-5 sm:p-7 mt-4">
                 <p className="text-lg leading-relaxed">
                   This is {report.jobs.length} jobs you remembered. Poof does this for every job from your real books: it tracks profit per job from the bills and
-                  invoices tagged to it, on every monthly close. One plan, every feature: 30 days free with no card, then $39.50 a month for three months, then $79.
+                  invoices tagged to it, on every monthly close. Poof is free; Poof Agent is $79 a month, free for 30 days with no card.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 mt-5">
                   <a
@@ -179,7 +179,7 @@ export default function JobMarginCheckPage() {
                     onClick={() => trackEvent('jmc_trial_clicked', { source: source ?? 'direct' })}
                     className="px-5 py-3 rounded-lg bg-ledger-500 text-white font-semibold hover:bg-ledger-600 text-center"
                   >
-                    Start your free trial
+                    Start free
                   </a>
                   <a href="/trades" className="px-5 py-3 rounded-lg border border-white/30 text-white font-semibold text-center">
                     How Poof works for shops

@@ -63,7 +63,7 @@ export default function ProductHuntPage() {
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Connect your accounts and Poof categorizes, reconciles, and closes your books — 246 features, one plan, built by a former controller. Normally $79/mo with a 30-day trial.
+              Connect your accounts and Poof categorizes, reconciles, and closes your books — 246 features, built by a former controller. Poof is free; Poof Agent is normally $79/mo, free for 30 days.
             </p>
           </AnimateOnScroll>
 
@@ -140,7 +140,7 @@ export default function ProductHuntPage() {
               <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
                 See Poof for shops
               </Link>{' '}
-              — the field link and per-job profitability on the same plan, and the AI receptionist as an add-on.
+              — the field link and per-job profitability, free, and the AI receptionist as an add-on.
             </p>
           </AnimateOnScroll>
         </div>
