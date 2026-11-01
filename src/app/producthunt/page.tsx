@@ -5,9 +5,9 @@ import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 
 export const metadata: Metadata = {
-  title: 'Poof × Product Hunt — 90 Days Free | AI Bookkeeping That Does Itself',
+  title: 'Poof × Product Hunt — 90 Days of Poof Agent | Free AI Bookkeeping',
   description:
-    'Welcome, Product Hunt. Poof is AI bookkeeping that does itself — categorization, reconciliation, receipts, and reports on autopilot. PH-exclusive: 90 days free.',
+    'Welcome, Product Hunt. Poof is AI bookkeeping that does itself — categorization, reconciliation, receipts, and reports on autopilot. Poof is free; PH-exclusive: 90 days of Poof Agent.',
   robots: { index: false, follow: true },
   alternates: {
     canonical: 'https://www.poofai.com/producthunt',
@@ -20,7 +20,7 @@ const highlights = [
     body: 'Connect your bank and cards; the BRAID engine categorizes every transaction and reconciles your accounts to the statement — automatically.',
   },
   {
-    title: 'An AI assistant with 113 tools',
+    title: 'An AI assistant with 115 tools',
     body: 'Create invoices, record payments, set up depreciation schedules, or ask for any of 14 reports — in plain English, from a sidebar chat.',
   },
   {
@@ -63,22 +63,22 @@ export default function ProductHuntPage() {
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Connect your accounts and Poof categorizes, reconciles, and closes your books — 246 features, built by a former controller. Poof is free; Poof Agent is normally $79/mo, free for 30 days.
+              Connect your accounts and Poof categorizes, reconciles, and closes your books — 270 features, built by a former controller. Poof is free; Poof Agent, the AI that does the work, is normally $79/mo.
             </p>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="scale-up" delay={200}>
             <div className="bg-slate-900 rounded-xl p-8 max-w-xl mx-auto mb-8">
               <p className="text-orange-300 text-xs font-semibold uppercase tracking-wider mb-2">Product Hunt exclusive</p>
-              <p className="font-display text-3xl font-bold text-white mb-2">90 days free</p>
+              <p className="font-display text-3xl font-bold text-white mb-2">90 days of Poof Agent</p>
               <p className="text-slate-300 text-sm mb-6">
-                Three full months of everything — no credit card to start. Use code <span className="font-mono font-semibold text-white bg-white/10 px-2 py-0.5 rounded">PRODUCTHUNT</span> at signup.
+                Poof is free anyway. Start free, and when you add Poof Agent, use code <span className="font-mono font-semibold text-white bg-white/10 px-2 py-0.5 rounded">PRODUCTHUNT</span> at checkout: your first three months of it are free.
               </p>
               <Link
                 href="https://app.poofai.com/register"
                 className="inline-block bg-ledger-500 text-white font-semibold px-8 py-4 rounded-lg text-base hover:bg-ledger-600 transition-all duration-200 hover:-translate-y-0.5"
               >
-                Claim 90 days free
+                Start free
               </Link>
             </div>
           </AnimateOnScroll>
@@ -87,7 +87,7 @@ export default function ProductHuntPage() {
             <p className="text-sm text-slate-500">
               Just browsing?{' '}
               <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
-                See all 246 features
+                See all 270 features
               </Link>{' '}
               — every one on a single page, with what it does and what it will not do.
             </p>
@@ -121,7 +121,7 @@ export default function ProductHuntPage() {
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="text-center mt-10">
               <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700 transition-colors">
-                See all 246 features →
+                See all 270 features →
               </Link>
             </div>
           </AnimateOnScroll>

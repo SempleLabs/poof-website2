@@ -65,7 +65,7 @@ export default function FeatureSection() {
             <span className="text-ledger-600"> Bookkeeping</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            246 features across 22 categories. The AI receptionist is an add-on.
+            270 features across 24 categories. The AI receptionist is an add-on.
             Poof is free. Poof Agent, the AI that does the work, is $79/mo.
           </p>
         </AnimateOnScroll>

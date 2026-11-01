@@ -56,7 +56,7 @@ const steps = [
 ]
 
 const afterward = [
-  { title: '13 reports, on request or on a schedule', body: 'P&L, balance sheet, cash flow, trial balance, aging, and the rest, with drill-down to the entries behind any number and email delivery on the cadence you choose.' },
+  { title: '14 reports, on request or on a schedule', body: 'P&L, balance sheet, cash flow, trial balance, aging, and the rest, with drill-down to the entries behind any number and email delivery on the cadence you choose.' },
   { title: 'Per-job profitability', body: 'Tag work to jobs, or let a completed service call become a job on its own. Labor lands on the job it was spent on; dealer financing fees are costed to the install they financed.' },
   { title: 'Invoices, estimates, and payments', body: 'Send invoices and estimates, convert an estimate in one click, follow up automatically, and take card or ACH through Stripe. Payments reconcile to the ledger by themselves.' },
   { title: 'Budgets and the cash plan', body: 'Describe a goal and get a budget. See twelve months of cash with confidence bands, and a forward view of the bills coming due against the cash to cover them.' },
@@ -144,7 +144,7 @@ export default function HowItWorksPage() {
             ))}
           </div>
           <p className="text-sm text-muted mt-6">
-            All 246 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
+            All 270 features, searchable, on the <Link href="/features" className="text-ledger-600 font-semibold hover:text-ledger-700">features page</Link>.
           </p>
         </div>
       </section>

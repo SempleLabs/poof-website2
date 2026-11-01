@@ -13,7 +13,7 @@ export default function FeaturesPage() {
 
       <PageHero
         title={<>Every feature. <span className="text-ledger-600">One page.</span></>}
-        subtitle="246 features in 22 groups, all on this page. Poof is free; Poof Agent, the AI that does the work, is $79/mo, free for 30 days with no card. The AI receptionist is an add-on."
+        subtitle="270 features in 24 groups, all on this page. Poof is free; Poof Agent, the AI that does the work, is $79/mo, free for 30 days with no card. The AI receptionist is an add-on."
       >
         <Link
           href="https://app.poofai.com/register"

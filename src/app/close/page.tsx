@@ -8,11 +8,11 @@ import { getFaqPageSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'The close — a checklist the books tick off themselves | Poof',
   description:
-    'Month-end close as a record: 17 tasks with due dates, 13 of them proven by the books and ticked automatically, a reconciliation that ties to one figure, and a signature that locks the period. Closed within five business days or the next month is free.',
+    'Month-end close as a record: 17 tasks with due dates, 13 of them proven by the books and ticked automatically, a reconciliation that ties to one figure, and a signature that locks the period. For bookkeepers: every client company is free, and Poof Agent is $29 a client.',
   alternates: { canonical: 'https://www.poofai.com/close' },
   openGraph: {
     title: 'The close, as a record',
-    description: 'A checklist the books tick off themselves, a reconciliation that ties to one figure, and a signature. Five business days, guaranteed.',
+    description: 'A checklist the books tick off themselves, a reconciliation that ties to one figure, and a signature. Every client company free.',
     url: 'https://www.poofai.com/close',
     siteName: 'Poof',
     type: 'website',
@@ -44,7 +44,7 @@ const faqs = [
   { question: 'What does "the close is a record" mean?', answer: 'Each month\'s close is one object in Poof: who started it and when, where it stands, and what it took. The status is derived from the books, never typed. When you lock the period, the close captures its own activity: transactions reviewed, entries posted, decisions made by a person and by a rule, corrections, and hours from start to signature. Reopening keeps the signature on record.' },
   { question: 'Which tasks tick themselves?', answer: 'Thirteen of the seventeen in the default template are evidence-bound. They complete when the books prove them and cannot be ticked by hand: feeds reviewed, bank reconciled, drafts posted, deposits released, accruals tied, A/R and A/P tied, job costs tagged, and so on. Each open one says why in a sentence and links to the screen that fixes it. The other four are a person\'s tick, recorded with who and when.' },
   { question: 'How does the reconciliation work?', answer: 'Statement ending balance, less the books at period end, plus what is booked but not on the statement, less what is on the statement but not booked. One figure. The screen reads it from the server, completion stores the same number, and the close\'s bank-reconciliation check reads that. Outstanding items carry forward: a check written in July that clears in August is on August\'s book side, and a first reconciliation lists what was still open from before it.' },
-  { question: 'What is the five-day guarantee?', answer: 'Your books closed within five business days of month end, or the next month is free. It starts with your first close after a complete calendar month with your feeds connected. Historical cleanup and migrations are scoped separately. A close is ready when feeds are reviewed, the bank reconciles to one figure, and every card in Approvals is decided; cards left waiting past day five pause the clock.' },
+  { question: 'What does it cost a firm?', answer: 'Every client company is free, and so is the firm\'s own. Poof Agent, the AI that sorts, reads and drafts, is $29 a month ($290 a year) for each client you switch it on for, billed to the firm, and you can switch it client by client. Your trial covers Poof Agent for 3 clients. Filing a client\'s 1099s is $2.49 a form up to 25 a year, then $1.49, with each client\'s first 3 free; every client\'s forms, missing W-9s and signatures are on one page.' },
   { question: 'Can I change the checklist?', answer: 'Yes. A person can rename tasks, re-date them, deactivate ones that do not apply, and add manual rows. Evidence-bound tasks keep their evidence. Every close stamps its own copy of the template, so a later edit never rewrites history.' },
   { question: 'What happens when a task is late?', answer: 'A task past its due date on an open close is an insight, a card in Approvals with a one-tap "mark done" for a manual task, and one message per close per day on the channels you subscribe to: Telegram, SMS, Slack, or email. The sweep re-reads the books before it decides what is late, so it never nags about a bank account you reconciled that afternoon.' },
 ]
@@ -67,7 +67,7 @@ export default function ClosePage() {
             <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
             <Link href="/#act3" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Try the reconciliation</Link>
           </div>
-          <p className="text-sm text-ink mt-5 max-w-[60ch] border-l-[3px] border-ledger-600 pl-3">Closed within five business days of month end, or the next month is free. <a href="/#guarantee" className="text-ledger-600 font-semibold">The fine print</a></p>
+          <p className="text-sm text-ink mt-5 max-w-[60ch] border-l-[3px] border-ledger-600 pl-3">For bookkeepers: every client company is free. Poof Agent is $29 a month for each client you switch it on for. <Link href="/pricing" className="text-ledger-600 font-semibold">Pricing</Link></p>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ export default function ClosePage() {
         </div>
       </section>
 
-      <CtaSection />
+      <CtaSection person={false} />
       <Footer />
     </main>
   )

@@ -25,7 +25,6 @@ export default function PricingPage() {
     'Close checklist & period locks',
     'Payroll prep, 1099 prep & sales tax',
     'Dispatch board & the technician\'s field link',
-    'The iPhone app',
     'The Claude & ChatGPT connector',
     'Approval cards, in every channel',
     'Your own rules, which keep sorting transactions'
@@ -34,11 +33,12 @@ export default function PricingPage() {
   const freeAllowance = [
     '25 Ask Poof questions',
     '25 receipt or document reads',
-    '2 connected bank accounts (bank feeds)'
+    '2 connected bank accounts (bank feeds)',
+    '100 texts to your team'
   ]
 
   const agentFeatures = [
-    'Sorts new transactions overnight and posts the ones it\'s sure of',
+    'Sorts new transactions overnight onto one card for your OK, or posts the sure ones if you turn that on',
     'Reads every receipt, bill & check: photographed, uploaded, forwarded or texted',
     'Ask Poof with no limit, in the app, Telegram, Slack & by voice',
     'Writes your collection reminders & your month-end summary',
@@ -49,11 +49,11 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'Is Poof really free?',
-      answer: 'Yes, for good. The books, invoices, estimates, bills, purchase orders, every report, the close checklist and period locks, payroll prep, 1099 prep, sales tax, the dispatch board, the iPhone app, and the Claude and ChatGPT connector are all free, with no card and no time limit. Free also includes 25 Ask Poof questions, 25 receipt or document reads, and 2 connected bank accounts each month. Poof Agent, the AI that does the work for you, is the paid plan.'
+      answer: 'Yes, for good. The books, invoices, estimates, bills, purchase orders, every report, the close checklist and period locks, payroll prep, 1099 prep, sales tax, the dispatch board, and the Claude and ChatGPT connector are all free, with no card and no time limit. Free also includes 25 Ask Poof questions, 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team each month. Poof Agent, the AI that does the work for you, is the paid plan.'
     },
     {
       question: 'What does Poof Agent add?',
-      answer: 'Poof Agent is the AI that does the work while you\'re not looking. It sorts new transactions overnight and posts the ones it\'s sure of, reads every receipt, bill and check, answers Ask Poof with no limit in the app, Telegram, Slack and by voice, writes your collection reminders and month-end summary, connects every bank account, and texts your customers from your own registered Poof number. It is $79/mo, or $790/yr.'
+      answer: 'Poof Agent is the AI that does the work while you\'re not looking. It sorts new transactions overnight onto one card for your OK (or posts the sure ones, if you turn that on), reads every receipt, bill and check, answers Ask Poof with no limit in the app, Telegram, Slack and by voice, writes your collection reminders and month-end summary, connects every bank account, and texts your customers from your own registered Poof number. It is $79/mo, or $790/yr.'
     },
     {
       question: 'What happens after the 30 days?',
@@ -70,6 +70,14 @@ export default function PricingPage() {
     {
       question: 'How does pricing work for bookkeeping firms?',
       answer: 'Every client company is free. Poof Agent is $29 a month ($290 a year) for each client the firm switches it on for, billed to the firm. The firm\'s trial covers Poof Agent for 3 clients.'
+    },
+    {
+      question: 'Can someone do my books for me? What does that cost?',
+      answer: 'Yes. Ask for a bookkeeper who works in Poof: say how far behind your books are, roughly how many transactions you have a month, and whether you run payroll. A person usually gets back to you within a business day with a quote. There is no price on this page because every job is different: catching up a year is not the same work as keeping a tidy month. The software stays free either way.'
+    },
+    {
+      question: 'What does it cost to file 1099s with Poof?',
+      answer: 'Preparing them is free. Filing is free for your first 3 forms each year, then $2.49 a form. Poof emails each contractor their copy for free, or mails it for $1.79. A bookkeeper filing for clients pays $2.49 a form up to 25 a year, then $1.49, and each client\'s first 3 stay free.'
     },
     {
       question: 'Is my financial data secure?',
@@ -101,7 +109,7 @@ export default function PricingPage() {
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
-      answer: 'Many small businesses use Poof to handle their day-to-day bookkeeping without hiring a bookkeeper. Poof Agent sorts transactions, reads receipts, and writes the month-end summary, and every report builds itself. For tax preparation or complex accounting needs, you can invite your accountant to collaborate directly inside Poof.'
+      answer: 'Many small businesses use Poof to handle their day-to-day bookkeeping without hiring a bookkeeper. Poof Agent sorts transactions, reads receipts, and writes the month-end summary, and every report builds itself. If you would rather a person did it, ask for a bookkeeper who works in Poof. For tax preparation, you can invite your accountant to collaborate directly inside Poof.'
     }
   ]
 
@@ -231,15 +239,11 @@ export default function PricingPage() {
               <div className="bg-slate-900 rounded-xl border border-ledger-500/30 shadow-lg h-full flex flex-col">
                 {!isAnnual ? (
                   <div className="bg-ledger-500 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
-                    <span className="animate-pulse">✦</span>
                     <span className="uppercase">Free for your first 30 days</span>
-                    <span className="animate-pulse">✦</span>
                   </div>
                 ) : (
                   <div className="bg-ledger-500 text-white px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] flex items-center justify-center gap-3">
-                    <span>★</span>
-                    <span className="uppercase">Best Value — 2 months free</span>
-                    <span>★</span>
+                    <span className="uppercase">Annual — 2 months free</span>
                   </div>
                 )}
 
@@ -311,6 +315,29 @@ export default function PricingPage() {
             </div>
           </AnimateOnScroll>
 
+          {/* 1099 filing and a person */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <AnimateOnScroll animation="fade-up" delay={100} className="h-full">
+              <div className="bg-white border border-slate-200 rounded-xl p-8 h-full flex flex-col">
+                <h2 className="text-2xl font-display font-bold text-slate-800 mb-2">File your 1099s</h2>
+                <p className="text-slate-600 mb-4">Preparing them is free. Poof files with the IRS and sends every contractor their copy.</p>
+                <dl className="text-sm text-slate-600 space-y-2 mb-6 flex-grow">
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>First 3 forms each year</dt><dd className="font-mono text-slate-800">Free</dd></div>
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>Each form after that</dt><dd className="font-mono text-slate-800">$2.49</dd></div>
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>Each copy Poof mails</dt><dd className="font-mono text-slate-800">$1.79</dd></div>
+                  <div className="flex justify-between gap-4"><dt>Each copy Poof emails</dt><dd className="font-mono text-slate-800">Free</dd></div>
+                </dl>
+                <Link href="/1099s" className="text-ledger-600 font-semibold hover:text-ledger-700">How filing works →</Link>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-up" delay={200} className="h-full">
+              <div className="bg-white border border-slate-200 rounded-xl p-8 h-full flex flex-col">
+                <h2 className="text-2xl font-display font-bold text-slate-800 mb-2">Want a person to do your books?</h2>
+                <p className="text-slate-600 mb-6 flex-grow">A bookkeeper who works in Poof. Tell us how far behind you are, roughly how many transactions you have a month, and whether you run payroll. A person usually gets back to you within a business day with a quote; every job is different, so every job is quoted.</p>
+                <Link href="/bookkeeper" className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-all px-6 py-3 inline-block text-center">Ask for a bookkeeper →</Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
           <p className="text-sm text-slate-600 text-center mt-6">
             The AI receptionist for service shops is an add-on: $99 a month with 1,000 minutes of calls included, then 12¢ a minute. Turn it on in Settings → Receptionist.{' '}
             <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-400">See Poof for shops</Link>
@@ -347,7 +374,7 @@ export default function PricingPage() {
               {
                 icon: (
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
+                    <path d="M19 5v14H5V5h14m1.1-2H3.9c-.5 0-.9.4-.9.9v16.2c0 .4.4.9.9.9h16.2c.4 0 .9-.5.9-.9V3.9c0-.5-.5-.9-.9-.9zM11 7h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6v-2zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2z"/>
                   </svg>
                 ),
                 title: 'Always-Clean Books',

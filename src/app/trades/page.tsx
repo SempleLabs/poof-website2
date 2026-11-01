@@ -68,10 +68,22 @@ const builtFor = [
     cta: 'See how it works',
   },
   {
-    title: 'A close you can sign in five days',
-    body: 'Seventeen tasks, thirteen of them tied to evidence in the ledger, four that need a person. Closed within five business days of month end, or the next month is free.',
+    title: 'A close with a checklist the books tick off',
+    body: 'Seventeen tasks with due dates, thirteen of them tied to evidence in the ledger, four that need a person. Locking the period is the signature.',
     href: '/close',
     cta: 'See the close',
+  },
+  {
+    title: 'Your subs\' 1099s, filed by Poof',
+    body: 'The W-9 goes out at a sub\'s first payment, so January is one approval. Poof files with the IRS and mails the copies. The first 3 forms a year are free, then $2.49 a form.',
+    href: '/1099s',
+    cta: 'File your 1099s',
+  },
+  {
+    title: 'Rather not do the books? A person will.',
+    body: 'A bookkeeper who works in Poof keeps the shop\'s books, in the same place the jobs already are. Tell us how far behind you are; every job is quoted.',
+    href: '/bookkeeper',
+    cta: 'Ask for a bookkeeper',
   },
 ]
 
@@ -86,7 +98,7 @@ const faqs = [
   },
   {
     q: 'Does the AI text my customers?',
-    a: 'Only if you turn it on. Customer messages (a booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way") are off until an owner or admin switches them on. They go by email until your Poof line is registered for business texting (texting customers comes with Poof Agent), they stay quiet from 9pm to 8am, and STOP works. The dispatched technician is always texted their job link. On the books side, no ledger rule can send anything to a customer: invoices and credit notes are always a person\'s decision.',
+    a: 'Only if you turn it on. Customer messages (a booking confirmation with "Reply C to confirm," moved and cancelled notices, a day-before reminder, and "on my way") are off until an owner or admin switches them on. They go by email until your Poof line is registered for business texting (texting customers comes with Poof Agent), they stay quiet from 9pm to 8am, and STOP works. The dispatched technician is texted their job link once they have replied YES to Poof. On the books side, no ledger rule can send anything to a customer: invoices and credit notes are always a person\'s decision.',
   },
   {
     q: 'Do I have to switch off Jobber or Housecall Pro?',
@@ -99,6 +111,10 @@ const faqs = [
   {
     q: 'Does the technician need an account or an app?',
     a: 'Neither, and that is the point — it is the answer to "my guys will not use another app." The tech taps a link in a text. It records on my way, arrived, and complete when they happen rather than tracking location, takes the customer\'s signature with a finger, can take card or bank by QR code or pay link once online payments are on (cash becomes a card the office approves), and needs a signal. Jobsite photos are opted into the customer invoice one photo at a time, and the supply-house receipt showing your cost defaults to not printing.',
+  },
+  {
+    q: 'Can someone just do the books for me?',
+    a: 'Yes. Ask for a bookkeeper who works in Poof: say how far behind the books are, roughly how many transactions a month, and whether you run payroll, and a person usually gets back to you within a business day with a quote for the job. There is no price on this site because a year of catch-up and a tidy monthly close are different jobs. Your techs and your dispatcher see no change.',
   },
   {
     q: 'Who is this actually for?',
@@ -210,7 +226,8 @@ export default function TradesPage() {
               The dispatch board, the field loop, and per-job profitability are free. Poof Agent, the AI that does the
               work, does not go up when you add a truck or a tech — the field-service tools shops compare us to are priced per
               technician per month. Poof Agent is free for your first 30 days. The AI receptionist is an add-on at $99 a
-              month with 1,000 minutes included.
+              month with 1,000 minutes included. Rather hand the books to a person?{' '}
+              <Link href="/bookkeeper" className="text-ledger-600 font-semibold hover:text-ledger-700">Ask for a bookkeeper</Link>; every job is quoted.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>

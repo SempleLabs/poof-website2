@@ -23,29 +23,50 @@ export default function Home() {
       />
       <Header />
 
-      {/* Our own books: the close record is public */}
-      <div className="pt-16">
-        <div className="bg-ink text-paper text-[13.5px] px-5 py-2 text-center">
-          <b className="font-semibold">Your books closed within five business days of month end, or the next month is free.</b>{' '}
-          <a href="#guarantee" className="text-ledger-400 underline underline-offset-2">The fine print</a>
-        </div>
-      </div>
+      <div className="pt-16" />
 
       <HomeShow />
 
+      {/* Three ways to get the books done (owners first, 2026-11-01) */}
+      <section className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="three-ways">
+        <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">Three ways to get the books done</p>
+        <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-6 text-balance">Do them free, let Poof Agent do them, or hand them to a person.</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white border border-rule p-5 flex flex-col">
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">Free · for good</p>
+            <p className="font-mono text-3xl text-ink mt-2 mb-3 tabular">$0</p>
+            <p className="text-[15px] text-muted flex-grow">You do the books; Poof keeps them. The ledger, invoices, bills, every report, the close and 1099 prep, with your rules sorting what they cover. Each month, 25 Ask Poof questions and 25 receipt reads.</p>
+            <Link href="https://app.poofai.com/register" className="mt-4 inline-block text-center rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Start free</Link>
+          </div>
+          <div className="bg-white border border-ledger-600 border-l-4 p-5 flex flex-col">
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600">Poof Agent · 30 days free</p>
+            <p className="font-mono text-3xl text-ink mt-2 mb-3 tabular">$79<span className="text-base text-muted">/mo</span></p>
+            <p className="text-[15px] text-muted flex-grow">The AI does the work: the bank sorted overnight, every receipt read, the reminders and the month&apos;s write-up drafted, Ask Poof with no limit. Every entry waits on a card for your OK.</p>
+            <Link href="https://app.poofai.com/register" className="mt-4 inline-block text-center rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
+          </div>
+          <div className="bg-white border border-rule p-5 flex flex-col">
+            <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">A person · quoted</p>
+            <p className="font-display text-[26px] leading-[1.05] tracking-[-0.03em] text-ink mt-2 mb-3">Want a person to do your books?</p>
+            <p className="text-[15px] text-muted flex-grow">A bookkeeper who works in Poof. Tell us how far behind you are and what you need; we usually get back to you within a business day with a quote for the job.</p>
+            <Link href="/bookkeeper" className="mt-4 inline-block text-center rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Ask for a bookkeeper</Link>
+          </div>
+        </div>
+      </section>
+
       {/* What Poof is, in plain words, for people and for answer engines */}
-      <section className="max-w-[780px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="what-is-poof">
+      <section className="max-w-[780px] mx-auto px-4 sm:px-6 pt-16 pb-6" id="what-is-poof">
         <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">What Poof is</p>
         <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The back office, run by AI. Signed by you.</h2>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
-          Poof is software that runs the back office for a small business. It keeps the books, sends the invoices, plans the cash, and closes the month — and for service shops it answers the phone, books the job, and carries it out to the truck and back. Every write an AI proposes waits on a card with the evidence it found, and nothing lands until a person has seen it. Poof is free; Poof Agent, the AI that does the work while you sleep, is $79 a month. The AI receptionist that answers a shop’s phone is an add-on.
+          Poof is free software that runs the back office for a small business. It keeps the books, sends the invoices, plans the cash, files the 1099s and closes the month, and for service shops it carries the job from the phone call to the truck and back. Every write an AI proposes waits on a card with the evidence it found, and nothing lands until a person has seen it. Poof Agent, the AI that does the work while you sleep, is $79 a month. When you would rather not do the books at all, a bookkeeper who works in Poof does them, and every job is quoted.
         </p>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45] mt-3">
           Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the dispatch board and the technician&apos;s field link to the same account, free, and the AI receptionist as an add-on at $99 a month.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-6">
-          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 246 features</Link>
+          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 270 features</Link>
           <Link href="/pricing" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Pricing</Link>
+          <Link href="/1099s" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">File your 1099s</Link>
           <Link href="/poof-vs-quickbooks" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Poof vs QuickBooks</Link>
           <Link href="/how-it-works" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">How it works</Link>
         </div>
@@ -53,19 +74,14 @@ export default function Home() {
 
       <BackOfficeSection />
 
-      {/* The guarantee, stated as a commitment with its conditions */}
-      <section className="max-w-[820px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="guarantee">
-        <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">The five-day close guarantee</p>
-        <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Closed within five business days of month end, or the next month is free.</h2>
+      {/* January's front door: Poof files the 1099s */}
+      <section className="max-w-[820px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="file-1099s">
+        <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">1099s · due February 1, 2027</p>
+        <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Tell Poof who you paid. Poof files the 1099s.</h2>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
-          The close is a checklist with due dates, and the books tick most of it off themselves. If yours is not ready to sign by the fifth business day, you do not pay for the month after it.
+          Type your contractors in, upload a spreadsheet, or connect the bank and tick the ones Poof finds. Poof collects their W-9s, files with the IRS after you approve, and emails or mails every contractor their copy. Your first 3 forms each year are free; after that it&apos;s $2.49 a form, and $1.79 for each copy Poof mails.
         </p>
-        <div className="mt-6 border-l-[3px] border-ledger-600 pl-4 text-[15px] text-muted max-w-[64ch] space-y-2">
-          <p><b className="text-ink font-semibold">It starts with your first full month.</b> The guarantee covers the first close after a complete calendar month with your bank and card feeds connected, and every month after that. The partial month you joined in is not covered.</p>
-          <p><b className="text-ink font-semibold">Cleanup is a separate job.</b> Historical books that need rebuilding, migrations from another system, and untangling prior months are scoped with you first and have their own timeline. The guarantee applies once the current month is on Poof.</p>
-          <p><b className="text-ink font-semibold">Ready to sign means ready.</b> Feeds reviewed, the bank reconciled to one figure, and every card in Approvals decided by you or a rule you granted. Cards you leave waiting past day five pause the clock, because a close cannot sign around a decision nobody made.</p>
-          <p><b className="text-ink font-semibold">The remedy is the next month free,</b> applied to your subscription, not a refund. If a late close is our fault two months running, you can cancel with the second month refunded.</p>
-        </div>
+        <p className="mt-5"><Link href="/1099s" className="text-ledger-600 font-semibold hover:text-ledger-700">File your 1099s with Poof →</Link></p>
       </section>
 
       <HomeFaqShort />

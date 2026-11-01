@@ -103,6 +103,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Books That Balance but Look Wrong",
         description: "A reviewer catches a merchant filed somewhere unusual, an owner’s draw booked as an expense, fuel or rent booked as office supplies, and a monthly bill that stopped. A finding with one clear fix becomes a one-tap card"
+      },
+      {
+        title: "Stripe Payouts Tie Out",
+        description: "Stripe’s own fees are booked, and a payout’s bank deposit is matched to the payout’s entry instead of being booked twice"
       }
     ]
   },
@@ -116,7 +120,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Poof AI Assistant",
-        description: "Built-in AI assistant with 113 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
+        description: "Built-in AI assistant with 115 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -247,6 +251,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Ask How the Business Is Doing",
         description: "Close rate, average ticket, top tech, callbacks, members, utilization, the P&L, A/R aging, and job profitability, answered with the same numbers the screens show"
+      },
+      {
+        title: "Use Poof from Claude, ChatGPT or Grok",
+        description: "Sign in with Poof: the consent page names the app, the company, and you, and the app sees only what your role can read. Poof Bookkeeping is in Claude’s directory. Disconnect any time in Settings → Chat apps"
       }
     ]
   },
@@ -476,6 +484,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Pending Holds Wait Until They Post",
         description: "A pending charge waits until the bank posts it. One the bank removes is set aside, and a booked one the bank stops showing raises a card"
+      },
+      {
+        title: "Pending at the Bank",
+        description: "“Pending at the bank: 3 (−$412.18)” under each account and on Transactions, never booked. Sync Now asks the bank for the latest first"
       }
     ]
   },
@@ -727,6 +739,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "The Requests Inbox",
         description: "Unbooked calls, website requests, and texts in one list with Book, Call back, and Close, plus a booking form for your website. The office confirms every booking"
+      },
+      {
+        title: "Missed-Call Text-Back",
+        description: "A call that ends without a booking gets one text with your booking link, within 15 minutes. Off until you turn it on, never after an emergency call, and at most once a week per number"
       }
     ]
   },
@@ -786,6 +802,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Signature and a Visit Report",
         description: "The customer signs with a finger on the tech’s phone and gets a report of the visit"
+      },
+      {
+        title: "Text a Receipt to Poof",
+        description: "A tech texts a photo of the receipt to Poof’s number, and it becomes an expense card in Approvals, on the job or not"
+      },
+      {
+        title: "Techs Say YES First",
+        description: "Poof texts each tech once and holds job texts until they reply YES. Your team list shows who’s on, who’s waiting, and who texted STOP"
       }
     ]
   },
@@ -871,6 +895,10 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Everyday Decisions as Cards",
         description: "A payment received to match, a customer’s credit to apply, a transfer, a draft invoice to send when a tech completes a visit, an accepted quote to convert, and a quiet quote to remind, each a card in any channel"
+      },
+      {
+        title: "Cards Read as Decisions",
+        description: "Each card leads with a headline and what will happen, then the button’s word, the checks that passed, and one caution if there is one. The details are folded away"
       }
     ]
   },
@@ -915,7 +943,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "1099s & Vendors",
     icon: "1099",
-    note: "Poof prepares the 1099s, the contractors’ copies, and the CPA summary. Whoever files them enters them in the IRS’s free IRIS portal from that summary, with Poof’s checklist beside them.",
+    note: "Preparing 1099s is free. Poof files them with the IRS for you, or your bookkeeper or CPA can; see File Your 1099s.",
     features: [
       {
         title: "Books → 1099s",
@@ -935,7 +963,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Prepare the Year",
-        description: "Each contractor’s copy, emailed to those who consented and ready to print and mail for the rest, plus a summary PDF for your CPA"
+        description: "Each contractor’s copy, emailed to those who consented and mailed by Poof (or printed) for the rest, plus a summary PDF for your CPA"
       },
       {
         title: "Mark Filed or Rejected",
@@ -943,12 +971,43 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Who Files Your 1099s?",
-        description: "Your bookkeeper, your CPA, or you, with the filer-code checklist for whoever it is, the checks the IRS rejects forms for, and reminders from October to December 15 while there’s still time to set it up"
+        description: "Poof files them, first. Or your bookkeeper, your CPA, or you, with the filer-code checklist and the checks the IRS rejects forms for. Reminders run from October to the due date"
       },
       {
         title: "The January Check",
         description: "A card for checks written in December that cleared in January, and a close task for the filing"
       }
+    ]
+  },
+  {
+    name: "File Your 1099s",
+    icon: "1099",
+    note: "Poof files 1099-NEC and 1099-MISC with the IRS after the year ends, for a business that signs the authorization. Prep is free; the first 3 forms each year are free, then $2.49 a form, and $1.79 for each copy Poof mails. Emailed copies are free.",
+    features: [
+      { title: "File My 1099s", description: "One page in five steps: your business, who you paid, their W-9s, review and approve, and Poof files. Pick it at sign-up and you land on it" },
+      { title: "Poof Files Them With the IRS", description: "One signature, your name, title, and “I agree”, authorizes Poof and approves the forms. You never need an IRS filer code" },
+      { title: "Tell Poof Who You Paid", description: "Type contractors in or upload a spreadsheet. An amount you enter is labelled “entered by you”, next to what your books show" },
+      { title: "Last Year From Your Bank", description: "Connect the bank and Poof brings in payments back to January 1, counted toward the 1099s and kept out of your books" },
+      { title: "Add a Bank Payee as a Contractor", description: "Straight from “who is this?” on a bank payment" },
+      { title: "Every W-9 in One Click", description: "Emailed to every contractor, or a link for you to text, with a board showing who’s in, who’s been asked, and whose link ran out" },
+      { title: "Reminders Until They Answer", description: "Every 5 days, up to 3 times, with a fresh link, and who’s still missing in Needs Attention from December 1" },
+      { title: "Poof Mails the Paper Copies", description: "First-class, to contractors who didn’t agree to email. Each form shows the day it went, and a bad address is listed with the reason" },
+      { title: "The IRS Receipt, Emailed", description: "You hear that the forms were accepted, with the receipt, or exactly what to fix" },
+      { title: "Priced per Form", description: "The first 3 forms each year are free, then $2.49 a form; $1.79 for each mailed copy; emailed copies are free" },
+      { title: "The W-9 at the First Payment", description: "A W-9 request at a contractor’s first payment, and a line on the 1st of each month: who you’ve paid, how much, and how many W-9s are in" },
+      { title: "A Bookkeeper’s Clients on One Page", description: "Every client’s forms, missing W-9s, and signature. Send for signature emails the owner a one-use link, with no login" },
+      { title: "One Checkout for Every Client", description: "A firm pays for all its clients’ forms at once: $2.49 a form up to 25 a year, then $1.49, with each client’s first 3 free" }
+    ]
+  },
+  {
+    name: "Free, Poof Agent & a Person",
+    icon: "approvals",
+    note: "Poof is free for good. Poof Agent is $79 a month or $790 a year; bookkeeping firms pay $29 a month for each client they switch it on for. A person to do your books is quoted job by job.",
+    features: [
+      { title: "Free for Good", description: "The whole app, with no card, no time limit, and nothing read-only. Each month: 25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds, and 100 texts to your team, with the meters in Settings → Billing. File imports have no limit" },
+      { title: "Poof Agent", description: "Every piece of AI work with no monthly limit: the overnight sort, every receipt read, Ask Poof, reminders and the month-end write-up. Every new company gets 30 days of it, then stays on Free unless you keep it" },
+      { title: "Firms Switch the Agent On Client by Client", description: "Every client company is free; the firm pays only for the clients it switches Poof Agent on for, with a running total" },
+      { title: "Want a Person to Do Your Books?", description: "Ask in Settings → Billing, on For Review when the backlog is long, or in Ask Poof. A bookkeeper who works in Poof usually gets back to you within a business day and quotes the job" }
     ]
   },
   {
@@ -1150,7 +1209,7 @@ export interface FaqItem {
 export const faqData: FaqItem[] = [
   {
     question: "What is Poof?",
-    answer: "Poof is a platform to run a small business, with the books at the center. Connect your bank and card accounts and the AI reads the feeds, matches invoices to deposits and bills to payments, categorizes, and drafts the month-end close. Every entry it proposes waits on a card with the evidence it found, and nothing reaches the books until a person approves it or a rule that person granted covers it. It also invoices, takes payments, budgets, forecasts cash, and for trade shops answers the phone and lets a technician close a job from a text. Poof is free; Poof Agent, the AI that does the work, is $79 a month, and a close within five business days or the next month is free.",
+    answer: "Poof is a platform to run a small business, with the books at the center. Connect your bank and card accounts and the AI reads the feeds, matches invoices to deposits and bills to payments, categorizes, and drafts the month-end close. Every entry it proposes waits on a card with the evidence it found, and nothing reaches the books until a person approves it or a rule that person granted covers it. It also invoices, takes payments, budgets, forecasts cash, and for trade shops answers the phone and lets a technician close a job from a text. Poof is free. Poof Agent, the AI that does the work, is $79 a month. Poof also files your 1099s, and if you would rather not do the books at all, a bookkeeper who works in Poof will, quoted job by job.",
     category: "General"
   },
   {
@@ -1159,19 +1218,29 @@ export const faqData: FaqItem[] = [
     category: "Pricing & Plans"
   },
   {
-    question: "What does the five-day close guarantee cover?",
-    answer: "Your books closed within five business days of month end, or the next month is free. It starts with your first close after a complete calendar month with your feeds connected; the partial month you joined in is not covered, and historical cleanup or a migration is scoped separately. A close is ready when feeds are reviewed, the bank reconciles to one figure, and every card in Approvals is decided. Cards left waiting past day five pause the clock. The remedy is the next month free on your subscription.",
+    question: "Is Poof really free?",
+    answer: "Yes, for good, with no card and no time limit. The books, invoices, quotes, bills, every report, the close checklist and period locks, payroll and 1099 prep, sales tax, the dispatch board, and the Claude and ChatGPT connector are all free, and nothing goes read-only. Free also includes 25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds, and 100 texts to your team each month. Poof Agent, the AI that does the work for you, is the paid plan at $79 a month, and every new company gets it free for 30 days.",
+    category: "Pricing & Plans"
+  },
+  {
+    question: "Can someone do my books for me?",
+    answer: "Yes. Ask for a bookkeeper who works in Poof. Tell us how far behind the books are, roughly how many transactions you have a month, and whether you run payroll, and a person usually gets back to you within a business day with a quote for the job. There is no price on the site because a year of catch-up and a tidy monthly close are different jobs. Everything they do is in your books, on the record, where you can see it.",
+    category: "Pricing & Plans"
+  },
+  {
+    question: "Does Poof file my 1099s?",
+    answer: "Yes. Tell Poof who you paid, by typing them in, uploading a spreadsheet, or connecting your bank. Poof collects their W-9s, and once you approve with one signature it files the 1099-NEC and 1099-MISC forms with the IRS and emails or mails every contractor their copy. You never need an IRS filer code. The first 3 forms each year are free, then $2.49 a form, and $1.79 for each copy Poof mails. Forms for 2026 are due February 1, 2027.",
     category: "Pricing & Plans"
   },
   {
     question: "What is Poof for shops?",
-    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same five-day checklist. It is the same free plan and the same $79-a-month Poof Agent \u2014 there is no shop tier and no per-truck pricing. The AI receptionist is an add-on at $99 a month with 1,000 minutes included.",
+    answer: "The same Poof, set up for a service shop: the AI receptionist that answers the line and books the job, the technician's field link that writes the invoice, and per-job profitability on every close. You bring your Jobber or Housecall Pro export and your bank feeds; the books close on the same checklist. It is the same free plan and the same $79-a-month Poof Agent \u2014 there is no shop tier and no per-truck pricing. The AI receptionist is an add-on at $99 a month with 1,000 minutes included.",
     category: "General",
     audience: "trades"
   },
   {
     question: "Do I have to run the software myself?",
-    answer: "Somebody has to, but it is minutes a day rather than a job. The AI proposes every entry and stages it on a card with its evidence; you, your office manager, or your bookkeeper decide the cards and sign the close. Your team keeps using Jobber or Housecall Pro exactly as they do today.",
+    answer: "Somebody has to, but it is minutes a day rather than a job. The AI proposes every entry and stages it on a card with its evidence; you, your office manager, or your bookkeeper decide the cards and sign the close. If you would rather not, ask for a bookkeeper who works in Poof, and every job is quoted. Your team keeps using Jobber or Housecall Pro exactly as they do today.",
     category: "General",
     audience: "trades"
   },
@@ -1207,7 +1276,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What reports does Poof generate?",
-    answer: "Poof generates 13 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging, AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, and Budget vs Actual. You can toggle between accrual and cash basis, select custom date ranges, and export to PDF or Excel.",
+    answer: "Poof generates 14 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. You can toggle between accrual and cash basis, select custom date ranges, and export to PDF or Excel.",
     category: "General"
   },
   {
@@ -1222,12 +1291,12 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 113 tools: it prepares records, updates invoices, generates all 14 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. QuickBooks has no free plan; Poof is free, and Poof Agent, the AI that does the work, is $79/month, free for the first 30 days. The fair QuickBooks comparison for Poof Agent is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 115 tools: it prepares records, updates invoices, generates all 14 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. QuickBooks has no free plan; Poof is free, and Poof Agent, the AI that does the work, is $79/month, free for the first 30 days. The fair QuickBooks comparison for Poof Agent is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
     category: "Pricing & Plans"
   },
   {
     question: "Can my accountant access Poof?",
-    answer: "Yes. Poof supports team management with role-based access control. You can invite your accountant or bookkeeper with a specific role (Owner, Admin, Accountant, Bookkeeper, or Viewer) so they can review your books, run reports, and make adjustments as needed — with 26 granular permissions to control exactly what they can access.",
+    answer: "Yes. Poof supports team management with role-based access control. You can invite your accountant or bookkeeper with a specific role (Owner, Admin, Accountant, Bookkeeper, Office manager, or Viewer) so they can review your books, run reports, and make adjustments as needed — with 46 granular permissions to control exactly what they can access.",
     category: "General"
   },
   {
@@ -1242,7 +1311,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Does Poof support recurring invoices?",
-    answer: "Yes. Set up recurring invoices on weekly, monthly, quarterly, or yearly schedules. Poof auto-generates and auto-sends invoices on schedule, and includes automated follow-up reminders at due date, 3, 7, 14, and 30 days past due — with smart pause when payment is received.",
+    answer: "Yes. Set up recurring invoices on weekly, monthly, quarterly, or yearly schedules. Poof makes each invoice on schedule as a draft for you to review, or sends it on its own if you choose, and includes automated follow-up reminders at due date, 3, 7, 14, and 30 days past due — with smart pause when payment is received.",
     category: "Invoicing & Payments"
   },
   {
@@ -1257,7 +1326,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Can AI do my bookkeeping for me?",
-    answer: "Yes. AI bookkeeping tools like Poof can handle most of your day-to-day bookkeeping automatically — categorizing transactions, reconciling bank accounts, scanning receipts, matching payments to invoices, generating financial reports, and even creating budgets from plain-English goals. You still review and approve the work, but AI eliminates 90% of the manual data entry. For tax filing and complex accounting decisions, you can invite your accountant to collaborate inside Poof.",
+    answer: "Yes. AI bookkeeping tools like Poof can handle most of your day-to-day bookkeeping automatically — categorizing transactions, reconciling bank accounts, scanning receipts, matching payments to invoices, generating financial reports, and even creating budgets from plain-English goals. You still review and approve the work, but AI eliminates 90% of the manual data entry. If you would rather not do any of it, ask for a bookkeeper who works in Poof. For tax filing and complex accounting decisions, you can invite your accountant to collaborate inside Poof.",
     category: "AI & Automation"
   },
   {
@@ -1287,7 +1356,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How much does bookkeeping cost for a small business?",
-    answer: "Traditional bookkeeping costs vary widely: hiring a part-time bookkeeper typically runs $500-$2,000/month, while a full-time in-house bookkeeper can cost $3,000-$5,000/month plus benefits. Outsourced bookkeeping firms charge $200-$500/month for basic services. AI-powered bookkeeping software like Poof is free, and Poof Agent ($79/month) handles most of the work automatically — transaction categorization, receipt scanning, collection reminders, and the month-end summary. For most small businesses, Poof replaces the need for a dedicated bookkeeper at a fraction of the cost.",
+    answer: "Traditional bookkeeping costs vary widely: hiring a part-time bookkeeper typically runs $500-$2,000/month, while a full-time in-house bookkeeper can cost $3,000-$5,000/month plus benefits. Outsourced bookkeeping firms charge $200-$500/month for basic services. AI-powered bookkeeping software like Poof is free, and Poof Agent ($79/month) handles most of the work automatically — transaction categorization, receipt scanning, collection reminders, and the month-end summary. For most small businesses, Poof replaces the need for a dedicated bookkeeper at a fraction of the cost. If you would rather have a person, ask for a bookkeeper who works in Poof; each job is quoted on its own.",
     category: "Pricing & Plans"
   },
   {
@@ -1307,7 +1376,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof handle taxes?",
-    answer: "Poof keeps your books organized and tax-ready throughout the year, so you're not scrambling at tax time. It automatically categorizes deductible expenses, tracks mileage, generates P&L and Balance Sheet reports that your accountant needs for tax preparation, and maintains a complete audit trail of every transaction. While Poof doesn't file taxes directly, it produces the accurate financial records your CPA or tax preparer requires. You can invite your accountant into Poof with role-based access so they can pull reports, review categorizations, and make adjustments before filing.",
+    answer: "Poof keeps your books organized and tax-ready throughout the year, so you're not scrambling at tax time. It automatically categorizes deductible expenses, tracks mileage, generates P&L and Balance Sheet reports that your accountant needs for tax preparation, and maintains a complete audit trail of every transaction. Poof doesn't file income tax returns: it produces the records and the year-end package your CPA or tax preparer needs, and it files your 1099s with the IRS. You can invite your accountant into Poof with role-based access so they can pull reports, review categorizations, and make adjustments before filing.",
     category: "General"
   },
   {
