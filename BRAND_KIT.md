@@ -27,7 +27,7 @@
 **Read this before writing any copy.** Re-check the page before acting on a line here — this
 table has carried already-fixed rows before, and a stale list repeated back reads as urgency.
 
-Everything in this table is built in site PR `brand-pass-owners-first`, **not merged yet** (Austin merges site PRs).
+Everything in this table is built in site PR #30 (`brand-pass-owners-first`), **not merged yet** (Austin merges site PRs).
 
 | Where | What's wrong now | Should be |
 |---|---|---|
@@ -1276,7 +1276,7 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 - **Competitive:** QuickBooks prices re-checked against third-party pages (unchanged, $38/$85/$140/$340); a *free alternatives* table (Wave, Zoho Books, Balances, SlowBooks), every figure marked to verify before use. Free is compared to Simple Start; Poof Agent to Plus.
 - **Section 14** is now *Trade Contractors*, the audience for `/trades` and outreach, with the managed tiers retired (history below, 08-23 and earlier).
 - **Not claimable yet:** domain scopes, AI apps drafting cards (`MCP_CARD_APPS`), the ChatGPT listing, the iPhone app, AI cost ceilings, nightly backups.
-- **Site:** all of the above in site PR `brand-pass-owners-first` (not merged yet). The repo's kit and the site's copy are identical again once it merges.
+- **Site:** all of the above in site PR #30 (`brand-pass-owners-first`) (not merged yet). The repo's kit and the site's copy are identical again once it merges.
 - **Fixed in passing:** a duplicated, broken table under *Where the Components Live* in Logo Usage.
 
 ### October 21, 2026 — the AI receptionist is a separate add-on
