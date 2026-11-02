@@ -42,6 +42,22 @@ function parseJobs(raw: unknown): JobInput[] | null {
   return jobs
 }
 
+// A visitor gets a few write-ups, not an unlimited supply: each one is an email to the address typed in.
+// Per address it is counted in the leads table, so it holds across server instances; per IP it is a
+// best-effort brake for bursts.
+const MAX_PER_ADDRESS = 3
+const ipHits = new Map<string, { count: number; resetAt: number }>()
+function ipLimited(ip: string): boolean {
+  const now = Date.now()
+  const e = ipHits.get(ip)
+  if (!e || now > e.resetAt) {
+    ipHits.set(ip, { count: 1, resetAt: now + 10 * 60 * 1000 })
+    return false
+  }
+  e.count++
+  return e.count > 5
+}
+
 const trialUrl = (source: string | null) =>
   `https://app.poofai.com/register?src=${encodeURIComponent(source ?? 'job-margin-check')}`
 
@@ -79,8 +95,10 @@ function buildEmail(r: MarginReport, source: string | null): string {
 
 export async function POST(request: NextRequest) {
   try {
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+    if (ipLimited(ip)) return NextResponse.json({ error: 'Too many requests. Try again in a few minutes.' }, { status: 429 })
     const body = (await request.json()) as Record<string, unknown>
-    const email = String(body.email ?? '').trim().toLowerCase()
+    const email = String(body.email ?? '').trim().toLowerCase().slice(0, 200)
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
     // Honeypot: a hidden field only bots fill.
     if (body.company_url) return NextResponse.json({ success: true })
@@ -94,6 +112,15 @@ export async function POST(request: NextRequest) {
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY
     if (supabaseUrl && supabaseKey) {
       const supabase = createClient(supabaseUrl, supabaseKey)
+      const { count, error: countError } = await supabase
+        .from('report_leads')
+        .select('email', { count: 'exact', head: true })
+        .eq('email', email)
+        .like('source', 'job_margin_check%')
+      if (countError) console.error('job-margin-check: supabase count', countError)
+      else if ((count ?? 0) >= MAX_PER_ADDRESS) {
+        return NextResponse.json({ error: 'We have already sent this address its write-ups. Check your inbox, or start free to see every job.' }, { status: 429 })
+      }
       // report_leads has email + source today. The account is kept in `source` until a
       // details column exists, e.g. "job_margin_check:shopmath".
       const { error } = await supabase.from('report_leads').insert({

@@ -166,18 +166,16 @@ export default function PricingPage() {
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 text-sm font-medium rounded-md transition-all duration-200 relative ${
+                className={`px-6 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                   isAnnual
                     ? 'bg-ledger-500 text-white shadow-sm'
                     : 'text-slate-500 hover:text-slate-700'
                 }`}
               >
                 Annual
-                <span className="absolute -top-2 -right-2 bg-ledger-500 text-white text-xs px-2 py-1 rounded-full">
-                  Save $158
-                </span>
               </button>
             </div>
+            <span className="ml-3 text-sm font-medium text-ledger-600">Save $158 a year</span>
           </div>
         </div>
       </section>
@@ -362,7 +360,7 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-4xl font-display font-bold text-slate-800 mb-6">
-              Why Small Businesses Switch to Poof
+              Why owners switch to Poof
             </h2>
             <p className="text-xl text-slate-600 mb-12">
               The books are free, for good — and when you want AI that actually does the work, that&apos;s Poof Agent.
@@ -395,8 +393,8 @@ export default function PricingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
-                title: 'Bank-Grade Security',
-                description: 'Read-only bank connections through Plaid. Two-factor authentication. Role-based permissions. Your financial data stays encrypted and locked down.'
+                title: 'Read-only bank access',
+                description: 'Bank connections through Plaid are read-only, and Poof never sees your bank password. Two-step sign-in, six roles, and bank and tax details stored encrypted.'
               }
             ].map((card, index) => (
               <AnimateOnScroll key={index} animation="fade-up" delay={100 + index * 100}>
@@ -419,7 +417,7 @@ export default function PricingPage() {
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-display font-bold text-slate-800 mb-6">
-                Frequently Asked Questions
+                Questions owners ask
               </h2>
               <p className="text-xl text-slate-600">
                 Everything you need to know about Poof pricing and features.
@@ -455,7 +453,7 @@ export default function PricingPage() {
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-4xl font-display font-bold text-white mb-6">
-              Ready to Automate Your Bookkeeping?
+              Start free. Hire Poof Agent when you want it.
             </h2>
             <p className="text-xl text-slate-400 mb-8">
               Poof is free for good, and Poof Agent is free for your first 30 days.

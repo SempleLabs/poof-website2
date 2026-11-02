@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     'Free for HVAC, plumbing and electrical shops: enter 3 to 10 recent jobs and see each one’s margin against your other jobs, which ones lost money, and why. No account, no bank statement.',
   alternates: { canonical: 'https://www.poofai.com/job-margin-check' },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Which of your jobs actually made money?',
     description: 'Enter a few recent jobs. See each one’s margin, and which ones lost money. Free, no account.',
     url: 'https://www.poofai.com/job-margin-check',

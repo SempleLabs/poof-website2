@@ -345,9 +345,8 @@ export default function HomeShow() {
           <p className={eyebrow}>Built by a former controller</p>
           <h2 className={h2}>The person who wrote this signed closes for a living first.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-[22px] items-center mt-7 px-6 py-[22px] bg-white border border-rule">
-            <div className="aspect-square max-w-[220px] border border-rule bg-paper-2 flex flex-col justify-end p-3.5 gap-1.5">
-              <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600">Real photograph · Austin Semple</span>
-              <span className="text-sm text-muted">Window light, work shirt, no laptop.</span>
+            <div className="relative aspect-square max-w-[220px] border border-rule bg-paper-2 overflow-hidden">
+              <Image src="/team/austin-semple.jpg" alt="Austin Semple" fill sizes="220px" className="object-cover object-center" />
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1.5">Austin Semple, former controller</h3>

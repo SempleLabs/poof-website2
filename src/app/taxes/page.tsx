@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Every tax deadline on the day it really falls, how much tax you have built up against what you have set aside, your four quarterly estimates, 1099s at the $2,000 threshold, filed by Poof, and one year-end package for your CPA. Poof prepares and reminds; you and your CPA file the return.',
   alternates: { canonical: 'https://www.poofai.com/taxes' },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Taxes, kept by the books',
     description: 'The tax calendar, the reserve, the four estimates, 1099s filed by Poof, and a January package your CPA can use.',
     url: 'https://www.poofai.com/taxes',

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/support',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Support — Contact the Poof Team',
     description:
       'Email support@poofai.com and a real person replies within 2 business days. Poof is a product of Semple Labs LLC.',

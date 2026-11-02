@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Tell Poof who you paid. Poof collects the W-9s, files your 1099-NEC and 1099-MISC forms with the IRS, and emails or mails every contractor their copy. No IRS filer code needed. The first 3 forms each year are free, then $2.49 a form. 2026 forms are due February 1, 2027.',
   alternates: { canonical: 'https://www.poofai.com/1099s' },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Tell Poof who you paid. Poof files the 1099s.',
     description: 'W-9s collected, forms filed with the IRS, copies emailed or mailed. The first 3 forms each year free.',
     url: 'https://www.poofai.com/1099s',

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/contact',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Contact the Poof Team',
     description:
       "Have a question about Poof AI bookkeeping? Contact us and we'll respond within 24 hours — setup, features, and support.",

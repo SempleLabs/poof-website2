@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate email
-    if (!email || !email.includes('@')) {
+    if (typeof email !== 'string' || email.length > 200 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
       return NextResponse.json(
         { error: 'Valid email address is required' },
         { status: 400 }
@@ -66,6 +66,18 @@ export async function POST(request: NextRequest) {
 
     const supabase = createClient(supabaseUrl, supabaseKey)
     const resend = new Resend(resendApiKey)
+
+    // Every sign-up sends a welcome to the address typed in. A burst of new addresses is someone
+    // signing up strangers, not a rush of readers: past this many an hour, wait.
+    const since = new Date(Date.now() - 60 * 60 * 1000).toISOString()
+    const { count: lastHour, error: countError } = await supabase
+      .from('newsletter_subscribers')
+      .select('id', { count: 'exact', head: true })
+      .gte('subscribed_at', since)
+    if (countError) console.error('newsletter: supabase count', countError)
+    else if ((lastHour ?? 0) >= 50) {
+      return NextResponse.json({ error: 'Too many sign-ups right now. Please try again later.' }, { status: 429 })
+    }
 
     // Check if already subscribed (and whether they previously unsubscribed)
     const { data: existing } = await supabase

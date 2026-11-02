@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/faq',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'FAQ — Frequently Asked Questions | Poof AI Bookkeeping',
     description: 'Get answers to common questions about Poof AI bookkeeping — pricing, features, security, QuickBooks migration, and how AI automates your books.',
     url: 'https://www.poofai.com/faq',
