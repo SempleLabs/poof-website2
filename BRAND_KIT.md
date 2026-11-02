@@ -1,6 +1,6 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: November 1, 2026
+> **Living document** — Last updated: November 2, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
 > **⭐ WHERE THINGS STAND (2026-11-01) — read this first; it overrides anything older below.**
@@ -173,12 +173,12 @@ Whichever way, nothing an AI proposes lands without someone seeing it first ([Gr
 > **For** small-business owners who keep their own books, or keep meaning to,
 > **Poof is** bookkeeping software that is free, with an AI agent for $79 a month and a person when you'd rather hand it off,
 > **that** keeps the ledger, sends the invoices, files the 1099s and closes the month, with every entry waiting for your OK.
-> **Unlike** QuickBooks, which has no free plan and charges $38 to $340 a month depending on which features you need,
+> **Unlike** QuickBooks, whose free plan stops at 2 invoices a month and whose paid plans run $38 to $340 a month depending on which features you need,
 > **Poof** gives the software away and charges only for the work done.
 
 ### Primary Competitive Alternative
 **QuickBooks** is the default choice for most small businesses. Poof positions against it on three axes:
-1. **Price** — Poof is free. QuickBooks has no free plan: Simple Start is $38 a month for one user, Plus $140. What costs money at Poof is the agent's work, not features
+1. **Price** — Poof is free. QuickBooks Free stops at 1 user, 2 invoices a month, one bank account and 3 reports, with no accountant access; Simple Start is $38 a month for one user, Plus $140. What costs money at Poof is the agent's work, not features
 2. **The agent does the work** — QuickBooks gives you tools to do the work; Poof Agent does it and puts the evidence on every card
 3. **A person when you want one, in the same books** — no new software for a bookkeeper to learn, no shared QuickBooks login. (Intuit sells bookkeeping too, as QuickBooks Live. Never claim QuickBooks has no human option.)
 
@@ -451,7 +451,7 @@ There is no 300 and no 700. Bold inside body copy is 600.
 ### Supporting Headlines (use on feature sections, ads, social)
 - "Free for good. No card, no time limit, nothing read-only."
 - "Your books, sorted every morning — waiting for your OK"
-- "QuickBooks starts at $38 a month. Poof starts at free."
+- "QuickBooks Free: 3 reports. Poof Free: every report."
 - "Behind on your books? Ask for a person."
 - "Snap a photo. Never type an expense again."
 - "Describe your goal. Get a budget in seconds."
@@ -916,10 +916,10 @@ The old managed-service SLAs (a close by the 15th business day, jobs costed in 5
 
 ### Pricing Messaging
 - **Lead with free:** "Poof is free." Then the agent's price as the price of work: "Poof Agent, the AI that does the work, is $79 a month."
-- **Against QuickBooks, free is the argument now:** "QuickBooks has no free plan. Simple Start is $38 a month for one user." When the reader needs the agent, "Poof Agent is $79; QuickBooks Plus, the tier with budgets and job costing, is $140."
+- **Against QuickBooks, the free plan's scope is the argument now:** "QuickBooks Free stops at 2 invoices a month and one bank account, with no accountant access. Poof's free plan has every report, two bank feeds and your accountant." **Never write "QuickBooks has no free plan"** (false since 2026; see [QuickBooks pricing](#quickbooks-pricing-verified-2026-08-23-re-checked-2026-11-01)). When the reader needs the agent, "Poof Agent is $79; QuickBooks Plus, the tier with budgets and job costing, is $140."
 - **Against the free tools,** scope is the argument: a free plan with job costing, approvals, the close, payroll and 1099 prep, sales tax and dispatch, and a person when you want one.
 - **Do not repeat the old "$29/mo vs QuickBooks' $38" line** or anything written for the single $79 plan.
-- **Compare against QuickBooks Plus ($140/mo), not Simple Start ($38/mo), whenever Poof Agent's price is on the page** — see [QuickBooks pricing](#quickbooks-pricing-verified-2026-08-23-re-checked-2026-11-01). On a page about Free, Simple Start is the honest comparison: it is the cheapest QuickBooks there is.
+- **Compare against QuickBooks Plus ($140/mo), not Simple Start ($38/mo), whenever Poof Agent's price is on the page** — see [QuickBooks pricing](#quickbooks-pricing-verified-2026-08-23-re-checked-2026-11-01). On a page about Free, compare Poof Free with QuickBooks Free's limits, and Simple Start as the first paid plan.
 
 ---
 
@@ -938,11 +938,13 @@ QuickBooks is the primary competitive alternative. Thread this contrast througho
 | Plus | **$140** | 5 | **+$25 (from $115) — a 22% jump** |
 | Advanced | **$340** | 25 | **+$65 (from $275) — a 24% jump** |
 
+**QuickBooks Free, $0 (Intuit's pricing, compare and Solopreneur pages, checked 2026-11-02):** 1 user, no accountant access, 2 invoices a month (unlimited if you qualify for and turn on QuickBooks Payments), 1 estimate a month, 2 receipts a month, 5 mileage trips, 1 connected bank account, 3 reports (P&L, balance sheet, account quick report), 1099s for 1 contractor (e-file fees apply), chat support. The Solopreneur page also lists **Lite at $20/mo**. On 2026-11-02 Intuit showed 50% off for 3 months on every paid plan.
+
 *Verified 2026-08-23 against three independent sources plus Intuit's own product-update announcement. Re-checked 2026-11-01 against third-party pages dated October 2026, which still show $38/$85/$140/$340 (Intuit's own page was not opened that day). Re-check before any campaign; Intuit raised prices twice in 2026.*
 
 #### Which plan to compare against
 
-- **On a page about Free:** compare to **Simple Start ($38)**, the cheapest QuickBooks there is. "QuickBooks starts at $38 a month for one user. Poof starts at free" is true and needs no footnote beyond the date.
+- **On a page about Free:** compare with **QuickBooks Free**, and name its limits: 1 user, no accountant access, 2 invoices and 1 estimate a month (unlimited invoices only with QuickBooks Payments), 2 receipts a month, 1 connected bank account, 3 reports, 1099s for 1 contractor. The first paid plans are Lite ($20, on the Solopreneur page) and Simple Start ($38). Do not write "QuickBooks starts at $38" or "the cheapest QuickBooks is $38".
 - **When Poof Agent's $79 is on the page:** compare to **Plus ($140)**. Simple Start is single-user, with no team roles, no budgets and a fraction of the reporting; measuring $79 against it makes Poof look expensive against a plan that doesn't do the job. Against Plus, Poof Agent is **44% cheaper** and adds the approvals inbox, AI-built budgets, a 12-month cash forecast with confidence bands, and a close the books tick off themselves. (Plus does have budgets, project profitability and an AI assistant, Intuit Assist. Checked 2026-10-06.)
 - Poof's 6 roles and 46 granular permissions are **Advanced-tier ($340) capabilities** at QuickBooks (custom roles), and so is fixed-asset depreciation. Every QuickBooks plan has an audit log; what Poof adds is PII masking in it and in every AI call.
 - **Intuit's own increase is still a campaign:** "Your bookkeeping software raised its price 22% this August. Poof is free."
@@ -955,12 +957,13 @@ Free bookkeeping software exists; Poof is not the first. The contrast is scope a
 
 | Alternative | What it is (verify before quoting a number) | The honest contrast |
 |---|---|---|
-| **Wave** | A free Starter plan; a paid Pro plan (about $19/mo per third-party pages, Aug–Oct 2026) that carries bank feeds and receipt scanning; payroll extra; Wave Advisors sells bookkeeping, published from about $149–199/mo | Poof's free plan connects 2 banks and carries job costing, approvals, the close, payroll and 1099 prep, sales tax and dispatch. Poof never publishes a bookkeeping price; Wave does |
-| **Zoho Books** | A free plan for very small businesses, with revenue and user caps (check Zoho's page for the current caps) | Poof's free plan has no revenue cap and 6 roles |
+| **QuickBooks Free** | $0: 1 user, 2 invoices a month, 1 bank account, 3 reports, no accountant access (Intuit's page, 2026-11-02) | Poof's free plan has every report, 2 bank feeds, and 6 roles including your accountant |
+| **Wave** | A free Starter plan with unlimited invoices and no bank feed; Pro, $19/mo or $190/yr (Wave's page, 2026-11-02), carries bank feeds, auto-categorization and receipt scanning; payroll extra; Wave Advisors sells bookkeeping, published from about $149–199/mo | Poof's free plan connects 2 banks and carries job costing, approvals, the close, payroll and 1099 prep, sales tax and dispatch. Poof never publishes a bookkeeping price; Wave does |
+| **Zoho Books** | A free plan while revenue stays under $50,000 a year: 1 user plus an accountant, 1,000 invoices a year, reconciliation, no bank feeds; Standard $20/mo or $15/mo yearly (Zoho's US page, 2026-11-02) | Poof's free plan has no revenue cap and 6 roles |
 | **Balances** | Agent-native books at about $20–40/mo | Poof's software is free; the agent is the paid part, and every write waits on a card |
 | **SlowBooks Pro** | A free, local QuickBooks-2003-style app with an API an agent can drive | Poof is hosted, multi-user, with bank feeds, approvals and a person available |
 
-*Wave, Zoho and Balances figures are from third-party pages and Austin's own notes, not their pricing pages. Open the vendor's page and date the check before any of them appears on the site.*
+*QuickBooks Free, Wave and Zoho were checked on their own pricing pages on 2026-11-02; Balances is from third-party pages and Austin's own notes. Open the vendor's page and date the check before any of them appears on the site.*
 
 ### Poof vs QuickBooks
 
@@ -1267,6 +1270,10 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### November 2, 2026 — QuickBooks has a free plan
+
+- **Claim that became false, corrected:** "QuickBooks has no free plan." Intuit's pricing page lists **QuickBooks Free at $0** (1 user, no accountant access, 2 invoices and 1 estimate a month, 1 bank account, 3 reports, 1099s for 1 contractor), checked 2026-11-02. The positioning sentence, the price axis, the supporting headline, the pricing messaging and the which-plan rules now compare against QuickBooks Free's limits. Wave and Zoho figures now come from their own pages. Site: PR #35.
 
 ### November 1, 2026 — Poof is free; owners first; a person to do your books; Poof files 1099s (270 features)
 
