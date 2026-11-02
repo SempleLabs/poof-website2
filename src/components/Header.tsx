@@ -16,11 +16,11 @@ export default function Header() {
   }, [])
 
   const navLinks = [
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/bookkeeper', label: 'A bookkeeper' },
+    { href: '/1099s', label: '1099s' },
     { href: '/trades', label: 'For shops' },
     { href: '/features', label: 'Features' },
-    { href: '/taxes', label: 'Taxes' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/how-it-works', label: 'How it Works' },
     { href: '/resources', label: 'Resources' },
     { href: '/about', label: 'About' },
   ]

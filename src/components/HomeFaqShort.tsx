@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { faqData } from '@/lib/featureData'
 import { getFaqPageSchema } from '@/lib/jsonLd'
 
-const PICK = ['What is Poof?', 'Can the AI change my books without asking me?', 'What does the five-day close guarantee cover?', 'How is Poof different from Mercury Books?', 'How does Poof compare to QuickBooks?', 'Is Poof secure?']
+const PICK = ['What is Poof?', 'Is Poof really free?', 'Can someone do my books for me?', 'Does Poof file my 1099s?', 'Can the AI change my books without asking me?', 'How does Poof compare to QuickBooks?']
 
 /** Six questions, not thirty-six. The full list lives at /faq with the same schema. */
 export default function HomeFaqShort() {
@@ -27,7 +27,7 @@ export default function HomeFaqShort() {
           </li>
         ))}
       </ul>
-      <p className="text-sm text-muted mt-4">All thirty-six are on the <Link href="/faq" className="text-ledger-600 font-semibold hover:text-ledger-700">FAQ page</Link>.</p>
+      <p className="text-sm text-muted mt-4">All {faqData.filter((f) => !f.audience).length} are on the <Link href="/faq" className="text-ledger-600 font-semibold hover:text-ledger-700">FAQ page</Link>.</p>
     </section>
   )
 }

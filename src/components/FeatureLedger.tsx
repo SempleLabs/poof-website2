@@ -131,7 +131,7 @@ export default function FeatureLedger() {
         {/* desktop rail */}
         <div className="hidden lg:flex lg:flex-col lg:max-h-[calc(100vh-7rem)]">
           <h2 className="font-mono text-[11.5px] tracking-[0.08em] uppercase text-muted mb-2.5">Contents · {matches} {needle ? 'matching' : 'features'}</h2>
-          {/* 22 groups outgrow a laptop screen: the rail scrolls on its own and keeps the active group in view */}
+          {/* 24 groups outgrow a laptop screen: the rail scrolls on its own and keeps the active group in view */}
           <ol ref={railRef} className="border-t border-ink overflow-y-auto overscroll-contain min-h-0 pr-3">
             {groups.map((g) => (
               <li key={g.id} className={`border-b border-rule ${g.hidden ? 'opacity-40' : ''}`}>
@@ -153,7 +153,7 @@ export default function FeatureLedger() {
           <div className="flex gap-2">
             <input
               id="feature-search" type="search" value={q} onChange={(e) => setQ(e.target.value)}
-              placeholder="Search 246 features: taxes, 1099, quotes, payroll, deposits…"
+              placeholder="Search 270 features: taxes, 1099, quotes, payroll, deposits…"
               className="flex-1 min-w-0 bg-white border border-rule rounded-lg px-3.5 py-2.5 text-[15px] placeholder:text-muted focus:border-ledger-600"
             />
             {q && <button type="button" onClick={() => setQ('')} className="rounded-lg border-[1.5px] border-ink text-ink font-semibold text-sm px-3">Clear</button>}

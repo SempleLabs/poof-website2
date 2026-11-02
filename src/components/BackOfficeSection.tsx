@@ -39,9 +39,10 @@ const rows: { label: string; href: string; headline: string; body: string; cta?:
   },
   {
     label: '1099s',
-    href: '/features#1099s-and-vendors',
-    headline: 'January’s 1099s, prepared from the year’s payments. W-9s collected by link.',
-    body: 'Every contractor’s year against the $2,000 threshold, W-9s filled in online, each contractor’s copy, and a summary your filer enters in the IRS’s IRIS portal, with Poof’s checklist beside them.',
+    href: '/1099s',
+    headline: 'Tell Poof who you paid. Poof files the 1099s.',
+    body: 'Every contractor’s year against the $2,000 threshold, W-9s collected by link with reminders, and one signature to approve. Poof files with the IRS and emails or mails each contractor their copy. The first 3 forms a year are free, then $2.49 a form.',
+    cta: 'File your 1099s',
   },
   {
     label: 'Truck stock',

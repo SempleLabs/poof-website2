@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'October 13, 2026'
+const UPDATED = 'November 1, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -44,8 +44,18 @@ export default function TermsPage() {
           <p>If you create an account, you are responsible for safeguarding your credentials and for all activity under your account. You must provide accurate information and keep it current. Notify us promptly of any unauthorized use.</p>
         </Section>
 
-        <Section title="Free trial &amp; billing">
-          <p>Paid plans and any free trial are described on our <Link href="/pricing" className="text-ledger-600 underline hover:text-ledger-700">pricing page</Link>. Unless stated otherwise, subscriptions renew automatically until cancelled, and fees are billed in advance and are non-refundable except where required by law. We may change pricing on prospective notice.</p>
+        <Section title="Plans &amp; billing">
+          <p>Poof&apos;s free plan has no time limit. Its monthly allowances, and what Poof Agent and the add-ons cost, are on our <Link href="/pricing" className="text-ledger-600 underline hover:text-ledger-700">pricing page</Link>.</p>
+          <p>Poof Agent is a paid subscription. A new company gets its first 30 days of Poof Agent free; when they end, the company stays on the free plan unless you subscribe. Paid subscriptions (Poof Agent, Poof Agent for a bookkeeping firm&apos;s clients, and the AI receptionist add-on) renew automatically until cancelled. Fees are billed in advance and are non-refundable except where required by law. When you cancel, the paid service stays on until the end of the period you paid for.</p>
+          <p>1099 filing and mailing are charged per form and per copy, and you pay before Poof files or mails them. We may change prices on prospective notice.</p>
+        </Section>
+
+        <Section title="Filing your 1099s">
+          <p>When you authorize Poof to file information returns for your business, Semple Labs LLC transmits to the IRS the forms you approved, as you approved them. You remain the payer: you are responsible for the names, tax identification numbers, addresses and amounts on the forms, including any amount you entered yourself, and for penalties that result from information you provided or from approving forms after their due date. You can withdraw the authorization at any time for forms not yet filed.</p>
+        </Section>
+
+        <Section title="Bookkeeping by a person">
+          <p>If you ask for a bookkeeper through Poof, the bookkeeper quotes the work and agrees its scope and price with you directly, in an engagement of their own. That engagement is separate from the Service and from these Terms. The bookkeeper works in your Poof company with the access you give them, and you can remove that access at any time.</p>
         </Section>
 
         <Section title="The Spend Score tool and not financial advice">

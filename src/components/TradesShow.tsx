@@ -997,8 +997,8 @@ export default function TradesShow() {
             </a>
           </div>
           <p className={noteCls}>
-            Poof Agent free for 30 days, no card. Your books closed within five business days of month end, or the next month is
-            free.
+            Poof Agent free for 30 days, no card. Rather not do the books yourself? A bookkeeper who works in Poof will, and
+            every job is quoted.
           </p>
         </section>
       </div>

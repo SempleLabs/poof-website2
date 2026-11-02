@@ -8,11 +8,11 @@ import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Taxes in Poof: tax calendar, tax reserve, quarterly estimates, CPA package | Poof',
   description:
-    'Every tax deadline on the day it really falls, how much tax you have built up against what you have set aside, your four quarterly estimates, 1099s at the $2,000 threshold, and one year-end package for your CPA. Poof prepares and reminds; you and your CPA file.',
+    'Every tax deadline on the day it really falls, how much tax you have built up against what you have set aside, your four quarterly estimates, 1099s at the $2,000 threshold, filed by Poof, and one year-end package for your CPA. Poof prepares and reminds; you and your CPA file the return.',
   alternates: { canonical: 'https://www.poofai.com/taxes' },
   openGraph: {
     title: 'Taxes, kept by the books',
-    description: 'The tax calendar, the reserve, the four estimates, 1099s, and a January package your CPA can use. Poof prepares and reminds; you and your CPA file.',
+    description: 'The tax calendar, the reserve, the four estimates, 1099s filed by Poof, and a January package your CPA can use.',
     url: 'https://www.poofai.com/taxes',
     siteName: 'Poof',
     type: 'website',
@@ -29,7 +29,7 @@ const CALENDAR: { date: string; item: string; who: string; kind: 'evidence' | 'p
   { date: 'Jan 15', item: 'Fourth-quarter estimate', who: 'You, on a 1040-ES', kind: 'evidence' },
   { date: 'Jan 15', item: 'Year-end package to your CPA', who: 'You', kind: 'evidence' },
   { date: 'Jan 20', item: 'Texas sales tax, December', who: 'You', kind: 'evidence' },
-  { date: 'Feb 1', item: '1099-NEC to the IRS and to contractors', who: 'Your bookkeeper', kind: 'evidence' },
+  { date: 'Feb 1', item: '1099-NEC to the IRS and to contractors', who: 'Poof', kind: 'evidence' },
   { date: 'Feb 1', item: 'W-2s and Form 940', who: 'Your payroll provider', kind: 'person' },
   { date: 'Feb 1', item: 'Form 941, fourth quarter', who: 'Your payroll provider', kind: 'person' },
   { date: 'Mar 15', item: 'Form 1120-S, or the extension', who: 'Your CPA', kind: 'person' },
@@ -55,7 +55,7 @@ const PACKAGE = [
 ]
 
 const faqs = [
-  { question: 'Does Poof file my taxes?', answer: 'No. Poof prepares and reminds. It keeps the calendar, works out the reserve and the estimates, prepares your 1099s, and builds the year-end package your CPA uses to prepare the return. You, your bookkeeper, your payroll provider, or your CPA file and pay, and each calendar row says which one. Poof never moves money.' },
+  { question: 'Does Poof file my taxes?', answer: 'Your 1099s, yes: Poof files them with the IRS once you approve, and sends every contractor their copy. Your return, no. Poof keeps the calendar, works out the reserve and the estimates, and builds the year-end package your CPA uses to prepare the return. You, your payroll provider, or your CPA file and pay the rest, and each calendar row says which one. Poof never moves money.' },
   { question: 'How does Poof work out my quarterly estimates?', answer: 'With the safe-harbor rule. Poof takes the smaller of 90% of this year’s tax, estimated from the books’ profit so far, and 100% of last year’s tax, or 110% if last year’s adjusted gross income was over $150,000. It splits that into four payments on their real due dates. If your CPA gives you a number, the CPA’s number wins. Estimates are federal; state estimates are not calculated yet.' },
   { question: 'What is the tax reserve?', answer: 'Two numbers side by side: how much tax this year’s profit has built up so far, and how much is sitting in the bank account you set aside for taxes. The rate starts at 25% as a starting guess and you or your CPA can change it. When the reserve falls behind, a monthly reminder says by how much. You move the money yourself.' },
   { question: 'Which entity types does Poof support?', answer: 'The calendar covers sole proprietors, single-member LLCs, S-corps, partnerships, and C-corps. The return-line mapping covers Schedule C and Form 1120-S today; partnerships and C-corps are next. The year-end package works for every entity type.' },
@@ -75,7 +75,7 @@ export default function TaxesPage() {
           <p className={eyebrow}>Taxes</p>
           <h1 className="font-display text-[44px] sm:text-6xl lg:text-[76px] leading-[1] tracking-[-0.035em] text-ink mb-5 text-balance">Tax season, kept by the books.</h1>
           <p className="text-lg sm:text-xl text-muted max-w-[58ch] leading-[1.45]">
-            Every deadline on the day it really falls. How much tax you have built up, next to what you have set aside. Your four estimates, your 1099s, and <b className="text-ink font-semibold">one package your CPA can use in January</b>. Poof prepares and reminds; you and your CPA file and pay.
+            Every deadline on the day it really falls. How much tax you have built up, next to what you have set aside. Your four estimates, your 1099s filed for you, and <b className="text-ink font-semibold">one package your CPA can use in January</b>. For the return, Poof prepares and reminds; you and your CPA file and pay.
           </p>
           <div className="flex flex-wrap gap-2.5 mt-6">
             <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
@@ -164,9 +164,9 @@ export default function TaxesPage() {
         <div className="max-w-[860px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <p className={eyebrow}>1099s</p>
-            <h2 className="font-display text-2xl sm:text-3xl leading-[1.05] tracking-[-0.03em] text-ink mb-3 text-balance">January’s 1099s, at the new $2,000 line.</h2>
-            <p className="text-[15.5px] text-muted leading-relaxed">Every contractor’s year from the payments in the books, W-9s collected by link, each contractor’s copy, and a summary your filer enters in the IRS’s IRIS portal, with Poof’s checklist beside them.</p>
-            <Link href="/features#1099s-and-vendors" className="inline-block text-[14px] text-ledger-600 font-semibold hover:text-ledger-700 mt-3">The 1099 features</Link>
+            <h2 className="font-display text-2xl sm:text-3xl leading-[1.05] tracking-[-0.03em] text-ink mb-3 text-balance">January’s 1099s, filed by Poof.</h2>
+            <p className="text-[15.5px] text-muted leading-relaxed">Every contractor’s year against the new $2,000 line, from the books, your bank, or a list you type in. W-9s collected by link, one signature to approve, and Poof files with the IRS and emails or mails each contractor their copy. The first 3 forms a year are free, then $2.49 a form.</p>
+            <Link href="/1099s" className="inline-block text-[14px] text-ledger-600 font-semibold hover:text-ledger-700 mt-3">File your 1099s</Link>
           </div>
           <div>
             <p className={eyebrow}>Texas</p>

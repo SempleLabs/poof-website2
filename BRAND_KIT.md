@@ -1,47 +1,70 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: October 21, 2026
+> **Living document** — Last updated: November 1, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
 
-> **⭐ WHERE THINGS STAND (2026-10-21) — read this first; it overrides anything older below.**
-> - **poofai.com sells one thing: the software.** One $79 plan, two calls to action everywhere — **Start free trial** and **Book a demo**. The managed tiers, the $750 audit, the per-truck pricing and the trade landing pages (/hvac, /plumbing, /electrical → /trades) come off the site with the "software only" refocus (site branch `refocus-software`, built 2026-09-22 → 10-06, **merged and live 2026-10-06 as PR #16**). `/trades` becomes the product page for service shops, at the same $79.
-> - **The managed service still exists, but not on poofai.com and not under a name yet.** Austin sells done-for-you bookkeeping to trade shops directly (outreach), as a separate services company that runs on Poof. Names dropped: *The Augmented Operator* (not launched, 09-16; dead 09-29), *Poof Managed Bookkeeping* (left the site with the refocus), *Setpoint* (10-01). Until it has a name and a site, keep it off every Poof surface. [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical) is reference for that outreach, not website copy.
-> - **The site tagline is "The back office, run by AI. Signed by you."** The brand idea behind it is unchanged: "The work disappears. The evidence doesn't."
-> - **246 features in 22 groups** (was 172 in 18 on 10-06). New since 10-06: **Taxes** (the tax calendar, the year on the return's lines, the CPA package, the tax reserve, quarterly estimates, Texas franchise tax and property), **Quotes & Progress Billing**, **Memberships**, **Sales Credit & Commissions**, timesheets (now in **Payroll & Time**), purchase orders and receiving (now **Purchasing & Truck Stock**), and additions to most other groups. Several older claims became false and are corrected below (customer texts, payment on site, signatures, roles, permissions, the Plaid window). See the [changelog](#changelog).
-> **Also corrected 2026-09-16:** Austin's background is **three years as an auditor, then seven as a controller** (ten in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
+> **⭐ WHERE THINGS STAND (2026-11-01) — read this first; it overrides anything older below.**
+> - **Poof is free.** The app is free for good: the books, invoices and quotes, bills, every report, approvals and rules, the close, payroll and 1099 prep, sales tax, the dispatch board and the tech's link, and the Claude and ChatGPT connector. No card, no time limit, and nothing goes read-only. Each month Free also gets a taste of the agent: **25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds and 100 texts to the team.**
+> - **Poof Agent is the paid plan: $79 a month, or $790 a year.** It is every piece of AI work: the overnight sort, reading every receipt, bill and check, Ask Poof with no limit, the reminders and month-end write-up it drafts, every bank feed, and texts to customers. Every new company gets **30 days of Poof Agent, no card**, then stays on Free unless it keeps the agent.
+> - **Or a person does the books.** *"Want a person to do your books?"* A bookkeeper who works in Poof. **No price is shown anywhere.** The owner says how far behind they are, a person usually gets back to them within a business day, and every job is quoted. The offer has **no name** (decided 2026-11-01): describe it plainly, never brand it. It is in the app (Settings → Billing, For Review when the backlog is long, Ask Poof) and, from this pass, on the site.
+> - **Poof files 1099s.** Prep is free. Poof files 1099-NEC and 1099-MISC with the IRS and sends every contractor their copy: **the first 3 forms each year free, then $2.49 a form; $1.79 for each copy Poof mails; emailed copies free.** A bookkeeper filing for clients pays $2.49 a form up to 25 a year, then $1.49. This is the January front door for businesses that don't keep their books in Poof yet.
+> - **Bookkeeping firms:** every client company is free. Poof Agent is **$29 a month ($290 a year) for each client the firm switches it on for**, billed to the firm.
+> - **The AI receptionist** is an add-on for service shops: **$99 a month with 1,000 minutes included, then 12¢ a minute.** A shop turns it on and buys it itself in Settings → Receptionist (live 2026-10-26).
+> - **Owners first** (decided 2026-11-01). The brand and the homepage speak to the person who owns the business. Bookkeepers have their own door (`/close`), service shops theirs (`/trades`), and 1099s theirs.
+> - **The headline is the free plan:** **"Poof is free. Poof Agent does the books while you sleep."** The brand sentence stays underneath it: **"The work disappears. The evidence doesn't."** The October tagline, "The back office, run by AI. Signed by you.", is no longer the headline; it is the line for approvals.
+> - **Retired, never write again:** "one plan, every feature", "no tiers", "Poof Professional", the $39.50 launch special, the 30-day money-back guarantee, "Start free trial" (it is **Start free**), a trial that ends read-only, the five-day close guarantee, and the managed tiers ($750 audit, $1,200, $1,500, $2,400) as public prices.
+> - **270 features in 24 groups** (246 in 22 on 10-21). New: **File your 1099s** (Group 23, 13) and **Free, Poof Agent & a person** (Group 24, 4), plus seven lines across Groups 4, 9–13. See the [changelog](#changelog).
+>
+> **Austin's background is three years as an auditor, then seven as a controller** (ten in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
 
-> **History, not instruction:** on 2026-09-12 Poof and the managed service were split into two businesses (`TWO_BUSINESSES.md`). The split stands; the managed service's name and site do not exist yet. Older sections below may still say "The Augmented Operator" — read it as "the managed service".
+> **History, not instruction.** On 2026-09-12 Poof and the managed service were split into two businesses (`TWO_BUSINESSES.md`), and from 10-06 the site sold the software only. **On 2026-10-30 Austin brought bookkeeping by a person back inside Poof**: no name, no price, every job quoted, the work done under the services LLC. Where older sections below say "the managed service" or "The Augmented Operator", read it as that history.
 > Restaurants/multi-unit were deprioritized, and the restaurant reports and tools were **removed from the product** in October 2026 (app PR #350). Do not mention them anywhere.
 
 ---
 
-## ⚠️ Outstanding website corrections (checked against the live site and the site repo 2026-10-21)
+## ⚠️ Outstanding website corrections (checked against the site repo 2026-11-01)
 
 **Read this before writing any copy.** Re-check the page before acting on a line here — this
 table has carried already-fixed rows before, and a stale list repeated back reads as urgency.
 
+Everything in this table is built in site PR #30 (`brand-pass-owners-first`), **not merged yet** (Austin merges site PRs).
+
 | Where | What's wrong now | Should be |
 |---|---|---|
-| `/features`, `featureData.ts`, llms.txt, FAQs, `/pricing` | 172 features in 18 groups | **246 in 22** — the new groups and additions in [Product Overview](#product-overview). *In site PR `taxes-and-resources`, not merged yet* |
-| Nowhere on the site | No Taxes at all | A Taxes group on `/features`, a `/taxes` product page, a Taxes row in `BackOfficeSection`, and a tax-season section on `/resources` with six new posts (the 1099 threshold, quarterly estimates, what to set aside, what your CPA needs, Texas franchise tax, the Texas property rendition). Keep the Taxes limit below. *In site PR `taxes-and-resources`, not merged yet* |
-| `ReceptionistSection`, `FieldServiceSection`, `/trades`, llms.txt, the after-hours post | "Customer texts are not built"; "the tech page takes no payment"; "a typed name, not a signature"; "5 roles, 26 permissions"; "syncs the last 30 days" | Customer messages exist, off until the owner turns them on, email until the shop's line is registered for business texting; payment on site by QR or link when online payments are on; a finger signature pad; 6 roles and 46 permissions; 90 days on the first connection, refreshed daily. *In site PR `taxes-and-resources`, not merged yet* |
-| `/resources` | Half the page still in the pre-rebrand card style; 31 posts in one grid | Rebuilt in the ledger style: tax-season deadlines first, templates, checklists, posts grouped by what the reader is trying to do. *In site PR `taxes-and-resources`, not merged yet* |
-| `/trades`, `/pricing`, featureData, llms.txt, JSON-LD, posts | The AI receptionist sold inside the $79 plan ("every feature, including the receptionist") | **Decided 2026-10-21: the AI receptionist is a separate add-on.** The site says "an add-on, priced separately, set up with you" and points to Book a demo; no price, no self-serve purchase. *In site PR `taxes-and-resources`, not merged yet* |
-| **Price to confirm** — the receptionist add-on | No price on the site | Austin to confirm the add-on price. The draft in app PR #244 (not merged; no live Stripe prices) is **$99/mo with 1,000 minutes included, then 12¢ a minute**. Put a number on the site only after he confirms it and the add-on can be bought |
+| Homepage | Hero "Last night, Poof ran the back office."; a black banner and a `#guarantee` section promising a close in five business days or the next month free | Hero **"Poof is free. Poof Agent does the books while you sleep."**, the brand sentence under it, the three ways (free, the agent, a person), audience links under the buttons; the guarantee gone |
+| `/close`, `/trades`, `TradesShow`, `featureData` FAQs, `HomeFaqShort`, llms.txt, 14 blog footers, `mercury-books-vs-poof` | The five-day close guarantee | Removed. The close is still a 17-task checklist with due dates; nothing is promised about a day |
+| Nowhere | No way to ask for a person | `/bookkeeper`: "Want a person to do your books?", no price, quoted, a reply usually within a business day; on the homepage, `/pricing`, `/trades` and llms.txt |
+| `BackOfficeSection`, `/taxes`, `featureData` (1099s group, Taxes note), llms.txt, `1099-threshold-2026`, `what-your-cpa-needs-at-year-end` | "A summary your filer enters in the IRS's IRIS portal"; "you, your bookkeeper or your CPA file" for 1099s | **Poof files them**: one signature, no filer code, copies emailed or mailed, the IRS receipt back. A `/1099s` page with the prices. Income taxes stay "Poof prepares and reminds" |
+| `/pricing` | No 1099 prices; no person; "The iPhone app" listed under Free (it is not on the App Store — lookup by bundle id empty on 11-01); "posts the ones it's sure of" stated as default | 1099 prices; a third block for a person (no price); the iPhone app removed until it is released; the overnight sort leaves a card unless the owner turned on auto-post |
+| `/terms` | "Free trial & billing" | **"Plans & billing"**: Free, Poof Agent and its 30 days, firms, the add-on, 1099 filing per form, bookkeeping quoted separately |
+| `/producthunt` | "90 days free" of "everything" | 90 days of **Poof Agent** with code PRODUCTHUNT at Poof Agent's checkout; Poof itself is free anyway |
+| llms.txt | "one product on two plans"; "Money-back guarantee: 30 days"; "There is no done-for-you bookkeeping service" | Free, Poof Agent, a person (quoted), 1099 filing, the receptionist add-on; no guarantee line |
+| Every count | 246 features in 22 groups; 113 assistant tools | **270 in 24**; 115 tools in the chat, 160 in the registry, 19 on MCP |
+
+**For Austin to confirm before or right after the site merges** (none of these blocks the PR):
+- **`STRIPE_MONTHLY_COUPON_ID`.** If it is still set on Railway, every monthly Poof Agent checkout still auto-applies the old launch coupon, and Stripe's checkout shows no promo-code box, so PRODUCTHUNT can't be entered. Unset it.
+- **PRODUCTHUNT in Stripe** should be 100% off for 3 months on the Poof Agent price.
+- **Firm billing on**: migration 184 and `STRIPE_FIRM_CLIENT_PRICE_ID` (+ annual) on Railway. `/pricing` has advertised $29 a client since site PR #29.
+- **PostGrid live key** before January, or Poof can't mail Copy Bs.
+- **The iPhone app**: tell the site when it is released; it goes back on `/pricing` then.
 
 **Limits to keep with every new claim (the site states what it does, and never lists what it withholds):**
-- **1099s:** Poof prepares the year, the contractors' copies and the CPA summary, and walks you through the IRS upload. It does **not** e-file yet (the IRS upload file waits on the IRS template; Poof filing directly is planned for tax year 2027). Until that template exists, whoever files keys the forms into the IRS's IRIS portal from the CPA summary. No TIN matching; the TIN's format is checked.
+- **Free:** 25 Ask Poof questions, 25 reads (a receipt, bill, check, PDF statement or forwarded email read by AI), 2 bank feeds and 100 texts to the team a month, on the company's own calendar. File imports have no limit. When an allowance runs out it comes back on the 1st; nothing else stops. Never say "unlimited" about Free. Customer emails on Free: a verified owner, 50 a day to 10 addresses. Texts to customers are Poof Agent.
+- **Poof Agent's overnight sort** leaves the night's transactions on one card for a person's OK. It posts on its own only where the owner switched on auto-post (with a confidence bar, a history bar and a dollar limit) or granted a rule. Never write that the agent closes the month, files anything, pays anyone or moves money on its own.
+- **A person to do your books:** no price, range or "from $X" anywhere, ever. Never name the person or the practice on the site; "a bookkeeper who works in Poof". Never invent bookkeepers, profiles, reviews or credentials. A firm's client is never offered the request: its books are its firm's.
+- **1099s:** Poof files **1099-NEC and 1099-MISC** with the IRS, after the year ends, for a business that signs the authorization; the forms for 2026 are filed in January 2027 (due **February 1, 2027**). It mails paper copies first-class to contractors who didn't agree to email. No TIN matching (the format is checked). No state filing claims, no 1099-K/INT/DIV, no W-2s. Never write "e-file instantly" or "filed today".
+- **Taxes:** Poof **prepares and reminds**. It never files a return, never pays the IRS, and never moves money; the CPA prepares the return from Poof's package. Return lines cover **Schedule C and Form 1120-S** (partnerships and C-corps are next). Estimates are **federal only**. **Texas** is the only state covered (franchise tax and business personal property). 1099s are the one filing Poof does.
 - **Sales tax:** Poof tracks, reports and ties it. **Poof never files.**
 - **Payroll:** Poof posts pay runs from your provider's reports and ties the tax forms to them. It is **not a payroll processor** and pays no one; it is off until the owner turns it on.
-- **Taxes:** Poof **prepares and reminds**. It never files a return, never pays the IRS, and never moves money; the CPA prepares the return from Poof's package. Return lines cover **Schedule C and Form 1120-S** (partnerships and C-corps are next). Estimates are **federal only**. **Texas** is the only state covered (franchise tax and business personal property). The tax calendar, reserve and estimates are not in Ask Poof yet; only the 1099 tools are.
 - **Timesheets and commissions:** Poof records hours and calculates, books and exports commissions. It pays no one, and timesheets are off until the owner turns them on. No GPS.
-- **Customer messages:** booking confirmations, reminders and "on my way" are **off until an owner or admin turns them on**, and go by email until the shop's Poof line is registered for business texting (A2P 10DLC, not registered yet). No texts 9pm–8am; STOP works.
+- **Customer messages:** booking confirmations, reminders, "on my way" and the missed-call text are **off until an owner or admin turns them on**, and go by email until the shop's Poof line is registered for business texting. No texts 9pm–8am; STOP works. Technicians reply YES before Poof texts them jobs.
 - **Payment on site and refunds:** need Stripe online payments switched on. Cash collected by a tech is a card the office approves, never posted from the tech's link.
 - **Quote deposits** are off by default (a company setting with a per-quote override). Progress-billing schedules are off by default company-wide.
 - **QuickBooks:** switching is by **file import** (trial balance, customers/vendors, open invoices and bills). There is **no live QuickBooks connection**.
 - **Rules:** Poof *offers* a rule, or a person asks for one in a sentence ("always put Lowe's under materials"); either way an owner or admin approves the rule as a card. There is no settings form for writing rules. A rule never acts above its ceiling — "the rule is the rule".
 - **Voice** is opt-in per device, not on by default.
-- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), the firm plan at $29 per client (off until its Stripe price is set), per-company AI cost ceilings and AI cost tracking (internal), and nightly backups (the job isn't installed).
+- **The iPhone app** is built and submitted (2026-10-26) but **not on the App Store**. Don't mention it on the site until Austin says it is released.
+- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), AI apps drafting cards from Claude or ChatGPT (`MCP_CARD_APPS` is off), the ChatGPT app listing (in review), per-company AI cost ceilings, and nightly backups.
 
 **On the count.** Verify by summing the groups, not by reading this table.
 
@@ -51,25 +74,26 @@ table has carried already-fixed rows before, and a stale list repeated back read
 
 | Shipped | What the site now says |
 |---|---|
-| 2026-10-06 · software only (PR #16) | The managed tiers, the $750 audit and the trade landing pages are off the site; `/hvac`, `/plumbing`, `/electrical` 301 to `/trades`, which is the product page for service shops at $79. Two CTAs everywhere: "Start free trial" and "Book a demo". Job Margin Check ends on the trial |
-| 2026-10-06 · 172 features in 18 groups (PR #21) | `/features` and `featureData.ts` carry all 18 groups; every "128" on the site, in llms.txt and in the FAQs reads 172. A `BackOfficeSection` on the homepage and `/trades` gives the five new groups and "Poof offers the rule" one row each, using the October headlines, each linking to its group on `/features` |
-| 2026-10-06 · `/poof-vs-quickbooks` (PR #21) | A **Payroll, Tax & Assets** category (1099 prep, fixed-asset register, loans and trade-ins, payroll tax forms tied, sales tax by location, exemption certificates, truck stock) and two rules rows. The QuickBooks column was re-checked against **Plus**: Plus is marked yes for its AI assistant (Intuit Assist), estimates, recurring invoices, invoice reminders, bills, budget vs actual, recurring journal entries, CSV statement import, report drill-down, scheduled report emails, the audit log, 1099 prep and sales tax by location |
-| 2026-08-27 · field service | `/trades`, `/hvac`, `/plumbing`, `/electrical` carry **"Your tech closes the job from a text. The invoice writes itself."** via the shared `FieldServiceSection`, including a completed service call becoming a job on its own |
-| 2026-09-01 · unearned revenue | The same four pages carry **"A down payment isn't revenue until the job is done. A plan isn't revenue until the visit happens."** via `UnearnedRevenueSection`, with cancellation framed as a recorded refund-or-forfeit decision |
-| 2026-09-08 · approvals & autonomy | The same four pages **plus the homepage** carry **"Nothing reaches your books without you seeing it first."** via `ApprovalsSection` — the evidence on the card, partial batch approval, rejection reasons, rules derived from reviewed work, and the self-pausing rule. `/poof-vs-quickbooks` gained an **Approvals & AI Autonomy** comparison category and a prose block on the bank-rule contrast; three FAQs were added to `featureData`; the three QuickBooks blog posts carry the bank-rule caution |
-| 2026-09-15 · the close is a record; the reconciliation ties | The same four pages carry **"The close is a checklist with due dates, and the books tick it off themselves."** via `CloseRunSection` — the close as one record, the evidence-bound checklist, the nudge, and a reconciliation that carries outstanding items forward and shows one figure. `featureData` gained 10 features (118 → 128) across four groups; `/poof-vs-quickbooks` gained the close-checklist and carry-forward rows |
-| Receptionist wording | Described as booking **and** dispatching, with both switches (auto-assignment, auto-text) independently disableable. Since 2026-09-14 the same booking, move and cancel are available from the assistant drawer, where they stage as cards |
+| 2026-10-29 · Poof is free (PR #29) | `/pricing` shows Free and Poof Agent side by side ($79/mo, $790/yr, 30 days free, nothing read-only), firms at $29 a client, the receptionist at $99 with 1,000 minutes then 12¢. Every "Start free trial" reads **Start free**; JSON-LD carries two offers; posts and FAQs say "Poof is free; Poof Agent is $79/mo" |
+| 2026-10-24 · `/ai` (PRs #24, #27, #28) | Ask Claude, ChatGPT or Grok about your books: Claude users add **Poof Bookkeeping** from Claude's directory (published 2026-10-24); a privacy-policy section on what is shared |
+| 2026-10-21 · Taxes and 246 features (PR #25) | A Taxes group on `/features`, a `/taxes` page, the receptionist as an add-on, the October corrections (customer messages, payment on site, signatures, 6 roles and 46 permissions, 90 days of history) and a rebuilt `/resources` |
+| 2026-10-06 · software only (PR #16) | The managed tiers, the $750 audit and the trade landing pages are off the site; `/hvac`, `/plumbing`, `/electrical` 301 to `/trades` |
+| 2026-10-06 · `/poof-vs-quickbooks` (PR #21) | Compared against QuickBooks **Plus**, with Plus marked yes for Intuit Assist, estimates, recurring invoices, reminders, bills, budgets, recurring journal entries, CSV import, drill-down, scheduled report emails, the audit log, 1099 prep and sales tax by location |
+| 2026-08-27 → 09-15 · the trades sections | `FieldServiceSection`, `UnearnedRevenueSection`, `ApprovalsSection` and `CloseRunSection` on `/trades` (and approvals on the homepage) |
 
 > **What is proven, and what is still not.** As of 2026-09-08 the loop runs end to end against a
 > real Postgres in CI: a sweep stages, a rule executes the rows it covers and leaves the rest, a
 > correction pauses it, a paused rule covers nothing, a resumed one covers again, and a revoked one
 > is inert while its earlier work stands. Everything in Group 13 may be described as working.
 >
-> **Still hold "handles it overnight on its own."** No nightly sweep has yet been watched doing
-> this on live books. The mechanism is proven; the habit is not. Say what a rule *does*, not what a
-> morning *feels like*, until one has been seen. **This is a rule for writers, not a sentence for
-> the site: the site never lists what it does not claim** (decided 2026-09-16; a homepage line that
-> named the two withheld claims read as a confession and was removed).
+> **The headline and the overnight sort (decided 2026-11-01).** The headline says Poof Agent "does
+> the books while you sleep". The sentence after it must say what that means: it sorts the night's
+> transactions, reads what came in and drafts what's due, and leaves it for your OK in the morning.
+> Say what a rule *does*, not what a morning *feels like*: "Poof Agent sorted 41 transactions
+> overnight; 38 match your history" is a claim; "you'll never think about your books again" is not.
+> **This is a rule for writers, not a sentence for the site: the site never lists what it does not
+> claim** (decided 2026-09-16; a homepage line that named two withheld claims read as a confession
+> and was removed).
 >
 > **Proven 2026-09-14, and how.** The month-end close as a record, the checklist, and the rebuilt
 > reconciliation were walked end to end on a real August close from a phone — the founder's own
@@ -82,41 +106,49 @@ table has carried already-fixed rows before, and a stale list repeated back read
 ## Table of Contents
 
 1. [What is Poof?](#what-is-poof)
-2. [Brand Identity](#brand-identity)
-3. [Logo Usage](#logo-usage)
-4. [Color Palette](#color-palette)
-5. [Typography](#typography)
-6. [Key Messaging & Taglines](#key-messaging--taglines)
-7. [Product Overview](#product-overview)
-8. [Key Numbers & Claims](#key-numbers--claims)
-9. [Pricing](#pricing)
-10. [Competitive Positioning](#competitive-positioning)
-11. [Founder](#founder)
-12. [Content Guidelines](#content-guidelines)
-13. [Available Logo Files](#available-logo-files)
-14. [Vertical Positioning: Trade Contractors](#vertical-positioning-trade-contractors-hvac-plumbing-electrical)
-15. [Technical & Partner Positioning](#technical--partner-positioning)
-16. [Changelog](#changelog)
+2. [Positioning](#positioning)
+3. [Brand Identity](#brand-identity)
+4. [Logo Usage](#logo-usage)
+5. [Color Palette](#color-palette)
+6. [Typography](#typography)
+7. [Key Messaging & Taglines](#key-messaging--taglines)
+8. [Product Overview](#product-overview)
+9. [Key Numbers & Claims](#key-numbers--claims)
+10. [Pricing](#pricing)
+11. [Competitive Positioning](#competitive-positioning)
+12. [Founder](#founder)
+13. [Content Guidelines](#content-guidelines)
+14. [Available Logo Files](#available-logo-files)
+15. [Trade Contractors](#trade-contractors-hvac-plumbing-electrical)
+16. [Technical & Partner Positioning](#technical--partner-positioning)
+17. [Changelog](#changelog)
 
 ---
 
 ## What is Poof?
 
-**Poof is AI bookkeeping software built for the person who signs the close.** It does the work — categorization, reconciliation, job costing, the month-end close — and puts every write in front of a person before it reaches the books. A bookkeeper, controller, or firm runs their clients on it; a shop owner can run their own. The close is a record with a checklist that the books tick off themselves, the reconciliation carries last month's outstanding items forward and shows one figure, and nothing an AI proposes lands without someone seeing it first ([Group 13](#13-approvals--ai-autonomy-14-features)). It can also **answer the phone**: an AI receptionist triages the call, books a real slot on a real tech's calendar, dispatches the tech, and escalates anything unsafe to a human ([Group 11](#11-ai-receptionist--dispatch-15-features)) — and the same booking works from the assistant drawer.
+**Poof is free bookkeeping software with an agent you can hire.** The app is free for good: the ledger, invoices and quotes, bills, every report, the close, payroll and 1099 prep, sales tax, the dispatch board. **Poof Agent**, $79 a month, is the AI that does the work: it sorts the bank overnight, reads the receipts, drafts the reminders and writes the month up, and what it prepares waits on a card for a person's OK. When the owner would rather not touch the books at all, **a bookkeeper who works in Poof** does them, quoted per job.
 
-**It now keeps the whole back office, not just the bank feed.** Since mid-September Poof posts **payroll** from your provider's reports and ties the 941s and W-2s to it, tracks **sales tax** by city with exemptions and use tax, runs a **fixed-asset register** with monthly depreciation, **vehicle and equipment loans** and trade-ins, prepares **1099s** from the year's payments with W-9s collected by link, and counts **parts on the trucks** — each one as approval cards, with the close knowing whether it was done. And when you keep approving the same thing, **Poof offers to make it a rule**, then shows you everything the rule did, with Undo.
+**Three ways to get the books done, in one set of books:**
+1. **Do them yourself, free.** Poof keeps the ledger, your rules keep sorting, every report builds itself.
+2. **Let Poof Agent do them,** $79 a month. It does the work; you approve it.
+3. **Hand them to a person.** A bookkeeper who works in Poof. No price on the site; every job is quoted.
 
-**Since October 6 it also keeps the taxes and the front of the business.** **Books → Taxes** puts every deadline on the day it falls, maps the year onto Schedule C or Form 1120-S, builds one year-end package for the CPA, shows the tax built up against what is set aside, and works out the four quarterly estimates (Poof prepares and reminds; it never files or pays). Quotes are accepted online with good/better/best options, deposits and progress billing; memberships bill and schedule their tune-ups; purchase orders, receiving, timesheets and commissions land on the job and the books.
+Whichever way, nothing an AI proposes lands without someone seeing it first ([Group 13](#13-approvals--ai-autonomy-15-features)), the close is a record with a checklist the books tick off themselves, and the reconciliation shows one figure.
 
-**The managed service is a separate business** with no name or site yet (see *Where things stand* above). It is not described on poofai.com.
+**It keeps the whole back office, not just the bank feed.** Poof posts **payroll** from your provider's reports and ties the 941s and W-2s to it, tracks **sales tax** by city, runs a **fixed-asset register** with depreciation, **vehicle and equipment loans** and trade-ins, counts **parts on the trucks**, and keeps the **taxes** (every deadline, the year on the return's lines, the CPA package, the reserve, the four estimates; Poof prepares and reminds, it never files a return). Quotes are accepted online with good/better/best options, deposits and progress billing; memberships bill and schedule their tune-ups; purchase orders, receiving, timesheets and commissions land on the job and the books. A service shop can add an **AI receptionist** that answers the phone, books a real slot and dispatches the tech ([Group 11](#11-ai-receptionist--dispatch-16-features)).
 
+**And it files the 1099s.** Tell Poof who you paid; it collects the W-9s, files with the IRS and sends every contractor their copy ([Group 23](#23-file-your-1099s-13-features)).
+
+**One-liner (headline, from 2026-11-01):** "Poof is free. Poof Agent does the books while you sleep."
 **One-liner (brand):** "The work disappears. The evidence doesn't."
-**One-liner (Poof):** "Bookkeeping that does itself — and shows its work before it lands."
-**One-liner (self-serve, still in use):** "Bookkeeping that does itself."
-**One-liner (site tagline):** "The back office, run by AI. Signed by you."
-**One-liner (managed service, outreach only — not on poofai.com):** "Know which jobs make money — every month, from a real controller."
+**One-liner (the three ways):** "Do your books free, let Poof Agent do them, or hand them to a person."
+**One-liner (Poof Agent):** "Your AI works when you're talking to it. Poof's agent works while you sleep."
+**One-liner (approvals):** "The back office, run by AI. Signed by you."
+**One-liner (1099s):** "Tell Poof who you paid. Poof files the 1099s."
+**One-liner (a person):** "Want a person to do your books?"
 
-**Website:** poofai.com (the software only). The managed service has no site yet.
+**Website:** poofai.com — the software, Poof Agent, a person to do your books, and 1099 filing.
 
 ---
 
@@ -124,43 +156,43 @@ table has carried already-fixed rows before, and a stale list repeated back read
 
 ### Who Poof Is For
 
-**Primary — the person who signs the close (Poof, the software):**
+**Primary — the owner of a small business (decided 2026-11-01).**
+- Owners keeping their own books in spreadsheets or QuickBooks who'd rather not pay for software to do it → **Free**
+- Owners who want the books done without doing them → **Poof Agent**, or **a person**
+- Owners who are behind — a few months, or a year — and need someone to catch them up → **a person** (the request asks how far behind)
+- **Service shops** — HVAC, plumbing, electrical and other trades: the dispatch board, the tech's link, deposits and plans, truck stock, the close, and the receptionist add-on (`/trades`)
+- Anyone who paid contractors and needs **1099s filed in January** → **File your 1099s**, the door for businesses that don't keep their books in Poof yet; the monthly line and "your books, from the same bank — free" bring them the rest of the way
+- Solo founders, freelancers and service businesses who want invoicing and the books in one place
+
+**The second door — bookkeepers and firms** (`/close`):
 - Bookkeepers and controllers who run several clients' books and want one place where the AI's work waits for their approval
-- Firms adopting an AI practice model: the queue, the evidence, the rules they grant, and the record of who allowed what
-- (Firm mode — one console over N client orgs — is the product shape Poof is growing into. Firm pricing is an open decision. Do not describe a firm console on the site until it exists.)
-
-**Through the managed service — trade contractors (sold directly by Austin; not on poofai.com):**
-- HVAC, plumbing, and electrical shop owners doing $750K–$3M who wait 2–3 weeks for last month's P&L
-- Owner-operators who have no idea which jobs actually made money
-- Shops paying a part-time bookkeeper $500–$1,500/mo and frustrated with slow, generic reports
-- (Full profile in [Section 14](#vertical-positioning-trade-contractors-hvac-plumbing-electrical). They are Poof tenants like any firm's clients.)
-
-**Self-serve software (any small business):**
-- **Service shops buying the software themselves** — HVAC, plumbing, electrical and other trades on the `/trades` product page: the dispatch board, the tech's job link, deposits and prepaid plans, the close, payroll and sales tax, truck stock — the same $79 plan, with the AI receptionist as a separate add-on
-- Solo founders and freelancers tired of spreadsheet bookkeeping
-- Small business owners who dread reconciling their books each month
-- Service businesses that want invoicing + bookkeeping in one place
-- Anyone who's been told "just use QuickBooks" and found it overwhelming
+- Every client company is free; the firm pays $29 a month only for the clients it switches Poof Agent on for; every client's 1099s on one page, the owner signing by emailed link
+- **A firm's clients are its own.** Poof never offers a firm's client the "person to do your books" request and never routes one to the bookkeeping team
 
 ### Positioning Statement
-> **For** small business owners who've been doing their own bookkeeping in spreadsheets or struggling with QuickBooks,
-> **Poof is** an AI-powered bookkeeping app
-> **that** handles categorization, reconciliation, and reporting automatically — so you spend minutes on your books instead of hours.
-> **Unlike** QuickBooks, which charges more for features behind paywalls and requires accounting knowledge,
-> **Poof** includes everything in one plan and uses AI to do the work you'd normally hire a bookkeeper for.
+> **For** small-business owners who keep their own books, or keep meaning to,
+> **Poof is** bookkeeping software that is free, with an AI agent for $79 a month and a person when you'd rather hand it off,
+> **that** keeps the ledger, sends the invoices, files the 1099s and closes the month, with every entry waiting for your OK.
+> **Unlike** QuickBooks, which has no free plan and charges $38 to $340 a month depending on which features you need,
+> **Poof** gives the software away and charges only for the work done.
 
 ### Primary Competitive Alternative
-**QuickBooks** is the default choice for most small businesses. Poof positions directly against QuickBooks on three axes:
-1. **Simplicity** — One flat price, no feature tiers, no accounting jargon
-2. **AI-first automation** — Poof does the work; QuickBooks gives you tools to do the work yourself
-3. **One price, everything in one plan** — no tiers and no per-feature upsell; the AI receptionist for service shops is the one add-on, priced separately. QuickBooks splits the same capability set across three plans and charges for the ones you grow into
+**QuickBooks** is the default choice for most small businesses. Poof positions against it on three axes:
+1. **Price** — Poof is free. QuickBooks has no free plan: Simple Start is $38 a month for one user, Plus $140. What costs money at Poof is the agent's work, not features
+2. **The agent does the work** — QuickBooks gives you tools to do the work; Poof Agent does it and puts the evidence on every card
+3. **A person when you want one, in the same books** — no new software for a bookkeeper to learn, no shared QuickBooks login. (Intuit sells bookkeeping too, as QuickBooks Live. Never claim QuickBooks has no human option.)
+
+The free alternatives (Wave, Zoho Books' free plan) are the new comparison set; see [Competitive Positioning](#competitive-positioning).
 
 ### Messaging Principle: Outcomes Over Features
 Always lead with what changes in the customer's life, not what the product does. The feature name can appear as a label, but the **headline should be the outcome.**
 
 | Feature | Outcome-Oriented Headline |
 |---|---|
-| AI transaction categorization | "Wake up to categorized books — every morning" |
+| Free plan | "The books are free. You pay only for the work." |
+| Poof Agent | "Wake up to sorted books — every morning, waiting for your OK" |
+| A person to do your books | "Behind on your books? Ask for a person." |
+| 1099 filing | "Tell Poof who you paid. Poof files the 1099s." |
 | Poof AI assistant | "Ask a question, get an answer — not a help article" |
 | Receipt & invoice scanning | "Snap a photo. Never type an expense again." |
 | Smart transaction matching | "Invoices match to payments while you sleep" |
@@ -171,8 +203,7 @@ Always lead with what changes in the customer's life, not what the product does.
 | Reconciliation | "Reconciliation that takes minutes, not hours" |
 | Recurring invoices | "Send invoices on autopilot — follow-ups included" |
 | Estimates | "Send a quote. Convert to an invoice in one click." |
-| Bank connection | "Connect your bank. AI handles the rest." |
-| Flat pricing | "Everything you need. Nothing you don't. One price." |
+| Bank connection | "Connect your bank. Poof Agent handles the rest." |
 | AI receptionist | "Every call answered. Every job on the board." |
 | Deterministic safety triage | "A gas-smell call never gets booked for Tuesday." |
 
@@ -191,17 +222,18 @@ Always lead with what changes in the customer's life, not what the product does.
 **The ground is a ledger pad, not a stage.** Pale green paper under everything, white working surfaces on top of it, ink for text, one green for the accent, and red only for corrections. Nothing glows, nothing shimmers, nothing is a gradient. Poof is a set of books, and the brand looks like the page they are kept on.
 
 ### Brand Values
-1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule is approved by an owner or admin as a card, whether Poof offered it from reviewed work or someone asked for it in a sentence ([Group 13](#13-approvals--ai-autonomy-14-features))
+1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule is approved by an owner or admin as a card, whether Poof offered it from reviewed work or someone asked for it in a sentence ([Group 13](#13-approvals--ai-autonomy-15-features))
 2. **Small Business First** — Every decision optimized for 1–50 employee businesses
 3. **Trust & Security** — Bank-grade security, SOC 2 audit logging, 2FA, RBAC
 4. **One figure** — The reconciliation ties; the close is a record. When the number on the screen and the number in the record are the same number, the month is done
+5. **Free means free** — The software never locks and never holds a feature back. What costs money is work done: the agent's, or a person's
 
 ### AI Assistant — Ask Poof
 The assistant is a tool, not a persona. There is no separate character and no name other than the product's. It has no icon of its own — **the mark is its icon** — no sparkle, and no animation. Its header is flat paper with a rule and the mark.
 
 It lives in a right-hand sidebar, is always one click away, and is context-aware — it knows your company name, industry, business type, location, and timezone. It gives concise, action-oriented responses (2–4 sentences) and can carry out the assistant's full set of actions (the count is in [Key Numbers & Claims](#key-numbers--claims)): preparing invoices, estimates, expenses, bills, credit notes, deposits, customers, vendors, and products; setting up the chart of accounts; recording journal entries; configuring recurring depreciation schedules; building budgets and forecasts; generating all 14 financial reports; sending invoices and credit notes via email; importing bank statement PDFs; booking, moving, or cancelling a visit; answering where things stand; and guiding users through onboarding and the month-end close. Uploaded receipts and invoices are automatically scanned and attached to the records it prepares.
 
-**It shows its steps and says "preparing," never "created."** Nothing is written until a person approves it. What the assistant produces is a card in Approvals with the evidence on it, and the page that approves the card is the page that settles it ([Group 13](#13-approvals--ai-autonomy-14-features)). Copy about the assistant follows the same rule — "Poof prepared the invoice," "the entry is staged," never "Poof created" — and never gives it feelings, a face, or a first person. When creating content, refer to it as "the assistant," "Ask Poof," or simply "Poof."
+**It shows its steps and says "preparing," never "created."** Nothing is written until a person approves it. What the assistant produces is a card in Approvals with the evidence on it, and the page that approves the card is the page that settles it ([Group 13](#13-approvals--ai-autonomy-15-features)). Copy about the assistant follows the same rule — "Poof prepared the invoice," "the entry is staged," never "Poof created" — and never gives it feelings, a face, or a first person. When creating content, refer to it as "the assistant," "Ask Poof," or simply "Poof."
 
 The assistant supports **multi-session conversations** — users can create, rename, switch between, and delete multiple chat sessions. Sessions display relative timestamps (time of day for today, "Yesterday", "Xd ago") in the user's company timezone. Conversations can be organized into **folders** (similar to ChatGPT Projects) with full CRUD: create, rename, expand/collapse, and delete. Sessions are moved between folders via **drag-and-drop** (desktop expanded mode) or a **"Move to" menu** (all views). Deleting a folder prompts a warning and removes all conversations inside it. Collapsed folder state persists across sessions via localStorage.
 
@@ -278,10 +310,6 @@ Lowercase **poof** in Bricolage Grotesque 800, ink on paper. **No period.** The 
 |---|---|---|---|
 | Website (`poof-website2`) | `src/components/PoofWordmark.tsx` | `src/components/PoofMark.tsx`, `public/poof-mark.svg`, `public/poof-mark-on-ink.svg` | Favicons, app icons, and `og-image.png` are generated from the SVG |
 | App (`apps/poof-web`) | `PoofWordmark` | `PoofMark`, `public/poof-mark.svg` | Same geometry; colors from `src/theme/shared-theme.ts` |
-
----|---|---|---|
-| Website (`poof-website2`) | `src/components/PoofWordmark.tsx` | `src/components/PoofMark.tsx` | The CSS class `.poof-wm` in `src/app/globals.css` sets the face, tracking, and draws the period; `.on-ink` flips it |
-| App (`apps/poof-web`) | `PoofWordmark` | `PoofMark` | Same geometry; colors come from `src/theme/shared-theme.ts` |
 
 ---
 
@@ -413,30 +441,37 @@ There is no 300 and no 700. Bold inside body copy is 600.
 ## Key Messaging & Taglines
 
 ### Primary
-- **"The work disappears. The evidence doesn't."** — The brand sentence and the primary line. Use it wherever Poof is introduced in one line: the OG image, a deck cover, the closing line of a post. Poof is a magic trick that shows its method — the work vanishes, the record stays
-- **"Bookkeeping That Does Itself"** — The self-serve hero line; still the headline on the product hero
-- **"Poof. It's done."** — Not a headline. It is the story behind the wordmark's period: the work vanishes and the dot is what stays. A caption or a closing line, never a hero
-- **"AI categorizes your transactions, reconciles your accounts, and closes your books — so you never touch a spreadsheet again."** — Hero subhead
+- **"Poof is free. Poof Agent does the books while you sleep."** — The homepage headline (decided 2026-11-01). Two sentences, in this order: free first, then the agent. Where only one fits, use "Poof is free." The next sentence says what the agent does in figures and that the entries wait for your OK (see *the headline and the overnight sort* at the top)
+- **"The work disappears. The evidence doesn't."** — The brand sentence. It sits under the headline, on the OG image, a deck cover, the closing panel of every page. Poof is a magic trick that shows its method — the work vanishes, the record stays
+- **"Your AI works when you're talking to it. Poof's agent works while you sleep."** — The Poof Agent line, against the chat AI the reader already has
+- **"Want a person to do your books?"** — The exact words for the human offer, in the app and on the site. Never followed by a price
+- **"The back office, run by AI. Signed by you."** — The site tagline until 2026-11-01; now the line for the approvals section
+- **"Poof. It's done."** — Not a headline. A caption or a closing line, never a hero
 
 ### Supporting Headlines (use on feature sections, ads, social)
-- "Stop doing your own bookkeeping"
-- "Your books, done — every morning"
-- "All the power of QuickBooks. None of the complexity."
-- "Everything you need. Nothing you don't. One price."
-- "Describe your goal. Get a budget in seconds."
+- "Free for good. No card, no time limit, nothing read-only."
+- "Your books, sorted every morning — waiting for your OK"
+- "QuickBooks starts at $38 a month. Poof starts at free."
+- "Behind on your books? Ask for a person."
 - "Snap a photo. Never type an expense again."
+- "Describe your goal. Get a budget in seconds."
 
-### Headlines for the October groups (2026-10-06)
+### Headlines for the November groups (2026-11-01)
 Outcome first, the limit kept in the body copy (see *Limits to keep* at the top).
+- **1099 filing:** "Tell Poof who you paid. Poof files the 1099s." · "W-9s collected, forms filed, copies mailed — and the IRS receipt in your inbox." · "Your first three forms are free." · Body limit: 1099-NEC and MISC, filed after the year ends; due February 1.
+- **Next year's 1099s:** "The W-9 goes out at the first payment, so January is one approval."
+- **For bookkeepers:** "Every client's 1099s on one page. The owner signs from an email."
+- **Free:** "The books are free. You pay only for the work." · "Nothing locks. Ever."
+- **Poof Agent:** "Last night, Poof Agent sorted the bank, read the receipts and drafted the reminders. This morning it's waiting for you."
+- **A person:** "A bookkeeper who works in Poof. Tell us how far behind you are; we'll quote the job." · Body: a reply usually within a business day; no price on the page.
+- **Texts:** "Your tech texts the receipt. It's an expense card before they're back in the truck." · "Missed the call? Poof texts them the booking link."
+
+### Headlines for the October groups (2026-10-06 and 10-21)
 - **Approvals:** "Approve it twice, and Poof offers to do it for you." · "See everything your rules did — and undo any of it."
 - **Payroll:** "Your payroll provider pays them. Poof makes the books and the 941 agree."
 - **Sales tax:** "Sales tax by city, exemptions on file, and a return that ties."
 - **Fixed assets & loans:** "The van, its loan and its depreciation — on the books without a spreadsheet." · "Trade in the truck in one entry."
-- **1099s:** "January's 1099s, prepared from the year's payments. W-9s collected by link."
 - **Truck stock:** "Count the van from your phone. Poof knows what went on jobs and what went missing."
-
-### Headlines for the October 21 groups (2026-10-21)
-Same rule: outcome first, the limit in the body.
 - **Taxes:** "Every tax deadline, the reserve, the four estimates, and a January package your CPA can use." · "How much tax you've built up, next to how much you've set aside." · Body limit: Poof prepares and reminds; you and your CPA file and pay.
 - **Quotes:** "The customer picks good, better or best, signs online, and the job is on the board." · "Quoted against actual, on every job."
 - **Progress billing:** "Bill the install in draws. Change orders land on the bills that are left."
@@ -445,11 +480,10 @@ Same rule: outcome first, the limit in the body.
 - **Commissions:** "Commissions earned when the invoice is paid, on the books before payday." · Body limit: Poof calculates and books; your payroll pays.
 
 ### Supporting Messages
-- "Bookkeeping That Actually Makes Sense"
 - "Every small business owner deserves financial clarity"
-- "5-minute setup, 90% fewer manual entries"
-- "246 features, one flat price — $79/mo"
+- "270 features, free. The agent that does the work is $79 a month."
 - "See where your cash is headed — 12 months out"
+- "Do your books free, let Poof Agent do them, or hand them to a person."
 
 ### Tone of Voice
 - Conversational, not corporate
@@ -460,18 +494,21 @@ Same rule: outcome first, the limit in the body.
 ### Messaging Don'ts
 - Don't use "magical" or "magic" anywhere in copy; the magic is one animation on the homepage and one sentence.
 - Don't lead with a mood in a headline — use an outcome-oriented headline instead.
-- Don't list features without tying them to a customer outcome
-- Don't mention tiers, plans, or "Basic/Pro" — Poof has one plan with everything included
-- Don't use accounting jargon without explaining it
+- Don't list features without tying them to a customer outcome.
+- **Name only what exists:** Free, Poof Agent, the receptionist add-on, 1099 filing per form, and a person (quoted). No Basic, Pro, Premium or Enterprise; no "freemium"; no "upgrade to unlock".
+- **Don't call Free a trial** or say features are held back on it. The software is free; what's metered is AI work. The 30 days are of Poof Agent, not of Poof.
+- **Never put a price on the human bookkeeping** — no figure, range, "from", "starting at", or "less than a bookkeeper costs".
+- Don't say Poof Agent posts, closes, files or pays on its own. It prepares; a person approves, or a rule or auto-post the owner turned on does exactly what it was granted.
+- Don't use accounting jargon without explaining it.
 
 ---
 
 ## Product Overview
 
 ### What Poof Does
-Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees, 100–10,000 monthly transactions). Users connect their bank accounts, and the AI handles categorization, reconciliation, invoicing, estimating, budgeting, forecasting, and reporting.
+Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthly transactions). The software is free. With **Poof Agent**, users connect their bank accounts and the AI handles categorization, receipts, reconciliation matching, reminders and the month's write-up, each as cards for a person's OK; on Free, the owner's rules keep sorting and the rest waits for a person. Or a bookkeeper who works in Poof does it.
 
-### 246 Features in 22 Groups
+### 270 Features in 24 Groups
 
 #### 1. AI-Powered Automation (11 features)
 1. AI transaction categorization (BRAID engine)
@@ -518,8 +555,8 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 13. **Supplier refund checks matched to the credit** — an overpaid bill's extra kept as a vendor credit, and the refund nets in the vendor's 1099
 14. **Emailed supplier invoices become bills to approve** — not paid expenses: due date, invoice number, job, a duplicate warning, and the PDF attached
 
-#### 4. Banking & Reconciliation (11 features)
-1. Bank connection via Plaid (12,000+ banks; **90 days of history on the first connection, refreshed on its own every day** for every connected bank, reaching back up to 90 days when a feed has stalled — true from 2026-10-20; optional liability accounts for broader institution support)
+#### 4. Banking & Reconciliation (12 features)
+1. Bank connection via Plaid (12,000+ banks; **90 days of history on the first connection, refreshed on its own every day** for every connected bank, reaching back up to 90 days when a feed has stalled — true from 2026-10-20; a connection made since 2026-10-29 can also bring in payments back to January 1 for 1099s, kept out of the books; optional liability accounts for broader institution support). Free connects 2 banks; Poof Agent, any number
 2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing with GPT-4o Vision for PDFs, intelligent column mapping, bank name auto-detection, duplicate prevention) — also importable via AI chat by uploading a PDF
 3. Reconciliation (multi-step wizard, auto-match, hand match and unmatch, completion report, export and email, history with reopen and delete) — works on a phone; a credit card reconciles to the balance owed
 4. Auto-reconciliation (opt-in, weekly or monthly, with notifications). It signs a period only when the difference is under a penny; anything else becomes cards in Approvals, one per uncertain match. It takes the period **after the last one completed**, so a month it missed is caught up
@@ -530,6 +567,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 9. **Reconnect a bank whose login expired** — flagged on Banking and in Needs Attention
 10. **Transfers between your own accounts post once** — card payments, savings and a line of credit, with a "Match both" card; different-day transfers go through Transfers in Transit, and the close warns when that account holds anything stale
 11. **Pending holds wait until they post** — a transaction the bank removes is set aside, and a booked one the bank stops showing raises a card
+12. **Pending at the bank** — "Pending at the bank: 3 (−$412.18)" under each account and on Transactions, never booked; **Sync Now** asks the bank for the latest first (app #499)
 
 #### 5. Accounting & Reporting (13 features)
 1. Double-entry accounting
@@ -568,7 +606,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 8. Bot-abuse gate on registration — Cloudflare Turnstile challenge on public sign-up, stopping scraped-address subscription bombing
 9. AI privacy chokepoint ("Gateway") — every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail
 10. **Office manager role** — invoices, quotes, customers, dispatch and hours, but no books; they land on the Board, and Ask Poof, the chat apps and Approvals follow the role
-11. **Add a company from the company menu** — you own it and it gets its own 30-day trial (up to 3 unpaid companies at once)
+11. **Add a company from the company menu** — you own it; the first company a person owns gets 30 days of Poof Agent, and later ones start on Free (app #481)
 
 #### 8. Productivity & Workflow (7 features)
 1. Personalized dashboard — AI-generated daily briefing with "Reply to Poof" action, time-aware greeting, 4 animated KPIs, Y-axis dollar labels on all chart tiles, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
@@ -579,7 +617,7 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 6. AI chat folders — organize conversations into folders (create, rename, delete, move), with drag-and-drop on desktop and move menu on mobile, collapsible sections, and persistent state
 7. **"This month" on Home** — close rate, average ticket, top 3 techs by revenue, callbacks, active members and renewals due, and backlog; hidden when the company has none of that data
 
-#### 9. Poof AI Capabilities (22 features)
+#### 9. Poof AI Capabilities (23 features)
 1. Business-context-aware chat (knows your company, industry, timezone) with concise, action-oriented responses, multi-session support, and folder organization
 2. Books health check & month-end close guidance
 3. Invoice, quote, and credit note creation — AI prepares, edits, and sends via email, including good/better/best quote drafts from templates
@@ -602,9 +640,10 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 20. **Talk to Poof in Telegram and Slack** — ask, get answers, and approve or reject cards right in the chat; every copy of a card stays in step
 21. **A morning summary where you work** — what needs your OK today, delivered to the chat app you use
 22. **Ask how the business is doing** — close rate, average ticket, top tech, callbacks, members, utilization, P&L, A/R aging and job profitability; the numbers equal the screens, and tests check that they do. Also "how's the Garcia job vs the quote?", requests, and hours
+23. **Use Poof from Claude, ChatGPT or Grok** — "Sign in with Poof": a consent page names the app, the company and the person, the app gets only what that person's role can read, and Settings → Chat apps disconnects it. **Poof Bookkeeping is in Claude's directory** (published 2026-10-24); the ChatGPT app is in review (app #459, #469)
 
-#### 10. Job Costing, Month-End Close & Payments (22 features)
-1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-13-features))
+#### 10. Job Costing, Month-End Close & Payments (23 features)
+1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-15-features))
 2. AP cash planner — forward-looking view of upcoming bills so you know what's due, when, and whether cash covers it
 3. Period close & locking — close and lock a month so entries can't change after sign-off, with an immutable trial-balance snapshot
 4. AI close narrative — plain-English month-end summary of what moved and why, generated automatically
@@ -626,10 +665,11 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 20. **The nudge** — a task past its due date on an open close is an insight, a card in Approvals (with a one-tap "mark done" for a manual task), and **one message per close per day** on the channels the shop subscribed to — Telegram, SMS, Slack, email — naming every task late on it. The sweep re-reads the books before it decides what is late, so it never nags about a bank account reconciled that afternoon
 21. **Quoted vs actual on every job** — revenue, equipment, materials, labor, subs, gross profit and margin, quoted against actual, with an "over quote" card and how much cost isn't tagged to any job
 22. **The books reviewer** — books that balance but look wrong: a merchant filed somewhere unusual, an owner's draw booked as an expense, fuel, rent or insurance booked as office supplies, a monthly bill that stopped. A finding with one clear fix is a one-tap card
+23. **Stripe payouts tie out** — Stripe's own fees are booked, and a payout's bank deposit is matched to the payout's entry, never booked twice (app #478, #501)
 
-#### 11. AI Receptionist & Dispatch (15 features)
+#### 11. AI Receptionist & Dispatch (16 features)
 
-> **Availability note:** the phone receptionist (1–12: the number, the voice agent, triage, booking by phone, the call log, the receptionist settings) is a **separate add-on to the $79 plan, priced separately** (decided 2026-10-21). It is operator-installed — Poof staff provision the number and the voice agent — and **not self-serve** yet (the self-serve PRs, app #239 and #244, are drafts); never show it as a button in the app or as something a shop can buy online. The price is **not final**: the draft in #244 is $99/mo with 1,000 minutes included, then 12¢ a minute, and the site shows no price until Austin confirms. The Board, the Requests inbox and customer messages (13–15) are in the $79 plan; customer texts go from the shop's own Poof line (app `customer-messages.service.ts`), so a shop without the receptionist gets them by email. Technician texts go from Poof's platform number and are in the plan. See the caveats at the end of this group.
+> **Availability note:** the phone receptionist (1–12 and 16: the number, the voice agent, triage, booking by phone, the call log, the receptionist settings, the missed-call text) is an **add-on: $99 a month with 1,000 minutes included, then 12¢ a minute**. A shop turns it on and buys it itself in Settings → Receptionist (self-serve since 2026-10-26, app #479; the prices live in Stripe). The Board, the Requests inbox and customer messages (13–15) are in the app for everyone; customer texts go from the shop's own registered Poof line, so a shop without one gets them by email, and on Free they are email only. Technician texts go from Poof's platform number once the tech replies YES (Group 12); Free has 100 team texts a month, Poof Agent no limit. See the caveats at the end of this group.
 
 1. AI phone receptionist — answers the shop's line, knows the shop's name, hours, and service area, understands the caller's problem, and books the job
 2. Deterministic safety triage — gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted "leave the building, call 911" response. No-heat below 45°F and no-cool above 95°F are emergencies too. **These are rules in code, not instructions to a language model** — the AI narrates the call, it never decides whether something is an emergency
@@ -646,10 +686,11 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 13. **Messages to your customers** — booking confirmations ("Reply C to confirm"), moved and cancelled notices, a day-before reminder, and "On my way". **Off until an owner or admin turns them on**; they go by email until the shop's Poof line is registered for business texting (A2P 10DLC). No texts 9pm–8am, and STOP works
 14. **Board week view** — load per tech ("2 / 9h"), drag or "Move to another day", and the customer's history while booking
 15. **Requests inbox** — unbooked calls, web-form submissions and texts, with Book, Call back and Close, plus a public booking form with an embed (the form is off until the shop turns it on). The office confirms; nothing books itself
+16. **Missed-call text-back** — a call that ends without a booking gets one text with the booking link, within 15 minutes. Off until the owner turns it on; needs the shop's line registered for texting; never after an emergency or escalated call, at most once a week per number (app #497)
 
-**What it does not do (do not imply otherwise):** **customer-facing** messages are built (13 above) but **off by default** and email-only until 10DLC registration — never say a shop's customers are being texted today. Technician dispatch texts are separate (10 above). It does not take payment on the call, does not optimize routes across a day's board (the week view's map is a placeholder), and does not clone the owner's voice. There are no autonomous outbound sales calls.
+**What it does not do (do not imply otherwise):** **customer-facing** messages are built (13 and 16 above) but **off by default** and email-only until the shop's line is registered for business texting — never say a shop's customers are being texted today. Technician dispatch texts are separate (10 above). It does not take payment on the call, does not optimize routes across a day's board (the week view's map is a placeholder), and does not clone the owner's voice. There are no autonomous outbound sales calls.
 
-#### 12. Field Service & Job Handoff (13 features)
+#### 12. Field Service & Job Handoff (15 features)
 
 > **Availability note:** in the app for every shop. The technician's page needs no account and no app install, which is the point — see the caveat at the end of this group.
 
@@ -666,12 +707,14 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 11. **Get paid on site** — a QR code or pay link, by card or bank, that flips the job to "Paid" when the money lands (needs Stripe online payments; a texted pay link also needs the shop's line registered). Cash becomes a card the office approves, never posted from the tech's link
 12. **Visit checklists with readings per unit** — out-of-range readings flagged next to the last reading; three starter lists (spring tune-up, fall tune-up, install commissioning). A blank required item asks "Complete anyway?" and never blocks the visit
 13. **A finger signature and a visit report the customer gets** — the customer signs on the tech's phone; the report is on for membership visits and off for others, and nothing is sent while customer messages are off
+14. **Techs say YES first** — Poof texts each tech once and holds job texts until they reply YES; the team list shows who's on, who's waiting and who texted STOP (app #487)
+15. **Text a receipt to Poof** — a tech with job texts on texts a receipt photo to Poof's number and it is an expense card in Approvals, on the job or not (app #505)
 
 **What it does not do (do not imply otherwise):** the tech's page does not do GPS tracking and does not work offline — it needs a signal. Payment on site needs Stripe online payments switched on. It does not schedule or re-route; that is the dispatch board's job. Tech screens never show costs or prices from the shop's books.
 
 ---
 
-#### 13. Approvals & AI Autonomy (14 features)
+#### 13. Approvals & AI Autonomy (15 features)
 
 > **Availability note:** the approvals inbox is on for everyone — it is how every AI write reaches
 > the books. Autonomy is **off until a person grants it**, one rule at a time. There is no default
@@ -691,9 +734,9 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 12. **Change a rule's limits** — the ceiling and daily cap in Settings → Automation; a rule never acts above its ceiling
 13. **Ask for a rule in a sentence** — in Ask Poof, Telegram or Slack ("always put Lowe's under materials"), or from a decided card or a Transactions row; rules can match description, amount range or bank account, and "also file the N rows waiting now" comes with Undo. An owner or admin approves the rule card
 14. **Everyday decisions as cards in any channel** — a payment received to match, a customer credit to apply, a transfer, a draft invoice to send when a tech completes a visit, an accepted quote to convert, a quiet quote to remind
+15. **Cards read as decisions** — a headline, what will happen, the button's word, the checks that passed, one caution if there is one; the details folded away (app #467, #486)
 
 **What it does not do (do not imply otherwise):** no ledger rule can ever send anything to a customer — invoices and credit notes are always a human's decision, whatever a rule says. (Scheduled messages the shop switches on — invoice reminders, quote follow-ups, booking confirmations — are settings with previews, not rules; on the site say "no ledger rule".) A rule that writes to the ledger **must** carry a dollar limit; one without does not run. Rules cannot be written in a settings form: they come from reviewed work or a sentence asking for one, and an owner or admin approves each as a card. And autonomy is never on by default: a new account asks about everything until its owner decides otherwise.
-
 
 #### 14. Fixed Assets & Loans (8 features)
 1. **Asset register** — vehicles, tools, office equipment and more, with straight-line depreciation by class and an editable capitalization threshold ($2,500 by default)
@@ -706,13 +749,15 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 8. **The lender's statement** — true up a loan to what the lender says, and a "loan or a lease?" question for steady monthly payees
 
 #### 15. 1099s & Vendors (8 features)
+
+> Preparing 1099s is free. **Filing them is Group 23.**
 1. **Books → 1099s** — every contractor's year so far, by how they were paid, against the year's legal threshold ($2,000 for 2026)
 2. **Every payment has a payee** — "who is this?" cards link unknown bank payees and checks to vendors
 3. **W-9s by link** — the vendor fills it in online; a filled-in W-9 PDF fills the vendor record, read inside Poof
 4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit
-5. **Prepare the year** — each contractor's copy (emailed to those who consented, print-and-mail for the rest) and a summary PDF for the CPA
+5. **Prepare the year** — each contractor's copy (emailed to those who consented; mailed by Poof, or printed, for the rest) and a summary PDF for the CPA
 6. **Mark filed or rejected** — the IRS receipt ID, or its reason; a change after filing is flagged as a correction
-7. **"Who uploads your 1099s?"** — your bookkeeper, your CPA, or you, with the filer-code checklist, the checks the IRS rejects a file for, and reminders from October to December 15 while there's still time
+7. **"Who files your 1099s?"** — **Poof files them** first; your bookkeeper, your CPA or you under "Other ways", with the filer-code checklist and the checks the IRS rejects a file for; reminders from October 1 to the due date, never mentioning a filer code
 8. **The January check** — a card for checks written in December and cleared in January, and a close task for the filing
 
 #### 16. Payroll & Time (11 features)
@@ -791,147 +836,168 @@ Poof automates ~90% of bookkeeping tasks for small businesses (1–50 employees,
 7. **Estimate payments recognized** — IRS and EFTPS payments in the bank feed offered for the right quarter, a person confirms each, payments from a personal account typed in, and on a pass-through a payment booked as an expense flagged as a draw
 8. **Texas franchise tax and property** — last year's revenue against the no-tax-due threshold and which report to file by May 15; what the business owned on January 1, at cost, against the $125,000 business personal property exemption, with the certification or a Form 50-144 list for the appraisal district
 
+#### 23. File your 1099s (13 features)
+
+> **Poof files 1099-NEC and 1099-MISC with the IRS** for a business that signs the authorization, after the year ends (2026's forms in January 2027, due February 1). Prep is free; filing is **$2.49 a form after the first 3 each year**, a mailed copy **$1.79**, an emailed copy free. No IRS filer code (TCC) is ever asked of the customer: Poof files under its own. No TIN matching (the format is checked); no state filing, 1099-K, INT, DIV or W-2s. App #488, #511, #516–#531.
+
+1. **"File my 1099s"** — one page in five steps (your business, who you paid, their W-9s, review and approve, Poof files), and a choice at sign-up that lands on it
+2. **Poof files them with the IRS** — one signature (name, title, "I agree") authorizes Poof and approves the forms; it can be withdrawn
+3. **Tell Poof who you paid** — type contractors in or upload a spreadsheet; an amount you enter is labelled "entered by you", beside what the books show
+4. **Last year from your bank** — a new bank connection brings in payments back to January 1, counted toward the 1099s and kept out of the books
+5. **Add a bank payee as a contractor** — straight from "who is this?" on a bank payment
+6. **Every W-9 in one click** — emailed to every contractor, or a link for the owner to text, and a board of who's in, who's been asked and whose link ran out
+7. **Reminders until they answer** — every 5 days, up to 3 times, with a fresh link; who's still missing in Needs Attention from December 1
+8. **Poof mails the paper copies** — first-class, to contractors who didn't agree to email; each form shows the day it went, and a bad address is listed with the reason
+9. **The IRS receipt, emailed** — the owner hears "accepted, receipt …" or exactly what to fix
+10. **Priced per form** — the first 3 forms each year free, then $2.49; $1.79 a mailed copy; emailed copies free; paid in one checkout
+11. **The W-9 at the first payment** — and a line on the 1st of each month: who's been paid, how much, how many W-9s are in. December: "your 1099s are ready to look over"
+12. **A bookkeeper's clients on one page** — every client's forms, missing W-9s and signature; "Send for signature" emails the owner a one-use link, no login
+13. **One checkout for every client** — $2.49 a form up to 25 a year, then $1.49; each client's first 3 stay free
+
+#### 24. Free, Poof Agent & a Person (4 features)
+
+> The plans are features because what a customer can do depends on them. Prices are in [Pricing](#pricing).
+
+1. **Free for good** — the whole app, no card, no time limit, nothing read-only; each month 25 Ask Poof questions, 25 reads, 2 bank feeds and 100 team texts, with the meters in Settings → Billing. File imports have no limit
+2. **Poof Agent** — every piece of AI work with no monthly limit; 30 days of it for every new company, then Free unless it's kept; a banner counts the days left
+3. **Firms switch the agent on client by client** — every client free, $29 a month only for the ones it's on for, with a running total
+4. **"Want a person to do your books?"** — in Settings → Billing, on For Review when 50 or more are waiting, and in Ask Poof: how far behind, roughly how many transactions a month, payroll or not. A bookkeeper who works in Poof usually gets back within a business day and quotes the job. No price is shown
+
 ---
 
 ## Key Numbers & Claims
 
 | Claim | Value |
 |---|---|
-| Total features | 246 in 22 groups (all included in every plan) |
-| Bank connections | 12,000+ (via Plaid) |
+| Total features | 270 in 24 groups. The software is free; the AI work in them is Poof Agent's, and the receptionist (Group 11) is an add-on |
+| Bank connections | 12,000+ (via Plaid); 2 on Free, any number on Poof Agent |
 | Financial reports | 14 |
-| AI assistant tools | 113 offered to the chat, from one registry of 158 shared with the phone line and MCP (19 on MCP) — create, update, search, send, generate, import, ask where things stand, book a visit, 1099s |
+| AI assistant tools | 115 offered to the chat, from one registry of 160 shared with the phone line and MCP (19 read tools on MCP) — counted 2026-11-01 |
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
-| Manual entry reduction | 90% |
-| Plaid history | 90 days on the first connection, refreshed daily (use bank statement import for older transactions) |
+| Manual entry reduction | 90% (with Poof Agent) |
+| Plaid history | 90 days on the first connection, refreshed daily; for 1099s, back to January 1 (use bank statement import for older transactions) |
 | Team roles | 6 (Owner, Admin, Accountant, Bookkeeper, Office manager, Viewer) |
 | Granular permissions | 46 |
-| Free trial | 30 days; when it ends the company is read-only (everything visible and downloadable) until it subscribes, and subscribing mid-trial keeps the days left |
+| Free plan, each month | 25 Ask Poof questions · 25 reads · 2 bank feeds · 100 team texts · customer emails 50 a day to 10 addresses; file imports unlimited |
+| Poof Agent trial | 30 days for a new company, no card; the first company a person owns; then Free, nothing locked |
+| 1099 filing | First 3 forms a year free, then $2.49 a form; $1.79 a mailed copy; emailed copies free; firms $1.49 a form past 25 a year |
+| A person to do your books | A reply usually within a business day; quoted per job; no price shown |
 | Cash flow forecast horizon | 12 months with confidence bands |
 | Receptionist notification channels | 6 (SMS, email, push, Slack, Telegram, webhook) |
 | Close checklist (trades default) | 17 tasks, 13 evidence-bound, signed on business day 7 |
 | Producer cards wait | 30 days (a chat draft: 24 hours) |
-| Managed close SLA | Books closed by the 15th business day |
-| Managed job-costing SLA | Every completed job costed within 5 business days |
-| Managed response SLA | Controller responds within 1 business day |
+
+The old managed-service SLAs (a close by the 15th business day, jobs costed in 5, a reply in 1) left this table with the published tiers. A quote may promise its own terms; the site states none.
 
 ---
 
 ## Pricing
 
-**One plan. Every feature. No surprises.**
+**The software is free. The agent is $79. A person is quoted.**
 
-Poof has a single plan called **Poof Professional**. There are no tiers, no "Basic" or "Pro" distinctions, and no features locked behind upgrades. Every customer gets every feature in the plan. **The one add-on is the AI receptionist** for service shops, priced separately and set up with the shop (price to confirm; see Group 11). Never say "all 246 features included" or "no add-ons".
-
-| Billing | Price | Notes |
+| | Price | What it is |
 |---|---|---|
-| Monthly | **$79/mo** | Every feature in the plan; the AI receptionist is an add-on |
-| Monthly (launch special) | **$39.50/mo** | the first 3 paid months, after the 30-day trial |
-| Annual | **$790/year ($65.83/mo)** | Save $158 |
+| **Free** | **$0, for good** | The whole app. Each month: 25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds, 100 team texts. File imports have no limit. No card |
+| **Poof Agent** | **$79/mo**, or **$790/yr** (two months free) | Every piece of AI work, no monthly limits: the overnight sort, every receipt, bill and check read, Ask Poof in the app, Telegram, Slack and by voice, reminders and the month-end write-up, every bank feed, texts to customers. **30 days free** for a new company, no card |
+| **Poof Agent for firms** | **$29 per client/mo**, or $290/yr, billed to the firm | Every client company is free; the firm pays for each client it switches the agent on for. The firm's trial covers 3 clients |
+| **AI receptionist** (add-on) | **$99/mo** with 1,000 minutes, then **12¢ a minute** | For service shops. Turned on and bought in Settings → Receptionist |
+| **1099 filing** | Prep free; **first 3 forms a year free, then $2.49 a form**; **$1.79 a mailed copy**; emailed copies free | Firms: $2.49 a form up to 25 a year, then $1.49; each client's first 3 free |
+| **A person to do your books** | **No price shown. Every job is quoted.** | A bookkeeper who works in Poof. The owner says how far behind they are, roughly how many transactions a month and whether they run payroll; a person usually replies within a business day |
 
-- **No feature tiers** — never reference "Basic," "Pro," or "Enterprise" plans in any customer-facing content
-- 30-day free trial, **no credit card required** — every new organization gets it automatically
-- Launch special, always stated in this order: **30 days free, then $39.50/mo for the first three paid months, then $79/mo**
-- Cancel anytime, 30-day money-back guarantee
+**Rules for every page:**
+- **Free is not a trial.** Say "free for good" or "free, no time limit". The 30 days are of Poof Agent, and when they end the company stays on Free with every screen, rule and number. Nothing is ever read-only.
+- **Two plans, one add-on, one per-form service, and a person.** Never invent a tier, a bundle or a "Pro".
+- **Never state, imply or range a price for the human bookkeeping.** Not on the site, in a post, an ad, llms.txt or JSON-LD. "Every job is quoted" is the whole price story.
+- **No launch special and no money-back guarantee.** Refunds are what the terms say. Cancel anytime: Poof Agent runs to the end of the paid period, then the company is on Free.
+- **Product Hunt:** 90 days of Poof Agent free with code `PRODUCTHUNT`, entered at Poof Agent's checkout. Poof itself is free anyway; never write "90 days free" as if the software were paid.
+- **The iPhone app shows no prices and no purchase buttons** (App Store rule 3.1.3(f)). App Store copy, screenshots and the app itself never mention Poof Agent's price, the receptionist's or the 1099 fees.
 
 ### Pricing Messaging
-- Lead with capability, not undercutting: **"One price. Every feature. No plan you have to grow into."**
-- Emphasize: "One plan. Every feature. No surprises."
-- On comparison pages, frame it as scope, not discount — Poof's single plan covers what QuickBooks splits across its mid and upper tiers plus add-ons.
-- **Do not repeat the old "$29/mo vs QuickBooks' $38" line.** It is untrue at $79, and it argues on the axis Poof loses.
-- **Compare against QuickBooks Plus ($140/mo), not Simple Start ($38/mo)** — see [QuickBooks pricing, verified](#quickbooks-pricing-verified-2026-08-23) for why this is the honest comparison and the stronger one.
+- **Lead with free:** "Poof is free." Then the agent's price as the price of work: "Poof Agent, the AI that does the work, is $79 a month."
+- **Against QuickBooks, free is the argument now:** "QuickBooks has no free plan. Simple Start is $38 a month for one user." When the reader needs the agent, "Poof Agent is $79; QuickBooks Plus, the tier with budgets and job costing, is $140."
+- **Against the free tools,** scope is the argument: a free plan with job costing, approvals, the close, payroll and 1099 prep, sales tax and dispatch, and a person when you want one.
+- **Do not repeat the old "$29/mo vs QuickBooks' $38" line** or anything written for the single $79 plan.
+- **Compare against QuickBooks Plus ($140/mo), not Simple Start ($38/mo), whenever Poof Agent's price is on the page** — see [QuickBooks pricing](#quickbooks-pricing-verified-2026-08-23-re-checked-2026-11-01). On a page about Free, Simple Start is the honest comparison: it is the cheapest QuickBooks there is.
 
 ---
 
 ## Competitive Positioning
 
-QuickBooks is the primary competitive alternative. Thread this contrast throughout all marketing — not just on a comparison page. Every feature claim is stronger when framed as "unlike QuickBooks, which..."
+QuickBooks is the primary competitive alternative. Thread this contrast throughout all marketing — not just on a comparison page. Since 2026-10-29 the first contrast is the price: Poof is free.
 
-### QuickBooks pricing, verified 2026-08-23
+### QuickBooks pricing, verified 2026-08-23, re-checked 2026-11-01
 
 **Intuit raised prices on August 1, 2026.** Any comparison written before that date is wrong.
 
-| QuickBooks Online plan | Monthly list | Change on Aug 1, 2026 |
+| QuickBooks Online plan | Monthly list | Users | Change on Aug 1, 2026 |
+|---|---|---|---|
+| Simple Start | **$38** | 1 | +$3 (from $35) |
+| Essentials | **$85** | 3 | +$10 (from $75) |
+| Plus | **$140** | 5 | **+$25 (from $115) — a 22% jump** |
+| Advanced | **$340** | 25 | **+$65 (from $275) — a 24% jump** |
+
+*Verified 2026-08-23 against three independent sources plus Intuit's own product-update announcement. Re-checked 2026-11-01 against third-party pages dated October 2026, which still show $38/$85/$140/$340 (Intuit's own page was not opened that day). Re-check before any campaign; Intuit raised prices twice in 2026.*
+
+#### Which plan to compare against
+
+- **On a page about Free:** compare to **Simple Start ($38)**, the cheapest QuickBooks there is. "QuickBooks starts at $38 a month for one user. Poof starts at free" is true and needs no footnote beyond the date.
+- **When Poof Agent's $79 is on the page:** compare to **Plus ($140)**. Simple Start is single-user, with no team roles, no budgets and a fraction of the reporting; measuring $79 against it makes Poof look expensive against a plan that doesn't do the job. Against Plus, Poof Agent is **44% cheaper** and adds the approvals inbox, AI-built budgets, a 12-month cash forecast with confidence bands, and a close the books tick off themselves. (Plus does have budgets, project profitability and an AI assistant, Intuit Assist. Checked 2026-10-06.)
+- Poof's 6 roles and 46 granular permissions are **Advanced-tier ($340) capabilities** at QuickBooks (custom roles), and so is fixed-asset depreciation. Every QuickBooks plan has an audit log; what Poof adds is PII masking in it and in every AI call.
+- **Intuit's own increase is still a campaign:** "Your bookkeeping software raised its price 22% this August. Poof is free."
+
+**Always state the plan being compared and the date checked**, in the table footnote. It is the difference between a comparison and a claim.
+
+### The free alternatives
+
+Free bookkeeping software exists; Poof is not the first. The contrast is scope and the agent, never "the only free option".
+
+| Alternative | What it is (verify before quoting a number) | The honest contrast |
 |---|---|---|
-| Simple Start | **$38** | +$3 (from $35) |
-| Essentials | **$85** | +$10 (from $75) |
-| Plus | **$140** | **+$25 (from $115) — a 22% jump** |
-| Advanced | **$340** | **+$65 (from $275) — a 24% jump** |
+| **Wave** | A free Starter plan; a paid Pro plan (about $19/mo per third-party pages, Aug–Oct 2026) that carries bank feeds and receipt scanning; payroll extra; Wave Advisors sells bookkeeping, published from about $149–199/mo | Poof's free plan connects 2 banks and carries job costing, approvals, the close, payroll and 1099 prep, sales tax and dispatch. Poof never publishes a bookkeeping price; Wave does |
+| **Zoho Books** | A free plan for very small businesses, with revenue and user caps (check Zoho's page for the current caps) | Poof's free plan has no revenue cap and 6 roles |
+| **Balances** | Agent-native books at about $20–40/mo | Poof's software is free; the agent is the paid part, and every write waits on a card |
+| **SlowBooks Pro** | A free, local QuickBooks-2003-style app with an API an agent can drive | Poof is hosted, multi-user, with bank feeds, approvals and a person available |
 
-*Verified 2026-08-23 against three independent sources plus Intuit's own product-update announcement. Re-check before any campaign; Intuit has now raised prices twice in 2026.*
-
-#### Which plan to compare against — this is the whole argument
-
-**Compare Poof to QuickBooks Plus ($140), not Simple Start ($38).** Simple Start is single-user,
-with no team roles, no budgets, and a fraction of the reporting. A business that needs what Poof
-does cannot run on it. Comparing $79 to $38 makes Poof look like the expensive option by
-measuring it against a plan that does not do the job — and it is the comparison a QuickBooks
-salesperson would choose for us.
-
-Against the plan that actually matches Poof's capability, the story inverts:
-
-- **Poof $79 flat vs QuickBooks Plus $140** — Poof is **44% cheaper** and adds what Plus does not
-  have: AI-built budgets, a 12-month cash forecast with confidence bands, the approvals inbox,
-  and a close the books tick off themselves. (Plus does have budgets, project profitability and
-  an AI assistant, Intuit Assist. Checked 2026-10-06.)
-- Poof's 6 roles and 46 granular permissions are **Advanced-tier ($340) capabilities** at
-  QuickBooks (custom roles), and so is fixed-asset depreciation. Every QuickBooks plan has an
-  audit log; what Poof adds is PII masking in it and in every AI call. That contrast is worth making explicitly.
-- **Intuit's own increase is the argument.** Plus users just absorbed +22% and Advanced users
-  +24%, with no new capability attached. "Your bookkeeping software raised its price 22% this
-  month. Poof is $79, flat, with everything included" is a campaign, not just a table row.
-
-**Always state the plan being compared and the date checked**, in the table footnote. It is the
-difference between a comparison and a claim.
+*Wave, Zoho and Balances figures are from third-party pages and Austin's own notes, not their pricing pages. Open the vendor's page and date the check before any of them appears on the site.*
 
 ### Poof vs QuickBooks
 
 | | Poof | QuickBooks |
 |---|---|---|
-| **Starting price** | $79/mo — all features ($39.50/mo launch special) | $38 Simple Start / $85 Essentials / **$140 Plus** / $340 Advanced (verified 2026-08-23; compare against Plus) |
-| **AI assistant** | Poof (built-in, context-aware, 113 tools; every change staged for approval) | Intuit Assist AI agents |
+| **Starting price** | **Free**; Poof Agent $79/mo | $38 Simple Start / $85 Essentials / **$140 Plus** / $340 Advanced (re-checked 2026-11-01) |
+| **AI assistant** | Ask Poof (built-in, context-aware, 115 tools; every change staged for approval); 25 questions a month on Free | Intuit Assist AI agents |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | Budgets on Plus, built by hand |
 | **Auto chart of accounts** | Yes | No |
-| **Receipt scanning + OCR** | Yes (with duplicate detection) | Yes (but limited in lower tiers) |
+| **Receipt scanning + OCR** | Yes (with duplicate detection; 25 reads a month on Free) | Yes (but limited in lower tiers) |
 | **Recurring charge detection** | Yes (AI-powered) | No |
 | **Recurring invoices** | Yes (with automated follow-ups) | Yes (but limited in lower tiers) |
 | **Smart transaction matching** | Yes | Limited |
-| **Cash flow forecasting** | Yes (AI-generated with confidence bands) | Limited (higher tiers only) |
+| **Cash flow forecasting** | Yes (deterministic engine, confidence bands) | Limited (higher tiers only) |
 | **Report drill-down** | Yes (click any account → see journal entries) | Yes |
 | **Scheduled report delivery** | Yes (daily/weekly/monthly/quarterly, PDF or CSV, email) | Yes (Essentials and up) |
-| **Bank statement PDF import via AI** | Yes (upload PDF to AI, auto-parsed with GPT-4o Vision) | No |
+| **Bank statement PDF import via AI** | Yes | No |
 | **RBAC** | 6 roles, 46 permissions | Custom roles on Advanced only |
-| **Audit logs** | Yes (SOC 2, PII masking) | Yes (no PII masking) |
+| **Audit logs** | Yes (PII masking) | Yes (no PII masking) |
 | **Estimates** | Yes (online acceptance with a signed record, good/better/best, deposits, follow-ups, progress billing, quoted vs actual) | Yes (acceptance, deposits and progress invoicing vary by plan; check before claiming a difference) |
-| **AI depreciation & recurring entries** | Yes (AI sets up accounts and schedules) | No |
-| **Personalized dashboard** | Yes (AI briefing, attention alerts, animations, reorderable tiles) | No |
-| **AI chat organization** | Yes (multi-session, folders, drag-and-drop, 3 view modes) | No |
-| **AI phone receptionist + dispatch** | Yes (managed service; triage, real-calendar booking, escalation) | No |
+| **1099s** | Prep free; Poof files them with the IRS and mails copies, per form | 1099 prep and e-file (check Intuit's current per-form terms before contrasting) |
+| **A person to do your books** | Yes, in the same books, quoted | QuickBooks Live, sold separately |
+| **AI phone receptionist + dispatch** | Add-on, $99/mo | No |
 | **Per-job labor allocation** | Yes | No |
-| **Pricing model** | Flat — one plan | Tiered — must upgrade for features |
+| **Pricing model** | Software free; pay for the agent's work | Tiered — must upgrade for features |
 
 ### Key Differentiators (What Poof Has That QuickBooks Doesn't)
-> **Checked against QuickBooks Plus 2026-10-06:** items 1, 7, 15, 16 and 17 are *not* differentiators against Plus as worded. Plus has an AI assistant (Intuit Assist), automatic invoice reminders, estimates, report drill-down and scheduled report emails. Use the specific versions instead: 113 tools with every change staged for approval; reminders written from the customer's history; PDF statement import via chat.
-1. AI assistant (Poof) with 30+ tools, business-context awareness, and books health checks
-2. AI-powered budgeting — describe your goal in plain English, AI builds the budget
-3. AI cash flow forecasting with confidence bands and rolling refresh
-4. AI-powered auto chart of accounts generation
-5. Recurring charge detection with frequency analysis
-6. Receipt scanning with intelligent duplicate detection
-7. Automated invoice follow-ups with smart pause on payment
-8. Budget vs actual variance dashboard with spending alerts
-9. 26 granular RBAC permissions
-10. SOC 2 audit logging with PII masking
-11. Simple, flat pricing (no tiers)
-12. Transaction approval workflows
-13. Personalized dashboard with AI-generated daily briefing, proactive attention alerts, count-up animations, and drag-and-drop tiles
-14. AI account management — AI creates chart of accounts entries, validates journal entries, and sets up recurring depreciation/amortization schedules autonomously
-15. Estimates with one-click conversion to invoices
-16. Report drill-down — click any account row in key reports to see the underlying journal entries
-17. Scheduled report delivery — automated email delivery of any of the 14 reports on a recurring schedule
-18. Bank statement PDF import via AI chat — upload a PDF, AI parses and imports transactions automatically
-19. AI chat organization — multi-session conversations with folder management, drag-and-drop, three view modes (sidebar, full-screen, mobile), and navigation-aware auto-collapse
+> **Checked against QuickBooks Plus 2026-10-06.** Plus has an AI assistant (Intuit Assist), automatic invoice reminders, estimates, report drill-down, scheduled report emails and 1099 e-file. Don't claim those as differences.
+
+1. **A free plan** — QuickBooks has none
+2. **Every AI write staged as a card with its evidence** — the approvals inbox, partial batch approval, rules offered from reviewed work, a rule that pauses itself when corrected
+3. **The close as a record** — a checklist the books tick off themselves, a reconciliation with one figure, the signature that locks the period
+4. **AI-built budgets** and a 12-month cash forecast with confidence bands
+5. **Reminders written from the customer's history**, with replies read
+6. **6 roles and 46 permissions** below Advanced's price, and PII masking in the audit log and in every AI call
+7. **Field service in the books** — the dispatch board, the tech's link, the invoice that writes itself, a service call that becomes a job
+8. **Bank statement PDF import via chat**, recurring charge detection, auto chart of accounts
+9. **A person to do your books in the same software**, quoted, without a shared login
 
 ---
 
@@ -945,6 +1011,7 @@ difference between a comparison and a claim.
 - **2015–2025** — Austin's auditing and controller career
 - **June 2025** — Poof is born
 - **2026** — Reimagining bookkeeping with AI: budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, recurring charge detection, bank statement import (CSV/PDF including AI-powered PDF parsing via chat), AI-powered account management and depreciation setup, personalized dashboard with AI daily briefing, report drill-down, scheduled report delivery, multi-session AI chat with folder organization, 13 reports, job costing, month-end close, online payments, an AI phone receptionist that books and dispatches, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself — 108 features. Pivoted the go-to-market to managed bookkeeping for trade contractors (HVAC/plumbing/electrical)
+- **October 2026** — Poof goes free, with Poof Agent as the paid plan; Poof files 1099s with the IRS; bookkeeping by a person comes inside Poof, quoted
 
 ---
 
@@ -988,7 +1055,7 @@ Three kinds only.
 ### Hashtags & Keywords
 - #Poof #PoofBookkeeping #AIBookkeeping #SmallBusinessBookkeeping
 - #BookkeepingAutomation #SmallBusinessFinance #AIAccounting
-- Keywords: AI bookkeeping, automated bookkeeping, small business bookkeeping, bookkeeping software, QuickBooks alternative
+- Keywords: free bookkeeping software, AI bookkeeping, automated bookkeeping, small business bookkeeping, file 1099s online, QuickBooks alternative, bookkeeper for small business
 
 ---
 
@@ -1028,12 +1095,12 @@ If you need the wordmark as an image — a slide, a print piece — render it fr
 
 ---
 
-## Vertical Positioning: Trade Contractors (HVAC, Plumbing, Electrical)
+## Trade Contractors (HVAC, Plumbing, Electrical)
 
-> **⭐ THIS SECTION IS THE MANAGED SERVICE'S — OUTREACH REFERENCE, NOT WEBSITE COPY (2026-10-06).** The tiers, the $750 audit, the controller who signs and the per-truck pricing belong to Austin's separate, not-yet-named services company, sold directly. They come off poofai.com with the software-only refocus; `/trades` there sells the $79 software to service shops. Use this section for outreach and calls, never on a Poof page. (It was The Augmented Operator's from 09-12 to 09-29; that name is dead.)
+> **⭐ What this section is (2026-11-01).** Trade shops are Poof's first vertical: the `/trades` page sells them the free software, Poof Agent and the receptionist add-on, and — since 2026-10-30 — a person to do the books, quoted, with no price on the page. Austin's own outreach to shops uses the same voice. The published managed tiers (the $750 audit, $1,200, $1,500, $2,400, the $1,500 onboarding) and the name "Poof Managed for Trades" are **retired**; jobs are quoted one at a time, and quoting is Austin's, never the site's. The old tier table is in the changelog as history.
 
 ### Why This Vertical
-Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins so they can afford a $1,200/mo managed service, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's three years in audit and seven as a controller translate directly — these owners trust accounting credentials over "AI startup" pitches.
+Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's three years in audit and seven as a controller translate directly — these owners trust accounting credentials over "AI startup" pitches.
 
 ### Target Customer
 - **Business type:** Residential HVAC service contractors (primary), plumbing service contractors, electrical service contractors
@@ -1042,14 +1109,14 @@ Independent service contractors are Poof's first vertical focus because they (1)
 - **Trucks:** 2 – 6 service vehicles
 - **Geography:** US sunbelt states — TX, FL, AZ, NC, SC, TN, GA, NV (priority); national over time
 - **Persona:** 35 – 55 year-old owner-operator who built the business from a service truck. Technical enough to use software, doesn't enjoy it. Values time over features. Active in Facebook groups and at supply houses (Ferguson, Winsupply, Johnstone).
-- **Current setup:** QuickBooks Online + Jobber or Housecall Pro + a part-time bookkeeper they pay $400 – $1,200/mo and are frustrated with
+- **Current setup:** QuickBooks Online + Jobber or Housecall Pro + a part-time bookkeeper they're frustrated with
 
 ### Vertical Positioning Statement
-> **For** HVAC, plumbing, and electrical service contractor owners doing $750K – $3M who are tired of waiting 2 – 3 weeks for last month's P&L from a part-time bookkeeper,
-> **Poof Managed for Trades is** a managed bookkeeping service powered by AI agents and reviewed by a former controller
-> **that** delivers per-job profitability and books closed by the 15th business day, every month — using your existing Jobber/Housecall Pro exports and bank data, with an AI receptionist answering the shop's phone if you want it.
-> **Unlike** outsourced bookkeepers who rekey job data manually and cost $800 – $1,500/mo for slow monthly reports, or field-service-first tools like Workyard and ServiceTitan that bolt on accounting as an afterthought,
-> **Poof's agents** handle categorization and reconciliation, with a credentialed human reviewing every customer-facing action — so the answer to "did the Henderson install make money?" comes with your monthly close, from a controller you can text — instead of never.
+> **For** HVAC, plumbing, and electrical shop owners doing $750K – $3M who are tired of waiting weeks for last month's P&L,
+> **Poof is** free software that runs the shop's back office — the dispatch board, the tech's link, job costing, the close — with Poof Agent to do the bookkeeping, an AI receptionist to answer the phone, and a bookkeeper who works in Poof when the owner wants a person,
+> **that** follows every job from the phone call to the P&L without anybody typing it twice.
+> **Unlike** a part-time bookkeeper who rekeys Jobber data into QuickBooks once a month, or field-service platforms like ServiceTitan that are priced per technician and built for shops three times the size,
+> **Poof** puts the job, the books and the evidence in one place, and charges for the work rather than the seats.
 
 ### Pain Points (in order of magnitude)
 1. **Monthly P&L lands 2 – 3 weeks late.** Pricing decisions on this week's bids are made blind.
@@ -1057,144 +1124,79 @@ Independent service contractors are Poof's first vertical focus because they (1)
 3. **Bookkeeper rekeys Jobber/HCP data into QBO manually.** Slow, error-prone, expensive.
 4. **Cash flow surprises during shoulder seasons.** Spring and fall lulls hit harder than expected.
 5. **Sales tax on materials is a recurring headache.** Tracking varies by state and job type.
-6. **1099 management at year-end is a fire drill.** Subs and 1099 employees scattered across QBO, spreadsheets, and the bookkeeper's notes.
+6. **1099s at year-end are a fire drill.** Subs scattered across QBO, spreadsheets and the bookkeeper's notes — now one approval in January, with Poof filing.
 
-### Outcome-Oriented Headlines (HVAC Landing Page)
+### Outcome-Oriented Headlines (`/trades` and outreach)
 Always lead with the outcome the owner cares about, never the feature.
 
-| Feature / Capability | HVAC-Specific Outcome Headline |
+| Feature / Capability | Trades Outcome Headline |
 |---|---|
 | Job costing | "Know which jobs make money — every month, from your actual books." |
-| Jobber / Housecall Pro integration | "Your field-service data, in your books. Automatically." |
-| Monthly close | "Your May P&L by mid-June — not the end of July." |
+| Field link + invoice | "Your tech closes the job from a text. The invoice writes itself." |
+| Monthly close | "A close with a checklist the books tick off themselves." |
 | AI transaction categorization | "Stop labeling 'HOME DEPOT' transactions one at a time." |
-| Plaid bank sync | "Bank, credit cards, and Jobber — all speaking to your books." |
-| Receipt scan | "Snap a receipt at the supply house. We do the rest." |
-| Managed-service review layer | "AI does the work. A controller reviews the calls that matter." |
-| 1099 contractor tracking | "1099-ready, every January." |
-| Sales tax on materials | "Materials sales tax tracked automatically, by job and state." |
-| A controller you can text | "Text a question about your business. Get a straight answer from a real controller." |
+| Receipt by text | "Your tech texts the receipt. It's on the job before they're back in the truck." |
+| 1099s | "Your subs' 1099s, filed by Poof. The W-9 goes out at the first payment." |
+| Sales tax on materials | "Materials sales tax tracked by job and city." |
+| A person to do your books | "Rather not do the books? A bookkeeper who works in Poof will. Every job quoted." |
 | Cash flow forecasting | "Know your shoulder-season cash position 90 days out." |
 | AI receptionist | "The phone gets answered at 9pm. The job's on the board before you wake up." |
+| Missed-call text-back | "Missed the call? Poof texts them the booking link." |
 | Safety triage | "A gas-smell call gets 911 and a callback — not a Tuesday appointment." |
 | Per-job labor allocation | "Your techs' hours land on the jobs they were spent on." |
 | Financing gross-up | "That financed install wasn't a 40% job. Here's what the dealer fee really cost you." |
-| Peer benchmarks | "This install ran 12 points under your other installs. Here's why." |
 
-### Vertical Pricing Tier — "Poof Managed for Trades"
-Distinct from the $79/mo Poof Professional self-serve product.
-
-| Plan | Price | Best for | Includes |
-|---|---|---|---|
-| **Job Margin & Recovery Audit** | **$750 (paid, one week)** | **The front door — lead with this** | A one-week paid diagnostic that hands the owner a dollar number in five days. Credits against the $1,500 onboarding if he signs within 30 days |
-| **Poof Managed for Trades** | **$1,200/mo** | 2 – 4 truck shops, $750K – $1.5M revenue | All Poof Professional features + monthly per-job P&L + monthly close + we bring your Jobber/HCP data into your books + a controller you can text or email + monthly variance review |
-| **Poof Managed for Trades Plus** | **$1,500/mo** | 5+ truck shops, $1.5M – $3M revenue | Everything above + multi-location reporting + quarterly review call + priority response |
-| **Poof Managed for Trades Pro** | **$2,400/mo** | Shops **above $3M** revenue — above the core ICP, sold on exception | Everything above; scope agreed per shop at this size |
-| **Onboarding (one-time)** | **$1,500** | All managed customers | Historical cleanup (up to 18 months), QBO/Xero migration, Jobber/HCP setup, chart of accounts aligned to your trade |
-
-**About the $2,400 Pro tier (decided 2026-08-23).** It sits **above** the $750K–$3M ICP, not
-inside it. The two lower tiers already span the whole target band, and their boundaries — live
-on `poofai.com/trades` — are unchanged by it. Three consequences worth holding onto:
-
-- **It is priced on revenue alone.** Truck count is the sizing proxy for the two lower tiers;
-  above $3M it stops tracking cleanly, so do not attach a truck number to this one.
-- **It is not a reason to prospect above $3M.** Outreach, the landing page, and the persona work
-  all stay aimed at $750K–$3M. This tier exists for shops that grow into it and for inbound that
-  arrives already there — not as permission to chase bigger shops. Above $3M is ServiceTitan's
-  buyer, a different sale, and the whole rationale for picking this vertical
-  ([Why This Vertical](#why-this-vertical)) assumes the smaller operator.
-- **Scope is agreed per shop.** At this size the work is not a bigger version of the $1,500 tier,
-  so the plan row says so rather than implying the same deliverable at a higher price.
-
-**On the website:** lead with $1,200 and $1,500. Show Pro as an "above $3M? let's talk" line, not
-as a third column competing for attention — it would pull the eye toward the price the target
-buyer is *not* paying.
-
-**The $750 audit replaces the $250 refundable pilot.** The pilot asked a contractor to commit a month of onboarding before he saw anything; the audit hands him a number in five days. It is simultaneously the sales pitch, the case study, the first slice of onboarding work, and the qualification filter. **Do not discount it** — a free audit attracts people who will never buy.
-
-**The SLAs, stated as commitments** (these are the promise; do not soften or inflate them):
-- Books closed by the **15th business day**, every month
-- Every completed job costed within **5 business days**
-- **Unbilled-work report every Friday**
-- Controller responds within **1 business day**
-- Monthly variance review; text access to your controller
-
-**Pricing messaging:**
-- "$1,200/mo replaces a $1,000 – $1,500/mo bookkeeper *and* gives you per-job profitability they can't provide"
-- "Cheaper than your current QBO + bookkeeper + manual handoff. Faster and more accurate."
-- Never quote managed-service pricing alongside the $79/mo Professional plan on the same page — different products, different audiences.
-- **Never present a recovery share or contingency fee.** The recovery number is the argument, not a billing mechanism.
+### Pricing for shops
+The same as everyone's ([Pricing](#pricing)): the software free, Poof Agent $79, the receptionist $99 with 1,000 minutes, 1099s per form, a person quoted. **The price does not change with technicians or trucks** — that is the contrast with ServiceTitan and Workyard. Never put a price next to the human bookkeeping, and never restate the retired tiers.
 
 ### Competitive Alternatives (Trade-Specific)
-On HVAC landing pages, reference these competitors — NOT QuickBooks (their issue isn't QBO, it's the *handoff to* QBO).
+On trades pages, reference these competitors — NOT QuickBooks (their issue isn't QBO, it's the *handoff to* QBO).
 
 | Alternative | What it is | Why owners switch to Poof |
 |---|---|---|
-| **Part-time / outsourced bookkeeper** ($500 – $1,500/mo) | A person who logs into QBO once a month, sends a PDF P&L | Slow, no per-job visibility, manually rekeys Jobber data, expensive |
-| **Workyard** ($50/mo base + $6 – $16 per user) | Field-service time tracking with job costing | Priced per user, so it scales with headcount; built for the field, accounting is an afterthought; no managed service. An 8-person shop lands near $180/mo **plus** accounting |
-| **Knowify** ($179 / $349 / $549 per month) | Construction accounting (general contractors) | Designed for general contractors, not service trades; complex for HVAC service work, and the useful tier is $349+ |
-| **ServiceTitan** ($245 – $500 **per technician** per month) | Enterprise field-service platform | Priced per tech, not per location — a 6-tech shop is roughly $1,800 – $2,400/mo before the $5K – $15K implementation and a 12-month minimum contract. Purpose-built for 20+ tech shops doing $5M+; it gates small operators out by design |
+| **Part-time / outsourced bookkeeper** ($500 – $1,500/mo) | A person who logs into QBO once a month, sends a PDF P&L | Slow, no per-job visibility, rekeys Jobber data. With Poof the bookkeeper (theirs or one who works in Poof) works where the jobs already are |
+| **Workyard** ($50/mo base + $6 – $16 per user) | Field-service time tracking with job costing | Priced per user, so it scales with headcount; accounting is an afterthought. An 8-person shop lands near $180/mo **plus** accounting |
+| **Knowify** ($179 / $349 / $549 per month) | Construction accounting (general contractors) | Designed for general contractors, not service trades; the useful tier is $349+ |
+| **ServiceTitan** ($245 – $500 **per technician** per month) | Enterprise field-service platform | A 6-tech shop is roughly $1,800 – $2,400/mo before a $5K – $15K implementation and a 12-month contract. Built for 20+ tech shops doing $5M+ |
 | **QBO + Jobber/HCP DIY** | Owner reconciles + categorizes themselves | The handoff is the daily pain; owner's time isn't free |
-| **Answering service** ($200 – $600/mo) | Humans take a message, maybe book into a calendar | They take a message; they don't know your books, your techs' skills, or which calls are emergencies. Poof's receptionist books against real availability and costs the job it creates |
+| **Answering service** ($200 – $600/mo) | Humans take a message, maybe book into a calendar | They take a message; they don't know your techs' skills or which calls are emergencies. Poof's receptionist books against real availability and costs the job it creates |
 
 *Competitor pricing verified 2026-08-23. ServiceTitan and Knowify both price per user or per
 technician, so a flat monthly figure understates them at shop scale — always convert to the
 prospect's actual headcount before quoting a contrast. Re-verify before any campaign.*
 
 ### Tone & Language Shifts for This Vertical
-The Poof brand voice ("on the record": direct, specific, the evidence not the assertion) still applies, but on HVAC landing pages and outreach, lean into these shifts:
+The Poof brand voice ("on the record": direct, specific, the evidence not the assertion) still applies, but on trades pages and outreach, lean into these shifts:
 
 - **Use trade vocabulary:** "shops" instead of "businesses," "techs" instead of "employees," "trucks" as a sizing proxy, "service calls" instead of "appointments"
-- **Talk in specific dollars:** "$1,200 a month for a bookkeeper" beats "high bookkeeping costs"
-- **Reference their actual tools:** Jobber, Housecall Pro, ServiceTitan, FieldEdge — by name. They use them daily; vague language signals you don't know their world
+- **Talk in specific dollars:** "$1,200 a month for a bookkeeper" beats "high bookkeeping costs" — about *their* costs, never as Poof's price for a person
+- **Reference their actual tools:** Jobber, Housecall Pro, ServiceTitan, FieldEdge — by name
 - **Reference their daily reality:** "between service calls," "the 4pm rush," "shoulder season," "supply house run," "the Henderson install"
-- **Skip startup language:** Avoid "founders," "entrepreneurs," "creators," "side hustle" — these readers built a real business from the ground up and don't identify with that vocabulary
+- **Skip startup language:** Avoid "founders," "entrepreneurs," "creators," "side hustle"
 - **Use "owner-operator" or "shop owner"** — not "small business owner" (too generic), not "executive" (too formal)
-- **Direct:** The "poof, it's done" line still works but pair it with concrete outcomes. ("Poof. Per-job profit on every job, every month.")
 - **No exclamation points in marketing copy.** Trades audience reads them as inauthentic.
 
 ### Key Differentiators for the Trades Vertical
-What HVAC owners get with Poof that no alternative offers all together:
+1. **The job follows itself to the P&L** — phone call, board, tech's link, invoice, job, per-job margin, with nobody retyping it
+2. **Per-job profitability every month** — most bookkeepers never provide it at all
+3. **The software is free; the price doesn't grow with techs or trucks**
+4. **A bookkeeper who works in Poof, when the owner wants one** — quoted, in the same books
+5. **An AI receptionist that answers the phone and books the job** — safety triage is deterministic, so a gas-smell call is escalated, never booked
+6. **Labor lands on the job it was spent on**; **financing fees are costed to the job**
+7. **Audit-grade ledger underneath** — double-entry with reversal entries, every AI write on the record
+8. **1099s filed by Poof**, with the W-9 collected at the sub's first payment
 
-1. **Per-job profitability with every monthly close** — most bookkeepers never provide it at all
-2. **Your Jobber + Housecall Pro data brought into your books** — we handle the import from your monthly export; you never rekey anything
-3. **Managed-service tier** — owner doesn't have to use the software themselves
-4. **Former controller reviewing every customer-facing decision** — not just AI guessing
-5. **A controller you can text or email** — owners get answers about their business without logging into yet another portal
-6. **Audit-grade ledger underneath** — built on proper double-entry bookkeeping with reversal entries; survives any IRS or insurance audit
-7. **Built for $750K – $3M shops specifically** — not enterprise overkill, not solo-truck underpowered
-8. **Replaces your current bookkeeper at lower cost** — and delivers faster, more granular books
-9. **An AI receptionist that answers the phone and books the job** — no other bookkeeping service touches the shop's revenue at the moment it walks in the door. Safety triage is deterministic, so a gas-smell call is escalated, never booked
-10. **Labor lands on the job it was spent on** — most job-costing setups cost materials and guess at hours
-11. **Financing fees are costed to the job** — a financed install stops looking more profitable than it was
-
-### Trust & Social Proof Elements (for HVAC Landing Page)
-- **Lead with Austin's credentials:** "Built by Austin Semple, a former controller: three years in audit, then seven running the books for small service businesses, working with small service businesses."
+### Trust & Social Proof Elements
+- **Lead with Austin's credentials:** "Built by Austin Semple: three years as an auditor, then seven as a controller."
 - **Anchor on accounting rigor:** "Real double-entry bookkeeping with reversal entries — not just AI guessing categories"
-- **Emphasize the human layer:** "AI does the work. A credentialed human signs off on every customer-facing decision."
-- **30-day money-back guarantee** on the managed-service trial — reduces perceived risk
-- **Founder-led onboarding** for the first 50 customers — Austin personally handles every new shop, position as a perk
-- **"Replace your current bookkeeper"** — concrete swap, not abstract upgrade
-
-### What the HVAC Landing Page Must Include
-For the website project building `/hvac` or a dedicated subdomain:
-
-1. **Hero section** with HVAC-specific headline (e.g. *"The bookkeeping service for HVAC and plumbing shops. Know which jobs make money — every month, from a real controller."*) — show a sample per-job P&L screenshot, not the general Poof dashboard
-2. **Three-up "the pain you have today"** — late P&L, no per-job visibility, manual Jobber/QBO handoff
-3. **"How it works in 60 seconds"** — connect Plaid + send us your monthly Jobber/HCP export + your monthly close lands in your inbox, with a controller on call
-4. **Per-job P&L sample** — screenshot or animated mockup of a real per-job report
-5. **Pricing table** — the $750 Job Margin & Recovery Audit as the headline entry point, then **two** columns: Managed for Trades $1,200 and Plus $1,500, plus the $1,500 onboarding. State the SLAs beside the price. The $2,400 Pro tier is a single "above $3M? let's talk" line beneath the table, **not** a third column — it is above the ICP and a third price pulls the target buyer's eye off the one he is actually paying
-6. **"Replaces your current bookkeeper"** swap-out diagram (current vs Poof)
-7. **Austin's bio section** — controller background, why he built Poof for trades
-8. **FAQs aimed at HVAC objections** — "Do I need to switch from Jobber?" (no), "What if I'm on ServiceTitan?" (we'll talk), "Will my CPA still work with me?" (yes — we coordinate at year-end), "Is this real bookkeeping or just AI guessing?" (real, with controller review), "What if I want to leave?" (export your full QBO file anytime)
-9. **CTA:** "Book a 20-minute call" → Calendly. Secondary CTA: **"Start the $750 Job Margin & Recovery Audit"** — the audit is the offer to push once the page is mature, not a free trial
-10. **Receptionist section** (if selling it) — "every call answered, every job on the board," with the safety-triage rule stated plainly as a trust element. Do **not** show it as something the owner switches on himself; it is installed as part of the managed service
+- **Emphasize the human check:** "Nothing reaches your books without you seeing it first."
+- **No guarantees** — the money-back and five-day close guarantees are retired
+- **Real people only.** No invented bookkeepers, testimonials or shop logos. A quote from a real shop needs that shop's yes
 
 ### Outreach Voice (Cold Email & LinkedIn)
-The cold outreach voice should match the landing page voice. Drafts already produced separately; in BRAND_KIT terms:
 - Personalize one specific thing per email (city, truck count, or job type)
 - Lead with their pain, not Poof's features
-- Specific dollar amounts in the body and subject
+- Specific dollar amounts in the body and subject — never a price for Austin's bookkeeping in a first email; a quote follows a conversation
 - Always include AI-drafting disclosure in the P.S.
 - One CTA — a specific call time, never "let me know if interested"
 
@@ -1212,7 +1214,8 @@ The cold outreach voice should match the landing page voice. Drafts already prod
 ### The agent surface (MCP)
 
 Poof exposes its own books to outside AI agents through a **Model Context Protocol server** —
-live and tested against a real third-party agent since August 2026. An agent the customer
+live and tested against a real third-party agent since August 2026, and listed in **Claude's
+directory as "Poof Bookkeeping"** since 2026-10-24. An agent the customer
 already uses can read their financial data through org-scoped, permissioned tools instead of
 screen-scraping or being handed a database password.
 
@@ -1225,15 +1228,17 @@ is the software an agent can safely call.
 checklist, transaction search, A/P aging, open bills, the cash plan, accrual schedules, a month's
 summary, P&L, job profitability, A/R aging, open invoices — plus the approvals inbox: an agent can
 list and read proposals and request a link the human taps to approve. **An agent can never approve
-anything.** Every tool comes from one registry shared with the chat and the phone line, and a test
-proves the MCP surface is read-only.
+anything.** Every tool comes from one registry shared with the chat and the phone line (19 read
+tools on MCP, 2026-11-01). Built and **off until `MCP_CARD_APPS` is set**: an AI app can *draft*
+cards (a bill, an expense, an invoice draft, a payment received, a customer…) that a person approves
+on Poof's card, in the chat or in Approvals — never by a rule, never by the agent (app #482).
 
 **The honest limits — state these, do not skip them:**
-- **Sign in with Poof (app PR #459, merged 2026-10-21):** a customer can connect Claude or
-  ChatGPT to their own company through an OAuth consent page, with tools scoped by their role,
-  and manage it under Settings → Chat apps → AI assistants. The connector-directory listings are
-  **not done yet**, so do not say Poof is "in the Claude directory" or "in ChatGPT's apps".
-  Still kept off poofai.com, as before.
+- **Sign in with Poof (app #459, live):** a customer connects Claude, ChatGPT or Grok to their own
+  company through an OAuth consent page, with tools scoped by their role, and manages it under
+  Settings → Chat apps → AI assistants. **Claude's directory: published 2026-10-24** (the site's
+  `/ai` page says so). **ChatGPT: in review** since 2026-10-25 — don't say Poof is in ChatGPT's apps
+  until Austin publishes it.
 - Do not describe it as a published, open, or generally available API. It is a working surface
   with real users, not a developer platform with docs and sign-up.
 
@@ -1261,6 +1266,18 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### November 1, 2026 — Poof is free; owners first; a person to do your books; Poof files 1099s (270 features)
+
+- **Decided by Austin (2026-10-27 → 11-01):** the app is free for good and the paid plan is **Poof Agent**, every model call ($79/mo, $790/yr; $29 per firm client with the agent on). On 10-30 he brought bookkeeping by a person back inside Poof: **no name, no price anywhere, every job quoted**. On 11-01: the brand and homepage lead with **owners**; the headline is built on the free plan (**"Poof is free. Poof Agent does the books while you sleep."**) with "The work disappears. The evidence doesn't." under it; the human offer stays unnamed; the four leftover public claims are rewritten (terms → "Plans & billing", the five-day close guarantee removed, Product Hunt → 90 days of Poof Agent, the money-back line removed).
+- **Added 24 features: 246 → 270, 22 → 24 groups.** New Group 23 **File your 1099s** (13: Poof files NEC and MISC with the IRS, one signature, no filer code, W-9 board and reminders, last year from the bank, copies mailed, the receipt emailed, per-form prices, the W-9 at the first payment, the monthly line, a bookkeeper's clients on one page, one checkout for every client; app #488, #511, #516–#531). New Group 24 **Free, Poof Agent & a person** (4; app #490, #500, #502, #504, #508, #510, #524). Seven lines added to existing groups: pending at the bank (4, #499), Sign in with Poof for Claude, ChatGPT and Grok (9, #459, #469), Stripe payouts tie out (10, #478, #501), missed-call text-back (11, #497), techs say YES first and text a receipt to Poof (12, #487, #505), cards read as decisions (13, #467, #486).
+- **Claims that became false, corrected:** "one plan, every feature" and "Poof Professional" → Free and Poof Agent; a trial that ended read-only → 30 days of the agent, then Free, nothing locked; "add a company … its own 30-day trial" → the first company a person owns gets the trial (#481); 1099s "not e-filed yet" → Poof files them; "Who uploads your 1099s?" → "Who files", Poof first; the receptionist "not self-serve, price to confirm" → self-serve at $99 with 1,000 minutes, then 12¢ (#479); assistant tools 113/158 → 115/160 (19 on MCP); the managed SLAs and tiers left Key Numbers and Section 14.
+- **Limits added:** Free's allowances and sending limits, the overnight sort leaves a card unless auto-post or a rule was granted, no price ever for the person, 1099 filing's scope (NEC and MISC, after the year, no TIN matching, no state claims), the iPhone app not on the App Store yet.
+- **Competitive:** QuickBooks prices re-checked against third-party pages (unchanged, $38/$85/$140/$340); a *free alternatives* table (Wave, Zoho Books, Balances, SlowBooks), every figure marked to verify before use. Free is compared to Simple Start; Poof Agent to Plus.
+- **Section 14** is now *Trade Contractors*, the audience for `/trades` and outreach, with the managed tiers retired (history below, 08-23 and earlier).
+- **Not claimable yet:** domain scopes, AI apps drafting cards (`MCP_CARD_APPS`), the ChatGPT listing, the iPhone app, AI cost ceilings, nightly backups.
+- **Site:** all of the above in site PR #30 (`brand-pass-owners-first`) (not merged yet). The repo's kit and the site's copy are identical again once it merges.
+- **Fixed in passing:** a duplicated, broken table under *Where the Components Live* in Logo Usage.
 
 ### October 21, 2026 — the AI receptionist is a separate add-on
 
@@ -1328,7 +1345,6 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 - **Not marketed, for the record:** a nightly watchdog now checks every company's books and the
   system each morning and messages the operator only when something is wrong — it is why the
   claims above can stay true, not a customer feature.
-
 
 ### September 17, 2026 — the mark is the dispersing disc
 - **The boxed full stop and the drawn period are retired.** Austin rejected the dot-in-a-box ("just a dot, not creative at all") and two further rounds of period-shaped and pictorial marks, then wrote his own brief: abstract, geometric, the vanish built into the form. Of six geometric directions and six iterations on the disc, he chose **D1, the dispersing disc**: a half disc whose right side breaks into seven particles on clean spokes, and one green particle standing alone at the far edge.

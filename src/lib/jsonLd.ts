@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Software that runs the small-business back office: books, invoicing, cash planning, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 246 features, 14 reports. Poof is free; Poof Agent is $79/mo.',
+    description: 'Free software that runs the small-business back office: books, invoicing, cash planning, 1099 filing, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 270 features, 14 reports. Poof is free; Poof Agent, the AI that does the work, is $79/mo; a bookkeeper who works in Poof is quoted per job.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,13 +35,13 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Bookkeeping that does itself. Poof is free; Poof Agent, the paid plan, categorizes your transactions overnight, reads every receipt, and writes the month-end summary — so you never touch a spreadsheet again. 246 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
+    description: 'Poof is free bookkeeping software. Poof Agent, the paid plan, sorts your transactions overnight, reads every receipt, and writes the month-end summary, with every entry waiting for your OK. 270 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
     url: 'https://www.poofai.com',
     offers: [
       {
         '@type': 'Offer',
         name: 'Free',
-        description: 'The books, invoices, estimates, bills, purchase orders, every report, the close checklist, payroll and 1099 prep, and sales tax, free for good. Includes 25 Ask Poof questions, 25 receipt or document reads, and 2 connected bank accounts a month.',
+        description: 'The books, invoices, estimates, bills, purchase orders, every report, the close checklist, payroll and 1099 prep, and sales tax, free for good. Includes 25 Ask Poof questions, 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team a month.',
         price: '0',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
@@ -62,6 +62,21 @@ export function getSoftwareApplicationSchema() {
         priceValidUntil: '2027-12-31',
         availability: 'https://schema.org/InStock',
         url: 'https://www.poofai.com/pricing'
+      },
+      {
+        '@type': 'Offer',
+        name: '1099 filing',
+        description: 'Poof files 1099-NEC and 1099-MISC with the IRS and sends every contractor their copy. Preparing them is free; the first 3 forms each year are free, then $2.49 a form; $1.79 for each copy Poof mails; emailed copies free.',
+        price: '2.49',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '2.49',
+          priceCurrency: 'USD',
+          unitText: 'form'
+        },
+        availability: 'https://schema.org/InStock',
+        url: 'https://www.poofai.com/1099s'
       }
     ],
     featureList: [
@@ -76,7 +91,7 @@ export function getSoftwareApplicationSchema() {
       'AI Budget & Forecast Generation',
       'Professional Invoicing & Credit Notes',
       'Estimates & Quotes',
-      'Recurring Invoices with Auto-Send',
+      'Recurring Invoices',
       'Automated Invoice Follow-ups',
       'Payment Tracking & Payment Receipts',
       'Products & Services Catalog',
@@ -149,7 +164,9 @@ export function getSoftwareApplicationSchema() {
       'Partial Approval of a Batch',
       'Reject with a Recorded Reason',
       'Standing Rules Derived from Reviewed Work',
-      'Self-Pausing Rules with Mandatory Dollar Limits'
+      'Self-Pausing Rules with Mandatory Dollar Limits',
+      '1099 Filing with the IRS, W-9 Collection and Mailed Copies',
+      'A Bookkeeper Who Works in Poof, Quoted per Job'
     ]
   }
 }

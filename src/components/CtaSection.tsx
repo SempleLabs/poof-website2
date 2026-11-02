@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
-/** The site's closing panel. One sentence, two doors. */
-export default function CtaSection() {
+/** The site's closing panel. One sentence, two doors, and a line for the owner who would rather hand the books
+ *  to a person. Pages written for bookkeepers (`/close`) pass `person={false}`: a firm's clients are its own. */
+export default function CtaSection({ person = true }: { person?: boolean }) {
   return (
     <section className="py-24 bg-ink">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -25,6 +26,12 @@ export default function CtaSection() {
             Book a demo
           </Link>
         </div>
+        {person && (
+          <p className="text-[15px] text-paper/80 mt-6">
+            Rather not do the books at all?{' '}
+            <Link href="/bookkeeper" className="text-ledger-400 font-semibold underline underline-offset-2 hover:text-paper">Ask for a bookkeeper</Link>
+          </p>
+        )}
       </div>
     </section>
   )
