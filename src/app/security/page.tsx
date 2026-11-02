@@ -7,7 +7,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Security — How Poof Protects Your Financial Data | Poof',
-  description: 'Learn how Poof keeps your financial data secure with audit logging, two-factor authentication, role-based access, encrypted bank connections via Plaid, and PII redaction on every AI call.',
+  description: 'Learn how Poof keeps your financial data secure with audit logging, two-factor authentication, role-based access, encrypted bank connections via Plaid, and identifiers like Social Security and card numbers scrubbed from the text of every AI call.',
   keywords: 'bookkeeping security, two-factor authentication, Plaid bank connection, data encryption, RBAC',
   alternates: {
     canonical: 'https://www.poofai.com/security',
@@ -44,7 +44,7 @@ const securityFeatures = [
   },
   {
     title: 'Audit Logs',
-    description: 'Every action in Poof is logged with timestamps and user attribution. Maintain a complete audit trail for accountability and transparency.',
+    description: 'Sign-ins, permission changes and changes to your books are logged with the time and who made them, so you can always see who did what.',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
@@ -98,7 +98,7 @@ const securityFeatures = [
   },
   {
     title: 'AI Privacy Chokepoint',
-    description: 'Every AI call Poof makes runs through one path: personally identifiable information is redacted before anything leaves the process, the call is routed to its configured destination, and the destination, model, redaction count, and token usage are written to the audit trail. It is enforced at a single chokepoint rather than promised feature by feature, it runs for every customer, and there is nothing to configure.',
+    description: 'Every AI call Poof makes runs through one path: identifiers like Social Security, card and bank numbers are scrubbed from the text before anything leaves the process (photos and PDFs go as they are), the call is routed to its configured destination, and the destination, model, redaction count, and token usage are written to the audit trail. It is enforced at a single chokepoint rather than promised feature by feature, it runs for every customer, and there is nothing to configure.',
     icon: (
       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7A2,2 0 0,1 14,9A2,2 0 0,1 12,11A2,2 0 0,1 10,9A2,2 0 0,1 12,7M12,12C13.5,12 16.5,12.75 16.5,14.25V16H7.5V14.25C7.5,12.75 10.5,12 12,12Z"/>
@@ -123,7 +123,7 @@ export default function SecurityPage() {
 
       <PageHero
         title={<>Security at <span className="text-ledger-600">Poof</span></>}
-        subtitle="Your financial data is sensitive. Poof uses industry-standard security practices including encryption, two-factor authentication, audit logging, secure bank connections, and a single privacy chokepoint that redacts personal information out of every AI call."
+        subtitle="Your financial data is sensitive. Poof uses industry-standard security practices including encryption, two-factor authentication, audit logging, secure bank connections, and one checkpoint every AI call passes through, which scrubs identifiers like Social Security and card numbers from the text."
       />
 
       {/* Security Features */}

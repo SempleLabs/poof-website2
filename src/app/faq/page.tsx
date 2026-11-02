@@ -75,7 +75,7 @@ export default function FaqPage() {
 
       <PageHero
         title={<>Frequently Asked <span className="text-ledger-600">Questions</span></>}
-        subtitle="Everything you need to know about Poof's AI-powered bookkeeping platform. Can't find your answer? Reach out to our team."
+        subtitle="Straight answers about Poof: what's free, what Poof Agent does, and what always stays your call. Can't find yours? Ask us."
       />
 
       {/* Category Filter */}

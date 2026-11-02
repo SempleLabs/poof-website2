@@ -56,9 +56,9 @@ export default function Home() {
       {/* What Poof is, in plain words, for people and for answer engines */}
       <section className="max-w-[780px] mx-auto px-4 sm:px-6 pt-16 pb-6" id="what-is-poof">
         <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">What Poof is</p>
-        <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">The back office, run by AI. Signed by you.</h2>
+        <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Free bookkeeping software, with an AI agent you can hire.</h2>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
-          Poof is free software that runs the back office for a small business. It keeps the books, sends the invoices, plans the cash, files the 1099s and closes the month, and for service shops it carries the job from the phone call to the truck and back. Every write an AI proposes waits on a card with the evidence it found, and nothing lands until a person has seen it. Poof Agent, the AI that does the work while you sleep, is $79 a month. When you would rather not do the books at all, a bookkeeper who works in Poof does them, and every job is quoted.
+          Poof keeps the books for a small business: the ledger, invoices and quotes, bills, the cash plan, the 1099s and month-end. The software is free for good. Poof Agent, $79 a month, is the AI that does the work while you sleep, and everything it prepares waits on a card with its evidence until a person says yes. If you&apos;d rather not do the books at all, a bookkeeper who works in Poof will, and every job is quoted.
         </p>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45] mt-3">
           Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the dispatch board and the technician&apos;s field link to the same account, free, and the AI receptionist as an add-on at $99 a month.

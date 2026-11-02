@@ -81,11 +81,11 @@ export default function PricingPage() {
     },
     {
       question: 'Is my financial data secure?',
-      answer: 'Yes. All data is encrypted in transit via HTTPS/TLS. Bank connections are read-only through Plaid — we never see or store your credentials. Two-factor authentication, role-based permissions, and automatic session timeouts keep your account locked down.'
+      answer: 'Yes. Bank connections through Plaid are read-only, and Poof never sees or stores your bank password. Bank and tax details are stored encrypted, everything travels over HTTPS, and two-step sign-in, six roles and automatic session timeouts keep the account locked down.'
     },
     {
       question: 'Can my accountant access my books?',
-      answer: 'Yes! You can invite your accountant or bookkeeper to access your books with read-only or full permissions. They can review, make adjustments, and export reports as needed.'
+      answer: 'Yes. Invite your accountant or bookkeeper with the role that fits, from view-only to full access. They review, adjust and export reports in your own books, and every change they make is recorded with their name.'
     },
     {
       question: 'What if I need to cancel Poof Agent?',
@@ -101,7 +101,7 @@ export default function PricingPage() {
     },
     {
       question: 'Do you integrate with my existing tools?',
-      answer: 'Yes. Poof integrates with most banks, credit cards, and popular business tools. We\'re constantly adding new integrations based on customer requests.'
+      answer: 'Poof connects to more than 12,000 banks and card issuers through Plaid, takes card and bank payments on your invoices through Stripe, imports QuickBooks, Housecall Pro and Jobber export files, reads your payroll provider’s reports, and works from Telegram, Slack, Claude, ChatGPT and Grok.'
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
@@ -109,7 +109,7 @@ export default function PricingPage() {
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
-      answer: 'Many small businesses use Poof to handle their day-to-day bookkeeping without hiring a bookkeeper. Poof Agent sorts transactions, reads receipts, and writes the month-end summary, and every report builds itself. If you would rather a person did it, ask for a bookkeeper who works in Poof. For tax preparation, you can invite your accountant to collaborate directly inside Poof.'
+      answer: 'Not for the day-to-day. Poof Agent sorts transactions, reads receipts, and writes the month-end summary, and every report builds itself. If you would rather a person did it, ask for a bookkeeper who works in Poof. For tax preparation, you can invite your accountant to collaborate directly inside Poof.'
     }
   ]
 
@@ -375,7 +375,7 @@ export default function PricingPage() {
                     <path d="M19 5v14H5V5h14m1.1-2H3.9c-.5 0-.9.4-.9.9v16.2c0 .4.4.9.9.9h16.2c.4 0 .9-.5.9-.9V3.9c0-.5-.5-.9-.9-.9zM11 7h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6v-2zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2z"/>
                   </svg>
                 ),
-                title: 'Always-Clean Books',
+                title: 'Books that stay clean',
                 description: 'Poof Agent sorts your transactions overnight and reads every receipt, and your own rules keep sorting on Free. No manual data entry. No weekend catch-up sessions.'
               },
               {
@@ -384,7 +384,7 @@ export default function PricingPage() {
                     <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z"/>
                   </svg>
                 ),
-                title: 'Set Up in 5 Minutes',
+                title: 'Set up in five minutes',
                 description: 'Connect your bank, and Poof starts organizing your books immediately. No chart of accounts to build, no accountant required to get started.'
               },
               {
@@ -420,7 +420,7 @@ export default function PricingPage() {
                 Questions owners ask
               </h2>
               <p className="text-xl text-slate-600">
-                Everything you need to know about Poof pricing and features.
+                What it costs, what you get, and what happens after the 30 days.
               </p>
             </div>
           </AnimateOnScroll>

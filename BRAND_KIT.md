@@ -15,7 +15,7 @@
 > - **Retired, never write again:** "one plan, every feature", "no tiers", "Poof Professional", the $39.50 launch special, the 30-day money-back guarantee, "Start free trial" (it is **Start free**), a trial that ends read-only, the five-day close guarantee, and the managed tiers ($750 audit, $1,200, $1,500, $2,400) as public prices.
 > - **270 features in 24 groups** (246 in 22 on 10-21). New: **File your 1099s** (Group 23, 13) and **Free, Poof Agent & a person** (Group 24, 4), plus seven lines across Groups 4, 9–13. See the [changelog](#changelog).
 >
-> **Austin's background is three years as an auditor, then seven as a controller** (ten in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
+> **Austin's background is two years as an auditor, then seven as a controller** (nine in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
 
 > **History, not instruction.** On 2026-09-12 Poof and the managed service were split into two businesses (`TWO_BUSINESSES.md`), and from 10-06 the site sold the software only. **On 2026-10-30 Austin brought bookkeeping by a person back inside Poof**: no name, no price, every job quoted, the work done under the services LLC. Where older sections below say "the managed service" or "The Augmented Operator", read it as that history.
 > Restaurants/multi-unit were deprioritized, and the restaurant reports and tools were **removed from the product** in October 2026 (app PR #350). Do not mention them anywhere.
@@ -27,12 +27,12 @@
 **Read this before writing any copy.** Re-check the page before acting on a line here — this
 table has carried already-fixed rows before, and a stale list repeated back reads as urgency.
 
-Everything in this table is built in site PR #30 (`brand-pass-owners-first`), **not merged yet** (Austin merges site PRs).
+Everything in this table was fixed by site PR #30 (merged 2026-11-01). Site PR #31 (2026-11-02) removed retired code and the SOC 2 / "bank-grade" wording, and the 2026-11-02 copy pass rewrote the homepage hero (the real inbox beside the headline), `/trades` (about 40% shorter), `/about`, and the close counts (19 tasks, 15 proven by the books). Kept as history; check the page before reopening a row.
 
 | Where | What's wrong now | Should be |
 |---|---|---|
 | Homepage | Hero "Last night, Poof ran the back office."; a black banner and a `#guarantee` section promising a close in five business days or the next month free | Hero **"Poof is free. Poof Agent does the books while you sleep."**, the brand sentence under it, the three ways (free, the agent, a person), audience links under the buttons; the guarantee gone |
-| `/close`, `/trades`, `TradesShow`, `featureData` FAQs, `HomeFaqShort`, llms.txt, 14 blog footers, `mercury-books-vs-poof` | The five-day close guarantee | Removed. The close is still a 17-task checklist with due dates; nothing is promised about a day |
+| `/close`, `/trades`, `TradesShow`, `featureData` FAQs, `HomeFaqShort`, llms.txt, 14 blog footers, `mercury-books-vs-poof` | The five-day close guarantee | Removed. The close is still a checklist with due dates (19 tasks since October); nothing is promised about a day |
 | Nowhere | No way to ask for a person | `/bookkeeper`: "Want a person to do your books?", no price, quoted, a reply usually within a business day; on the homepage, `/pricing`, `/trades` and llms.txt |
 | `BackOfficeSection`, `/taxes`, `featureData` (1099s group, Taxes note), llms.txt, `1099-threshold-2026`, `what-your-cpa-needs-at-year-end` | "A summary your filer enters in the IRS's IRIS portal"; "you, your bookkeeper or your CPA file" for 1099s | **Poof files them**: one signature, no filer code, copies emailed or mailed, the IRS receipt back. A `/1099s` page with the prices. Income taxes stay "Poof prepares and reminds" |
 | `/pricing` | No 1099 prices; no person; "The iPhone app" listed under Free (it is not on the App Store — lookup by bundle id empty on 11-01); "posts the ones it's sure of" stated as default | 1099 prices; a third block for a person (no price); the iPhone app removed until it is released; the overnight sort leaves a card unless the owner turned on auto-post |
@@ -224,7 +224,7 @@ Always lead with what changes in the customer's life, not what the product does.
 ### Brand Values
 1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule is approved by an owner or admin as a card, whether Poof offered it from reviewed work or someone asked for it in a sentence ([Group 13](#13-approvals--ai-autonomy-15-features))
 2. **Small Business First** — Every decision optimized for 1–50 employee businesses
-3. **Trust & Security** — Bank-grade security, SOC 2 audit logging, 2FA, RBAC
+3. **Trust & Security** — Bank and tax data encrypted, two-step sign-in, an audit log with personal details masked, and six roles that decide who sees what
 4. **One figure** — The reconciliation ties; the close is a record. When the number on the screen and the number in the record are the same number, the month is done
 5. **Free means free** — The software never locks and never holds a feature back. What costs money is work done: the agent's, or a person's
 
@@ -500,6 +500,7 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 - **Never put a price on the human bookkeeping** — no figure, range, "from", "starting at", or "less than a bookkeeper costs".
 - Don't say Poof Agent posts, closes, files or pays on its own. It prepares; a person approves, or a rule or auto-post the owner turned on does exactly what it was granted.
 - Don't use accounting jargon without explaining it.
+- **Don't say SOC 2, "bank-grade", "airtight" or "never leaves".** Poof has no SOC 2 report; name what it does instead — encrypted bank and tax data, two-step sign-in, an audit log, roles.
 
 ---
 
@@ -597,14 +598,14 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 
 #### 7. Team & Security (11 features)
 1. Team management — 6 roles: Owner / Admin / Accountant / Bookkeeper / Office manager / Viewer
-2. Two-factor authentication (TOTP with QR code setup and 8 backup codes)
-3. Audit logs (SOC 2 compliant, PII masking)
+2. Two-factor authentication (TOTP with QR code setup and 8 backup codes; five wrong codes and it waits)
+3. Audit logs (PII masking)
 4. Session management (30-minute timeout, active session viewer)
 5. GDPR/CCPA-compliant account deletion
 6. Email verification
 7. Role-based permissions (RBAC) — 46 granular permissions
 8. Bot-abuse gate on registration — Cloudflare Turnstile challenge on public sign-up, stopping scraped-address subscription bombing
-9. AI privacy chokepoint ("Gateway") — every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail
+9. AI privacy chokepoint ("Gateway") — every model call goes through one place: the text is scrubbed of identifiers like Social Security, card and bank numbers before it leaves, and every call is logged with destination, model, redaction count, and token usage for the audit trail (photos and PDFs go as they are)
 10. **Office manager role** — invoices, quotes, customers, dispatch and hours, but no books; they land on the Board, and Ask Poof, the chat apps and Approvals follow the role
 11. **Add a company from the company menu** — you own it; the first company a person owns gets 30 days of Poof Agent, and later ones start on Free (app #481)
 
@@ -661,7 +662,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 16. Customer deposits released on completion — a down payment on an install is held as a liability, not booked as revenue on the day it lands, and released to that job's revenue when the job is done. The release previews first, refuses a deposit that isn't categorised as a deposit, and warns if the job was also invoiced
 17. Maintenance plans earn as visits are performed — a prepaid plan sale is deferred and each performed visit earns its share to the penny, **automatically when the tech completes a maintenance visit** (a repair call on a plan customer does not count; two open plans on one customer is left for the office to pick). Cancelling is a recorded decision — refund or forfeit — never a silent write-off, and a visit that was both released and invoiced is flagged at month-end close
 18. **The close is a record** — each month's close is one object: who started it and when, where it stands (not started / in progress / ready / signed / reopened — derived from the books, never typed), and what it took. Locking the period is the signature; at that moment the close captures its activity — transactions reviewed, entries posted, decisions made by a person and by a rule, corrections, hours from start to signature — and a price and tier per close, so a practice can say "August: signed Sep 5, $1,500, 60 hours" instead of guessing. Reopening keeps the signature on record
-19. **A checklist with due dates that the books tick off themselves** — a template per organization (the trades default is 17 tasks: feeds reviewed by day 2, bank reconciled and draft entries posted by day 3, staged materials relieved and deposits released by day 3, accruals, A/R, A/P, plan visits, job costs and categories tied by day 4, vendor bills cut off and the tie-out clean by day 5, narrative reviewed day 6, signed day 7, package sent day 8 — business days after month end). Thirteen of the tasks are **evidence-bound**: they complete themselves when the books prove them and cannot be ticked by hand; each open one says why in a sentence ("2 completed jobs still hold $1,500 of customer deposits") and links to the screen that fixes it. Manual tasks are a person's tick, recorded with who and when. Every close stamps its own copy of the list, so a later template edit does not rewrite history
+19. **A checklist with due dates that the books tick off themselves** — a template per organization (the trades default is 19 monthly tasks: feeds reviewed by day 2, bank reconciled and draft entries posted by day 3, staged materials relieved and deposits released by day 3, accruals, A/R, A/P, plan visits, job costs and categories tied by day 4, vendor bills cut off and the tie-out clean by day 5, narrative reviewed day 6, signed day 7, package sent day 8 — business days after month end). Fifteen of the tasks are **evidence-bound**: they complete themselves when the books prove them and cannot be ticked by hand; each open one says why in a sentence ("2 completed jobs still hold $1,500 of customer deposits") and links to the screen that fixes it. Manual tasks are a person's tick, recorded with who and when. Every close stamps its own copy of the list, so a later template edit does not rewrite history
 20. **The nudge** — a task past its due date on an open close is an insight, a card in Approvals (with a one-tap "mark done" for a manual task), and **one message per close per day** on the channels the shop subscribed to — Telegram, SMS, Slack, email — naming every task late on it. The sweep re-reads the books before it decides what is late, so it never nags about a bank account reconciled that afternoon
 21. **Quoted vs actual on every job** — revenue, equipment, materials, labor, subs, gross profit and margin, quoted against actual, with an "over quote" card and how much cost isn't tagged to any job
 22. **The books reviewer** — books that balance but look wrong: a merchant filed somewhere unusual, an owner's draw booked as an expense, fuel, rent or insurance booked as office supplies, a monthly bill that stopped. A finding with one clear fix is a one-tap card
@@ -754,7 +755,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 1. **Books → 1099s** — every contractor's year so far, by how they were paid, against the year's legal threshold ($2,000 for 2026)
 2. **Every payment has a payee** — "who is this?" cards link unknown bank payees and checks to vendors
 3. **W-9s by link** — the vendor fills it in online; a filled-in W-9 PDF fills the vendor record, read inside Poof
-4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit
+4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit; the signed W-9 itself, which carries the whole number, opens for an owner or admin only
 5. **Prepare the year** — each contractor's copy (emailed to those who consented; mailed by Poof, or printed, for the rest) and a summary PDF for the CPA
 6. **Mark filed or rejected** — the IRS receipt ID, or its reason; a change after filing is flagged as a correction
 7. **"Who files your 1099s?"** — **Poof files them** first; your bookkeeper, your CPA or you under "Other ways", with the filer-code checklist and the checks the IRS rejects a file for; reminders from October 1 to the due date, never mentioning a filer code
@@ -885,7 +886,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 | A person to do your books | A reply usually within a business day; quoted per job; no price shown |
 | Cash flow forecast horizon | 12 months with confidence bands |
 | Receptionist notification channels | 6 (SMS, email, push, Slack, Telegram, webhook) |
-| Close checklist (trades default) | 17 tasks, 13 evidence-bound, signed on business day 7 |
+| Close checklist (trades default) | 19 tasks, 15 evidence-bound, signed on business day 7 |
 | Producer cards wait | 30 days (a chat draft: 24 hours) |
 
 The old managed-service SLAs (a close by the 15th business day, jobs costed in 5, a reply in 1) left this table with the published tiers. A quote may promise its own terms; the site states none.
@@ -1004,7 +1005,7 @@ Free bookkeeping software exists; Poof is not the first. The contrast is scope a
 ## Founder
 
 **Austin Semple** — CEO & Founder
-- Three years as an auditor, then seven as a controller (ten in total; always state the split)
+- Two years as an auditor, then seven as a controller (nine in total; always state the split)
 - Built Poof to solve the bookkeeping pain points he witnessed firsthand working with small businesses
 
 ### Company Timeline
@@ -1100,7 +1101,7 @@ If you need the wordmark as an image — a slide, a print piece — render it fr
 > **⭐ What this section is (2026-11-01).** Trade shops are Poof's first vertical: the `/trades` page sells them the free software, Poof Agent and the receptionist add-on, and — since 2026-10-30 — a person to do the books, quoted, with no price on the page. Austin's own outreach to shops uses the same voice. The published managed tiers (the $750 audit, $1,200, $1,500, $2,400, the $1,500 onboarding) and the name "Poof Managed for Trades" are **retired**; jobs are quoted one at a time, and quoting is Austin's, never the site's. The old tier table is in the changelog as history.
 
 ### Why This Vertical
-Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's three years in audit and seven as a controller translate directly — these owners trust accounting credentials over "AI startup" pitches.
+Independent service contractors are Poof's first vertical focus because they (1) answer cold outreach, (2) have 15–25% net margins, (3) universally hate the gap between Jobber/HCP and QBO, and (4) talk to each other at supply houses and trade associations. Austin's two years in audit and seven as a controller translate directly — these owners trust accounting credentials over "AI startup" pitches.
 
 ### Target Customer
 - **Business type:** Residential HVAC service contractors (primary), plumbing service contractors, electrical service contractors
@@ -1187,7 +1188,7 @@ The Poof brand voice ("on the record": direct, specific, the evidence not the as
 8. **1099s filed by Poof**, with the W-9 collected at the sub's first payment
 
 ### Trust & Social Proof Elements
-- **Lead with Austin's credentials:** "Built by Austin Semple: three years as an auditor, then seven as a controller."
+- **Lead with Austin's credentials:** "Built by Austin Semple: two years as an auditor, then seven as a controller."
 - **Anchor on accounting rigor:** "Real double-entry bookkeeping with reversal entries — not just AI guessing categories"
 - **Emphasize the human check:** "Nothing reaches your books without you seeing it first."
 - **No guarantees** — the money-back and five-day close guarantees are retired

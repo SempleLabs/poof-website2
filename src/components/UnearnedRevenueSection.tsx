@@ -10,7 +10,7 @@ const ledgers: { title: string; rows: LedgerRow[]; body: string }[] = [
       { when: 'Deposit clears', amount: '$4,000', account: 'Customer deposits · liability', earned: false },
       { when: 'Install completed', amount: '$4,000', account: 'Install revenue · on that job’s P&L', earned: true },
     ],
-    body: 'A down payment is held as a liability from the day it lands, not booked as income. When the job is done it is released to that job’s revenue — so the install’s margin is right, and the month you took the deposit was never inflated by money you had not earned. The release previews before it posts, refuses to release money that was never categorized as a deposit, and warns you if the job was also invoiced.',
+    body: 'A down payment is held as money you owe the customer until the job is done, not counted as income the day it lands. When the install is finished, it moves to that job’s revenue. So the job’s margin is right, and the month you took the deposit doesn’t look better than it was. You see the move before it posts.',
   },
   {
     title: 'The prepaid maintenance plan',
@@ -19,7 +19,7 @@ const ledgers: { title: string; rows: LedgerRow[]; body: string }[] = [
       { when: 'Spring tune-up completed', amount: '$180', account: 'Plan revenue · earned', earned: true },
       { when: 'Fall tune-up completed', amount: '$180', account: 'Plan revenue · earned', earned: true },
     ],
-    body: 'A prepaid plan is deferred when it is sold. Each maintenance visit earns its share to the penny — automatically, the moment the tech taps Complete. A repair call on a plan customer does not count against the plan, and if a customer somehow has two open plans, your office picks which one the visit belongs to. The software does not guess.',
+    body: 'A prepaid plan is held when it’s sold, and each maintenance visit earns its share the moment the tech taps Complete. A repair call for a plan customer doesn’t count against the plan, and when it’s unclear which plan a visit belongs to, your office decides. The software doesn’t guess.',
   },
 ]
 
@@ -37,8 +37,8 @@ export default function UnearnedRevenueSection() {
               <span className="text-ledger-600">A plan isn&apos;t revenue until the visit happens.</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Your bank feed says the money arrived. A controller says it isn&apos;t yours yet. Poof books it the
-              way a controller would, and moves it to earned revenue the day the work is actually done.
+              Your bank says the money arrived. It isn&apos;t yours until the work is done. Poof books it that way,
+              and counts it as revenue the day the job or the visit is finished.
             </p>
           </div>
         </AnimateOnScroll>
@@ -76,18 +76,17 @@ export default function UnearnedRevenueSection() {
           <div className="rounded-xl bg-slate-900 p-6 sm:p-8 text-white">
             <h3 className="font-semibold text-lg mb-2">Cancellation is a decision, not a write-off</h3>
             <p className="text-slate-300 leading-relaxed">
-              When a plan customer leaves, your office records whether the unearned balance was refunded or
-              forfeited, and the books show which. Poof deliberately does not decide that for you. Nobody should
-              find out in March that prepaid money quietly disappeared in November.
+              When a plan customer leaves, your office records whether what&apos;s left was refunded or kept, and the
+              books show which. Poof doesn&apos;t decide that for you. Nobody should find out in March that prepaid
+              money quietly disappeared in November.
             </p>
           </div>
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-in">
           <p className="text-xs text-slate-500 mt-6 text-center max-w-3xl mx-auto leading-relaxed">
-            Illustrative amounts. Built for prepaid plans &mdash; the annual agreement a customer pays for up front.
-            A visit that was both released against a plan and invoiced on its own is flagged at month-end close, so
-            it is caught before the books are signed.
+            Illustrative amounts. A visit that was counted against a plan and also invoiced is flagged at month-end,
+            before the books are signed.
           </p>
         </AnimateOnScroll>
       </div>

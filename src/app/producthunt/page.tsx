@@ -133,7 +133,7 @@ export default function ProductHuntPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <p className="text-slate-600 leading-relaxed mb-6">
-              Poof is built by Austin Semple, a former controller: three years in audit, seven running the books for small businesses. The AI underneath is held to the standard that work was held to — every write staged with its evidence, nothing landing in the ledger unseen.
+              Poof is built by Austin Semple, a former controller: two years in audit, seven running the books for small businesses. The AI underneath is held to the standard that work was held to — every write staged with its evidence, nothing landing in the ledger unseen.
             </p>
             <p className="text-sm text-slate-500">
               Run a service shop?{' '}

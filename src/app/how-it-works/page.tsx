@@ -30,7 +30,7 @@ const steps = [
     n: '01',
     title: 'Connect the feeds',
     when: 'Five minutes, once',
-    body: 'Link your bank and card accounts through Plaid, or import statements as CSV or PDF for anything older than the 30-day sync window. Forward receipts and bills to your Poof address, or snap them on a phone. Bring your Jobber or Housecall Pro export if you run a shop.',
+    body: 'Link your bank and card accounts through Plaid, or import statements as CSV or PDF for anything older than the 90 days the first connection brings in. Forward receipts and bills to your Poof address, or snap them on a phone. Bring your Jobber or Housecall Pro export if you run a shop.',
     detail: 'Bank access is read-only. Poof can see transactions; it cannot move money.',
   },
   {
@@ -51,7 +51,7 @@ const steps = [
     n: '04',
     title: 'The month closes as a record',
     when: 'Business days one to seven',
-    body: 'The close is a checklist with due dates. Thirteen of the seventeen tasks tick themselves when the books prove them: feeds reviewed, bank reconciled to one figure, deposits released on completed jobs, job costs tied to payroll. The rest are a person’s tick, recorded with who and when. Locking the period is the signature, and the package goes out after it.',
+    body: 'The close is a checklist with due dates. Fifteen of the nineteen tasks tick themselves when the books prove them: feeds reviewed, bank reconciled to one figure, deposits released on completed jobs, job costs tied to payroll. The rest are a person’s tick, recorded with who and when. Locking the period is the signature, and the package goes out after it.',
     detail: 'The reconciliation carries last month’s outstanding items forward and shows one unexplained difference. It ties or it doesn’t.',
   },
 ]
@@ -80,7 +80,7 @@ const howItWorksFaqs = [
   },
   {
     question: 'Can I import my existing bookkeeping data?',
-    answer: 'Yes. Poof imports from QuickBooks, Xero, and CSV files: the chart of accounts, transactions, customers and vendors, and invoices. Upload CSV or PDF bank statements for anything older than the 30-day Plaid sync window.',
+    answer: 'Yes. Poof imports from QuickBooks, Xero, and CSV files: the chart of accounts, transactions, customers and vendors, and invoices. Upload CSV or PDF bank statements for anything older than the 90 days the first bank connection brings in.',
   },
   {
     question: 'How does the reconciliation work?',
@@ -103,7 +103,7 @@ export default function HowItWorksPage() {
 
       <PageHero
         title={<>Connect. Propose. Approve. <span className="text-ledger-600">Sign.</span></>}
-        subtitle="The plain-words version of the homepage. Four steps, and the AI never takes the third one."
+        subtitle="The plain-words version of the homepage. Four steps, and the third one is yours unless you hand it a rule."
       >
         <p className="text-sm text-muted mt-6">
           Prefer to press the buttons? <Link href="/" className="text-ledger-600 font-semibold hover:text-ledger-700">The homepage is a working demo</Link>.

@@ -32,7 +32,7 @@ export default function Footer() {
 
       if (response.ok) {
         setStatus('success')
-        setMessage('Thanks for subscribing!')
+        setMessage('Thanks for subscribing.')
         setEmail('')
       } else {
         setStatus('error')
@@ -47,8 +47,8 @@ export default function Footer() {
   const col = 'font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink mb-4'
   const link = 'text-muted hover:text-ledger-700 transition-colors'
   const columns: { title: string; links: [string, string][] }[] = [
-    { title: 'Product', links: [['/close', 'The close'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/trades', 'Poof for shops'], ['/features', 'Features'], ['/ai', 'Claude, ChatGPT & Grok'], ['/pricing', 'Pricing'], ['/1099s', 'File your 1099s'], ['/bookkeeper', 'A person to do your books'], ['/how-it-works', 'How it Works'], ['/demo', 'Book a demo']] },
-    { title: 'Resources', links: [['/resources', 'Guides & Templates'], ['/blog', 'Blog'], ['/poof-vs-quickbooks', 'Poof vs QuickBooks'], ['/faq', 'FAQ'], ['/security', 'Security']] },
+    { title: 'Product', links: [['/how-it-works', 'How it works'], ['/pricing', 'Pricing'], ['/features', 'Features'], ['/trades', 'Poof for shops'], ['/1099s', 'File your 1099s'], ['/bookkeeper', 'A person to do your books'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/close', 'For bookkeepers: the close'], ['/ai', 'Claude, ChatGPT & Grok'], ['/demo', 'Book a demo']] },
+    { title: 'Resources', links: [['/resources', 'Guides & templates'], ['/blog', 'Blog'], ['/poof-vs-quickbooks', 'Poof vs QuickBooks'], ['/faq', 'FAQ'], ['/security', 'Security']] },
     { title: 'Company', links: [['/about', 'About'], ['/contact', 'Contact'], ['/support', 'Support'], ['/privacy', 'Privacy Policy'], ['/terms', 'Terms of Service']] },
   ]
 
@@ -59,7 +59,7 @@ export default function Footer() {
           {/* brand + newsletter */}
           <div className="col-span-2 lg:col-span-1 max-w-[380px]">
             <PoofWordmark size={26} href={null} />
-            <p className="text-muted mt-4">The back office, run by AI. Signed by you.</p>
+            <p className="text-muted mt-4">The work disappears. The evidence doesn&apos;t.</p>
 
             <form onSubmit={handleSubmit} className="mt-6" aria-labelledby="footer-newsletter">
               <p id="footer-newsletter" className="text-sm font-semibold text-ink mb-2">Bookkeeping and tax notes from a former controller</p>

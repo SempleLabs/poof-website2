@@ -349,11 +349,11 @@ export default function TradesShow() {
 
           <div className="mb-[26px] flex flex-wrap items-center gap-x-[22px] gap-y-3.5 border border-rule bg-white px-[18px] py-3.5">
             <div className="font-display text-3xl font-extrabold tracking-[-0.04em]">
-              (512) 555-<span className="text-ledger-600">0142</span>
+              <a href="tel:+14342254011" className="hover:text-ledger-700">(434) 225-<span className="text-ledger-600">4011</span></a>
             </div>
             <div className="max-w-[44ch] text-[13.5px] text-muted">
-              The demo shop&apos;s line. In your shop it&apos;s your own number, and Poof&apos;s receptionist answers
-              it after hours. Here, the call is scripted.
+              Live: the demo shop&apos;s real line. Call it, and Poof&apos;s receptionist answers as the shop and books
+              you a visit. Below, the same call is scripted, so you can follow the job to the P&amp;L.
             </div>
           </div>
 
@@ -424,7 +424,7 @@ export default function TradesShow() {
 
           <div className={guardCls}>
             <b className={strong}>What it does not do.</b> No payment on the call, no cloned voice, no outbound
-            sales calls. Installed by Poof as part of the service, not a switch the owner flips.
+            sales calls. You turn it on yourself in Settings → Receptionist.
           </div>
         </section>
 
@@ -553,7 +553,7 @@ export default function TradesShow() {
                 className="block h-auto w-full border border-rule"
               />
               <figcaption className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.06em] text-muted">
-                Screen composited from the real job page before launch.
+                The tech&apos;s job page, on their phone.
               </figcaption>
             </figure>
             <div className="max-w-[420px] rounded-xl bg-ink px-4 py-3.5 text-[14.5px] text-paper">
@@ -866,20 +866,16 @@ export default function TradesShow() {
           <p className={eyebrow}>Who signs the close</p>
           <h2 className={h2Cls}>Built by someone who closed books for a living first.</h2>
           <div className="mt-7 grid grid-cols-1 items-center gap-[22px] border border-rule bg-white px-6 py-[22px] sm:grid-cols-[180px_1fr]">
-            {/* Photo slot: the real photograph does not exist yet. */}
-            <div className="flex aspect-square w-full max-w-[220px] flex-col justify-end gap-1.5 border border-rule bg-paper-2 p-3.5 sm:max-w-none">
-              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-ledger-600">
-                Real photograph · Austin Semple
-              </span>
-              <span className="text-sm text-muted">At a shop, not a desk.</span>
+            <div className="relative aspect-square w-full max-w-[220px] overflow-hidden border border-rule bg-paper-2 sm:max-w-none">
+              <Image src="/team/austin-semple.jpg" alt="Austin Semple" fill sizes="220px" className="object-cover object-center" />
             </div>
             <div>
               <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, former controller</h3>
               <p className="m-0 max-w-[52ch] text-[15px] text-muted">
-                Three years as an auditor, then seven as a controller for small businesses, then Poof. The
-                receptionist escalates on rules rather than a prompt, the close runs on evidence rather than
-                checkboxes, and nothing reaches your books unseen — because that is how the work is supposed to
-                go.
+                Two years as an auditor, then seven as a controller for small businesses, then Poof. A gas
+                smell goes to a person because a rule says so, not because a model guessed. Month-end runs on
+                evidence, not checkboxes. And nothing reaches your books unseen, because that is how the work is
+                supposed to go.
               </p>
             </div>
           </div>
@@ -989,7 +985,7 @@ export default function TradesShow() {
 
           <div className="mt-[26px] flex flex-wrap items-center gap-2.5">
             <span className="w-full text-[13.5px] text-muted">
-              This is the other show&apos;s headline: know which jobs make money. The two meet here.
+              One call, five steps, zero retyping, and you know what the job made.
             </span>
             <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free</a>
             <a href="#pricing" className={`${btn} ${ghost}`}>
