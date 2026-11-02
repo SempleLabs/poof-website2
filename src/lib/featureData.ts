@@ -1291,7 +1291,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Three differences. Price: Poof is free for good, while QuickBooks has no free plan and runs $38 to $340 a month depending on the features you need. The work: QuickBooks gives you tools to do the books; Poof Agent, $79 a month, does them overnight and puts the evidence on every entry for your OK. And a person: a bookkeeper who works in Poof can do the books in the same place, with no shared login to hand over. Poof also runs month-end on a checklist the books tick off themselves, keeps per-job profit, and files your 1099s. Moving over takes your QuickBooks export files; see Poof vs QuickBooks for the full comparison.",
+    answer: "Three differences. Price: Poof is free for good, while QuickBooks Free stops at 2 invoices a month and one bank account, and the paid plans run $38 to $340 a month depending on the features you need. The work: QuickBooks gives you tools to do the books; Poof Agent, $79 a month, does them overnight and puts the evidence on every entry for your OK. And a person: a bookkeeper who works in Poof can do the books in the same place, with no shared login to hand over. Poof also runs month-end on a checklist the books tick off themselves, keeps per-job profit, and files your 1099s. Moving over takes your QuickBooks export files; see Poof vs QuickBooks for the full comparison.",
     category: "Pricing & Plans"
   },
   {
@@ -1331,12 +1331,12 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the best bookkeeping app for freelancers?",
-    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 14 financial reports including P&L and cash flow statements. Poof is free, and Poof Agent, the AI that does the work, is $79/mo — while QuickBooks has no free plan and locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
+    answer: "For freelancers, the best bookkeeping app is one that automates the tedious work and doesn't require accounting knowledge. Poof is built specifically for solo founders and freelancers — AI categorizes your transactions automatically, sends recurring invoices on autopilot, scans receipts from your phone, and generates 14 financial reports including P&L and cash flow statements. Poof is free, and Poof Agent, the AI that does the work, is $79/mo — while QuickBooks Free stops at 2 invoices a month, and QuickBooks locks project profitability, budgets, and comprehensive reporting behind its $140/mo Plus plan.",
     category: "General"
   },
   {
     question: "Do I need QuickBooks for my small business?",
-    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks starts at $38/mo with tiered pricing that locks features behind its $85/mo Essentials and $140/mo Plus plans (Intuit raised prices on August 1, 2026). Alternatives like Poof are free, with AI-powered automation (transaction categorization, receipt scanning, recurring charge detection) in Poof Agent at $79/mo. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler.",
+    answer: "No. QuickBooks is the default choice, but it's not the only option — and it's often more complex and expensive than small businesses need. QuickBooks Free stops at 2 invoices a month, and the paid plans start at $38/mo with tiered pricing that locks features behind its $85/mo Essentials and $140/mo Plus plans (Intuit raised prices on August 1, 2026). Alternatives like Poof are free, with AI-powered automation (transaction categorization, receipt scanning, recurring charge detection) in Poof Agent at $79/mo. If you've tried QuickBooks and found it overwhelming, Poof is designed to be simpler.",
     category: "Pricing & Plans"
   },
   {
@@ -1351,7 +1351,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What's the cheapest QuickBooks alternative?",
-    answer: "If price alone is the criterion, Poof is free, and QuickBooks has no free plan. But the honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is free, every report included, and Poof Agent, the AI that does the work, is $79/mo — 44% less than Plus — with an approvals inbox where every AI change waits for a person. Poof Agent is free for the first 30 days, with no credit card required.",
+    answer: "If price alone is the criterion, Poof is free. So is QuickBooks Free, but it stops at 2 invoices a month, one bank account and 3 reports. The honest comparison is feature-for-feature. As of August 2026, QuickBooks charges $38/mo for Simple Start, $85/mo for Essentials, $140/mo for Plus, and $340/mo for Advanced — and Plus is the tier you need for project profitability and budgets. Poof is free, every report included, and Poof Agent, the AI that does the work, is $79/mo — 44% less than Plus — with an approvals inbox where every AI change waits for a person. Poof Agent is free for the first 30 days, with no credit card required.",
     category: "Pricing & Plans"
   },
   {

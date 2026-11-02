@@ -93,7 +93,7 @@ export default function PricingPage() {
     },
     {
       question: 'How does Poof compare to QuickBooks?',
-      answer: 'QuickBooks has no free plan: Simple Start is $38/mo, Essentials $85/mo, and Plus $140/mo, the tier that carries job costing, budgets, and comprehensive reports. Poof is free, with the books, invoices, bills, every report, the close checklist, payroll and 1099 prep, and sales tax included. Poof Agent, the AI that sorts your transactions and reads your receipts, is $79/mo, 44% less than Plus, and every change it proposes waits on an approval card for a person. (QuickBooks pricing verified August 2026.)'
+      answer: 'QuickBooks Free is $0, but it stops at 1 user, 2 invoices a month, one bank account and 3 reports, with no accountant access. The paid plans are Simple Start at $38/mo, Essentials $85/mo, and Plus $140/mo, the tier that carries job costing, budgets, and comprehensive reports. Poof is free, with the books, invoices, bills, every report, the close checklist, payroll and 1099 prep, and sales tax included. Poof Agent, the AI that sorts your transactions and reads your receipts, is $79/mo, 44% less than Plus, and every change it proposes waits on an approval card for a person. (QuickBooks paid pricing verified August 2026; QuickBooks Free checked November 2026.)'
     },
     {
       question: 'What reports can I generate?',
@@ -105,7 +105,7 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses runs from free to $140/month depending on features and tier. As of August 2026, QuickBooks has no free plan: it starts at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140, and Plus is the tier you need for job costing and budgets. Poof is free, every report included. Poof Agent, the AI that does the work, is $79/month or $790/year.'
+      answer: 'Bookkeeping software for small businesses runs from free to $140/month depending on features and tier. QuickBooks has a free plan limited to 2 invoices a month and one bank account; its paid plans start at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140, and Plus is the tier you need for job costing and budgets. Poof is free, every report included. Poof Agent, the AI that does the work, is $79/month or $790/year.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',

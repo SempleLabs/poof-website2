@@ -66,17 +66,17 @@ const topics: { title: string; blurb: string; slugs: string[] }[] = [
   {
     title: '1099s',
     blurb: 'The new $2,000 line, getting every W-9 in, and filing without an IRS filer code.',
-    slugs: ['file-1099s-online-2026', '1099-threshold-2026', 'who-gets-a-1099', '1099-nec-vs-1099-misc', 'collect-w9-from-contractors', 'late-or-corrected-1099', 'file-1099s-for-clients'],
+    slugs: ['file-1099s-online-2026', '1099-threshold-2026', 'who-gets-a-1099', '1099-nec-vs-1099-misc', 'collect-w9-from-contractors', 'late-or-corrected-1099', 'contractor-or-employee-trade-shop', 'file-1099s-for-clients'],
   },
   {
     title: 'Taxes and year end',
     blurb: 'What to have ready, what changed for 2026, and what to set aside.',
-    slugs: ['trade-contractor-tax-deductions', 'buy-work-truck-before-year-end', 'quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
+    slugs: ['year-end-checklist-before-december-31', 'trade-contractor-tax-deductions', 'buy-work-truck-before-year-end', 'quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
   },
   {
     title: 'Leaving QuickBooks',
-    blurb: 'The 2026 prices, the alternatives, and the bank rule that keeps posting.',
-    slugs: ['quickbooks-price-increase-2026', 'quickbooks-too-expensive-alternatives', 'best-quickbooks-alternatives-small-business', 'quickbooks-bank-rules-auto-post', 'mercury-books-vs-poof'],
+    blurb: 'The 2026 prices, the free plans, the alternatives, and the bank rule that keeps posting.',
+    slugs: ['free-bookkeeping-software-2026', 'quickbooks-price-increase-2026', 'quickbooks-too-expensive-alternatives', 'best-quickbooks-alternatives-small-business', 'quickbooks-bank-rules-auto-post', 'mercury-books-vs-poof'],
   },
   {
     title: 'Running a service shop',
@@ -86,7 +86,7 @@ const topics: { title: string; blurb: string; slugs: string[] }[] = [
   {
     title: 'AI and your books',
     blurb: 'What AI should and should not do to a ledger, and a close in five days.',
-    slugs: ['should-ai-post-to-your-books', 'ai-bookkeeping-small-business', 'do-i-need-bookkeeper-or-ai', 'how-to-automate-small-business-bookkeeping', 'close-your-books-in-five-days'],
+    slugs: ['bookkeeping-with-claude', 'should-ai-post-to-your-books', 'ai-bookkeeping-small-business', 'do-i-need-bookkeeper-or-ai', 'how-to-automate-small-business-bookkeeping', 'close-your-books-in-five-days'],
   },
   {
     title: 'Getting started',
