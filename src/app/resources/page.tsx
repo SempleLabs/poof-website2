@@ -66,12 +66,12 @@ const topics: { title: string; blurb: string; slugs: string[] }[] = [
   {
     title: '1099s',
     blurb: 'The new $2,000 line, getting every W-9 in, and filing without an IRS filer code.',
-    slugs: ['file-1099s-online-2026', '1099-threshold-2026', 'collect-w9-from-contractors', 'file-1099s-for-clients'],
+    slugs: ['file-1099s-online-2026', '1099-threshold-2026', 'who-gets-a-1099', '1099-nec-vs-1099-misc', 'collect-w9-from-contractors', 'late-or-corrected-1099', 'file-1099s-for-clients'],
   },
   {
     title: 'Taxes and year end',
     blurb: 'What to have ready, what changed for 2026, and what to set aside.',
-    slugs: ['quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
+    slugs: ['trade-contractor-tax-deductions', 'buy-work-truck-before-year-end', 'quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
   },
   {
     title: 'Leaving QuickBooks',
