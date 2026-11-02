@@ -224,7 +224,7 @@ Always lead with what changes in the customer's life, not what the product does.
 ### Brand Values
 1. **Shows its work** — Nothing lands without a person seeing it first. Every proposal carries its evidence; every rule is approved by an owner or admin as a card, whether Poof offered it from reviewed work or someone asked for it in a sentence ([Group 13](#13-approvals--ai-autonomy-15-features))
 2. **Small Business First** — Every decision optimized for 1–50 employee businesses
-3. **Trust & Security** — Bank-grade security, SOC 2 audit logging, 2FA, RBAC
+3. **Trust & Security** — Bank and tax data encrypted, two-step sign-in, an audit log with personal details masked, and six roles that decide who sees what
 4. **One figure** — The reconciliation ties; the close is a record. When the number on the screen and the number in the record are the same number, the month is done
 5. **Free means free** — The software never locks and never holds a feature back. What costs money is work done: the agent's, or a person's
 
@@ -500,6 +500,7 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 - **Never put a price on the human bookkeeping** — no figure, range, "from", "starting at", or "less than a bookkeeper costs".
 - Don't say Poof Agent posts, closes, files or pays on its own. It prepares; a person approves, or a rule or auto-post the owner turned on does exactly what it was granted.
 - Don't use accounting jargon without explaining it.
+- **Don't say SOC 2, "bank-grade", "airtight" or "never leaves".** Poof has no SOC 2 report; name what it does instead — encrypted bank and tax data, two-step sign-in, an audit log, roles.
 
 ---
 
@@ -597,14 +598,14 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 
 #### 7. Team & Security (11 features)
 1. Team management — 6 roles: Owner / Admin / Accountant / Bookkeeper / Office manager / Viewer
-2. Two-factor authentication (TOTP with QR code setup and 8 backup codes)
-3. Audit logs (SOC 2 compliant, PII masking)
+2. Two-factor authentication (TOTP with QR code setup and 8 backup codes; five wrong codes and it waits)
+3. Audit logs (PII masking)
 4. Session management (30-minute timeout, active session viewer)
 5. GDPR/CCPA-compliant account deletion
 6. Email verification
 7. Role-based permissions (RBAC) — 46 granular permissions
 8. Bot-abuse gate on registration — Cloudflare Turnstile challenge on public sign-up, stopping scraped-address subscription bombing
-9. AI privacy chokepoint ("Gateway") — every model call is PII-redacted before it leaves the process, routed to the configured destination, and logged with destination, model, redaction count, and token usage for the audit trail
+9. AI privacy chokepoint ("Gateway") — every model call goes through one place: the text is scrubbed of identifiers like Social Security, card and bank numbers before it leaves, and every call is logged with destination, model, redaction count, and token usage for the audit trail (photos and PDFs go as they are)
 10. **Office manager role** — invoices, quotes, customers, dispatch and hours, but no books; they land on the Board, and Ask Poof, the chat apps and Approvals follow the role
 11. **Add a company from the company menu** — you own it; the first company a person owns gets 30 days of Poof Agent, and later ones start on Free (app #481)
 
@@ -754,7 +755,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 1. **Books → 1099s** — every contractor's year so far, by how they were paid, against the year's legal threshold ($2,000 for 2026)
 2. **Every payment has a payee** — "who is this?" cards link unknown bank payees and checks to vendors
 3. **W-9s by link** — the vendor fills it in online; a filled-in W-9 PDF fills the vendor record, read inside Poof
-4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit
+4. **Tax IDs sealed** — stored encrypted, shown as the last four digits, and never erased by an edit; the signed W-9 itself, which carries the whole number, opens for an owner or admin only
 5. **Prepare the year** — each contractor's copy (emailed to those who consented; mailed by Poof, or printed, for the rest) and a summary PDF for the CPA
 6. **Mark filed or rejected** — the IRS receipt ID, or its reason; a change after filing is flagged as a correction
 7. **"Who files your 1099s?"** — **Poof files them** first; your bookkeeper, your CPA or you under "Other ways", with the filer-code checklist and the checks the IRS rejects a file for; reminders from October 1 to the due date, never mentioning a filer code
