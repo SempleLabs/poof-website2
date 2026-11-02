@@ -90,7 +90,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "A Checklist With Due Dates That Ticks Itself",
-        description: "A template per organization \u2014 the trades default is 17 tasks dated in business days after month end, signed on day 7. Thirteen are evidence-bound: they complete when the books prove them and cannot be ticked by hand, and each open one says why in a sentence and links to the screen that fixes it. Manual tasks are a person\u2019s tick, with who and when. Every close stamps its own copy of the list"
+        description: "A template per organization \u2014 the trades default is 19 monthly tasks dated in business days after month end, signed on day 7. Fifteen are evidence-bound: they complete when the books prove them and cannot be ticked by hand, and each open one says why in a sentence and links to the screen that fixes it. Manual tasks are a person\u2019s tick, with who and when. Every close stamps its own copy of the list"
       },
       {
         title: "The Nudge",
@@ -1209,7 +1209,7 @@ export interface FaqItem {
 export const faqData: FaqItem[] = [
   {
     question: "What is Poof?",
-    answer: "Poof is a platform to run a small business, with the books at the center. Connect your bank and card accounts and the AI reads the feeds, matches invoices to deposits and bills to payments, categorizes, and drafts the month-end close. Every entry it proposes waits on a card with the evidence it found, and nothing reaches the books until a person approves it or a rule that person granted covers it. It also invoices, takes payments, budgets, forecasts cash, and for trade shops answers the phone and lets a technician close a job from a text. Poof is free. Poof Agent, the AI that does the work, is $79 a month. Poof also files your 1099s, and if you would rather not do the books at all, a bookkeeper who works in Poof will, quoted job by job.",
+    answer: "Poof is free bookkeeping software with an AI agent you can hire. Connect your bank and cards and Poof keeps the ledger, sends invoices and quotes, tracks bills, plans the cash and closes the month. Poof Agent, $79 a month, does the work while you sleep: it sorts the bank, reads the receipts, matches payments and drafts the reminders, and each entry it prepares waits on a card with its evidence until a person approves it. For service shops, Poof also runs the dispatch board and lets a tech close a job from a text. Poof files your 1099s, and if you would rather not do the books at all, a bookkeeper who works in Poof will, and every job is quoted.",
     category: "General"
   },
   {
@@ -1246,7 +1246,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "Can the AI change my books without asking me?",
-    answer: "No. Every write an AI proposes stages as a card in your approvals inbox and waits \u2014 the nightly categorization sweep, a request you typed into chat, a detector that noticed a job losing money. Nothing reaches your books until a person approves it, and approving runs exactly what is on the card rather than a fresh interpretation of it. Each card also shows the evidence behind it: the customer it resolved, the prior transactions for that merchant and whether they were all categorized the same way, the amount, the account. That evidence is gathered by code, never judged by the model \u2014 a card that says \u201cno history for this merchant\u201d is telling you why it is asking.",
+    answer: "Not unless you let it. Every write an AI proposes stages as a card in your approvals inbox and waits: the overnight sort, a request you typed into Ask Poof, a check that noticed a job losing money. Approving runs exactly what is on the card, and each card shows the evidence behind it, gathered by code rather than judged by the model. The only things that post without a card are the ones you switch on: a rule you made from cards you approved, or Autopilot for categorizations. Both have a dollar ceiling you set, neither can send anything to a customer, and both stop themselves the first time you correct them.",
     category: "AI & Automation"
   },
   {
@@ -1291,7 +1291,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "How does Poof compare to QuickBooks?",
-    answer: "Poof is built specifically for small businesses that want AI-powered automation without complexity. Its built-in AI assistant has 115 tools: it prepares records, updates invoices, generates all 14 reports, and imports bank statement PDFs, all through conversation, and every change it proposes waits on a card with its evidence until you approve it. Poof also offers AI-built budgets, a 12-month cash flow forecast, auto-reconciliation, recurring charge detection, job costing, and a month-end close the books tick off themselves. QuickBooks has no free plan; Poof is free, and Poof Agent, the AI that does the work, is $79/month, free for the first 30 days. The fair QuickBooks comparison for Poof Agent is Plus at $140/month, the tier that carries job costing, budgets, and full reporting, not Simple Start at $38/month, which is single-user and can't do this work.",
+    answer: "Three differences. Price: Poof is free for good, while QuickBooks has no free plan and runs $38 to $340 a month depending on the features you need. The work: QuickBooks gives you tools to do the books; Poof Agent, $79 a month, does them overnight and puts the evidence on every entry for your OK. And a person: a bookkeeper who works in Poof can do the books in the same place, with no shared login to hand over. Poof also runs month-end on a checklist the books tick off themselves, keeps per-job profit, and files your 1099s. Moving over takes your QuickBooks export files; see Poof vs QuickBooks for the full comparison.",
     category: "Pricing & Plans"
   },
   {

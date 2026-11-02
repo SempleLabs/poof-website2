@@ -8,8 +8,8 @@ import PageHero from '@/components/PageHero'
 import { getPersonSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'About Poof - AI Bookkeeping for Small Business',
-  description: 'Learn about Poof and our mission to automate bookkeeping for small businesses — built by Austin Semple, three years an auditor, seven a controller.',
+  title: 'About Poof — built by a former controller | Poof',
+  description: 'Poof is free bookkeeping software with an AI agent you can hire, built by Austin Semple: two years as an auditor, then seven as a controller for small businesses.',
   keywords: 'about Poof, company story, bookkeeping automation team, AI accounting mission',
   alternates: {
     canonical: 'https://www.poofai.com/about',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     title: 'About Poof — Built by a Former Controller',
     description:
-      'Poof runs the small-business back office. Built by Austin Semple, a former controller: three years in audit, then seven running the books for small businesses.',
+      'Free bookkeeping software with an AI agent you can hire. Built by Austin Semple, a former controller: two years in audit, then seven running the books for small businesses.',
     url: 'https://www.poofai.com/about',
     siteName: 'Poof',
     type: 'website',
@@ -37,8 +37,8 @@ export default function AboutPage() {
       )
     },
     {
-      title: "Small Business First",
-      description: "Built for the businesses a controller actually meets: one to fifty people, a few thousand transactions a month, and no time for software.",
+      title: "Owners first",
+      description: "Built for the businesses a controller actually meets: one to fifty people, a few thousand transactions a month, and an owner with no time for software.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -46,7 +46,7 @@ export default function AboutPage() {
       )
     },
     {
-      title: "Trust & Security",
+      title: "Trust and security",
       description: "Read-only bank access, encryption in transit, two-factor sign-in, six roles with 46 permissions, and an audit log with personal details masked.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function AboutPage() {
     },
     {
       title: "One figure",
-      description: "The reconciliation ties to one number or it doesn't. The close is a checklist the books tick off themselves. We would rather show a figure than claim one.",
+      description: "The bank and the books agree to the penny, or Poof shows you why not. Month-end is a checklist the books tick off themselves. We would rather show you a figure than claim one.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -67,19 +67,19 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: "2015-2025",
-      title: "The Journey",
-      description: "Three years auditing, then seven as a controller for small businesses, showed the same gap every month: the tools were built for accountants, and the people using them were not."
+      year: "2015–2025",
+      title: "Inside other people's books",
+      description: "Two years auditing, then seven as a controller for small businesses, showed the same gap every month: the tools were built for accountants, and the people using them were not."
     },
     {
       year: "June 2025",
-      title: "Poof is Born",
-      description: "Fed up with clunky software and manual processes, I started building the AI-powered bookkeeping solution I wished existed for every business I'd worked with."
+      title: "The first line of Poof",
+      description: "Austin starts building the bookkeeping software he wished every owner he had worked for could use: one that does the work, and shows its evidence before anything lands."
     },
     {
       year: "2026",
-      title: "Reimagining Bookkeeping",
-      description: "Today, Poof includes 270 features — job costing with per-job profitability and labor allocation, month-end close with period locking, online invoice payments, AI budgeting & forecasting, recurring invoices with automated follow-ups, estimates, receipt scanning, bank statement import with AI-powered PDF parsing, report drill-down, scheduled report delivery, 14 reports, an AI phone receptionist that answers the shop's line and books the job, and a field-service loop where the technician closes the job from a texted link and the invoice writes itself, plus payroll, sales tax, 1099s, fixed assets and loans, and truck stock in the same books. And we found our focus: running the whole back office, with a person on every entry — the books at the center, the phone and the field for the shops that need them."
+      title: "Free, with an agent you can hire",
+      description: "Poof goes free for good. Poof Agent does the work for $79 a month, a bookkeeper who works in Poof takes the books off an owner's hands, and Poof files the 1099s. Service shops get the dispatch board, the technician's link and an AI receptionist in the same books."
     }
   ]
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       <PageHero
         title={<>Built by the person who <span className="text-ledger-600">signs the close.</span></>}
-        subtitle="Three years as an auditor, then seven as a controller for small businesses, then Poof: AI that does the books and puts every entry in front of a person before it lands."
+        subtitle="Two years as an auditor, then seven as a controller for small businesses, then Poof: software that does the books and puts every entry in front of a person before it lands."
       />
 
       {/* Mission Statement */}
@@ -112,9 +112,9 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="scale-up">
             <div className="bg-white border border-slate-200 rounded-xl p-12 text-center">
-              <h2 className="text-3xl font-bold font-display text-slate-900 mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold font-display text-slate-900 mb-6">What Poof is for</h2>
               <p className="text-xl text-slate-600 leading-relaxed">
-                &ldquo;Bookkeeping that does itself, and shows its work before it lands. The AI does the categorizing, the matching, the reconciling, and the closing; a person sees every entry before it reaches the books. Built by a controller, for the person who signs the close.&rdquo;
+                The books should keep themselves, and show their work. Poof does the sorting, the matching, the reconciling and the month-end, and a person sees every entry before it reaches the books. The software is free, because keeping the books shouldn&apos;t cost an owner anything. What you pay for is the work done for you, and only if you want it.
               </p>
             </div>
           </AnimateOnScroll>
@@ -126,9 +126,9 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">Our Story</h2>
+              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">Why Poof exists</h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Born from frustration with outdated tools and a vision for what bookkeeping could be.
+                Nine years of month-ends, and the same gap every one.
               </p>
             </div>
           </AnimateOnScroll>
@@ -178,9 +178,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">Our Values</h2>
+              <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">What we hold to</h2>
               <p className="text-xl text-slate-600">
-                The principles that guide everything we do
+                Four rules the product is built on
               </p>
             </div>
           </AnimateOnScroll>
@@ -206,9 +206,9 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold font-display text-white mb-6">Meet the Founder</h2>
+              <h2 className="text-4xl font-bold font-display text-white mb-6">From the founder</h2>
               <p className="text-xl text-slate-300">
-                A personal mission born from seven years of closing other people's books
+                Why I built it, and what it&apos;s for
               </p>
             </div>
           </AnimateOnScroll>
@@ -234,34 +234,26 @@ export default function AboutPage() {
 
                 <div className="flex-1 text-slate-300">
                   <p className="text-xl leading-relaxed mb-6">
-                    Throughout my career in auditing and financial controllership for small businesses,
-                    I witnessed a recurring pattern: brilliant entrepreneurs spending countless hours on bookkeeping
-                    tasks instead of building their businesses. Late nights wrestling with QuickBooks became the norm,
-                    not the exception.
+                    For nine years I sat on the other side of small businesses&apos; books: two auditing them, seven
+                    closing them as a controller. Month after month I watched owners lose their evenings to software
+                    built for accountants, and books that looked finished but weren&apos;t.
                   </p>
 
                   <p className="text-lg leading-relaxed mb-6">
-                    Every day, I watched business owners get bogged down by work that should take minutes, not hours.
-                    The stress it caused, the errors it created, and the growth opportunities it stole became
-                    impossible to ignore.
+                    So I built the tool I wanted to hand them. Poof does the work a good bookkeeper does, sorting the
+                    bank, matching payments, chasing invoices and closing the month, and it shows its evidence for every
+                    entry before anything lands. I keep my own company&apos;s books on it, from my phone.
                   </p>
 
                   <p className="text-lg leading-relaxed">
-                    In June 2025, I decided to build the solution I&apos;d always wished existed: an AI-powered
-                    bookkeeping platform that truly understands small businesses and works the way you think.
+                    The software is free, because the books shouldn&apos;t cost an owner anything to keep. When you want
+                    the work done for you, Poof Agent does it. When you&apos;d rather hand it to a person, a bookkeeper
+                    who works in Poof will.
                   </p>
+                  <p className="text-lg leading-relaxed mt-6 text-white">Austin Semple, founder</p>
                 </div>
               </div>
 
-              <div className="bg-ledger-500/10 p-6 rounded-lg border-l-4 border-ledger-500 text-center">
-                <p className="text-lg font-medium text-ledger-400 mb-2">
-                  &ldquo;Poof isn&apos;t just another software company.&rdquo;
-                </p>
-                <p className="text-ledger-400">
-                  It&apos;s my personal mission to give small business owners their time back,
-                  so they can focus on what truly matters &mdash; growing their dreams.
-                </p>
-              </div>
             </div>
           </AnimateOnScroll>
         </div>
@@ -272,7 +264,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-up">
             <div className="bg-white border border-slate-200 rounded-xl p-8">
-              <h2 className="text-2xl font-bold font-display text-slate-900 mb-4">Company Information</h2>
+              <h2 className="text-2xl font-bold font-display text-slate-900 mb-4">Company information</h2>
               <p className="text-slate-600 leading-relaxed">
                 Poof is a product of <span className="font-semibold text-slate-900">Semple Labs LLC</span>, a United
                 States limited liability company founded by Austin Semple. Semple Labs LLC builds, operates, and
@@ -301,10 +293,10 @@ export default function AboutPage() {
         <AnimateOnScroll animation="fade-up">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-4xl font-bold font-display text-white mb-6">
-              Ready to Automate Your Bookkeeping?
+              Start free. Hire Poof Agent when you want it.
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Join small businesses who've made bookkeeping effortless with Poof.
+              The books are free for good. Poof Agent is free for your first 30 days, then $79 a month if you keep it.
             </p>
             <Link
               href="https://app.poofai.com/register"
@@ -313,7 +305,7 @@ export default function AboutPage() {
               Start free →
             </Link>
             <p className="text-white/80 text-sm mt-4">
-              Poof Agent free for 30 days • No card
+              No card
             </p>
           </div>
         </AnimateOnScroll>

@@ -8,7 +8,7 @@ import DemoBookingEmbed from '@/components/DemoBookingEmbed'
 export const metadata: Metadata = {
   title: 'Book a Demo | Poof',
   description:
-    'Pick a time for a personalized 30-minute demo of Poof. See how AI-powered, controller-reviewed bookkeeping works for your business — no pressure.',
+    'Pick a time for a free 30-minute demo of Poof: the overnight sort, the approval cards and month-end, on books like yours. No pressure.',
   alternates: {
     canonical: 'https://www.poofai.com/demo',
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     title: 'Book a Demo of Poof',
     description:
-      'Pick a time for a personalized 30-minute demo. See how AI-powered, controller-reviewed bookkeeping works for your business — no pressure.',
+      'Pick a time for a free 30-minute demo: the overnight sort, the approval cards and month-end, on books like yours. No pressure.',
     url: 'https://www.poofai.com/demo',
     siteName: 'Poof',
     type: 'website',

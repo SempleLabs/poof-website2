@@ -6,10 +6,7 @@ import Footer from '@/components/Footer'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import GlowCard from '@/components/GlowCard'
 import ReceptionistSection from '@/components/ReceptionistSection'
-import FieldServiceSection from '@/components/FieldServiceSection'
 import UnearnedRevenueSection from '@/components/UnearnedRevenueSection'
-import ApprovalsSection from '@/components/ApprovalsSection'
-import CloseRunSection from '@/components/CloseRunSection'
 import BackOfficeSection from '@/components/BackOfficeSection'
 import CtaSection from '@/components/CtaSection'
 import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
@@ -69,10 +66,10 @@ const builtFor = [
     cta: 'See how it works',
   },
   {
-    title: 'A close with a checklist the books tick off',
-    body: 'Seventeen tasks with due dates, thirteen of them tied to evidence in the ledger, four that need a person. Locking the period is the signature.',
+    title: 'Month-end that ticks itself off',
+    body: 'A checklist of nineteen jobs with due dates. Fifteen tick themselves when the books prove they’re done; three need a person. Your signature locks the month.',
     href: '/close',
-    cta: 'See the close',
+    cta: 'See month-end',
   },
   {
     title: 'Your subs\' 1099s, filed by Poof',
@@ -119,7 +116,7 @@ const faqs = [
   },
   {
     q: 'Who is this actually for?',
-    a: 'Service shops that run on inbound calls and want the job, the invoice, and the books to be one chain instead of three. Most of the shops we built this with run 2 to 10 trucks. Nothing stops a one-truck shop or a larger one from using it — it is the same free plan and the same $79 Poof Agent either way.',
+    a: 'Service shops that run on inbound calls and want the job, the invoice and the books to be one chain instead of three. It is built for shops running 2 to 10 trucks, and nothing stops a one-truck shop or a bigger one from using it.',
   },
 ]
 
@@ -146,18 +143,6 @@ export default function TradesPage() {
       <div className="pt-16" />
       <TradesShow />
 
-      <ReceptionistSection />
-
-      <FieldServiceSection />
-
-      <UnearnedRevenueSection />
-
-      <ApprovalsSection />
-
-      <CloseRunSection />
-
-      <BackOfficeSection />
-
       {/* The loop, stated plainly for anyone who skipped the demo */}
       <section id="loop" className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -166,7 +151,7 @@ export default function TradesPage() {
               One chain, from the call to the P&amp;L
             </h2>
             <p className="text-slate-500 text-center mb-12 max-w-2xl mx-auto">
-              Count how many times somebody types the job in. Zero.
+              For anyone who skipped the demo: four steps, and nobody types the job in twice.
             </p>
           </AnimateOnScroll>
 
@@ -190,6 +175,10 @@ export default function TradesPage() {
           </div>
         </div>
       </section>
+
+      <ReceptionistSection />
+
+      <UnearnedRevenueSection />
 
       {/* What a shop gets that a general ledger doesn't give you */}
       <section className="py-20 bg-white">
@@ -215,6 +204,8 @@ export default function TradesPage() {
           </div>
         </div>
       </section>
+
+      <BackOfficeSection />
 
       {/* Pricing: the same two plans as everywhere else */}
       <section id="pricing" className="py-20 bg-slate-50">

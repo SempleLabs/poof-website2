@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: '404: Page Not Found | Poof',
-  description: 'The page you were looking for could not be found. Explore Poof — AI-powered, controller-reviewed bookkeeping.',
+  description: 'The page you were looking for could not be found. Poof is free bookkeeping software, with an AI agent you can hire.',
 }
 
 const popularLinks = [

@@ -4,35 +4,19 @@ import GlowCard from './GlowCard'
 const capabilities = [
   {
     title: 'It answers, and it books',
-    body: 'The agent knows your shop’s name, hours, and service area. It works out what the caller needs and puts the job on the board — at 9pm, on a Saturday, or while every tech is on a roof.',
+    body: 'It knows your shop’s name, hours and service area, works out what the caller needs, and books a real slot on a real tech’s calendar: at 9pm, on a Saturday, or while every tech is on a roof. The caller becomes a customer on the first call.',
   },
   {
-    title: 'Safety calls are decided in code, not by AI',
-    body: 'Gas smell, carbon monoxide, smoke, sparking, or an active alarm trigger an immediate emergency escalation and a scripted “leave the building, call 911” response. No heat below 45°F and no cool above 95°F are emergencies too. These are rules in the software — the AI narrates the call, it never decides what counts as an emergency.',
+    title: 'Safety is a rule, not a guess',
+    body: 'A gas smell, carbon monoxide, smoke, sparking or an active alarm gets a scripted “leave the building and call 911” and goes straight to a person. No heat below 45°F or no cooling above 95°F is an emergency too. Those are rules in the software; the AI never decides what counts as an emergency.',
   },
   {
-    title: 'It books against real availability',
-    body: 'Slots come from your technicians, their weekly windows, and their time off, minus what is already booked, with drive-time buffer respected. Skills are a preference rather than a gate — a tech tagged for the work is preferred, an untagged tech is next — so a shop that has never tagged anyone is still never told it has no availability. The database refuses overlapping bookings outright, so two calls landing at once cannot double-book a tech.',
+    title: 'It hands off when it should',
+    body: 'A caller who asks for a person, a repeat caller, someone threatening to cancel, no open slot in time, or a call it isn’t sure about goes to a human instead of getting a guess.',
   },
   {
-    title: 'It knows when to hand off',
-    body: 'A safety trigger, an after-hours emergency, no slot inside the urgency window, a caller who asks for a person, a repeat caller within 24 hours, a cancellation threat, or low confidence — any of these route the call to a human.',
-  },
-  {
-    title: 'Then it dispatches — or waits for you',
-    body: 'Two independent switches: whether the AI picks who goes, and whether the system texts them. Leave both on and the assigned tech gets their job on their phone. Turn the first off and the booking still stands with the customer’s promised window — the job just lands under “Needs a tech” for whoever staffs your board.',
-  },
-  {
-    title: 'The caller becomes a customer immediately',
-    body: 'A booked job creates the customer record on the first call, not weeks later when someone finally invoices it. Matching runs on the last ten digits of the number, so the same household calling from a different phone format stays one customer instead of becoming two.',
-  },
-  {
-    title: 'The work spreads across the crew',
-    body: 'When several techs are free for the same slot, the job goes to whoever has the fewest jobs that day, then the fewest that week. Nobody quietly absorbs every call — which is the kind of thing that stays invisible until a good tech burns out.',
-  },
-  {
-    title: 'A job nobody is going to raises the alarm',
-    body: 'An appointment approaching its start time with no tech assigned escalates to you — whether that is because you dispatch by hand or because nobody was free when it was booked. Emergencies are assigned automatically regardless of how you have set the switches.',
+    title: 'Then it dispatches, or waits for you',
+    body: 'Let it pick who goes and text them the job, or keep that for your dispatcher and the booking lands under “Needs a tech.” Work spreads evenly across the crew, and a job nobody has been assigned raises the alarm before it’s due.',
   },
 ]
 
@@ -50,10 +34,10 @@ export default function ReceptionistSection() {
               Every call answered. <span className="text-ledger-600">Every job on the board.</span>
             </h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Shops on Poof can have Poof answer the shop&apos;s line. An AI receptionist picks up, works out
-              what the caller needs, books a real slot on a real tech&apos;s calendar, dispatches the tech, and
-              escalates anything unsafe to a person. The revenue that used to go to voicemail lands on the board
-              instead &mdash; and the job it creates gets costed like every other job on your P&amp;L.
+              Poof can answer the shop&apos;s line. The AI receptionist picks up, works out what the caller
+              needs, books a real slot on a real tech&apos;s calendar, and sends anything unsafe to a person.
+              Calls that used to go to voicemail land on the board instead, and every job they create is costed
+              like the rest.
             </p>
           </div>
         </AnimateOnScroll>
@@ -75,10 +59,9 @@ export default function ReceptionistSection() {
               Versus an answering service
             </h3>
             <p className="text-sm text-slate-200 leading-relaxed">
-              An answering service runs $200&ndash;$600/mo to take a message and, on a good day, drop it into a
-              calendar. It doesn&apos;t know your books, which of your techs is certified for the work, or which calls
-              are emergencies. Poof&apos;s receptionist books against real availability, escalates the unsafe ones by
-              rule, and the job it creates gets costed like every other job on your P&amp;L.
+              An answering service runs $200&ndash;$600 a month to take a message. Poof&apos;s receptionist books
+              against your techs&apos; real availability, sends the unsafe calls to a person by rule, and puts the
+              job straight into the same books as everything else.
             </p>
           </div>
         </AnimateOnScroll>
@@ -86,17 +69,14 @@ export default function ReceptionistSection() {
         <AnimateOnScroll animation="fade-up">
           <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-6">
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">
-              How it is set up
+              What it costs, and what it doesn&apos;t do
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed">
-              The receptionist is an add-on: $99 a month with 1,000 minutes of calls included, then 12&cent; a
-              minute. You turn it on and buy it yourself in Settings &rarr; Receptionist. <strong className="text-slate-100">Customer messages
-              are off until you turn them on</strong>: a booking confirmation, a day-before reminder, and
-              &ldquo;on my way,&rdquo; by email until your Poof line is registered for business texting. Your
-              technician is always texted their job. The receptionist books the job and payment is taken on the
-              invoice or on site; the board places jobs without optimizing routes; the voice is the agent&apos;s
-              own, and it makes no outbound sales calls. We would rather tell you that now than after you have
-              signed.
+              An add-on: $99 a month with 1,000 minutes of calls included, then 12&cent; a minute. You turn it on
+              and buy it yourself in Settings &rarr; Receptionist. <strong className="text-slate-100">Messages to
+              your customers stay off until you turn them on</strong> (a booking confirmation, a day-before
+              reminder, &ldquo;on my way&rdquo;), and go by email until your Poof line is registered for texting.
+              It doesn&apos;t take payment on the call, doesn&apos;t plan routes, and never makes sales calls.
             </p>
           </div>
         </AnimateOnScroll>

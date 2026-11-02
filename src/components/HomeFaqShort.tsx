@@ -15,7 +15,7 @@ export default function HomeFaqShort() {
     <section className="max-w-[780px] mx-auto px-4 sm:px-6 pt-16 pb-6" id="faq">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqPageSchema(items)) }} />
       <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">Six questions</p>
-      <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-6 text-balance">The ones people ask before they sign in.</h2>
+      <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-6 text-balance">What owners ask before they sign up.</h2>
       <ul className="border-t border-ink">
         {items.map((f, i) => (
           <li key={f.question} className="border-b border-rule">

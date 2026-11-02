@@ -38,13 +38,6 @@ const rows: { label: string; href: string; headline: string; body: string; cta?:
     body: 'An asset register with the month’s depreciation approved as one card, loan payments split into principal and interest, and a trade-in (old van out, loan paid off, new van and loan in) as one entry you see before it posts.',
   },
   {
-    label: '1099s',
-    href: '/1099s',
-    headline: 'Tell Poof who you paid. Poof files the 1099s.',
-    body: 'Every contractor’s year against the $2,000 threshold, W-9s collected by link with reminders, and one signature to approve. Poof files with the IRS and emails or mails each contractor their copy. The first 3 forms a year are free, then $2.49 a form.',
-    cta: 'File your 1099s',
-  },
-  {
     label: 'Truck stock',
     href: '/features#purchasing-and-truck-stock',
     headline: 'Count the van from your phone. Poof knows what went on jobs and what went missing.',

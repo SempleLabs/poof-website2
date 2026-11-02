@@ -117,7 +117,7 @@ const downloads = [
 const productPages = [
   { title: 'Taxes', description: 'The calendar, the reserve, the four estimates, and a January package for your CPA.', href: '/taxes' },
   { title: 'Poof for shops', description: 'The phone answered, the job on the board, the tech closing it from a text.', href: '/trades' },
-  { title: 'The close', description: 'Seventeen tasks with due dates, thirteen ticked by the books themselves.', href: '/close' },
+  { title: 'The close', description: 'Nineteen tasks with due dates, fifteen ticked by the books themselves.', href: '/close' },
   { title: 'Autopilot with limits', description: 'AI that posts inside a ceiling and a history check, and stops itself when wrong.', href: '/autopilot' },
   { title: 'Poof vs QuickBooks', description: 'Against QuickBooks Plus at $140, row by row.', href: '/poof-vs-quickbooks' },
   { title: 'Security', description: 'How Poof protects the books and every AI call.', href: '/security' },

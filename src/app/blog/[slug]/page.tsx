@@ -431,10 +431,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <div className="bg-slate-900 border border-slate-700 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold font-display text-white mb-4">
-              Ready to Automate Your Bookkeeping?
+              Poof is free. Poof Agent does the books while you sleep.
             </h2>
             <p className="text-slate-300 mb-6">
-              See how Poof can save you hours every week with AI-powered bookkeeping.
+              The books are free for good, and Poof Agent is free for your first 30 days. No card.
             </p>
             <Link
               href="https://app.poofai.com/register"

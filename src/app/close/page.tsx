@@ -8,7 +8,7 @@ import { getFaqPageSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'The close — a checklist the books tick off themselves | Poof',
   description:
-    'Month-end close as a record: 17 tasks with due dates, 13 of them proven by the books and ticked automatically, a reconciliation that ties to one figure, and a signature that locks the period. For bookkeepers: every client company is free, and Poof Agent is $29 a client.',
+    'Month-end close as a record: 19 tasks with due dates, 15 of them proven by the books and ticked automatically, a reconciliation that ties to one figure, and a signature that locks the period. For bookkeepers: every client company is free, and Poof Agent is $29 a client.',
   alternates: { canonical: 'https://www.poofai.com/close' },
   openGraph: {
     images: ['/og-image.png'],
@@ -21,29 +21,32 @@ export const metadata: Metadata = {
 }
 
 // The trades default template, as the product defines it (close-tasks.math.ts).
-const TASKS: { day: number; name: string; what: string; kind: 'evidence' | 'person' }[] = [
+// The product's monthly default (apps/poof-api close-tasks.math.ts DEFAULT_TEMPLATE, 2026-10-12).
+const TASKS: { day: number; name: string; what: string; kind: 'evidence' | 'person' | 'lock' }[] = [
   { day: 2, name: 'Bank feeds reviewed', what: 'Every bank transaction dated in the month is categorized and reviewed.', kind: 'evidence' },
   { day: 3, name: 'Bank accounts reconciled', what: 'Each active bank account has a completed reconciliation through month end.', kind: 'evidence' },
   { day: 3, name: 'Draft entries posted', what: 'No journal entry dated in the month is still a draft.', kind: 'evidence' },
-  { day: 3, name: 'Staged materials relieved on completed jobs', what: 'Materials staged to a job that finished in the month have been relieved to it.', kind: 'evidence' },
+  { day: 3, name: 'Staged materials relieved on completed jobs', what: 'Materials staged to a job that finished in the month have been relieved to cost of goods sold.', kind: 'evidence' },
   { day: 3, name: 'Customer deposits released on completed jobs', what: 'Deposits held for jobs that finished by month end have been released to revenue.', kind: 'evidence' },
   { day: 4, name: 'Accruals rolled forward', what: 'Every accrual schedule ties to its ledger balance at month end.', kind: 'evidence' },
+  { day: 4, name: 'Depreciation posted for the month', what: 'The month’s depreciation is posted from the fixed asset register. Done on its own when there are no fixed assets.', kind: 'evidence' },
   { day: 4, name: 'A/R ties to open invoices', what: 'The receivables control account equals the open invoice balance.', kind: 'evidence' },
   { day: 4, name: 'A/P ties to open bills', what: 'The payables control account equals the open bill balance.', kind: 'evidence' },
   { day: 4, name: 'Plan visits not double-counted', what: 'No maintenance-plan visit was also invoiced.', kind: 'evidence' },
   { day: 4, name: 'Job costs tagged to a job', what: 'Cost of goods sold in the month carries a job tag, so per-job margins are real.', kind: 'evidence' },
-  { day: 4, name: 'Every category maps to an account', what: 'No activity in the month sits in a category that reaches no ledger account.', kind: 'evidence' },
-  { day: 4, name: 'Completed jobs invoiced', what: 'Every job finished in the month has an invoice, or a plan visit that earned it.', kind: 'evidence' },
-  { day: 5, name: 'Vendor bills through month end entered', what: 'Supplier invoices dated in the month have arrived and are in.', kind: 'person' },
+  { day: 4, name: 'Every category maps to an account', what: 'No activity in the month sits in a category that reaches no report.', kind: 'evidence' },
+  { day: 4, name: 'Completed jobs invoiced', what: 'Every job finished in the month has an invoice, or a plan visit that released its revenue.', kind: 'evidence' },
+  { day: 4, name: 'Labor on jobs', what: 'The month’s field wages are allocated to the jobs they were spent on, so per-job margins carry their labor. Done on its own when labor allocation isn’t used.', kind: 'evidence' },
+  { day: 5, name: 'Vendor bills through month end entered', what: 'Supplier invoices dated in the month have arrived and been entered or accrued.', kind: 'person' },
   { day: 5, name: 'Tie-out checks run clean', what: 'The full check suite has run for the month with no blocking failure.', kind: 'evidence' },
   { day: 6, name: 'Close narrative reviewed', what: 'The month-end narrative has been read and its action items noted.', kind: 'person' },
-  { day: 7, name: 'Period locked and signed', what: 'The period is locked; the close is signed.', kind: 'evidence' },
+  { day: 7, name: 'Period locked and signed', what: 'The period is locked; the close is signed.', kind: 'lock' },
   { day: 8, name: 'Close package sent to the owner', what: 'The signed package has gone to the person who pays for it.', kind: 'person' },
 ]
 
 const faqs = [
   { question: 'What does "the close is a record" mean?', answer: 'Each month\'s close is one object in Poof: who started it and when, where it stands, and what it took. The status is derived from the books, never typed. When you lock the period, the close captures its own activity: transactions reviewed, entries posted, decisions made by a person and by a rule, corrections, and hours from start to signature. Reopening keeps the signature on record.' },
-  { question: 'Which tasks tick themselves?', answer: 'Thirteen of the seventeen in the default template are evidence-bound. They complete when the books prove them and cannot be ticked by hand: feeds reviewed, bank reconciled, drafts posted, deposits released, accruals tied, A/R and A/P tied, job costs tagged, and so on. Each open one says why in a sentence and links to the screen that fixes it. The other four are a person\'s tick, recorded with who and when.' },
+  { question: 'Which tasks tick themselves?', answer: 'Fifteen of the nineteen monthly tasks in the default template are evidence-bound. They complete when the books prove them and cannot be ticked by hand: feeds reviewed, bank reconciled, drafts posted, deposits released, depreciation posted, A/R and A/P tied, job costs tagged, labor on jobs, and so on. Each open one says why in a sentence and links to the screen that fixes it. Three are a person\'s tick, recorded with who and when, and locking the period is the signature. A quarter-end close adds one more: loan balances agree to the lenders\' statements.' },
   { question: 'How does the reconciliation work?', answer: 'Statement ending balance, less the books at period end, plus what is booked but not on the statement, less what is on the statement but not booked. One figure. The screen reads it from the server, completion stores the same number, and the close\'s bank-reconciliation check reads that. Outstanding items carry forward: a check written in July that clears in August is on August\'s book side, and a first reconciliation lists what was still open from before it.' },
   { question: 'What does it cost a firm?', answer: 'Every client company is free, and so is the firm\'s own. Poof Agent, the AI that sorts, reads and drafts, is $29 a month ($290 a year) for each client you switch it on for, billed to the firm, and you can switch it client by client. Your trial covers Poof Agent for 3 clients. Filing a client\'s 1099s is $2.49 a form up to 25 a year, then $1.49, with each client\'s first 3 free; every client\'s forms, missing W-9s and signatures are on one page.' },
   { question: 'Can I change the checklist?', answer: 'Yes. A person can rename tasks, re-date them, deactivate ones that do not apply, and add manual rows. Evidence-bound tasks keep their evidence. Every close stamps its own copy of the template, so a later edit never rewrites history.' },
@@ -62,7 +65,7 @@ export default function ClosePage() {
           <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">The close</p>
           <h1 className="font-display text-[44px] sm:text-6xl lg:text-[76px] leading-[1] tracking-[-0.035em] text-ink mb-5 text-balance">A checklist the books tick off themselves.</h1>
           <p className="text-lg sm:text-xl text-muted max-w-[58ch] leading-[1.45]">
-            Seventeen tasks with due dates. <b className="text-ink font-semibold">{auto} of them complete when the books prove them</b> and cannot be ticked by hand. The rest are a person&apos;s tick, recorded with who and when. Locking the period is the signature.
+            Nineteen tasks with due dates. <b className="text-ink font-semibold">{auto} of them complete when the books prove them</b> and cannot be ticked by hand. Three are a person&apos;s tick, recorded with who and when. Locking the period is the signature.
           </p>
           <div className="flex flex-wrap gap-2.5 mt-6">
             <Link href="https://app.poofai.com/register" className="inline-block rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
@@ -82,11 +85,11 @@ export default function ClosePage() {
             {TASKS.map((t) => (
               <li key={t.name} className="grid grid-cols-[56px_24px_1fr] gap-3 py-3.5 border-b border-rule items-start">
                 <span className="font-mono tabular text-xs text-muted pt-1">day {t.day}</span>
-                <span className={`w-[17px] h-[17px] mt-0.5 rounded-[3px] border-[1.5px] ${t.kind === 'evidence' ? 'border-ledger-600 bg-ledger-200' : 'border-muted'}`} aria-hidden="true" />
+                <span className={`w-[17px] h-[17px] mt-0.5 rounded-[3px] border-[1.5px] ${t.kind === 'person' ? 'border-muted' : 'border-ledger-600 bg-ledger-200'}`} aria-hidden="true" />
                 <div>
                   <div className="flex flex-wrap items-baseline gap-x-2">
                     <span className="font-semibold text-ink text-[15.5px]">{t.name}</span>
-                    <span className="font-mono text-[10.5px] tracking-[0.06em] uppercase text-muted">{t.kind === 'evidence' ? 'ticks itself' : "a person's tick"}</span>
+                    <span className="font-mono text-[10.5px] tracking-[0.06em] uppercase text-muted">{t.kind === 'evidence' ? 'ticks itself' : t.kind === 'lock' ? 'the signature' : "a person's tick"}</span>
                   </div>
                   <p className="text-sm text-muted mt-0.5 max-w-[64ch]">{t.what}</p>
                 </div>
@@ -129,7 +132,7 @@ export default function ClosePage() {
           <div className="bg-white border border-ink border-l-4 border-l-audit [border-left-style:double] px-5 py-[18px] max-w-[520px]">
             <h3 className="font-display text-2xl tracking-[-0.035em] mb-2.5">August 2026 · signed</h3>
             <dl className="grid grid-cols-[auto_1fr] gap-x-[18px] gap-y-1.5 text-[14.5px]">
-              {[['Started', 'Sep 1 by the owner'], ['Signed', 'Sep 5 by the controller'], ['Took', '60 hours, start to signature'], ['Reviewed', '128 transactions'], ['Decisions', '41 by a person · 12 by rules they granted'], ['Corrections', '3'], ['Tasks', '17 · 13 ticked themselves · 4 by a person']].map(([k, v]) => (
+              {[['Started', 'Sep 1 by the owner'], ['Signed', 'Sep 5 by the controller'], ['Took', '60 hours, start to signature'], ['Reviewed', '128 transactions'], ['Decisions', '41 by a person · 12 by rules they granted'], ['Corrections', '3'], ['Tasks', '19 · 15 ticked themselves · 3 by a person · signed']].map(([k, v]) => (
                 <div key={k} className="contents"><dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">{k}</dt><dd className="font-mono tabular">{v}</dd></div>
               ))}
             </dl>

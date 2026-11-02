@@ -36,24 +36,28 @@ const BATCH = [
 ] as const
 
 type Task = { id: string; label: string; kind: 'auto' | 'person' | 'lock'; due: string; done: boolean; ev: string; open?: boolean }
+// The product's monthly default, in an owner's words (close-tasks.math.ts DEFAULT_TEMPLATE, 2026-10-12):
+// nineteen tasks, fifteen proven by the books, three a person's tick, and the signature.
 const INITIAL_TASKS: Task[] = [
-  { id: 'feeds', label: 'Feeds reviewed', kind: 'auto', due: 'day 2', done: true, ev: '128 rows in, 128 seen by a person or a rule' },
+  { id: 'feeds', label: 'Bank feeds reviewed', kind: 'auto', due: 'day 2', done: false, open: true, ev: '3 cards still waiting. Step 2 is where they are.' },
   { id: 'bank', label: 'Bank reconciled', kind: 'auto', due: 'day 3', done: false, open: true, ev: 'Operating account: 2,140.00 unexplained. Step 3 fixes this.' },
   { id: 'drafts', label: 'Draft entries posted', kind: 'auto', due: 'day 3', done: true, ev: '0 drafts remain' },
-  { id: 'staged', label: 'Staged materials relieved to jobs', kind: 'auto', due: 'day 3', done: true, ev: '$0 left on the staging account' },
-  { id: 'deposits', label: 'Customer deposits released on completed jobs', kind: 'auto', due: 'day 3', done: true, ev: 'Rivera install not complete; $3,000 correctly still held' },
-  { id: 'accruals', label: 'Accruals posted', kind: 'auto', due: 'day 4', done: true, ev: '3 schedules ran on time' },
-  { id: 'ar', label: 'A/R reviewed', kind: 'auto', due: 'day 4', done: true, ev: '2 invoices past 30 days, both with follow-ups sent' },
-  { id: 'ap', label: 'A/P reviewed', kind: 'auto', due: 'day 4', done: true, ev: 'Cash plan covers every bill due through Sep 15' },
-  { id: 'plans', label: 'Plan visits earned', kind: 'auto', due: 'day 4', done: true, ev: '6 maintenance visits completed, 6 earned' },
-  { id: 'jobs', label: 'Job costs tied', kind: 'auto', due: 'day 4', done: true, ev: '41 jobs, labor reconciles to payroll within $0.00' },
-  { id: 'cat', label: 'Categories tied', kind: 'auto', due: 'day 4', done: false, open: true, ev: '3 cards waiting in Approvals. Step 2 is where they are.' },
-  { id: 'inbox', label: 'Approvals inbox empty', kind: 'auto', due: 'day 4', done: false, open: true, ev: 'Anything still waiting is a decision nobody made.' },
-  { id: 'vendor', label: 'Vendor bills cut off', kind: 'person', due: 'day 5', done: false, ev: 'Waiting for a person' },
-  { id: 'tieout', label: 'Tie-out clean', kind: 'auto', due: 'day 5', done: true, ev: 'Ran clean at the state the books are in now; re-runs if anything moves' },
-  { id: 'narrative', label: 'Narrative reviewed', kind: 'person', due: 'day 6', done: false, ev: 'Waiting for a person' },
-  { id: 'sign', label: 'Signed', kind: 'lock', due: 'day 7', done: false, open: true, ev: 'Locking the period is the signature. Status is derived from the books, never typed.' },
-  { id: 'pkg', label: 'Package sent', kind: 'auto', due: 'day 8', done: false, open: true, ev: 'Sends after the signature' },
+  { id: 'staged', label: 'Parts bought for finished jobs moved onto them', kind: 'auto', due: 'day 3', done: true, ev: '$0 left waiting for a job' },
+  { id: 'deposits', label: 'Customer deposits released on finished jobs', kind: 'auto', due: 'day 3', done: true, ev: 'Rivera install not finished; $3,000 correctly still held' },
+  { id: 'accruals', label: 'Recurring month-end entries posted', kind: 'auto', due: 'day 4', done: true, ev: '3 schedules ran on time' },
+  { id: 'depr', label: 'Depreciation posted', kind: 'auto', due: 'day 4', done: true, ev: 'Two vans and the jetter, posted for August' },
+  { id: 'ar', label: 'Who owes you matches open invoices', kind: 'auto', due: 'day 4', done: true, ev: '2 invoices past 30 days, both with follow-ups sent' },
+  { id: 'ap', label: 'What you owe matches open bills', kind: 'auto', due: 'day 4', done: true, ev: 'Ties to the penny' },
+  { id: 'plans', label: 'No plan visit counted twice', kind: 'auto', due: 'day 4', done: true, ev: '6 maintenance visits, none also invoiced' },
+  { id: 'jobs', label: 'Every job cost tagged to its job', kind: 'auto', due: 'day 4', done: true, ev: '41 jobs, every part and bill tagged' },
+  { id: 'cat', label: 'Every category reaches a report', kind: 'auto', due: 'day 4', done: true, ev: 'Nothing sitting in a category no report shows' },
+  { id: 'invoiced', label: 'Every finished job invoiced', kind: 'auto', due: 'day 4', done: true, ev: '41 of 41, or a plan visit that earned it' },
+  { id: 'labor', label: 'Labor on jobs', kind: 'auto', due: 'day 4', done: true, ev: '88% of field hours landed on jobs' },
+  { id: 'vendor', label: 'Every August bill entered', kind: 'person', due: 'day 5', done: false, ev: 'Waiting for a person' },
+  { id: 'tieout', label: 'Books checked for errors', kind: 'auto', due: 'day 5', done: true, ev: 'Clean as the books stand now; checks again if anything changes' },
+  { id: 'narrative', label: 'The month’s write-up read', kind: 'person', due: 'day 6', done: false, ev: 'Waiting for a person' },
+  { id: 'sign', label: 'Signed', kind: 'lock', due: 'day 7', done: false, open: true, ev: 'Signing locks the month. Its status comes from the books, never typed in.' },
+  { id: 'pkg', label: 'Reports sent to the owner', kind: 'person', due: 'day 8', done: false, ev: 'After the signature: P&L, balance sheet, cash flow' },
 ]
 
 const eyebrow = 'font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3'
@@ -117,17 +121,15 @@ export default function HomeShow() {
   const tasks = useMemo(() => INITIAL_TASKS.map((t) => {
     const x = { ...t }
     if (t.id === 'bank' && tied) { x.done = true; x.open = false; x.ev = 'Operating account: 0.00 unexplained, completion stored the same figure' }
-    if (t.id === 'cat' && cardsDecided >= 2) { x.done = true; x.open = false; x.ev = 'Every card decided by a person or a rule you granted' }
-    if (t.id === 'inbox' && cardsDecided === 3) { x.done = true; x.open = false; x.ev = 'Nothing waiting' }
-    if (t.kind === 'person' && person[t.id]) { x.done = true; x.ev = `Ticked by a person, ${person[t.id]}` }
-    if (t.id === 'sign' && signed) { x.done = true; x.open = false; x.ev = `Signed by ${signer.trim()}, ${fmtTime(signed)}. Period locked.` }
-    if (t.id === 'pkg' && signed) { x.done = true; x.open = false; x.ev = 'P&L, balance sheet, cash flow and variance sent after the signature' }
+    if (t.id === 'feeds' && cardsDecided === 3) { x.done = true; x.open = false; x.ev = 'Every row seen by a person or a rule you granted' }
+    if (t.kind === 'person' && person[t.id]) { x.done = true; x.ev = t.id === 'pkg' ? `Sent by a person, ${person[t.id]}` : `Ticked by a person, ${person[t.id]}` }
+    if (t.id === 'sign' && signed) { x.done = true; x.open = false; x.ev = `Signed by ${signer.trim()}, ${fmtTime(signed)}. August is locked.` }
     return x
   }), [tied, cardsDecided, person, signed, signer])
   const openCount = tasks.filter((t) => !t.done && t.id !== 'sign' && t.id !== 'pkg').length
   const ready = openCount === 0 && !signed
 
-  const tickPerson = (id: string) => { touch(); if (person[id]) return; setPerson({ ...person, [id]: fmtTime(new Date()) }); setYou((v) => v + 1) }
+  const tickPerson = (id: string) => { touch(); if (person[id] || (id === 'pkg' && !signed)) return; setPerson({ ...person, [id]: fmtTime(new Date()) }); setYou((v) => v + 1) }
   const sign = () => {
     if (!signer.trim()) return
     touch(); setSigned(new Date())
@@ -141,29 +143,14 @@ export default function HomeShow() {
   const personDone = tasks.filter((t) => t.kind === 'person' && t.done).length
 
   return (
-    <div className="max-w-[820px] mx-auto px-4 sm:px-6 pb-24">
-      {/* progress line */}
-      <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-rule flex items-center justify-between gap-3 text-[11px] sm:text-[12.5px] font-mono tracking-[0.06em] uppercase text-muted" aria-label="Progress">
-        {/* all four steps fit a 375px phone: no "The", no separators, smaller dots below sm */}
-        <span className="flex items-center gap-2 min-w-0 overflow-x-auto scrollbar-hide">
-          {[['night', o1], ['inbox', o2], ['reconciliation', o3], ['close', o4]].map(([label, done], i) => (
-            <span key={label as string} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
-              {i > 0 && <span className="text-rule hidden sm:inline">·</span>}
-              <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${done ? 'bg-ledger-600' : 'border border-muted'}`} aria-hidden="true" />
-              <span className={done ? 'text-ink' : ''}><span className="hidden sm:inline">The&nbsp;</span>{label as string}</span>
-            </span>
-          ))}
-        </span>
-        <span className="hidden sm:inline whitespace-nowrap">You <b className="text-ink">{you}</b> · rule <b className="text-ink">{byRule}</b> · fixes <b className="text-ink">{corr}</b></span>
-      </div>
-
-      <div className="min-w-0">
-        {/* ACT 1 */}
-        <section className="pt-8 pb-6" id="act1">
+    <>
+      {/* HERO: the offer, and the real inbox beside it */}
+      <section className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-10 pb-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-10 lg:gap-14 items-center" id="top">
+        <div>
           <p className={eyebrow}>Free for good · Poof Agent $79 a month</p>
-          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[80px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Poof is free. Poof Agent does the books while you sleep.</h1>
+          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Poof is free. Poof Agent does the books while you sleep.</h1>
           <p className="font-display text-[22px] sm:text-[26px] leading-[1.1] tracking-[-0.03em] text-ledger-600 mb-4">The work disappears. The evidence doesn&apos;t.</p>
-          <p className={sub}>The ledger, invoices, reports and the close cost nothing, for good. Poof Agent sorts the bank overnight, reads the receipts and drafts the reminders, then leaves every entry for your OK in the morning. Or hand the books to a person.</p>
+          <p className={sub}>The books, invoices, reports and month-end cost nothing, for good. Poof Agent sorts the bank overnight, reads the receipts and drafts the reminders, then leaves each entry for your OK in the morning. Or hand the books to a person.</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free</Link>
             <Link href="/bookkeeper" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Ask for a bookkeeper</Link>
@@ -175,8 +162,40 @@ export default function HomeShow() {
               <Link key={href} href={href} className="text-muted hover:text-ledger-700 underline decoration-rule underline-offset-[5px] hover:decoration-ledger-600">{label} →</Link>
             ))}
           </nav>
+        </div>
 
-          <h2 className="font-display text-[26px] sm:text-[32px] leading-[1.05] tracking-[-0.035em] text-ink mt-12 mb-2">Last night, Poof Agent ran the back office.</h2>
+        <figure className="mx-auto lg:mx-0">
+          <div className="relative w-[220px] lg:w-[260px] rounded-[28px] border-[6px] border-ink bg-ink overflow-hidden shadow-[0_18px_40px_rgba(18,33,26,0.18)]">
+            <Image src="/images/approvals-phone.jpg" alt="The Approvals inbox on a phone: a Categorize 2 transactions card from the nightly run and a Create invoice card from the assistant, each with Approve and Reject" width={788} height={1600} sizes="260px" priority className="block w-full h-auto" />
+          </div>
+          <figcaption className="mt-3 text-[13px] text-muted max-w-[260px]">
+            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Real screenshot · the founder&apos;s books</span>
+            Two cards waiting for a yes: one from the overnight run, one Ask Poof drafted.
+          </figcaption>
+        </figure>
+      </section>
+
+    <div className="max-w-[820px] mx-auto px-4 sm:px-6 pb-24">
+      {/* progress line */}
+      <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 px-4 sm:px-6 py-2 bg-paper/95 backdrop-blur border-b border-rule flex items-center justify-between gap-3 text-[11px] sm:text-[12.5px] font-mono tracking-[0.06em] uppercase text-muted" aria-label="Progress">
+        {/* all four steps fit a 375px phone: no "The", no separators, smaller dots below sm */}
+        <span className="flex items-center gap-2 min-w-0 overflow-x-auto scrollbar-hide">
+          {[['night', o1], ['inbox', o2], ['bank', o3], ['month-end', o4]].map(([label, done], i) => (
+            <span key={label as string} className="flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
+              {i > 0 && <span className="text-rule hidden sm:inline">·</span>}
+              <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${done ? 'bg-ledger-600' : 'border border-muted'}`} aria-hidden="true" />
+              <span className={done ? 'text-ink' : ''}>{label as string}</span>
+            </span>
+          ))}
+        </span>
+        <span className="hidden sm:inline whitespace-nowrap">By you <b className="text-ink">{you}</b> · by a rule <b className="text-ink">{byRule}</b> · corrected <b className="text-ink">{corr}</b></span>
+      </div>
+
+      <div className="min-w-0">
+        {/* ACT 1 */}
+        <section className="pt-10 pb-6" id="act1">
+          <p className={eyebrow}>Step 1 · The night</p>
+          <h2 className={h2}>Last night, Poof Agent ran the back office.</h2>
           <p className="text-[15px] text-muted max-w-[56ch]">It pulled the bank, matched the bills to jobs, drafted the invoice from the tech&apos;s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
 
           <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
@@ -186,7 +205,7 @@ export default function HomeShow() {
         <section className="pt-16 pb-6 border-t border-rule" id="act2">
           <p className={eyebrow}>Step 2 · The inbox</p>
           <h2 className={h2}>Every entry waits for you, with its reasons.</h2>
-          <p className={sub}>Approve it, approve part of it, or say why not. Then grant a rule from work you just read, and watch it <b className="text-ink font-semibold">stop itself</b> the first time you contradict it.</p>
+          <p className={sub}>Approve it, approve part of it, or say why not. When the same answer keeps coming up, make it a rule, and watch the rule <b className="text-ink font-semibold">stop itself</b> the first time you correct it.</p>
           <div className="grid gap-3.5">
             {/* card 1 */}
             <div className="bg-white border border-rule px-[18px] py-4">
@@ -259,23 +278,14 @@ export default function HomeShow() {
             </div>
           </div>
 
-          {/* The real thing, from a phone */}
-          <figure className="mt-8 grid grid-cols-1 sm:grid-cols-[minmax(0,260px)_1fr] gap-6 items-center">
-            <div className="relative mx-auto sm:mx-0 w-[240px] rounded-[28px] border-[6px] border-ink bg-ink overflow-hidden shadow-[0_18px_40px_rgba(18,33,26,0.18)]">
-              <Image src="/images/approvals-phone.jpg" alt="The Approvals inbox on a phone: a Categorize 2 transactions card from the nightly pipeline with 29 days left, and a Create invoice card proposed by the assistant with 23 hours left, each with Approve, Reject, and Approve all like this" width={788} height={1600} sizes="240px" className="block w-full h-auto" />
-            </div>
-            <figcaption className="text-sm text-muted max-w-[44ch]">
-              <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-2">Real screenshot · the founder&apos;s books · September 2026</span>
-              The cards above are a demo. This is the inbox itself, on a phone: one card the nightly pipeline raised, one the assistant drafted, both waiting. The line under the first one says <b className="text-ink font-semibold">computed by Poof, no model involved</b>, because the evidence is gathered by code.
-            </figcaption>
-          </figure>
+          <p className="text-sm text-muted mt-6 max-w-[56ch]">These cards are a demo. The phone at the top of the page is the real inbox, from the founder&apos;s own books.</p>
         </section>
 
         {/* ACT 3 */}
         <section className="pt-16 pb-6 border-t border-rule" id="act3">
-          <p className={eyebrow}>Step 3 · The reconciliation</p>
+          <p className={eyebrow}>Step 3 · Bank against books</p>
           <h2 className={h2}>One figure. It ties or it doesn&apos;t.</h2>
-          <p className={sub}>Statement ending, less the books at period end, less what is still outstanding. The screen reads it from the server; completion stores the same number; the close reads that. <b className="text-ink font-semibold">There is no second figure.</b></p>
+          <p className={sub}>Your bank statement on one side, your books on the other, down to the penny. When they don&apos;t match, Poof shows you why. When they do, that figure is saved, and month-end reads the same one. <b className="text-ink font-semibold">There is no second figure.</b></p>
           <div className="bg-white border border-rule px-[18px] pt-1.5 pb-4 max-w-[560px]">
             <table className="w-full border-collapse">
               <tbody>
@@ -288,14 +298,13 @@ export default function HomeShow() {
           </div>
           {tied && <div className="inline-block mt-2.5 font-display text-[40px] tracking-[-0.04em] text-ledger-600 -rotate-[4deg] origin-left">Ties.</div>}
           <div className="mt-3.5"><button type="button" className={btn} onClick={reconcile} disabled={tied}>{tied ? 'Reconciled · stored as the same figure' : 'Reconcile August'}</button></div>
-          <p className="text-sm text-muted mt-3.5 max-w-[56ch]">A first reconciliation lists what was still open from before it, never the opening balance, which both sides already agree on. A row you add during the reconciliation counts even though auto-match never saw it. Cleared rows stay cleared when someone later fixes a memo.</p>
         </section>
 
         {/* ACT 4 */}
         <section className="pt-16 pb-6 border-t border-rule" id="act4">
-          <p className={eyebrow}>Step 4 · The close</p>
+          <p className={eyebrow}>Step 4 · Month-end</p>
           <h2 className={h2}>The close is a record, and you are the signature.</h2>
-          <p className={sub}>Seventeen tasks with due dates. <b className="text-ink font-semibold">Thirteen tick themselves</b> when the books prove them and cannot be ticked by hand; each open one says why in a sentence. The rest are a person&apos;s tick, recorded with who and when. This page has been keeping score since you arrived.</p>
+          <p className={sub}>Month-end is a checklist of nineteen jobs. <b className="text-ink font-semibold">Fifteen tick themselves</b> when the books prove they&apos;re done, and nobody can tick them by hand. Three wait for a person and record who and when. Your signature locks the month. This page has been keeping score since you arrived.</p>
           <ul className="border-t border-ink">
             {tasks.map((t) => (
               <li key={t.id} className="grid grid-cols-[24px_1fr_auto] gap-3 py-[9px] border-b border-rule text-[14.5px] items-start">
@@ -330,7 +339,7 @@ export default function HomeShow() {
                 <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Took</dt><dd>{(() => { const ms = signed.getTime() - (start.current || signed).getTime(); const m = Math.floor(ms / 60000), s = Math.round((ms % 60000) / 1000); return `${m ? m + ' min ' : ''}${s} sec, start to signature` })()}</dd>
                 <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Decisions</dt><dd>{you} by a person · {byRule} by a rule you granted</dd>
                 <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Corrections</dt><dd>{corr} {corr === 1 ? 'correction' : 'corrections'}{rule === 'paused' ? ' · one rule still paused' : rule === 'revoked' ? ' · one rule revoked' : ''}</dd>
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Tasks</dt><dd>17 · {autoDone} ticked themselves · {personDone} by a person</dd>
+                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Tasks</dt><dd>{tasks.length} · {autoDone} ticked themselves · {personDone} by a person</dd>
               </dl>
               <div className="mt-3.5 flex gap-2.5 items-center flex-wrap text-sm text-muted">
                 <button type="button" className={btnGhostSm} disabled={!!reopened} onClick={() => setReopened(new Date())}>Reopen the close</button>
@@ -350,7 +359,7 @@ export default function HomeShow() {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1.5">Austin Semple, former controller</h3>
-              <p className="text-[15px] text-muted max-w-[52ch]">Three years as an auditor, then seven as a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
+              <p className="text-[15px] text-muted max-w-[52ch]">Two years as an auditor, then seven as a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
               <p className="mt-3 text-sm"><Link href="/about" className="text-ledger-600 font-semibold hover:text-ledger-700">More about Austin</Link></p>
             </div>
           </div>
@@ -358,11 +367,12 @@ export default function HomeShow() {
 
         {/* SOURCES */}
         <section className="pt-12 pb-6 border-t border-rule" id="sources">
-          <p className="text-sm text-muted max-w-[62ch]">Every figure on this page is either a demo, marked as one, or a screenshot of the founder&apos;s own books. Prices were checked against QuickBooks on 23 Aug 2026.</p>
+          <p className="text-sm text-muted max-w-[62ch]">Every figure on this page is either a demo, marked as one, or a screenshot of the founder&apos;s own books.</p>
           <p className="text-sm text-muted mt-3 max-w-[60ch]">Run a shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">See a service call go from the phone to the P&amp;L →</Link></p>
           <p className="text-sm text-muted mt-3 max-w-[60ch]">Rather not do any of this yourself? <Link href="/bookkeeper" className="text-ledger-600 font-semibold hover:text-ledger-700">A bookkeeper who works in Poof will →</Link></p>
         </section>
       </div>
     </div>
+    </>
   )
 }
