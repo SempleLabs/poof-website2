@@ -64,9 +64,14 @@ const deadlines = [
 // Articles by what the reader is trying to do. Chart of accounts posts live with their templates above.
 const topics: { title: string; blurb: string; slugs: string[] }[] = [
   {
+    title: '1099s',
+    blurb: 'The new $2,000 line, getting every W-9 in, and filing without an IRS filer code.',
+    slugs: ['file-1099s-online-2026', '1099-threshold-2026', 'collect-w9-from-contractors', 'file-1099s-for-clients'],
+  },
+  {
     title: 'Taxes and year end',
     blurb: 'What to have ready, what changed for 2026, and what to set aside.',
-    slugs: ['1099-threshold-2026', 'quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
+    slugs: ['quarterly-estimated-taxes', 'how-much-to-set-aside-for-taxes', 'what-your-cpa-needs-at-year-end', 'texas-franchise-tax-small-business', 'texas-business-personal-property-rendition', 'tax-season-bookkeeping-checklist'],
   },
   {
     title: 'Leaving QuickBooks',
@@ -107,6 +112,7 @@ const templates = [
 
 const downloads = [
   { title: 'Year-End Package for Your CPA', type: 'Checklist', description: 'Everything your CPA asks for in January, in the order they ask, with the questions answered from your books.', href: '/guides/year-end-cpa-package-checklist.html' },
+  { title: 'W-9 Request Emails', type: 'Template', description: 'The first ask, two reminders, and the note for a contractor who won’t send one. Copy, fill in, send.', href: '/guides/w9-request-email-templates.html' },
   { title: '1099 Vendor Tracker', type: 'CSV', description: 'One row per contractor: W-9 on file, how you paid them, the year’s total, and whether they cross $2,000.', href: '/downloads/1099-vendor-tracker-2026.csv', download: true },
   { title: 'Monthly Bookkeeping Checklist', type: 'Checklist', description: 'The tasks that keep a month from getting away from you, in the order they depend on each other.', href: '/guides/monthly-bookkeeping-checklist.html' },
   { title: 'Year-End Closing Procedures', type: 'Guide', description: 'Closing the fiscal year: the reconciliations, the adjustments, and the lock.', href: '/guides/year-end-closing-procedures.html' },
@@ -115,6 +121,7 @@ const downloads = [
 ]
 
 const productPages = [
+  { title: 'File your 1099s', description: 'Poof collects the W-9s, files with the IRS, and sends every copy. The first 3 forms free.', href: '/1099s' },
   { title: 'Taxes', description: 'The calendar, the reserve, the four estimates, and a January package for your CPA.', href: '/taxes' },
   { title: 'Poof for shops', description: 'The phone answered, the job on the board, the tech closing it from a text.', href: '/trades' },
   { title: 'The close', description: 'Nineteen tasks with due dates, fifteen ticked by the books themselves.', href: '/close' },
