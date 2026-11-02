@@ -38,6 +38,10 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 - [Late or Wrong 1099? Penalties, Extensions and Corrections for 2026 Forms](https://www.poofai.com/blog/late-or-corrected-1099)
 - [Tax Deductions for HVAC, Plumbing and Electrical Contractors (2026)](https://www.poofai.com/blog/trade-contractor-tax-deductions)
 - [Buying a Work Truck Before Year End: Section 179 and Bonus Depreciation (2026)](https://www.poofai.com/blog/buy-work-truck-before-year-end)
+- [Contractor or Employee? How Trade Shops Should Classify Helpers and Subs (2026)](https://www.poofai.com/blog/contractor-or-employee-trade-shop)
+- [Year-End Checklist: 12 Things to Do Before December 31, 2026](https://www.poofai.com/blog/year-end-checklist-before-december-31)
+- [Free Bookkeeping Software in 2026: What Each Free Plan Actually Includes](https://www.poofai.com/blog/free-bookkeeping-software-2026)
+- [Bookkeeping With Claude: What It Does Well, Where It Fails, and How to Connect Your Books](https://www.poofai.com/blog/bookkeeping-with-claude)
 - [Quarterly Estimated Taxes 2026: Due Dates and Safe Harbor](https://www.poofai.com/blog/quarterly-estimated-taxes)
 - [How Much to Set Aside for Taxes as a Business Owner](https://www.poofai.com/blog/how-much-to-set-aside-for-taxes)
 - [What Your CPA Needs at Year End: The 2026 Checklist](https://www.poofai.com/blog/what-your-cpa-needs-at-year-end)
@@ -138,7 +142,7 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 - **1099 filing:** preparing is free; filing is free for the first 3 forms each year, then $2.49 a form; $1.79 for each copy Poof mails; emailed copies free. Bookkeepers filing for clients: $2.49 a form up to 25 a year, then $1.49.
 - **A person to do your books:** no published price; every job is quoted after the owner says how far behind the books are, roughly how many transactions a month, and whether they run payroll.
 - The price does not change with the number of technicians or trucks.
-- Comparison anchor: QuickBooks has no free plan. The fair QuickBooks Online comparison for Poof Agent is Plus at $140/mo — the tier carrying job costing, budgets, and full reporting — not Simple Start at $38/mo, which is single-user. QuickBooks pricing verified August 2026.
+- Comparison anchor: QuickBooks has a free plan, QuickBooks Free, limited to 1 user with no accountant access, 2 invoices and 1 estimate a month, 1 connected bank account, and 3 reports (checked 2026-11-02); its paid plans start at Simple Start, $38/mo. The fair QuickBooks Online comparison for Poof Agent is Plus at $140/mo — the tier carrying job costing, budgets, and full reporting — not Simple Start at $38/mo, which is single-user. QuickBooks paid pricing verified August 2026.
 - **Trial:** every new company gets Poof Agent free for 30 days, no credit card required, then stays on Free
 - **Cancel anytime:** Poof Agent stays on to the end of the paid period, then the company is on Free with every screen, rule and number.
 - **Product Hunt:** code PRODUCTHUNT at Poof Agent's checkout makes the first three months of Poof Agent free.

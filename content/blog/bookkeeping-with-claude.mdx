@@ -1,0 +1,95 @@
+---
+title: "Bookkeeping With Claude: What It Does Well, Where It Fails, and How to Connect Your Books"
+excerpt: "Claude can explain a P&L, suggest categories and draft the email to a late customer. It is not a ledger. Where pasting statements into a chat breaks down, the pattern that works (books in a ledger, Claude reading them), and how to connect Poof to Claude in three steps."
+category: "AI & Automation"
+readTime: "8 min read"
+date: "2026-11-02"
+author: "Austin Semple"
+faqs:
+  - question: "Can Claude do my bookkeeping?"
+    answer: "Claude can do parts of it well: explaining what a report means, suggesting how to categorize a transaction, spotting an odd charge, and drafting a collection email. It is not a ledger. A chat doesn't keep a balanced set of books, reconcile them to the bank month after month, or keep a record of who approved what. The pattern that works is keeping the books in accounting software and letting Claude read them through a connector."
+  - question: "Is it safe to upload bank statements to Claude?"
+    answer: "A bank statement carries account numbers, balances, and every customer and vendor you deal with. Before you upload one to any AI chat, check your plan's data settings and your own policy. A connector that reads your books avoids the upload: with Poof, Claude gets only what your role can see, customer and vendor names are swapped for codes before anything leaves Poof, and personal details are removed."
+  - question: "How do I connect my books to Claude?"
+    answer: "With Poof, open Poof Bookkeeping in Claude's connector directory, press Connect, sign in to Poof and choose Allow. Then ask Claude about your books in plain words. You can also add it by hand in Claude under Settings, Connectors, Add custom connector, with the address https://mcp.poofai.com/mcp. The connector is part of Poof's free plan."
+  - question: "Can Claude post entries or pay bills in Poof?"
+    answer: "No. The connection is read-only. Claude can read your reports, invoices, bills, the close and what is waiting for approval, and it can give you a link to approve a card in Poof, but it can't post an entry, move money, send an invoice or approve anything. Changes still happen in Poof, by a person."
+  - question: "Does Poof work with ChatGPT and Grok too?"
+    answer: "Grok connects today as a custom connector, using the same address. The ChatGPT app is on its way to ChatGPT's app directory; until it is listed, use Claude or Grok. All three use the same Sign in with Poof page, follow your role, and disconnect from Settings, Chat apps, AI assistants in Poof."
+---
+
+**Claude is good at the thinking parts of bookkeeping and bad at being the books.** Ask it what a gross margin drop means, how to categorize a strange charge, or how to word a reminder to a customer 60 days late, and it does well. Paste in three months of bank statements and ask it to keep your books, and you get something that looks like a ledger but doesn't balance, doesn't reconcile, and isn't there next month. The setup that works is the opposite way round: keep the books in accounting software, and let Claude **read** them. With Poof, that is a free connector in Claude's directory, and it takes three steps.
+
+This is the post for owners who already use Claude every day and wonder why it can't just do the books.
+
+## What Claude does well
+
+- **Explaining.** "Why is my profit up but my bank balance down?" is a question Claude answers clearly, and it will walk through receivables, inventory and loan payments without making you feel slow.
+- **Suggesting categories.** Give it a charge, "ACH WINSUPPLY 0418", and it will tell you it is probably materials from a plumbing and HVAC supply house.
+- **Spotting the odd one out.** Hand it a list of charges and it notices the same amount twice in two days, or a subscription you forgot.
+- **Drafting.** The collection email, the note to the CPA, the explanation for a lender of why March was slow.
+- **Thinking out loud about decisions.** Lease or buy the truck, raise prices or add a tech, what a slow winter does to cash.
+
+## Where a chat falls down as the books
+
+**It doesn't keep a ledger.** Double-entry books are a system: every entry balances, every account carries its history, and last month's closing balance is this month's opening one. A chat starts fresh, or close to it, and nothing guarantees this month's numbers agree with last month's.
+
+**It doesn't reconcile.** Reconciliation is matching every line on the bank statement to the books, every month, and explaining the difference to the cent. That is a repeated, exact job, and an exact job is where you want software that refuses to finish until the difference is zero.
+
+**It has no audit trail.** Who approved this entry, when, and why? A CPA, a lender, or the IRS can ask. A chat history isn't a record.
+
+**It doesn't file anything, or remind you.** The 1099s due February 1, the January 15 estimate, the sales tax return: a chat only knows about them if you ask.
+
+**Statements carry a lot of private data.** Account numbers, balances, and the names of everyone you pay or who pays you. Before you upload any of that to an AI chat, check your plan's data settings and your own policy.
+
+None of this is a knock on Claude. It is the difference between an advisor and a set of books. You want both.
+
+## The pattern that works: books in a ledger, Claude reading them
+
+Keep the books in accounting software, where entries balance, the bank ties out, and every change has a name on it. Then connect that software to Claude so you can ask about the books in plain words, from the chat you already have open.
+
+That gets you the explanation and the advice, on numbers that are real and current, without pasting statements into a chat.
+
+## Connect Poof to Claude
+
+Poof Bookkeeping is in Claude's connector directory. You need a Poof account, which is free.
+
+1. Open [Poof Bookkeeping in Claude's directory](https://claude.ai/directory/connectors/poof-bookkeeping) and press **Connect**.
+2. Sign in to Poof and choose **Allow**.
+3. Ask Claude about your books.
+
+If you prefer to add it by hand, go to **Settings → Connectors → Add custom connector** in Claude and paste **https://mcp.poofai.com/mcp**. The full setup, including Grok, is on the [Poof in Claude page](/ai).
+
+## What to ask
+
+- "How did we do last month?"
+- "Who owes us money, and how late are they?"
+- "What bills are due this week?"
+- "Which jobs made money this quarter?"
+- "Is last month closed? What's still open?"
+- "What's waiting for my approval in Poof?"
+
+Then keep going, because this is where Claude shines. "Why was the Garcia job's margin so low?" "Draft a friendly reminder to the three customers over 60 days." "If we add a tech in March, what does that do to cash by June?"
+
+## What the connection can and can't do
+
+| Can Claude… | Through Poof |
+|---|---|
+| Read the P&L, receivables, bills, jobs, the close and the approvals inbox | Yes |
+| See more than your role in Poof can see | No. An office manager's Claude gets receivables and invoices, not the P&L |
+| Post an entry, send an invoice, move money | No. It is read-only |
+| Approve a card | No. It can give you a link to approve it in Poof |
+| See customer and vendor names | No. Names are swapped for codes before anything leaves Poof, and personal details are removed |
+| Keep access after you disconnect | No. Settings → Chat apps → AI assistants turns it off, and removing someone from your company ends their AI's access too |
+
+The read-only part is deliberate. An AI that reads your books can only be wrong in what it tells you, which you can check. An AI that writes to your books can be wrong in the books themselves. In Poof, the AI that does the work, Poof Agent, proposes every write on a card with the evidence, and a person approves it. More on why in [should AI post to your books?](/blog/should-ai-post-to-your-books)
+
+## ChatGPT and Grok
+
+Grok connects today as a custom connector with the same address. Poof's ChatGPT app is on its way to ChatGPT's app directory; until it is listed, use Claude or Grok. All three use the same Sign in with Poof page and follow the same rules.
+
+## Where to start
+
+If your books are in a spreadsheet or a shoebox, start there: [how to set up bookkeeping for a new LLC](/blog/how-to-set-up-bookkeeping-new-llc) covers the basics, and Poof can bring in the bank's last 90 days on the first connection. If they are in QuickBooks, the [QuickBooks alternatives](/blog/best-quickbooks-alternatives-small-business) post compares the options. Either way, once the books are somewhere real, connecting Claude is the easy part.
+
+*Written by Austin Semple, a former controller: two years in audit, seven running the books for small businesses, and the founder of Poof. Poof keeps the books, and Claude reads them, read-only and only what your role can see. [Start free](https://app.poofai.com/register), no card required.*
