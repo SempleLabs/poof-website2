@@ -352,8 +352,8 @@ export default function TradesShow() {
               (512) 555-<span className="text-ledger-600">0142</span>
             </div>
             <div className="max-w-[44ch] text-[13.5px] text-muted">
-              Live, this is the demo shop&apos;s real line: call it and watch the job land on the board below. Here,
-              the call is scripted.
+              The demo shop&apos;s line. In your shop it&apos;s your own number, and Poof&apos;s receptionist answers
+              it after hours. Here, the call is scripted.
             </div>
           </div>
 

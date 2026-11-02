@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/how-it-works',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'How Poof Works — Connect, propose, approve, sign',
     description:
       'The AI proposes every entry with its evidence. A person approves it. The month closes as a record. Nothing reaches the books unseen.',
@@ -61,7 +62,7 @@ const afterward = [
   { title: 'Invoices, estimates, and payments', body: 'Send invoices and estimates, convert an estimate in one click, follow up automatically, and take card or ACH through Stripe. Payments reconcile to the ledger by themselves.' },
   { title: 'Budgets and the cash plan', body: 'Describe a goal and get a budget. See twelve months of cash with confidence bands, and a forward view of the bills coming due against the cash to cover them.' },
   { title: 'Ask Poof', body: 'Ask where things stand: is August ready to close, what do we owe Ferguson, which bills are due this week. Ask it to invoice someone and the same approval card appears in the chat.' },
-  { title: 'The books, as evidence', body: 'Double-entry with reversing entries, an immutable trial-balance snapshot at each close, SOC 2 audit logging, six roles and 46 permissions. Built to survive an audit, not just a tax return.' },
+  { title: 'The books, as evidence', body: 'Double-entry with reversing entries, an immutable trial-balance snapshot at each close, an audit log, six roles and 46 permissions. Built to survive an audit, not just a tax return.' },
 ]
 
 const howItWorksFaqs = [
@@ -71,7 +72,7 @@ const howItWorksFaqs = [
   },
   {
     question: 'What if the AI categorizes something wrong?',
-    answer: 'It never posts on its own. A wrong proposal is a card you reject with a reason, and that reason is recorded. If a standing rule made the mistake, correcting any transaction the rule is about pauses the rule, tells you which correction stopped it, and waits for you to resume or revoke it.',
+    answer: 'Nothing posts on its own unless you turned on Autopilot or granted a rule, and both stop the first time you correct them. A wrong proposal is a card you reject with a reason, and that reason is recorded. If a standing rule made the mistake, correcting any transaction the rule is about pauses the rule, tells you which correction stopped it, and waits for you to resume or revoke it.',
   },
   {
     question: 'Does anything get written to my books without me?',

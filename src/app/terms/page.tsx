@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'November 1, 2026'
+const UPDATED = 'November 2, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -58,8 +58,8 @@ export default function TermsPage() {
           <p>If you ask for a bookkeeper through Poof, the bookkeeper quotes the work and agrees its scope and price with you directly, in an engagement of their own. That engagement is separate from the Service and from these Terms. The bookkeeper works in your Poof company with the access you give them, and you can remove that access at any time.</p>
         </Section>
 
-        <Section title="The Spend Score tool and not financial advice">
-          <p>The free Spend Score tool and other analyses are provided for informational purposes only. They are not a CPA audit, attestation, tax, accounting, investment, or legal advice. You are responsible for verifying results and for your own financial and tax decisions.</p>
+        <Section title="Free tools and not financial advice">
+          <p>The free tools on our website, such as the Job Margin Check, and other analyses are provided for informational purposes only. They are not a CPA audit, attestation, tax, accounting, investment, or legal advice. You are responsible for verifying results and for your own financial and tax decisions.</p>
         </Section>
 
         <Section title="Text messages (SMS)">

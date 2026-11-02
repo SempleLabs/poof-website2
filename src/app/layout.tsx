@@ -25,7 +25,7 @@ const bricolage = Bricolage_Grotesque({
 })
 
 export const metadata: Metadata = {
-  title: 'Poof — The back office, run by AI. Signed by you.',
+  title: 'Poof — Free bookkeeping software, with an AI agent you can hire',
   description: 'Poof runs the back office: the books, the invoices, the cash plan, the month-end close, and for shops the phone and the field. Every AI write waits on a card with its evidence. Poof is free; Poof Agent is $79 a month, and the AI receptionist is an add-on.',
   keywords: 'AI back office, AI bookkeeping software, month-end close software, job costing, per-job profitability, AI receptionist for shops, approvals inbox, small business accounting software, QuickBooks alternative',
   authors: [{ name: 'Poof' }],

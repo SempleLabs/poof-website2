@@ -1,12 +1,13 @@
 import crypto from 'crypto'
 
-// Secret used to sign unsubscribe tokens. Prefer a dedicated secret, but fall
-// back to the (server-only) Supabase service role key so one-click unsubscribe
-// works without additional env configuration.
-const SECRET =
-  process.env.UNSUBSCRIBE_SECRET ||
-  process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  'poof-unsubscribe-dev-secret'
+// Secret used to sign unsubscribe tokens: a dedicated one, else the (server-only)
+// Supabase service role key, so links already sent keep working. Never a value
+// written in this file — anyone can read it, so tokens signed with it could be forged.
+function secret(): string {
+  const s = process.env.UNSUBSCRIBE_SECRET || process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!s) throw new Error('UNSUBSCRIBE_SECRET (or SUPABASE_SERVICE_ROLE_KEY) is not set')
+  return s
+}
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.poofai.com').replace(/\/$/, '')
 
@@ -14,7 +15,7 @@ const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.poofai.com').
 // a stable link without us storing per-send tokens, while preventing anyone from
 // unsubscribing an arbitrary address by guessing.
 export function makeUnsubscribeToken(email: string): string {
-  return crypto.createHmac('sha256', SECRET).update(email.trim().toLowerCase()).digest('hex')
+  return crypto.createHmac('sha256', secret()).update(email.trim().toLowerCase()).digest('hex')
 }
 
 export function verifyUnsubscribeToken(email: string, token: string): boolean {

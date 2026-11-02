@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/demo',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Book a Demo of Poof',
     description:
       'Pick a time for a personalized 30-minute demo. See how AI-powered, controller-reviewed bookkeeping works for your business — no pressure.',

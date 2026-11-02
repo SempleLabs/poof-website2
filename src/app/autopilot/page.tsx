@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Let Poof post categorizations to your ledger on its own, inside limits you set: a confidence bar, a minimum history, a dollar ceiling, and a rule that pauses itself the first time you correct it. Off by default. Autopilot never sends anything to a customer.',
   alternates: { canonical: 'https://www.poofai.com/autopilot' },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Autopilot with limits',
     description: 'AI that posts to your books on its own, inside limits you set, and stops itself when it is wrong.',
     url: 'https://www.poofai.com/autopilot',

@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/resources',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof Resources: tax season, templates, checklists',
     description:
       'The 2026 tax deadlines, 1099 and estimated tax guides, chart of accounts templates by trade, and checklists written by a controller. No email required.',

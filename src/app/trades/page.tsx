@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/trades',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof for shops — the back office for HVAC, plumbing, and electrical',
     description:
       'From the 9:40pm call to the per-job P&L, with a person on every entry. Poof is free; Poof Agent is $79 a month; the AI receptionist is an add-on.',

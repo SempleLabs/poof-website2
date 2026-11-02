@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/about',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'About Poof — Built by a Former Controller',
     description:
       'Poof runs the small-business back office. Built by Austin Semple, a former controller: three years in audit, then seven running the books for small businesses.',
@@ -46,7 +47,7 @@ export default function AboutPage() {
     },
     {
       title: "Trust & Security",
-      description: "Read-only bank access, encryption in transit, two-factor sign-in, six roles with 46 permissions, and SOC 2 audit logging with PII masking.",
+      description: "Read-only bank access, encryption in transit, two-factor sign-in, six roles with 46 permissions, and an audit log with personal details masked.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

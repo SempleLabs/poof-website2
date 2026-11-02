@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/features',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof Features — 270 Tools, Free to Start',
     description:
       '270 features: AI categorization, budgeting, cash flow forecasting, invoicing, job costing, receipt scanning, auto-reconciliation, and 14 reports. Poof is free; Poof Agent is $79/mo.',

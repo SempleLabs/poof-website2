@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/blog',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof Blog — AI Bookkeeping Tips & Guides',
     description: 'Practical guides on AI bookkeeping, automating your finances, and keeping clean books.',
     url: 'https://www.poofai.com/blog',

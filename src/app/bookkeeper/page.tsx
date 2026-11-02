@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Behind on your books, or done doing them yourself? Ask for a bookkeeper who works in Poof. Say how far behind you are; a person usually gets back to you within a business day with a quote. Every job is quoted, and Poof stays free.',
   alternates: { canonical: 'https://www.poofai.com/bookkeeper' },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Want a person to do your books?',
     description: 'A bookkeeper who works in Poof. Tell us how far behind you are; we quote the job.',
     url: 'https://www.poofai.com/bookkeeper',

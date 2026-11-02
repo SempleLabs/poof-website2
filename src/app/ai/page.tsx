@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/ai',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof in Claude and ChatGPT',
     description: 'Ask Claude or ChatGPT about your books. Poof keeps the numbers; your AI reads them, read-only.',
     url: 'https://www.poofai.com/ai',

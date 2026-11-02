@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/pricing',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof Pricing — Free for Good, Poof Agent $79/mo',
     description:
       'Poof is free for good: the books, invoices, all 14 reports and the close. Poof Agent, the AI that works while you sleep, is $79/mo vs $140/mo for QuickBooks Plus. Poof Agent free for 30 days, no card.',

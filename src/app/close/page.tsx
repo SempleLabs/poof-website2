@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Month-end close as a record: 17 tasks with due dates, 13 of them proven by the books and ticked automatically, a reconciliation that ties to one figure, and a signature that locks the period. For bookkeepers: every client company is free, and Poof Agent is $29 a client.',
   alternates: { canonical: 'https://www.poofai.com/close' },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'The close, as a record',
     description: 'A checklist the books tick off themselves, a reconciliation that ties to one figure, and a signature. Every client company free.',
     url: 'https://www.poofai.com/close',

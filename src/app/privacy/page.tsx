@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'October 24, 2026'
+const UPDATED = 'November 2, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -33,14 +33,12 @@ export default function PrivacyPolicyPage() {
         <p className="mt-6 text-slate-700 leading-relaxed">
           This Privacy Policy explains how Poof, a product of Semple Labs LLC (&ldquo;Poof,&rdquo; &ldquo;we,&rdquo;
           &ldquo;us&rdquo;), collects, uses, shares, and protects information when you visit{' '}
-          <span className="font-medium">poofai.com</span>, use our website tools (including the free Spend Score
-          analyzer), or sign up for our product.
+          <span className="font-medium">poofai.com</span>, use our website tools, or sign up for our product.
         </p>
 
         <Section title="Information we collect">
           <ul className="list-disc pl-6 space-y-2">
             <li><span className="font-medium">Information you provide:</span> your name, email address, business details, and any message you submit through our contact, demo, newsletter, or analysis-request forms.</li>
-            <li><span className="font-medium">Spend Score uploads:</span> when you use the free Spend Score tool, the bank statement (CSV, PDF, or image) you upload and the transactions it contains.</li>
             <li><span className="font-medium">Account &amp; product data:</span> if you create a Poof account, the financial data you connect or import in order to use the bookkeeping product.</li>
             <li><span className="font-medium">Usage &amp; device data:</span> pages viewed, referring URLs, IP address, browser and device information, and similar analytics data collected through cookies and similar technologies (only where permitted by your consent — see &ldquo;Cookies &amp; tracking&rdquo;).</li>
           </ul>
@@ -49,7 +47,7 @@ export default function PrivacyPolicyPage() {
         <Section title="How we use your information">
           <ul className="list-disc pl-6 space-y-2">
             <li>To provide, operate, and improve our website, tools, and product.</li>
-            <li>To generate your Spend Score report and respond to your requests.</li>
+            <li>To respond to your requests and send what you asked for, such as a Job Margin Check write-up.</li>
             <li>To communicate with you about your account, support, and — where you have opted in — product updates and marketing.</li>
             <li>To measure website performance and, with your consent, advertising effectiveness.</li>
             <li>To protect against fraud and abuse and to comply with legal obligations.</li>
@@ -59,9 +57,11 @@ export default function PrivacyPolicyPage() {
         <Section title="Service providers &amp; sharing">
           <p>We do not sell your personal information. We share data only with service providers (processors) that help us operate, and only as needed:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><span className="font-medium">OpenAI</span> — processes the contents of your Spend Score upload (and certain in-product AI features) to generate results. It is not used to train their models via our API usage.</li>
+            <li><span className="font-medium">OpenAI</span> — powers AI features in the product. It is not used to train their models via our API usage.</li>
             <li><span className="font-medium">Supabase</span> — stores form submissions and account data.</li>
             <li><span className="font-medium">Resend</span> — sends transactional and (where opted in) marketing email.</li>
+            <li><span className="font-medium">Formspree</span> — receives messages sent through our contact form.</li>
+            <li><span className="font-medium">Cal.com</span> — schedules demo calls you book through our demo page.</li>
             <li><span className="font-medium">Plaid</span> — securely connects bank accounts in the product with read-only access; we never receive your banking credentials.</li>
             <li><span className="font-medium">Google Analytics</span> and <span className="font-medium">X (Twitter) Ads</span> — measure traffic and ad performance, loaded only after you grant consent.</li>
           </ul>
@@ -131,8 +131,8 @@ export default function PrivacyPolicyPage() {
 
         <Section title="Data retention">
           <p>
-            Spend Score uploads are processed to create your report and are not retained by us afterward. If you provide
-            your email to receive or unlock a report, we retain that email. Account and form data is retained for as long
+            If you provide your email to receive a write-up or result from one of our free tools, we retain that email.
+            Account and form data is retained for as long
             as needed to provide the service and meet legal obligations, after which it is deleted or anonymized.
           </p>
         </Section>

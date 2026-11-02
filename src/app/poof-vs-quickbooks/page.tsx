@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.poofai.com/poof-vs-quickbooks',
   },
   openGraph: {
+    images: ['/og-image.png'],
     title: 'Poof vs QuickBooks — AI Bookkeeping Comparison',
     description:
       'Compare Poof and QuickBooks side by side: Poof free and Poof Agent $79/mo vs $140/mo QuickBooks Plus, with AI budgeting, cash flow forecasting, job costing, and auto-reconciliation.',
@@ -274,7 +275,7 @@ export default function PoofVsQuickbooksPage() {
                 <li className="flex items-start gap-2">
                   <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>Roles and audit logging are Advanced-tier at QuickBooks.</strong> Poof&apos;s 6 roles,
-                  46 granular permissions, and SOC 2 audit logging with PII masking are included &mdash; QuickBooks puts
+                  46 granular permissions, and an audit log with personal details masked are included &mdash; QuickBooks puts
                   that class of capability on its $340/mo plan.</span>
                 </li>
                 <li className="flex items-start gap-2">
