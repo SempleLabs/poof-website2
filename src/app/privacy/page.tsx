@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'November 2, 2026'
+const UPDATED = 'November 6, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -109,8 +109,9 @@ export default function PrivacyPolicyPage() {
             </li>
             <li>
               <span className="font-medium">What we keep:</span> a record of each request (which tool, when, how long it took and
-              how many items were redacted), not the content of your conversation. Sign-in tokens are stored only in a hashed
-              form; access tokens last one hour and refresh tokens 60 days.
+              how many items were redacted), not the content of your conversation. To answer, your assistant sends Poof the details
+              of its request, such as a date range or a search word. We use them to answer and don&rsquo;t keep them with that
+              record. Sign-in tokens are stored only in a hashed form; access tokens last one hour and refresh tokens 60 days.
             </li>
             <li>
               <span className="font-medium">Your controls:</span> disconnect any time in Poof under Settings → Chat apps → AI
