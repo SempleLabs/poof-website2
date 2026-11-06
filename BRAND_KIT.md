@@ -64,7 +64,7 @@ Everything in this table was fixed by site PR #30 (merged 2026-11-01). Site PR #
 - **Rules:** Poof *offers* a rule, or a person asks for one in a sentence ("always put Lowe's under materials"); either way an owner or admin approves the rule as a card. There is no settings form for writing rules. A rule never acts above its ceiling — "the rule is the rule".
 - **Voice** is opt-in per device, not on by default.
 - **The iPhone app** is built and submitted (2026-10-26) but **not on the App Store**. Don't mention it on the site until Austin says it is released.
-- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), AI apps drafting cards from Claude or ChatGPT (`MCP_CARD_APPS` is off), the ChatGPT app listing (in review), per-company AI cost ceilings, and nightly backups.
+- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), AI apps drafting cards from Claude or ChatGPT (`MCP_CARD_APPS` is off), per-company AI cost ceilings, and nightly backups.
 
 **On the count.** Verify by summing the groups, not by reading this table.
 
@@ -641,7 +641,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 20. **Talk to Poof in Telegram and Slack** — ask, get answers, and approve or reject cards right in the chat; every copy of a card stays in step
 21. **A morning summary where you work** — what needs your OK today, delivered to the chat app you use
 22. **Ask how the business is doing** — close rate, average ticket, top tech, callbacks, members, utilization, P&L, A/R aging and job profitability; the numbers equal the screens, and tests check that they do. Also "how's the Garcia job vs the quote?", requests, and hours
-23. **Use Poof from Claude, ChatGPT or Grok** — "Sign in with Poof": a consent page names the app, the company and the person, the app gets only what that person's role can read, and Settings → Chat apps disconnects it. **Poof Bookkeeping is in Claude's directory** (published 2026-10-24); the ChatGPT app is in review (app #459, #469)
+23. **Use Poof from Claude, ChatGPT or Grok** — "Sign in with Poof": a consent page names the app, the company and the person, the app gets only what that person's role can read, and Settings → Chat apps disconnects it. **Poof Bookkeeping is in Claude's directory** (published 2026-10-24); **Poof Bookkeeping is in ChatGPT's plugins** (published 2026-11-05; app #459, #469)
 
 #### 10. Job Costing, Month-End Close & Payments (23 features)
 1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-15-features))
@@ -1241,8 +1241,9 @@ on Poof's card, in the chat or in Approvals — never by a rule, never by the ag
 - **Sign in with Poof (app #459, live):** a customer connects Claude, ChatGPT or Grok to their own
   company through an OAuth consent page, with tools scoped by their role, and manages it under
   Settings → Chat apps → AI assistants. **Claude's directory: published 2026-10-24** (the site's
-  `/ai` page says so). **ChatGPT: in review** since 2026-10-25 — don't say Poof is in ChatGPT's apps
-  until Austin publishes it.
+  `/ai` page says so). **ChatGPT's plugins: published 2026-11-05** (approved the same day). People find it by searching
+  Plugins for "Poof Bookkeeping" and pressing **Install plugin**; direct link:
+  https://chatgpt.com/plugins/plugin_asdk_app_6adec8d8a54881919666e907baba1602
 - Do not describe it as a published, open, or generally available API. It is a working surface
   with real users, not a developer platform with docs and sign-up.
 
