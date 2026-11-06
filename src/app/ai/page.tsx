@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Poof in Claude, ChatGPT and Grok — Ask Your AI About Your Books | Poof',
   description:
     'Connect Poof to Claude or ChatGPT and ask about your books in plain words: last month’s profit, who owes you, what bills are due, which jobs made money. Read-only, follows your role, disconnect any time.',
-  keywords: 'Claude connector, ChatGPT app, bookkeeping AI, MCP, ask AI about my books',
+  keywords: 'Claude connector, ChatGPT plugin, bookkeeping AI, MCP, ask AI about my books',
   alternates: {
     canonical: 'https://www.poofai.com/ai',
   },
@@ -134,13 +134,15 @@ export default function AiPage() {
             <AnimateOnScroll animation="fade-up" delay={180}>
               <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8 h-full">
                 <h3 className="text-xl font-bold font-display text-slate-900 mb-4">ChatGPT</h3>
-                <p className="text-slate-700 leading-relaxed mb-4">
-                  Poof is on its way to ChatGPT’s app directory. Once it’s listed, search for <b>Poof</b> in ChatGPT’s apps, press
-                  Connect, sign in to Poof and choose <b>Allow</b>.
-                </p>
-                <p className="text-slate-500 text-sm leading-relaxed">
-                  Want it sooner? <Link href="/contact" className="text-ledger-700 font-semibold hover:underline">Tell us</Link> and we’ll
-                  let you know the day it’s live.
+                <Steps
+                  steps={[
+                    <>Open <a href="https://chatgpt.com/plugins/plugin_asdk_app_6adec8d8a54881919666e907baba1602" className="text-ledger-700 font-semibold hover:underline">Poof Bookkeeping in ChatGPT&rsquo;s plugins</a> and press <b>Install plugin</b>. ChatGPT asks you to log in first if you aren&rsquo;t already.</>,
+                    <>Sign in to Poof and choose <b>Allow</b>.</>,
+                    <>Ask ChatGPT about your books.</>,
+                  ]}
+                />
+                <p className="text-slate-500 text-sm leading-relaxed mt-4">
+                  Or search ChatGPT&rsquo;s <b>Plugins</b> for <b>Poof Bookkeeping</b>.
                 </p>
               </div>
             </AnimateOnScroll>

@@ -254,7 +254,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Use Poof from Claude, ChatGPT or Grok",
-        description: "Sign in with Poof: the consent page names the app, the company, and you, and the app sees only what your role can read. Poof Bookkeeping is in Claude’s directory. Disconnect any time in Settings → Chat apps"
+        description: "Sign in with Poof: the consent page names the app, the company, and you, and the app sees only what your role can read. Poof Bookkeeping is in Claude’s directory and ChatGPT’s plugins. Disconnect any time in Settings → Chat apps"
       }
     ]
   },
