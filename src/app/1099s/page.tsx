@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CtaSection from '@/components/CtaSection'
 import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
+import { FILE_1099S_URL, FILING_1099, dollars } from '@/lib/pricing1099'
 
 export const metadata: Metadata = {
   title: 'File your 1099s with Poof — the first 3 forms free | Poof',
@@ -20,8 +21,7 @@ export const metadata: Metadata = {
   },
 }
 
-// The sign-up link carries the reason for coming: a new account lands on the guided 1099 page, not the books.
-const FILE = 'https://app.poofai.com/register?for=1099s'
+const FILE = FILE_1099S_URL
 
 const STEPS: [string, string][] = [
   ['Your business', 'Your legal name, EIN, address and phone, typed once.'],
@@ -33,10 +33,10 @@ const STEPS: [string, string][] = [
 
 const PRICES: [string, string][] = [
   ['Preparing the forms', 'Free'],
-  ['Filing: the first 3 forms each year', 'Free'],
-  ['Filing: each form after that', '$2.49'],
+  [`Filing: the first ${FILING_1099.freeFormsPerYear} forms each year`, 'Free'],
+  ['Filing: each form after that', dollars(FILING_1099.perForm)],
   ['Each copy Poof emails', 'Free'],
-  ['Each copy Poof mails', '$1.79'],
+  ['Each copy Poof mails', dollars(FILING_1099.mailedCopy)],
 ]
 
 const faqs = [
@@ -95,7 +95,7 @@ export default function File1099sPage() {
               </li>
             ))}
           </ol>
-          <p className="text-sm text-muted mt-4">Want to total the year first? The <Link href="/blog/1099-threshold-2026" className="text-ledger-600 font-semibold hover:text-ledger-700">2026 threshold, explained</Link>, and a <Link href="/downloads/1099-vendor-tracker-2026.csv" className="text-ledger-600 font-semibold hover:text-ledger-700">free vendor tracker</Link>.</p>
+          <p className="text-sm text-muted mt-4">Want to total the year first? The <Link href="/1099-checker" className="text-ledger-600 font-semibold hover:text-ledger-700">free 1099 checker</Link> shows who gets a form and which W-9s are missing. Also: the <Link href="/blog/1099-threshold-2026" className="text-ledger-600 font-semibold hover:text-ledger-700">2026 threshold, explained</Link>, and a <Link href="/downloads/1099-vendor-tracker-2026.csv" className="text-ledger-600 font-semibold hover:text-ledger-700">free vendor tracker</Link>.</p>
         </div>
       </section>
 

@@ -121,6 +121,7 @@ const downloads = [
 ]
 
 const productPages = [
+  { title: 'Free 1099 checker', description: 'List who you paid in 2026. See who gets a 1099 at the $2,000 line and which W-9s are missing.', href: '/1099-checker' },
   { title: 'File your 1099s', description: 'Poof collects the W-9s, files with the IRS, and sends every copy. The first 3 forms free.', href: '/1099s' },
   { title: 'Taxes', description: 'The calendar, the reserve, the four estimates, and a January package for your CPA.', href: '/taxes' },
   { title: 'Poof for shops', description: 'The phone answered, the job on the board, the tech closing it from a text.', href: '/trades' },

@@ -142,6 +142,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/1099-checker`,
+      lastModified: BUILD_DATE,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/job-margin-check`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',
