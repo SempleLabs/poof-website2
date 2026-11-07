@@ -4,24 +4,24 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CtaSection from '@/components/CtaSection'
 import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
+import { FILE_1099S_URL, FILING_1099, FIRM_1099_PRICE, dollars } from '@/lib/pricing1099'
 
 export const metadata: Metadata = {
-  title: 'File your 1099s with Poof — the first 3 forms free | Poof',
+  title: `File your 1099s with Poof — the first ${FILING_1099.freeFormsPerYear} forms free | Poof`,
   description:
-    'Tell Poof who you paid. Poof collects the W-9s, files your 1099-NEC and 1099-MISC forms with the IRS, and emails or mails every contractor their copy. No IRS filer code needed. The first 3 forms each year are free, then $2.49 a form. 2026 forms are due February 1, 2027.',
+    `Tell Poof who you paid. Poof collects the W-9s, files your 1099-NEC and 1099-MISC forms with the IRS, and emails or mails every contractor their copy. No IRS filer code needed. The first ${FILING_1099.freeFormsPerYear} forms each year are free, then ${dollars(FILING_1099.perForm)} a form. 2026 forms are due February 1, 2027.`,
   alternates: { canonical: 'https://www.poofai.com/1099s' },
   openGraph: {
     images: ['/og-image.png'],
     title: 'Tell Poof who you paid. Poof files the 1099s.',
-    description: 'W-9s collected, forms filed with the IRS, copies emailed or mailed. The first 3 forms each year free.',
+    description: `W-9s collected, forms filed with the IRS, copies emailed or mailed. The first ${FILING_1099.freeFormsPerYear} forms each year free.`,
     url: 'https://www.poofai.com/1099s',
     siteName: 'Poof',
     type: 'website',
   },
 }
 
-// The sign-up link carries the reason for coming: a new account lands on the guided 1099 page, not the books.
-const FILE = 'https://app.poofai.com/register?for=1099s'
+const FILE = FILE_1099S_URL
 
 const STEPS: [string, string][] = [
   ['Your business', 'Your legal name, EIN, address and phone, typed once.'],
@@ -33,10 +33,10 @@ const STEPS: [string, string][] = [
 
 const PRICES: [string, string][] = [
   ['Preparing the forms', 'Free'],
-  ['Filing: the first 3 forms each year', 'Free'],
-  ['Filing: each form after that', '$2.49'],
+  [`Filing: the first ${FILING_1099.freeFormsPerYear} forms each year`, 'Free'],
+  ['Filing: each form after that', dollars(FILING_1099.perForm)],
   ['Each copy Poof emails', 'Free'],
-  ['Each copy Poof mails', '$1.79'],
+  ['Each copy Poof mails', dollars(FILING_1099.mailedCopy)],
 ]
 
 const faqs = [
@@ -45,7 +45,7 @@ const faqs = [
   { question: 'When does Poof file?', answer: 'After the year ends. Forms for 2026 are filed in January 2027 and are due to the IRS and to your contractors by February 1, 2027. If Poof is mailing paper copies, approve by late January so they are in the mail in time. Signing up after the deadline still works; Poof files them late.' },
   { question: 'Which forms does Poof file?', answer: 'Form 1099-NEC, for contractors, and Form 1099-MISC, for rent and the other boxes. Poof counts payments by check, ACH, cash and Zelle against the $2,000 line for 2026, and leaves out card and PayPal payments, which the processor reports on a 1099-K.' },
   { question: 'What if a contractor never sends their W-9?', answer: 'Poof reminds them every five days, up to three times, with a fresh link each time, and from December 1 shows you who is still missing. You can type in a tax ID you already have or upload a W-9 PDF instead.' },
-  { question: 'I’m a bookkeeper. Can I file for my clients?', answer: 'Yes. Every client’s forms, missing W-9s and signatures are on one page. Send for signature emails the client’s owner a one-use link, with no login, and you pay for all your clients’ forms in one checkout: $2.49 a form up to 25 a year, then $1.49, with each client’s first 3 free.' },
+  { question: 'I’m a bookkeeper. Can I file for my clients?', answer: `Yes. Every client’s forms, missing W-9s and signatures are on one page. Send for signature emails the client’s owner a one-use link, with no login, and you pay for all your clients’ forms in one checkout: ${FIRM_1099_PRICE}.` },
 ]
 
 export default function File1099sPage() {
@@ -95,7 +95,7 @@ export default function File1099sPage() {
               </li>
             ))}
           </ol>
-          <p className="text-sm text-muted mt-4">Want to total the year first? The <Link href="/blog/1099-threshold-2026" className="text-ledger-600 font-semibold hover:text-ledger-700">2026 threshold, explained</Link>, and a <Link href="/downloads/1099-vendor-tracker-2026.csv" className="text-ledger-600 font-semibold hover:text-ledger-700">free vendor tracker</Link>.</p>
+          <p className="text-sm text-muted mt-4">Want to total the year first? The <Link href="/1099-checker" className="text-ledger-600 font-semibold hover:text-ledger-700">free 1099 checker</Link> shows who gets a form and which W-9s are missing. Also: the <Link href="/blog/1099-threshold-2026" className="text-ledger-600 font-semibold hover:text-ledger-700">2026 threshold, explained</Link>, and a <Link href="/downloads/1099-vendor-tracker-2026.csv" className="text-ledger-600 font-semibold hover:text-ledger-700">free vendor tracker</Link>.</p>
         </div>
       </section>
 
@@ -114,7 +114,7 @@ export default function File1099sPage() {
                 ))}
               </tbody>
             </table>
-            <p className="text-sm text-muted mt-3">Paid in one checkout before Poof files or mails. A business with 8 contractors who all take their copy by email pays 5 × $2.49 = <span className="font-mono tabular">$12.45</span>.</p>
+            <p className="text-sm text-muted mt-3">Paid in one checkout before Poof files or mails. A business with 8 contractors who all take their copy by email pays {8 - FILING_1099.freeFormsPerYear} × {dollars(FILING_1099.perForm)} = <span className="font-mono tabular">{dollars((8 - FILING_1099.freeFormsPerYear) * FILING_1099.perForm)}</span>.</p>
           </div>
         </div>
       </section>

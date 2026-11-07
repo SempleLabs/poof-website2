@@ -7,6 +7,7 @@ import Link from 'next/link'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import PageHero from '@/components/PageHero'
 import { getFaqPageSchema, getSoftwareApplicationSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
+import { FILING_1099, FIRM_1099_PRICE, dollars } from '@/lib/pricing1099'
 
 const CheckIcon = ({ className }: { className: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -77,7 +78,7 @@ export default function PricingPage() {
     },
     {
       question: 'What does it cost to file 1099s with Poof?',
-      answer: 'Preparing them is free. Filing is free for your first 3 forms each year, then $2.49 a form. Poof emails each contractor their copy for free, or mails it for $1.79. A bookkeeper filing for clients pays $2.49 a form up to 25 a year, then $1.49, and each client\'s first 3 stay free.'
+      answer: `Preparing them is free. Filing is free for your first ${FILING_1099.freeFormsPerYear} forms each year, then ${dollars(FILING_1099.perForm)} a form. Poof emails each contractor their copy for free, or mails it for ${dollars(FILING_1099.mailedCopy)}. A bookkeeper filing for clients pays ${FIRM_1099_PRICE}.`
     },
     {
       question: 'Is my financial data secure?',
@@ -320,9 +321,9 @@ export default function PricingPage() {
                 <h2 className="text-2xl font-display font-bold text-slate-800 mb-2">File your 1099s</h2>
                 <p className="text-slate-600 mb-4">Preparing them is free. Poof files with the IRS and sends every contractor their copy.</p>
                 <dl className="text-sm text-slate-600 space-y-2 mb-6 flex-grow">
-                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>First 3 forms each year</dt><dd className="font-mono text-slate-800">Free</dd></div>
-                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>Each form after that</dt><dd className="font-mono text-slate-800">$2.49</dd></div>
-                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>Each copy Poof mails</dt><dd className="font-mono text-slate-800">$1.79</dd></div>
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>First {FILING_1099.freeFormsPerYear} forms each year</dt><dd className="font-mono text-slate-800">Free</dd></div>
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>Each form after that</dt><dd className="font-mono text-slate-800">{dollars(FILING_1099.perForm)}</dd></div>
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-2"><dt>Each copy Poof mails</dt><dd className="font-mono text-slate-800">{dollars(FILING_1099.mailedCopy)}</dd></div>
                   <div className="flex justify-between gap-4"><dt>Each copy Poof emails</dt><dd className="font-mono text-slate-800">Free</dd></div>
                 </dl>
                 <Link href="/1099s" className="text-ledger-600 font-semibold hover:text-ledger-700">How filing works →</Link>
