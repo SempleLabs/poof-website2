@@ -4,15 +4,21 @@ import { useEffect, useMemo, useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
-import { DUE_DATE, MAX_PAYEES, PAYEES, PURPOSES, check1099, formLabel, headline, money, type PayeeInput, type Payee, type Purpose } from '@/lib/form1099'
+import { DUE_DATE, MAX_PAYEES, PAYEES, PURPOSES, check1099, formLabel, headline, money, parseAmount, type PayeeInput, type Payee, type Purpose } from '@/lib/form1099'
 import { FILE_1099S_URL, FILING_1099, dollars } from '@/lib/pricing1099'
 import { readSource } from '@/lib/source'
 import { trackEvent } from '@/lib/analytics'
 
 type Row = { name: string; paid: string; card: string; purpose: Purpose; payee: Payee }
 const emptyRow = (): Row => ({ name: '', paid: '', card: '', purpose: 'services', payee: 'unknown' })
-const toNum = (s: string) => Number(s.replace(/[$,\s]/g, ''))
-const valid = (s: string) => s.trim() !== '' && Number.isFinite(toNum(s)) && toNum(s) >= 0
+const blank = (r: Row) => !r.name.trim() && !r.paid.trim() && !r.card.trim()
+/** Why a filled-in row can't be counted, or null when it can. */
+function rowProblem(r: Row): string | null {
+  if (r.paid.trim() && parseAmount(r.paid) === null) return 'Enter the check, ACH or cash amount in dollars and cents, like 18400 or 1,200.50.'
+  if (r.card.trim() && parseAmount(r.card) === null) return 'Enter the card amount in dollars and cents, like 3000 or 450.25.'
+  if (!r.paid.trim() && !r.card.trim()) return 'Add what you paid them.'
+  return null
+}
 
 const field =
   'w-full px-3 py-2.5 bg-white border border-rule rounded-lg text-ink focus:border-ledger-500 focus:ring-1 focus:ring-ledger-500/20 transition-all'
@@ -23,9 +29,9 @@ function parsePaste(text: string): Row[] {
   return text
     .split(/\r?\n/)
     .map((line) => line.split('\t').map((c) => c.trim()))
-    .filter((cells) => cells[0] && valid(cells[1] ?? ''))
+    .filter((cells) => cells.some(Boolean))
     .slice(0, MAX_PAYEES)
-    .map(([name, paid, card]) => ({ ...emptyRow(), name: name.slice(0, 60), paid, card: card && valid(card) ? card : '' }))
+    .map(([name = '', paid = '', card = '']) => ({ ...emptyRow(), name: name.slice(0, 60), paid, card }))
 }
 
 export default function Checker1099Page() {
@@ -43,13 +49,15 @@ export default function Checker1099Page() {
 
   useEffect(() => setSource(readSource()), [])
 
+  const problems = rows.map((r) => (blank(r) ? null : rowProblem(r)))
+  const badRows = problems.filter(Boolean).length
   const payees: PayeeInput[] = rows
-    .filter((r) => valid(r.paid) || valid(r.card))
-    .filter((r) => (r.paid === '' || valid(r.paid)) && (r.card === '' || valid(r.card)))
-    .map((r, i) => ({
+    .map((r, i) => ({ r, i }))
+    .filter(({ r, i }) => !blank(r) && !problems[i])
+    .map(({ r, i }) => ({
       name: r.name.trim() || `Payee ${i + 1}`,
-      paid: r.paid === '' ? 0 : toNum(r.paid),
-      card: r.card === '' ? 0 : toNum(r.card),
+      paid: r.paid.trim() ? parseAmount(r.paid)! : 0,
+      card: r.card.trim() ? parseAmount(r.card)! : 0,
       purpose: r.purpose,
       payee: r.payee,
     }))
@@ -61,6 +69,7 @@ export default function Checker1099Page() {
       trackEvent('n99_started', { source: source ?? 'direct' })
     }
     setRows((rs) => rs.map((r, k) => (k === i ? { ...r, [key]: value } : r)))
+    if (!shown) setError(null)
   }
 
   const usePaste = () => {
@@ -73,6 +82,7 @@ export default function Checker1099Page() {
   }
 
   const showResult = () => {
+    if (badRows > 0) return setError(`Fix the ${badRows === 1 ? 'row' : `${badRows} rows`} marked in red, so everyone you listed is counted.`)
     if (payees.length < 1) return setError('Fill in at least one person you paid, with an amount.')
     setError(null)
     setShown(true)
@@ -130,7 +140,7 @@ export default function Checker1099Page() {
               <>
                 <div className="space-y-4">
                   {rows.map((r, i) => (
-                    <div key={i} className="border border-rule rounded-xl p-3 sm:p-4">
+                    <div key={i} className={`border rounded-xl p-3 sm:p-4 ${problems[i] ? 'border-audit' : 'border-rule'}`}>
                       <div className="flex items-center gap-2 mb-3">
                         <input aria-label={`Payee ${i + 1} name`} className={field} placeholder={`Who you paid (e.g. Rivera Drywall)`} value={r.name} onChange={(e) => set(i, 'name', e.target.value)} />
                         {rows.length > 1 && (
@@ -161,6 +171,7 @@ export default function Checker1099Page() {
                           </select>
                         </label>
                       </div>
+                      {problems[i] && <p role="alert" className="mt-2 text-sm text-audit">{problems[i]}</p>}
                     </div>
                   ))}
                 </div>
@@ -180,10 +191,13 @@ export default function Checker1099Page() {
                 </div>
               </>
             )}
-            {error && !shown && <p className="mt-3 text-sm text-audit">{error}</p>}
+            {error && (!shown || badRows > 0) && <p className="mt-3 text-sm text-audit">{error}</p>}
+            {shown && badRows > 0 && !error && (
+              <p className="mt-3 text-sm text-audit">Fix the {badRows === 1 ? 'row' : `${badRows} rows`} marked in red to update your result.</p>
+            )}
           </div>
 
-          {shown && report.payees.length > 0 && (
+          {shown && badRows === 0 && report.payees.length > 0 && (
             <div id="result" className="mt-8 scroll-mt-24">
               <div className="bg-white border border-rule rounded-2xl p-4 sm:p-6">
                 <p className="text-xs uppercase tracking-wider text-muted mb-2">Your result</p>

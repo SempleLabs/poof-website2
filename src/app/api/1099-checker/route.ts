@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
-import { DUE_DATE, MAX_PAYEES, PAYEES, PURPOSES, check1099, formLabel, headline, money, type Payee, type PayeeInput, type Purpose, type Report1099 } from '@/lib/form1099'
+import { DUE_DATE, MAX_PAYEES, PAYEES, PURPOSES, check1099, formLabel, headline, isCents, money, type Payee, type PayeeInput, type Purpose, type Report1099 } from '@/lib/form1099'
 import { FILE_1099S_URL, FILING_1099, dollars } from '@/lib/pricing1099'
 import { SOURCE_COOKIE, cleanSource } from '@/lib/source'
 
@@ -22,7 +22,8 @@ function escapeHtml(value: unknown): string {
 
 const amount = (v: unknown) => {
   const n = v === undefined || v === '' ? 0 : typeof v === 'number' ? v : Number(v)
-  return Number.isFinite(n) && n >= 0 && n < 100_000_000 ? n : NaN
+  // Dollars and cents only: $1,999.995 is rejected, never rounded up to $2,000.
+  return isCents(n) && n < 100_000_000 ? n : NaN
 }
 const PURPOSE_SET = new Set<string>(PURPOSES.map((p) => p.value))
 const PAYEE_SET = new Set<string>(PAYEES.map((p) => p.value))
@@ -107,7 +108,7 @@ export async function POST(request: NextRequest) {
     // Honeypot: a hidden field only bots fill.
     if (body.company_url) return NextResponse.json({ success: true })
     const payees = parsePayees(body.payees)
-    if (!payees) return NextResponse.json({ error: 'Check the list: each person needs amounts as numbers.' }, { status: 400 })
+    if (!payees) return NextResponse.json({ error: 'Check the list: each amount needs to be in dollars and cents.' }, { status: 400 })
 
     const report = check1099(payees)
     const source = cleanSource(request.cookies.get(SOURCE_COOKIE)?.value) ?? cleanSource(String(body.source ?? ''))
@@ -139,14 +140,21 @@ export async function POST(request: NextRequest) {
     const notifyEmail = process.env.NOTIFY_EMAIL
     if (resendKey) {
       const resend = new Resend(resendKey)
-      await resend.emails.send({ from: 'Poof <noreply@poofai.com>', to: email, subject: headline(report), html: buildEmail(report) })
+      // Resend returns { error } rather than throwing, so a failed send has to be checked.
+      const { error: sendError } = await resend.emails.send({ from: 'Poof <noreply@poofai.com>', to: email, subject: headline(report), html: buildEmail(report) })
+      if (sendError) {
+        console.error('1099-checker: resend', sendError)
+        return NextResponse.json({ error: 'Something went wrong sending the list. Try again in a minute.' }, { status: 502 })
+      }
       if (notifyEmail) {
-        await resend.emails.send({
+        const { error: notifyError } = await resend.emails.send({
           from: 'Poof <noreply@poofai.com>',
           to: notifyEmail,
           subject: `New 1099 checker lead${source ? ` (${source})` : ''}: ${report.forms} forms`,
           html: `<p><strong>Email:</strong> ${escapeHtml(email)}<br><strong>Source:</strong> ${escapeHtml(source ?? 'direct')}</p>${buildEmail(report)}`,
         })
+        // The visitor's list went out; a failed lead alert is only logged.
+        if (notifyError) console.error('1099-checker: resend notify', notifyError)
       }
     }
     return NextResponse.json({ success: true })
