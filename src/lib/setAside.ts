@@ -127,7 +127,7 @@ const bp = (cents: number, rateBp: number) => roundDiv(cents * rateBp, 10_000)
 
 /** Reads a percent as typed: "4.95", "5%". Up to two decimals, 0 to 15. Null for anything else. */
 export function parseRate(s: string): number | null {
-  const t = s.replace(/[%\s]/g, '')
+  const t = s.trim().replace(/\s*%$/, '')
   if (!/^\d{1,2}(\.\d{1,2})?$/.test(t)) return null
   const n = Number(t)
   return n <= MAX_STATE_RATE ? n : null
@@ -241,7 +241,8 @@ export const usd = (cents: number) =>
   `$${(cents / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
 
 export function headline(r: SetAsideResult): string {
-  if (r.totalCents === 0) return 'With no profit to tax, there’s nothing to set aside for 2026.'
+  if (r.profitCents === 0) return 'With no profit to tax, there’s nothing to set aside for 2026.'
+  if (r.totalCents === 0) return 'At this profit, there’s no federal tax to set aside for 2026.'
   return `Set aside about ${r.ratePct.toFixed(1)}% of your profit: ${usd(r.totalCents)} for 2026.`
 }
 
@@ -251,21 +252,25 @@ export function januaryLines(r: SetAsideResult): { line: string; why: string } {
   const e = TAX_2026.estimates
   if (j.rule === 'under-minimum')
     return { line: 'You likely don’t need to make estimated payments.', why: `Your 2026 federal tax comes to under ${usd(e.minimumOwed * 100)}, so there’s no penalty for paying it with your return.` }
+  const highAgi = usd(e.highIncomeAgi[r.input.status] * 100).replace('.00', '')
   const why =
     j.rule === 'current-year'
       ? `That’s 90% of this year’s federal tax${r.input.priorTax === null ? '. If you have last year’s return, enter its total tax: when it’s smaller, the payment can be too.' : ', which is smaller than the figure from last year’s tax.'}`
       : j.rule === 'prior-year'
         ? 'That’s 100% of last year’s tax, which is smaller than 90% of this year’s.'
         : j.assumedHighIncome
-          ? 'That’s 110% of last year’s tax, the figure when last year’s AGI was over $150,000. Enter your AGI: at $150,000 or less, it’s 100%.'
-          : 'That’s 110% of last year’s tax, because last year’s AGI was over $150,000, and it’s smaller than 90% of this year’s.'
+          ? `That’s 110% of last year’s tax, the figure when last year’s AGI was over ${highAgi}. Enter your AGI: at ${highAgi} or less, it’s 100%.`
+          : `That’s 110% of last year’s tax, because last year’s AGI was over ${highAgi}, and it’s smaller than 90% of this year’s.`
   if (j.dueCents === 0)
     return {
-      line: j.requiredCents === 0 ? 'No January payment is needed to avoid the penalty.' : 'You’ve already paid enough to avoid the penalty.',
+      line: j.requiredCents === 0 ? 'No January payment is needed to avoid the penalty.' : 'You’ve already paid the year’s safe-harbor amount.',
       why: j.requiredCents === 0 ? 'Your 2025 tax was $0, so the safe-harbor amount is $0.' : `The safe-harbor amount for the year is ${usd(j.requiredCents)}. ${why}`,
     }
   return { line: `Pay ${usd(j.dueCents)} by ${e.dueDate}.`, why: `The safe-harbor amount for the year is ${usd(j.requiredCents)}. ${why}` }
 }
+
+/** Said wherever the January payment is: the safe harbor is met quarter by quarter. */
+export const EARLIER_QUARTERS = 'Paying in January doesn’t undo a penalty on an earlier quarter that was short.'
 
 /** Validates an amount the API received: dollars and cents, under the cap. */
 export const validAmount = (n: unknown, max = MAX_PROFIT): n is number => typeof n === 'number' && isCents(n) && n <= max

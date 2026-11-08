@@ -126,7 +126,7 @@ assert.equal(run({ profit: 1_100 }).taxableIncomeCents, 0)
   assert.equal(bigPrior.january.rule, 'current-year', 'last year bigger: 90% of this year wins')
   const overpaid = run({ profit: 120_000, paid: 40_000 })
   assert.equal(overpaid.january.dueCents, 0)
-  assert.equal(januaryLines(overpaid).line, 'You’ve already paid enough to avoid the penalty.')
+  assert.equal(januaryLines(overpaid).line, 'You’ve already paid the year’s safe-harbor amount.')
   const zeroPrior = run({ profit: 120_000, priorTax: 0, priorAgi: 30_000 })
   assert.equal(zeroPrior.january.dueCents, 0)
   assert.equal(januaryLines(zeroPrior).line, 'No January payment is needed to avoid the penalty.')
@@ -160,5 +160,20 @@ assert.equal(parseAmount('$84,250.50'), 84_250.5)
 for (const bad of ['15.01', '5.555', 'five', '-1', '100']) assert.equal(parseRate(bad), null, `rate "${bad}" is flagged`)
 assert.equal(parseRate('4.95%'), 4.95)
 assert.equal(parseRate('0'), 0)
+
+// Commas only in thousands places: a typo is flagged, never read as a bigger number.
+for (const bad of ['84,250,50', '1,00', '1,2,3', '5$0', '18 400']) assert.equal(parseAmount(bad), null, `"${bad}" is flagged`)
+assert.equal(parseAmount(' $ 1,234,567.89 '), 1_234_567.89)
+assert.equal(parseAmount('1234567'), 1_234_567)
+assert.equal(parseRate('1 5'), null, 'inner space is flagged')
+assert.equal(parseRate(' 5 % '), 5)
+
+// The 110% line names the right AGI for each filing status.
+assert.match(januaryLines(run({ status: 'separate', profit: 140_000, priorTax: 18_000, priorAgi: 80_000 })).why, /over \$75,000/)
+assert.match(januaryLines(run({ status: 'separate', profit: 140_000, priorTax: 18_000 })).why, /at \$75,000 or less/)
+assert.match(januaryLines(run({ profit: 140_000, priorTax: 18_000, priorAgi: 160_000 })).why, /over \$150,000/)
+
+// A small profit with no tax isn't "no profit".
+assert.equal(headline(run({ profit: 300 })), 'At this profit, there’s no federal tax to set aside for 2026.')
 
 console.log('set-aside: all checks passed')

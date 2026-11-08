@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
-import { FILING_STATUSES, MAX_STATE_RATE, TAX_2026, headline, januaryLines, setAside, usd, validAmount, type FilingStatus, type SetAsideInput, type SetAsideResult } from '@/lib/setAside'
+import { EARLIER_QUARTERS, FILING_STATUSES, MAX_STATE_RATE, TAX_2026, headline, januaryLines, setAside, usd, validAmount, type FilingStatus, type SetAsideInput, type SetAsideResult } from '@/lib/setAside'
 import { SOURCE_COOKIE, cleanSource } from '@/lib/source'
 
 /**
@@ -66,7 +66,7 @@ function buildEmail(r: SetAsideResult, source: string | null): string {
   ].join('')
   const skip =
     r.january.rule !== 'under-minimum'
-      ? ` The rest of the year’s tax is due with your return. You can skip the January payment by filing your 2026 return and paying everything by ${TAX_2026.estimates.skipIfFiledBy}.`
+      ? ` The rest of the year’s tax is due with your return. You can skip the January payment by filing your 2026 return and paying everything by ${TAX_2026.estimates.skipIfFiledBy}. ${EARLIER_QUARTERS}`
       : ''
   return `<!DOCTYPE html><html><body style="margin:0;padding:0;background:#EEF2EA;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#EEF2EA;padding:32px 16px"><tr><td align="center">
@@ -92,7 +92,9 @@ export async function POST(request: NextRequest) {
   try {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
     if (ipLimited(ip)) return NextResponse.json({ error: 'Too many requests. Try again in a few minutes.' }, { status: 429 })
-    const body = (await request.json()) as Record<string, unknown>
+    const parsed: unknown = await request.json()
+    if (!parsed || typeof parsed !== 'object') return NextResponse.json({ error: 'Check the numbers: each amount needs to be in dollars and cents.' }, { status: 400 })
+    const body = parsed as Record<string, unknown>
     const email = String(body.email ?? '').trim().toLowerCase().slice(0, 200)
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
     // Honeypot: a hidden field only bots fill.

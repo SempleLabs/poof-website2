@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import PageHero from '@/components/PageHero'
 import { parseAmount } from '@/lib/form1099'
 import {
+  EARLIER_QUARTERS,
   FILING_STATUSES,
   MAX_PROFIT,
   TAX_2026,
@@ -77,7 +78,8 @@ export default function SetAsideCalculatorPage() {
       setStarted(true)
       trackEvent('sa_started', { source: source ?? 'direct' })
     }
-    if (!shown) setError(null)
+    setError(null)
+    setSent(false)
   }
   const set = (k: Key, v: string) => {
     touch()
@@ -135,7 +137,7 @@ export default function SetAsideCalculatorPage() {
       <Header />
       <PageHero
         title={<>How much should I set aside <span className="text-ledger-600">for taxes?</span></>}
-        subtitle="For sole proprietors and single-member LLC owners. Enter your 2026 profit and see the share to set aside, and what to pay by January 15, 2027 to stay clear of the penalty. Nothing is saved unless you ask for a copy."
+        subtitle="For sole proprietors and single-member LLC owners. Enter your 2026 profit and see the share to set aside, and your January 15, 2027 federal estimate under the safe-harbor rule. Nothing is saved unless you ask for a copy."
       />
 
       <section className="py-8 pb-16 bg-paper-2">
@@ -157,7 +159,7 @@ export default function SetAsideCalculatorPage() {
               </label>
               {amountField('profit', '2026 profit from the business', '$0', 'The full year, or your best estimate. Profit, not sales.')}
               {amountField('stateRate', 'State income tax rate, %', '0', 'Leave blank or 0 if your state has none, like Texas.')}
-              {amountField('paid', '2026 federal estimates already paid', '$0', 'Optional.')}
+              {amountField('paid', '2026 federal estimates already paid', '$0', 'Optional. For tax year 2026 (April, June and September 2026), plus any 2025 refund applied.')}
             </div>
             <div className="mt-5 border-t border-rule pt-4">
               <p className="text-sm text-ink font-semibold">From your 2025 return (optional)</p>
@@ -182,7 +184,8 @@ export default function SetAsideCalculatorPage() {
             <div id="result" className="mt-8 scroll-mt-24">
               <div className="bg-white border border-rule rounded-2xl p-4 sm:p-6">
                 <p className="text-xs uppercase tracking-wider text-muted mb-2">Your result</p>
-                <h2 className="font-display text-2xl sm:text-3xl text-ink leading-tight mb-4">{headline(result)}</h2>
+                <h2 className="font-display text-2xl sm:text-3xl text-ink leading-tight mb-1">{headline(result)}</h2>
+                <p className="text-muted font-mono tabular-nums text-sm mb-4">On 2026 profit of {usd(result.profitCents)}, {FILING_STATUSES.find((s) => s.value === result.input.status)?.label.toLowerCase()}</p>
 
                 <div className="divide-y divide-rule">
                   {row('Self-employment tax', result.seTaxCents)}
@@ -202,7 +205,7 @@ export default function SetAsideCalculatorPage() {
                   {result.january.rule !== 'under-minimum' && (
                     <p className="text-sm text-muted mt-2">
                       The rest of the year’s tax is due with your return. You can skip the January payment by filing your 2026 return and paying everything by{' '}
-                      {TAX_2026.estimates.skipIfFiledBy}. Paying in January doesn’t undo a penalty on an earlier quarter that was short.
+                      {TAX_2026.estimates.skipIfFiledBy}. {EARLIER_QUARTERS}
                     </p>
                   )}
                 </div>
