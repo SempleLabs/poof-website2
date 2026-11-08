@@ -83,12 +83,13 @@ export const isCents = (n: number) => Number.isFinite(n) && n >= 0 && Math.abs(n
 
 /**
  * Reads an amount as typed or pasted: "$18,400", "1200.5". Returns null for anything else,
- * including "18k", a letter O for a zero, or more than two decimals, so the row can be flagged.
+ * including "18k", a letter O for a zero, more than two decimals, or a comma out of place
+ * ("84,250,50"), so the row can be flagged rather than read as a different number.
  */
 export function parseAmount(s: string): number | null {
-  const t = s.replace(/[$,\s]/g, '')
-  if (!/^\d+(\.\d{1,2})?$/.test(t)) return null
-  return Number(t)
+  const t = s.trim().replace(/^\$\s*/, '')
+  if (!/^(\d{1,3}(,\d{3})+|\d+)(\.\d{1,2})?$/.test(t)) return null
+  return Number(t.replace(/,/g, ''))
 }
 export const money = (n: number) => `$${(Math.round(n * 100) / 100).toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 })}`
 

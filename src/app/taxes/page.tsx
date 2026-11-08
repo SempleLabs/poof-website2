@@ -115,7 +115,7 @@ export default function TaxesPage() {
         <div className="max-w-[860px] mx-auto px-4 sm:px-6">
           <p className={eyebrow}>The reserve and the estimates</p>
           <h2 className={h2}>What you owe so far, what you set aside, and four payments.</h2>
-          <p className={lede}>The reserve is this year&apos;s profit times your rate, next to the balance of the account you set aside for taxes. The estimates use the safe-harbor rule, and payments to the IRS are found in the bank feed and counted toward the right quarter.</p>
+          <p className={lede}>The reserve is this year&apos;s profit times your rate, next to the balance of the account you set aside for taxes. The estimates use the safe-harbor rule, and payments to the IRS are found in the bank feed and counted toward the right quarter. Want your own number first? Try the <Link href="/tax-set-aside-calculator" className="text-ledger-600 font-semibold hover:text-ledger-700">free set-aside calculator</Link>.</p>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-5">
             <div className="bg-white border border-rule px-5 py-[18px]">
               <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">Tax reserve · through Sep 30</p>
