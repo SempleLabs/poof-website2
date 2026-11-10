@@ -76,7 +76,7 @@ const topics: { title: string; blurb: string; slugs: string[] }[] = [
   {
     title: 'Leaving QuickBooks',
     blurb: 'The 2026 prices, the free plans, the alternatives, and the bank rule that keeps posting.',
-    slugs: ['free-bookkeeping-software-2026', 'quickbooks-price-increase-2026', 'quickbooks-too-expensive-alternatives', 'best-quickbooks-alternatives-small-business', 'quickbooks-bank-rules-auto-post', 'mercury-books-vs-poof'],
+    slugs: ['free-bookkeeping-software-2026', 'quickbooks-price-increase-2026', 'quickbooks-too-expensive-alternatives', 'best-quickbooks-alternatives-small-business', 'quickbooks-bank-rules-auto-post', 'mercury-books-vs-poof', 'lazybooks-vs-quickbooks-vs-poof'],
   },
   {
     title: 'Running a service shop',
