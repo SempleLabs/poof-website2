@@ -31,6 +31,7 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 
 ## Blog
 
+- [LazyBooks vs QuickBooks (and Poof): An Honest Comparison](https://www.poofai.com/blog/lazybooks-vs-quickbooks-vs-poof)
 - [How to File 1099s Online for 2026 (Without a Filer Code)](https://www.poofai.com/blog/file-1099s-online-2026)
 - [How to Get a W-9 From Every Contractor Before January](https://www.poofai.com/blog/collect-w9-from-contractors)
 - [Filing 1099s for Your Clients in 2027: IRIS, TCCs, and Pricing](https://www.poofai.com/blog/file-1099s-for-clients)
