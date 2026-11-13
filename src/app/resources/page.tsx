@@ -90,8 +90,8 @@ const topics: { title: string; blurb: string; slugs: string[] }[] = [
   },
   {
     title: 'Getting started',
-    blurb: 'A new LLC, a first chart of accounts, and payouts that never match.',
-    slugs: ['how-to-set-up-bookkeeping-new-llc', 'ecommerce-bookkeeping-stripe-shopify-fees'],
+    blurb: 'Books for one person, a new LLC, a first chart of accounts, and payouts that never match.',
+    slugs: ['bookkeeping-for-solopreneurs', 'how-to-set-up-bookkeeping-new-llc', 'ecommerce-bookkeeping-stripe-shopify-fees'],
   },
 ]
 
