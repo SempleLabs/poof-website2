@@ -98,7 +98,7 @@ export default function PricingPage() {
     },
     {
       question: 'What reports can I generate?',
-      answer: 'Poof generates 14 financial reports, all of them on Free: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. Toggle between accrual and cash basis, choose your date range, and export in seconds.'
+      answer: 'Poof generates 14 financial reports, all of them on Free: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. Toggle between accrual and cash basis, choose your date range, and export in seconds. Beyond the 14, Poof has standard reports for your kind of business, and you can ask Poof for any other report in a sentence and keep it.'
     },
     {
       question: 'Do you integrate with my existing tools?',

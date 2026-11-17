@@ -120,7 +120,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Poof AI Assistant",
-        description: "Built-in AI assistant with 115 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
+        description: "Built-in AI assistant with 119 tools that lives in the sidebar, and is context-aware — it knows your company name, industry, business type, location, and timezone. Supports multi-session conversations with folder organization"
       },
       {
         title: "AI Chart of Accounts Generation",
@@ -210,7 +210,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Financial Report Generation",
-        description: "Ask Poof to generate any of the 14 financial reports — Income Statement, Balance Sheet, Cash Flow, and more — instantly from conversation"
+        description: "Ask Poof for any of the 14 financial reports, or describe a report that isn’t there and Poof builds it for you to keep"
       },
       {
         title: "Bank Statement PDF Import via Chat",
@@ -254,7 +254,11 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Use Poof from Claude, ChatGPT or Grok",
-        description: "Sign in with Poof: the consent page names the app, the company, and you, and the app sees only what your role can read. Poof Bookkeeping is in Claude’s directory and ChatGPT’s plugins. Disconnect any time in Settings → Chat apps"
+        description: "Sign in with Poof: the consent page names the app, the company, and you, and the app sees only what your role can read. Poof Bookkeeping is in Claude’s directory and ChatGPT’s plugins, and both can run your reports by name. Disconnect any time in Settings → Chat apps"
+      },
+      {
+        title: "Your AI Asks, You Approve",
+        description: "When the AI app you connected asks Poof for a bill, an expense, an invoice, a payment received, a customer, or a vendor, it arrives as Poof’s own card. You approve it in the app or in Poof’s Approvals, never a rule and never the AI"
       }
     ]
   },
@@ -443,7 +447,7 @@ export const featureGroups: FeatureGroup[] = [
     features: [
       {
         title: "Bank Connection",
-        description: "Connect to 12,000+ financial institutions via Plaid. The first connection brings in 90 days of history, and every connected bank refreshes on its own daily, reaching back up to 90 days when a feed has stalled. Optional liability accounts give broader institution support"
+        description: "Connect bank accounts and credit cards at 12,000+ financial institutions via Plaid. The first connection brings in 90 days of history, and every connected bank refreshes on its own daily, reaching back up to 90 days when a feed has stalled. Optional liability accounts give broader institution support"
       },
       {
         title: "Bank Statement Import",
@@ -488,6 +492,14 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Pending at the Bank",
         description: "“Pending at the bank: 3 (−$412.18)” under each account and on Transactions, never booked. Sync Now asks the bank for the latest first"
+      },
+      {
+        title: "Connect Credit Cards, and Never Twice",
+        description: "A card connected through Plaid counts as a credit card, not a bank account. Connecting the same account again never adds a second, and a bank connected after you imported your books links to the imported account instead of starting a second opening balance"
+      },
+      {
+        title: "A Deposit Split Across Properties",
+        description: "Each line of a bank deposit carries its own account and job, so a property manager’s statement (rent less fees, cabin by cabin) lands on each property’s P&L"
       }
     ]
   },
@@ -533,7 +545,7 @@ export const featureGroups: FeatureGroup[] = [
       },
       {
         title: "Switch From QuickBooks by File",
-        description: "Export your trial balance, customers and vendors, and open invoices and unpaid bills from QuickBooks, and they come in as opening balances, tied to the trial balance and never counted twice"
+        description: "Export your trial balance, customers and vendors, and open invoices and unpaid bills from QuickBooks, and they come in as opening balances, tied to the trial balance and never counted twice. Each account’s type is guessed from its name and shown to you before anything posts"
       },
       {
         title: "Compare the P&L",
@@ -546,7 +558,38 @@ export const featureGroups: FeatureGroup[] = [
       {
         title: "Bring It Over From Housecall Pro, Jobber, or QuickBooks",
         description: "Your price list, customers and service addresses, equipment, and members, from an export file you email in or drop into Ask Poof. Each shows a preview and becomes a card to approve"
+      },
+      {
+        title: "P&L by Job",
+        description: "One column per job, each cabin, property, or project, plus Other jobs, Unassigned (overhead), and Total. The columns add up to the Income Statement, and Ask Poof answers “P&L by property this year” with the same numbers"
+      },
+      {
+        title: "Sub-Accounts the Way QuickBooks Shows Them",
+        description: "“Utilities:Electricity” from an import becomes a Utilities heading with Electricity under it and a subtotal, on the P&L, the balance sheet, and the chart of accounts. Empty rows stay hidden until you ask"
+      },
+      {
+        title: "Reports Print Like Statements",
+        description: "Your company’s name and the dates on top, the table on page one, every column on the page (sideways when it’s wide), and no grid"
       }
+    ]
+  },
+  {
+    name: "Reports You Build by Talking",
+    icon: "report",
+    note: "The AI describes the report: which accounts on which line, columns by month or by job, which period. Poof checks every name against your own chart and jobs and runs it on the same reads as the Income Statement, so a report’s net equals the P&L’s. The AI never writes a number. Reports use what’s in your books: accounts, jobs, customers, vendors, and products.",
+    features: [
+      { title: "Ask for a Report in a Sentence", description: "“Show me each cabin by month this year” comes back as the table, a chart if you ask, and how it’s built in plain words. Tap Save to keep it under Reports → My reports; nothing is saved until you do" },
+      { title: "Change It by Asking", description: "“Take depreciation out and make it quarterly,” and Poof shows exactly what changes before you tap Update. Every version is kept, with who changed it and when. A name that fits two accounts comes back as a question, never a guess" },
+      { title: "My Reports", description: "Each saved report runs on today’s books when you open it. Pick another period without changing it, download CSV, and open any account’s detail for those dates" },
+      { title: "Standard Reports for Every Business", description: "P&L by month, Cash runway (months of spending the bank covers), Days to get paid, Top customers, Expenses by month, and Owner draws. Save a copy to make one your own" },
+      { title: "For Rentals", description: "Each property by month, Net per property, and Expenses per property, for a real-estate company or one that rents cabins or property" },
+      { title: "For Builders", description: "Margin by project, and as of today Backlog, Billed, and Contract size by project, from the Progress Billing report’s own contracts" },
+      { title: "Your Numbers on Home", description: "Each report’s headline number as a tile on Home: the defaults for your kind of business, plus any report you pin. Take one off and it stays off" },
+      { title: "Send a Report on a Schedule", description: "Daily, weekly, monthly, or quarterly at a time you pick, by email (a PDF or CSV) or to your own Telegram or Slack. It runs as the person who set it up, checked at every send" },
+      { title: "“Email Me the Cabin Report on the 1st”", description: "Ask Poof and the schedule comes back as a card you approve: the report, when, the period, and every address on its own line" },
+      { title: "Copy a Report to Your Other Companies", description: "A bookkeeper builds a report once and copies it to every client it fits. Each copy is matched by name to that client’s own accounts and jobs, and a client where a line doesn’t match is listed, not copied into" },
+      { title: "Reports Wherever You Ask", description: "In Telegram and Slack, a short table and a link to open it in Poof. In Claude and ChatGPT, your saved and standard reports by name" },
+      { title: "One Reports List", description: "Every report on the same row: an icon, the name, what it shows, and a star. Your kind of business’s reports near the top, Favorites take any report, and search reads the descriptions too" }
     ]
   },
   {
@@ -650,8 +693,8 @@ export const featureGroups: FeatureGroup[] = [
         description: "AI-generated daily briefing with 'Reply to Poof' action, time-aware greeting, 4 animated KPIs with Y-axis dollar labels, proactive 'Needs Your Attention' alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter"
       },
       {
-        title: "Global Search",
-        description: "Search across transactions, invoices, bills, and expenses instantly"
+        title: "Search in the Header",
+        description: "A real search box for pages (“invoi” finds Invoices), customers, reports (“cash run” finds Cash runway), and commands (“create invoice for $450 to Rivera” opens the form filled in). A question goes to Ask Poof, which has its own button beside it"
       },
       {
         title: "Notification Center",
@@ -982,7 +1025,7 @@ export const featureGroups: FeatureGroup[] = [
   {
     name: "File Your 1099s",
     icon: "1099",
-    note: "Poof files 1099-NEC and 1099-MISC with the IRS after the year ends, for a business that signs the authorization. Prep is free; the first 3 forms each year are free, then $2.49 a form, and $1.79 for each copy Poof mails. Emailed copies are free.",
+    note: "Poof files 1099-NEC and 1099-MISC with the IRS after the year ends, for a business that signs the authorization, or from January 1, 2027 you can send them yourself. Prep is free; the first 3 forms each year are free, then $2.49 a form, and $1.79 for each copy Poof mails. Emailed copies are free.",
     features: [
       { title: "File My 1099s", description: "One page in five steps: your business, who you paid, their W-9s, review and approve, and Poof files. Pick it at sign-up and you land on it" },
       { title: "Poof Files Them With the IRS", description: "One signature, your name, title, and “I agree”, authorizes Poof and approves the forms. You never need an IRS filer code" },
@@ -996,7 +1039,9 @@ export const featureGroups: FeatureGroup[] = [
       { title: "Priced per Form", description: "The first 3 forms each year are free, then $2.49 a form; $1.79 for each mailed copy; emailed copies are free" },
       { title: "The W-9 at the First Payment", description: "A W-9 request at a contractor’s first payment, and a line on the 1st of each month: who you’ve paid, how much, and how many W-9s are in" },
       { title: "A Bookkeeper’s Clients on One Page", description: "Every client’s forms, missing W-9s, and signature. Send for signature emails the owner a one-use link, with no login" },
-      { title: "One Checkout for Every Client", description: "A firm pays for all its clients’ forms at once: $2.49 a form up to 25 a year, then $1.49, with each client’s first 3 free" }
+      { title: "One Checkout for Every Client", description: "A firm pays for all its clients’ forms at once: $2.49 a form up to 25 a year, then $1.49, with each client’s first 3 free" },
+      { title: "Or Send Them Yourself", description: "From January 1, 2027, an owner or admin can send their own paid-for forms to the IRS from the same page, with each send’s status and receipt and a Check with the IRS now button. Poof still files for anyone who’d rather it did" },
+      { title: "Corrections, and What to Fix", description: "A corrected form goes to the IRS the same way, and if the IRS rejects or flags a form, you get an email saying which one and what to change" }
     ]
   },
   {
@@ -1276,7 +1321,7 @@ export const faqData: FaqItem[] = [
   },
   {
     question: "What reports does Poof generate?",
-    answer: "Poof generates 14 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. You can toggle between accrual and cash basis, select custom date ranges, and export to PDF or Excel.",
+    answer: "Poof generates 14 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. You can toggle between accrual and cash basis, select custom date ranges, and export to PDF or Excel. Beyond the 14, Poof has standard reports for your kind of business (P&L by month, cash runway, each property by month for rentals, margin by project for builders), and you can ask Poof for any other report in a sentence, save it, and have it emailed on a schedule.",
     category: "General"
   },
   {

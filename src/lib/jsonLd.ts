@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Free software that runs the small-business back office: books, invoicing, cash planning, 1099 filing, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 270 features, 14 reports. Poof is free; Poof Agent, the AI that does the work, is $79/mo; a bookkeeper who works in Poof is quoted per job.',
+    description: 'Free software that runs the small-business back office: books, invoicing, cash planning, 1099 filing, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 290 features, 14 reports and any other you ask for. Poof is free; Poof Agent, the AI that does the work, is $79/mo; a bookkeeper who works in Poof is quoted per job.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,7 +35,7 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Poof is free bookkeeping software. Poof Agent, the paid plan, sorts your transactions overnight, reads every receipt, and writes the month-end summary, with every entry waiting for your OK. 270 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
+    description: 'Poof is free bookkeeping software. Poof Agent, the paid plan, sorts your transactions overnight, reads every receipt, and writes the month-end summary, with every entry waiting for your OK. 290 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
     url: 'https://www.poofai.com',
     offers: [
       {

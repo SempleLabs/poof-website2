@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 }
 
-const UPDATED = 'November 6, 2026'
+const UPDATED = 'November 17, 2026'
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -98,20 +98,21 @@ export default function PrivacyPolicyPage() {
             <li>
               <span className="font-medium">What is shared:</span> only the answers to the questions your assistant asks, such as
               profit and loss, receivables and payables, open invoices and bills, job profitability, the cash plan, the month-end
-              close status, fixed assets and loans, and approval cards waiting for you. It is limited to what your role in that
+              close status, fixed assets and loans, your saved and standard reports, and approval cards waiting for you. It is limited to what your role in that
               company can see. Customer and vendor names are replaced with codes, and personal details such as email addresses,
               phone numbers, street addresses and tax IDs are removed before anything leaves Poof.
             </li>
             <li>
               <span className="font-medium">Who receives it:</span> the AI assistant you connected, which handles it under its own
-              terms and privacy policy. The connection is read-only: the assistant cannot change your books, move money or
-              approve anything.
+              terms and privacy policy. The assistant cannot change your books on its own, move money or approve anything. It can
+              ask Poof to draft something for your approval, such as a bill or an invoice; nothing posts until a person in your
+              company approves it in Poof.
             </li>
             <li>
               <span className="font-medium">What we keep:</span> a record of each request (which tool, when, how long it took and
               how many items were redacted), not the content of your conversation. To answer, your assistant sends Poof the details
               of its request, such as a date range or a search word. We use them to answer and don&rsquo;t keep them with that
-              record. Sign-in tokens are stored only in a hashed form; access tokens last one hour and refresh tokens 60 days.
+              record. A draft your assistant asks for is kept in Poof as an approval card, like any other. Sign-in tokens are stored only in a hashed form; access tokens last one hour and refresh tokens 60 days.
             </li>
             <li>
               <span className="font-medium">Your controls:</span> disconnect any time in Poof under Settings → Chat apps → AI
