@@ -40,6 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/av`,
+      lastModified: new Date('2026-11-19'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/bookkeeper`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',
