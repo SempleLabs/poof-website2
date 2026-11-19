@@ -79,7 +79,7 @@ export default function AboutPage() {
     {
       year: "2026",
       title: "Free, with an agent you can hire",
-      description: "Poof goes free for good. Poof Agent does the work for $79 a month, a bookkeeper who works in Poof takes the books off an owner's hands, and Poof files the 1099s. Service shops get the dispatch board, the technician's link and an AI receptionist in the same books."
+      description: "Poof goes free for good. Poof Agent does the work for $49 a month, a bookkeeper who works in Poof takes the books off an owner's hands, and Poof files the 1099s. Service shops get the dispatch board, the technician's link and an AI receptionist in the same books."
     }
   ]
 
@@ -296,7 +296,7 @@ export default function AboutPage() {
               Start free. Hire Poof Agent when you want it.
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              The books are free for good. Poof Agent is free for your first 30 days, then $79 a month if you keep it.
+              The books are free for good. Poof Agent is free for your first 30 days, then $49 a month if you keep it.
             </p>
             <Link
               href="https://app.poofai.com/register"
