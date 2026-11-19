@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import HomeShow from '@/components/HomeShow'
 import HomeFaqShort from '@/components/HomeFaqShort'
 import BackOfficeSection from '@/components/BackOfficeSection'
+import ReportsSection from '@/components/ReportsSection'
 import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
@@ -64,7 +65,7 @@ export default function Home() {
           Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the dispatch board and the technician&apos;s field link to the same account, free, and the AI receptionist as an add-on at $99 a month.
         </p>
         <div className="flex flex-wrap gap-2.5 mt-6">
-          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 270 features</Link>
+          <Link href="/features" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">All 290 features</Link>
           <Link href="/pricing" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Pricing</Link>
           <Link href="/1099s" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">File your 1099s</Link>
           <Link href="/poof-vs-quickbooks" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Poof vs QuickBooks</Link>
@@ -73,6 +74,8 @@ export default function Home() {
       </section>
 
       <BackOfficeSection />
+
+      <ReportsSection />
 
       {/* January's front door: Poof files the 1099s */}
       <section className="max-w-[820px] mx-auto px-4 sm:px-6 pt-16 pb-6 border-t border-rule" id="file-1099s">

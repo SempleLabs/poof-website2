@@ -1,7 +1,18 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: November 2, 2026
+> **Living document** — Last updated: November 17, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
+
+> **⭐ WHAT'S NEW SINCE NOVEMBER 2 (2026-11-17) — read with the block below.**
+> - **Reports you build by talking** (new Group 25, live in production). Ask Poof for the report you want ("show me each cabin by month this year"), change it by asking ("take depreciation out and make it quarterly"), and tap Save. It lands in **Reports → My reports**, runs on today's books, and can go out on a schedule by email, Telegram or Slack. Poof also ships **standard reports for the kind of business**: six for everyone, three for rentals and four for builders. Their headline numbers can sit as tiles on Home, and a bookkeeper can copy a report into every client it fits. **The model never computes a number in a report:** it describes the report, and Poof runs it on the same reads as the Income Statement.
+> - **The Reports page is one list.** Every report has the same row: an icon, the name, a line saying what it shows, and a star. Favorites take any report.
+> - **P&L by job:** one column per job or property, plus Other jobs, Unassigned and Total. **Sub-accounts** group with subtotals the way QuickBooks shows them. **Reports print like statements.**
+> - **Credit cards connect** through Plaid, and connecting the same account twice never adds a second. A property manager's statement lands on its properties, because each deposit line carries its own job.
+> - **1099s:** from January 1, 2027 a business can **send its own forms to the IRS** from Poof, corrections included. Poof still files for anyone who'd rather it did.
+> - **In Claude, Poof can now draft the work** (on since 2026-11-13): a bill, an expense, an invoice, a payment received, a customer or vendor, as a card the person approves inside Claude or in Poof. **ChatGPT stays read-only.** Claude and ChatGPT can both list and run the company's reports, with jobs by number and customers numbered.
+> - **A real search box** in the header finds pages, customers, reports and commands; Ask Poof is its own button.
+> - **290 features in 25 groups** (270 in 24 on 11-01). The assistant offers **119 tools** in the chat, from a registry of **164**; **20 read tools** on MCP, plus **9 card tools** for Claude.
+> - **Still not:** the iPhone app is not on the App Store (checked 2026-11-17). Reports can't yet hold numbers that aren't in the books (units, nights booked, chairs).
 
 > **⭐ WHERE THINGS STAND (2026-11-01) — read this first; it overrides anything older below.**
 > - **Poof is free.** The app is free for good: the books, invoices and quotes, bills, every report, approvals and rules, the close, payroll and 1099 prep, sales tax, the dispatch board and the tech's link, and the Claude and ChatGPT connector. No card, no time limit, and nothing goes read-only. Each month Free also gets a taste of the agent: **25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds and 100 texts to the team.**
@@ -13,7 +24,7 @@
 > - **Owners first** (decided 2026-11-01). The brand and the homepage speak to the person who owns the business. Bookkeepers have their own door (`/close`), service shops theirs (`/trades`), and 1099s theirs.
 > - **The headline is the free plan:** **"Poof is free. Poof Agent does the books while you sleep."** The brand sentence stays underneath it: **"The work disappears. The evidence doesn't."** The October tagline, "The back office, run by AI. Signed by you.", is no longer the headline; it is the line for approvals.
 > - **Retired, never write again:** "one plan, every feature", "no tiers", "Poof Professional", the $39.50 launch special, the 30-day money-back guarantee, "Start free trial" (it is **Start free**), a trial that ends read-only, the five-day close guarantee, and the managed tiers ($750 audit, $1,200, $1,500, $2,400) as public prices.
-> - **270 features in 24 groups** (246 in 22 on 10-21). New: **File your 1099s** (Group 23, 13) and **Free, Poof Agent & a person** (Group 24, 4), plus seven lines across Groups 4, 9–13. See the [changelog](#changelog).
+> - **270 features in 24 groups** on 11-01 (246 in 22 on 10-21; **290 in 25 since 11-17**, see above). New: **File your 1099s** (Group 23, 13) and **Free, Poof Agent & a person** (Group 24, 4), plus seven lines across Groups 4, 9–13. See the [changelog](#changelog).
 >
 > **Austin's background is two years as an auditor, then seven as a controller** (nine in total). Always state the split. Never write "ten years of audit", "10+ years of audit experience", or "ten years as an auditor and controller"; all three read as ten years of each.
 
@@ -64,11 +75,26 @@ Everything in this table was fixed by site PR #30 (merged 2026-11-01). Site PR #
 - **Rules:** Poof *offers* a rule, or a person asks for one in a sentence ("always put Lowe's under materials"); either way an owner or admin approves the rule as a card. There is no settings form for writing rules. A rule never acts above its ceiling — "the rule is the rule".
 - **Voice** is opt-in per device, not on by default.
 - **The iPhone app** is built and submitted (2026-10-26) but **not on the App Store**. Don't mention it on the site until Austin says it is released.
-- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), AI apps drafting cards from Claude or ChatGPT (`MCP_CARD_APPS` is off), per-company AI cost ceilings, and nightly backups.
+- **Not claimable yet:** assistant domain scopes (`AI_DOMAIN_SCOPES` is off), **ChatGPT** drafting cards (on for Claude only since 2026-11-13: `MCP_CARD_APPS=Claude`), per-company AI cost ceilings, nightly backups, and reports on numbers that aren't in the books (units, nights booked, chairs — planned as "business facts").
+- **Reports you build by talking:** Poof builds a report from the books' accounts and jobs, customers, vendors and products. A line can't split a vendor's spend by job (ledger lines carry no vendor), and nothing outside the books goes in. Saving, changing, scheduling and copying are a bookkeeper's, accountant's, admin's or owner's; the office manager doesn't see them. Up to 10 schedules a company, 5 addresses each. A copy into another company needs the person to be a bookkeeper or above there too. Never say the AI "writes the numbers" or "runs SQL": it writes the report's description; Poof runs it.
 
 **On the count.** Verify by summing the groups, not by reading this table.
 
 ---
+
+### For the 2026-11-17 site pass (nothing below is on the site yet; checked against site `main` at db67b5b)
+
+| Where | What it says now | Should say |
+|---|---|---|
+| `/features` (subtitle, layout title and description), llms.txt (lines 20, 73, 125) | 270 features in 24 groups / categories | **290 in 25**, with Group 25 *Reports you build by talking* and the new lines in Groups 4, 5, 9 and 23 |
+| `/features`, `/pricing` (layout, FAQ), llms.txt ("14 financial reports") | 14 reports | The 14 still stand. Add: *plus standard reports for your kind of business, and any report you ask Poof for* — never a bigger single number |
+| `/ai` (description and body) | "Read-only" | **Claude:** reads, and drafts a bill, expense, invoice, payment, customer or vendor as a card you approve, in Claude or in Poof. **ChatGPT:** reads. Both: "your reports in Poof, by name". Keep "follows your role" |
+| `/1099s` | Poof files for you | Add: **or send them yourself** from January 1, 2027, from the same page (an owner or admin, forms paid for); corrections go the same way |
+| Homepage, `/features` | No reports-by-talking story | A section or block: "Ask for the report you want. Keep it." with a cabin owner's or a builder's report as the example. Outcome first: see [Headlines for the reports group](#headlines-for-the-reports-group-2026-11-17) |
+| `/close`, `/bookkeeper` (firms) | Every client's 1099s on one page | Add: **build a report once, copy it to every client it fits**; each copy is matched to that client's own accounts |
+| Every count | 115 tools in the chat, 160 in the registry, 19 on MCP | **119 / 164 / 20 read tools, plus 9 card tools for Claude** |
+
+**For Austin, before the site says Claude drafts cards:** Claude's directory listing for *Poof Bookkeeping* said "read-only by design" when it was submitted (2026-10-24). Update the listing text to match, or keep the site's `/ai` page to reads until it is.
 
 ### Shipped to the site — do not re-raise as "to add"
 
@@ -138,7 +164,9 @@ Whichever way, nothing an AI proposes lands without someone seeing it first ([Gr
 
 **It keeps the whole back office, not just the bank feed.** Poof posts **payroll** from your provider's reports and ties the 941s and W-2s to it, tracks **sales tax** by city, runs a **fixed-asset register** with depreciation, **vehicle and equipment loans** and trade-ins, counts **parts on the trucks**, and keeps the **taxes** (every deadline, the year on the return's lines, the CPA package, the reserve, the four estimates; Poof prepares and reminds, it never files a return). Quotes are accepted online with good/better/best options, deposits and progress billing; memberships bill and schedule their tune-ups; purchase orders, receiving, timesheets and commissions land on the job and the books. A service shop can add an **AI receptionist** that answers the phone, books a real slot and dispatches the tech ([Group 11](#11-ai-receptionist--dispatch-16-features)).
 
-**And it files the 1099s.** Tell Poof who you paid; it collects the W-9s, files with the IRS and sends every contractor their copy ([Group 23](#23-file-your-1099s-13-features)).
+**And it files the 1099s.** Tell Poof who you paid; it collects the W-9s, files with the IRS and sends every contractor their copy ([Group 23](#23-file-your-1099s-15-features)).
+
+**Ask for the report you want, and keep it.** "Show me each cabin by month this year" becomes a report you save, change by asking, see as a tile on Home and get by email on the 1st. Rentals and builders get their own standard reports ([Group 25](#25-reports-you-build-by-talking-12-features)).
 
 **One-liner (headline, from 2026-11-01):** "Poof is free. Poof Agent does the books while you sleep."
 **One-liner (brand):** "The work disappears. The evidence doesn't."
@@ -147,6 +175,7 @@ Whichever way, nothing an AI proposes lands without someone seeing it first ([Gr
 **One-liner (approvals):** "The back office, run by AI. Signed by you."
 **One-liner (1099s):** "Tell Poof who you paid. Poof files the 1099s."
 **One-liner (a person):** "Want a person to do your books?"
+**One-liner (reports):** "Ask for the report you want. Keep it."
 
 **Website:** poofai.com — the software, Poof Agent, a person to do your books, and 1099 filing.
 
@@ -163,10 +192,11 @@ Whichever way, nothing an AI proposes lands without someone seeing it first ([Gr
 - **Service shops** — HVAC, plumbing, electrical and other trades: the dispatch board, the tech's link, deposits and plans, truck stock, the close, and the receptionist add-on (`/trades`)
 - Anyone who paid contractors and needs **1099s filed in January** → **File your 1099s**, the door for businesses that don't keep their books in Poof yet; the monthly line and "your books, from the same bank — free" bring them the rest of the way
 - Solo founders, freelancers and service businesses who want invoicing and the books in one place
+- **Rentals and builders** — a cabin or property owner sees each property's P&L and net; a builder sees margin, backlog and what's billed by project, from standard reports made for them (added 2026-11-17)
 
 **The second door — bookkeepers and firms** (`/close`):
 - Bookkeepers and controllers who run several clients' books and want one place where the AI's work waits for their approval
-- Every client company is free; the firm pays $29 a month only for the clients it switches Poof Agent on for; every client's 1099s on one page, the owner signing by emailed link
+- Every client company is free; the firm pays $29 a month only for the clients it switches Poof Agent on for; every client's 1099s on one page, the owner signing by emailed link; a report built once and copied to every client it fits
 - **A firm's clients are its own.** Poof never offers a firm's client the "person to do your books" request and never routes one to the bookkeeping team
 
 ### Positioning Statement
@@ -200,6 +230,9 @@ Always lead with what changes in the customer's life, not what the product does.
 | 14 financial reports | "Know exactly where your money went — in 30 seconds" |
 | Report drill-down | "Click any number. See exactly what's behind it." |
 | Scheduled reports | "Your reports, delivered to your inbox — automatically." |
+| Reports you build by talking | "Ask for the report you want. Keep it." |
+| Standard reports for rentals | "Every cabin's month, on one page." |
+| Report tiles on Home | "Your numbers, not ours, on the first screen." |
 | Reconciliation | "Reconciliation that takes minutes, not hours" |
 | Recurring invoices | "Send invoices on autopilot — follow-ups included" |
 | Estimates | "Send a quote. Convert to an invoice in one click." |
@@ -456,6 +489,16 @@ There is no 300 and no 700. Bold inside body copy is 600.
 - "Snap a photo. Never type an expense again."
 - "Describe your goal. Get a budget in seconds."
 
+### Headlines for the reports group (2026-11-17)
+Outcome first; the limit stays in the body copy (see *Limits to keep* at the top).
+- "Ask for the report you want. Keep it." · "Show me each cabin by month — saved, rerun, on the 1st in your inbox."
+- "Change a report the way you'd ask a bookkeeper: 'take depreciation out and make it quarterly.'"
+- **Rentals:** "Every property's P&L, every month, without a spreadsheet."
+- **Builders:** "Margin, backlog and what's billed — by project, as of today."
+- **Firms:** "Build it once. Copy it to every client it fits."
+- **In Claude and ChatGPT:** "Ask Claude for your cabin report. It reads Poof's."
+- Body limit: the numbers come from the books, the same reads as the Income Statement. The AI describes the report; it never writes a number.
+
 ### Headlines for the November groups (2026-11-01)
 Outcome first, the limit kept in the body copy (see *Limits to keep* at the top).
 - **1099 filing:** "Tell Poof who you paid. Poof files the 1099s." · "W-9s collected, forms filed, copies mailed — and the IRS receipt in your inbox." · "Your first three forms are free." · Body limit: 1099-NEC and MISC, filed after the year ends; due February 1.
@@ -481,7 +524,7 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 
 ### Supporting Messages
 - "Every small business owner deserves financial clarity"
-- "270 features, free. The agent that does the work is $79 a month."
+- "290 features, free. The agent that does the work is $79 a month."
 - "See where your cash is headed — 12 months out"
 - "Do your books free, let Poof Agent do them, or hand them to a person."
 
@@ -509,7 +552,7 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 ### What Poof Does
 Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthly transactions). The software is free. With **Poof Agent**, users connect their bank accounts and the AI handles categorization, receipts, reconciliation matching, reminders and the month's write-up, each as cards for a person's OK; on Free, the owner's rules keep sorting and the rest waits for a person. Or a bookkeeper who works in Poof does it.
 
-### 270 Features in 24 Groups
+### 290 Features in 25 Groups
 
 #### 1. AI-Powered Automation (11 features)
 1. AI transaction categorization (BRAID engine)
@@ -529,7 +572,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 2. Credit notes (create, send via email, AI-assisted)
 3. Payment tracking & payment receipts — record a check, cash, transfer or part payment from the invoice itself
 4. Products & services catalog — with "your cost" and a margin on each item
-5. Customer management (full database with contact info, billing/shipping addresses, sales reporting; an "Owes" column and one view per customer of invoices, payments and credits)
+5. Customer management (full database with contact info, billing/shipping addresses, sales reporting; an "Owes" column and one view per customer of invoices, payments and credits). A business customer is billed as the business, "Attn:" the contact, and starts on the company's default terms (app #570, #572)
 6. Recurring invoices — weekly, monthly, quarterly, or yearly schedules. The default is **"make a draft for me to review"**; sending automatically is an option the owner picks
 7. Automated invoice follow-ups — configurable reminders at due date, 3, 7, 14, and 30 days past due with smart pause on payment
 8. **Reminders written from the customer's history** — each one drafted by AI and checked by a code guard before it goes; a daily collections summary by email, Telegram or Slack
@@ -556,7 +599,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 13. **Supplier refund checks matched to the credit** — an overpaid bill's extra kept as a vendor credit, and the refund nets in the vendor's 1099
 14. **Emailed supplier invoices become bills to approve** — not paid expenses: due date, invoice number, job, a duplicate warning, and the PDF attached
 
-#### 4. Banking & Reconciliation (12 features)
+#### 4. Banking & Reconciliation (14 features)
 1. Bank connection via Plaid (12,000+ banks; **90 days of history on the first connection, refreshed on its own every day** for every connected bank, reaching back up to 90 days when a feed has stalled — true from 2026-10-20; a connection made since 2026-10-29 can also bring in payments back to January 1 for 1099s, kept out of the books; optional liability accounts for broader institution support). Free connects 2 banks; Poof Agent, any number
 2. Bank statement import (CSV/PDF, up to 25MB, AI-powered parsing with GPT-4o Vision for PDFs, intelligent column mapping, bank name auto-detection, duplicate prevention) — also importable via AI chat by uploading a PDF
 3. Reconciliation (multi-step wizard, auto-match, hand match and unmatch, completion report, export and email, history with reopen and delete) — works on a phone; a credit card reconciles to the balance owed
@@ -569,8 +612,10 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 10. **Transfers between your own accounts post once** — card payments, savings and a line of credit, with a "Match both" card; different-day transfers go through Transfers in Transit, and the close warns when that account holds anything stale
 11. **Pending holds wait until they post** — a transaction the bank removes is set aside, and a booked one the bank stops showing raises a card
 12. **Pending at the bank** — "Pending at the bank: 3 (−$412.18)" under each account and on Transactions, never booked; **Sync Now** asks the bank for the latest first (app #499)
+13. **Connect credit cards, and never twice** — a card connected through Plaid counts as a credit card, not a bank account; connecting the same account again never adds a second; and a bank connected after you imported your books links to the imported account rather than making a new one with a second opening balance (app #561, #564, #566)
+14. **A deposit split across properties** — each line of a bank deposit carries its own account and job, so a property manager's statement (rent less fees, cabin by cabin) lands on each property's P&L (app #552)
 
-#### 5. Accounting & Reporting (13 features)
+#### 5. Accounting & Reporting (16 features)
 1. Double-entry accounting
 2. 14 financial reports: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail Report, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, Progress Billing
 3. Report drill-down — click any account in Balance Sheet, Income Statement, or Trial Balance to see underlying journal entries; click a journal entry to edit it
@@ -580,10 +625,13 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 7. Accrual & cash basis toggle (cash basis follows QuickBooks' rule)
 8. Recurring journal entry templates (daily, weekly, monthly, quarterly, annually) with reversing journal entry support
 9. **Accounts Poof uses** — every automatic entry (invoices, bills, sales tax, loans, depreciation…) posts to an account you can see and change on the Chart of Accounts page; if one is missing, Poof creates it once with the standard name and number, and a category that isn't in your chart is held for review, never posted somewhere else
-10. **Switch from QuickBooks by file** — the trial balance, customers and vendors, and open invoices and unpaid bills come in as opening balances, tied to the trial balance and never counted twice
+10. **Switch from QuickBooks by file** — the trial balance, customers and vendors, and open invoices and unpaid bills come in as opening balances, tied to the trial balance and never counted twice. **Books → Import books**; each account's type is guessed from its name and shown before anything posts (app #558–#560)
 11. **Compare the P&L** — to the previous period or the same period last year (gross margin change in points), or split by job type
 12. **Download the company's books** — the whole company in one Excel workbook: ledger lines, chart, bank rows, quotes, jobs, visits, equipment, memberships, price book and time. Pay stays owner-only
 13. **Bring it over from Housecall Pro, Jobber or QuickBooks** — price list, customers and service addresses, equipment, and members, each previewed and then a card to approve; exports can be emailed in or dropped into Ask Poof. File import only
+14. **P&L by job** — one column per job (each cabin, property or project), plus Other jobs, Unassigned (overhead) and Total; the columns add up to the Income Statement, Unassigned drops out when everything is on a job, and Ask Poof answers "P&L by property this year" with the same numbers (app #542, #543, #567)
+15. **Sub-accounts the way QuickBooks shows them** — "Utilities:Electricity" from an import becomes a Utilities heading with Electricity under it and a total, on the P&L, the balance sheet and the chart of accounts; empty rows hidden until you ask (app #562)
+16. **Reports print like statements** — the company's name and the dates on top, the table on page one, every column on the page (sideways when wide), no grid (app #569)
 
 #### 6. Budgeting & Forecasting (9 features)
 1. Budget creation — manual or AI-generated from a natural language goal (e.g., "20% revenue growth")
@@ -607,18 +655,18 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 8. Bot-abuse gate on registration — Cloudflare Turnstile challenge on public sign-up, stopping scraped-address subscription bombing
 9. AI privacy chokepoint ("Gateway") — every model call goes through one place: the text is scrubbed of identifiers like Social Security, card and bank numbers before it leaves, and every call is logged with destination, model, redaction count, and token usage for the audit trail (photos and PDFs go as they are)
 10. **Office manager role** — invoices, quotes, customers, dispatch and hours, but no books; they land on the Board, and Ask Poof, the chat apps and Approvals follow the role
-11. **Add a company from the company menu** — you own it; the first company a person owns gets 30 days of Poof Agent, and later ones start on Free (app #481)
+11. **Add a company from the company menu** — you own it; the first company a person owns gets 30 days of Poof Agent, and later ones start on Free (app #481). The company you're in follows you across devices, and a firm's client reads "Client of <firm>" in the menu (app #550)
 
 #### 8. Productivity & Workflow (7 features)
 1. Personalized dashboard — AI-generated daily briefing with "Reply to Poof" action, time-aware greeting, 4 animated KPIs, Y-axis dollar labels on all chart tiles, proactive "Needs Your Attention" alerts, drag-and-drop reorderable tiles with staggered animations, actionable empty states, quick-action buttons, semantic color coding, and a global date filter
-2. Global search (across transactions, invoices, bills, expenses)
+2. **Search in the header** — a real search box: pages ("invoi" → Invoices), customers, reports ("cash run" → Cash runway) and commands ("create invoice for $450 to Rivera" opens the form filled in); a question goes to Ask Poof, which has its own button beside it; ⌘K puts the cursor in the box (app #590)
 3. Notification center (in-app and email)
 4. Transaction approval workflows
 5. Command bar (Cmd+K) — natural language navigation
 6. AI chat folders — organize conversations into folders (create, rename, delete, move), with drag-and-drop on desktop and move menu on mobile, collapsible sections, and persistent state
-7. **"This month" on Home** — close rate, average ticket, top 3 techs by revenue, callbacks, active members and renewals due, and backlog; hidden when the company has none of that data
+7. **"This month" on Home** — close rate, average ticket, top 3 techs by revenue, callbacks, active members and renewals due, and backlog; outside the field-service trades a tile shows only when the company has its data. The change chips compare the month so far with the same days of last month (app #578)
 
-#### 9. Poof AI Capabilities (23 features)
+#### 9. Poof AI Capabilities (24 features)
 1. Business-context-aware chat (knows your company, industry, timezone) with concise, action-oriented responses, multi-session support, and folder organization
 2. Books health check & month-end close guidance
 3. Invoice, quote, and credit note creation — AI prepares, edits, and sends via email, including good/better/best quote drafts from templates
@@ -630,7 +678,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 9. Account search & creation — AI can look up and create chart of accounts entries autonomously
 10. Journal entry creation with account validation — AI verifies accounts exist before posting
 11. Recurring journal entry setup — AI handles depreciation, amortization, rent, and insurance schedules (calculates periodic amounts, creates accounts, sets up the recurring template)
-12. Financial report generation — AI generates all 14 reports on request
+12. Financial report generation — AI generates all 14 reports on request, and builds any other report you describe ([Group 25](#25-reports-you-build-by-talking-12-features))
 13. Bank statement PDF import via chat — upload a PDF, AI extracts transactions with GPT-4o Vision, presents summary, and imports to selected bank account with BRAID auto-categorization
 14. Guided onboarding walkthrough — AI navigates the UI, highlights elements, and walks new users through setup step by step
 15. File attachment handling — receipts, invoices, and documents uploaded in chat are automatically scanned and attached to any record the AI creates
@@ -641,7 +689,8 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 20. **Talk to Poof in Telegram and Slack** — ask, get answers, and approve or reject cards right in the chat; every copy of a card stays in step
 21. **A morning summary where you work** — what needs your OK today, delivered to the chat app you use
 22. **Ask how the business is doing** — close rate, average ticket, top tech, callbacks, members, utilization, P&L, A/R aging and job profitability; the numbers equal the screens, and tests check that they do. Also "how's the Garcia job vs the quote?", requests, and hours
-23. **Use Poof from Claude, ChatGPT or Grok** — "Sign in with Poof": a consent page names the app, the company and the person, the app gets only what that person's role can read, and Settings → Chat apps disconnects it. **Poof Bookkeeping is in Claude's directory** (published 2026-10-24); **Poof Bookkeeping is in ChatGPT's plugins** (published 2026-11-05; app #459, #469)
+23. **Use Poof from Claude, ChatGPT or Grok** — "Sign in with Poof": a consent page names the app, the company and the person, the app gets only what that person's role can read, and Settings → Chat apps disconnects it. **Poof Bookkeeping is in Claude's directory** (published 2026-10-24); **Poof Bookkeeping is in ChatGPT's plugins** (published 2026-11-05; app #459, #469). Both can list and run the company's reports, with jobs by number and customers numbered (app #599)
+24. **Claude drafts, you approve** — in Claude, Poof can draft a bill, an expense, an invoice (and send it), a payment reminder, a payment received, a transaction's category, a customer or a vendor. Each is Poof's own card, shown inside Claude, approved there or in Poof's Approvals, and never by a rule or the AI. On for Claude since 2026-11-13; ChatGPT stays read-only (app #482, #573)
 
 #### 10. Job Costing, Month-End Close & Payments (23 features)
 1. Job costing & per-job profitability — tag transactions, bills, and invoices to jobs; see profit per job (**the trades headline feature**). For shops using the receptionist and field link, a completed service call **becomes a job on its own** and its revenue, parts, and labor land on it without anyone tagging anything ([Group 12](#12-field-service--job-handoff-15-features))
@@ -837,7 +886,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 7. **Estimate payments recognized** — IRS and EFTPS payments in the bank feed offered for the right quarter, a person confirms each, payments from a personal account typed in, and on a pass-through a payment booked as an expense flagged as a draw
 8. **Texas franchise tax and property** — last year's revenue against the no-tax-due threshold and which report to file by May 15; what the business owned on January 1, at cost, against the $125,000 business personal property exemption, with the certification or a Form 50-144 list for the appraisal district
 
-#### 23. File your 1099s (13 features)
+#### 23. File your 1099s (15 features)
 
 > **Poof files 1099-NEC and 1099-MISC with the IRS** for a business that signs the authorization, after the year ends (2026's forms in January 2027, due February 1). Prep is free; filing is **$2.49 a form after the first 3 each year**, a mailed copy **$1.79**, an emailed copy free. No IRS filer code (TCC) is ever asked of the customer: Poof files under its own. No TIN matching (the format is checked); no state filing, 1099-K, INT, DIV or W-2s. App #488, #511, #516–#531.
 
@@ -854,6 +903,8 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 11. **The W-9 at the first payment** — and a line on the 1st of each month: who's been paid, how much, how many W-9s are in. December: "your 1099s are ready to look over"
 12. **A bookkeeper's clients on one page** — every client's forms, missing W-9s and signature; "Send for signature" emails the owner a one-use link, no login
 13. **One checkout for every client** — $2.49 a form up to 25 a year, then $1.49; each client's first 3 stay free
+14. **Or send them yourself** — from January 1, 2027, an owner or admin sends their own paid-for forms to the IRS from **/file-1099s** or **Books → 1099s**: "Send 1099-NEC to the IRS", each send's status and receipt, and **Check with the IRS now**. Same send as when Poof files, under Poof's filer code; Poof still files for anyone who'd rather it did (app #574)
+15. **Corrections, and what to fix** — a corrected form goes to the IRS the same way, and when the IRS rejects or flags a form the owner gets an email saying which and what to change (app #551, #554, #555)
 
 #### 24. Free, Poof Agent & a Person (4 features)
 
@@ -864,16 +915,34 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 3. **Firms switch the agent on client by client** — every client free, $29 a month only for the ones it's on for, with a running total
 4. **"Want a person to do your books?"** — in Settings → Billing, on For Review when 50 or more are waiting, and in Ask Poof: how far behind, roughly how many transactions a month, payroll or not. A bookkeeper who works in Poof usually gets back within a business day and quotes the job. No price is shown
 
+#### 25. Reports you build by talking (12 features)
+
+> **How it works, for anyone writing about it:** the AI writes a short description of the report (which accounts on which line, columns by month or by job, which period). Poof checks every name against the company's own chart and jobs, then runs it on the same reads as the Income Statement, so a report's Net equals the P&L's. The model never computes or edits a number. Live in production since 2026-11-16/17 (app #578–#600, migrations 258–260). Limits are under *Limits to keep* at the top.
+
+1. **Ask for a report in a sentence** — "show me each cabin by month this year" comes back as a card in the chat: the table (it scrolls inside the card on a phone), a chart if asked, and "How it's built" in words. **Save** keeps it under Reports → My reports; nothing is saved until you tap it
+2. **Change it by asking** — "take depreciation out and make it quarterly" → "Changes to 'Each cabin': Removed Depreciation · now by quarter" and **Update**. Every version is kept, with who changed it and when. A name that fits two accounts comes back as a question with both, never a guess
+3. **My reports** — each saved report runs on today's books when opened; another period without changing it; CSV; each account opens Account Detail for those dates; rename, and delete for admins
+4. **Standard reports for every business** — P&L by month, Cash runway (months of spending the bank covers), Days to get paid, Top customers, Expenses by month, Owner draws. **Save a copy** makes one your own; the standard one never changes
+5. **For rentals** — Each property by month, Net per property, Expenses per property, for a real-estate company or one that says it rents cabins or property
+6. **For builders** — Margin by project, and as of today Backlog by project, Billed by project and Contract size (from the Progress Billing report's own contracts)
+7. **Your numbers on Home** — each report's headline number as a tile: the defaults for your kind of business wherever there's a number, plus any report you **Pin to Home** (or ask Poof to put there); ✕ takes one off and it stays off
+8. **Send a report on a schedule** — daily, weekly, monthly or quarterly at a time you pick, by email (a PDF, sideways when it's wide, or CSV) and/or to your own Telegram or Slack, for its own period or another. It runs as the person who set it up, checked at every send; listed in Settings → Automation
+9. **"Email me the cabin report on the 1st"** — Ask Poof sets up the schedule as a card you approve: the report, when, the period and every address on its own line. Never by a rule
+10. **Copy a report to your other companies** — a bookkeeper builds it once and copies it to every client it fits, from the report or by asking Poof. Each copy is matched by name to that client's own accounts and jobs; a company where a line doesn't match is listed with the line, and isn't copied into
+11. **Reports wherever you ask** — in Telegram and Slack a short table and a link to open it in Poof; in Claude and ChatGPT your saved and standard reports by name, with jobs by number and customers numbered
+12. **One Reports list** — every report the same row (an icon, the name, what it shows, a star); your kind of business's reports near the top; the everyday ones beside the statements they're like (P&L by month under Income Statement); Favorites take any report; search reads the descriptions too; **Ask Poof for a report** beside the search
+
 ---
 
 ## Key Numbers & Claims
 
 | Claim | Value |
 |---|---|
-| Total features | 270 in 24 groups. The software is free; the AI work in them is Poof Agent's, and the receptionist (Group 11) is an add-on |
-| Bank connections | 12,000+ (via Plaid); 2 on Free, any number on Poof Agent |
-| Financial reports | 14 |
-| AI assistant tools | 115 offered to the chat, from one registry of 160 shared with the phone line and MCP (19 read tools on MCP) — counted 2026-11-01 |
+| Total features | 290 in 25 groups. The software is free; the AI work in them is Poof Agent's, and the receptionist (Group 11) is an add-on |
+| Bank connections | 12,000+ (via Plaid), bank accounts and credit cards; 2 on Free, any number on Poof Agent |
+| Financial reports | 14, plus 13 standard reports (6 for every business, 3 for rentals, 4 for builders) and any report you ask Poof to build. Say "14 reports, and any other you ask for"; never add them into one number |
+| AI assistant tools | 119 offered to the chat, from one registry of 164 shared with the phone line and MCP (20 read tools on MCP, plus 9 card tools for Claude) — counted 2026-11-17 |
+| Report schedules | Up to 10 a company, 5 addresses each; email (PDF or CSV), Telegram or Slack |
 | AI accuracy rate | 95% |
 | Setup time | 5 minutes |
 | Manual entry reduction | 90% (with Poof Agent) |
@@ -882,7 +951,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 | Granular permissions | 46 |
 | Free plan, each month | 25 Ask Poof questions · 25 reads · 2 bank feeds · 100 team texts · customer emails 50 a day to 10 addresses; file imports unlimited |
 | Poof Agent trial | 30 days for a new company, no card; the first company a person owns; then Free, nothing locked |
-| 1099 filing | First 3 forms a year free, then $2.49 a form; $1.79 a mailed copy; emailed copies free; firms $1.49 a form past 25 a year |
+| 1099 filing | First 3 forms a year free, then $2.49 a form; $1.79 a mailed copy; emailed copies free; firms $1.49 a form past 25 a year. Poof files, or the business sends its own from January 1, 2027 |
 | A person to do your books | A reply usually within a business day; quoted per job; no price shown |
 | Cash flow forecast horizon | 12 months with confidence bands |
 | Receptionist notification channels | 6 (SMS, email, push, Slack, Telegram, webhook) |
@@ -1232,10 +1301,13 @@ is the software an agent can safely call.
 checklist, transaction search, A/P aging, open bills, the cash plan, accrual schedules, a month's
 summary, P&L, job profitability, A/R aging, open invoices — plus the approvals inbox: an agent can
 list and read proposals and request a link the human taps to approve. **An agent can never approve
-anything.** Every tool comes from one registry shared with the chat and the phone line (19 read
-tools on MCP, 2026-11-01). Built and **off until `MCP_CARD_APPS` is set**: an AI app can *draft*
-cards (a bill, an expense, an invoice draft, a payment received, a customer…) that a person approves
-on Poof's card, in the chat or in Approvals — never by a rule, never by the agent (app #482).
+anything.** Every tool comes from one registry shared with the chat and the phone line (20 read
+tools on MCP, 2026-11-17, including the company's saved and standard reports by name, run without
+job, customer or person names). **On for Claude since 2026-11-13** (`MCP_CARD_APPS=Claude`, verified
+live with app #573): Claude can *draft* cards (a bill, an expense, an invoice and sending it, a
+payment reminder, a payment received, a transaction's category, a customer, a vendor) that a person
+approves on Poof's card inside Claude, in the chat or in Approvals — never by a rule, never by the
+agent (app #482). ChatGPT is read-only.
 
 **The honest limits — state these, do not skip them:**
 - **Sign in with Poof (app #459, live):** a customer connects Claude, ChatGPT or Grok to their own
@@ -1271,6 +1343,15 @@ dashboard, and the Firm Console (planned, on hold, nothing built).
 ---
 
 ## Changelog
+
+### November 17, 2026 — reports you build by talking; P&L by job; Claude drafts cards (290 features)
+
+- **Added 20 features: 270 → 290, 24 → 25 groups.** New **Group 25, Reports you build by talking** (12: ask for a report, change it by asking, My reports, standard reports for every business, for rentals and for builders, tiles on Home, schedules by email/Telegram/Slack, a schedule by asking, copy to other companies, reports in chat apps and AI apps, one Reports list; app #577–#600, migrations 258–260). Group 4 +2 (credit cards and no duplicate connections, #561/#564/#566; a deposit split across properties, #552). Group 5 +3 (P&L by job, #542/#543/#567; sub-accounts, #562; reports print like statements, #569). Group 9 +1 (Claude drafts cards you approve, #482/#573). Group 23 +2 (send your own 1099s from Jan 1, 2027, #574; corrections and rejection emails, #551/#554/#555).
+- **Lines changed, no count change:** customers billed as the business with "Attn:" (Group 2, #570/#572); Books → Import books (Group 5, #558–#560); the company follows you across devices, "Client of <firm>" (Group 7, #550); the header search box (Group 8, #590); Home's strip outside the trades and same-days change chips (Group 8, #578); Claude and ChatGPT read reports (Group 9, #599).
+- **Claims that became true, and one that was false until today:** AI apps drafting cards is claimable **for Claude** (it was in *Not claimable*). **Scheduled report delivery** (Group 5) had been failing at every send because of a database column that didn't exist; fixed 2026-11-17 (#594). The claim stands now; don't say it worked before.
+- **Counts:** assistant tools 115/160 → 119/164; MCP 19 → 20 read tools, plus 9 card tools for Claude.
+- **Positioning:** rentals and builders added under *Who Poof is for*, from the standard reports made for them. Owners first is unchanged.
+- **Site:** none of it is on the site yet. See *For the 2026-11-17 site pass* at the top.
 
 ### November 2, 2026 — QuickBooks has a free plan
 

@@ -10,7 +10,7 @@ const MCP_URL = 'https://mcp.poofai.com/mcp'
 export const metadata: Metadata = {
   title: 'Poof in Claude, ChatGPT and Grok — Ask Your AI About Your Books | Poof',
   description:
-    'Connect Poof to Claude or ChatGPT and ask about your books in plain words: last month’s profit, who owes you, what bills are due, which jobs made money. Read-only, follows your role, disconnect any time.',
+    'Connect Poof to Claude or ChatGPT and ask about your books in plain words: last month’s profit, who owes you, what bills are due, which jobs made money, and your own reports by name. Nothing changes without your OK, it follows your role, and you can disconnect any time.',
   keywords: 'Claude connector, ChatGPT plugin, bookkeeping AI, MCP, ask AI about my books',
   alternates: {
     canonical: 'https://www.poofai.com/ai',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: ['/og-image.png'],
     title: 'Poof in Claude and ChatGPT',
-    description: 'Ask Claude or ChatGPT about your books. Poof keeps the numbers; your AI reads them, read-only.',
+    description: 'Ask Claude or ChatGPT about your books. Poof keeps the numbers, and nothing your AI asks for lands until you approve it.',
     url: 'https://www.poofai.com/ai',
     siteName: 'Poof',
     type: 'website',
@@ -32,12 +32,13 @@ const questions = [
   'Which jobs made money this quarter?',
   'Is last month closed? What’s still open?',
   'What’s waiting for my approval in Poof?',
+  'Run my cabin report for October.',
 ]
 
 const promises = [
   {
-    title: 'Read-only',
-    body: 'Your AI reads your books. It can’t post an entry, move money, send an invoice or approve a card. Changes still happen in Poof, by a person.',
+    title: 'Nothing lands without you',
+    body: 'Your AI can’t change your books on its own. It can’t move money or approve a card, and nothing it asks for lands until a person approves it in Poof.',
   },
   {
     title: 'Your role, not more',
@@ -73,7 +74,7 @@ export default function AiPage() {
 
       <PageHero
         title={<>Ask Claude, ChatGPT or Grok about <span className="text-ledger-600">your books</span></>}
-        subtitle="Poof keeps the numbers. Connect it to the AI you already use, and ask in plain words: profit, who owes you, what’s due, which jobs made money. Read-only, and only what your role can see."
+        subtitle="Poof keeps the numbers. Connect it to the AI you already use, and ask in plain words: profit, who owes you, what’s due, which jobs made money, your reports by name. Only what your role can see, and nothing lands until you approve it."
       />
 
       {/* What you can ask */}

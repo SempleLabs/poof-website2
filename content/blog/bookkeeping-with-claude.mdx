@@ -4,6 +4,7 @@ excerpt: "Claude can explain a P&L, suggest categories and draft the email to a 
 category: "AI & Automation"
 readTime: "8 min read"
 date: "2026-11-02"
+updated: "2026-11-17"
 author: "Austin Semple"
 faqs:
   - question: "Can Claude do my bookkeeping?"
@@ -13,7 +14,7 @@ faqs:
   - question: "How do I connect my books to Claude?"
     answer: "With Poof, open Poof Bookkeeping in Claude's connector directory, press Connect, sign in to Poof and choose Allow. Then ask Claude about your books in plain words. You can also add it by hand in Claude under Settings, Connectors, Add custom connector, with the address https://mcp.poofai.com/mcp. The connector is part of Poof's free plan."
   - question: "Can Claude post entries or pay bills in Poof?"
-    answer: "No. The connection is read-only. Claude can read your reports, invoices, bills, the close and what is waiting for approval, and it can give you a link to approve a card in Poof, but it can't post an entry, move money, send an invoice or approve anything. Changes still happen in Poof, by a person."
+    answer: "Not on its own. Claude can read your reports, invoices, bills, the close and what is waiting for approval, and it can give you a link to approve a card in Poof. It can't move money or approve anything, and nothing it asks for lands in your books until a person approves it in Poof."
   - question: "Does Poof work with ChatGPT and Grok too?"
     answer: "Yes. Poof Bookkeeping is in ChatGPT's plugins: search for it, press Install plugin, sign in to Poof and choose Allow. Grok connects as a custom connector, using the same address as Claude's. All three use the same Sign in with Poof page, follow your role, and disconnect from Settings, Chat apps, AI assistants in Poof."
 ---
@@ -68,6 +69,7 @@ If you prefer to add it by hand, go to **Settings → Connectors → Add custom 
 - "Which jobs made money this quarter?"
 - "Is last month closed? What's still open?"
 - "What's waiting for my approval in Poof?"
+- "Run my P&L by job report for October."
 
 Then keep going, because this is where Claude shines. "Why was the Garcia job's margin so low?" "Draft a friendly reminder to the three customers over 60 days." "If we add a tech in March, what does that do to cash by June?"
 
@@ -76,13 +78,15 @@ Then keep going, because this is where Claude shines. "Why was the Garcia job's 
 | Can Claude… | Through Poof |
 |---|---|
 | Read the P&L, receivables, bills, jobs, the close and the approvals inbox | Yes |
+| Run your reports in Poof, saved and standard, by name | Yes |
 | See more than your role in Poof can see | No. An office manager's Claude gets receivables and invoices, not the P&L |
-| Post an entry, send an invoice, move money | No. It is read-only |
+| Post an entry or send an invoice on its own | No. Nothing it asks for lands until a person approves it in Poof |
+| Move money | No |
 | Approve a card | No. It can give you a link to approve it in Poof |
 | See customer and vendor names | No. Names are swapped for codes before anything leaves Poof, and personal details are removed |
 | Keep access after you disconnect | No. Settings → Chat apps → AI assistants turns it off, and removing someone from your company ends their AI's access too |
 
-The read-only part is deliberate. An AI that reads your books can only be wrong in what it tells you, which you can check. An AI that writes to your books can be wrong in the books themselves. In Poof, the AI that does the work, Poof Agent, proposes every write on a card with the evidence, and a person approves it. More on why in [should AI post to your books?](/blog/should-ai-post-to-your-books)
+The approval part is deliberate. An AI that reads your books can only be wrong in what it tells you, which you can check. An AI that writes straight to your books can be wrong in the books themselves. In Poof, nothing an AI asks for lands on its own: Poof Agent proposes every write on a card with the evidence, an outside AI gets the same rule, and a person approves it. More on why in [should AI post to your books?](/blog/should-ai-post-to-your-books)
 
 ## ChatGPT and Grok
 
@@ -92,4 +96,4 @@ Open [Poof Bookkeeping in ChatGPT's plugins](https://chatgpt.com/plugins/plugin_
 
 If your books are in a spreadsheet or a shoebox, start there: [how to set up bookkeeping for a new LLC](/blog/how-to-set-up-bookkeeping-new-llc) covers the basics, and Poof can bring in the bank's last 90 days on the first connection. If they are in QuickBooks, the [QuickBooks alternatives](/blog/best-quickbooks-alternatives-small-business) post compares the options. Either way, once the books are somewhere real, connecting Claude is the easy part.
 
-*Written by Austin Semple, a former controller: two years in audit, seven running the books for small businesses, and the founder of Poof. Poof keeps the books, and Claude reads them, read-only and only what your role can see. [Start free](https://app.poofai.com/register), no card required.*
+*Written by Austin Semple, a former controller: two years in audit, seven running the books for small businesses, and the founder of Poof. Poof keeps the books, and Claude reads them: only what your role can see, and nothing lands without a person's OK. [Start free](https://app.poofai.com/register), no card required.*

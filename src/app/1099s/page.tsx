@@ -28,7 +28,7 @@ const STEPS: [string, string][] = [
   ['Who you paid', 'Type your contractors in, upload a spreadsheet, or connect your bank and tick the ones Poof finds. Poof brings in the year’s payments back to January 1 and keeps them out of any books. An amount you type is marked “entered by you”.'],
   ['Their W-9s', 'One click emails every contractor a W-9 link, and for anyone without an email Poof gives you a link to text them. A board shows who’s in, and Poof reminds the rest every five days, up to three times. You can type a tax ID or upload a W-9 you already have.'],
   ['Review and approve', 'Every contractor, the form and box, the amount, and how their copy goes. One signature, your name, title and “I agree”, approves the forms and authorizes Poof to file them.'],
-  ['Poof files', 'Poof files with the IRS, emails each contractor who agreed to it their copy, and mails the rest first-class. You get the IRS receipt by email, or exactly what to fix.'],
+  ['Poof files', 'Poof files with the IRS, emails each contractor who agreed to it their copy, and mails the rest first-class. You get the IRS receipt by email, or exactly what to fix. Rather send them yourself? From January 1, 2027 you can, from the same page.'],
 ]
 
 const PRICES: [string, string][] = [
@@ -45,6 +45,8 @@ const faqs = [
   { question: 'When does Poof file?', answer: 'After the year ends. Forms for 2026 are filed in January 2027 and are due to the IRS and to your contractors by February 1, 2027. If Poof is mailing paper copies, approve by late January so they are in the mail in time. Signing up after the deadline still works; Poof files them late.' },
   { question: 'Which forms does Poof file?', answer: 'Form 1099-NEC, for contractors, and Form 1099-MISC, for rent and the other boxes. Poof counts payments by check, ACH, cash and Zelle against the $2,000 line for 2026, and leaves out card and PayPal payments, which the processor reports on a 1099-K.' },
   { question: 'What if a contractor never sends their W-9?', answer: 'Poof reminds them every five days, up to three times, with a fresh link each time, and from December 1 shows you who is still missing. You can type in a tax ID you already have or upload a W-9 PDF instead.' },
+  { question: 'Can I send the forms to the IRS myself?', answer: 'Yes, from January 1, 2027. An owner or admin can send the forms they’ve paid for to the IRS from the same page, see each send’s status and receipt, and check with the IRS at any time. It is the same filing, under Poof’s filer code, at the same price. Poof still files for anyone who’d rather it did.' },
+  { question: 'What if a form needs a correction?', answer: 'A corrected form goes to the IRS the same way. If the IRS rejects or flags a form, you get an email saying which one and what to change.' },
   { question: 'I’m a bookkeeper. Can I file for my clients?', answer: `Yes. Every client’s forms, missing W-9s and signatures are on one page. Send for signature emails the client’s owner a one-use link, with no login, and you pay for all your clients’ forms in one checkout: ${FIRM_1099_PRICE}.` },
 ]
 
