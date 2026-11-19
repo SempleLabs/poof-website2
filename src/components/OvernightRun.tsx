@@ -17,7 +17,7 @@ const LINES: { t: string; text: string; kind: Kind; adds?: number }[] = [
   { t: '02:04', text: 'Truck 3 fuel split across 3 jobs by the hours techs logged', kind: 'job', adds: 1 },
   { t: '02:05', text: 'Payroll provider’s pay run tied to Friday’s withdrawal', kind: 'payroll', adds: 1 },
   { t: '02:06', text: 'Sales tax for 3 cities accrued on 14 invoices', kind: 'tax', adds: 14 },
-  { t: '02:07', text: 'Henderson invoice drafted from the tech’s field report', kind: 'need' },
+  { t: '02:07', text: 'Henderson invoice waiting: drafted when the tech closed the job at 4:40 PM', kind: 'need' },
   { t: '02:08', text: 'Garcia accepted the quote online: $8,450', kind: 'need' },
   { t: '02:10', text: 'Shell $64.18 twice in two days: a double charge?', kind: 'need' },
   { t: '02:12', text: 'Rivera Electric crossed $2,000 this year, no W-9 on file', kind: 'need' },
@@ -29,7 +29,7 @@ const HANDLED = LINES.reduce((n, l) => n + (l.adds || 0), 0)
 const WAITING = LINES.filter((l) => l.kind === 'need').length
 
 const CARDS: { title: string; amount: string; evidence: string; yes: string; no: string }[] = [
-  { title: 'Send the Henderson invoice', amount: '$2,860.00', evidence: 'Drafted from the tech’s field report: 6 hours and two parts, in the tech’s own words. Read it before it goes.', yes: 'Send it', no: 'Not yet' },
+  { title: 'Send the Henderson invoice', amount: '$2,860.00', evidence: 'Drafted the moment the tech tapped Complete: 6 hours and two parts, in the tech’s own words. Read it before it goes.', yes: 'Send it', no: 'Not yet' },
   { title: 'Request a W-9 from Rivera Electric', amount: '$2,450.00', evidence: 'Paid $2,450 this year, over the $2,000 line for 2026 payments. Poof emails them a link to fill it in.', yes: 'Send the link', no: 'Not yet' },
   { title: 'Home Depot #4471 → Job Materials', amount: '$86.12', evidence: 'No history for this merchant. That is why it is asking.', yes: 'Approve', no: 'Change it' },
 ]

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import OvernightRun from '@/components/OvernightRun'
+import PhoneApprovals from '@/components/PhoneApprovals'
 
 /**
  * The homepage show: last night's run, then three steps the visitor performs.
@@ -148,9 +149,8 @@ export default function HomeShow() {
       <section className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-10 pb-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-10 lg:gap-14 items-center" id="top">
         <div>
           <p className={eyebrow}>Free for good · Poof Agent $49 a month</p>
-          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Poof is free. Poof Agent does the books while you sleep.</h1>
-          <p className="font-display text-[22px] sm:text-[26px] leading-[1.1] tracking-[-0.03em] text-ledger-600 mb-4">The work disappears. The evidence doesn&apos;t.</p>
-          <p className={sub}>The books, invoices, reports and month-end cost nothing, for good. Poof Agent answers anything you ask, reads the receipts and drafts the reminders, and leaves each entry for your OK. Or hand the books to a person.</p>
+          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Stop doing the books at night.</h1>
+          <p className={sub}>Poof Agent does them while you sleep. Nothing posts without your yes.</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free</Link>
             <Link href="/bookkeeper" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Ask for a bookkeeper</Link>
@@ -166,11 +166,11 @@ export default function HomeShow() {
 
         <figure className="mx-auto lg:mx-0">
           <div className="relative w-[220px] lg:w-[260px] rounded-[28px] border-[6px] border-ink bg-ink overflow-hidden shadow-[0_18px_40px_rgba(18,33,26,0.18)]">
-            <Image src="/images/approvals-phone.jpg" alt="The Approvals inbox on a phone: a Categorize 2 transactions card from the nightly run and a Create invoice card from the assistant, each with Approve and Reject" width={788} height={1600} sizes="260px" priority className="block w-full h-auto" />
+            <PhoneApprovals />
           </div>
           <figcaption className="mt-3 text-[13px] text-muted max-w-[260px]">
-            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Real screenshot · the founder&apos;s books</span>
-            Two cards waiting for a yes: one from the overnight run, one Ask Poof drafted.
+            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Try it · demo figures</span>
+            The same two cards Poof shows you each morning. Tap Approve; nothing here touches real books. <a href="/images/approvals-phone.jpg" className="text-ledger-600 hover:text-ledger-700 underline underline-offset-2">See the real screenshot</a>.
           </figcaption>
         </figure>
       </section>
@@ -196,7 +196,7 @@ export default function HomeShow() {
         <section className="pt-10 pb-6" id="act1">
           <p className={eyebrow}>Step 1 · The night</p>
           <h2 className={h2}>Last night, Poof Agent ran the back office.</h2>
-          <p className="text-[15px] text-muted max-w-[56ch]">It pulled the bank, matched the bills to jobs, drafted the invoice from the tech&apos;s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
+          <p className="text-[15px] text-muted max-w-[56ch]">It pulled the bank, matched the bills to jobs, lined up the invoice from yesterday&apos;s finished job and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
 
           <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
         </section>
