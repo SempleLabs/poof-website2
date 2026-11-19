@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import OvernightRun from '@/components/OvernightRun'
+import PhoneApprovals from '@/components/PhoneApprovals'
 
 /**
  * The homepage show: last night's run, then three steps the visitor performs.
@@ -165,11 +166,11 @@ export default function HomeShow() {
 
         <figure className="mx-auto lg:mx-0">
           <div className="relative w-[220px] lg:w-[260px] rounded-[28px] border-[6px] border-ink bg-ink overflow-hidden shadow-[0_18px_40px_rgba(18,33,26,0.18)]">
-            <Image src="/images/approvals-phone.jpg" alt="The Approvals inbox on a phone: a Categorize 2 transactions card from the nightly run and a Create invoice card from the assistant, each with Approve and Reject" width={788} height={1600} sizes="260px" priority className="block w-full h-auto" />
+            <PhoneApprovals />
           </div>
           <figcaption className="mt-3 text-[13px] text-muted max-w-[260px]">
-            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Real screenshot · the founder&apos;s books</span>
-            Two cards waiting for a yes: one from the overnight run, one Ask Poof drafted.
+            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Try it · demo figures</span>
+            The same two cards Poof shows you each morning. Tap Approve; nothing here touches real books. <a href="/images/approvals-phone.jpg" className="text-ledger-600 hover:text-ledger-700 underline underline-offset-2">See the real screenshot</a>.
           </figcaption>
         </figure>
       </section>
