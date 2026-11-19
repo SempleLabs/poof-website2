@@ -196,7 +196,7 @@ export default function HomeShow() {
         <section className="pt-10 pb-6" id="act1">
           <p className={eyebrow}>Step 1 · The night</p>
           <h2 className={h2}>Last night, Poof Agent ran the back office.</h2>
-          <p className="text-[15px] text-muted max-w-[56ch]">It pulled the bank, matched the bills to jobs, drafted the invoice from the tech&apos;s notes and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
+          <p className="text-[15px] text-muted max-w-[56ch]">It pulled the bank, matched the bills to jobs, lined up the invoice from yesterday&apos;s finished job and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
 
           <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
         </section>
