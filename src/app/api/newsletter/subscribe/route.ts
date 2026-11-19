@@ -170,7 +170,7 @@ export async function POST(request: NextRequest) {
                       </ul>
 
                       <p style="margin: 0 0 30px; color: #2A3D33; font-size: 16px; line-height: 1.6;">
-                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 270 features, free. Poof Agent, the AI that does the work, is $79 a month.
+                        Poof handles categorization, reconciliation, invoicing, budgeting, and reporting automatically — so you spend minutes on your books instead of hours. 270 features, free. Poof Agent, the AI that does the work, is $49 a month.
                       </p>
 
                       <table cellpadding="0" cellspacing="0" style="margin: 0 auto;">

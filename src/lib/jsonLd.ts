@@ -14,7 +14,7 @@ export function getOrganizationSchema() {
       url: 'https://www.poofai.com/support',
       availableLanguage: 'English',
     },
-    description: 'Free software that runs the small-business back office: books, invoicing, cash planning, 1099 filing, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 270 features, 14 reports. Poof is free; Poof Agent, the AI that does the work, is $79/mo; a bookkeeper who works in Poof is quoted per job.',
+    description: 'Free software that runs the small-business back office: books, invoicing, cash planning, 1099 filing, month-end close, and for service shops the phone and the field. Every AI write waits on a card with its evidence. 270 features, 14 reports. Poof is free; Poof Agent, the AI that does the work, is $49/mo; a bookkeeper who works in Poof is quoted per job.',
     sameAs: [
       'https://twitter.com/poofai',
       'https://linkedin.com/company/poofai'
@@ -35,13 +35,13 @@ export function getSoftwareApplicationSchema() {
     name: 'Poof',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description: 'Poof is free bookkeeping software. Poof Agent, the paid plan, sorts your transactions overnight, reads every receipt, and writes the month-end summary, with every entry waiting for your OK. 270 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
+    description: 'Poof is free bookkeeping software. Poof Agent, the paid plan, answers anything you ask, reads every receipt, and writes the month-end summary, with every entry waiting for your OK. 270 features including job costing, month-end close, budgeting, forecasting, invoicing, estimates, and 14 financial reports.',
     url: 'https://www.poofai.com',
     offers: [
       {
         '@type': 'Offer',
         name: 'Free',
-        description: 'The books, invoices, estimates, bills, purchase orders, every report, the close checklist, payroll and 1099 prep, and sales tax, free for good. Includes 25 Ask Poof questions, 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team a month.',
+        description: 'The books, invoices, estimates, bills, purchase orders, every report, the close checklist, payroll and 1099 prep, and sales tax, free for good. Includes AI sorting of new transactions (up to 500 a month, as suggestions you approve), 10 Ask Poof questions, 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team a month.',
         price: '0',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
@@ -50,12 +50,12 @@ export function getSoftwareApplicationSchema() {
       {
         '@type': 'Offer',
         name: 'Poof Agent',
-        description: 'The AI that does the work: sorts new transactions overnight, reads every receipt, bill and check, unlimited Ask Poof, collection reminders and the month-end summary, unlimited bank feeds, and customer texting. $79 a month or $790 a year; free for the first 30 days.',
-        price: '79',
+        description: 'Ask anything, any time: unlimited Ask Poof, reports built by asking, every receipt, bill and check read, sorting with no monthly limit, collection reminders and the month-end summary, unlimited bank feeds, and customer texting. $49 a month or $490 a year; free for the first 30 days.',
+        price: '49',
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '79',
+          price: '49',
           priceCurrency: 'USD',
           unitText: 'MONTH'
         },

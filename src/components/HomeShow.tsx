@@ -147,15 +147,15 @@ export default function HomeShow() {
       {/* HERO: the offer, and the real inbox beside it */}
       <section className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-10 pb-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-10 lg:gap-14 items-center" id="top">
         <div>
-          <p className={eyebrow}>Free for good · Poof Agent $79 a month</p>
+          <p className={eyebrow}>Free for good · Poof Agent $49 a month</p>
           <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Poof is free. Poof Agent does the books while you sleep.</h1>
           <p className="font-display text-[22px] sm:text-[26px] leading-[1.1] tracking-[-0.03em] text-ledger-600 mb-4">The work disappears. The evidence doesn&apos;t.</p>
-          <p className={sub}>The books, invoices, reports and month-end cost nothing, for good. Poof Agent sorts the bank overnight, reads the receipts and drafts the reminders, then leaves each entry for your OK in the morning. Or hand the books to a person.</p>
+          <p className={sub}>The books, invoices, reports and month-end cost nothing, for good. Poof Agent answers anything you ask, reads the receipts and drafts the reminders, and leaves each entry for your OK. Or hand the books to a person.</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free</Link>
             <Link href="/bookkeeper" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Ask for a bookkeeper</Link>
           </div>
-          <p className="text-[13px] text-muted mt-3">No card. Poof Agent is free for your first 30 days, then $79 a month if you keep it.</p>
+          <p className="text-[13px] text-muted mt-3">No card. Poof Agent is free for your first 30 days, then $49 a month if you keep it.</p>
 
           <nav aria-label="Who Poof is for" className="mt-5 flex flex-wrap items-baseline gap-x-5 gap-y-1.5 text-[14px]">
             {AUDIENCES.map(([label, href]) => (

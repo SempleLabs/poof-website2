@@ -106,7 +106,7 @@ export default function BookkeeperPage() {
             ))}
           </div>
           <p className="text-[15px] text-muted mt-6 max-w-[62ch]">
-            There is no price list on this page because no two jobs are alike. Doing them yourself instead? Poof is free, and <Link href="/pricing" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof Agent</Link> does most of the work for $79 a month.
+            There is no price list on this page because no two jobs are alike. Doing them yourself instead? Poof is free, and <Link href="/pricing" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof Agent</Link> does most of the work for $49 a month.
           </p>
         </div>
       </section>

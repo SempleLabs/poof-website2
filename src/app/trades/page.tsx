@@ -14,7 +14,7 @@ import { getFaqPageSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 export const metadata: Metadata = {
   title: 'Poof for shops — the back office for HVAC, plumbing, and electrical | Poof',
   description:
-    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. Poof is free; Poof Agent is $79/mo, free for 30 days. The AI receptionist is an add-on.',
+    'The phone answered, the job on the board, the tech closing it from a text, and the invoice on a per-job P&L. Poof is free; Poof Agent is $49/mo, free for 30 days. The AI receptionist is an add-on.',
   alternates: {
     canonical: 'https://www.poofai.com/trades',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     title: 'Poof for shops — the back office for HVAC, plumbing, and electrical',
     description:
-      'From the 9:40pm call to the per-job P&L, with a person on every entry. Poof is free; Poof Agent is $79 a month; the AI receptionist is an add-on.',
+      'From the 9:40pm call to the per-job P&L, with a person on every entry. Poof is free; Poof Agent is $49 a month; the AI receptionist is an add-on.',
     url: 'https://www.poofai.com/trades',
     siteName: 'Poof',
     type: 'website',
@@ -88,7 +88,7 @@ const builtFor = [
 const faqs = [
   {
     q: 'What does Poof for shops cost?',
-    a: 'The same as every other Poof account: Poof is free, including the dispatch board, the technician\'s field link, and per-job profitability. Poof Agent, the AI that sorts transactions overnight and reads every receipt, is $79 a month, and your first 30 days of it are free. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. The AI receptionist that answers your phone is an add-on at $99 a month with 1,000 minutes included, then 12¢ a minute.',
+    a: 'The same as every other Poof account: Poof is free, including the dispatch board, the technician\'s field link, and per-job profitability. Poof Agent, the AI you can ask anything, any time, that reads every receipt and sorts with no monthly limit, is $49 a month, and your first 30 days of it are free. There is no shop tier and no per-truck or per-technician pricing — the fee does not grow when you hire. The AI receptionist that answers your phone is an add-on at $99 a month with 1,000 minutes included, then 12¢ a minute.',
   },
   {
     q: 'Is the AI receptionist part of Poof Agent?',
@@ -212,7 +212,7 @@ export default function TradesPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
-              Poof is free. Poof Agent is $79 a month.
+              Poof is free. Poof Agent is $49 a month.
             </h2>
             <p className="text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               The dispatch board, the field loop, and per-job profitability are free. Poof Agent, the AI that does the
