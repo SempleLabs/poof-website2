@@ -63,7 +63,7 @@ export default function ProductHuntPage() {
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Connect your accounts and Poof categorizes, reconciles, and closes your books — 290 features, built by a former controller. Poof is free; Poof Agent, the AI that does the work, is normally $79/mo.
+              Connect your accounts and Poof categorizes, reconciles, and closes your books — 290 features, built by a former controller. Poof is free; Poof Agent, the AI that does the work, is normally $49/mo.
             </p>
           </AnimateOnScroll>
 

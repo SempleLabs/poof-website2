@@ -171,7 +171,7 @@ export default function JobMarginCheckPage() {
               <div className="bg-ink text-white rounded-2xl p-5 sm:p-7 mt-4">
                 <p className="text-lg leading-relaxed">
                   This is {report.jobs.length} jobs you remembered. Poof does this for every job from your real books: it tracks profit per job from the bills and
-                  invoices tagged to it, on every monthly close. Poof is free; Poof Agent is $79 a month, free for 30 days with no card.
+                  invoices tagged to it, on every monthly close. Poof is free; Poof Agent is $49 a month, free for 30 days with no card.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 mt-5">
                   <a

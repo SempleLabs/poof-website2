@@ -32,33 +32,35 @@ export default function PricingPage() {
   ]
 
   const freeAllowance = [
-    '25 Ask Poof questions',
+    'AI sorting of your new transactions: up to 500 a month, as suggestions you approve',
+    '10 Ask Poof questions',
     '25 receipt or document reads',
     '2 connected bank accounts (bank feeds)',
     '100 texts to your team'
   ]
 
   const agentFeatures = [
-    'Sorts new transactions overnight onto one card for your OK, or posts the sure ones if you turn that on',
+    'Ask anything, any time: unlimited questions in the app, Telegram, Slack & by voice',
+    'Reports built by asking',
     'Reads every receipt, bill & check: photographed, uploaded, forwarded or texted',
-    'Ask Poof with no limit, in the app, Telegram, Slack & by voice',
     'Writes your collection reminders & your month-end summary',
     'Unlimited bank feeds',
-    'Texts to your customers, from your own registered Poof number'
+    'Texts to your customers, from your own registered Poof number',
+    'Sorting with no monthly limit, and auto-posting the confident ones if you turn that on'
   ]
 
   const faqs = [
     {
       question: 'Is Poof really free?',
-      answer: 'Yes, for good. The books, invoices, estimates, bills, purchase orders, every report, the close checklist and period locks, payroll prep, 1099 prep, sales tax, the dispatch board, and the Claude and ChatGPT connector are all free, with no card and no time limit. Free also includes 25 Ask Poof questions, 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team each month. Poof Agent, the AI that does the work for you, is the paid plan.'
+      answer: 'Yes, for good. The books, invoices, estimates, bills, purchase orders, every report, the close checklist and period locks, payroll prep, 1099 prep, sales tax, the dispatch board, and the Claude and ChatGPT connector are all free, with no card and no time limit. Free also includes AI sorting of new transactions (up to 500 a month, as suggestions you approve), 10 Ask Poof questions (saying hi or asking how Poof works doesn\'t use one), 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team each month, plus unlimited file imports. Poof Agent, the AI that does the work for you, is the paid plan.'
     },
     {
       question: 'What does Poof Agent add?',
-      answer: 'Poof Agent is the AI that does the work while you\'re not looking. It sorts new transactions overnight onto one card for your OK (or posts the sure ones, if you turn that on), reads every receipt, bill and check, answers Ask Poof with no limit in the app, Telegram, Slack and by voice, writes your collection reminders and month-end summary, connects every bank account, and texts your customers from your own registered Poof number. It is $79/mo, or $790/yr.'
+      answer: 'Poof Agent is the AI that does the work while you\'re not looking. You can ask anything, any time: Ask Poof has no limit in the app, Telegram, Slack and by voice, and you can build reports just by asking. It reads every receipt, bill and check, writes your collection reminders and month-end summary, connects every bank account, texts your customers from your own registered Poof number, and sorts transactions with no monthly limit, posting the confident ones if you turn that on. It is $49/mo, or $490/yr.'
     },
     {
       question: 'What happens after the 30 days?',
-      answer: 'A new company starts with Poof Agent on for 30 days, with no card. After that, the company stays on Free unless you add Poof Agent. Nothing is locked or read-only: every screen and every number stays, your rules keep sorting, and new transactions they don\'t cover wait for a person instead of being sorted overnight.'
+      answer: 'A new company starts with Poof Agent on for 30 days, with no card. After that, the company stays on Free unless you add Poof Agent. Nothing is locked or read-only: every screen and every number stays, your rules keep sorting, and AI sorting continues on Free, up to 500 transactions a month as suggestions you approve.'
     },
     {
       question: 'What counts as a question or a read, and what happens when they run out?',
@@ -94,11 +96,11 @@ export default function PricingPage() {
     },
     {
       question: 'How does Poof compare to QuickBooks?',
-      answer: 'QuickBooks Free is $0, but it stops at 1 user, 2 invoices a month, one bank account and 3 reports, with no accountant access. The paid plans are Simple Start at $38/mo, Essentials $85/mo, and Plus $140/mo, the tier that carries job costing, budgets, and comprehensive reports. Poof is free, with the books, invoices, bills, every report, the close checklist, payroll and 1099 prep, and sales tax included. Poof Agent, the AI that sorts your transactions and reads your receipts, is $79/mo, 44% less than Plus, and every change it proposes waits on an approval card for a person. (QuickBooks paid pricing verified August 2026; QuickBooks Free checked November 2026.)'
+      answer: 'QuickBooks Free is $0, but it stops at 1 user, 2 invoices a month, one bank account and 3 reports, with no accountant access. The paid plans are Simple Start at $38/mo, Essentials $85/mo, and Plus $140/mo, the tier that carries job costing, budgets, and comprehensive reports. Poof is free, with the books, invoices, bills, every report, the close checklist, payroll and 1099 prep, and sales tax included. Poof Agent, the AI that sorts your transactions and reads your receipts, is $49/mo, 65% less than Plus, and every change it proposes waits on an approval card for a person. (QuickBooks paid pricing verified August 2026; QuickBooks Free checked November 2026.)'
     },
     {
       question: 'What reports can I generate?',
-      answer: 'Poof generates 14 financial reports, all of them on Free: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. Toggle between accrual and cash basis, choose your date range, and export in seconds. Beyond the 14, Poof has standard reports for your kind of business, and you can ask Poof for any other report in a sentence and keep it.'
+      answer: 'Poof generates 14 financial reports, all of them on Free: Income Statement (P&L), Balance Sheet, Cash Flow Statement, Trial Balance, General Ledger, Account Detail, AR Aging (also by job), AP Aging, Customer Sales, Vendor Expenses, Sales by Product/Service, Expenses by Category, Budget vs Actual, and Progress Billing. Toggle between accrual and cash basis, choose your date range, and export in seconds. Beyond the 14, Poof has standard reports for your kind of business, and you can ask Poof for any other report in a sentence and keep it. On Free, building or changing a report by asking uses one of your Ask Poof questions; running, starring and scheduling a saved report never does.'
     },
     {
       question: 'Do you integrate with my existing tools?',
@@ -106,11 +108,11 @@ export default function PricingPage() {
     },
     {
       question: 'How much does bookkeeping software cost for a small business?',
-      answer: 'Bookkeeping software for small businesses runs from free to $140/month depending on features and tier. QuickBooks has a free plan limited to 2 invoices a month and one bank account; its paid plans start at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140, and Plus is the tier you need for job costing and budgets. Poof is free, every report included. Poof Agent, the AI that does the work, is $79/month or $790/year.'
+      answer: 'Bookkeeping software for small businesses runs from free to $140/month depending on features and tier. QuickBooks has a free plan limited to 2 invoices a month and one bank account; its paid plans start at $38/month for Simple Start and steps up through Essentials at $85 and Plus at $140, and Plus is the tier you need for job costing and budgets. Poof is free, every report included. Poof Agent, the AI that does the work, is $49/month or $490/year.'
     },
     {
       question: 'Do I still need a bookkeeper if I use Poof?',
-      answer: 'Not for the day-to-day. Poof Agent sorts transactions, reads receipts, and writes the month-end summary, and every report builds itself. If you would rather a person did it, ask for a bookkeeper who works in Poof. For tax preparation, you can invite your accountant to collaborate directly inside Poof.'
+      answer: 'Not for the day-to-day. Poof Agent reads receipts, sorts with no monthly limit, and writes the month-end summary, and every report builds itself. If you would rather a person did it, ask for a bookkeeper who works in Poof. For tax preparation, you can invite your accountant to collaborate directly inside Poof.'
     }
   ]
 
@@ -139,7 +141,7 @@ export default function PricingPage() {
 
       <PageHero
         title={<>Poof is free. <span className="text-ledger-600">Poof Agent does the work.</span></>}
-        subtitle="The books, invoices, reports and close are free, for good. Poof Agent, the AI that works while you sleep, is $79 a month, and your first 30 days of it are free."
+        subtitle="The books, invoices, reports and close are free, for good. Poof Agent, the AI that works while you sleep, is $49 a month, and your first 30 days of it are free."
       />
 
       {/* Free Banner + Pricing Toggle */}
@@ -176,7 +178,7 @@ export default function PricingPage() {
                 Annual
               </button>
             </div>
-            <span className="ml-3 text-sm font-medium text-ledger-600">Save $158 a year</span>
+            <span className="ml-3 text-sm font-medium text-ledger-600">Save $98 a year</span>
           </div>
         </div>
       </section>
@@ -252,7 +254,7 @@ export default function PricingPage() {
                     <p className="text-slate-400 mb-6">Your AI works when you&apos;re talking to it. Poof&apos;s agent works while you sleep.</p>
                     <div className="mb-2">
                       <span className="text-6xl font-mono font-bold text-ledger-400">
-                        ${isAnnual ? '65.83' : '79'}
+                        ${isAnnual ? '40.83' : '79'}
                       </span>
                       <span className="text-xl font-normal text-slate-400">
                         /mo
@@ -260,8 +262,8 @@ export default function PricingPage() {
                     </div>
                     <p className="text-sm text-slate-500">
                       {isAnnual
-                        ? 'Billed $790/year (2 months free)'
-                        : 'Billed monthly · or $790/year'
+                        ? 'Billed $490/year (2 months free)'
+                        : 'Billed monthly · or $490/year'
                       }
                     </p>
                   </div>
@@ -277,7 +279,7 @@ export default function PricingPage() {
                       ))}
                     </div>
                     <p className="text-sm text-slate-400 mt-4">
-                      After 30 days your company stays on Free unless you keep Poof Agent. Nothing is locked; new transactions wait for a person instead of being sorted overnight.
+                      After 30 days your company stays on Free unless you keep Poof Agent. Nothing is locked; AI sorting continues on Free, up to 500 transactions a month, as suggestions you approve.
                     </p>
                   </div>
 
@@ -377,7 +379,7 @@ export default function PricingPage() {
                   </svg>
                 ),
                 title: 'Books that stay clean',
-                description: 'Poof Agent sorts your transactions overnight and reads every receipt, and your own rules keep sorting on Free. No manual data entry. No weekend catch-up sessions.'
+                description: 'Poof Agent reads every receipt and sorts with no monthly limit, while Free sorts up to 500 a month as suggestions you approve. No manual data entry. No weekend catch-up sessions.'
               },
               {
                 icon: (

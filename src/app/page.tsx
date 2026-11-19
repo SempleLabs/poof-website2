@@ -36,13 +36,13 @@ export default function Home() {
           <div className="bg-white border border-rule p-5 flex flex-col">
             <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-muted">Free · for good</p>
             <p className="font-mono text-3xl text-ink mt-2 mb-3 tabular">$0</p>
-            <p className="text-[15px] text-muted flex-grow">You do the books; Poof keeps them. The ledger, invoices, bills, every report, the close and 1099 prep, with your rules sorting what they cover. Each month, 25 Ask Poof questions and 25 receipt reads.</p>
+            <p className="text-[15px] text-muted flex-grow">You do the books; Poof keeps them. The ledger, invoices, bills, every report, the close and 1099 prep, with your rules sorting what they cover. Each month, AI sorting of new transactions (up to 500, as suggestions you approve), 10 Ask Poof questions and 25 receipt reads.</p>
             <Link href="https://app.poofai.com/register" className="mt-4 inline-block text-center rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Start free</Link>
           </div>
           <div className="bg-white border border-ledger-600 border-l-4 p-5 flex flex-col">
             <p className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600">Poof Agent · 30 days free</p>
-            <p className="font-mono text-3xl text-ink mt-2 mb-3 tabular">$79<span className="text-base text-muted">/mo</span></p>
-            <p className="text-[15px] text-muted flex-grow">The AI does the work: the bank sorted overnight, every receipt read, the reminders and the month&apos;s write-up drafted, Ask Poof with no limit. Every entry waits on a card for your OK.</p>
+            <p className="font-mono text-3xl text-ink mt-2 mb-3 tabular">$49<span className="text-base text-muted">/mo</span></p>
+            <p className="text-[15px] text-muted flex-grow">Ask anything, any time: Ask Poof with no limit, reports built by asking, every receipt read, the reminders and the month&apos;s write-up drafted, sorting with no monthly limit. Every entry waits on a card for your OK.</p>
             <Link href="https://app.poofai.com/register" className="mt-4 inline-block text-center rounded-lg bg-ledger-500 text-white font-semibold text-[15px] px-[18px] py-[11px] hover:bg-ledger-600 transition-colors">Start free</Link>
           </div>
           <div className="bg-white border border-rule p-5 flex flex-col">
@@ -59,7 +59,7 @@ export default function Home() {
         <p className="font-mono text-xs tracking-[0.08em] uppercase text-muted mb-3">What Poof is</p>
         <h2 className="font-display text-3xl sm:text-4xl leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Free bookkeeping software, with an AI agent you can hire.</h2>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45]">
-          Poof keeps the books for a small business: the ledger, invoices and quotes, bills, the cash plan, the 1099s and month-end. The software is free for good. Poof Agent, $79 a month, is the AI that does the work while you sleep, and everything it prepares waits on a card with its evidence until a person says yes. If you&apos;d rather not do the books at all, a bookkeeper who works in Poof will, and every job is quoted.
+          Poof keeps the books for a small business: the ledger, invoices and quotes, bills, the cash plan, the 1099s and month-end. The software is free for good. Poof Agent, $49 a month, is the AI that does the work while you sleep, and everything it prepares waits on a card with its evidence until a person says yes. If you&apos;d rather not do the books at all, a bookkeeper who works in Poof will, and every job is quoted.
         </p>
         <p className="text-lg text-muted max-w-[62ch] leading-[1.45] mt-3">
           Run a service shop? <Link href="/trades" className="text-ledger-600 font-semibold hover:text-ledger-700">Poof for shops</Link> adds the dispatch board and the technician&apos;s field link to the same account, free, and the AI receptionist as an add-on at $99 a month.

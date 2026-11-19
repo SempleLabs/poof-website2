@@ -1,7 +1,16 @@
 # Poof Brand Kit
 
-> **Living document** — Last updated: November 17, 2026
+> **Living document** — Last updated: November 18, 2026
 > Hand this file to website creators, social media managers, and content creators so they have everything they need.
+
+> **⭐ PRICING CHANGED (2026-11-18) — this block overrides every price and allowance below it.**
+> - **Poof Agent is $49 a month, or $490 a year** (two months free). It was $79 / $790. Firms are unchanged: **$29 a month ($290 a year) for each client** the firm switches it on for. The receptionist is unchanged ($99 with 1,000 minutes, then 12¢).
+> - **Free sorts with AI now: 500 transactions a month.** Poof's AI suggests the category and the person approves it; **on Free an AI guess never posts on its own**, even with auto-post on. Rules and past choices sort without a limit, as before. After 500, new rows wait in For Review until the 1st.
+> - **Free's Ask Poof questions go from 25 to 10 a month.** A question is a message where Poof looks at the books. **Saying hi, or asking how Poof works, doesn't use one** (those are up to 30 chat messages a month). Never say "unlimited" about Free.
+> - The rest of Free is unchanged: 25 receipt or document reads, 2 bank feeds, 100 texts to the team, file imports with no limit.
+> - **Reports you build by talking:** building or changing a report by asking is a question (Poof Agent, or one of Free's 10). Running, starring, scheduling and copying a saved report are free.
+> - **Say it like this:** "Poof is free, and it sorts your bank with AI. Poof Agent is $49 a month: ask anything, any time, every receipt read, and no limit on sorting." Never write $79, $790 or "25 questions".
+> - **Claude's directory listing** was updated and re-submitted on 2026-11-18 without "read-only by design". Until Anthropic's review passes, the site's `/ai` page keeps saying an AI app can't change the books on its own. After it passes: "Claude drafts, you approve. ChatGPT reads."
 
 > **⭐ WHAT'S NEW SINCE NOVEMBER 2 (2026-11-17) — read with the block below.**
 > - **Reports you build by talking** (new Group 25, live in production). Ask Poof for the report you want ("show me each cabin by month this year"), change it by asking ("take depreciation out and make it quarterly"), and tap Save. It lands in **Reports → My reports**, runs on today's books, and can go out on a schedule by email, Telegram or Slack. Poof also ships **standard reports for the kind of business**: six for everyone, three for rentals and four for builders. Their headline numbers can sit as tiles on Home, and a bookkeeper can copy a report into every client it fits. **The model never computes a number in a report:** it describes the report, and Poof runs it on the same reads as the Income Statement.
@@ -15,8 +24,8 @@
 > - **Still not:** the iPhone app is not on the App Store (checked 2026-11-17). Reports can't yet hold numbers that aren't in the books (units, nights booked, chairs).
 
 > **⭐ WHERE THINGS STAND (2026-11-01) — read this first; it overrides anything older below.**
-> - **Poof is free.** The app is free for good: the books, invoices and quotes, bills, every report, approvals and rules, the close, payroll and 1099 prep, sales tax, the dispatch board and the tech's link, and the Claude and ChatGPT connector. No card, no time limit, and nothing goes read-only. Each month Free also gets a taste of the agent: **25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds and 100 texts to the team.**
-> - **Poof Agent is the paid plan: $79 a month, or $790 a year.** It is every piece of AI work: the overnight sort, reading every receipt, bill and check, Ask Poof with no limit, the reminders and month-end write-up it drafts, every bank feed, and texts to customers. Every new company gets **30 days of Poof Agent, no card**, then stays on Free unless it keeps the agent.
+> - **Poof is free.** The app is free for good: the books, invoices and quotes, bills, every report, approvals and rules, the close, payroll and 1099 prep, sales tax, the dispatch board and the tech's link, and the Claude and ChatGPT connector. No card, no time limit, and nothing goes read-only. Each month Free also gets a taste of the agent: **500 AI sorts (suggestions you approve), 10 Ask Poof questions, 25 receipt or document reads, 2 bank feeds and 100 texts to the team.** *(Updated 2026-11-18.)*
+> - **Poof Agent is the paid plan: $49 a month, or $490 a year** (was $79 / $790 until 2026-11-18). It is every piece of AI work with no monthly limits: the overnight sort, reading every receipt, bill and check, Ask Poof with no limit, the reminders and month-end write-up it drafts, every bank feed, and texts to customers. Every new company gets **30 days of Poof Agent, no card**, then stays on Free unless it keeps the agent.
 > - **Or a person does the books.** *"Want a person to do your books?"* A bookkeeper who works in Poof. **No price is shown anywhere.** The owner says how far behind they are, a person usually gets back to them within a business day, and every job is quoted. The offer has **no name** (decided 2026-11-01): describe it plainly, never brand it. It is in the app (Settings → Billing, For Review when the backlog is long, Ask Poof) and, from this pass, on the site.
 > - **Poof files 1099s.** Prep is free. Poof files 1099-NEC and 1099-MISC with the IRS and sends every contractor their copy: **the first 3 forms each year free, then $2.49 a form; $1.79 for each copy Poof mails; emailed copies free.** A bookkeeper filing for clients pays $2.49 a form up to 25 a year, then $1.49. This is the January front door for businesses that don't keep their books in Poof yet.
 > - **Bookkeeping firms:** every client company is free. Poof Agent is **$29 a month ($290 a year) for each client the firm switches it on for**, billed to the firm.
@@ -60,8 +69,8 @@ Everything in this table was fixed by site PR #30 (merged 2026-11-01). Site PR #
 - **The iPhone app**: tell the site when it is released; it goes back on `/pricing` then.
 
 **Limits to keep with every new claim (the site states what it does, and never lists what it withholds):**
-- **Free:** 25 Ask Poof questions, 25 reads (a receipt, bill, check, PDF statement or forwarded email read by AI), 2 bank feeds and 100 texts to the team a month, on the company's own calendar. File imports have no limit. When an allowance runs out it comes back on the 1st; nothing else stops. Never say "unlimited" about Free. Customer emails on Free: a verified owner, 50 a day to 10 addresses. Texts to customers are Poof Agent.
-- **Poof Agent's overnight sort** leaves the night's transactions on one card for a person's OK. It posts on its own only where the owner switched on auto-post (with a confidence bar, a history bar and a dollar limit) or granted a rule. Never write that the agent closes the month, files anything, pays anyone or moves money on its own.
+- **Free:** 500 AI sorts (suggestions a person approves; never auto-posted), 10 Ask Poof questions (hi and how-to questions don't count), 25 reads (a receipt, bill, check, PDF statement or forwarded email read by AI), 2 bank feeds and 100 texts to the team a month, on the company's own calendar. File imports have no limit. When an allowance runs out it comes back on the 1st; nothing else stops. Never say "unlimited" about Free. Customer emails on Free: a verified owner, 50 a day to 10 addresses. Texts to customers are Poof Agent.
+- **The overnight sort** (Poof Agent, and Free up to 500 AI sorts a month) leaves the night's transactions on one card for a person's OK. On Free an AI guess never posts on its own. On Poof Agent it posts on its own only where the owner switched on auto-post (with a confidence bar, a history bar and a dollar limit) or granted a rule. Never write that the agent closes the month, files anything, pays anyone or moves money on its own.
 - **A person to do your books:** no price, range or "from $X" anywhere, ever. Never name the person or the practice on the site; "a bookkeeper who works in Poof". Never invent bookkeepers, profiles, reviews or credentials. A firm's client is never offered the request: its books are its firm's.
 - **1099s:** Poof files **1099-NEC and 1099-MISC** with the IRS, after the year ends, for a business that signs the authorization; the forms for 2026 are filed in January 2027 (due **February 1, 2027**). It mails paper copies first-class to contractors who didn't agree to email. No TIN matching (the format is checked). No state filing claims, no 1099-K/INT/DIV, no W-2s. Never write "e-file instantly" or "filed today".
 - **Taxes:** Poof **prepares and reminds**. It never files a return, never pays the IRS, and never moves money; the CPA prepares the return from Poof's package. Return lines cover **Schedule C and Form 1120-S** (partnerships and C-corps are next). Estimates are **federal only**. **Texas** is the only state covered (franchise tax and business personal property). 1099s are the one filing Poof does.
@@ -153,7 +162,7 @@ Everything in this table was fixed by site PR #30 (merged 2026-11-01). Site PR #
 
 ## What is Poof?
 
-**Poof is free bookkeeping software with an agent you can hire.** The app is free for good: the ledger, invoices and quotes, bills, every report, the close, payroll and 1099 prep, sales tax, the dispatch board. **Poof Agent**, $79 a month, is the AI that does the work: it sorts the bank overnight, reads the receipts, drafts the reminders and writes the month up, and what it prepares waits on a card for a person's OK. When the owner would rather not touch the books at all, **a bookkeeper who works in Poof** does them, quoted per job.
+**Poof is free bookkeeping software with an agent you can hire.** The app is free for good: the ledger, invoices and quotes, bills, every report, the close, payroll and 1099 prep, sales tax, the dispatch board. **Poof Agent**, $49 a month, is the AI that does the work: it sorts the bank overnight, reads the receipts, drafts the reminders and writes the month up, and what it prepares waits on a card for a person's OK. When the owner would rather not touch the books at all, **a bookkeeper who works in Poof** does them, quoted per job.
 
 **Three ways to get the books done, in one set of books:**
 1. **Do them yourself, free.** Poof keeps the ledger, your rules keep sorting, every report builds itself.
@@ -550,7 +559,7 @@ Outcome first, the limit kept in the body copy (see *Limits to keep* at the top)
 ## Product Overview
 
 ### What Poof Does
-Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthly transactions). The software is free. With **Poof Agent**, users connect their bank accounts and the AI handles categorization, receipts, reconciliation matching, reminders and the month's write-up, each as cards for a person's OK; on Free, the owner's rules keep sorting and the rest waits for a person. Or a bookkeeper who works in Poof does it.
+Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthly transactions). The software is free. With **Poof Agent**, users connect their bank accounts and the AI handles categorization, receipts, reconciliation matching, reminders and the month's write-up, each as cards for a person's OK; on Free, the owner's rules keep sorting and Poof's AI suggests categories for up to 500 transactions a month, each for a person's OK. Or a bookkeeper who works in Poof does it.
 
 ### 290 Features in 25 Groups
 
@@ -910,7 +919,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 
 > The plans are features because what a customer can do depends on them. Prices are in [Pricing](#pricing).
 
-1. **Free for good** — the whole app, no card, no time limit, nothing read-only; each month 25 Ask Poof questions, 25 reads, 2 bank feeds and 100 team texts, with the meters in Settings → Billing. File imports have no limit
+1. **Free for good** — the whole app, no card, no time limit, nothing read-only; each month 500 AI sorts, 10 Ask Poof questions, 25 reads, 2 bank feeds and 100 team texts, with the meters in Settings → Billing. File imports have no limit
 2. **Poof Agent** — every piece of AI work with no monthly limit; 30 days of it for every new company, then Free unless it's kept; a banner counts the days left
 3. **Firms switch the agent on client by client** — every client free, $29 a month only for the ones it's on for, with a running total
 4. **"Want a person to do your books?"** — in Settings → Billing, on For Review when 50 or more are waiting, and in Ask Poof: how far behind, roughly how many transactions a month, payroll or not. A bookkeeper who works in Poof usually gets back within a business day and quotes the job. No price is shown
@@ -949,7 +958,7 @@ Poof keeps the books for small businesses (1–50 employees, 100–10,000 monthl
 | Plaid history | 90 days on the first connection, refreshed daily; for 1099s, back to January 1 (use bank statement import for older transactions) |
 | Team roles | 6 (Owner, Admin, Accountant, Bookkeeper, Office manager, Viewer) |
 | Granular permissions | 46 |
-| Free plan, each month | 25 Ask Poof questions · 25 reads · 2 bank feeds · 100 team texts · customer emails 50 a day to 10 addresses; file imports unlimited |
+| Free plan, each month | 500 AI sorts (suggestions) · 10 Ask Poof questions · 25 reads · 2 bank feeds · 100 team texts · customer emails 50 a day to 10 addresses; file imports unlimited |
 | Poof Agent trial | 30 days for a new company, no card; the first company a person owns; then Free, nothing locked |
 | 1099 filing | First 3 forms a year free, then $2.49 a form; $1.79 a mailed copy; emailed copies free; firms $1.49 a form past 25 a year. Poof files, or the business sends its own from January 1, 2027 |
 | A person to do your books | A reply usually within a business day; quoted per job; no price shown |
@@ -968,8 +977,8 @@ The old managed-service SLAs (a close by the 15th business day, jobs costed in 5
 
 | | Price | What it is |
 |---|---|---|
-| **Free** | **$0, for good** | The whole app. Each month: 25 Ask Poof questions, 25 receipt or document reads, 2 bank feeds, 100 team texts. File imports have no limit. No card |
-| **Poof Agent** | **$79/mo**, or **$790/yr** (two months free) | Every piece of AI work, no monthly limits: the overnight sort, every receipt, bill and check read, Ask Poof in the app, Telegram, Slack and by voice, reminders and the month-end write-up, every bank feed, texts to customers. **30 days free** for a new company, no card |
+| **Free** | **$0, for good** | The whole app. Each month: 500 AI sorts as suggestions you approve, 10 Ask Poof questions, 25 receipt or document reads, 2 bank feeds, 100 team texts. File imports have no limit. No card |
+| **Poof Agent** | **$49/mo**, or **$490/yr** (two months free) | Every piece of AI work, no monthly limits: the overnight sort, every receipt, bill and check read, Ask Poof in the app, Telegram, Slack and by voice, reminders and the month-end write-up, every bank feed, texts to customers. **30 days free** for a new company, no card |
 | **Poof Agent for firms** | **$29 per client/mo**, or $290/yr, billed to the firm | Every client company is free; the firm pays for each client it switches the agent on for. The firm's trial covers 3 clients |
 | **AI receptionist** (add-on) | **$99/mo** with 1,000 minutes, then **12¢ a minute** | For service shops. Turned on and bought in Settings → Receptionist |
 | **1099 filing** | Prep free; **first 3 forms a year free, then $2.49 a form**; **$1.79 a mailed copy**; emailed copies free | Firms: $2.49 a form up to 25 a year, then $1.49; each client's first 3 free |
@@ -1039,7 +1048,7 @@ Free bookkeeping software exists; Poof is not the first. The contrast is scope a
 | | Poof | QuickBooks |
 |---|---|---|
 | **Starting price** | **Free**; Poof Agent $79/mo | $38 Simple Start / $85 Essentials / **$140 Plus** / $340 Advanced (re-checked 2026-11-01) |
-| **AI assistant** | Ask Poof (built-in, context-aware, 115 tools; every change staged for approval); 25 questions a month on Free | Intuit Assist AI agents |
+| **AI assistant** | Ask Poof (built-in, context-aware, 119 tools; every change staged for approval); 10 questions a month on Free | Intuit Assist AI agents |
 | **AI budgeting & forecasting** | Yes (natural language goal input, 12-month projections) | Budgets on Plus, built by hand |
 | **Auto chart of accounts** | Yes | No |
 | **Receipt scanning + OCR** | Yes (with duplicate detection; 25 reads a month on Free) | Yes (but limited in lower tiers) |

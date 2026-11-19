@@ -9,7 +9,7 @@ import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Poof vs QuickBooks — AI Bookkeeping Comparison | Poof',
-  description: 'Compare Poof and QuickBooks side by side. Poof is free, and Poof Agent is $79/mo vs $140/mo for QuickBooks Plus — and every AI change waits for your approval, unlike a QuickBooks bank rule that keeps auto-posting until somebody notices it is wrong.',
+  description: 'Compare Poof and QuickBooks side by side. Poof is free, and Poof Agent is $49/mo vs $140/mo for QuickBooks Plus — and every AI change waits for your approval, unlike a QuickBooks bank rule that keeps auto-posting until somebody notices it is wrong.',
   keywords: 'Poof vs QuickBooks, QuickBooks alternative, AI bookkeeping comparison, small business bookkeeping, AI budgeting, cash flow forecasting',
   alternates: {
     canonical: 'https://www.poofai.com/poof-vs-quickbooks',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     title: 'Poof vs QuickBooks — AI Bookkeeping Comparison',
     description:
-      'Compare Poof and QuickBooks side by side: Poof free and Poof Agent $79/mo vs $140/mo QuickBooks Plus, with AI budgeting, cash flow forecasting, job costing, and auto-reconciliation.',
+      'Compare Poof and QuickBooks side by side: Poof free and Poof Agent $49/mo vs $140/mo QuickBooks Plus, with AI budgeting, cash flow forecasting, job costing, and auto-reconciliation.',
     url: 'https://www.poofai.com/poof-vs-quickbooks',
     siteName: 'Poof',
     type: 'website',
@@ -160,7 +160,7 @@ export default function PoofVsQuickbooksPage() {
 
       <PageHero
         title={<><span className="text-ledger-600">Poof</span> vs QuickBooks</>}
-        subtitle="Both platforms handle core bookkeeping. QuickBooks Free stops at 2 invoices a month and one bank account; Poof is free with every report, and Poof Agent is $79/mo — 44% less than the $140/mo QuickBooks Plus tier that carries job costing and budgets — and every change its AI proposes waits for your approval, with the evidence on the card."
+        subtitle="Both platforms handle core bookkeeping. QuickBooks Free stops at 2 invoices a month and one bank account; Poof is free with every report, and Poof Agent is $49/mo — 65% less than the $140/mo QuickBooks Plus tier that carries job costing and budgets — and every change its AI proposes waits for your approval, with the evidence on the card."
       />
 
       {/* Pricing Comparison */}
@@ -172,13 +172,13 @@ export default function PoofVsQuickbooksPage() {
                 <h3 className="text-2xl font-bold font-display text-white mb-2">Poof</h3>
                 <div className="mb-1">
                   <span className="text-4xl font-bold text-ledger-400">Free</span>
-                  <span className="text-lg text-slate-400"> · Poof Agent $79/mo</span>
+                  <span className="text-lg text-slate-400"> · Poof Agent $49/mo</span>
                 </div>
-                <p className="text-slate-400 mb-6">Free for good. Poof Agent, the AI that does the work, is $79/mo, and free for your first 30 days.</p>
+                <p className="text-slate-400 mb-6">Free for good. Poof Agent, the AI that does the work, is $49/mo, and free for your first 30 days.</p>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-center gap-2"><PoofCheck /> The books, invoices &amp; every report, free</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Overnight AI categorization with Poof Agent</li>
-                  <li className="flex items-center gap-2"><PoofCheck /> Ask Poof: 25 questions free, no limit with Poof Agent</li>
+                  <li className="flex items-center gap-2"><PoofCheck /> Ask Poof: 10 questions free, no limit with Poof Agent</li>
                   <li className="flex items-center gap-2"><PoofCheck /> Poof Agent free for 30 days, no card</li>
                 </ul>
               </div>
@@ -269,7 +269,7 @@ export default function PoofVsQuickbooksPage() {
               <ul className="space-y-2 text-slate-700 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-ledger-600 font-bold">&bull;</span>
-                  <span><strong>Free, and $79 vs $140 for the AI.</strong> QuickBooks Free stops at 2 invoices a month; Poof is free with every report, and Poof Agent is 44% less than Plus &mdash; and Poof adds the approvals inbox, a 12-month cash forecast with
+                  <span><strong>Free, and $49 vs $140 for the AI.</strong> QuickBooks Free stops at 2 invoices a month; Poof is free with every report, and Poof Agent is 65% less than Plus &mdash; and Poof adds the approvals inbox, a 12-month cash forecast with
                   confidence bands, per-job labor allocation, and the tax calendar, reserve, and CPA package.</span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -282,7 +282,7 @@ export default function PoofVsQuickbooksPage() {
                   <span className="text-ledger-600 font-bold">&bull;</span>
                   <span><strong>Intuit raised prices on August 1, 2026.</strong> Plus went from $115 to $140 (+22%) and
                   Advanced from $275 to $340 (+24%), with no new capability attached. Poof is free, and Poof Agent is
-                  $79.</span>
+                  $49.</span>
                 </li>
               </ul>
             </div>

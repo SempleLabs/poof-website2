@@ -989,7 +989,7 @@ export default function TradesShow() {
             </span>
             <a href="https://app.poofai.com/register" className={`${btn} ${press}`}>Start free</a>
             <a href="#pricing" className={`${btn} ${ghost}`}>
-              Free; Poof Agent $79 a month
+              Free; Poof Agent $49 a month
             </a>
           </div>
           <p className={noteCls}>
