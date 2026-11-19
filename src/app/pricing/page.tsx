@@ -64,7 +64,7 @@ export default function PricingPage() {
     },
     {
       question: 'What counts as a question or a read, and what happens when they run out?',
-      answer: 'A question is one Ask Poof message, in the app, Telegram, Slack or by voice. A read is one receipt, bill, check, PDF statement or forwarded email that Poof\'s AI reads for you. Free includes 25 of each a month. When they run out, they come back on the 1st; everything else keeps working, approval cards included, and a receipt you forward or a technician photographs is still kept for you to enter. File imports (CSV, QuickBooks, Jobber, Housecall Pro) have no limit.'
+      answer: 'A question is one Ask Poof message, in the app, Telegram, Slack or by voice. A read is one receipt, bill, check, PDF statement or forwarded email that Poof\'s AI reads for you. Free includes 10 questions and 25 reads a month; saying hi or asking how Poof works doesn\'t use a question. When they run out, they come back on the 1st; everything else keeps working, approval cards included, and a receipt you forward or a technician photographs is still kept for you to enter. File imports (CSV, QuickBooks, Jobber, Housecall Pro) have no limit.'
     },
     {
       question: 'Is the AI receptionist included?',
