@@ -148,9 +148,8 @@ export default function HomeShow() {
       <section className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-10 pb-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-10 lg:gap-14 items-center" id="top">
         <div>
           <p className={eyebrow}>Free for good · Poof Agent $49 a month</p>
-          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Poof is free. Poof Agent does the books while you sleep.</h1>
-          <p className="font-display text-[22px] sm:text-[26px] leading-[1.1] tracking-[-0.03em] text-ledger-600 mb-4">The work disappears. The evidence doesn&apos;t.</p>
-          <p className={sub}>The books, invoices, reports and month-end cost nothing, for good. Poof Agent answers anything you ask, reads the receipts and drafts the reminders, and leaves each entry for your OK. Or hand the books to a person.</p>
+          <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Stop doing the books at night.</h1>
+          <p className={sub}>Poof Agent does them while you sleep. Nothing posts without your yes.</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free</Link>
             <Link href="/bookkeeper" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Ask for a bookkeeper</Link>
