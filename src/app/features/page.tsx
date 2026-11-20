@@ -21,6 +21,10 @@ export default function FeaturesPage() {
         >
           Start free
         </Link>
+        <p className="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[15px]">
+          <a href="https://app.poofai.com/demo" className="text-ledger-600 font-semibold hover:text-ledger-700">Open a live demo, no sign-up →</a>
+          <Link href="/1099s" className="text-ledger-600 font-semibold hover:text-ledger-700">File your 1099s →</Link>
+        </p>
       </PageHero>
 
       <section className="pb-20">

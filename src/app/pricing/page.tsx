@@ -183,10 +183,10 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Plan Cards: Free and Poof Agent */}
+      {/* Plan Cards: Free, Poof Agent, and done for you */}
       <section className="py-8 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {/* Free */}
             <AnimateOnScroll animation="scale-up" delay={100} className="h-full">
               <div className="bg-white rounded-xl border border-slate-200 shadow-sm h-full flex flex-col">
@@ -254,7 +254,7 @@ export default function PricingPage() {
                     <p className="text-slate-400 mb-6">Your AI works when you&apos;re talking to it. Poof&apos;s agent works while you sleep.</p>
                     <div className="mb-2">
                       <span className="text-6xl font-mono font-bold text-ledger-400">
-                        ${isAnnual ? '40.83' : '79'}
+                        ${isAnnual ? '40.83' : '49'}
                       </span>
                       <span className="text-xl font-normal text-slate-400">
                         /mo
@@ -296,6 +296,44 @@ export default function PricingPage() {
                 </div>
               </div>
             </AnimateOnScroll>
+
+            {/* Done for you: a person runs Poof for you (quoted, no price) */}
+            <AnimateOnScroll animation="scale-up" delay={300} className="h-full md:col-span-2 lg:col-span-1">
+              <div className="bg-white rounded-xl border border-slate-200 shadow-sm h-full flex flex-col">
+                <div className="bg-slate-100 text-slate-600 px-6 py-3 text-sm font-semibold tracking-widest rounded-t-[inherit] text-center uppercase">
+                  Every job quoted
+                </div>
+                <div className="p-8 sm:p-10 flex flex-col flex-grow">
+                  <div className="mb-8 text-center">
+                    <h2 className="text-3xl font-display font-bold text-slate-800 mb-4">Done for you</h2>
+                    <p className="text-slate-600 mb-6">A bookkeeper runs Poof for you</p>
+                    <div className="mb-2">
+                      <span className="text-4xl font-display font-bold text-slate-800">Quoted</span>
+                    </div>
+                    <p className="text-sm text-slate-500">Usually within a business day</p>
+                  </div>
+                  <div className="text-left mb-8 flex-grow space-y-3">
+                    {[
+                      'A bookkeeper who works in Poof keeps your books for you',
+                      'Tell us how far behind you are, roughly how many transactions you have a month, and whether you run payroll',
+                      'Every job is different, so every job is quoted: catching up a year is not the same work as keeping a tidy month',
+                      'The software stays free either way, and the books stay yours',
+                    ].map((item) => (
+                      <div key={item} className="flex items-start">
+                        <CheckIcon className="w-5 h-5 text-ledger-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-600 text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href="/bookkeeper"
+                    className="border-[1.5px] border-ledger-500 text-ledger-600 font-semibold rounded-lg hover:bg-ledger-100 transition-all text-lg w-full block text-center py-4"
+                  >
+                    Ask for a bookkeeper →
+                  </Link>
+                </div>
+              </div>
+            </AnimateOnScroll>
           </div>
 
           {/* For bookkeeping firms */}
@@ -316,8 +354,8 @@ export default function PricingPage() {
             </div>
           </AnimateOnScroll>
 
-          {/* 1099 filing and a person */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* 1099 filing */}
+          <div className="mt-8 grid grid-cols-1 gap-6">
             <AnimateOnScroll animation="fade-up" delay={100} className="h-full">
               <div className="bg-white border border-slate-200 rounded-xl p-8 h-full flex flex-col">
                 <h2 className="text-2xl font-display font-bold text-slate-800 mb-2">File your 1099s</h2>
@@ -329,13 +367,6 @@ export default function PricingPage() {
                   <div className="flex justify-between gap-4"><dt>Each copy Poof emails</dt><dd className="font-mono text-slate-800">Free</dd></div>
                 </dl>
                 <Link href="/1099s" className="text-ledger-600 font-semibold hover:text-ledger-700">How filing works →</Link>
-              </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={200} className="h-full">
-              <div className="bg-white border border-slate-200 rounded-xl p-8 h-full flex flex-col">
-                <h2 className="text-2xl font-display font-bold text-slate-800 mb-2">Want a person to do your books?</h2>
-                <p className="text-slate-600 mb-6 flex-grow">A bookkeeper who works in Poof. Tell us how far behind you are, roughly how many transactions you have a month, and whether you run payroll. A person usually gets back to you within a business day with a quote; every job is different, so every job is quoted.</p>
-                <Link href="/bookkeeper" className="bg-ledger-500 text-white font-semibold rounded-lg hover:bg-ledger-600 transition-all px-6 py-3 inline-block text-center">Ask for a bookkeeper →</Link>
               </div>
             </AnimateOnScroll>
           </div>

@@ -76,8 +76,10 @@ flagged that confusion as the site's biggest clarity problem.
   texts are not built; technician-facing ones are. Skills are a preference, not a gate.
   A generated draft is exactly how a retired claim gets back onto the site.
 - **Pricing facts are canonical.** QBO Plus $140 (verified 2026-08-23), always compared
-  against Plus and never Simple Start, always with the date stated. Poof Professional $79;
-  Managed for Trades $1,200/$1,500; the $750 audit is the front door and is never discounted.
+  against Plus and never Simple Start, always with the date stated. Poof is free; Poof Agent
+  is $49/mo or $490/yr. A bookkeeper who runs Poof for you has no published price: every job
+  is quoted ("Ask for a bookkeeper"). The old managed tiers and the $750 audit are retired;
+  never quote them.
 - **Replies are Austin's, in the controller voice.** Answer the person's actual question
   first and completely, with no link. Mention Poof only if it is genuinely the answer, and
   disclose it. A reply that reads as marketing costs more than the thread is worth.

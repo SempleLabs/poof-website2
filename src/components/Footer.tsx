@@ -47,7 +47,7 @@ export default function Footer() {
   const col = 'font-mono text-[11.5px] tracking-[0.08em] uppercase text-ink mb-4'
   const link = 'text-muted hover:text-ledger-700 transition-colors'
   const columns: { title: string; links: [string, string][] }[] = [
-    { title: 'Product', links: [['/how-it-works', 'How it works'], ['/pricing', 'Pricing'], ['/features', 'Features'], ['/trades', 'Poof for shops'], ['/av', 'Poof for AV integrators'], ['/1099s', 'File your 1099s'], ['/bookkeeper', 'A person to do your books'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/close', 'For bookkeepers: the close'], ['/ai', 'Claude, ChatGPT & Grok'], ['/demo', 'Book a demo']] },
+    { title: 'Product', links: [['/how-it-works', 'How it works'], ['/pricing', 'Pricing'], ['/features', 'Product: every feature'], ['https://app.poofai.com/demo', 'Live demo'], ['/trades', 'Poof for shops'], ['/av', 'Poof for AV integrators'], ['/1099s', 'File your 1099s'], ['/bookkeeper', 'Bookkeeping service'], ['/taxes', 'Taxes'], ['/autopilot', 'Autopilot'], ['/close', 'For bookkeepers: the close'], ['/ai', 'Claude, ChatGPT & Grok'], ['/demo', 'Book a demo']] },
     { title: 'Resources', links: [['/resources', 'Guides & templates'], ['/blog', 'Blog'], ['/poof-vs-quickbooks', 'Poof vs QuickBooks'], ['/faq', 'FAQ'], ['/security', 'Security']] },
     { title: 'Company', links: [['/about', 'About'], ['/contact', 'Contact'], ['/support', 'Support'], ['/privacy', 'Privacy Policy'], ['/terms', 'Terms of Service']] },
   ]
