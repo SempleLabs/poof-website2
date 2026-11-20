@@ -143,6 +143,23 @@ export default function TradesPage() {
       <div className="pt-16" />
       <TradesShow />
 
+      <nav aria-label="Poof by trade" className="border-y border-slate-200 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+          <span className="font-mono text-xs tracking-[0.08em] uppercase text-slate-500">By trade</span>
+          {[
+            ['/hvac', 'HVAC'],
+            ['/plumbing', 'Plumbing'],
+            ['/electrical', 'Electrical'],
+            ['/roofing', 'Roofing'],
+            ['/av', 'AV integrators'],
+          ].map(([href, label]) => (
+            <Link key={href} href={href} className="font-semibold text-ledger-600 hover:text-ledger-700">
+              {label} →
+            </Link>
+          ))}
+        </div>
+      </nav>
+
       {/* The loop, stated plainly for anyone who skipped the demo */}
       <section id="loop" className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

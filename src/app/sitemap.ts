@@ -46,6 +46,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/electrical`,
+      lastModified: new Date('2026-11-19'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hvac`,
+      lastModified: new Date('2026-11-19'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/plumbing`,
+      lastModified: new Date('2026-11-19'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/roofing`,
+      lastModified: new Date('2026-11-19'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/bookkeeper`,
       lastModified: BUILD_DATE,
       changeFrequency: 'monthly',
