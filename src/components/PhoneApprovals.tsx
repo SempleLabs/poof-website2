@@ -36,6 +36,13 @@ export default function PhoneApprovals() {
 
   return (
     <div className="bg-white text-ink h-[440px] lg:h-[520px] flex flex-col text-left">
+      {/* A phone browser's address bar: this is Poof on the web, not the iPhone app (still in App Review). */}
+      <div className="px-3 pt-2 pb-1.5 bg-paper-2 border-b border-rule">
+        <div className="mx-auto w-fit flex items-center gap-1 rounded-full bg-white border border-rule px-2.5 py-[2px] font-mono text-[10px] text-muted">
+          <svg width="8" height="9" viewBox="0 0 8 9" aria-hidden="true"><rect x="0.5" y="4" width="7" height="4.5" rx="1" fill="currentColor" /><path d="M2 4V2.8a2 2 0 0 1 4 0V4" fill="none" stroke="currentColor" strokeWidth="1.1" /></svg>
+          app.poofai.com
+        </div>
+      </div>
       <div className="flex items-center justify-between px-3.5 py-2.5 border-b border-rule">
         <PoofWordmark size={17} />
         <span className="font-mono text-[9.5px] tracking-[0.08em] uppercase text-muted">Demo</span>
@@ -104,6 +111,7 @@ export default function PhoneApprovals() {
           <div className="mt-3 text-center" role="status">
             <p className="font-semibold text-[13px]">You&apos;re caught up.</p>
             <a href="#act1" className="text-[12px] text-ledger-600 font-semibold hover:text-ledger-700">Now try a whole night ↓</a>
+            <a href="https://app.poofai.com/demo" className="block mt-1 text-[12px] text-ledger-600 font-semibold hover:text-ledger-700">Or open the live demo →</a>
           </div>
         )}
       </div>
