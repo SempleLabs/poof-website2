@@ -12,7 +12,7 @@ import ApprovalCard, { DEMO_CARDS, type CardState } from '@/components/ApprovalC
  */
 
 // The live demo's real night (app PR #618): 3 rules filed 6 bank rows, each with Undo in Approvals →
-// Done by rules. The app's demo-company test pins these, so keep this list identical to the demo.
+// Done by rules. Keep this list identical to the demo's.
 type Kind = 'rules'
 const LINES: { t: string; text: string; kind: Kind; adds: number }[] = [
   { t: '2:00', text: 'FUEL STOP #118 WACO, $214.07, sorted to Vehicle Fuel', kind: 'rules', adds: 1 },
