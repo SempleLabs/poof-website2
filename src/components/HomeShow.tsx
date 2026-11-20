@@ -171,6 +171,8 @@ export default function HomeShow() {
           <figcaption className="mt-3 text-[13px] text-muted max-w-[260px]">
             <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Try it · demo figures</span>
             The same two cards Poof shows you each morning. Tap Approve; nothing here touches real books. <a href="/images/approvals-phone.jpg" className="text-ledger-600 hover:text-ledger-700 underline underline-offset-2">See the real screenshot</a>.
+            <a href="https://app.poofai.com/demo" className="mt-3 block rounded-lg border-[1.5px] border-ink text-ink text-center font-semibold text-[14px] px-3 py-[9px] hover:bg-paper-2 transition-colors">Open the live demo →</a>
+            <span className="block mt-1.5 text-[12px]">A sample shop of your own, no sign-up. Nothing you do leaves Poof, and it&apos;s erased after a day.</span>
           </figcaption>
         </figure>
       </section>

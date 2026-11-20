@@ -104,6 +104,7 @@ export default function PhoneApprovals() {
           <div className="mt-3 text-center" role="status">
             <p className="font-semibold text-[13px]">You&apos;re caught up.</p>
             <a href="#act1" className="text-[12px] text-ledger-600 font-semibold hover:text-ledger-700">Now try a whole night ↓</a>
+            <a href="https://app.poofai.com/demo" className="block mt-1 text-[12px] text-ledger-600 font-semibold hover:text-ledger-700">Or open the live demo →</a>
           </div>
         )}
       </div>
