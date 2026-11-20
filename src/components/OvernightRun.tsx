@@ -29,7 +29,9 @@ const DONE = LINES.reduce((n, l) => n + l.adds, 0)
 
 const STEP = 380
 
-export default function OvernightRun({ onDecide, onFinish }: { onDecide?: () => void; onFinish?: () => void }) {
+export const OVERNIGHT_RULE_COUNT = LINES.reduce((n, l) => n + l.adds, 0)
+
+export default function OvernightRun({ onDecide, onFinish, onRuleCount }: { onDecide?: () => void; onFinish?: () => void; onRuleCount?: (n: number) => void }) {
   const [shown, setShown] = useState(0)
   const [finished, setFinished] = useState(false)
   const [undone, setUndone] = useState<number[]>([])
@@ -62,6 +64,9 @@ export default function OvernightRun({ onDecide, onFinish }: { onDecide?: () => 
   }
   const waiting = states.filter((s) => s === 'open').length + undone.length
   const done = DONE - LINES.reduce((n, l, i) => n + (undone.includes(i) ? l.adds : 0), 0)
+  const countRef = useRef(onRuleCount)
+  countRef.current = onRuleCount
+  useEffect(() => { countRef.current?.(done) }, [done])
 
   return (
     <div className="mt-6 bg-paper-2 border border-rule rounded-[6px] overflow-hidden text-ink">
