@@ -201,7 +201,7 @@ export default function HomeShow() {
         <section className="pt-10 pb-6" id="act1">
           <p className={eyebrow}>Step 1 · The night</p>
           <h2 className={h2}>Last night, Poof Agent did the books.</h2>
-          <p className="text-[15px] text-muted max-w-[56ch]">Brazos Valley Comfort Co., a heating and plumbing shop in Waco. Overnight Poof pulled the bank, sorted what your rules cover and put the bills on their jobs. Then it stopped, because a few things need a person. That person is you.</p>
+          <p className="text-[15px] text-muted max-w-[56ch]">Brazos Valley Comfort Co., a heating and plumbing shop in Waco. Overnight Poof sorted the bank rows your rules cover. Then it stopped, because a few things need a person. That person is you.</p>
 
           <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} onRuleCount={setOvernightRules} />
         </section>

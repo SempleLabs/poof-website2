@@ -8,22 +8,21 @@ import ApprovalCard, { DEMO_CARDS, type CardState } from '@/components/ApprovalC
  * hero phone and the live demo (app.poofai.com/demo). Drawn in the app's light look: on the left,
  * the Approvals "Done by rules" list (what Poof did, each rule row with Undo); on the right, the
  * cards waiting for a person, using the same card component as the hero phone. Every card here is
- * one the live demo also lets a visitor approve. Figures are invented, in the demo's world.
+ * one the live demo also lets a visitor approve, and the Done-by-rules list is the demo's own night.
  */
 
-type Kind = 'bank' | 'rules' | 'jobs' | 'payroll' | 'tax'
+// The live demo's real night (app PR #618): 3 rules filed 6 bank rows, each with Undo in Approvals →
+// Done by rules. Keep this list identical to the demo's.
+type Kind = 'rules'
 const LINES: { t: string; text: string; kind: Kind; adds: number }[] = [
-  { t: '2:00', text: 'Pulled 38 new transactions from Operating Checking 6614 and the company card', kind: 'bank', adds: 0 },
-  { t: '2:01', text: 'Brazos Electric Services, $640.00, sorted to Subcontractors', kind: 'rules', adds: 1 },
-  { t: '2:01', text: '6 fuel charges sorted to Truck Fuel', kind: 'rules', adds: 6 },
-  { t: '2:02', text: '24 more sorted by rules you set', kind: 'rules', adds: 24 },
-  { t: '2:03', text: 'Gulf Coast HVAC Supply bill, $2,146.30, matched to the Linh Nguyen heat pump job', kind: 'jobs', adds: 1 },
-  { t: '2:04', text: 'Truck 2 fuel, $187.42, split across 3 jobs by the hours techs logged', kind: 'jobs', adds: 1 },
-  { t: '2:05', text: 'Heart of Texas Crane & Rigging, $1,250.00, put on the Riverside Lofts HOA rooftop job', kind: 'jobs', adds: 1 },
-  { t: '2:06', text: 'Friday’s payroll run tied to the bank withdrawal', kind: 'payroll', adds: 1 },
-  { t: '2:07', text: 'Sales tax accrued on 4 commercial invoices', kind: 'tax', adds: 4 },
+  { t: '2:00', text: 'FUEL STOP #118 WACO, $214.07, sorted to Vehicle Fuel', kind: 'rules', adds: 1 },
+  { t: '2:00', text: 'SUPPLY HOUSE COUNTER #3 WACO, $148.62, sorted to Parts & Components', kind: 'rules', adds: 1 },
+  { t: '2:01', text: 'FUEL STOP #207 WOODWAY, $187.42, sorted to Vehicle Fuel', kind: 'rules', adds: 1 },
+  { t: '2:01', text: 'TRAVEL CENTER HEWITT, $171.36, sorted to Vehicle Fuel', kind: 'rules', adds: 1 },
+  { t: '2:02', text: 'SUPPLY HOUSE COUNTER #3 WACO, $36.95, sorted to Parts & Components', kind: 'rules', adds: 1 },
+  { t: '2:02', text: 'SUPPLY HOUSE COUNTER #3 WACO, $221.40, sorted to Parts & Components', kind: 'rules', adds: 1 },
 ]
-const TAG: Record<Kind, string> = { bank: 'bank', rules: 'rule', jobs: 'jobs', payroll: 'payroll', tax: 'sales tax' }
+const TAG: Record<Kind, string> = { rules: 'rule' }
 const CARDS = [DEMO_CARDS.billMatch, DEMO_CARDS.paymentMatch, DEMO_CARDS.estimate]
 const DONE = LINES.reduce((n, l) => n + l.adds, 0)
 
