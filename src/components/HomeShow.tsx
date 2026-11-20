@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import OvernightRun from '@/components/OvernightRun'
+import OvernightRun, { OVERNIGHT_RULE_COUNT } from '@/components/OvernightRun'
 import PhoneApprovals from '@/components/PhoneApprovals'
 
 /**
@@ -68,7 +68,6 @@ const btn = 'inline-block rounded-lg bg-ledger-500 text-white font-semibold text
 const btnSm = 'inline-block rounded-lg bg-ledger-500 text-white font-semibold text-sm px-3 py-[7px] hover:bg-ledger-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
 const btnRedSm = 'inline-block rounded-lg border-[1.5px] border-audit text-audit font-semibold text-sm px-3 py-[7px] hover:bg-audit-100 transition-colors'
 const btnQuietSm = 'inline-block rounded-lg bg-ledger-200 text-ledger-600 font-semibold text-sm px-3 py-[7px] hover:bg-ledger-300 transition-colors'
-const btnGhostSm = 'inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-sm px-3 py-[7px] hover:bg-paper-2 transition-colors disabled:opacity-50'
 
 export default function HomeShow() {
   const reduce = useRef(false)
@@ -79,6 +78,9 @@ export default function HomeShow() {
   // score
   const [you, setYou] = useState(0)
   const [byRule, setByRule] = useState(0)
+  // Work Poof's rules did overnight in Step 1 (Undo there lowers it); counted with any rule work in later steps.
+  const [overnightRules, setOvernightRules] = useState(OVERNIGHT_RULE_COUNT)
+  const rules = overnightRules + byRule
   const [corr, setCorr] = useState(0)
   const start = useRef<Date | null>(null)
   const touch = () => { if (!start.current) start.current = new Date() }
@@ -116,6 +118,8 @@ export default function HomeShow() {
   // act 4
   const [person, setPerson] = useState<Record<string, string>>({})
   const [signer, setSigner] = useState('')
+  // The name the visitor typed, or "you" when it is a single stray letter.
+  const signerName = signer.trim().length > 1 ? signer.trim() : 'you'
   const [signed, setSigned] = useState<Date | null>(null)
   const [reopened, setReopened] = useState<Date | null>(null)
 
@@ -124,9 +128,9 @@ export default function HomeShow() {
     if (t.id === 'bank' && tied) { x.done = true; x.open = false; x.ev = 'Operating account: 0.00 unexplained, completion stored the same figure' }
     if (t.id === 'feeds' && cardsDecided === 3) { x.done = true; x.open = false; x.ev = 'Every row seen by a person or a rule you granted' }
     if (t.kind === 'person' && person[t.id]) { x.done = true; x.ev = t.id === 'pkg' ? `Sent by a person, ${person[t.id]}` : `Ticked by a person, ${person[t.id]}` }
-    if (t.id === 'sign' && signed) { x.done = true; x.open = false; x.ev = `Signed by ${signer.trim()}, ${fmtTime(signed)}. August is locked.` }
+    if (t.id === 'sign' && signed) { x.done = true; x.open = false; x.ev = `Signed by ${signerName}, ${fmtTime(signed)}. August is locked.` }
     return x
-  }), [tied, cardsDecided, person, signed, signer])
+  }), [tied, cardsDecided, person, signed, signerName])
   const openCount = tasks.filter((t) => !t.done && t.id !== 'sign' && t.id !== 'pkg').length
   const ready = openCount === 0 && !signed
 
@@ -140,7 +144,7 @@ export default function HomeShow() {
 
   const o1 = ranOvernight, o2 = cardsDecided >= 2, o3 = tied, o4 = !!signed
   const checkedCount = checks.filter(Boolean).length
-  const autoDone = tasks.filter((t) => t.kind !== 'person' && t.done).length
+  const autoDone = tasks.filter((t) => t.kind === 'auto' && t.done).length
   const personDone = tasks.filter((t) => t.kind === 'person' && t.done).length
 
   return (
@@ -189,7 +193,7 @@ export default function HomeShow() {
             </span>
           ))}
         </span>
-        {you + byRule + corr > 0 && <span className="hidden sm:inline whitespace-nowrap">By you <b className="text-ink">{you}</b> · by a rule <b className="text-ink">{byRule}</b> · corrected <b className="text-ink">{corr}</b></span>}
+        {you + byRule + corr > 0 && <span className="hidden sm:inline whitespace-nowrap">By a rule <b className="text-ink">{rules}</b> · by you <b className="text-ink">{you}</b> · corrected <b className="text-ink">{corr}</b></span>}
       </div>
 
       <div className="min-w-0">
@@ -199,7 +203,7 @@ export default function HomeShow() {
           <h2 className={h2}>Last night, Poof Agent did the books.</h2>
           <p className="text-[15px] text-muted max-w-[56ch]">Brazos Valley Comfort Co., a heating and plumbing shop in Waco. Overnight Poof pulled the bank, sorted what your rules cover and put the bills on their jobs. Then it stopped, because a few things need a person. That person is you.</p>
 
-          <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
+          <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} onRuleCount={setOvernightRules} />
         </section>
 
         {/* ACT 2 */}
@@ -331,23 +335,32 @@ export default function HomeShow() {
             <input type="text" value={signer} onChange={(e) => setSigner(e.target.value)} placeholder="Your name" aria-label="Your name, as the signature" disabled={!!signed} className="font-display text-[22px] tracking-[-0.03em] px-3 py-2 border-0 border-b-2 border-ink bg-transparent min-w-[240px] placeholder:text-muted" />
             <button type="button" className={btn} disabled={!ready || !signer.trim()} onClick={sign}>{signed ? 'Signed' : ready ? 'Sign the August close' : `Not ready · ${openCount} ${openCount === 1 ? 'task open' : 'tasks open'}`}</button>
           </div>
-          {signed && (
-            <div className="mt-[22px] border border-ink border-l-4 border-l-audit [border-left-style:double] bg-white px-5 py-[18px]">
+          {signed && (() => {
+            const ms = signed.getTime() - (start.current || signed).getTime()
+            const took = ms < 60_000 ? `${Math.max(1, Math.round(ms / 1000))} sec` : ms < 3_600_000 ? `about ${Math.round(ms / 60_000)} min` : 'over an hour'
+            const personLeft = tasks.filter((t) => t.kind === 'person' && !t.done).length
+            return (
+            <div className="mt-[22px] border border-rule border-l-4 border-l-ledger-600 bg-white px-5 py-[18px]">
               <h5 className="font-display text-2xl tracking-[-0.035em] mb-2.5">August 2026 · {reopened ? 'reopened' : 'signed'}</h5>
               <dl className="grid grid-cols-[auto_1fr] gap-x-[18px] gap-y-1.5 text-[14.5px]">
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Started</dt><dd>{fmtTime(start.current || signed)} by you</dd>
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Signed</dt><dd>{fmtTime(signed)} by {signer.trim()}</dd>
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Took</dt><dd>{(() => { const ms = signed.getTime() - (start.current || signed).getTime(); const m = Math.floor(ms / 60000), s = Math.round((ms % 60000) / 1000); return `${m ? m + ' min ' : ''}${s} sec, start to signature` })()}</dd>
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Decisions</dt><dd>{you} by a person · {byRule} by a rule you granted</dd>
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Corrections</dt><dd>{corr} {corr === 1 ? 'correction' : 'corrections'}{rule === 'paused' ? ' · one rule still paused' : rule === 'revoked' ? ' · one rule revoked' : ''}</dd>
-                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Tasks</dt><dd>{tasks.length} · {autoDone} ticked themselves · {personDone} by a person</dd>
+                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Signed</dt><dd>{fmtTime(signed)} by {signerName}</dd>
+                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Took</dt><dd>{took}, start to signature</dd>
+                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Work</dt><dd>{rules} by a rule · {you} by you · {corr} corrected{rule === 'paused' ? ' · one rule still paused' : rule === 'revoked' ? ' · one rule revoked' : ''}</dd>
+                <dt className="font-mono text-xs tracking-[0.06em] uppercase text-muted pt-0.5">Tasks</dt><dd>{tasks.length} · {autoDone} proved by the books · {personDone} ticked by a person · 1 signature{personLeft > 0 ? ` · ${personLeft} left: send the owner the reports` : ''}</dd>
               </dl>
-              <div className="mt-3.5 flex gap-2.5 items-center flex-wrap text-sm text-muted">
-                <button type="button" className={btnGhostSm} disabled={!!reopened} onClick={() => setReopened(new Date())}>Reopen the close</button>
-                <span>{reopened ? `Reopened ${fmtTime(reopened)}. The signature above stays on the record.` : 'Reopening keeps the signature on record.'}</span>
+              <p className="font-display text-[22px] sm:text-[26px] leading-[1.15] tracking-[-0.03em] text-ledger-600 mt-5">August is closed. Poof did {rules} things overnight; you made {you} {you === 1 ? 'decision' : 'decisions'} in {took}.</p>
+              <div className="flex flex-wrap gap-2.5 items-center mt-4">
+                <a href="https://app.poofai.com/demo" className={btn}>Open the live demo →</a>
+                <Link href="https://app.poofai.com/register" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Start free</Link>
               </div>
+              <p className="mt-4 text-[13px] text-muted">
+                {reopened
+                  ? `Reopened ${fmtTime(reopened)}. The signature above stays on the record.`
+                  : <>Need to change something? <button type="button" className="underline underline-offset-2 hover:text-ink" onClick={() => setReopened(new Date())}>Reopen the close</button>; the signature stays on the record.</>}
+              </p>
             </div>
-          )}
+            )
+          })()}
         </section>
 
         {/* PRACTITIONER */}
