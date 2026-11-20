@@ -196,11 +196,11 @@ export default function PricingPage() {
                 <div className="p-8 sm:p-10 flex flex-col flex-grow">
                   <div className="mb-8 text-center">
                     <h2 className="text-3xl font-display font-bold text-slate-800 mb-4">Free</h2>
-                    <p className="text-slate-600 mb-6">The whole app: the books, the paperwork and the close</p>
+                    <p className="text-slate-600 mb-6 lg:min-h-[4.5rem]">The whole app: the books, the paperwork and the close</p>
                     <div className="mb-2">
                       <span className="text-6xl font-mono font-bold text-slate-800">$0</span>
                     </div>
-                    <p className="text-sm text-slate-500">No card, no time limit, nothing read-only</p>
+                    <p className="text-sm text-slate-500 lg:min-h-[2.5rem]">No card, no time limit, nothing read-only</p>
                   </div>
 
                   <div className="text-left mb-8 flex-grow">
@@ -251,7 +251,7 @@ export default function PricingPage() {
                 <div className="p-8 sm:p-10 flex flex-col flex-grow">
                   <div className="mb-8 text-center">
                     <h2 className="text-3xl font-display font-bold text-white mb-4">Poof Agent</h2>
-                    <p className="text-slate-400 mb-6">Your AI works when you&apos;re talking to it. Poof&apos;s agent works while you sleep.</p>
+                    <p className="text-slate-400 mb-6 lg:min-h-[4.5rem]">Your AI works when you&apos;re talking to it. Poof&apos;s agent works while you sleep.</p>
                     <div className="mb-2">
                       <span className="text-6xl font-mono font-bold text-ledger-400">
                         ${isAnnual ? '40.83' : '49'}
@@ -260,7 +260,7 @@ export default function PricingPage() {
                         /mo
                       </span>
                     </div>
-                    <p className="text-sm text-slate-500">
+                    <p className="text-sm text-slate-500 lg:min-h-[2.5rem]">
                       {isAnnual
                         ? 'Billed $490/year (2 months free)'
                         : 'Billed monthly · or $490/year'
@@ -306,11 +306,11 @@ export default function PricingPage() {
                 <div className="p-8 sm:p-10 flex flex-col flex-grow">
                   <div className="mb-8 text-center">
                     <h2 className="text-3xl font-display font-bold text-slate-800 mb-4">Done for you</h2>
-                    <p className="text-slate-600 mb-6">A bookkeeper runs Poof for you</p>
+                    <p className="text-slate-600 mb-6 lg:min-h-[4.5rem]">A bookkeeper runs Poof for you</p>
                     <div className="mb-2">
-                      <span className="text-4xl font-display font-bold text-slate-800">Quoted</span>
+                      <span className="text-6xl font-mono font-bold text-slate-800">Quoted</span>
                     </div>
-                    <p className="text-sm text-slate-500">Usually within a business day</p>
+                    <p className="text-sm text-slate-500 lg:min-h-[2.5rem]">Usually within a business day</p>
                   </div>
                   <div className="text-left mb-8 flex-grow space-y-3">
                     {[
