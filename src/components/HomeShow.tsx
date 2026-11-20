@@ -29,11 +29,11 @@ const fmtTime = (d: Date) => d.toLocaleTimeString([], { hour: '2-digit', minute:
 const money = (n: number) => n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
 const BATCH = [
-  ['08/03 · FERGUSON ENT · job #2026-078', '$612.40'],
-  ['08/09 · FERGUSON ENT · job #2026-081', '$1,214.60'],
-  ['08/14 · FERGUSON ENT · job #2026-083', '$388.00'],
-  ['08/21 · FERGUSON ENT · job #2026-085', '$1,691.20'],
-  ['08/28 · FERGUSON ENT · no job yet', '$412.00'],
+  ['08/03 · GULF COAST HVAC · job #2026-078', '$612.40'],
+  ['08/09 · GULF COAST HVAC · job #2026-081', '$1,214.60'],
+  ['08/14 · GULF COAST HVAC · job #2026-083', '$388.00'],
+  ['08/21 · GULF COAST HVAC · job #2026-085', '$1,691.20'],
+  ['08/28 · GULF COAST HVAC · no job yet', '$412.00'],
 ] as const
 
 type Task = { id: string; label: string; kind: 'auto' | 'person' | 'lock'; due: string; done: boolean; ev: string; open?: boolean }
@@ -44,7 +44,7 @@ const INITIAL_TASKS: Task[] = [
   { id: 'bank', label: 'Bank reconciled', kind: 'auto', due: 'day 3', done: false, open: true, ev: 'Operating account: 2,140.00 unexplained. Step 3 fixes this.' },
   { id: 'drafts', label: 'Draft entries posted', kind: 'auto', due: 'day 3', done: true, ev: '0 drafts remain' },
   { id: 'staged', label: 'Parts bought for finished jobs moved onto them', kind: 'auto', due: 'day 3', done: true, ev: '$0 left waiting for a job' },
-  { id: 'deposits', label: 'Customer deposits released on finished jobs', kind: 'auto', due: 'day 3', done: true, ev: 'Rivera install not finished; $3,000 correctly still held' },
+  { id: 'deposits', label: 'Customer deposits released on finished jobs', kind: 'auto', due: 'day 3', done: true, ev: 'Hale install not finished; $3,000 correctly still held' },
   { id: 'accruals', label: 'Recurring month-end entries posted', kind: 'auto', due: 'day 4', done: true, ev: '3 schedules ran on time' },
   { id: 'depr', label: 'Depreciation posted', kind: 'auto', due: 'day 4', done: true, ev: 'Two vans and the jetter, posted for August' },
   { id: 'ar', label: 'Who owes you matches open invoices', kind: 'auto', due: 'day 4', done: true, ev: '2 invoices past 30 days, both with follow-ups sent' },
@@ -189,15 +189,15 @@ export default function HomeShow() {
             </span>
           ))}
         </span>
-        <span className="hidden sm:inline whitespace-nowrap">By you <b className="text-ink">{you}</b> · by a rule <b className="text-ink">{byRule}</b> · corrected <b className="text-ink">{corr}</b></span>
+        {you + byRule + corr > 0 && <span className="hidden sm:inline whitespace-nowrap">By you <b className="text-ink">{you}</b> · by a rule <b className="text-ink">{byRule}</b> · corrected <b className="text-ink">{corr}</b></span>}
       </div>
 
       <div className="min-w-0">
         {/* ACT 1 */}
         <section className="pt-10 pb-6" id="act1">
           <p className={eyebrow}>Step 1 · The night</p>
-          <h2 className={h2}>Last night, Poof Agent ran the back office.</h2>
-          <p className="text-[15px] text-muted max-w-[56ch]">It pulled the bank, matched the bills to jobs, lined up the invoice from yesterday&apos;s finished job and checked who needs a 1099. Then it stopped, because a few things need a person. That person is you.</p>
+          <h2 className={h2}>Last night, Poof Agent did the books.</h2>
+          <p className="text-[15px] text-muted max-w-[56ch]">Brazos Valley Comfort Co., a heating and plumbing shop in Waco. Overnight Poof pulled the bank, sorted what your rules cover and put the bills on their jobs. Then it stopped, because a few things need a person. That person is you.</p>
 
           <OvernightRun onFinish={() => setRanOvernight(true)} onDecide={() => { touch(); setYou((v) => v + 1) }} />
         </section>
@@ -210,8 +210,8 @@ export default function HomeShow() {
           <div className="grid gap-3.5">
             {/* card 1 */}
             <div className="bg-white border border-rule px-[18px] py-4">
-              <div className="flex justify-between gap-3 items-baseline"><b className="font-semibold">Ferguson Enterprises → Job Materials</b><span className="font-mono font-medium tabular whitespace-nowrap">$1,214.60</span></div>
-              <div className="mt-2 px-3 py-[9px] bg-ledger-200 text-ledger-600 text-[13.5px] rounded">Evidence: 5 prior transactions for this merchant, all categorized Job Materials. Bill matched to job #2026-081, Henderson install. Gathered by code, not judged by the model.</div>
+              <div className="flex justify-between gap-3 items-baseline"><b className="font-semibold">Gulf Coast HVAC Supply → Job Materials</b><span className="font-mono font-medium tabular whitespace-nowrap">$1,214.60</span></div>
+              <div className="mt-2 px-3 py-[9px] bg-ledger-200 text-ledger-600 text-[13.5px] rounded">Evidence: 5 prior transactions for this merchant, all categorized Job Materials. Bill matched to job #2026-081, Ben Kowalski’s furnace install. Gathered by code, not judged by the model.</div>
               {c1 === 'open' && (
                 <div className="flex flex-wrap gap-2 mt-3"><button type="button" className={btnSm} onClick={() => { touch(); setC1('approved'); setYou((v) => v + 1) }}>Approve</button><button type="button" className={btnRedSm} onClick={() => { touch(); setC1('rejecting') }}>Reject with a reason</button></div>
               )}
@@ -238,7 +238,7 @@ export default function HomeShow() {
             </div>
             {/* card 3 */}
             <div className="bg-white border border-rule px-[18px] py-4">
-              <div className="flex justify-between gap-3 items-baseline"><b className="font-semibold">Ferguson Enterprises → Job Materials, 5 rows</b><span className="font-mono font-medium tabular whitespace-nowrap">$4,318.20</span></div>
+              <div className="flex justify-between gap-3 items-baseline"><b className="font-semibold">Gulf Coast HVAC Supply → Job Materials, 5 rows</b><span className="font-mono font-medium tabular whitespace-nowrap">$4,318.20</span></div>
               <div className="mt-2 px-3 py-[9px] bg-ledger-200 text-ledger-600 text-[13.5px] rounded">Evidence: same merchant, same agreement in their history. Untick anything you want to look at; the rest goes in one tap. Unticked rows are still here tomorrow.</div>
               <ul className="mt-2.5 border-t border-rule">
                 {BATCH.map(([label, amt], i) => {
@@ -262,11 +262,11 @@ export default function HomeShow() {
                 <div className="mt-3.5 border border-ledger-600 px-4 py-3.5 bg-paper-2">
                   <span className={`inline-block font-mono text-[11px] tracking-[0.08em] uppercase px-2 py-[3px] rounded-[3px] mb-2 ${rule === 'active' ? 'bg-ledger-200 text-ledger-600' : rule === 'paused' ? 'bg-audit-100 text-audit' : 'bg-paper text-muted'}`}>{rule === 'active' ? 'Active' : rule === 'paused' ? 'Paused' : 'Revoked'}</span>
                   <h5 className="font-semibold text-[15px] mb-2">Standing rule, derived from the card you just read</h5>
-                  <p className="text-[14.5px] mb-1.5">When <b>Ferguson Enterprises</b> charges <b>under $2,000</b>, categorize as <b>Job Materials</b>. Covers 4 of the 5 rows on this card. Writes to the ledger only; never sends anything to a customer. That stays a person&apos;s decision.</p>
+                  <p className="text-[14.5px] mb-1.5">When <b>Gulf Coast HVAC Supply</b> charges <b>under $2,000</b>, categorize as <b>Job Materials</b>. Covers 4 of the 5 rows on this card. Writes to the ledger only; never sends anything to a customer. That stays a person&apos;s decision.</p>
                   <p className="font-mono text-[12.5px] text-muted mt-2">Your record with this kind of change, last 30 days: 12 approved · 0 rejected · granted by you, just now</p>
                   {!night && <div className="mt-3"><button type="button" className={btnSm} onClick={() => { touch(); setNight(true); setByRule((v) => v + 3) }}>Run overnight</button></div>}
-                  {night && <div className="mt-3 pt-2.5 border-t border-dashed border-rule text-sm text-ledger-600">Overnight: the rule covered 3 new Ferguson rows under $2,000 and left one at $2,310.00 in the inbox, over its ceiling. Daily cap: 3 of 25.</div>}
-                  {night && rule === 'active' && !ruleNote && <div className="mt-3"><button type="button" className={btnRedSm} onClick={() => { touch(); setCorr((v) => v + 1); setRule('paused'); setRuleNote({ cls: 'text-audit', text: `Paused itself. The correction that stopped it: FERGUSON 08/28 $412.00, Job Materials → Equipment, by you, ${fmtTime(new Date())}. It covers nothing until you decide. Its earlier work stands.` }) }}>Correct one of its rows: $412.00 was Equipment, not Job Materials</button></div>}
+                  {night && <div className="mt-3 pt-2.5 border-t border-dashed border-rule text-sm text-ledger-600">Overnight: the rule covered 3 new Gulf Coast rows under $2,000 and left one at $2,310.00 in the inbox, over its ceiling. Daily cap: 3 of 25.</div>}
+                  {night && rule === 'active' && !ruleNote && <div className="mt-3"><button type="button" className={btnRedSm} onClick={() => { touch(); setCorr((v) => v + 1); setRule('paused'); setRuleNote({ cls: 'text-audit', text: `Paused itself. The correction that stopped it: GULF COAST 08/28 $412.00, Job Materials → Equipment, by you, ${fmtTime(new Date())}. It covers nothing until you decide. Its earlier work stands.` }) }}>Correct one of its rows: $412.00 was Equipment, not Job Materials</button></div>}
                   {ruleNote && <div className={`mt-3 pt-2.5 border-t border-dashed border-rule text-sm ${ruleNote.cls}`}>{ruleNote.text}</div>}
                   {rule === 'paused' && (
                     <div className="flex gap-2 mt-3">
