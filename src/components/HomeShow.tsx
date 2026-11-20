@@ -148,13 +148,14 @@ export default function HomeShow() {
       {/* HERO: the offer, and the real inbox beside it */}
       <section className="max-w-[1020px] mx-auto px-4 sm:px-6 pt-10 pb-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-10 lg:gap-14 items-center" id="top">
         <div>
-          <p className={eyebrow}>Free for good · Poof Agent $49 a month</p>
+          <p className={eyebrow}>Free for good</p>
           <h1 className="font-display text-[44px] sm:text-6xl lg:text-[72px] leading-[1] tracking-[-0.035em] text-ink mb-4 text-balance">Stop doing the books at night.</h1>
           <p className={sub}>Poof Agent does them while you sleep. Nothing posts without your yes.</p>
           <div className="flex flex-wrap gap-2.5 items-center">
             <Link href="https://app.poofai.com/register" className={btn}>Start free</Link>
             <Link href="/bookkeeper" className="inline-block rounded-lg border-[1.5px] border-ink text-ink font-semibold text-[15px] px-[18px] py-[11px] hover:bg-paper-2 transition-colors">Ask for a bookkeeper</Link>
           </div>
+          <p className="mt-3 text-[15px]"><a href="https://app.poofai.com/demo" className="text-ledger-600 font-semibold hover:text-ledger-700 underline decoration-ledger-300 underline-offset-[5px]">Or open a live demo, no sign-up →</a></p>
           <p className="text-[13px] text-muted mt-3">No card. Poof Agent is free for your first 30 days, then $49 a month if you keep it.</p>
 
           <nav aria-label="Who Poof is for" className="mt-5 flex flex-wrap items-baseline gap-x-5 gap-y-1.5 text-[14px]">
@@ -169,10 +170,8 @@ export default function HomeShow() {
             <PhoneApprovals />
           </div>
           <figcaption className="mt-3 text-[13px] text-muted max-w-[260px]">
-            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">Try it · demo figures</span>
-            The same two cards Poof shows you each morning, in your phone&apos;s browser. Tap Approve; nothing here touches real books. <a href="/images/approvals-phone.jpg" className="text-ledger-600 hover:text-ledger-700 underline underline-offset-2">See the real screenshot</a>.
-            <a href="https://app.poofai.com/demo" className="mt-3 block rounded-lg border-[1.5px] border-ink text-ink text-center font-semibold text-[14px] px-3 py-[9px] hover:bg-paper-2 transition-colors">Open the live demo →</a>
-            <span className="block mt-1.5 text-[12px]">A sample shop of your own, no sign-up. Nothing you do leaves Poof, and it&apos;s erased after a day.</span>
+            <span className="font-mono text-[11px] tracking-[0.08em] uppercase text-ledger-600 block mb-1">What your morning looks like</span>
+            Try the buttons. Nothing here touches real books.
           </figcaption>
         </figure>
       </section>
