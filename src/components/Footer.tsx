@@ -62,7 +62,7 @@ export default function Footer() {
             <p className="text-muted mt-4">The work disappears. The evidence doesn&apos;t.</p>
 
             <form onSubmit={handleSubmit} className="mt-6" aria-labelledby="footer-newsletter">
-              <p id="footer-newsletter" className="text-sm font-semibold text-ink mb-2">Bookkeeping and tax notes from a former controller</p>
+              <p id="footer-newsletter" className="text-sm font-semibold text-ink mb-2">Bookkeeping and tax notes from Poof’s founder</p>
               <div className="flex gap-2">
                 <label htmlFor="footer-email" className="sr-only">Email address</label>
                 <input

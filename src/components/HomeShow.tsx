@@ -365,15 +365,15 @@ export default function HomeShow() {
 
         {/* PRACTITIONER */}
         <section className="pt-16 pb-6 border-t border-rule" id="practitioner">
-          <p className={eyebrow}>Built by a former controller</p>
+          <p className={eyebrow}>Who built it</p>
           <h2 className={h2}>The person who wrote this signed closes for a living first.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-[22px] items-center mt-7 px-6 py-[22px] bg-white border border-rule">
             <div className="relative aspect-square max-w-[220px] border border-rule bg-paper-2 overflow-hidden">
               <Image src="/team/austin-semple.jpg" alt="Austin Semple" fill sizes="220px" className="object-cover object-center" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-1.5">Austin Semple, former controller</h3>
-              <p className="text-[15px] text-muted max-w-[52ch]">Two years as an auditor, then seven as a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
+              <h3 className="text-lg font-semibold mb-1.5">Austin Semple, founder</h3>
+              <p className="text-[15px] text-muted max-w-[52ch]">Two years as an auditor, then eight as a controller for small businesses, then Poof. He closes his own books on it, from a phone, and fixes what that turns up before anyone else sees it.</p>
               <p className="mt-3 text-sm"><Link href="/about" className="text-ledger-600 font-semibold hover:text-ledger-700">More about Austin</Link></p>
             </div>
           </div>

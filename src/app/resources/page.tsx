@@ -196,7 +196,7 @@ export default async function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className={eyebrow}>Checklists and downloads</p>
           <h2 className={h2}>Print it, fill it in, hand it to your CPA.</h2>
-          <p className={lede}>Written by a former controller, for owners who keep their own books and the bookkeepers who keep them for clients.</p>
+          <p className={lede}>Written by an auditor turned controller, for owners who keep their own books and the bookkeepers who keep them for clients.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-ink">
             {downloads.map((g) => (
               <div key={g.title} className="py-5 pr-6 border-b border-rule">

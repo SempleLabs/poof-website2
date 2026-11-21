@@ -8,17 +8,17 @@ import PageHero from '@/components/PageHero'
 import { getPersonSchema, getBreadcrumbSchema } from '@/lib/jsonLd'
 
 export const metadata: Metadata = {
-  title: 'About Poof — built by a former controller | Poof',
-  description: 'Poof is free bookkeeping software with an AI agent you can hire, built by Austin Semple: two years as an auditor, then seven as a controller for small businesses.',
+  title: 'About Poof — built by an auditor turned controller | Poof',
+  description: 'Poof is free bookkeeping software with an AI agent you can hire, built by Austin Semple: two years as an auditor, then eight as a controller for small businesses.',
   keywords: 'about Poof, company story, bookkeeping automation team, AI accounting mission',
   alternates: {
     canonical: 'https://www.poofai.com/about',
   },
   openGraph: {
     images: ['/og-image.png'],
-    title: 'About Poof — Built by a Former Controller',
+    title: 'About Poof — Built by an Auditor Turned Controller',
     description:
-      'Free bookkeeping software with an AI agent you can hire. Built by Austin Semple, a former controller: two years in audit, then seven running the books for small businesses.',
+      'Free bookkeeping software with an AI agent you can hire. Built by Austin Semple: two years in audit, then eight as a controller for small businesses.',
     url: 'https://www.poofai.com/about',
     siteName: 'Poof',
     type: 'website',
@@ -69,7 +69,7 @@ export default function AboutPage() {
     {
       year: "2015–2025",
       title: "Inside other people's books",
-      description: "Two years auditing, then seven as a controller for small businesses, showed the same gap every month: the tools were built for accountants, and the people using them were not."
+      description: "Two years auditing, then eight as a controller for small businesses, showed the same gap every month: the tools were built for accountants, and the people using them were not."
     },
     {
       year: "June 2025",
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       <PageHero
         title={<>Built by the person who <span className="text-ledger-600">signs the close.</span></>}
-        subtitle="Two years as an auditor, then seven as a controller for small businesses, then Poof: software that does the books and puts every entry in front of a person before it lands."
+        subtitle="Two years as an auditor, then eight as a controller for small businesses, then Poof: software that does the books and puts every entry in front of a person before it lands."
       />
 
       {/* Mission Statement */}
@@ -128,7 +128,7 @@ export default function AboutPage() {
             <div className="text-center mb-20">
               <h2 className="text-4xl font-bold font-display text-slate-900 mb-6">Why Poof exists</h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Nine years of month-ends, and the same gap every one.
+                Ten years of month-ends, and the same gap every one.
               </p>
             </div>
           </AnimateOnScroll>
@@ -234,7 +234,7 @@ export default function AboutPage() {
 
                 <div className="flex-1 text-slate-300">
                   <p className="text-xl leading-relaxed mb-6">
-                    For nine years I sat on the other side of small businesses&apos; books: two auditing them, seven
+                    For ten years I sat on the other side of small businesses&apos; books: two auditing them, eight
                     closing them as a controller. Month after month I watched owners lose their evenings to software
                     built for accountants, and books that looked finished but weren&apos;t.
                   </p>

@@ -870,9 +870,9 @@ export default function TradesShow() {
               <Image src="/team/austin-semple.jpg" alt="Austin Semple" fill sizes="220px" className="object-cover object-center" />
             </div>
             <div>
-              <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, former controller</h3>
+              <h3 className="mb-1.5 text-lg font-semibold">Austin Semple, founder</h3>
               <p className="m-0 max-w-[52ch] text-[15px] text-muted">
-                Two years as an auditor, then seven as a controller for small businesses, then Poof. A gas
+                Two years as an auditor, then eight as a controller for small businesses, then Poof. A gas
                 smell goes to a person because a rule says so, not because a model guessed. Month-end runs on
                 evidence, not checkboxes. And nothing reaches your books unseen, because that is how the work is
                 supposed to go.
