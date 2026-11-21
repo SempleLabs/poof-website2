@@ -63,7 +63,7 @@ export default function ProductHuntPage() {
 
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Connect your accounts and Poof categorizes, reconciles, and closes your books — 290 features, built by a former controller. Poof is free; Poof Agent, the AI that does the work, is normally $49/mo.
+              Connect your accounts and Poof categorizes, reconciles, and closes your books — 290 features, built by an auditor turned controller. Poof is free; Poof Agent, the AI that does the work, is normally $49/mo.
             </p>
           </AnimateOnScroll>
 
@@ -133,7 +133,7 @@ export default function ProductHuntPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll animation="fade-up">
             <p className="text-slate-600 leading-relaxed mb-6">
-              Poof is built by Austin Semple, a former controller: two years in audit, seven running the books for small businesses. The AI underneath is held to the standard that work was held to — every write staged with its evidence, nothing landing in the ledger unseen.
+              Poof is built by Austin Semple: two years in audit, then eight as a controller for small businesses. The AI underneath is held to the standard that work was held to — every write staged with its evidence, nothing landing in the ledger unseen.
             </p>
             <p className="text-sm text-slate-500">
               Run a service shop?{' '}
