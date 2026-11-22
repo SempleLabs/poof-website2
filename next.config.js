@@ -9,11 +9,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // 2026-09-22: poofai.com sells the software only. The trade landing pages
-      // that sold the managed service fold into the product page for shops.
-      { source: '/hvac', destination: '/trades', permanent: true },
-      { source: '/plumbing', destination: '/trades', permanent: true },
-      { source: '/electrical', destination: '/trades', permanent: true },
+      // /hvac, /plumbing and /electrical redirected to /trades from 2026-09-22 to 2026-11-19;
+      // they are pages again, now selling the software (see src/components/IndustryPage.tsx).
       // The free-analysis funnel is retired.
       { source: '/creators', destination: '/', permanent: true },
       { source: '/ecommerce', destination: '/', permanent: true },
