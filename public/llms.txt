@@ -2,7 +2,7 @@
 
 > Poof is free software that runs the back office for a small business. It categorizes, reconciles, job-costs, files the 1099s, and closes the books, and puts every write in front of a person before it reaches the ledger: each proposal waits on a card with the evidence it found, the close is a record with a checklist the books tick off themselves, and the reconciliation ties to one figure. Poof is free; Poof Agent, the AI that does the work, is $49/mo; and a bookkeeper who works in Poof will do the books for an owner who would rather not, quoted per job. The headline: "Poof is free. Poof Agent does the books while you sleep." The brand sentence: "The work disappears. The evidence doesn't."
 
-Poof is built by Austin Semple, a former controller: two years in audit, then seven running the books for small service businesses. It is a product of Semple Labs LLC.
+Poof is built by Austin Semple: two years in audit, then eight as a controller for small service businesses. It is a product of Semple Labs LLC.
 
 There are three ways to get the books done in Poof. **Free, for good:** the books, invoices, estimates, bills, purchase orders, every report, the close checklist and period locks, payroll prep, 1099 prep, sales tax, the dispatch board and the technician's field link, the Claude and ChatGPT connector, approval cards, and your own rules, plus AI sorting of new transactions (up to 500 a month, as suggestions you approve), 10 Ask Poof questions, 25 receipt or document reads, 2 connected bank accounts, and 100 texts to your team a month. **Poof Agent, $49/mo (or $490/yr):** ask anything, any time: Ask Poof without a limit in the app, Telegram, Slack and by voice, reports built by asking, every receipt, bill and check read, collection reminders and the month-end summary written for you, unlimited bank feeds, texting customers, and sorting with no monthly limit (the confident ones auto-posted if the owner turns that on). Every new company gets Poof Agent free for 30 days with no card, then stays on Free; nothing goes read-only. **A person:** a bookkeeper who works in Poof does the books for an owner who asks; there is no published price, and each job is quoted after the owner says how far behind the books are. Poof also **files 1099s** with the IRS (the first 3 forms a year free, then $2.49 a form; $1.79 for each copy Poof mails). The AI receptionist (the phone line for service shops) is an add-on at $99/mo with 1,000 minutes included, then 12¢ a minute, bought in Settings → Receptionist. A shop owner, a bookkeeper, a controller, or a firm runs the same software.
 
@@ -160,7 +160,7 @@ Poof is a product of Semple Labs LLC, a United States limited liability company.
 
 ## Founder
 
-Austin Semple — CEO and Founder. Two years as an auditor, then seven as a controller, working with small service businesses before founding Poof in June 2025. In 2026, Poof focused its go-to-market on bookkeeping for trade contractors — the audience Austin knows best from his controller career.
+Austin Semple — CEO and Founder. Two years as an auditor, then eight as a controller, working with small service businesses before founding Poof in June 2025. In 2026, Poof focused its go-to-market on bookkeeping for trade contractors — the audience Austin knows best from his controller career.
 
 ## Optional
 
